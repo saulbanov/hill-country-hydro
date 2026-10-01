@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T15:05:56.710680+00:00",
+  "generated_at": "2026-10-01T22:22:15.010814+00:00",
   "built_from": "data/raw/documentary/usgs-regional-inventory-2026-10-01",
   "bbox": [
     -100.2,
@@ -7,11 +7,11 @@
     -97.2,
     30.9
   ],
-  "index_rule": "Edwards (Balcones Fault Zone) wells in the bbox, plus Trinity wells in Hays, Travis, Blanco and Comal counties, when the full record is at most 20 MB; J-17 (6837203) and Lovelady (5850301) always",
+  "index_rule": "Every well in the bbox whose daily-feed row is at most 7 days old (a live well), plus J-17 (6837203) and Lovelady (5850301) always. Changed 2026-10-01 from an aquifer-and-size rule that had left out the Kerr and Kendall Trinity wells, which carry the Hill Country rivers' base flow.",
   "counts": {
     "wells": 127,
     "in_daily_feed": 127,
-    "index": 22
+    "index": 90
   },
   "wells": [
     {
@@ -26,7 +26,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 34447019,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5862208"
     },
     {
@@ -41,7 +41,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 7559373,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6711501"
     },
     {
@@ -56,7 +56,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 205409,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6713707"
     },
     {
@@ -71,7 +71,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 105509,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6727507"
     },
     {
@@ -86,7 +86,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 22230668,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6727805"
     },
     {
@@ -101,7 +101,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 356403,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6733805"
     },
     {
@@ -116,7 +116,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 10891658,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6733907"
     },
     {
@@ -131,7 +131,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 21358283,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6827609"
     },
     {
@@ -146,7 +146,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 27644219,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6827610"
     },
     {
@@ -161,7 +161,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 30557082,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6828211"
     },
     {
@@ -176,7 +176,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 30576396,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6829112"
     },
     {
@@ -191,7 +191,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 30228290,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6836132"
     },
     {
@@ -221,7 +221,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 29445548,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5857502"
     },
     {
@@ -236,7 +236,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2024-05-07",
       "full_record_bytes": 17130646,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/6932703"
     },
     {
@@ -251,7 +251,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 30596677,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6938601"
     },
     {
@@ -311,7 +311,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 21394129,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5803702"
     },
     {
@@ -326,7 +326,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2016-02-10",
       "full_record_bytes": 13802871,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5827305"
     },
     {
@@ -341,7 +341,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 45206628,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6912206"
     },
     {
@@ -386,7 +386,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 16946427,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5758203"
     },
     {
@@ -416,7 +416,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 17246416,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5644901"
     },
     {
@@ -461,7 +461,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 23072479,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5659201"
     },
     {
@@ -566,7 +566,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 10694017,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5634505"
     },
     {
@@ -581,7 +581,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 10274136,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5642403"
     },
     {
@@ -596,7 +596,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 7902498,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5745822"
     },
     {
@@ -611,7 +611,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 22151373,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5715902"
     },
     {
@@ -641,7 +641,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 36519276,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5750108"
     },
     {
@@ -656,7 +656,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 45542773,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5750324"
     },
     {
@@ -686,7 +686,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 3853817,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5621401"
     },
     {
@@ -716,7 +716,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 22644758,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5714604"
     },
     {
@@ -731,7 +731,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 22540150,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5722505"
     },
     {
@@ -746,7 +746,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 24468615,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6923402"
     },
     {
@@ -761,7 +761,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 30700332,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6924225"
     },
     {
@@ -776,7 +776,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 12078685,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6953404"
     },
     {
@@ -791,7 +791,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 30479597,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6819208"
     },
     {
@@ -806,7 +806,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-29",
       "full_record_bytes": 20045721,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6819618"
     },
     {
@@ -836,7 +836,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 30414324,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6820110"
     },
     {
@@ -851,7 +851,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 19212566,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6820602"
     },
     {
@@ -866,7 +866,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 18985846,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6820603"
     },
     {
@@ -911,7 +911,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 25716637,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6827112"
     },
     {
@@ -926,7 +926,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-08-31",
       "full_record_bytes": 14380753,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5761229"
     },
     {
@@ -941,7 +941,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 21751557,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5715901"
     },
     {
@@ -956,7 +956,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 24588514,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5724101"
     },
     {
@@ -986,7 +986,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 35492961,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6807407"
     },
     {
@@ -1001,7 +1001,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 28586242,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6815211"
     },
     {
@@ -1061,7 +1061,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2017-04-06",
       "full_record_bytes": 751439,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5755803"
     },
     {
@@ -1076,7 +1076,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2018-11-23",
       "full_record_bytes": 5777564,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5756702"
     },
     {
@@ -1121,7 +1121,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 35549315,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5763705"
     },
     {
@@ -1166,7 +1166,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 35637149,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5764705"
     },
     {
@@ -1196,7 +1196,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 8934166,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5758402"
     },
     {
@@ -1211,7 +1211,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 34459254,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6801314"
     },
     {
@@ -1226,7 +1226,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 10954068,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6802302"
     },
     {
@@ -1241,7 +1241,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 2271774,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6802509"
     },
     {
@@ -1256,7 +1256,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 35294879,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6802609"
     },
     {
@@ -1271,7 +1271,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 22659391,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6802807"
     },
     {
@@ -1286,7 +1286,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 6215045,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6803109"
     },
     {
@@ -1301,7 +1301,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 1015186,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6803503"
     },
     {
@@ -1316,7 +1316,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 12628509,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6804214"
     },
     {
@@ -1331,7 +1331,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 29831090,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6804312"
     },
     {
@@ -1346,7 +1346,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 2506796,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6806105"
     },
     {
@@ -1361,7 +1361,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 14794885,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6809303"
     },
     {
@@ -1376,7 +1376,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 20384618,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6810616"
     },
     {
@@ -1391,7 +1391,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 5712183,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6810626"
     },
     {
@@ -1406,7 +1406,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-28",
       "full_record_bytes": 16046694,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6811302"
     },
     {
@@ -1421,7 +1421,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 33439350,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6811417"
     },
     {
@@ -1436,7 +1436,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 20566708,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6811418"
     },
     {
@@ -1451,7 +1451,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 20379224,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6811509"
     },
     {
@@ -1466,7 +1466,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 24229808,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6811708"
     },
     {
@@ -1481,7 +1481,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 7608334,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6811817"
     },
     {
@@ -1496,7 +1496,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 24316408,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6812106"
     },
     {
@@ -1511,7 +1511,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 2519441,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6812414"
     },
     {
@@ -1526,7 +1526,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 32339679,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5654405"
     },
     {
@@ -1556,7 +1556,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 35102332,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5663922"
     },
     {
@@ -1571,7 +1571,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 21685900,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5663923"
     },
     {
@@ -1586,7 +1586,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 23600512,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5663924"
     },
     {
@@ -1616,7 +1616,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 26521231,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6801703"
     },
     {
@@ -1631,7 +1631,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 25365525,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6801704"
     },
     {
@@ -1646,7 +1646,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 21213766,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6904503"
     },
     {
@@ -1721,7 +1721,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 30108543,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6919401"
     },
     {
@@ -1736,7 +1736,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2019-07-09",
       "full_record_bytes": 2709568,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5747310"
     },
     {
@@ -1781,7 +1781,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-07-10",
       "full_record_bytes": 3945511,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5748109"
     },
     {
@@ -1811,7 +1811,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2012-06-11",
       "full_record_bytes": 5037125,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5841406"
     },
     {
@@ -1826,7 +1826,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2025-07-25",
       "full_record_bytes": 12559999,
-      "index": true,
+      "index": false,
       "source": "https://waterdatafortexas.org/groundwater/well/5849326"
     },
     {
@@ -1856,7 +1856,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 16542727,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5803701"
     },
     {
@@ -1886,7 +1886,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-09-30",
       "full_record_bytes": 31708682,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/5829603"
     },
     {
@@ -1901,7 +1901,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 100155,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6730902"
     },
     {
@@ -1916,7 +1916,7 @@
       "in_daily_feed": true,
       "latest_feed_date": "2026-10-01",
       "full_record_bytes": 135733,
-      "index": false,
+      "index": true,
       "source": "https://waterdatafortexas.org/groundwater/well/6745104"
     }
   ]

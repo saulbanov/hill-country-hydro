@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-01 (later still) — full records for every live TWDB well
+- `data/wells-regional.json` index rule changed to every well with a feed row at most 7 days old (90 wells, was 22). Full records fetched for the other 77; `data/captures/twdb-wells/` grows accordingly. Bundle shape unchanged; more wells gain a 13-month percentile.
+
 ## 2026-10-01 (later) — additive: `eaa.critical_period`
 - `eaa.py conditions` captures the EAA Aquifer Conditions page (summary table with 10-day averages; Comal springflow daily means since 1927 and San Marcos since 1956; J-17 and J-27 daily highs) and the Critical Period Management page (stated reduction percentages) every day. The stage trigger tables exist only as images; they are captured verbatim and transcribed once into `data/eaa-cpm-stages.json` with image checksums. The bundle's `eaa` block gains `critical_period` (10-day averages, implied stage per indicator from the transcribed table, the EAA's stated reduction, and whether they agree). Schema stays 1; the field is additive.
 - Base map: USGS The National Map topo with the National Hydrography overlay (public domain) by default; USGS imagery-topo and CARTO light as alternates.

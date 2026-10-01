@@ -34,7 +34,7 @@ REGIONAL_KEY = {  # station -> why it is tier 1 (full daily history, ledger, con
     '08104900': 'South Fork San Gabriel at Georgetown (Blue Hole Georgetown)', '08158700': 'Onion Creek near Driftwood', '08183900': 'Cibolo near Boerne',
     '08152000': 'Sandy Creek near Kingsland (Inks Lake side)', '08155500': 'Barton Springs (already collected)', '08168000': 'Hueco Springs near New Braunfels (spring)',
 }
-INDEX_WELL_RULE = "Edwards (Balcones Fault Zone) wells in the bbox, plus Trinity wells in Hays, Travis, Blanco and Comal counties, when the full record is at most 20 MB; J-17 (6837203) and Lovelady (5850301) always"
+INDEX_WELL_RULE = "Every well in the bbox whose daily-feed row is at most 7 days old (a live well), plus J-17 (6837203) and Lovelady (5850301) always. Changed 2026-10-01 from an aquifer-and-size rule that had left out the Kerr and Kendall Trinity wells, which carry the Hill Country rivers' base flow."
 
 def inb(c): return BBOX[0] <= c[0] <= BBOX[2] and BBOX[1] <= c[1] <= BBOX[3]
 
@@ -65,7 +65,8 @@ def build(folder, active_since, sizes=None):
         if not inb(f['geometry']['coordinates']): continue
         p = f['properties']; wid = p['well_number']; lon, lat = f['geometry']['coordinates']
         size = (sizes or {}).get(wid)
-        index = wid in ('6837203', '5850301') or ((p.get('aquifer') == 'Edwards (Balcones Fault Zone)' or (p.get('aquifer') == 'Trinity' and p.get('county') in ('Hays', 'Travis', 'Blanco', 'Comal'))) and (size is None or size <= 20_000_000))
+        feed_date = recent.get(wid, {}).get('date'); live = bool(feed_date) and (dt.date.today() - dt.date.fromisoformat(feed_date)).days <= 7
+        index = wid in ('6837203', '5850301') or live
         wells.append({'id': wid, 'aquifer': p.get('aquifer'), 'aquifer_type': p.get('aquifer_type'), 'county': p.get('county'), 'entity': p.get('entity'), 'status': p.get('status'),
                       'lat': lat, 'lon': lon, 'in_daily_feed': wid in recent, 'latest_feed_date': recent.get(wid, {}).get('date'), 'full_record_bytes': size, 'index': index,
                       'source': f'https://waterdatafortexas.org/groundwater/well/{wid}'})
