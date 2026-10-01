@@ -33,7 +33,18 @@ function showEaaWell(id,w){ const lt=w.latest?`<div><b>Latest:</b> ${esc(w.lates
   card(`<p class="eyebrow">Edwards Aquifer Authority well · ${esc(id)} · ${esc(w.county||'')}</p><h2>${esc(w.siteName)}</h2><span class="badge">${esc(w.data_health)}</span><span class="badge">${esc(w.aquiferZone||'')}</span><div class="fact"><h3>Measured</h3>${lt}</div><p class="muted">Higher elevation means a higher water table.</p><p><a href="${esc(w.source)}" target="_blank" rel="noreferrer">EAA site page ↗</a></p>`); }
 function showRain(id,g){ const t=g.latest?`<div><b>Last day:</b> ${esc(g.last_1d.inches)} in · <b>3 days:</b> ${esc(g.last_3d.inches)} in · <b>7 days:</b> ${esc(g.last_7d.inches)} in (${esc(g.last_7d.days_reported)} days reported) · <b>30 days:</b> ${esc(g.last_30d.inches)} in</div><div class="muted">latest ${esc(g.latest.date)}</div>`:'<div class="muted">No reading on file yet.</div>';
   card(`<p class="eyebrow">EAA rain gauge · ${esc(id)} · ${esc(g.county||'')}</p><h2>${esc(g.siteName)}</h2><span class="badge">${esc(g.data_health)}</span><div class="fact"><h3>Measured</h3>${t}</div><p class="muted">A missing day is unreported, never zero.</p><p><a href="${esc(g.source)}" target="_blank" rel="noreferrer">EAA site page ↗</a></p>`); }
-function boot(){ map=L.map('map',{zoomControl:true}).setView([30.05,-98.6],8); L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(map);
+/* Base map: the USGS National Map (public domain; topo with the National Hydrography drawn) is the default because this is a
+   map of water gauges and the hydrography is the point. A plain light base (CARTO, free with attribution) is the alternate for
+   dense marker views. OpenStreetMap's own tile server is kept out of production use per its tile-usage policy. */
+const BASES={
+  'USGS topo + hydro':()=>L.layerGroup([
+    L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'USGS The National Map: USGS Topo (public domain)'}),
+    L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSHydroCached/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,opacity:.85,attribution:'USGS National Hydrography'})]),
+  'USGS imagery + topo':()=>L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'USGS The National Map: Imagery Topo (public domain)'}),
+  'Light (CARTO)':()=>L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd',attribution:'© OpenStreetMap contributors © CARTO'})
+};
+function boot(){ map=L.map('map',{zoomControl:true}).setView([30.05,-98.6],8);
+  const baseLayers=Object.fromEntries(Object.entries(BASES).map(([k,f])=>[k,f()])); baseLayers['USGS topo + hydro'].addTo(map); L.control.layers(baseLayers,null,{position:'topright',collapsed:true}).addTo(map);
   for(const k of ['stations','wells','lakes','eaa']){ const el=$('#l-'+k); el.checked=on[k]; el.addEventListener('change',()=>{on[k]=el.checked; render();}); }
   fetch('../dist/water-state.json').then(r=>r.json()).then(b=>{ bundle=b; $('#bundle-meta').textContent=`Bundle ${b.schema_version} generated ${fmt(b.generated_at)} · ${b.counts.stations} stations, ${b.counts.wells} wells, ${b.counts.lakes} lakes · missing inputs: ${(b.missing_inputs||[]).join(', ')||'none'}`; render(); }).catch(e=>{ $('#bundle-meta').textContent='Could not load dist/water-state.json: '+e; }); }
 document.addEventListener('DOMContentLoaded',boot);

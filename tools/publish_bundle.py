@@ -52,7 +52,7 @@ def build(at=None):
     bundle = {'schema_version': SCHEMA_VERSION, 'generated_at': at.isoformat(), 'source_repo': 'saulbanov/hill-country-hydro',
               'meaning': 'Measurements and deterministic station context for Central Texas water. A reading describes a station, a well or a lake. Nothing here is a verdict about a place, a person, or safety.',
               'counts': {'stations': len(stations), 'stations_with_fresh_reading': sum(1 for s in stations.values() if any(v['fresh_within_1h'] for v in s['latest'].values())), 'wells': len((gw or {}).get('wells', {})), 'lakes': len((rv or {}).get('lakes', {})), 'eaa_wells': len((ea or {}).get('wells', {})), 'eaa_rain_gauges': len((ea or {}).get('rain_gauges', {}))},
-              'stations': stations, 'wells': (gw or {}).get('wells', {}), 'wells_meta': {k: v for k, v in (gw or {}).items() if k != 'wells'}, 'lakes': (rv or {}).get('lakes', {}), 'eaa': ({'wells': ea.get('wells', {}), 'rain_gauges': ea.get('rain_gauges', {}), 'generated_at': ea.get('generated_at')} if ea else None),
+              'stations': stations, 'wells': (gw or {}).get('wells', {}), 'wells_meta': {k: v for k, v in (gw or {}).items() if k != 'wells'}, 'lakes': (rv or {}).get('lakes', {}), 'eaa': ({'wells': ea.get('wells', {}), 'rain_gauges': ea.get('rain_gauges', {}), 'critical_period': ea.get('critical_period'), 'generated_at': ea.get('generated_at')} if ea else None),
               'alerts': ({'generated_at': hz.get('generated_at'), 'alerts': hz.get('alerts', []), 'gauges': hz.get('gauges', []), 'coverage': hz.get('coverage')} if hz else None), 'captures': cap, 'missing_inputs': missing}
     return bundle
 

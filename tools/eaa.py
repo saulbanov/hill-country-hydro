@@ -6,7 +6,16 @@ as a script variable, and each site offers CSV downloads per sensor:
   /SpringsAndStreams   springsStreamsLocationsJSON  /SpringsAndStreams/DownloadSpringAndStreamCsv?siteId=..&sensorName=GAGHT
   /RainGauges          rainGaugesLocationsJSON      /RainGauges/DownloadRainGaugesCsv?siteId=..&sensorName=DLRAIN|HRRAIN
 CSV rows: siteId, date, value, status flag (A approved, P provisional, Q questionable ...), last-modified.
+  /AquiferConditions   allIndexWellsDailyLevelsHighsJ17/J27, springsHistoricalDailyMeanCFS (Comal and San Marcos daily
+                       mean springflow since 1927), j17/j27WLTodayReadingsJSON, and a summary table (today, yesterday,
+                       six-month, one-year, ten-day average, historical monthly average, difference) for J-17, J-27,
+                       Comal and San Marcos. ~26 MB; captured daily because the springflow record is revised.
+  CPM page             https://www.edwardsaquifer.org/groundwater-users/critical-period-drought-management/ : the current
+                       reduction percentages in text; the stage trigger tables only as images, transcribed once into
+                       data/eaa-cpm-stages.json with the image checksums.
 Commands:
+  conditions            capture the conditions page and the CPM page raw; parse the summary table, today's readings and the
+                        current reductions into data/eaa-conditions.json; the embedded histories go to sqlite at normalize.
   collect [--streams]   the three list pages (raw, then parsed to data/eaa-sites.json) and the DHE and DTW
                         CSVs for every active well and the DLRAIN CSV for every active rain gauge; --streams
                         adds GAGHT for active streams (large hourly files; weekly is enough).
@@ -23,6 +32,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data/raw/eaa'; CAP = ROOT / 'data/captures/eaa'; DB = ROOT / 'data/normalized/water.sqlite'; APP = ROOT / 'app'; SITES = ROOT / 'data/eaa-sites.json'
 UA = 'austin-swim-map/0.1 (saul.elbein@gmail.com)'; BASE = 'https://data.edwardsaquifer.org'
+CONDITIONS_URL = BASE + '/AquiferConditions'
+CPM_URL = 'https://www.edwardsaquifer.org/groundwater-users/critical-period-drought-management/'
+STAGES = ROOT / 'data/eaa-cpm-stages.json'; CONDITIONS = ROOT / 'data/eaa-conditions.json'
 PAGES = {'wells': ('/GroundWater', 'allWellsLocationsJSON'), 'streams': ('/SpringsAndStreams', 'springsStreamsLocationsJSON'), 'rain': ('/RainGauges', 'rainGaugesLocationsJSON')}
 CSV = {'wells': '/GroundWater/DownloadGroundwaterCsv?siteId={sid}&sensorName={sensor}', 'streams': '/SpringsAndStreams/DownloadSpringAndStreamCsv?siteId={sid}&sensorName={sensor}', 'rain': '/RainGauges/DownloadRainGaugesCsv?siteId={sid}&sensorName={sensor}'}
 
@@ -39,6 +51,43 @@ def fetch(url, dest_dir, stem, ext):
     meta = {'url': url, 'retrieved_at': t.isoformat(), 'status': status, 'sha256': hashlib.sha256(body).hexdigest(), 'bytes': len(body), 'source': 'Edwards Aquifer Authority, data.edwardsaquifer.org', 'interpretation': 'none; verbatim source capture; EAA marks data provisional unless stated'}
     (dest_dir / (name + '.meta.json')).write_text(json.dumps(meta, indent=2) + '\n')
     return dest_dir / (name + ext), meta
+
+def parse_var(html, var):
+    m = re.search(r'\b' + var + r'\s*=\s*(\[.*?\]);', html, re.S)
+    return json.loads(m.group(1)) if m else None
+
+def parse_summary_table(html):
+    """The server-rendered summary rows: label then seven numbers. Returns {label: {today, yesterday, six_month, one_year, ten_day_average, historical_monthly_average, difference_from_historical}} plus the header dates."""
+    import html as _h
+    txt = _h.unescape(re.sub(r'<[^>]+>', ' | ', re.sub(r'<script.*?</script>|<style.*?</style>', '', html, flags=re.S))); txt = re.sub(r'(\s*\|\s*)+', ' | ', txt); txt = re.sub(r'\s+', ' ', txt)
+    out = {}
+    for label in ('San Antonio Pool (J-17)', 'Uvalde Pool (J-27)', 'Comal Springs', 'San Marcos Springs'):
+        m = re.search(re.escape(label) + r'\s*\|\s*' + r'\s*\|\s*'.join([r'(-?[\d.]+)'] * 7), txt)
+        if m: out[label] = dict(zip(('today', 'yesterday', 'six_month', 'one_year', 'ten_day_average', 'historical_monthly_average', 'difference_from_historical'), [float(x) for x in m.groups()]))
+    dates = re.search(r'Today \| ([A-Z][a-z]{2} \d{2} \d{4}) \| Yesterday \| ([A-Z][a-z]{2} \d{2} \d{4}) \| Six Month \| ([A-Z][a-z]{2} \d{2} \d{4}) \| One Year \| ([A-Z][a-z]{2} \d{2} \d{4})', txt)
+    return out, (dict(zip(('today', 'yesterday', 'six_month', 'one_year'), dates.groups())) if dates else None)
+
+def parse_reductions(html):
+    import html as _h
+    txt = _h.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'<script.*?</script>|<style.*?</style>', '', html, flags=re.S))); txt = re.sub(r'\s+', ' ', txt)
+    out = {}
+    for pool in ('San Antonio Pool', 'Uvalde Pool'):
+        m = re.search(re.escape(pool) + r'\s*(\d+)%\s*CURRENT REDUCTION', txt)
+        if m: out[pool] = int(m.group(1))
+    return out
+
+def conditions():
+    p, m = fetch(CONDITIONS_URL, RAW / 'conditions', 'aquifer-conditions', '.html'); print(f"conditions page: HTTP {m['status']}, {m['bytes']} bytes")
+    q, n = fetch(CPM_URL, RAW / 'conditions', 'cpm-page', '.html'); print(f"cpm page: HTTP {n['status']}, {n['bytes']} bytes")
+    rec = {'retrieved_at': m['retrieved_at'], 'conditions_page': {'url': CONDITIONS_URL, 'status': m['status'], 'sha256': m['sha256']}, 'cpm_page': {'url': CPM_URL, 'status': n['status'], 'sha256': n['sha256']}}
+    if m['status'] == 200:
+        h = p.read_text(encoding='utf-8', errors='replace'); table, dates = parse_summary_table(h); rec['summary'] = table; rec['summary_dates'] = dates
+        for var in ('j17WLTodayReadingsJSON', 'j27WLTodayReadingsJSON'):
+            arr = parse_var(h, var) or []
+            rec[var] = {'count': len(arr), 'latest': ({'data_time': arr[-1].get('data_time'), 'value': arr[-1].get('data_value'), 'units': arr[-1].get('units'), 'quality': arr[-1].get('data_quality')} if arr else None)}
+        sp = parse_var(h, 'springsHistoricalDailyMeanCFS') or []; rec['springflow_history_rows'] = len(sp)
+    if n['status'] == 200: rec['current_reduction_pct'] = parse_reductions(q.read_text(encoding='utf-8', errors='replace'))
+    CONDITIONS.write_text(json.dumps(rec, indent=2) + '\n'); print('conditions:', rec.get('summary'), rec.get('current_reduction_pct'))
 
 def parse_sites(html, var):
     m = re.search(var + r'\s*=\s*(\[.*?\]);', html, re.S)
@@ -96,6 +145,20 @@ def normalize():
     db.execute('create table if not exists eaa_well_levels(site text, date text, sensor text, value real, status text, source_file text, retrieved_at text, primary key(site, date, sensor))')
     db.execute('create table if not exists eaa_rain_daily(site text, date text, inches real, status text, source_file text, retrieved_at text, primary key(site, date))')
     db.execute('create table if not exists eaa_stream_stage(site text, datetime text, ft real, status text, source_file text, retrieved_at text, primary key(site, datetime))')
+    db.execute('create table if not exists eaa_springflow_daily(site text, date text, mean_cfs_raw real, mean_cfs_final real, source_file text, retrieved_at text, primary key(site, date))')
+    db.execute('create table if not exists eaa_index_daily(site text, date text, elevation_ft_amsl real, depth_ft_bls real, status text, source_file text, retrieved_at text, primary key(site, date))')
+    conds = sorted((RAW / 'conditions').glob('*-aquifer-conditions.meta.json')) if (RAW / 'conditions').exists() else []
+    if conds:
+        meta = json.loads(conds[-1].read_text()); body = conds[-1].with_suffix('').with_suffix('.html')
+        if meta.get('status') == 200 and body.exists():
+            h = body.read_text(encoding='utf-8', errors='replace')
+            for r in parse_var(h, 'springsHistoricalDailyMeanCFS') or []:
+                if r.get('meanCfsFin') is None and r.get('meanCfsRaw') is None: continue
+                db.execute('insert or replace into eaa_springflow_daily values(?,?,?,?,?,?)', (r.get('siteName'), r['meanDate'][:10], r.get('meanCfsRaw'), r.get('meanCfsFin'), str(body.relative_to(ROOT)), meta['retrieved_at']))
+            for var in ('allIndexWellsDailyLevelsHighsJ17', 'allIndexWellsDailyLevelsHighsJ27'):
+                for r in parse_var(h, var) or []:
+                    if r.get('waterLevelElevation') is None: continue
+                    db.execute('insert or replace into eaa_index_daily values(?,?,?,?,?,?,?)', (r.get('siteId'), r['dailyHighDate'][:10], r.get('waterLevelElevation'), r.get('depthFromLsd'), r.get('measStatusDesc'), str(body.relative_to(ROOT)), meta['retrieved_at']))
     n = 0
     for key, (body, meta) in newest_captures('wells').items():
         sid, sensor = key.rsplit('-', 1)
@@ -133,7 +196,29 @@ def assess(at=None):
         rec.update({'latest': {'date': last, 'inches': series[last]}, 'age_days': age, 'data_health': 'fresh' if age <= 2 else f'stale ({age} d)', 'last_1d': total(1), 'last_3d': total(3), 'last_7d': total(7), 'last_30d': total(30), 'record_days_on_file': len(dates)})
         rain[sid] = rec
     if db: db.close()
-    payload = {'generated_at': at.isoformat(), 'source': BASE, 'meaning': 'Edwards Aquifer Authority wells and rain gauges, read verbatim and summarized deterministically; context only.', 'counts': {'wells': len(wells), 'wells_fresh': sum(1 for r in wells.values() if r.get('data_health') == 'fresh'), 'rain_gauges': len(rain), 'rain_fresh': sum(1 for r in rain.values() if r.get('data_health') == 'fresh')}, 'wells': wells, 'rain_gauges': rain}
+    conditions = json.loads(CONDITIONS.read_text()) if CONDITIONS.exists() else None; stages = json.loads(STAGES.read_text()) if STAGES.exists() else None
+    cpm = None
+    if conditions and stages and conditions.get('summary'):
+        sm = conditions['summary']
+        def stage_for(table, key, value):
+            hit = None
+            for st in table:
+                t = st.get(key)
+                if t and 'lt' in t and value is not None and value < t['lt']: hit = st
+            return hit
+        sa = stages['san_antonio_pool']['stages']
+        j17 = sm.get('San Antonio Pool (J-17)', {}).get('ten_day_average'); comal = sm.get('Comal Springs', {}).get('ten_day_average'); smarcos = sm.get('San Marcos Springs', {}).get('ten_day_average')
+        hits = [stage_for(sa, 'j17_ft_amsl', j17), stage_for(sa, 'comal_cfs', comal), stage_for(sa, 'san_marcos_cfs', smarcos)]
+        deepest = max((h for h in hits if h), key=lambda h: h['reduction_pct'], default=None)
+        j27 = sm.get('Uvalde Pool (J-27)', {}).get('ten_day_average'); uv = stage_for(stages['uvalde_pool']['stages'], 'j27_ft_amsl', j27)
+        cpm = {'meaning': 'Which trigger each 10-day average sits below, read against the transcribed EAA stage table. The EAA declares stages; this is the arithmetic, shown beside what the EAA page states.', 'ten_day_averages': {'j17_ft_amsl': j17, 'comal_cfs': comal, 'san_marcos_cfs': smarcos, 'j27_ft_amsl': j27},
+               'san_antonio_pool': {'implied_stage': deepest['stage'] if deepest else 'Stable', 'implied_reduction_pct': deepest['reduction_pct'] if deepest else 0, 'per_indicator': {'j17': hits[0]['stage'] if hits[0] else 'Stable', 'comal': hits[1]['stage'] if hits[1] else 'Stable', 'san_marcos': hits[2]['stage'] if hits[2] else 'Stable'}, 'eaa_states_reduction_pct': (conditions.get('current_reduction_pct') or {}).get('San Antonio Pool')},
+               'uvalde_pool': {'implied_stage': uv['stage'] if uv else 'Stable', 'implied_reduction_pct': uv['reduction_pct'] if uv else 0, 'eaa_states_reduction_pct': (conditions.get('current_reduction_pct') or {}).get('Uvalde Pool')},
+               'summary_table': sm, 'summary_dates': conditions.get('summary_dates'), 'retrieved_at': conditions.get('retrieved_at'), 'stage_table_provenance': {'transcribed_on': stages.get('transcribed_on'), 'images': [stages['san_antonio_pool']['image'], stages['uvalde_pool']['image']], 'how_obtained': stages.get('how_obtained')}}
+        for pool in ('san_antonio_pool', 'uvalde_pool'):
+            a, b = cpm[pool]['implied_reduction_pct'], cpm[pool]['eaa_states_reduction_pct']
+            cpm[pool]['agreement'] = None if b is None else ('agrees' if a == b else f'differs: arithmetic says {a}%, the EAA page says {b}% (stage changes need all indicators to recover, and the EAA declares on its own schedule)')
+    payload = {'generated_at': at.isoformat(), 'source': BASE, 'critical_period': cpm, 'meaning': 'Edwards Aquifer Authority wells and rain gauges, read verbatim and summarized deterministically; context only.', 'counts': {'wells': len(wells), 'wells_fresh': sum(1 for r in wells.values() if r.get('data_health') == 'fresh'), 'rain_gauges': len(rain), 'rain_fresh': sum(1 for r in rain.values() if r.get('data_health') == 'fresh')}, 'wells': wells, 'rain_gauges': rain}
     (APP / 'eaa.json').write_text(json.dumps(payload, indent=2) + '\n'); print('eaa:', payload['counts'])
     for sid in ('J17WL', 'J27WL'):
         r = wells.get(sid)
@@ -142,7 +227,8 @@ def assess(at=None):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(); sub = p.add_subparsers(dest='cmd', required=True)
     c = sub.add_parser('collect'); c.add_argument('--streams', action='store_true'); c.add_argument('--pause-seconds', type=float, default=3.0); c.add_argument('--sites', nargs='*'); c.add_argument('--skip-pages', action='store_true')
-    sub.add_parser('normalize'); sub.add_parser('assess'); a = p.parse_args()
+    sub.add_parser('normalize'); sub.add_parser('assess'); sub.add_parser('conditions'); a = p.parse_args()
     if a.cmd == 'collect': collect(a.streams, a.pause_seconds, set(a.sites) if a.sites else None, a.skip_pages)
+    elif a.cmd == 'conditions': conditions()
     elif a.cmd == 'normalize': normalize()
     else: assess()

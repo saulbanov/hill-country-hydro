@@ -30,6 +30,7 @@ forecast, no verdict about a place or a person. Lenses do that, and they say so.
 - Daily histories: 68 discharge records (Onion Creek at US 183 from 1924) and 126 non-flow series (stage, lake elevation, precipitation totals, well depth, water temperature) with manifests; two incomplete responses recorded and skipped.
 - TWDB: 127 wells in the box, one statewide daily feed; full records for 22 index wells (J-17 from 1932; Lovelady with 15-minute data). Ten lakes with full records (Lake Austin from 1940).
 - EAA: 69 wells, 18 streams, 85 rain gauges listed; per-site CSVs are the full record; the server throttles bulk pulls (HTTP 500 and resets after a few dozen files on 2026-10-01), so coverage fills in slowly.
+- EAA conditions: the Aquifer Conditions page carries the Comal springflow daily record since 1927 and San Marcos since 1956 (not served live by USGS), the J-17 and J-27 daily highs, today's 15-minute readings, and a summary table with the 10-day averages the Critical Period rules use; captured daily. The stage trigger tables are images, captured and transcribed with checksums into `data/eaa-cpm-stages.json`. On 2026-10-01 the arithmetic (J-17 10-day 638.7 ft, Comal 145 cfs) and the EAA's own page agree on Stage 3, 35% reduction for the San Antonio Pool; Uvalde stable.
 - NWS: active alerts by county and flood-stage categories for 14 forecast gauges; hourly observations at Camp Mabry and Bergstrom for the rain validation.
 
 ## Standing rules
@@ -53,6 +54,9 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - A `CHANGELOG.md` schema bump process for the bundle once the first lens change needs one.
 
 ## Decision log
+
+- 2026-10-01 · Stage thresholds are part of the daily package, not a one-off · Saul: "This should be part of the deterministic package." `eaa.py conditions` now captures the EAA conditions and plan pages every morning; the stage tables (images) are captured verbatim and transcribed once with checksums; `assess` computes the implied stage from the 10-day averages and shows it beside the EAA's stated reduction, flagging any disagreement rather than resolving it.
+- 2026-10-01 · Base map · USGS The National Map (public domain, hydrography drawn) as default, CARTO light as alternate; OpenStreetMap's own tile server is not used in production per its tile policy. Lake data is daily back to the 1940s; the "2011 and 2022" in `IDEAS.md` are comparison years, not a sampling step.
 
 - 2026-10-01 · Repository created and seeded · Saul chose the name `hill-country-hydro`, said the water map can be public, and agreed to the split proposed in the swim repo. Seeded from `austin-swim-map` at its 2026-10-01 `main`; commit history for the moved files stays there. Started private because of the contact email in request headers.
 - 2026-10-01 · Bundle schema 1 · One file, one direction: `dist/water-state.json` carries stations, wells, lakes, EAA sites and alerts with a `schema_version`; a lens reads it and never writes back. Changes bump the version and are logged in `CHANGELOG.md`.

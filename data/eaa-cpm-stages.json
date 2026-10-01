@@ -1,0 +1,139 @@
+{
+  "source": "Edwards Aquifer Authority, Critical Period Management page, https://www.edwardsaquifer.org/groundwater-users/critical-period-drought-management/",
+  "how_obtained": "The thresholds are published only as images on that page. The images were captured verbatim on 2026-10-01 (sha256 below) and transcribed by the session that captured them. Verify against the 2025 CPM plan PDFs captured beside them (data/raw/eaa/cpm/) before quoting. The EAA declares stages from 10-day averages; this file only records the trigger table.",
+  "transcribed_on": "2026-10-01",
+  "san_antonio_pool": {
+    "image": "20261001T174744769146Z-stage-image-1.png",
+    "image_sha256": "c30d840d85d274a7c79a347830da9ad3478f54536ec7cff71886c58a49b1a549",
+    "indicators": {
+      "j17_ft_amsl": "J-17 Index Well level, ft above mean sea level",
+      "comal_cfs": "Comal Springs 10-day average springflow, cfs",
+      "san_marcos_cfs": "San Marcos Springs 10-day average springflow, cfs"
+    },
+    "rule": "A stage is entered when any one indicator falls below its trigger; returning to a less restrictive stage requires all three 10-day averages above the current stage's activation thresholds (page text).",
+    "stages": [
+      {
+        "stage": "Stable",
+        "j17_ft_amsl": {
+          "gte": 660
+        },
+        "comal_cfs": {
+          "gte": 225
+        },
+        "san_marcos_cfs": {
+          "gte": 96
+        },
+        "reduction_pct": 0
+      },
+      {
+        "stage": "Stage 1",
+        "j17_ft_amsl": {
+          "lt": 660
+        },
+        "comal_cfs": {
+          "lt": 225
+        },
+        "san_marcos_cfs": {
+          "lt": 96
+        },
+        "reduction_pct": 20
+      },
+      {
+        "stage": "Stage 2",
+        "j17_ft_amsl": {
+          "lt": 650
+        },
+        "comal_cfs": {
+          "lt": 200
+        },
+        "san_marcos_cfs": {
+          "lt": 80
+        },
+        "reduction_pct": 30
+      },
+      {
+        "stage": "Stage 3",
+        "j17_ft_amsl": {
+          "lt": 640
+        },
+        "comal_cfs": {
+          "lt": 150
+        },
+        "san_marcos_cfs": null,
+        "reduction_pct": 35
+      },
+      {
+        "stage": "Stage 4",
+        "j17_ft_amsl": {
+          "lt": 630
+        },
+        "comal_cfs": {
+          "lt": 100
+        },
+        "san_marcos_cfs": null,
+        "reduction_pct": 40
+      },
+      {
+        "stage": "Stage 5",
+        "j17_ft_amsl": {
+          "lt": 625
+        },
+        "comal_cfs": {
+          "lt": 45,
+          "note": "image reads \"Less than 45/40*\"; the asterisk is not explained in the image"
+        },
+        "san_marcos_cfs": null,
+        "reduction_pct": 44
+      }
+    ]
+  },
+  "uvalde_pool": {
+    "image": "20261001T174801603818Z-managing-uvalde-pool-cpm.png",
+    "image_sha256": "a5ea4768466af239fc6598adb06c4ed498fead9b3230a862a1defff7480b40c3",
+    "indicators": {
+      "j27_ft_amsl": "J-27 Index Well level, ft above mean sea level"
+    },
+    "stages": [
+      {
+        "stage": "Stable",
+        "j27_ft_amsl": {
+          "gte": 850
+        },
+        "reduction_pct": null
+      },
+      {
+        "stage": "Stage 1",
+        "j27_ft_amsl": null,
+        "reduction_pct": null
+      },
+      {
+        "stage": "Stage 2",
+        "j27_ft_amsl": {
+          "lt": 850
+        },
+        "reduction_pct": 5
+      },
+      {
+        "stage": "Stage 3",
+        "j27_ft_amsl": {
+          "lt": 845
+        },
+        "reduction_pct": 20
+      },
+      {
+        "stage": "Stage 4",
+        "j27_ft_amsl": {
+          "lt": 842
+        },
+        "reduction_pct": 35
+      },
+      {
+        "stage": "Stage 5",
+        "j27_ft_amsl": {
+          "lt": 840
+        },
+        "reduction_pct": 44
+      }
+    ]
+  }
+}
