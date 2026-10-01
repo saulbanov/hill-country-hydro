@@ -11,6 +11,8 @@ such as the Austin swimming-hole map, read its published bundle and apply their 
 or lake is up or down, by how much, and how that compares with the record. It was split out of
 `austin-swim-map` on 2026-10-01 (see that repo's `PROPOSAL_2026-10-01_central-texas-water-split.md`).
 
+Plan, decisions and log: [`hill-country-hydro-system.md`](hill-country-hydro-system.md). What could be built on this layer: [`IDEAS.md`](IDEAS.md).
+
 ## How a day works
 1. **Collect** (raw first): `monitor.py collect --inventory` reads every live USGS location; `groundwater.py collect`
    one statewide TWDB well file; `reservoirs.py collect` ten lake CSVs; `eaa.py collect` the EAA pages and CSVs

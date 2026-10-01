@@ -22,6 +22,10 @@ reading means for a person.
 - **Gentle with providers.** USGS: pause between requests. EAA: 3–4 s pauses, stop after repeated
   refusals, never loop. TWDB: a handful of files a day.
 
+## Where to read first
+`hill-country-hydro-system.md` (purpose, layers, decision log, session log, open items), then `README.md`
+(the daily chain). `IDEAS.md` lists possible builds; it is not a backlog.
+
 ## Layout
 - `tools/` collectors (`monitor.py collect/normalize`, `usgs_history.py`, `usgs_series_history.py`,
   `groundwater.py`, `reservoirs.py`, `eaa.py`, `hazards.py`, `weather_validation.py`), inventories
