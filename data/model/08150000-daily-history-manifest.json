@@ -1,0 +1,195 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
+  "station_id": "USGS-08150000",
+  "station": {
+    "monitoring_location_name": "Llano Rv nr Junction, TX",
+    "site_type": "Stream",
+    "hydrologic_unit_code": "120902040201",
+    "drainage_area": 1854.0,
+    "contributing_drainage_area": 1849.0,
+    "altitude": 1634.4,
+    "vertical_datum": "NAVD88",
+    "county_name": "Kimble County",
+    "coordinates_lon_lat": [
+      -99.7345096794278,
+      30.5043548671691
+    ]
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08150000&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+    "retrieved_at": "2026-10-01T15:13:30.253405+00:00",
+    "status": 200,
+    "sha256": "949a5f5e185908fe6586e3885b7b72f7217f953803c34cd4a85cb4571f3d80e0",
+    "bytes": 21129032,
+    "feature_count": 38939,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08150000/20261001T151330253405Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08150000/20261001T151330253405Z-daily-00060-00003.json.gz"
+  },
+  "metadata_requests": {
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08150000&limit=1",
+      "retrieved_at": "2026-10-01T15:13:24.025088+00:00",
+      "status": 200,
+      "sha256": "97c72cce637592a72d846096c7437e6dc57c57517a6edf5b004f819518c5c9eb",
+      "raw_path": "data/raw/usgs-daily/08150000/20261001T151324025088Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08150000/20261001T151324025088Z-location.json.gz"
+    },
+    "time_series_metadata": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08150000&limit=1000&skipGeometry=true",
+      "retrieved_at": "2026-10-01T15:13:25.351801+00:00",
+      "status": 200,
+      "sha256": "3a073e3c0c5b4c401b0e9516925e7005d1d8cff4e7349be93dff0e12cbb2cc94",
+      "raw_path": "data/raw/usgs-daily/08150000/20261001T151325351801Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08150000/20261001T151325351801Z-timeseries-metadata.json.gz"
+    }
+  },
+  "complete_response": true,
+  "normalized_csv": "data/history/08150000-00060-daily-mean.csv",
+  "series": {
+    "parameter_code": "00060",
+    "statistic_id": "00003",
+    "meaning": "daily mean discharge, ft^3/s; a daily mean is not an instantaneous reading and hides within-day peaks",
+    "time_series_ids": [
+      "e1480d7098fa43d39cef68fe8c72ebaa"
+    ],
+    "first_day": "1915-10-01",
+    "last_day": "2026-09-30",
+    "returned_days": 38939,
+    "numeric_days": 38939,
+    "non_numeric_days": 0,
+    "approval_counts": {
+      "Approved": 38819,
+      "Provisional": 120
+    },
+    "qualifier_counts": {
+      "[]": 38909,
+      "[\"ESTIMATED\"]": 30
+    },
+    "zero_days": 0
+  },
+  "station_series_inventory_00060_00065": [
+    {
+      "id": "034c10e33b6045efa919d4c3e8a82307",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00002",
+      "computation_identifier": "Min",
+      "computation_period_identifier": "Daily",
+      "begin": "2007-10-02T05:00:00+00:00",
+      "end": "2026-09-30T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "037b2021522646d89b5f1d47432bcfd6",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": "00011",
+      "computation_identifier": "Instantaneous",
+      "computation_period_identifier": "Points",
+      "begin": "2007-10-02T10:00:00+00:00",
+      "end": "2026-10-01T13:00:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "0d7038fc0dd34a1e95524f42e7bc683d",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00011",
+      "computation_identifier": "Instantaneous",
+      "computation_period_identifier": "Points",
+      "begin": "1997-10-02T10:00:00+00:00",
+      "end": "2026-10-01T12:15:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "4203071dce8a4846a8ce40022a05b5d7",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": "00003",
+      "computation_identifier": "Mean",
+      "computation_period_identifier": "Daily",
+      "begin": "1987-10-01T05:00:00+00:00",
+      "end": "2026-09-29T05:00:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "431b6e9ef1284ac99a7a9666c6af441a",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00001",
+      "computation_identifier": "Max",
+      "computation_period_identifier": "Daily",
+      "begin": "2007-10-02T05:00:00+00:00",
+      "end": "2026-09-30T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "88b3e0439ce4426dba42e8788674e5ea",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": null,
+      "computation_identifier": "Max At Event Time",
+      "computation_period_identifier": "Water Year",
+      "begin": "1916-05-22T06:00:00+00:00",
+      "end": "2024-07-23T05:00:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "bd89195d4cf745b98de71b7c0a67e4fd",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": null,
+      "computation_identifier": "Max At Event Time",
+      "computation_period_identifier": "Water Year",
+      "begin": "1916-05-22T06:00:00+00:00",
+      "end": "2024-07-23T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "e1480d7098fa43d39cef68fe8c72ebaa",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00003",
+      "computation_identifier": "Mean",
+      "computation_period_identifier": "Daily",
+      "begin": "1915-10-01T06:00:00+00:00",
+      "end": "2026-09-29T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    }
+  ],
+  "gaps": {
+    "count": 1,
+    "missing_days_total": 1604,
+    "calendar_gaps": [
+      {
+        "after": "1993-05-10",
+        "before": "1997-10-01",
+        "missing_days": 1604
+      }
+    ],
+    "meaning": "Days the provider did not return. They are absent from the CSV and are never treated as zero flow."
+  },
+  "limits": [
+    "Daily means describe the station, not any swimming reach.",
+    "Provisional values may be revised by USGS.",
+    "This archive is context for percentiles and event detection; it fits no swimming rule."
+  ]
+}

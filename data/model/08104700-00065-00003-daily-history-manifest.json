@@ -1,0 +1,29 @@
+{
+  "station_id": "USGS-08104700",
+  "series": {
+    "parameter_code": "00065",
+    "statistic_id": "00003",
+    "label": "stage-daily-mean"
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08104700&parameter_code=00065&statistic_id=00003&skipGeometry=true&limit=50000",
+    "retrieved_at": "2026-10-01T15:33:07.993960+00:00",
+    "status": 200,
+    "sha256": "d47e8d391f34dba6b78b7cff46b03d615da39a8330a8a19951b95f2ed13ac756",
+    "bytes": 7334034,
+    "feature_count": 13597,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08104700/20261001T153307993960Z-daily-00065-00003.json",
+    "capture_path": "data/captures/usgs-daily/08104700/20261001T153307993960Z-daily-00065-00003.json.gz"
+  },
+  "csv": "data/history/08104700-00065-stage-daily-mean.csv",
+  "time_series_id": "1685c21ecee44f29a7236257d472cfe5",
+  "other_time_series_for_same_statistic": {},
+  "days": 13597,
+  "numeric_days": 13597,
+  "first_day": "1987-07-08",
+  "last_day": "2026-09-30",
+  "limits": [
+    "Daily statistics describe the station; missing days are absent, never zero."
+  ]
+}

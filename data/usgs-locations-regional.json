@@ -1,0 +1,6573 @@
+{
+  "generated_at": "2026-10-01T15:30:31.969071+00:00",
+  "built_from": "data/raw/documentary/usgs-regional-inventory-2026-10-01",
+  "bbox": [
+    -100.2,
+    29.3,
+    -97.2,
+    30.9
+  ],
+  "active_rule": "any instantaneous series ending on or after 2026-09-24",
+  "meaning": "Every live USGS location in the region: streams with and without discharge, springs, wells, lakes. Tier usgs-other = current readings daily only. daily_series lists the non-discharge daily statistics worth keeping as history (tools/usgs_series_history.py).",
+  "counts": {
+    "austin": 38,
+    "usgs-other": 90,
+    "regional-key": 30,
+    "regional-other": 57
+  },
+  "kinds": {
+    "lake": 33,
+    "spring": 3,
+    "stream": 161,
+    "unknown": 6,
+    "well": 12
+  },
+  "locations": [
+    {
+      "id": "0810464660",
+      "lat": 30.69775,
+      "lon": -97.8492222222222,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2008-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "N Fk San Gabriel Rv at Reagan Blvd nr Leander, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08104700",
+      "lat": 30.661864611059958,
+      "lon": -97.71141643576868,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "N Fk San Gabriel Rv nr Georgetown, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08104900",
+      "lat": 30.6257499029033,
+      "lon": -97.6911203657225,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-04-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "S Fk San Gabriel Rv at Georgetown, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105095",
+      "lat": 30.703246849517,
+      "lon": -97.6663985081493,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:25:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:25:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2003-10-16T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Berry Ck at Airport Rd nr Georgetown, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105505",
+      "lat": 30.7021666666667,
+      "lon": -97.4341666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T09:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2013-01-01T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Willis Ck nr Granger, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105700",
+      "lat": 30.6943614564234,
+      "lon": -97.2788848762229,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Gabriel Rv at Laneport, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105872",
+      "lat": 30.5251805555556,
+      "lon": -97.7499916666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "63160": {
+          "name": "Stream level, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-09-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Brushy Ck at Cedar Park, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105883",
+      "lat": 30.5129055555556,
+      "lon": -97.6864361111111,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "63160": {
+          "name": "Stream level, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:35:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-11-19T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Brushy Ck at IH 35, Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105886",
+      "lat": 30.4655555555556,
+      "lon": -97.7878888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:35:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2010-06-15T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Lake Ck at Lake Ck Pkwy nr Austin, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08105888",
+      "lat": 30.5123944444444,
+      "lon": -97.6366722222222,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "63160": {
+          "name": "Stream level, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:35:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-10-25T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Brushy Ck at Kenney Fort Blvd at Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08154700",
+      "lat": 30.3721482524035,
+      "lon": -97.7847301161278,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-03-06T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Bull Ck at Loop 360 nr Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08155200",
+      "lat": 30.2963158693368,
+      "lon": -97.9255649629022,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-02-08T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Barton Ck at SH 71 nr Oak Hill, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08155240",
+      "lat": 30.27409788001121,
+      "lon": -97.8447523458303,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1988-12-29T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Barton Ck at Lost Ck Blvd nr Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08155300",
+      "lat": 30.2446530595218,
+      "lon": -97.8022283067307,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T10:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-03-11T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Barton Ck at Loop 360, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08155400",
+      "lat": 30.2635416815645,
+      "lon": -97.7722280354964,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:20:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1998-09-24T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Barton Ck abv Barton Spgs at Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08155541",
+      "lat": 30.2466666666667,
+      "lon": -97.7691666666667,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:20:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:20:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "W Bouldin Ck at Oltorf Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08156675",
+      "lat": 30.3541666666667,
+      "lon": -97.7388888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Shoal Ck at Silverway Dr, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08156800",
+      "lat": 30.276598027108964,
+      "lon": -97.75030522902125,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Shoal Ck at W 12th St, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08156910",
+      "lat": 30.3227777777778,
+      "lon": -97.7227777777778,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:25:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:25:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Waller Ck at Koenig Lane, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08157540",
+      "lat": 30.2716277777778,
+      "lon": -97.7355583333333,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:35:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Waller Ck at Red River St, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08157560",
+      "lat": 30.2619416666667,
+      "lon": -97.7397,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-07-11T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Waller Ck at E 1st St, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158000",
+      "lat": 30.24613888888889,
+      "lon": -97.68005555555555,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:50:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:50:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2011-12-29T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Colorado Rv at Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158030",
+      "lat": 30.2861111111111,
+      "lon": -97.7086111111111,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Boggy Ck at Manor Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158035",
+      "lat": 30.2630555555556,
+      "lon": -97.7125,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:20:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:35:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Boggy Ck at Webberville Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158200",
+      "lat": 30.3752050023632,
+      "lon": -97.660560132077,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:10:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2019-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Walnut Ck at Dessau Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158380",
+      "lat": 30.35437362871709,
+      "lon": -97.69808176444403,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2008-02-15T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Little Walnut Ck at Georgian Dr, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158600",
+      "lat": 30.2832642262557,
+      "lon": -97.6550030500381,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-08-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Walnut Ck at Webberville Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158827",
+      "lat": 30.1263234529586,
+      "lon": -97.8211161263302,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:25:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2003-04-03T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Onion Ck at Twin Creeks Rd nr Manchaca, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158840",
+      "lat": 30.209099670763052,
+      "lon": -97.90336491612015,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-02-13T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Slaughter Ck at FM 1826 nr Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158860",
+      "lat": 30.162155416966,
+      "lon": -97.8322278784219,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T10:05:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:05:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Slaughter Ck at FM 2304 nr Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158922",
+      "lat": 30.226321527050615,
+      "lon": -97.8414187690208,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-03-11T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Williamson Ck at Brush Cntry Blvd, Oak Hill, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158927",
+      "lat": 30.2124722222222,
+      "lon": -97.8288611111111,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:10:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:25:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Kincheon Br at William Cannon Blvd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158930",
+      "lat": 30.22132178744866,
+      "lon": -97.79363962067951,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T10:25:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:25:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2000-01-25T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Williamson Ck at Manchaca Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158970",
+      "lat": 30.1893780269057,
+      "lon": -97.7325039651033,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Williamson Ck at Jimmy Clay Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08159000",
+      "lat": 30.1779898690821,
+      "lon": -97.6886137799386,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:20:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-02-12T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Onion Ck at US Hwy 183, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08159105",
+      "lat": 30.1764777777778,
+      "lon": -97.5869166666667,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:25:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:25:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2019-07-16T05:00:00+00:00",
+          "end": "2026-10-01T05:00:00+00:00"
+        }
+      ],
+      "name": "Eastern Trib to Dry Ck nr Del Valle, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08159110",
+      "lat": 30.3834944444444,
+      "lon": -97.6020611111111,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:20:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T09:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2019-02-21T06:00:00+00:00",
+          "end": "2026-10-01T05:00:00+00:00"
+        }
+      ],
+      "name": "Western Trib to Gilleland Ck nr Manor, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08159250",
+      "lat": 30.0945305555556,
+      "lon": -97.6593222222222,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:30:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Maha Ck at Von Quintus Rd nr Del Valle, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "austin",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08155500",
+      "lat": 30.2635416941315,
+      "lon": -97.7713946863112,
+      "live_parameters": {
+        "00011": {
+          "name": "Temperature, water",
+          "unit": "degF",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "72253": {
+          "name": "Temperature, soil",
+          "unit": "degC",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "99133": {
+          "name": "NO3+NO2,water,insitu as N",
+          "unit": "mg/l",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "00400": {
+          "name": "pH",
+          "unit": "pH Units",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "32295": {
+          "name": "fDOM, water, in situ",
+          "unit": "QSE",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00300": {
+          "name": "Dissolved oxygen",
+          "unit": "mg/l",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "74207": {
+          "name": "Soil moisture",
+          "unit": "%",
+          "end": "2026-10-01T11:00:00+00:00"
+        },
+        "63680": {
+          "name": "Turbidity, FNU",
+          "unit": "_FNU",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-03-11T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00010",
+          "statistic_id": "00003",
+          "label": "water-temperature-daily-mean",
+          "begin": "2003-06-20T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Barton Spgs at Austin, TX",
+      "county": "Travis County",
+      "site_type": "Spring",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "spring"
+    },
+    {
+      "id": "08168000",
+      "lat": 29.7593892992877,
+      "lon": -98.1400090701469,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2002-11-27T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Hueco Spgs nr New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Spring",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "spring"
+    },
+    {
+      "id": "08170990",
+      "lat": 30.0344444444444,
+      "lon": -98.1261111111111,
+      "live_parameters": {
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T09:30:00+00:00"
+        },
+        "63680": {
+          "name": "Turbidity, FNU",
+          "unit": "_FNU",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "99133": {
+          "name": "NO3+NO2,water,insitu as N",
+          "unit": "mg/l",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "00011": {
+          "name": "Temperature, water",
+          "unit": "degF",
+          "end": "2026-10-01T10:30:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T13:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2005-04-23T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00010",
+          "statistic_id": "00003",
+          "label": "water-temperature-daily-mean",
+          "begin": "2009-06-11T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Jacobs Well Spg nr Wimberley, TX",
+      "county": "Hays County",
+      "site_type": "Spring",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "spring"
+    },
+    {
+      "id": "08149900",
+      "lat": 30.4790138888889,
+      "lon": -99.7780388888889,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:10:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:10:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2012-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "S Llano Rv at Flat Rock Ln at Junction, TX",
+      "county": "Kimble County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08150000",
+      "lat": 30.5043548671691,
+      "lon": -99.7345096794278,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Llano Rv nr Junction, TX",
+      "county": "Kimble County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08151500",
+      "lat": 30.7513041125954,
+      "lon": -98.66977734287708,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1996-11-20T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Llano Rv at Llano, TX",
+      "county": "Llano County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08152000",
+      "lat": 30.557699125935123,
+      "lon": -98.47227107418226,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Sandy Ck nr Kingsland, TX",
+      "county": "Llano County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08152900",
+      "lat": 30.22048583915013,
+      "lon": -98.8697811945872,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1998-03-16T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Pedernales Rv nr Fredericksburg, TX",
+      "county": "Gillespie County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08153500",
+      "lat": 30.291873793013156,
+      "lon": -98.39949035091958,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-05-15T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Pedernales Rv nr Johnson City, TX",
+      "county": "Blanco County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158700",
+      "lat": 30.0829892407753,
+      "lon": -98.0077858912633,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1992-03-21T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Onion Ck nr Driftwood, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08165500",
+      "lat": 30.0699307434853,
+      "lon": -99.3217121935161,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:35:00+00:00"
+        },
+        "72192": {
+          "name": "Precipitation, cumul",
+          "unit": "in",
+          "end": "2026-10-01T13:35:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:35:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1990-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2018-06-04T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Hunt, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08166200",
+      "lat": 30.0532660119763,
+      "lon": -99.1633749852236,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:20:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Kerrville, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08167000",
+      "lat": 29.965238888888887,
+      "lon": -98.89716666666668,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:20:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Comfort, TX",
+      "county": "Kendall County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08167500",
+      "lat": 29.8604956984586,
+      "lon": -98.3836274793034,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1986-12-23T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv nr Spring Branch, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08167800",
+      "lat": 29.8591075810441,
+      "lon": -98.1800105597158,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:20:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Sattler, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08168500",
+      "lat": 29.7149465006424,
+      "lon": -98.1100082582605,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv abv Comal Rv at New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08169000",
+      "lat": 29.706408333333332,
+      "lon": -98.12220833333333,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Comal Rv at New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08170500",
+      "lat": 29.889108040568,
+      "lon": -97.9341717812073,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1995-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Marcos Rv at San Marcos, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08170890",
+      "lat": 30.020805555555555,
+      "lon": -98.33055555555555,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-10-20T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2023-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Little Blanco Rv at FM 32 nr Fischer, TX",
+      "county": "Blanco County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08170950",
+      "lat": 30.0005833333333,
+      "lon": -98.2003611111111,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Blanco Rv at Fischer Store Rd nr Fischer, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08171000",
+      "lat": 29.994383430987018,
+      "lon": -98.08892505100533,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Blanco Rv at Wimberley, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08171290",
+      "lat": 30.0055555555556,
+      "lon": -97.9525,
+      "live_parameters": {
+        "72192": {
+          "name": "Precipitation, cumul",
+          "unit": "in",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2008-12-19T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Blanco Rv at Halifax Rch nr Kyle, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08171300",
+      "lat": 29.97938430547526,
+      "lon": -97.91003105695943,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1998-06-16T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Blanco Rv nr Kyle, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08171350",
+      "lat": 29.8795111111111,
+      "lon": -97.9107527777778,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T09:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:45:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Blanco Rv at San Marcos, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08171400",
+      "lat": 29.83228611111111,
+      "lon": -97.84238333333333,
+      "live_parameters": {
+        "72192": {
+          "name": "Precipitation, cumul",
+          "unit": "in",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2011-05-19T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "San Marcos Rv nr Martindale, TX",
+      "county": "Caldwell County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178880",
+      "lat": 29.7238353743084,
+      "lon": -99.0700349618808,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-05-28T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Medina Rv at Bandera, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08183900",
+      "lat": 29.7749888888889,
+      "lon": -98.7094694444445,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1996-05-24T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Cibolo Ck nr Boerne, TX",
+      "county": "Kendall County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08190000",
+      "lat": 29.4285667929798,
+      "lon": -99.9972870990477,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Nueces Rv at Laguna, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08195000",
+      "lat": 29.488564955177,
+      "lon": -99.7047756215394,
+      "live_parameters": {
+        "99133": {
+          "name": "NO3+NO2,water,insitu as N",
+          "unit": "mg/l",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T13:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:15:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T13:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Frio Rv at Concan, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08198000",
+      "lat": 29.4910644110696,
+      "lon": -99.4928241298681,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-03-29T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Sabinal Rv nr Sabinal, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-key",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08148500",
+      "lat": 30.5174101042034,
+      "lon": -99.8061789650395,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:10:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2001-06-14T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "N Llano Rv nr Junction, TX",
+      "county": "Kimble County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08150700",
+      "lat": 30.6607368499375,
+      "lon": -99.1092185450325,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1998-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Llano Rv nr Mason, TX",
+      "county": "Mason County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08150800",
+      "lat": 30.6435154754864,
+      "lon": -99.0958847821803,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Beaver Ck nr Mason, TX",
+      "county": "Mason County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158810",
+      "lat": 30.1554874900834,
+      "lon": -97.9400076181383,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-02-11T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Bear Ck bl FM 1826 nr Driftwood, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158813",
+      "lat": 30.1636611111111,
+      "lon": -97.9070194444444,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:10:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:10:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2019-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Bear Ck at Spillar Ranch Rd nr Manchaca, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158823",
+      "lat": 30.1251,
+      "lon": -97.905711,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Div of Little Bear Ck at Wenzel nr Manchaca, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08158824",
+      "lat": 30.125833,
+      "lon": -97.903889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Little Bear Ck at Wenzel nr Manchaca, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08159200",
+      "lat": 30.1046615358058,
+      "lon": -97.3194368228814,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:40:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:40:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Colorado Rv at Bastrop, TX",
+      "county": "Bastrop County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08165300",
+      "lat": 30.06410027647281,
+      "lon": -99.38701746446533,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1999-03-12T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "N Fk Guadalupe Rv nr Hunt, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08166000",
+      "lat": 30.100207070479,
+      "lon": -99.2831005597255,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1999-04-20T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Johnson Ck nr Ingram, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08166140",
+      "lat": 30.06965617248068,
+      "lon": -99.19534541810212,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:20:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1999-04-15T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv abv Bear Ck at Kerrville, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08166250",
+      "lat": 29.9877777777778,
+      "lon": -99.11,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:10:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T10:10:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2007-10-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv nr Center Point, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08167200",
+      "lat": 29.8935833333333,
+      "lon": -98.6698333333333,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-09-30T12:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Guadalupe Rv at FM 474 nr Bergheim, TX",
+      "county": "Kendall County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08168797",
+      "lat": 29.688,
+      "lon": -98.1548333333333,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T10:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2006-03-04T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Dry Comal Ck at Loop 337 nr New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08168913",
+      "lat": 29.7100777777778,
+      "lon": -98.1316611111111,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-09-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Comal Rv (oc) nr Landa Lk, New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08168932",
+      "lat": 29.7089611111111,
+      "lon": -98.1334416666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-05-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Comal Rv (nc) nr Landa Lk, New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08169792",
+      "lat": 29.5361666666667,
+      "lon": -97.8809444444444,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2005-03-15T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at FM 1117 nr Seguin, TX",
+      "county": "Guadalupe County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08169845",
+      "lat": 29.4876,
+      "lon": -97.5875055555556,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-07-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at CR 143 nr Gonzales, TX",
+      "county": "Gonzales County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08170905",
+      "lat": 30.0368,
+      "lon": -98.2228972222222,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Blanco Rv at Valley View Rd nr Fischer, TX",
+      "county": "Hays County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08172000",
+      "lat": 29.666338848553373,
+      "lon": -97.65085611912131,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Marcos Rv at Luling, TX",
+      "county": "Caldwell County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08172400",
+      "lat": 29.922997651376004,
+      "lon": -97.67919102199528,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1998-03-10T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Plum Ck at Lockhart, TX",
+      "county": "Caldwell County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08173000",
+      "lat": 29.699444,
+      "lon": -97.603333,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2001-07-19T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Plum Ck nr Luling, TX",
+      "county": "Caldwell County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08173900",
+      "lat": 29.4844041365872,
+      "lon": -97.4502701812394,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1996-10-12T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Gonzales, TX",
+      "county": "Gonzales County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08174200",
+      "lat": 29.6249138888889,
+      "lon": -97.3207444444444,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-09-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Sandy Fork Ck at Hwy 97 nr Waelder, TX",
+      "county": "Gonzales County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08174550",
+      "lat": 29.6858027777778,
+      "lon": -97.2308166666667,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T09:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-10-28T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Peach Ck at Hwy 90 nr Waelder, TX",
+      "county": "Gonzales County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08174600",
+      "lat": 29.474123278218947,
+      "lon": -97.31667946676417,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2000-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Peach Ck bl Dilworth, TX",
+      "county": "Gonzales County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08174700",
+      "lat": 29.3144666666667,
+      "lon": -97.3035,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Guadalupe Rv at Hwy 183 nr Hochheim, TX",
+      "county": "DeWitt County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08177700",
+      "lat": 29.4991192281029,
+      "lon": -98.5102957927879,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2009-11-24T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Olmos Ck at Dresden Dr, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178000",
+      "lat": 29.40967811262329,
+      "lon": -98.49504575563924,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2010-02-05T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2013-03-10T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Antonio Rv at San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178050",
+      "lat": 29.393011,
+      "lon": -98.494739,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2010-07-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-04-09T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Antonio Rv at Mitchell St, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178500",
+      "lat": 29.406344844388038,
+      "lon": -98.51087952279372,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2015-09-09T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Pedro Ck at Furnish St, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178565",
+      "lat": 29.32218094511002,
+      "lon": -98.45032200267552,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-08-26T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2009-11-18T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Antonio Rv at Loop 410, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178593",
+      "lat": 29.5638611111111,
+      "lon": -98.5196666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2009-10-04T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Salado Ck at Blanco Rd, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178800",
+      "lat": 29.357179944394037,
+      "lon": -98.41282106046235,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2009-11-19T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1995-11-09T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Salado Ck at Loop 13, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "0817887350",
+      "lat": 29.7938916666667,
+      "lon": -99.2485944444444,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:10:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:10:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2011-11-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2018-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Medina Rv at Patterson Rd at Medina, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08178980",
+      "lat": 29.6943888888889,
+      "lon": -98.9793055555556,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Medina Rv abv English Crsg nr Pipe Creek, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08180586",
+      "lat": 29.6197277777778,
+      "lon": -98.7951527777778,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2011-02-18T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Geronimo Ck nr Helotes, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08180640",
+      "lat": 29.3241246153272,
+      "lon": -98.8130810222157,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Medina Rv at La Coste, TX",
+      "county": "Medina County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08180700",
+      "lat": 29.3349579780134,
+      "lon": -98.6897440725745,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-05-29T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Medina Rv nr Macdona, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08181400",
+      "lat": 29.5785610755979,
+      "lon": -98.6916896315616,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-05-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Helotes Ck at Helotes, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08181435",
+      "lat": 29.447875,
+      "lon": -98.6337111111111,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2011-07-07T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2011-04-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Leon Ck at Lp 410 at San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08181480",
+      "lat": 29.3299583668677,
+      "lon": -98.5841856078531,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2010-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-09T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Leon Ck at IH 35, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08183978",
+      "lat": 29.736777777777778,
+      "lon": -98.49337222222222,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-09-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Cibolo Ck at Specht Rd nr Bulverde, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08185000",
+      "lat": 29.594117299794473,
+      "lon": -98.31115228123718,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1998-04-04T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Cibolo Ck at Selma, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08185065",
+      "lat": 29.5014444444444,
+      "lon": -98.18625,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2005-12-03T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2011-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Cibolo Ck nr Saint Hedwig, TX",
+      "county": "Guadalupe County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08185100",
+      "lat": 29.4438888888889,
+      "lon": -98.1688888888889,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2005-11-17T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2010-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Martinez Ck nr Saint Hedwig, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "0818999010",
+      "lat": 29.7188333333333,
+      "lon": -100.039575,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2009-02-06T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Nueces Rv nr Barksdale, TX",
+      "county": "Edwards County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08189998",
+      "lat": 29.526466666666664,
+      "lon": -100.01836666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Nueces Rv at CR 414 at Montell, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08196000",
+      "lat": 29.5046757586628,
+      "lon": -99.7814451715044,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-09-12T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Dry Frio Rv nr Reagan Wells, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08197936",
+      "lat": 29.719,
+      "lon": -99.5487,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2013-09-27T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Sabinal Rv bl Mill Ck nr Vanderpool, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08198500",
+      "lat": 29.3143055555556,
+      "lon": -99.4804722222222,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1987-07-08T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Sabinal Rv at Sabinal, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08200000",
+      "lat": 29.5700305555556,
+      "lon": -99.2476888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-10-30T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Hondo Ck nr Tarpley, TX",
+      "county": "Medina County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08200720",
+      "lat": 29.3761111111111,
+      "lon": -99.1166666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2006-07-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Hondo Ck at SH 173 nr Hondo, TX",
+      "county": "Medina County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08200977",
+      "lat": 29.5677777777778,
+      "lon": -99.0969444444444,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2006-10-14T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Middle Verde Ck at SH 173 nr Bandera, TX",
+      "county": "Medina County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08201500",
+      "lat": 29.57328400152,
+      "lon": -99.4030997373775,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1996-10-24T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Seco Ck at Miller Rh nr Utopia, TX",
+      "county": "Medina County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08202700",
+      "lat": 29.3707891675822,
+      "lon": -99.2878185255069,
+      "live_parameters": {
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1995-11-04T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Seco Ck at Rowe Rh nr D'Hanis, TX",
+      "county": "Medina County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08203450",
+      "lat": 29.3452777777778,
+      "lon": -99.7488888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "00060": {
+          "name": "Discharge",
+          "unit": "ft^3/s",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2008-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Leona Rv at CR 429A nr Uvalde, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "regional-other",
+      "has_discharge": true,
+      "kind": "stream"
+    },
+    {
+      "id": "08104650",
+      "lat": 30.6676921271117,
+      "lon": -97.7275110393049,
+      "live_parameters": {
+        "62614": {
+          "name": "Elevation, lake/res, NGVD29",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        },
+        "00035": {
+          "name": "Wind speed",
+          "unit": "mph",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00036": {
+          "name": "Wind direction",
+          "unit": "deg",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62614",
+          "statistic_id": "00003",
+          "label": "lake-elevation-ngvd29-daily-mean",
+          "begin": "2000-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Lk Georgetown nr Georgetown, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "08105600",
+      "lat": 30.6929723714598,
+      "lon": -97.3263866181694,
+      "live_parameters": {
+        "00036": {
+          "name": "Wind direction",
+          "unit": "deg",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00035": {
+          "name": "Wind speed",
+          "unit": "mph",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "62614": {
+          "name": "Elevation, lake/res, NGVD29",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62614",
+          "statistic_id": "00003",
+          "label": "lake-elevation-ngvd29-daily-mean",
+          "begin": "2000-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Granger Lk nr Granger, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "08158110",
+      "lat": 30.45,
+      "lon": -97.679675,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2014-07-24T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Mills Pond at Wells Branch, TX",
+      "county": "Travis County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "08167700",
+      "lat": 29.8688293391786,
+      "lon": -98.1988999534295,
+      "live_parameters": {
+        "00036": {
+          "name": "Wind direction",
+          "unit": "deg",
+          "end": "2026-10-01T12:15:00+00:00"
+        },
+        "62614": {
+          "name": "Elevation, lake/res, NGVD29",
+          "unit": "ft",
+          "end": "2026-10-01T10:15:00+00:00"
+        },
+        "00035": {
+          "name": "Wind speed",
+          "unit": "mph",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62614",
+          "statistic_id": "00003",
+          "label": "lake-elevation-ngvd29-daily-mean",
+          "begin": "1992-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Canyon Lk nr New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "08179500",
+      "lat": 29.540228535758775,
+      "lon": -98.93394738403089,
+      "live_parameters": {
+        "00053": {
+          "name": "Surface area",
+          "unit": "Acre",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "62614": {
+          "name": "Elevation, lake/res, NGVD29",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00054": {
+          "name": "Reservoir storage",
+          "unit": "Acre-ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62614",
+          "statistic_id": "00003",
+          "label": "lake-elevation-ngvd29-daily-mean",
+          "begin": "1997-08-09T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Medina Lk nr San Antonio, TX",
+      "county": "Medina County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "293355098560601",
+      "lat": 29.5653055555556,
+      "lon": -98.9351388888889,
+      "live_parameters": {
+        "00020": {
+          "name": "Temperature, air",
+          "unit": "degC",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "62607": {
+          "name": "Air pressure",
+          "unit": "kPa",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00052": {
+          "name": "Relative humidity",
+          "unit": "%",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "72192": {
+          "name": "Precipitation, cumul",
+          "unit": "in",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "62608": {
+          "name": "Solar radiation down",
+          "unit": "W/m^2",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00036": {
+          "name": "Wind direction",
+          "unit": "deg",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "62625": {
+          "name": "Wind speed",
+          "unit": "m/s",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2017-04-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Medina Lk Meteorological Station nr Rio Medina, TX",
+      "county": "Bandera County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "302722097230001",
+      "lat": 30.45611111111111,
+      "lon": -97.38341666666668,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2023-03-23T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "LBC Dam 32 nr Coupland, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "302814097444799",
+      "lat": 30.47044722222222,
+      "lon": -97.74639166666667,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-29T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 8 nr Austin, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "302903097424999",
+      "lat": 30.48406388888889,
+      "lon": -97.713575,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-08-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 9 nr Austin, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "302914097483500",
+      "lat": 30.487233333333336,
+      "lon": -97.80967777777778,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-06-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 6 nr Cedar Park, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "302926097322400",
+      "lat": 30.4904444444444,
+      "lon": -97.5400194444444,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-06-28T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 22 nr Pflugerville, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303022097331200",
+      "lat": 30.506197222222223,
+      "lon": -97.55320833333333,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-08-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 21 nr Hutto, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303031097460200",
+      "lat": 30.508519444444445,
+      "lon": -97.76716666666667,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-09-21T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 7 nr Cedar Park, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303056097341300",
+      "lat": 30.5156361111111,
+      "lon": -97.5704111111111,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-06-28T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 20 nr Hutto, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303114097355700",
+      "lat": 30.5205,
+      "lon": -97.59913888888889,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 19 nr Hutto, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303129097254701",
+      "lat": 30.52497222222222,
+      "lon": -97.42994444444444,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2023-04-17T05:00:00+00:00",
+          "end": "2026-10-01T05:00:00+00:00"
+        }
+      ],
+      "name": "LBC Dam 29 nr Taylor, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303209097473000",
+      "lat": 30.535758333333334,
+      "lon": -97.79153055555555,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-10-14T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 4 nr Cedar Park, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303212097373100",
+      "lat": 30.536663888888892,
+      "lon": -97.62524722222221,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-06-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 17 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303216097423600",
+      "lat": 30.53786666666667,
+      "lon": -97.71000000000001,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-29T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 12 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303223097450600",
+      "lat": 30.539833333333334,
+      "lon": -97.75178333333334,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T10:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-08-24T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 13 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303227097404504",
+      "lat": 30.54131388888889,
+      "lon": -97.67879444444445,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-28T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 11 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303231097394800",
+      "lat": 30.541808333333336,
+      "lon": -97.66339444444445,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-06-07T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 14 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303234097345700",
+      "lat": 30.542908333333337,
+      "lon": -97.58258888888888,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 18 nr Hutto, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303318097482000",
+      "lat": 30.554933333333334,
+      "lon": -97.805425,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-08-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 3 nr Leander, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303341097364800",
+      "lat": 30.561291666666666,
+      "lon": -97.61344166666666,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-06-29T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 15 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303401097374700",
+      "lat": 30.567044444444445,
+      "lon": -97.62966666666667,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 16 nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303425097175601",
+      "lat": 30.573666666666668,
+      "lon": -97.29899999999999,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T10:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2023-03-13T05:00:00+00:00",
+          "end": "2026-10-01T05:00:00+00:00"
+        }
+      ],
+      "name": "LBC Dam 18 nr Thrall, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303437097285701",
+      "lat": 30.57716111111111,
+      "lon": -97.48256111111111,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2021-12-02T06:00:00+00:00",
+          "end": "2026-10-01T05:00:00+00:00"
+        }
+      ],
+      "name": "LBC Dam 25 nr Taylor, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303439097465000",
+      "lat": 30.577388888888887,
+      "lon": -97.78053055555556,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 5 nr Leander, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303443097502700",
+      "lat": 30.57853888888889,
+      "lon": -97.84085277777777,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 2 at Leander, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303508097525399",
+      "lat": 30.585525,
+      "lon": -97.88131944444444,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2013-07-29T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 1 nr Leander, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303549097143301",
+      "lat": 30.59713888888889,
+      "lon": -97.24275,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T10:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "62615",
+          "statistic_id": "00003",
+          "label": "lake-elevation-navd88-daily-mean",
+          "begin": "2023-03-21T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "LBC Dam 20 nr Thorndale, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "303732097143201",
+      "lat": 30.625561,
+      "lon": -97.24225,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T10:30:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "LBC Dam 9 nr Thorndale, TX",
+      "county": "Williamson County",
+      "site_type": "Lake, Reservoir, Impoundment",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "lake"
+    },
+    {
+      "id": "08104590",
+      "lat": 30.8139,
+      "lon": -97.9658,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2024-02-24T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "N Fk San Gabriel Rv at FM 243 nr Briggs, TX",
+      "county": "Burnet County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08104866",
+      "lat": 30.66,
+      "lon": -97.93780000000001,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:50:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2024-02-17T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "S Fk San Gabriel Rv at SH 1869 nr Liberty Hill, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08104870",
+      "lat": 30.621111000000003,
+      "lon": -97.860556,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "S Fk San Gabriel Rv at Hwy 183 nr Leander, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08105046",
+      "lat": 30.8106,
+      "lon": -97.826,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-09-30T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2024-03-07T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Berry Ck at FM 970 nr Florence, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08105300",
+      "lat": 30.646,
+      "lon": -97.5852,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2024-03-06T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Gabriel Rv nr Weir, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "0810588650",
+      "lat": 30.484136111111113,
+      "lon": -97.7200388888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-12-18T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "UBC Dam 101 at O'Connor Blvd nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08105891",
+      "lat": 30.530919444444443,
+      "lon": -97.6141111111111,
+      "live_parameters": {
+        "00400": {
+          "name": "pH",
+          "unit": "pH Units",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "99133": {
+          "name": "NO3+NO2,water,insitu as N",
+          "unit": "mg/l",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "63680": {
+          "name": "Turbidity, FNU",
+          "unit": "_FNU",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T13:15:00+00:00"
+        },
+        "00300": {
+          "name": "Dissolved oxygen",
+          "unit": "mg/l",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Brushy Ck at Red Bud Ln nr Round Rock, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08105892",
+      "lat": 30.5263,
+      "lon": -97.5667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:20:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2024-03-08T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Brushy Ck at FM 685 nr Hutto, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08105897",
+      "lat": 30.4693888888889,
+      "lon": -97.4634722222222,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:35:00+00:00"
+        },
+        "63160": {
+          "name": "Stream level, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:35:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-11-20T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Brushy Ck at FM 973 nr Coupland, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08106050",
+      "lat": 30.5195833333333,
+      "lon": -97.3384472222222,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2017-04-22T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Brushy Ck at FM 619 nr Taylor, TX",
+      "county": "Williamson County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08143890",
+      "lat": 30.834558333333334,
+      "lon": -100.09408888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:50:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2019-02-08T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "San Saba Rv at FM 864 nr Fort McKavett, TX",
+      "county": "Menard County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08151100",
+      "lat": 30.7274944444444,
+      "lon": -98.8142861111111,
+      "live_parameters": {
+        "63160": {
+          "name": "Stream level, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Llano Rv at CR 102 nr Llano, TX",
+      "county": "Llano County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08158045",
+      "lat": 30.3005555555556,
+      "lon": -97.6855555555556,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2007-09-08T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Ft Br Boggy Ck at Manor Rd, Austin, TX",
+      "county": "Travis County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08165400",
+      "lat": 29.980181,
+      "lon": -99.4423,
+      "live_parameters": {
+        "72192": {
+          "name": "Precipitation, cumul",
+          "unit": "in",
+          "end": "2026-10-01T13:05:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:05:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "S Fk Guadalupe Rv at Lynx Haven Crsg nr Hunt, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08166150",
+      "lat": 30.06548966533074,
+      "lon": -99.1822894801746,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2025-12-10T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv abv Kerrville, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08166700",
+      "lat": 30.01143611111111,
+      "lon": -98.97413611111111,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:20:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Cypress Ck at Saur Farm nr Comfort, TX",
+      "county": "Kerr County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08167870",
+      "lat": 29.8085,
+      "lon": -98.2302805555556,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-06-17T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2026-06-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Bear Ck at FM 2722 nr Sattler, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08167900",
+      "lat": 29.8036888888889,
+      "lon": -98.1630888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2014-09-20T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Third Crossing nr Sattler, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08168770",
+      "lat": 29.6758944444444,
+      "lon": -98.2510888888889,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-07-06T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "WFk Dry Comal Ck at Schuetz Dam, New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08169500",
+      "lat": 29.6980026494497,
+      "lon": -98.1066748203726,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2001-09-30T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at New Braunfels, TX",
+      "county": "Comal County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08169740",
+      "lat": 29.5514083333333,
+      "lon": -97.9693805555556,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-10-14T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Guadalupe Rv at Hwy 123-BR at Seguin, TX",
+      "county": "Guadalupe County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08169778",
+      "lat": 29.59961111111111,
+      "lon": -97.93917222222223,
+      "live_parameters": {
+        "72254": {
+          "name": "Sensor velocity",
+          "unit": "ft/s",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Geronimo Ck at I-10 nr Seguin, TX",
+      "county": "Guadalupe County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08169780",
+      "lat": 29.5906222222222,
+      "lon": -97.9347916666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Geronimo Ck nr Seguin, TX",
+      "county": "Guadalupe County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08170800",
+      "lat": 30.1025833333333,
+      "lon": -98.5106666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2023-10-02T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2016-01-23T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Blanco Rv at Crabapple Rd nr Blanco, TX",
+      "county": "Blanco County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08170860",
+      "lat": 30.092780555555553,
+      "lon": -98.42315,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Blanco Rv at Blanco, TX",
+      "county": "Blanco County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08173210",
+      "lat": 29.654922222222222,
+      "lon": -97.59977222222221,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Plum Ck at US183 nr Luling, TX",
+      "county": "Caldwell County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08178585",
+      "lat": 29.630781348986,
+      "lon": -98.5655755265633,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "1997-12-06T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "Salado Ck at Wilderness Rd, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08178638",
+      "lat": 29.6293861111111,
+      "lon": -98.448825,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2017-10-13T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2026-06-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "W Elm Ck at Encino Rio at San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08178861",
+      "lat": 29.8753333333333,
+      "lon": -99.3488333333333,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2017-10-12T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "N Prong Medina Rv at Brewington Ck nr Medina, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08178871",
+      "lat": 29.7801388888889,
+      "lon": -99.3792777777778,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T10:40:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2026-06-02T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "W Prong Medina Rv at Carpenter Ck Rd nr Medina, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08180941",
+      "lat": 29.5391666666667,
+      "lon": -98.7513888888889,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Culebra Ck in GCSNA nr Helotes, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08180990",
+      "lat": 29.5930555555556,
+      "lon": -98.5991666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Leon Ck at IH 10 and Loop 1604 nr San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08181445",
+      "lat": 29.40611111111111,
+      "lon": -98.60694444444444,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:00:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Leon Ck at SH 90, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08181447",
+      "lat": 29.393880555555555,
+      "lon": -98.60135,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Leon Ck at Morey Rd, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08181460",
+      "lat": 29.365555555555556,
+      "lon": -98.58583333333333,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T09:45:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Leon Ck at SW Military Dr, San Antonio, TX",
+      "county": "Bexar County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08194840",
+      "lat": 29.7229833333333,
+      "lon": -99.75345,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2018-04-05T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Frio Rv at Leakey, TX",
+      "county": "Real County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08196300",
+      "lat": 29.3736111111111,
+      "lon": -99.7041666666667,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Dry Frio Rv at FM 2690 nr Knippa, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08197910",
+      "lat": 29.791856,
+      "lon": -99.574303,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "Sabinal Rv at FM 187 nr Vanderpool, TX",
+      "county": "Bandera County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "08197970",
+      "lat": 29.6122666666667,
+      "lon": -99.5294833333333,
+      "live_parameters": {
+        "00065": {
+          "name": "Gage height",
+          "unit": "ft",
+          "end": "2026-10-01T13:05:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00065",
+          "statistic_id": "00003",
+          "label": "stage-daily-mean",
+          "begin": "2020-03-28T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "Sabinal Rv at Utopia, TX",
+      "county": "Uvalde County",
+      "site_type": "Stream",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "stream"
+    },
+    {
+      "id": "-08148000",
+      "lat": 30.75125,
+      "lon": -98.41835,
+      "live_parameters": {
+        "00062": {
+          "name": "Reservoir elevation",
+          "unit": "ft",
+          "end": "2026-10-01T11:25:00+00:00"
+        },
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T10:40:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": null,
+      "county": null,
+      "site_type": null,
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "unknown"
+    },
+    {
+      "id": "-08148100",
+      "lat": 30.7316194444444,
+      "lon": -98.38515,
+      "live_parameters": {
+        "00062": {
+          "name": "Reservoir elevation",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        },
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": null,
+      "county": null,
+      "site_type": null,
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "unknown"
+    },
+    {
+      "id": "-08152500",
+      "lat": 30.5562388888889,
+      "lon": -98.3385194444444,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        },
+        "00062": {
+          "name": "Reservoir elevation",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": null,
+      "county": null,
+      "site_type": null,
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "unknown"
+    },
+    {
+      "id": "-08152706",
+      "lat": 30.5559111111111,
+      "lon": -98.25725,
+      "live_parameters": {
+        "00062": {
+          "name": "Reservoir elevation",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        },
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": null,
+      "county": null,
+      "site_type": null,
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "unknown"
+    },
+    {
+      "id": "-08154500",
+      "lat": 30.39105,
+      "lon": -97.9065888888889,
+      "live_parameters": {
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        },
+        "00062": {
+          "name": "Reservoir elevation",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": null,
+      "county": null,
+      "site_type": null,
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "unknown"
+    },
+    {
+      "id": "-08154900",
+      "lat": 30.2940694444444,
+      "lon": -97.7851305555556,
+      "live_parameters": {
+        "00062": {
+          "name": "Reservoir elevation",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        },
+        "62615": {
+          "name": "Elevation, lake/res, NAVD88",
+          "unit": "ft",
+          "end": "2026-10-01T12:55:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": null,
+      "county": null,
+      "site_type": null,
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "unknown"
+    },
+    {
+      "id": "292618099165901",
+      "lat": 29.43856412355583,
+      "lon": -99.28340128203075,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00008",
+          "label": "well-depth-daily-median",
+          "begin": "2013-11-09T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "TD-69-38-601 (Seco Creek Well)",
+      "county": "Medina County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "292628099401401",
+      "lat": 29.44606288488159,
+      "lon": -99.66480086640308,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00003",
+          "label": "well-depth-daily-mean",
+          "begin": "2018-07-18T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "YP-69-35-602 (Frio Reference Well)",
+      "county": "Uvalde County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "292943098354404",
+      "lat": 29.4952777777778,
+      "lon": -98.5955555555555,
+      "live_parameters": {
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T11:00:00+00:00"
+        },
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T11:00:00+00:00"
+        },
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00008",
+          "label": "well-depth-daily-median",
+          "begin": "2013-07-04T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "AY-68-36-132 (Z DED)",
+      "county": "Bexar County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "293252098380801",
+      "lat": 29.5477777777778,
+      "lon": -98.6355555555556,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T11:00:00+00:00"
+        },
+        "63680": {
+          "name": "Turbidity, FNU",
+          "unit": "_FNU",
+          "end": "2026-09-30T21:30:00+00:00"
+        },
+        "00300": {
+          "name": "Dissolved oxygen",
+          "unit": "mg/l",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "32295": {
+          "name": "fDOM, water, in situ",
+          "unit": "QSE",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T11:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00008",
+          "label": "well-depth-daily-median",
+          "begin": "2013-07-09T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00003",
+          "label": "well-depth-daily-mean",
+          "begin": "2013-07-09T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "AY-68-27-610 (Parkwood Park)",
+      "county": "Bexar County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "293336098472401",
+      "lat": 29.56,
+      "lon": -98.79,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-09-29T19:13:16+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "AY-68-26-6xx (Windgate)",
+      "county": "Bexar County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "293405098394201",
+      "lat": 29.5680555555556,
+      "lon": -98.6616666666667,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T10:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2026-06-03T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00008",
+          "label": "well-depth-daily-median",
+          "begin": "2018-02-09T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "AY-68-27-609 (Western Oak)",
+      "county": "Bexar County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "293516098325501",
+      "lat": 29.5877777777778,
+      "lon": -98.5486111111111,
+      "live_parameters": {
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "32295": {
+          "name": "fDOM, water, in situ",
+          "unit": "QSE",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T12:00:00+00:00"
+        },
+        "63680": {
+          "name": "Turbidity, FNU",
+          "unit": "_FNU",
+          "end": "2026-10-01T13:00:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "00300": {
+          "name": "Dissolved oxygen",
+          "unit": "mg/l",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "99133": {
+          "name": "NO3+NO2,water,insitu as N",
+          "unit": "mg/l",
+          "end": "2026-10-01T10:00:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00008",
+          "label": "well-depth-daily-median",
+          "begin": "2014-03-01T06:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "AY-68-28-211 (Shavano Park at Fawn Drive)",
+      "county": "Bexar County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "293559098284801",
+      "lat": 29.5997222222222,
+      "lon": -98.48,
+      "live_parameters": {
+        "63680": {
+          "name": "Turbidity, FNU",
+          "unit": "_FNU",
+          "end": "2026-10-01T11:45:00+00:00"
+        },
+        "99133": {
+          "name": "NO3+NO2,water,insitu as N",
+          "unit": "mg/l",
+          "end": "2026-10-01T10:00:00+00:00"
+        },
+        "32295": {
+          "name": "fDOM, water, in situ",
+          "unit": "QSE",
+          "end": "2026-10-01T12:45:00+00:00"
+        },
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T10:45:00+00:00"
+        },
+        "00095": {
+          "name": "Specific cond at 25C",
+          "unit": "uS/cm",
+          "end": "2026-10-01T10:45:00+00:00"
+        },
+        "00010": {
+          "name": "Temperature, water",
+          "unit": "degC",
+          "end": "2026-10-01T10:45:00+00:00"
+        },
+        "00300": {
+          "name": "Dissolved oxygen",
+          "unit": "mg/l",
+          "end": "2026-10-01T12:45:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00008",
+          "label": "well-depth-daily-median",
+          "begin": "2026-06-02T05:00:00+00:00",
+          "end": "2026-09-30T05:00:00+00:00"
+        }
+      ],
+      "name": "AY-68-29-112 (Donella)",
+      "county": "Bexar County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "294003099141101",
+      "lat": 29.66775,
+      "lon": -99.23652777777778,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T13:30:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "AS-69-23-402 (Hondo Canyon)",
+      "county": "Bandera County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "294004099141004",
+      "lat": 29.667808333333333,
+      "lon": -99.23638611111112,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [],
+      "name": "AS-69-23-404 (Lower Trinity Hondo Canyon)",
+      "county": "Bandera County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "295204099340201",
+      "lat": 29.8677972222222,
+      "lon": -99.5671888888889,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T11:30:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "00045",
+          "statistic_id": "00006",
+          "label": "precipitation-daily-total",
+          "begin": "2018-06-05T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        },
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00003",
+          "label": "well-depth-daily-mean",
+          "begin": "2012-11-06T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "AS-69-12-206 (Bandera County Edwards GW Well 1)",
+      "county": "Bandera County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    },
+    {
+      "id": "301237097464801",
+      "lat": 30.2103388888889,
+      "lon": -97.7815833333333,
+      "live_parameters": {
+        "72019": {
+          "name": "Water level, depth LSD",
+          "unit": "ft",
+          "end": "2026-10-01T12:15:00+00:00"
+        }
+      },
+      "daily_series": [
+        {
+          "parameter_code": "72019",
+          "statistic_id": "00003",
+          "label": "well-depth-daily-mean",
+          "begin": "2013-08-09T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00"
+        }
+      ],
+      "name": "YD-58-50-301 (Lovelady)",
+      "county": "Travis County",
+      "site_type": "Well",
+      "tier": "usgs-other",
+      "has_discharge": false,
+      "kind": "well"
+    }
+  ]
+}

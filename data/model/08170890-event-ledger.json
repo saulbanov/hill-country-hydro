@@ -1,0 +1,30 @@
+{
+  "station_id": "USGS-08170890",
+  "source_csv": "data/history/08170890-00060-daily-mean.csv",
+  "record": {
+    "first_day": null,
+    "last_day": null,
+    "numeric_days": 0,
+    "zero_days": 0,
+    "median_daily_mean": null
+  },
+  "event_definition": null,
+  "events": [],
+  "summary": {
+    "event_count": 0,
+    "events_per_water_year": {},
+    "median_duration_days": null,
+    "median_peak_value": null,
+    "peak_month_counts": {},
+    "events_ended_by_gap": 0
+  },
+  "labels": [],
+  "holdout_split": null,
+  "rule_fit": {
+    "attempted": false,
+    "reason": "no numeric daily means on file for this station; nothing to evaluate"
+  },
+  "limits": [
+    "The daily-mean record has no numeric values (the station may report instantaneous flow only); no event or percentile can be computed."
+  ]
+}

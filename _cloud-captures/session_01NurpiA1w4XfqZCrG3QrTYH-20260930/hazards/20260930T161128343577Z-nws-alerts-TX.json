@@ -1,0 +1,2503 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e54efed1724378e3b2cdfff8983e8335b787f7d1.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -102.58,
+                            35.19
+                        ],
+                        [
+                            -102.36,
+                            35.19
+                        ],
+                        [
+                            -102.37,
+                            34.75
+                        ],
+                        [
+                            -102.81,
+                            34.75
+                        ],
+                        [
+                            -102.84,
+                            34.85
+                        ],
+                        [
+                            -102.8,
+                            35.05
+                        ],
+                        [
+                            -102.58,
+                            35.19
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e54efed1724378e3b2cdfff8983e8335b787f7d1.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.e54efed1724378e3b2cdfff8983e8335b787f7d1.001.1",
+                "areaDesc": "Deaf Smith, TX; Oldham, TX",
+                "geocode": {
+                    "SAME": [
+                        "048117",
+                        "048359"
+                    ],
+                    "UGC": [
+                        "TXC117",
+                        "TXC359"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC117",
+                    "https://api.weather.gov/zones/county/TXC359"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31f2e9c135de5eaff46d6a7ea792643aa9b3dfc2.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.31f2e9c135de5eaff46d6a7ea792643aa9b3dfc2.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-30T08:52:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T11:08:00-05:00",
+                "effective": "2026-09-30T11:08:00-05:00",
+                "onset": "2026-09-30T11:08:00-05:00",
+                "expires": "2026-09-30T13:45:00-05:00",
+                "ends": "2026-09-30T13:45:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 11:08AM CDT until September 30 at 1:45PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Central Deaf Smith County in the panhandle of Texas...\nSouth Central Oldham County in the panhandle of Texas...\n\n* WHEN...Until 145 PM CDT.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Low-water\ncrossings are inundated with water and may not be passable. Expect\nmany areas of slow moving or standing water. It will take several\nhours for all the water from these storms to work through local\ndrainage systems in urban areas.\n\n* ADDITIONAL DETAILS...\n- At 1102 AM CDT, emergency management reported flooding in the\nwarned area. Flooding is already occurring.\n- Flooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nHereford, Simms and Bootleg.\n- Flooding near the Tierra Blanca Creek and south Kingwood Street\nwas reported by local emergency manager.  A few cars were\nsubmerged in the water over the roadway with water flowing at a\nfairly steady pace.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 301608"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL 145 PM CDT THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KAMA.FA.W.0011.000000T0000Z-260930T1845Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T13:45:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.48176a0cd3ffd62ed30f37ddd3b54ab0270be12d.001.1,2026-09-30T06:46:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e79d154c75f01601be54f7bff80bba704753009.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -101.73,
+                            34.75
+                        ],
+                        [
+                            -101.76,
+                            34.8
+                        ],
+                        [
+                            -101.74,
+                            34.89
+                        ],
+                        [
+                            -101.73,
+                            34.92
+                        ],
+                        [
+                            -101.69,
+                            35.08
+                        ],
+                        [
+                            -101.46,
+                            34.89
+                        ],
+                        [
+                            -101.4,
+                            34.75
+                        ],
+                        [
+                            -101.73,
+                            34.75
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e79d154c75f01601be54f7bff80bba704753009.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.2e79d154c75f01601be54f7bff80bba704753009.001.1",
+                "areaDesc": "Armstrong, TX; Randall, TX",
+                "geocode": {
+                    "SAME": [
+                        "048011",
+                        "048381"
+                    ],
+                    "UGC": [
+                        "TXC011",
+                        "TXC381"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC011",
+                    "https://api.weather.gov/zones/county/TXC381"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.976733b60f9b4af271c5e7c1f3c3336d88a7c6dc.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.976733b60f9b4af271c5e7c1f3c3336d88a7c6dc.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-30T08:50:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T10:59:00-05:00",
+                "effective": "2026-09-30T10:59:00-05:00",
+                "onset": "2026-09-30T10:59:00-05:00",
+                "expires": "2026-09-30T13:15:00-05:00",
+                "ends": "2026-09-30T13:15:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Advisory issued September 30 at 10:59AM CDT until September 30 at 1:15PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Southwestern Armstrong County in the panhandle of Texas...\nSoutheastern Randall County in the panhandle of Texas...\n\n* WHEN...Until 115 PM CDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\nRises in small streams and normally dry arroyos. Some low-water\ncrossings may become impassable.\n\n* ADDITIONAL DETAILS...\n- At 1059 AM CDT, Palo Duro Canyon park official reported flooding\nin the advisory area. Minor flooding is already occurring.\n- Flooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nWayside and Palo Duro Canyon.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nFlooding is occurring or is imminent. It is important to know where\nyou are relative to streams, rivers, or creeks which can become\nkillers in heavy rains. Campers and hikers should avoid streams or\ncreeks.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS84 KAMA 301559"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD ADVISORY NOW IN EFFECT UNTIL 115 PM CDT THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KAMA.FA.Y.0102.000000T0000Z-260930T1815Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T13:15:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8b64d0532410d2ce4cb85e1cf91eaee9c0d0523c.001.1,2026-09-30T06:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5007bfe42a8c2f5971c113d500f36fe7d1b36ce7.001.1,2026-09-30T04:08:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FAY"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c0753f26ef3a4ab912855fdfac7b35a3e4dfe0c.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -102.17,
+                            35.07
+                        ],
+                        [
+                            -102.03,
+                            35.06
+                        ],
+                        [
+                            -101.94,
+                            35.03
+                        ],
+                        [
+                            -101.89,
+                            35
+                        ],
+                        [
+                            -101.91,
+                            34.99
+                        ],
+                        [
+                            -101.94,
+                            34.98
+                        ],
+                        [
+                            -101.97,
+                            34.98
+                        ],
+                        [
+                            -102.08,
+                            35
+                        ],
+                        [
+                            -102.17,
+                            35.01
+                        ],
+                        [
+                            -102.17,
+                            35.07
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c0753f26ef3a4ab912855fdfac7b35a3e4dfe0c.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9c0753f26ef3a4ab912855fdfac7b35a3e4dfe0c.001.1",
+                "areaDesc": "Randall, TX",
+                "geocode": {
+                    "SAME": [
+                        "048381"
+                    ],
+                    "UGC": [
+                        "TXC381"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC381"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b49854bc8eccfdccf19cced2b252f45d7443aa7.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.5b49854bc8eccfdccf19cced2b252f45d7443aa7.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-30T08:50:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T10:56:00-05:00",
+                "effective": "2026-09-30T10:56:00-05:00",
+                "onset": "2026-09-30T10:56:00-05:00",
+                "expires": "2026-09-30T13:15:00-05:00",
+                "ends": "2026-09-30T13:15:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 10:56AM CDT until September 30 at 1:15PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Small stream flooding caused by excessive rainfall\ncontinues.\n\n* WHERE...West Central Randall County in the panhandle of Texas...\n\n* WHEN...Until 115 PM CDT.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Streams\ncontinue to rise due to excess runoff from earlier rainfall. It\nwill take several hours for all the water from these storms to work\nthrough local drainage systems in urban areas.\n\n* ADDITIONAL DETAILS...\n- At 1053 AM CDT, River gauge report Palo Duro Creek still above\nflood stage north of Umbarger. Flooding is already occurring in\nthe warned area.\n- Flooding impacts will continue, but no additional rainfall is\nexpected. Flooding is occurring along the Palo Duro Creek.  The\ncreek peaked at 12 feet around 6 AM and is currently at 11 feet\nas of 11 AM.  Flood stage is 10 feet.\n- Some locations that will experience flooding include...\nCanyon.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 301556"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL 115 PM CDT THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KAMA.FA.W.0009.000000T0000Z-260930T1815Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T13:15:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7b6f5250a2ff2af96db0983c79898aef67e07da5.001.1,2026-09-30T06:55:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.83c4193312541fefbcedf00ca29205aee91fb810.001.1,2026-09-30T04:58:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8d32046bbad97317011b4b4042f3bfd899ea6cb0.001.1,2026-09-30T02:49:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.908821e7b1f336bdc5b137ff68a1fe2bbae85585.001.1,2026-09-30T02:20:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4e4a0c1cafb563c2a53943a7df30e9f1e5ad6ca0.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -102.26,
+                            35.3
+                        ],
+                        [
+                            -102.37,
+                            35.19
+                        ],
+                        [
+                            -102.56,
+                            35.19
+                        ],
+                        [
+                            -102.43,
+                            35.37
+                        ],
+                        [
+                            -102.31,
+                            35.58
+                        ],
+                        [
+                            -102.03,
+                            35.54
+                        ],
+                        [
+                            -102.1,
+                            35.31
+                        ],
+                        [
+                            -102.17,
+                            35.31
+                        ],
+                        [
+                            -102.26,
+                            35.3
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4e4a0c1cafb563c2a53943a7df30e9f1e5ad6ca0.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.4e4a0c1cafb563c2a53943a7df30e9f1e5ad6ca0.001.1",
+                "areaDesc": "Oldham, TX; Potter, TX",
+                "geocode": {
+                    "SAME": [
+                        "048359",
+                        "048375"
+                    ],
+                    "UGC": [
+                        "TXC359",
+                        "TXC375"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC359",
+                    "https://api.weather.gov/zones/county/TXC375"
+                ],
+                "references": [],
+                "sent": "2026-09-30T10:50:00-05:00",
+                "effective": "2026-09-30T10:50:00-05:00",
+                "onset": "2026-09-30T10:50:00-05:00",
+                "expires": "2026-09-30T16:00:00-05:00",
+                "ends": "2026-09-30T16:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Advisory issued September 30 at 10:50AM CDT until September 30 at 4:00PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall is occurring.\n\n* WHERE...Eastern Oldham County in the panhandle of Texas...\nNorthwestern Potter County in the panhandle of Texas...\n\n* WHEN...Until 400 PM CDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\nDangerous flows over low-water crossings.\n\n* ADDITIONAL DETAILS...\n- At 1046 AM CDT, Local officials reported flooding in the advisory\narea. Overflowing poor drainage areas and roadways from last\nnights excessive rainfall will still take time to recede.\n- Flooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nVega, Boys Ranch and Valley De Oro.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS84 KAMA 301550 RRA"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD ADVISORY IN EFFECT UNTIL 4 PM CDT THIS AFTERNOON... ...REPLACES FLOOD WARNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KAMA.FA.Y.0103.260930T1550Z-260930T2100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T16:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FAY"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e02d67faa33e556d6faa0c0d51c062779ee0ad4.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e02d67faa33e556d6faa0c0d51c062779ee0ad4.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9e02d67faa33e556d6faa0c0d51c062779ee0ad4.001.1",
+                "areaDesc": "Brooks; Inland Kenedy; Starr; Southern Hidalgo; Inland Willacy; Inland Cameron; Coastal Kenedy; Northern Hidalgo; Coastal Willacy; Coastal Cameron",
+                "geocode": {
+                    "SAME": [
+                        "048047",
+                        "048261",
+                        "048427",
+                        "048215",
+                        "048489",
+                        "048061"
+                    ],
+                    "UGC": [
+                        "TXZ250",
+                        "TXZ251",
+                        "TXZ252",
+                        "TXZ253",
+                        "TXZ254",
+                        "TXZ255",
+                        "TXZ351",
+                        "TXZ353",
+                        "TXZ354",
+                        "TXZ355"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ250",
+                    "https://api.weather.gov/zones/forecast/TXZ251",
+                    "https://api.weather.gov/zones/forecast/TXZ252",
+                    "https://api.weather.gov/zones/forecast/TXZ253",
+                    "https://api.weather.gov/zones/forecast/TXZ254",
+                    "https://api.weather.gov/zones/forecast/TXZ255",
+                    "https://api.weather.gov/zones/forecast/TXZ351",
+                    "https://api.weather.gov/zones/forecast/TXZ353",
+                    "https://api.weather.gov/zones/forecast/TXZ354",
+                    "https://api.weather.gov/zones/forecast/TXZ355"
+                ],
+                "references": [],
+                "sent": "2026-09-30T09:23:00-05:00",
+                "effective": "2026-09-30T09:23:00-05:00",
+                "onset": "2026-09-30T09:23:00-05:00",
+                "expires": "2026-09-30T18:00:00-05:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Observed",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Brownsville TX",
+                "headline": "Special Weather Statement issued September 30 at 9:23AM CDT by NWS Brownsville TX",
+                "description": "The combination of hot temperatures and elevated humidity levels\nwill produce Heat Index values between 108 and 110 degrees for\nseveral hours this afternoon into early this evening. A few\nlocations may briefly experience Heat Index values above 110\ndegrees.\n\nIf you plan to spend time outside, drink plenty of water, wear\nlight-weight and light-colored clothing and take frequent breaks\nfrom the heat. Young children and pets should never be left\nunattended in vehicles.",
+                "instruction": null,
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "SPSBRO"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS84 KBRO 301423"
+                    ],
+                    "NWSheadline": [
+                        "HEAT INDICES EXPECTED TO APPROACH 110 DEGREES THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "SPS"
+                    ],
+                    "NationalWeatherService": [
+                        "SPS"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.78cef4c438d26e59e056fc4e03457cfb30b19055.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.78cef4c438d26e59e056fc4e03457cfb30b19055.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.78cef4c438d26e59e056fc4e03457cfb30b19055.001.1",
+                "areaDesc": "Upton; Pecos",
+                "geocode": {
+                    "SAME": [
+                        "048461",
+                        "048371"
+                    ],
+                    "UGC": [
+                        "TXZ069",
+                        "TXZ075"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ069",
+                    "https://api.weather.gov/zones/forecast/TXZ075"
+                ],
+                "references": [],
+                "sent": "2026-09-30T08:23:00-05:00",
+                "effective": "2026-09-30T08:23:00-05:00",
+                "onset": "2026-09-30T13:00:00-05:00",
+                "expires": "2026-09-30T16:30:00-05:00",
+                "ends": "2026-10-01T07:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Midland/Odessa TX",
+                "headline": "Flood Watch issued September 30 at 8:23AM CDT until October 1 at 7:00AM CDT by NWS Midland/Odessa TX",
+                "description": "* WHAT...Flash flooding caused by excessive rainfall will be\npossible.\n\n* WHERE...Portions of southwest and western Texas, including the\nfollowing counties, in southwest Texas, Pecos. In western Texas,\nUpton.\n\n* WHEN...From 1 PM CDT this afternoon through early Thursday morning.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nCreeks and streams may rise out of their banks.\n\n* ADDITIONAL DETAILS...\n- Scattered to numerous showers and thunderstorms are expected to\ndevelop over portions of Upton and eastern Pecos counties this\nafternoon through tonight. Rainfall amounts of 1 to 2 inches with\nvery localized totals over 3 inches will be possible with the\nheaviest showers and storms which could lead to flash flooding.\n- http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFAMAF"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KMAF 301323"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH IN EFFECT FROM 1 PM CDT THIS AFTERNOON THROUGH THURSDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXA.KMAF.FA.A.0007.260930T1800Z-261001T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-01T07:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.78cef4c438d26e59e056fc4e03457cfb30b19055.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.78cef4c438d26e59e056fc4e03457cfb30b19055.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.78cef4c438d26e59e056fc4e03457cfb30b19055.002.1",
+                "areaDesc": "Borden; Scurry; Howard; Mitchell; Glasscock; Reagan; Terrell",
+                "geocode": {
+                    "SAME": [
+                        "048033",
+                        "048415",
+                        "048227",
+                        "048335",
+                        "048173",
+                        "048383",
+                        "048443"
+                    ],
+                    "UGC": [
+                        "TXZ047",
+                        "TXZ048",
+                        "TXZ052",
+                        "TXZ053",
+                        "TXZ063",
+                        "TXZ070",
+                        "TXZ082"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ047",
+                    "https://api.weather.gov/zones/forecast/TXZ048",
+                    "https://api.weather.gov/zones/forecast/TXZ052",
+                    "https://api.weather.gov/zones/forecast/TXZ053",
+                    "https://api.weather.gov/zones/forecast/TXZ063",
+                    "https://api.weather.gov/zones/forecast/TXZ070",
+                    "https://api.weather.gov/zones/forecast/TXZ082"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e7d1c1325089c86b159ebea944f2f7d98a047f9.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.0e7d1c1325089c86b159ebea944f2f7d98a047f9.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-30T00:53:00-05:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a7a5b511bd8bf27093d9ed0e33ad385252769f9.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1a7a5b511bd8bf27093d9ed0e33ad385252769f9.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-30T06:53:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T08:23:00-05:00",
+                "effective": "2026-09-30T08:23:00-05:00",
+                "onset": "2026-09-30T13:00:00-05:00",
+                "expires": "2026-09-30T16:30:00-05:00",
+                "ends": "2026-10-01T07:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Midland/Odessa TX",
+                "headline": "Flood Watch issued September 30 at 8:23AM CDT until October 1 at 7:00AM CDT by NWS Midland/Odessa TX",
+                "description": "* WHAT...Flash flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...Portions of southwest and western Texas, including the\nfollowing counties, in southwest Texas, Terrell. In western Texas,\nBorden, Glasscock, Howard, Mitchell, Reagan and Scurry.\n\n* WHEN...From 1 PM CDT this afternoon through early Thursday morning.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nCreeks and streams may rise out of their banks.\n\n* ADDITIONAL DETAILS...\n- Scattered to numerous showers and thunderstorms will develop over\nthe eastern Permian Basin and Lower Trans Pecos region this\nafternoon through tonight. Rainfall amounts of 1 to 2 inches with\nvery localized totals over 3 inches will be possible with the\nheaviest showers and storms which could lead to flash flooding.\n- http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFAMAF"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KMAF 301323"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH REMAINS IN EFFECT FROM 1 PM CDT THIS AFTERNOON THROUGH THURSDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMAF.FA.A.0007.260930T1800Z-261001T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-01T07:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6c147d4b7a9239d92f70a7c496a6bd49e7f6b4cf.001.1,2026-09-29T09:12:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a5f7b2ab3da9c3e413dffc2a68421307b5e43ee2.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -102.17,
+                            35.08
+                        ],
+                        [
+                            -102.17,
+                            35.12
+                        ],
+                        [
+                            -102.04,
+                            35.5
+                        ],
+                        [
+                            -102,
+                            35.61
+                        ],
+                        [
+                            -101.87,
+                            35.62
+                        ],
+                        [
+                            -101.73,
+                            35.62
+                        ],
+                        [
+                            -101.82,
+                            35.25
+                        ],
+                        [
+                            -101.87,
+                            35.09
+                        ],
+                        [
+                            -101.95,
+                            35.07
+                        ],
+                        [
+                            -102.06,
+                            35.05
+                        ],
+                        [
+                            -102.17,
+                            35.08
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a5f7b2ab3da9c3e413dffc2a68421307b5e43ee2.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a5f7b2ab3da9c3e413dffc2a68421307b5e43ee2.001.1",
+                "areaDesc": "Deaf Smith, TX; Moore, TX; Potter, TX; Randall, TX",
+                "geocode": {
+                    "SAME": [
+                        "048117",
+                        "048341",
+                        "048375",
+                        "048381"
+                    ],
+                    "UGC": [
+                        "TXC117",
+                        "TXC341",
+                        "TXC375",
+                        "TXC381"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC117",
+                    "https://api.weather.gov/zones/county/TXC341",
+                    "https://api.weather.gov/zones/county/TXC375",
+                    "https://api.weather.gov/zones/county/TXC381"
+                ],
+                "references": [],
+                "sent": "2026-09-30T07:27:00-05:00",
+                "effective": "2026-09-30T07:27:00-05:00",
+                "onset": "2026-09-30T07:27:00-05:00",
+                "expires": "2026-09-30T14:45:00-05:00",
+                "ends": "2026-09-30T14:45:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 7:27AM CDT until September 30 at 2:45PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Urban areas and small streams flooding caused by excessive\nrainfall is expected.\n\n* WHERE...Northeastern Deaf Smith County in the panhandle of Texas...\nSouthern Moore County in the panhandle of Texas...\nCentral Potter County in the panhandle of Texas...\nNorthwestern Randall County in the panhandle of Texas...\n\n* WHEN...Until 245 PM CDT Wednesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Expect many\nareas of slow moving or standing water. It will take several hours\nfor all the water from these storms to work through local drainage\nsystems in urban areas.\n\n* ADDITIONAL DETAILS...\n- At 727 AM CDT, Flooding is already occurring in the warned area.\nBetween 3 and 4 inches of rain have fallen.\n- Flooding impacts will continue, but little to no additional\nrainfall is expected.\n- Some locations that will experience flooding include...\nAmarillo and Bushland.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 301227"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 245 PM CDT THIS AFTERNOON... ...REPLACES FLASH FLOOD WARNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KAMA.FA.W.0015.260930T1227Z-260930T1945Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T14:45:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d02496a259194f3eca887883fba171bad660720.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -102.36,
+                            35.19
+                        ],
+                        [
+                            -102.25,
+                            35.31
+                        ],
+                        [
+                            -102.17,
+                            35.31
+                        ],
+                        [
+                            -102.1,
+                            35.32
+                        ],
+                        [
+                            -102.15,
+                            35.18
+                        ],
+                        [
+                            -102.17,
+                            35.18
+                        ],
+                        [
+                            -102.17,
+                            35.08
+                        ],
+                        [
+                            -102.37,
+                            34.95
+                        ],
+                        [
+                            -102.36,
+                            35.19
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d02496a259194f3eca887883fba171bad660720.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0d02496a259194f3eca887883fba171bad660720.001.1",
+                "areaDesc": "Deaf Smith, TX; Oldham, TX; Potter, TX; Randall, TX",
+                "geocode": {
+                    "SAME": [
+                        "048117",
+                        "048359",
+                        "048375",
+                        "048381"
+                    ],
+                    "UGC": [
+                        "TXC117",
+                        "TXC359",
+                        "TXC375",
+                        "TXC381"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC117",
+                    "https://api.weather.gov/zones/county/TXC359",
+                    "https://api.weather.gov/zones/county/TXC375",
+                    "https://api.weather.gov/zones/county/TXC381"
+                ],
+                "references": [],
+                "sent": "2026-09-30T06:59:00-05:00",
+                "effective": "2026-09-30T06:59:00-05:00",
+                "onset": "2026-09-30T06:59:00-05:00",
+                "expires": "2026-09-30T14:00:00-05:00",
+                "ends": "2026-09-30T14:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 6:59AM CDT until September 30 at 2:00PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Northeastern Deaf Smith County in the panhandle of Texas...\nSoutheastern Oldham County in the panhandle of Texas...\nSouthwestern Potter County in the panhandle of Texas...\nNorthwestern Randall County in the panhandle of Texas...\n\n* WHEN...Until 200 PM CDT Wednesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Low-water\ncrossings are inundated with water and may not be passable.\n\n* ADDITIONAL DETAILS...\n- At 658 AM CDT, Doppler radar indicated heavy rain due to\nthunderstorms. Flooding is ongoing or expected to begin shortly\nin the warned area. Between 5 and 7 inches of rain have fallen.\n- Flooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nWildorado.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 301159"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 2 PM CDT THIS AFTERNOON... ...REPLACES FLASH FLOOD WARNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KAMA.FA.W.0014.260930T1159Z-260930T1900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T14:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e2086cc596cced3557e986be655f9006e51dc8f.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -102.17,
+                            34.84
+                        ],
+                        [
+                            -102.19,
+                            34.76
+                        ],
+                        [
+                            -102.23,
+                            34.75
+                        ],
+                        [
+                            -102.37,
+                            34.75
+                        ],
+                        [
+                            -102.37,
+                            34.96
+                        ],
+                        [
+                            -102.17,
+                            35.08
+                        ],
+                        [
+                            -102.06,
+                            35.05
+                        ],
+                        [
+                            -101.91,
+                            35.09
+                        ],
+                        [
+                            -102.02,
+                            34.87
+                        ],
+                        [
+                            -102.16,
+                            34.87
+                        ],
+                        [
+                            -102.17,
+                            34.84
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e2086cc596cced3557e986be655f9006e51dc8f.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5e2086cc596cced3557e986be655f9006e51dc8f.001.1",
+                "areaDesc": "Deaf Smith, TX; Randall, TX",
+                "geocode": {
+                    "SAME": [
+                        "048117",
+                        "048381"
+                    ],
+                    "UGC": [
+                        "TXC117",
+                        "TXC381"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC117",
+                    "https://api.weather.gov/zones/county/TXC381"
+                ],
+                "references": [],
+                "sent": "2026-09-30T06:58:00-05:00",
+                "effective": "2026-09-30T06:58:00-05:00",
+                "onset": "2026-09-30T06:58:00-05:00",
+                "expires": "2026-09-30T13:45:00-05:00",
+                "ends": "2026-09-30T13:45:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 6:58AM CDT until September 30 at 1:45PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Southeastern Deaf Smith County in the panhandle of Texas...\nNorthwestern Randall County in the panhandle of Texas...\n\n* WHEN...Until 145 PM CDT Wednesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Expect many\nareas of slow moving or standing water.\n\n* ADDITIONAL DETAILS...\n- At 658 AM CDT, Doppler radar indicated heavy rain due to\nthunderstorms. Flooding is ongoing or expected to begin shortly\nin the warned area. Between 2 and 4 inches of rain have fallen.\n- Flooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nDawn, Buffalo Lake and Umbarger.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 301158"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 145 PM CDT THIS AFTERNOON... ...REPLACES FLASH FLOOD WARNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KAMA.FA.W.0013.260930T1158Z-260930T1845Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T13:45:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f6273400513586e887a63457422b8939f512d0b.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -101.88,
+                            35.18
+                        ],
+                        [
+                            -101.86,
+                            35.24
+                        ],
+                        [
+                            -101.63,
+                            35.27
+                        ],
+                        [
+                            -101.76,
+                            34.81
+                        ],
+                        [
+                            -102.02,
+                            34.87
+                        ],
+                        [
+                            -101.88,
+                            35.18
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f6273400513586e887a63457422b8939f512d0b.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.8f6273400513586e887a63457422b8939f512d0b.001.1",
+                "areaDesc": "Potter, TX; Randall, TX",
+                "geocode": {
+                    "SAME": [
+                        "048375",
+                        "048381"
+                    ],
+                    "UGC": [
+                        "TXC375",
+                        "TXC381"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC375",
+                    "https://api.weather.gov/zones/county/TXC381"
+                ],
+                "references": [],
+                "sent": "2026-09-30T06:52:00-05:00",
+                "effective": "2026-09-30T06:52:00-05:00",
+                "onset": "2026-09-30T06:52:00-05:00",
+                "expires": "2026-09-30T14:45:00-05:00",
+                "ends": "2026-09-30T14:45:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 6:52AM CDT until September 30 at 2:45PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Southeastern Potter County in the panhandle of Texas...\nCentral Randall County in the panhandle of Texas...\n\n* WHEN...Until 245 PM CDT Wednesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Streams\ncontinue to rise due to excess runoff from earlier rainfall. Expect\nmany areas of slow moving or standing water.\n\n* ADDITIONAL DETAILS...\n- At 652 AM CDT, Doppler radar indicated heavy rain due to\nthunderstorms. Flooding is ongoing or expected to begin shortly\nin the warned area. Between 1 and 3 inches of rain have fallen.\n- Additional rainfall amounts up to 0.5 inches are possible in the\nwarned area.\n- Some locations that will experience flooding include...\nAmarillo, Canyon, Lake Tanglewood, Mescalero Park and Timbercreek\nCanyon.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 301152"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 245 PM CDT THIS AFTERNOON... ...REPLACES FLASH FLOOD WARNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KAMA.FA.W.0012.260930T1152Z-260930T1945Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T14:45:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f36e98662f0228f3fd0671342663949c9020edbd.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f36e98662f0228f3fd0671342663949c9020edbd.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f36e98662f0228f3fd0671342663949c9020edbd.001.1",
+                "areaDesc": "Matagorda Islands; Brazoria Islands; Galveston Island; Bolivar Peninsula",
+                "geocode": {
+                    "SAME": [
+                        "048321",
+                        "048039",
+                        "048167"
+                    ],
+                    "UGC": [
+                        "TXZ436",
+                        "TXZ437",
+                        "TXZ438",
+                        "TXZ439"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ436",
+                    "https://api.weather.gov/zones/forecast/TXZ437",
+                    "https://api.weather.gov/zones/forecast/TXZ438",
+                    "https://api.weather.gov/zones/forecast/TXZ439"
+                ],
+                "references": [],
+                "sent": "2026-09-30T06:38:00-05:00",
+                "effective": "2026-09-30T06:38:00-05:00",
+                "onset": "2026-09-30T06:38:00-05:00",
+                "expires": "2026-10-01T06:45:00-05:00",
+                "ends": "2026-10-01T12:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Rip Current Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Houston/Galveston TX",
+                "headline": "Rip Current Statement issued September 30 at 6:38AM CDT until October 1 at 12:00PM CDT by NWS Houston/Galveston TX",
+                "description": "* WHAT...Dangerous rip currents.\n\n* WHERE...Gulf-facing beaches, including the Matagorda\nPeninsula, Brazoria County beaches, Galveston Island and the\nBolivar Peninsula.\n\n* WHEN...Through Thursday morning.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+                "instruction": "Swim near a lifeguard and away from rocks, jetties, and piers. If\ncaught in a rip current, relax and float. Don't swim against the\ncurrent. If able, swim in a direction following the shoreline. If\nunable to escape, face the shore and call or wave for help.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWHGX"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS44 KHGX 301138"
+                    ],
+                    "NWSheadline": [
+                        "HIGH RIP CURRENT RISK IN EFFECT THROUGH THURSDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KHGX.RP.S.0017.260930T1138Z-261001T1700Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-01T12:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "RPS"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5186e8526c0afa4788f23cb6e1b914914d538e99.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5186e8526c0afa4788f23cb6e1b914914d538e99.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5186e8526c0afa4788f23cb6e1b914914d538e99.001.1",
+                "areaDesc": "Fisher; Nolan; Sterling; Coke; Runnels; Irion; Tom Green; Concho; Crockett; Schleicher; Sutton; Haskell; Throckmorton; Jones; Shackelford; Taylor; Callahan; Coleman; Brown; McCulloch; San Saba; Menard; Kimble; Mason",
+                "geocode": {
+                    "SAME": [
+                        "048151",
+                        "048353",
+                        "048431",
+                        "048081",
+                        "048399",
+                        "048235",
+                        "048451",
+                        "048095",
+                        "048105",
+                        "048413",
+                        "048435",
+                        "048207",
+                        "048447",
+                        "048253",
+                        "048417",
+                        "048441",
+                        "048059",
+                        "048083",
+                        "048049",
+                        "048307",
+                        "048411",
+                        "048327",
+                        "048267",
+                        "048319"
+                    ],
+                    "UGC": [
+                        "TXZ049",
+                        "TXZ054",
+                        "TXZ064",
+                        "TXZ065",
+                        "TXZ066",
+                        "TXZ071",
+                        "TXZ072",
+                        "TXZ073",
+                        "TXZ076",
+                        "TXZ077",
+                        "TXZ078",
+                        "TXZ098",
+                        "TXZ099",
+                        "TXZ113",
+                        "TXZ114",
+                        "TXZ127",
+                        "TXZ128",
+                        "TXZ139",
+                        "TXZ140",
+                        "TXZ154",
+                        "TXZ155",
+                        "TXZ168",
+                        "TXZ169",
+                        "TXZ170"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ049",
+                    "https://api.weather.gov/zones/forecast/TXZ054",
+                    "https://api.weather.gov/zones/forecast/TXZ064",
+                    "https://api.weather.gov/zones/forecast/TXZ065",
+                    "https://api.weather.gov/zones/forecast/TXZ066",
+                    "https://api.weather.gov/zones/forecast/TXZ071",
+                    "https://api.weather.gov/zones/forecast/TXZ072",
+                    "https://api.weather.gov/zones/forecast/TXZ073",
+                    "https://api.weather.gov/zones/forecast/TXZ076",
+                    "https://api.weather.gov/zones/forecast/TXZ077",
+                    "https://api.weather.gov/zones/forecast/TXZ078",
+                    "https://api.weather.gov/zones/forecast/TXZ098",
+                    "https://api.weather.gov/zones/forecast/TXZ099",
+                    "https://api.weather.gov/zones/forecast/TXZ113",
+                    "https://api.weather.gov/zones/forecast/TXZ114",
+                    "https://api.weather.gov/zones/forecast/TXZ127",
+                    "https://api.weather.gov/zones/forecast/TXZ128",
+                    "https://api.weather.gov/zones/forecast/TXZ139",
+                    "https://api.weather.gov/zones/forecast/TXZ140",
+                    "https://api.weather.gov/zones/forecast/TXZ154",
+                    "https://api.weather.gov/zones/forecast/TXZ155",
+                    "https://api.weather.gov/zones/forecast/TXZ168",
+                    "https://api.weather.gov/zones/forecast/TXZ169",
+                    "https://api.weather.gov/zones/forecast/TXZ170"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a375008b8ec971444c28bb48b2113c10d3c89a41.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a375008b8ec971444c28bb48b2113c10d3c89a41.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-29T14:57:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T05:45:00-05:00",
+                "effective": "2026-09-30T05:45:00-05:00",
+                "onset": "2026-09-30T05:45:00-05:00",
+                "expires": "2026-10-01T07:00:00-05:00",
+                "ends": "2026-10-02T01:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Angelo TX",
+                "headline": "Flood Watch issued September 30 at 5:45AM CDT until October 2 at 1:00AM CDT by NWS San Angelo TX",
+                "description": "* WHAT...Flash flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...A portion of west central Texas, including the following\ncounties, Brown, Callahan, Coke, Coleman, Concho, Crockett, Fisher,\nHaskell, Irion, Jones, Kimble, Mason, McCulloch, Menard, Nolan,\nRunnels, San Saba, Schleicher, Shackelford, Sterling, Sutton,\nTaylor, Throckmorton and Tom Green.\n\n* WHEN...Through late Thursday night.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\n\n* ADDITIONAL DETAILS...\n- There is an increased danger to lives and property due to flash\nflooding. Flash flooding is likely and considerable flash\nflooding is possible.\n\n- Multiple rounds of heavy rain are possible through Thursday night\nas an influx of tropical moisture arrives. This will coincide\nwith an approaching upper level low pressure system and an\nassociated frontal boundary. High precipitable water values will\nsupport efficient rainfall production with this activity. Showers\nand thunderstorms capable of producing rainfall totals in the 2\nto 4 inch range are forecast across the watch area. Locally\nhigher amounts of 8+ inches care possible.\n\n- Http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFASJT"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KSJT 301045"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH REMAINS IN EFFECT THROUGH LATE THURSDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSJT.FA.A.0007.000000T0000Z-261002T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-02T01:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb464936598ad9958b19a459a7212962209c4b88.001.1,2026-09-29T01:18:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.62a788616671308b85090a8123fe3e6dcf0fa140.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.62a788616671308b85090a8123fe3e6dcf0fa140.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.62a788616671308b85090a8123fe3e6dcf0fa140.001.1",
+                "areaDesc": "Montague; Cooke; Grayson; Fannin; Young; Jack; Wise; Denton; Collin; Hunt; Stephens; Palo Pinto; Parker; Tarrant; Dallas; Rockwall; Kaufman; Eastland; Erath; Hood; Somervell; Johnson; Ellis; Comanche; Mills; Hamilton; Bosque; Hill; Navarro; Lampasas; Coryell; Bell; McLennan; Falls; Limestone; Milam",
+                "geocode": {
+                    "SAME": [
+                        "048337",
+                        "048097",
+                        "048181",
+                        "048147",
+                        "048503",
+                        "048237",
+                        "048497",
+                        "048121",
+                        "048085",
+                        "048231",
+                        "048429",
+                        "048363",
+                        "048367",
+                        "048439",
+                        "048113",
+                        "048397",
+                        "048257",
+                        "048133",
+                        "048143",
+                        "048221",
+                        "048425",
+                        "048251",
+                        "048139",
+                        "048093",
+                        "048333",
+                        "048193",
+                        "048035",
+                        "048217",
+                        "048349",
+                        "048281",
+                        "048099",
+                        "048027",
+                        "048309",
+                        "048145",
+                        "048293",
+                        "048331"
+                    ],
+                    "UGC": [
+                        "TXZ091",
+                        "TXZ092",
+                        "TXZ093",
+                        "TXZ094",
+                        "TXZ100",
+                        "TXZ101",
+                        "TXZ102",
+                        "TXZ103",
+                        "TXZ104",
+                        "TXZ105",
+                        "TXZ115",
+                        "TXZ116",
+                        "TXZ117",
+                        "TXZ118",
+                        "TXZ119",
+                        "TXZ120",
+                        "TXZ121",
+                        "TXZ129",
+                        "TXZ130",
+                        "TXZ131",
+                        "TXZ132",
+                        "TXZ133",
+                        "TXZ134",
+                        "TXZ141",
+                        "TXZ142",
+                        "TXZ143",
+                        "TXZ144",
+                        "TXZ145",
+                        "TXZ146",
+                        "TXZ156",
+                        "TXZ157",
+                        "TXZ158",
+                        "TXZ159",
+                        "TXZ160",
+                        "TXZ161",
+                        "TXZ174"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ091",
+                    "https://api.weather.gov/zones/forecast/TXZ092",
+                    "https://api.weather.gov/zones/forecast/TXZ093",
+                    "https://api.weather.gov/zones/forecast/TXZ094",
+                    "https://api.weather.gov/zones/forecast/TXZ100",
+                    "https://api.weather.gov/zones/forecast/TXZ101",
+                    "https://api.weather.gov/zones/forecast/TXZ102",
+                    "https://api.weather.gov/zones/forecast/TXZ103",
+                    "https://api.weather.gov/zones/forecast/TXZ104",
+                    "https://api.weather.gov/zones/forecast/TXZ105",
+                    "https://api.weather.gov/zones/forecast/TXZ115",
+                    "https://api.weather.gov/zones/forecast/TXZ116",
+                    "https://api.weather.gov/zones/forecast/TXZ117",
+                    "https://api.weather.gov/zones/forecast/TXZ118",
+                    "https://api.weather.gov/zones/forecast/TXZ119",
+                    "https://api.weather.gov/zones/forecast/TXZ120",
+                    "https://api.weather.gov/zones/forecast/TXZ121",
+                    "https://api.weather.gov/zones/forecast/TXZ129",
+                    "https://api.weather.gov/zones/forecast/TXZ130",
+                    "https://api.weather.gov/zones/forecast/TXZ131",
+                    "https://api.weather.gov/zones/forecast/TXZ132",
+                    "https://api.weather.gov/zones/forecast/TXZ133",
+                    "https://api.weather.gov/zones/forecast/TXZ134",
+                    "https://api.weather.gov/zones/forecast/TXZ141",
+                    "https://api.weather.gov/zones/forecast/TXZ142",
+                    "https://api.weather.gov/zones/forecast/TXZ143",
+                    "https://api.weather.gov/zones/forecast/TXZ144",
+                    "https://api.weather.gov/zones/forecast/TXZ145",
+                    "https://api.weather.gov/zones/forecast/TXZ146",
+                    "https://api.weather.gov/zones/forecast/TXZ156",
+                    "https://api.weather.gov/zones/forecast/TXZ157",
+                    "https://api.weather.gov/zones/forecast/TXZ158",
+                    "https://api.weather.gov/zones/forecast/TXZ159",
+                    "https://api.weather.gov/zones/forecast/TXZ160",
+                    "https://api.weather.gov/zones/forecast/TXZ161",
+                    "https://api.weather.gov/zones/forecast/TXZ174"
+                ],
+                "references": [],
+                "sent": "2026-09-30T04:40:00-05:00",
+                "effective": "2026-09-30T04:40:00-05:00",
+                "onset": "2026-09-30T16:00:00-05:00",
+                "expires": "2026-09-30T16:00:00-05:00",
+                "ends": "2026-10-02T07:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Fort Worth TX",
+                "headline": "Flood Watch issued September 30 at 4:40AM CDT until October 2 at 7:00AM CDT by NWS Fort Worth TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...Portions of North and Central Texas, mainly along and west\nof I-35.\n\n* WHEN...From 4 PM CDT this afternoon through Friday morning.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nLow-water crossings may be flooded.\n\n* ADDITIONAL DETAILS...\n- Slow moving showers and storms will likely bring widespread 2 to\n4 inches of rain across the watch area. Localized areas of 5 to 7\ninches will be possible.\n- weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be alert for possible Flood\nWarnings. Those living in areas prone to flooding should be prepared\nto take action should flooding develop.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFAFWD"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KFWD 300940"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH REMAINS IN EFFECT FROM 4 PM CDT THIS AFTERNOON THROUGH FRIDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KFWD.FA.A.0007.260930T2100Z-261002T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-02T07:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8cf544e4b1227ba865bfa73b131b601be41f4c0d.002.1,2026-09-29T14:15:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8cf544e4b1227ba865bfa73b131b601be41f4c0d.001.1,2026-09-29T14:15:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.42c765aed8ce98c7ecdac481bb15ebad257aaaad.001.1,2026-09-29T01:43:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2b6c20efd0b4b04db8bd5f1123c4ff864970403d.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -101.93,
+                            35.53
+                        ],
+                        [
+                            -101.81,
+                            35.62
+                        ],
+                        [
+                            -101.62,
+                            35.62
+                        ],
+                        [
+                            -101.72,
+                            35.37
+                        ],
+                        [
+                            -102.16,
+                            35.36
+                        ],
+                        [
+                            -102.17,
+                            35.62
+                        ],
+                        [
+                            -101.93,
+                            35.53
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2b6c20efd0b4b04db8bd5f1123c4ff864970403d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.2b6c20efd0b4b04db8bd5f1123c4ff864970403d.001.1",
+                "areaDesc": "Potter, TX",
+                "geocode": {
+                    "SAME": [
+                        "048375"
+                    ],
+                    "UGC": [
+                        "TXC375"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC375"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91fed3686168577d36726832145c0d49d64f1c2d.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.91fed3686168577d36726832145c0d49d64f1c2d.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-30T00:19:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T03:54:00-05:00",
+                "effective": "2026-09-30T03:54:00-05:00",
+                "onset": "2026-09-30T03:54:00-05:00",
+                "expires": "2026-09-30T16:00:00-05:00",
+                "ends": "2026-10-03T01:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Warning issued September 30 at 3:54AM CDT until October 3 at 1:00AM CDT by NWS Amarillo TX",
+                "description": "...Forecast flooding changed from Minor to Moderate severity and\nincreased in duration for the following rivers in Texas...\n\nCanadian River at Amarillo 19N affecting Potter County.\n\nFor the Canadian River...including Amarillo 19N...Moderate flooding\nis forecast.\n\n* WHAT...Minor flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...Canadian River at Amarillo 19N.\n\n* WHEN...Until late Friday night.\n\n* IMPACTS...At 10.0 feet, Portions of Rosita Creek Flats Recreational\nArea floods. Primitive campers and recreational vehicles are in\nimminent danger. Dirt roads that lead to highway 287 from Rosita\nCreek Flats are impassable.\n\n* ADDITIONAL DETAILS...\n- At 3:30 AM CDT Wednesday the stage was 8.3 feet.\n- Bankfull stage is 7.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 3:30 AM CDT Wednesday was 8.3 feet.\n- Forecast...The river will rise to 10.0 feet this afternoon. It\nwill then fall tomorrow morning. It will rise to 8.4 feet early\nFriday morning. It will then fall below flood stage early Friday\nafternoon.\n- Flood stage is 7.0 feet.\n- Flood History...This crest compares to a previous crest of 10.4\nfeet on 06/01/2023.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued this afternoon at 400 PM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS44 KAMA 300854"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL LATE FRIDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KAMA.FL.W.0001.000000T0000Z-261003T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-03T01:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b23bf5920a9dfa757f9f78d91ad61ae98d95d2b.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b23bf5920a9dfa757f9f78d91ad61ae98d95d2b.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.8b23bf5920a9dfa757f9f78d91ad61ae98d95d2b.001.1",
+                "areaDesc": "Seminole; Hughes; Garvin; Murray; Pontotoc; Coal; Jefferson; Carter; Johnston; Atoka; Love; Marshall; Bryan; Wichita; Baylor; Archer; Clay",
+                "geocode": {
+                    "SAME": [
+                        "040133",
+                        "040063",
+                        "040049",
+                        "040099",
+                        "040123",
+                        "040029",
+                        "040067",
+                        "040019",
+                        "040069",
+                        "040005",
+                        "040085",
+                        "040095",
+                        "040013",
+                        "048485",
+                        "048023",
+                        "048009",
+                        "048077"
+                    ],
+                    "UGC": [
+                        "OKZ031",
+                        "OKZ032",
+                        "OKZ040",
+                        "OKZ041",
+                        "OKZ042",
+                        "OKZ043",
+                        "OKZ045",
+                        "OKZ046",
+                        "OKZ047",
+                        "OKZ048",
+                        "OKZ050",
+                        "OKZ051",
+                        "OKZ052",
+                        "TXZ086",
+                        "TXZ088",
+                        "TXZ089",
+                        "TXZ090"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ031",
+                    "https://api.weather.gov/zones/forecast/OKZ032",
+                    "https://api.weather.gov/zones/forecast/OKZ040",
+                    "https://api.weather.gov/zones/forecast/OKZ041",
+                    "https://api.weather.gov/zones/forecast/OKZ042",
+                    "https://api.weather.gov/zones/forecast/OKZ043",
+                    "https://api.weather.gov/zones/forecast/OKZ045",
+                    "https://api.weather.gov/zones/forecast/OKZ046",
+                    "https://api.weather.gov/zones/forecast/OKZ047",
+                    "https://api.weather.gov/zones/forecast/OKZ048",
+                    "https://api.weather.gov/zones/forecast/OKZ050",
+                    "https://api.weather.gov/zones/forecast/OKZ051",
+                    "https://api.weather.gov/zones/forecast/OKZ052",
+                    "https://api.weather.gov/zones/forecast/TXZ086",
+                    "https://api.weather.gov/zones/forecast/TXZ088",
+                    "https://api.weather.gov/zones/forecast/TXZ089",
+                    "https://api.weather.gov/zones/forecast/TXZ090"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f4be2c3ed05660c9d8d1f0067c4eecd545186452.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.f4be2c3ed05660c9d8d1f0067c4eecd545186452.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-29T14:54:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-30T02:33:00-05:00",
+                "effective": "2026-09-30T02:33:00-05:00",
+                "onset": "2026-09-30T16:00:00-05:00",
+                "expires": "2026-09-30T16:45:00-05:00",
+                "ends": "2026-10-01T13:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Norman OK",
+                "headline": "Flood Watch issued September 30 at 2:33AM CDT until October 1 at 1:00PM CDT by NWS Norman OK",
+                "description": "* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...Portions of Oklahoma, including the following counties,\nAtoka, Bryan, Carter, Coal, Garvin, Hughes, Jefferson, Johnston,\nLove, Marshall, Murray, Pontotoc and Seminole and northern Texas,\nincluding the following counties, Archer, Baylor, Clay and Wichita.\n\n* WHEN...From this afternoon through Thursday afternoon.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nFlooding may occur in poor drainage and urban areas.\n\n* ADDITIONAL DETAILS...\n- Thunderstorms with very heavy rainfall are expected Wednesday\nevening through Thursday morning. Rainfall totals of 2-4 inches\nare likely, with some locations possibly receiving as much as 6\ninches of rain.\n- http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be alert for possible Flood\nWarnings. Those living in areas prone to flooding should be prepared\nto take action should flooding develop.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFAOUN"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KOUN 300733"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH REMAINS IN EFFECT FROM THIS AFTERNOON THROUGH THURSDAY AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KOUN.FA.A.0007.260930T2100Z-261001T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-01T13:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.82adf4e73357e768aef33e6f0442302177975e12.001.1,2026-09-29T01:10:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d96082045c194d8f678f07a5f44eb838f9b6fc91.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d96082045c194d8f678f07a5f44eb838f9b6fc91.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.d96082045c194d8f678f07a5f44eb838f9b6fc91.001.1",
+                "areaDesc": "Jim Wells; Inland Kleberg; Inland Nueces; Inland San Patricio; Coastal Kleberg; Coastal Nueces; Coastal San Patricio",
+                "geocode": {
+                    "SAME": [
+                        "048249",
+                        "048273",
+                        "048355",
+                        "048409"
+                    ],
+                    "UGC": [
+                        "TXZ241",
+                        "TXZ242",
+                        "TXZ243",
+                        "TXZ244",
+                        "TXZ342",
+                        "TXZ343",
+                        "TXZ344"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ241",
+                    "https://api.weather.gov/zones/forecast/TXZ242",
+                    "https://api.weather.gov/zones/forecast/TXZ243",
+                    "https://api.weather.gov/zones/forecast/TXZ244",
+                    "https://api.weather.gov/zones/forecast/TXZ342",
+                    "https://api.weather.gov/zones/forecast/TXZ343",
+                    "https://api.weather.gov/zones/forecast/TXZ344"
+                ],
+                "references": [],
+                "sent": "2026-09-29T23:54:00-05:00",
+                "effective": "2026-09-29T23:54:00-05:00",
+                "onset": "2026-09-30T13:00:00-05:00",
+                "expires": "2026-09-30T19:00:00-05:00",
+                "ends": "2026-09-30T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Corpus Christi TX",
+                "headline": "Heat Advisory issued September 29 at 11:54PM CDT until September 30 at 7:00PM CDT by NWS Corpus Christi TX",
+                "description": "* WHAT...Heat index values up to 113 expected.\n\n* WHERE...Coastal Kleberg, Coastal Nueces, Coastal San Patricio,\nInland Kleberg, Inland Nueces, Inland San Patricio, and Jim Wells\nCounties.\n\n* WHEN...From 1 PM to 7 PM CDT Wednesday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nTo reduce risk during outdoor work, the Occupational Safety and\nHealth Administration recommends scheduling frequent rest breaks in\nshaded or air conditioned environments. Anyone overcome by heat\nshould be moved to a cool and shaded location. Heat stroke is an\nemergency! Call 9 1 1.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWCRP"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS74 KCRP 300454"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY IN EFFECT FROM 1 PM TO 7 PM CDT WEDNESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KCRP.HT.Y.0022.260930T1800Z-261001T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T19:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "HTY"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2443f4eb97afd2c0abec6eef7dfb1ac6c5746997.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2443f4eb97afd2c0abec6eef7dfb1ac6c5746997.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.2443f4eb97afd2c0abec6eef7dfb1ac6c5746997.001.1",
+                "areaDesc": "La Salle; McMullen; Live Oak; Bee; Webb; Duval; Jim Wells; Inland Kleberg; Inland Nueces; Inland San Patricio",
+                "geocode": {
+                    "SAME": [
+                        "048283",
+                        "048311",
+                        "048297",
+                        "048025",
+                        "048479",
+                        "048131",
+                        "048249",
+                        "048273",
+                        "048355",
+                        "048409"
+                    ],
+                    "UGC": [
+                        "TXZ229",
+                        "TXZ230",
+                        "TXZ231",
+                        "TXZ232",
+                        "TXZ239",
+                        "TXZ240",
+                        "TXZ241",
+                        "TXZ242",
+                        "TXZ243",
+                        "TXZ244"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ229",
+                    "https://api.weather.gov/zones/forecast/TXZ230",
+                    "https://api.weather.gov/zones/forecast/TXZ231",
+                    "https://api.weather.gov/zones/forecast/TXZ232",
+                    "https://api.weather.gov/zones/forecast/TXZ239",
+                    "https://api.weather.gov/zones/forecast/TXZ240",
+                    "https://api.weather.gov/zones/forecast/TXZ241",
+                    "https://api.weather.gov/zones/forecast/TXZ242",
+                    "https://api.weather.gov/zones/forecast/TXZ243",
+                    "https://api.weather.gov/zones/forecast/TXZ244"
+                ],
+                "references": [],
+                "sent": "2026-09-29T23:44:00-05:00",
+                "effective": "2026-09-29T23:44:00-05:00",
+                "onset": "2026-10-01T07:00:00-05:00",
+                "expires": "2026-10-02T19:00:00-05:00",
+                "ends": "2026-10-02T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Corpus Christi TX",
+                "headline": "Flood Watch issued September 29 at 11:44PM CDT until October 2 at 7:00PM CDT by NWS Corpus Christi TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall is possible.\n\n* WHERE...A portion of south Texas, including the following areas,\nBee, Duval, Inland Kleberg, Inland Nueces, Inland San Patricio, Jim\nWells, La Salle, Live Oak, McMullen and Webb.\n\n* WHEN...From Thursday morning through Friday evening.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nFlooding may occur in poor drainage and urban areas.\n\n* ADDITIONAL DETAILS...\n- Flooding caused by excessive rainfall is possible.\n- http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be alert for possible Flood\nWarnings. Those living in areas prone to flooding should be prepared\nto take action should flooding develop.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFACRP"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KCRP 300444"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH IN EFFECT FROM THURSDAY MORNING THROUGH FRIDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KCRP.FA.A.0004.261001T1200Z-261003T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-02T19:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.03ca61050967092e72eb79e0a9393c4d55b44c2b.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.03ca61050967092e72eb79e0a9393c4d55b44c2b.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.03ca61050967092e72eb79e0a9393c4d55b44c2b.001.1",
+                "areaDesc": "Cimarron; Texas; Dallam; Sherman; Hansford; Hartley; Moore; Hutchinson; Oldham; Potter; Carson; Deaf Smith; Randall; Armstrong; Palo Duro Canyon",
+                "geocode": {
+                    "SAME": [
+                        "040025",
+                        "040139",
+                        "048111",
+                        "048421",
+                        "048195",
+                        "048205",
+                        "048341",
+                        "048233",
+                        "048359",
+                        "048375",
+                        "048065",
+                        "048117",
+                        "048381",
+                        "048011"
+                    ],
+                    "UGC": [
+                        "OKZ001",
+                        "OKZ002",
+                        "TXZ001",
+                        "TXZ002",
+                        "TXZ003",
+                        "TXZ006",
+                        "TXZ007",
+                        "TXZ008",
+                        "TXZ011",
+                        "TXZ012",
+                        "TXZ013",
+                        "TXZ016",
+                        "TXZ017",
+                        "TXZ018",
+                        "TXZ317"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ001",
+                    "https://api.weather.gov/zones/forecast/OKZ002",
+                    "https://api.weather.gov/zones/forecast/TXZ001",
+                    "https://api.weather.gov/zones/forecast/TXZ002",
+                    "https://api.weather.gov/zones/forecast/TXZ003",
+                    "https://api.weather.gov/zones/forecast/TXZ006",
+                    "https://api.weather.gov/zones/forecast/TXZ007",
+                    "https://api.weather.gov/zones/forecast/TXZ008",
+                    "https://api.weather.gov/zones/forecast/TXZ011",
+                    "https://api.weather.gov/zones/forecast/TXZ012",
+                    "https://api.weather.gov/zones/forecast/TXZ013",
+                    "https://api.weather.gov/zones/forecast/TXZ016",
+                    "https://api.weather.gov/zones/forecast/TXZ017",
+                    "https://api.weather.gov/zones/forecast/TXZ018",
+                    "https://api.weather.gov/zones/forecast/TXZ317"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a0885a94247daaaceb75162e38ec970096ba2e79.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a0885a94247daaaceb75162e38ec970096ba2e79.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-29T13:20:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-29T23:09:00-05:00",
+                "effective": "2026-09-29T23:09:00-05:00",
+                "onset": "2026-09-29T23:09:00-05:00",
+                "expires": "2026-09-30T13:00:00-05:00",
+                "ends": "2026-09-30T13:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Amarillo TX",
+                "headline": "Flood Watch issued September 29 at 11:09PM CDT until September 30 at 1:00PM CDT by NWS Amarillo TX",
+                "description": "* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...Portions of the Panhandle of Oklahoma, including the\nfollowing areas, Cimarron and Texas and the Panhandle of Texas,\nincluding the following areas, Armstrong, Carson, Dallam, Deaf\nSmith, Hansford, Hartley, Hutchinson, Moore, Oldham, Palo Duro\nCanyon, Potter, Randall and Sherman.\n\n* WHEN...Through Wednesday afternoon.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nArea creeks and streams are running high and could flood with more\nheavy rain.\n\n* ADDITIONAL DETAILS...\n- A slow moving weather system that has ingested Hurricane Polo's\nmoisture bringing heavy rainfall to the panhandles. This has the\npotential to be a high end rain event for portions of the\npanhandles. There is a moderate to high chance for flash flooding\nmainly in the western half of the panhandles.\n- http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be alert for possible Flood\nWarnings. Those living in areas prone to flooding should be prepared\nto take action should flooding develop.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFAAMA"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KAMA 300409"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH REMAINS IN EFFECT THROUGH WEDNESDAY AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KAMA.FA.A.0003.000000T0000Z-260930T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T13:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0a9c13a10a94b7a9abbdb9ca65bfb5b08b0143a6.001.1,2026-09-29T05:41:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2aa22bf408594a9d83cb269306dc43d0e12adca9.001.1,2026-09-28T20:48:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fa55205813c6e18b0feb7fa5e69d613ef88dfef0.001.1,2026-09-28T13:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9fa75c6e6abaf0020d1644993fc662f3401e166d.001.1,2026-09-28T06:45:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ffd0f585a0df994b9effca7c7b771e3ac2fc8874.001.1,2026-09-28T00:27:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d02cd194c88fd6a036593ff8625743cf4a077774.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d02cd194c88fd6a036593ff8625743cf4a077774.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.d02cd194c88fd6a036593ff8625743cf4a077774.001.1",
+                "areaDesc": "Llano; Burnet; Williamson; Val Verde; Edwards; Real; Kerr; Bandera; Gillespie; Kendall; Blanco; Hays; Travis; Bastrop; Kinney; Uvalde; Medina; Bexar; Comal; Guadalupe; Caldwell; Maverick; Zavala; Frio; Atascosa; Wilson; Gonzales; Dimmit",
+                "geocode": {
+                    "SAME": [
+                        "048299",
+                        "048053",
+                        "048491",
+                        "048465",
+                        "048137",
+                        "048385",
+                        "048265",
+                        "048019",
+                        "048171",
+                        "048259",
+                        "048031",
+                        "048209",
+                        "048453",
+                        "048021",
+                        "048271",
+                        "048463",
+                        "048325",
+                        "048029",
+                        "048091",
+                        "048187",
+                        "048055",
+                        "048323",
+                        "048507",
+                        "048163",
+                        "048013",
+                        "048493",
+                        "048177",
+                        "048127"
+                    ],
+                    "UGC": [
+                        "TXZ171",
+                        "TXZ172",
+                        "TXZ173",
+                        "TXZ183",
+                        "TXZ184",
+                        "TXZ185",
+                        "TXZ186",
+                        "TXZ187",
+                        "TXZ188",
+                        "TXZ189",
+                        "TXZ190",
+                        "TXZ191",
+                        "TXZ192",
+                        "TXZ193",
+                        "TXZ202",
+                        "TXZ203",
+                        "TXZ204",
+                        "TXZ205",
+                        "TXZ206",
+                        "TXZ207",
+                        "TXZ208",
+                        "TXZ217",
+                        "TXZ218",
+                        "TXZ219",
+                        "TXZ220",
+                        "TXZ221",
+                        "TXZ223",
+                        "TXZ228"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ171",
+                    "https://api.weather.gov/zones/forecast/TXZ172",
+                    "https://api.weather.gov/zones/forecast/TXZ173",
+                    "https://api.weather.gov/zones/forecast/TXZ183",
+                    "https://api.weather.gov/zones/forecast/TXZ184",
+                    "https://api.weather.gov/zones/forecast/TXZ185",
+                    "https://api.weather.gov/zones/forecast/TXZ186",
+                    "https://api.weather.gov/zones/forecast/TXZ187",
+                    "https://api.weather.gov/zones/forecast/TXZ188",
+                    "https://api.weather.gov/zones/forecast/TXZ189",
+                    "https://api.weather.gov/zones/forecast/TXZ190",
+                    "https://api.weather.gov/zones/forecast/TXZ191",
+                    "https://api.weather.gov/zones/forecast/TXZ192",
+                    "https://api.weather.gov/zones/forecast/TXZ193",
+                    "https://api.weather.gov/zones/forecast/TXZ202",
+                    "https://api.weather.gov/zones/forecast/TXZ203",
+                    "https://api.weather.gov/zones/forecast/TXZ204",
+                    "https://api.weather.gov/zones/forecast/TXZ205",
+                    "https://api.weather.gov/zones/forecast/TXZ206",
+                    "https://api.weather.gov/zones/forecast/TXZ207",
+                    "https://api.weather.gov/zones/forecast/TXZ208",
+                    "https://api.weather.gov/zones/forecast/TXZ217",
+                    "https://api.weather.gov/zones/forecast/TXZ218",
+                    "https://api.weather.gov/zones/forecast/TXZ219",
+                    "https://api.weather.gov/zones/forecast/TXZ220",
+                    "https://api.weather.gov/zones/forecast/TXZ221",
+                    "https://api.weather.gov/zones/forecast/TXZ223",
+                    "https://api.weather.gov/zones/forecast/TXZ228"
+                ],
+                "references": [],
+                "sent": "2026-09-29T17:47:00-05:00",
+                "effective": "2026-09-29T17:47:00-05:00",
+                "onset": "2026-09-30T19:00:00-05:00",
+                "expires": "2026-09-30T15:15:00-05:00",
+                "ends": "2026-10-02T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Flood Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Austin/San Antonio TX",
+                "headline": "Flood Watch issued September 29 at 5:47PM CDT until October 2 at 7:00PM CDT by NWS Austin/San Antonio TX",
+                "description": "The weather pattern on Wednesday will begin to change as an\napproaching upper level low over the southwestern U.S. weakens the\nsubtropical ridge axis over Texas and the western Gulf. Isolated to\nscattered showers and thunderstorms will develop during the daytime\nhours. A Pacific cold front will move into the region Thursday\nspreading showers and thunderstorms over more of the area. Rainfall\ntotals from Wednesday evening through Friday will be 2-4 inches with\nisolated amounts up to 8 inches possible.\n\n* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...A portion of south central Texas, including the following\ncounties, Atascosa, Bandera, Bastrop, Bexar, Blanco, Burnet,\nCaldwell, Comal, Dimmit, Edwards, Frio, Gillespie, Gonzales,\nGuadalupe, Hays, Kendall, Kerr, Kinney, Llano, Maverick, Medina,\nReal, Travis, Uvalde, Val Verde, Williamson, Wilson and Zavala.\n\n* WHEN...From Wednesday evening through Friday evening.\n\n* IMPACTS...There is a potential for life threatening flooding\nsomewhere in the watch area. Excessive runoff may result in\nflooding of rivers, creeks, streams, and other low-lying and\nflood-prone locations. Creeks and streams may rise out of their\nbanks. Flooding may occur in poor drainage and urban areas.\nLow-water crossings may be flooded. Extensive street flooding and\nflooding of creeks and rivers are possible.\n\n* ADDITIONAL DETAILS...\n- Rainfall totals of 2-4 inches with isolated amounts of 8 inches\nare possible.\n-  Some locations that may experience flooding include...\nSan Antonio, Austin, Round Rock, New Braunfels, Cedar Park,\nGeorgetown, San Marcos, Pflugerville, Medina, Schertz, Kyle, Del\nRio, Eagle Pass, Seguin, Cibolo, Kerrville, Converse, Universal\nCity, Taylor and Uvalde.\n- http://www.weather.gov/safety/flood",
+                "instruction": "You should monitor later forecasts and be alert for possible Flood\nWarnings. Those living in areas prone to flooding should be prepared\nto take action should flooding develop.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFAEWX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS64 KEWX 292247"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WATCH REMAINS IN EFFECT FROM WEDNESDAY EVENING THROUGH FRIDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KEWX.FA.A.0008.261001T0000Z-261003T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-02T19:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a89003886ff6e908fd8b92753f4de69804d3f0db.001.1,2026-09-29T09:24:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFA"
+                    ],
+                    "NationalWeatherService": [
+                        "FAA"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories for Texas",
+    "updated": "2026-09-30T16:11:01+00:00"
+}

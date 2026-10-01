@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "USGS-293516098325501",
+        "agency_code": "USGS",
+        "agency_name": "U.S. Geological Survey",
+        "monitoring_location_number": "293516098325501",
+        "monitoring_location_name": "AY-68-28-211 (Shavano Park at Fawn Drive)",
+        "district_code": "48",
+        "country_code": "US",
+        "country_name": "United States of America",
+        "state_code": "48",
+        "state_name": "Texas",
+        "county_code": "029",
+        "county_name": "Bexar County",
+        "minor_civil_division_code": null,
+        "site_type_code": "GW",
+        "site_type": "Well",
+        "hydrologic_unit_code": "121003010201",
+        "basin_code": null,
+        "altitude": 974.23,
+        "altitude_accuracy": 99.0,
+        "altitude_method_code": "Y",
+        "altitude_method_name": "GNSS3 - Level 3 Quality Survey Grade Global Navigation Satellite System",
+        "vertical_datum": "NAVD88",
+        "vertical_datum_name": "North American Vertical Datum of 1988",
+        "horizontal_positional_accuracy_code": "S",
+        "horizontal_positional_accuracy": "Accurate to + or - 1 sec.",
+        "horizontal_position_method_code": "G",
+        "horizontal_position_method_name": "Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)",
+        "original_horizontal_datum": "NAD83",
+        "original_horizontal_datum_name": "North American Datum of 1983",
+        "drainage_area": null,
+        "contributing_drainage_area": null,
+        "time_zone_abbreviation": "CST",
+        "uses_daylight_savings": "Y",
+        "construction_date": "19980623",
+        "aquifer_code": "218EDRDA",
+        "national_aquifer_code": "S500EDRTRN",
+        "aquifer_type_code": "U",
+        "well_constructed_depth": 300.0,
+        "hole_constructed_depth": 303.3,
+        "depth_source_code": "S",
+        "revision_note": "Revisions:&nbsp; Turbidity Daily Values for the period Jun. 28, 2018, to Jan. 11, 2024, were revised on Dec. 11, 2024. Values were revised to adhere to the manufacturers reporting specifications of the instrumentation.",
+        "revision_created": "2024-12-11T17:58:41.943000+00:00",
+        "revision_modified": "2024-12-11T21:01:16.457000+00:00"
+      },
+      "id": "USGS-293516098325501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.5486111111111,
+          29.5877777777778
+        ]
+      }
+    }
+  ],
+  "numberReturned": 1,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-293516098325501&limit=1"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=jsonld&id=USGS-293516098325501&limit=1"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=html&id=USGS-293516098325501&limit=1"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=csv&id=USGS-293516098325501&limit=1"
+    },
+    {
+      "type": "application/geo+json",
+      "rel": "next",
+      "title": "Items (next)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&offset=1&id=USGS-293516098325501&limit=1"
+    },
+    {
+      "type": "application/json",
+      "title": "Monitoring locations",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations"
+    }
+  ],
+  "timeStamp": "2026-10-01T15:34:37.102023Z"
+}

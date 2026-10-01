@@ -1,0 +1,99 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
+  "station_id": "USGS-08158200",
+  "station": {
+    "monitoring_location_name": "Walnut Ck at Dessau Rd, Austin, TX",
+    "site_type": "Stream",
+    "hydrologic_unit_code": "120902050307",
+    "drainage_area": 26.2,
+    "contributing_drainage_area": 26.2,
+    "altitude": 552.34,
+    "vertical_datum": "NAVD88",
+    "county_name": "Travis County",
+    "coordinates_lon_lat": [
+      -97.660560132077,
+      30.3752050023632
+    ]
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08158200&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+    "retrieved_at": "2026-10-01T15:07:54.531768+00:00",
+    "status": 200,
+    "sha256": "1e4e07141198eb19868ab075abfc35426f06ade1998ae5ed88197649697a0822",
+    "bytes": 3809324,
+    "feature_count": 7001,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08158200/20261001T150754531768Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08158200/20261001T150754531768Z-daily-00060-00003.json.gz"
+  },
+  "metadata_requests": {
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158200&limit=1",
+      "retrieved_at": "2026-10-01T15:07:39.132041+00:00",
+      "status": 200,
+      "sha256": "4095ee2a9479d28ab38e114315e4c3767838fb3caa454dd761c0b3d902545904",
+      "raw_path": "data/raw/usgs-daily/08158200/20261001T150739132041Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08158200/20261001T150739132041Z-location.json.gz"
+    },
+    "time_series_metadata": null
+  },
+  "complete_response": true,
+  "normalized_csv": "data/history/08158200-00060-daily-mean.csv",
+  "series": {
+    "parameter_code": "00060",
+    "statistic_id": "00003",
+    "meaning": "daily mean discharge, ft^3/s; a daily mean is not an instantaneous reading and hides within-day peaks",
+    "time_series_ids": [
+      "07ef91ef74964888ba2e48a102f06bf7"
+    ],
+    "first_day": "1985-05-13",
+    "last_day": "2026-09-30",
+    "returned_days": 7001,
+    "numeric_days": 7001,
+    "non_numeric_days": 0,
+    "approval_counts": {
+      "Approved": 6958,
+      "Provisional": 43
+    },
+    "qualifier_counts": {
+      "[]": 6758,
+      "[\"ESTIMATED\"]": 117,
+      "[\"DRY\"]": 126
+    },
+    "zero_days": 1070
+  },
+  "station_series_inventory_00060_00065": [],
+  "gaps": {
+    "count": 4,
+    "missing_days_total": 8115,
+    "calendar_gaps": [
+      {
+        "after": "1985-05-15",
+        "before": "1986-02-03",
+        "missing_days": 263
+      },
+      {
+        "after": "1986-02-04",
+        "before": "1986-05-16",
+        "missing_days": 100
+      },
+      {
+        "after": "1986-05-18",
+        "before": "2007-08-04",
+        "missing_days": 7747
+      },
+      {
+        "after": "2007-08-26",
+        "before": "2007-09-01",
+        "missing_days": 5
+      }
+    ],
+    "meaning": "Days the provider did not return. They are absent from the CSV and are never treated as zero flow."
+  },
+  "limits": [
+    "Daily means describe the station, not any swimming reach.",
+    "Provisional values may be revised by USGS.",
+    "This archive is context for percentiles and event detection; it fits no swimming rule."
+  ]
+}

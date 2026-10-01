@@ -1,0 +1,29 @@
+{
+  "station_id": "USGS-292943098354404",
+  "series": {
+    "parameter_code": "72019",
+    "statistic_id": "00008",
+    "label": "well-depth-daily-median"
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-292943098354404&parameter_code=72019&statistic_id=00008&skipGeometry=true&limit=50000",
+    "retrieved_at": "2026-10-01T15:31:25.254208+00:00",
+    "status": 200,
+    "sha256": "4630e661fd4c9f66fe952dd6052355b6d6348f840fb2da3870792c569fa6c216",
+    "bytes": 2617563,
+    "feature_count": 4773,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/292943098354404/20261001T153125254208Z-daily-72019-00008.json",
+    "capture_path": "data/captures/usgs-daily/292943098354404/20261001T153125254208Z-daily-72019-00008.json.gz"
+  },
+  "csv": "data/history/292943098354404-72019-well-depth-daily-median.csv",
+  "time_series_id": "ae5a2f2ac6b64e30a83a852aae8117b6",
+  "other_time_series_for_same_statistic": {},
+  "days": 4773,
+  "numeric_days": 4773,
+  "first_day": "2013-07-04",
+  "last_day": "2026-09-30",
+  "limits": [
+    "Daily statistics describe the station; missing days are absent, never zero."
+  ]
+}

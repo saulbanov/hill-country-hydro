@@ -1,0 +1,29 @@
+{
+  "station_id": "USGS-295204099340201",
+  "series": {
+    "parameter_code": "00045",
+    "statistic_id": "00006",
+    "label": "precipitation-daily-total"
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-295204099340201&parameter_code=00045&statistic_id=00006&skipGeometry=true&limit=50000",
+    "retrieved_at": "2026-10-01T15:32:48.608638+00:00",
+    "status": 200,
+    "sha256": "e8d73d6a83d8b738971171616fee327211f5dc9610e89fa0296a983e65b1e142",
+    "bytes": 1619052,
+    "feature_count": 2961,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/295204099340201/20261001T153248608638Z-daily-00045-00006.json",
+    "capture_path": "data/captures/usgs-daily/295204099340201/20261001T153248608638Z-daily-00045-00006.json.gz"
+  },
+  "csv": "data/history/295204099340201-00045-precipitation-daily-total.csv",
+  "time_series_id": "56ef06bd92b048d99f2abddd8effc864",
+  "other_time_series_for_same_statistic": {},
+  "days": 2961,
+  "numeric_days": 2961,
+  "first_day": "2018-06-05",
+  "last_day": "2026-09-30",
+  "limits": [
+    "Daily statistics describe the station; missing days are absent, never zero."
+  ]
+}

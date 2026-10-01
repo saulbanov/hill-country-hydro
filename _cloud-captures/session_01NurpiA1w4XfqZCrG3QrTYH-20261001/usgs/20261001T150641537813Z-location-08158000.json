@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "USGS-08158000",
+        "agency_code": "USGS",
+        "agency_name": "U.S. Geological Survey",
+        "monitoring_location_number": "08158000",
+        "monitoring_location_name": "Colorado Rv at Austin, TX",
+        "district_code": "48",
+        "country_code": "US",
+        "country_name": "United States of America",
+        "state_code": "48",
+        "state_name": "Texas",
+        "county_code": "453",
+        "county_name": "Travis County",
+        "minor_civil_division_code": null,
+        "site_type_code": "ST",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050306",
+        "basin_code": null,
+        "altitude": 391.96,
+        "altitude_accuracy": 0.1,
+        "altitude_method_code": "L",
+        "altitude_method_name": "Level or other surveyed method.",
+        "vertical_datum": "NAVD88",
+        "vertical_datum_name": "North American Vertical Datum of 1988",
+        "horizontal_positional_accuracy_code": "1",
+        "horizontal_positional_accuracy": "Accurate to + or - .1 sec (Differentially-Corrected GPS).",
+        "horizontal_position_method_code": "N",
+        "horizontal_position_method_name": "Interpolated from Digital MAP.",
+        "original_horizontal_datum": "NAD83",
+        "original_horizontal_datum_name": "North American Datum of 1983",
+        "drainage_area": 39009.0,
+        "contributing_drainage_area": 27606.0,
+        "time_zone_abbreviation": "CST",
+        "uses_daylight_savings": "Y",
+        "construction_date": null,
+        "aquifer_code": null,
+        "national_aquifer_code": null,
+        "aquifer_type_code": null,
+        "well_constructed_depth": null,
+        "hole_constructed_depth": null,
+        "depth_source_code": null,
+        "revision_note": "&lt;p&gt;WSP 508: 1915(m). WSP 528: 1900(M), 1918(m). WSP 548: 1901-16. WSP 1342: Drainage area. WSP 1562: 1908, 1929(M), 1936.&lt;/p&gt;\n&lt;p&gt;Revisions: (12/3/2020) Discharge for the period May 25th, 2015 - August 27th, 2015 was revised because of computational changes made to Qms 1817, 1818, and 1819 that resulted in necessary revisions to shifted ratings following SW Technical Memo 2017.07.&nbsp; This in turn affected IV discharge values below ~1100 cfs, and affected Daily Min, Max, and Mean discharge values as well for the revised period. The POY discharge was unaffected by the revisions.&nbsp;&lt;/p&gt;\n&lt;p&gt;Revisions: (12/3/2020) Discharges 1719, 1720, 1747, and 1748 in 2013 were revised because of computational changes made to each and noted in FDE in Aquarius.&nbsp; Following SW Technical Memo 2017.07, no revisions to the shifted rating were needed.&lt;/p&gt;",
+        "revision_created": "2017-11-13T06:00:00+00:00",
+        "revision_modified": "2020-12-03T22:00:54.867000+00:00"
+      },
+      "id": "USGS-08158000",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68005555555555,
+          30.24613888888889
+        ]
+      }
+    }
+  ],
+  "numberReturned": 1,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158000&limit=1"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=jsonld&id=USGS-08158000&limit=1"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=html&id=USGS-08158000&limit=1"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=csv&id=USGS-08158000&limit=1"
+    },
+    {
+      "type": "application/geo+json",
+      "rel": "next",
+      "title": "Items (next)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&offset=1&id=USGS-08158000&limit=1"
+    },
+    {
+      "type": "application/json",
+      "title": "Monitoring locations",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations"
+    }
+  ],
+  "timeStamp": "2026-10-01T15:06:41.505555Z"
+}

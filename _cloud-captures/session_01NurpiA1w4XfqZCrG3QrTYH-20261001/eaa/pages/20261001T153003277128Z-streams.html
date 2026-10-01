@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head starts --><!------------------------------------------------------------------------->
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <!-- Google fonts -->      
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Crimson+Pro:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+        
+    
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" rel="stylesheet" />
+    
+
+    <!-- Google Analytics (GA4) - rendered only when MeasurementId is set and NOT in Development -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS2GPWJQCJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XS2GPWJQCJ', { 'send_page_view': true });
+        </script>
+
+    <!-- JavaScript and JQuery -->
+    
+    
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"></script>
+    
+
+    <!-- Bootstrap 5 -->
+         
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />                
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     
+
+    <!-- Leaflet -->
+    
+    
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />        
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <link rel="stylesheet" href="/assets/maps/leaflet/L.Control.BetterScale.css" />
+        <script src="/assets/maps/leaflet/L.Control.BetterScale.js"></script>
+        
+
+    <!-- Datatables -->
+    
+    
+        <link href="https://cdn.datatables.net/2.1.0/css/dataTables.dataTables.min.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/buttons/3.1.0/css/buttons.dataTables.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/select/2.0.3/css/select.dataTables.css" rel="stylesheet" />
+        <script src="https://cdn.datatables.net/2.1.0/js/dataTables.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/dataTables.buttons.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/buttons.dataTables.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/select/2.0.3/js/dataTables.select.js"></script>
+        <script src="https://cdn.datatables.net/select/2.0.3/js/select.dataTables.js"></script>
+    
+
+    <!-- highcharts highstock -->
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/annotations/popup.css">
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>       
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/stock/indicators/indicators-all.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+        <script src="https://code.highcharts.com/modules/annotations-advanced.js"></script>
+        <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+        <script src="/assets/charts/scripts/highcharts-light-theme.js"></script>
+    
+
+
+    <!-- Add Site Styling and JS Script files -->   
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="icon" type="image/png" href="/assets/icons/well.png" sizes="48x48">
+    <link href="/css/site.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>   
+
+    <style>
+        #loadingSpinnerWrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #EDF4F7;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+
+<!-- head ends --><!--------------------------------------------------------------------------->
+<!-- body starts --><!-------------------------------------------------------------------------->
+<body>
+
+
+    <!--------------------------------------------------------------------------->
+    <!-------------------    Laoding Spinner Wrapper Starts ----------------->
+    <br b-q7lk333kj3 />
+    <br b-q7lk333kj3 />
+    <div b-q7lk333kj3 id="loadingSpinnerWrapper">
+        <span b-q7lk333kj3 class="h1 text-dark fw-bold m-2 p-2">Loading... Please Wait.</span>
+        <div b-q7lk333kj3 class="spinner-border text-dark fw-bold" role="status" id="loadingSpinner" style="display:none;">
+        </div>
+    </div>
+    <br b-q7lk333kj3 />
+    <br b-q7lk333kj3 />
+    <!-------------------    Laoding Spinner Wrapper Ends  ----------------->
+    <!--------------------------------------------------------------------------->
+
+    <!-------------------------------------------------------------------------->
+    <!-- start of header navabar and main navigation menu -->
+    <!--  Header Starts-->
+    <header b-q7lk333kj3 id="header" class=" header fixed-top header-inner-pages">
+        <nav b-q7lk333kj3 class="navbar navbar-expand-lg navbar-top  pt-4 pb-4">
+            <!-- navbar brand / title -->
+            <div b-q7lk333kj3 class="container">                
+               <span b-q7lk333kj3 class=" h5 mb-0 text-secondary text-white">
+                <a b-q7lk333kj3 href="https://www.edwardsaquifer.org" aria-label="Edawards Aquifer Authority"><img src="/assets/logos/EAA Infinity Logo White Type - RGB.png" alt="EAA Logo" style="width:100px;height:50px"></a>  Environmental Data Portal </span>
+                <!-- toggle button for mobile nav -->
+                <button b-q7lk333kj3 class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-q7lk333kj3 class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navbar links -->
+                <div b-q7lk333kj3 class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                    <ul b-q7lk333kj3 class="navbar-nav">
+                        <li b-q7lk333kj3 class="nav-item">
+                            <a class="nav-link scrollto active" href="/">Home</a>
+                        </li>
+                        <li b-q7lk333kj3 class="nav-item">
+                            <a class="nav-link scrollto" href="/AquiferConditions">Aquifer Conditions</a>
+                        </li>
+                        <li b-q7lk333kj3 class="nav-item dropdown">
+                            <a b-q7lk333kj3 class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Site Types</a>
+                            <ul b-q7lk333kj3 class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/GroundWater">Groundwater Wells</a></li>
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/SpringsAndStreams">Springs and Streams</a></li>
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/RainGauges">Rain Gauges</a></li>
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/WeatherStations">Weather Stations</a></li>
+                            </ul>
+                        <li b-q7lk333kj3 class="nav-item dropdown">
+                            <a b-q7lk333kj3 class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Research Projects</a>
+                            <ul b-q7lk333kj3 class="dropdown-menu" aria-labelledby="dropdown02">
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.edwardsaquifer.org/aquifer-science/sustainability/frp/" target="_blank">Field Research Park</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.edwardsaquifer.org/habitat-conservation-plan/" target="_blank">Habitat Conservation Plan</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.edwardsaquifer.org/aquifer-science/research/projects/#section2_interformational-flow" target="_blank">Interformational Flow</a></li>
+                            </ul>
+                        </li>
+                        <li b-q7lk333kj3 class="nav-item dropdown">
+                          <a b-q7lk333kj3 class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown" aria-expanded="false">External Resources</a>
+                           <ul b-q7lk333kj3 class="dropdown-menu" aria-labelledby="dropdown05">
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.sariverauthority.org/maps-reports/" target="_blank">San Antonio River Authority</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.gbra.org/conditions/" target="_blank">Guadalupe-Blanco River Authority</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://hydromet.lcra.org/" target="_blank">Lower Colorado River Authority</a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.twdb.texas.gov/groundwater/data/index.asp" target="_blank">Texas Water Development Board Groundwater</a></li>
+                             <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://webapps.usgs.gov/spring_calc/" target="_blank">Comal and San Marcos Springflow</a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.texmesonet.org/" target="_blank">TexMesonet</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://waterdatafortexas.org/reservoirs/statewide" target="_blank">Water Data for Texas </a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/" target="_blank">National Water Dashboard</a></li>                            
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.waterqualitydata.us/" target="_blank">National Water Quality Monitoring Council</a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.weather.gov/" target="_blank">National Weather Service</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.ncdc.noaa.gov/cdo-web/" target="_blank">National Oceanic and Atmospheric Administration</a></li>
+                          </ul>
+                        </li>                        
+                        <li b-q7lk333kj3 class="nav-item">
+                            <a b-q7lk333kj3 class="nav-link" href="https://www.edwardsaquifer.org/aquifer-science/" tabindex="-1" aria-disabled="true">Aquifer Science</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <!-- end of header navabar and main navigation menu -->
+    <!-------------------------------------------------------------------------->
+      
+    <!--------------------------------------------------------------------------->
+
+    <div b-q7lk333kj3 class="container main-container">
+        <main b-q7lk333kj3 role="main" class="pb-3">
+            <!---------------          SpringsAndStreams/Index.cshtml            ------------------->
+
+<script>
+    var springsStreamsLocationsJSON = [{"siteInfoId":124,"siteId":"CIB080SW","siteName":"Cibolo Creek 080","siteType":"Stream","siteStatus":"Historic","county":"Comal","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7489460,"longitude":-98.5990870,"landElevation":1198.00,"comments":"Cibolo Creek at Georg\u0027s Hole"},{"siteInfoId":125,"siteId":"CIB089SW","siteName":"Cibolo Creek 089","siteType":"Stream","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7495350,"longitude":-98.5337830,"landElevation":1133.00,"comments":"Cibolo Creek Upstream of Jabbas Giant Sink"},{"siteInfoId":126,"siteId":"CIB090SW","siteName":"Cibolo Creek 090","siteType":"Stream","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7489020,"longitude":-98.5339600,"landElevation":1127.00,"comments":"Cibolo Creek at Jabbas Giant Sink RT mounted on rock in Cibolo Creek"},{"siteInfoId":217,"siteId":"CIB250SW","siteName":"Field Research Park Cibolo Creek","siteType":"Stream","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6626340,"longitude":-98.3787590,"landElevation":842.00,"comments":""},{"siteInfoId":249,"siteId":"HCPASDRIVE","siteName":"HCP Aquarena Springs Drive","siteType":"Stream","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8889100,"longitude":-97.9340200,"landElevation":571.00,"comments":"San Marcos River"},{"siteInfoId":250,"siteId":"HCPFISHHAT","siteName":"HCP Fish Hatchery","siteType":"Stream","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"None","latitude":29.8685000,"longitude":-97.9300000,"landElevation":559.00,"comments":"San Marcos River"},{"siteInfoId":251,"siteId":"HCPLANDALK","siteName":"HCP Landa Lake","siteType":"Stream","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7133830,"longitude":-98.1349780,"landElevation":655.00,"comments":"Comal River"},{"siteInfoId":252,"siteId":"HCPNEWCHAN","siteName":"HCP New Channel","siteType":"Stream","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.7079800,"longitude":-98.1272600,"landElevation":602.00,"comments":"Comal River"},{"siteInfoId":253,"siteId":"HCPOLDCHAN","siteName":"HCP Old Channel","siteType":"Stream","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7115400,"longitude":-98.1319800,"landElevation":656.00,"comments":"Comal River"},{"siteInfoId":254,"siteId":"HCPRIOVIST","siteName":"HCP Rio Vista Park","siteType":"Stream","siteStatus":"Historic","county":"Hays","basin":"Guadalupe","aquiferZone":"None","latitude":29.8801000,"longitude":-97.9333600,"landElevation":577.00,"comments":"San Marcos River"},{"siteInfoId":255,"siteId":"HCPSESSOM","siteName":"HCP Sessom Creek","siteType":"Stream","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8896800,"longitude":-97.9356100,"landElevation":590.00,"comments":"Tributary to San Marcos River upstream of Aquarena Springs Dr. Changed to 15 minute interval data collection for all sensors on 2025-01-01."},{"siteInfoId":256,"siteId":"HCPSPRING3","siteName":"HCP Spring 3","siteType":"Spring","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7141800,"longitude":-98.1364100,"landElevation":632.00,"comments":"Comal River. Assigned State Well Number 6823321 by TWDB."},{"siteInfoId":257,"siteId":"HCPSPRING7","siteName":"HCP Spring 7","siteType":"Spring","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7154200,"longitude":-98.1348000,"landElevation":643.00,"comments":"Comal River. Assigned State Well Number 6823324 by TWDB."},{"siteInfoId":258,"siteId":"HCPUPSPRING","siteName":"HCP Upper Spring Run","siteType":"Spring","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7210300,"longitude":-98.1280400,"landElevation":620.00,"comments":"Comal River"},{"siteInfoId":1005,"siteId":"FRPRD001SW","siteName":"Field Research Park West Retention Dam","siteType":"Stream","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6613660,"longitude":-98.3864840,"landElevation":931.00,"comments":"Located at the western tract of Field Research Park in the retention dam. Multi site logger with BEX07WS."},{"siteInfoId":1073,"siteId":"DISR001SG","siteName":"Dischinger Ranch Upstream Spring Pool 01","siteType":"Spring","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7597170,"longitude":-98.2412600,"landElevation":1090.00,"comments":"Located in a pool near a spring outflow in a tributary to Dry Comal Creek. "},{"siteInfoId":1074,"siteId":"FRPWR001SW","siteName":"FRP Weir 1 Arnold","siteType":"Stream","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6635310,"longitude":-98.3897250,"landElevation":988.00,"comments":"Located on West Tract of the Field Research Park. Part of the SCAR project."},{"siteInfoId":1075,"siteId":"FRPWR002SW","siteName":"FRP Weir 2 Danny","siteType":"Stream","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6640290,"longitude":-98.3905880,"landElevation":1021.00,"comments":"Located on West Tract of the Field Research Park. Part of the SCAR project."}];
+</script>
+
+
+
+<!--------------------------------------------------------------------------->
+<!-- ======= Springs and Streams Leaflet Map Section Starts ======= -->
+<br />
+<div class="container">
+    <div class="row">
+        <h2 class="margin-left: 10px margin-right: 10px">Spring and Stream Locations</h2>
+        <p class="h5">The map below shows the locations of all active and historical EAA continuous surface water data collection sites.</p>
+        <p class="h5">Use the menu in the upper right corner of the map to toggle layers and site status. Click the location to view more information about the site and to access data.</p>
+    </div>
+</div>
+
+<section class="springs-streams-map-section align-items-center ">
+    <div class="container container-lg text-center justify-content-center mt-5 mb-lg-5 springs-streams-map-container" id="springs-streams-locations-map-div">
+        <!--                                    -->
+        <!--  here goes the springs-streams locations map -->
+        <!--                                    -->
+    </div>
+</section>
+
+<!-- ======= Springs and Streams Leaflet Map Section Ends ======= -->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------->
+<!-- section Springs and Streams locations table  starts -->
+<section class="springs-streams-locations-table-section justify-content-center align-items-center ">
+    <div class="container mt-5 mb-lg-5 justify-content-center text-center">
+        <h2 class="section-header text-start">Spring and Stream Information</h2> <!-- springs-streams locations table section title -->
+        <p class="h5  text-start">The table below shows detailed information for all active and historical EAA continuous surface water data collection sites.</p>
+        <p class="h5  text-start">Click the Site Id to view more information about the site and to access data.</p>
+    </div>
+    <div class="container text-center justify-content-center mt-5 mb-lg-5" id="springs-streams-locations-table-div">
+        <table id="springs-streams-locations-datatable" class="display table table-striped table-responsive-md table-light me-1" style="width:100%">
+            <thead class="table-head">
+                <tr class="table-head-row">
+                    <th>Site Id</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Aquifer Zone</th>
+                    <th>Basin</th>
+                    <th>County</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Land Elevation</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</section>
+<!-- section Springs and Streams locations table  ends -->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+
+
+
+
+<!--    --><!--    --><!--    --><!--    --><!--    --><!--    --><!--    -->
+<!-------------------------------------------------------------------------->
+<!-- springs and streams locaztions required script files -->
+<script src="/assets/maps/scripts/springs-streams-locations-map.js"></script>
+<script src="/assets/tables/scripts/springs-streams-locations-table.js"></script>
+<!-------------------------------------------------------------------------->
+<!--    --><!--    --><!--    --><!--    --><!--    --><!--    --><!--    -->
+
+
+
+        </main>
+    </div>
+
+    <!-- main page content section ends --><!--------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------->
+
+    <footer b-q7lk333kj3 id="footer" class="footer  footer-sticky footer-fixed-bottom  mt-2 mb-0 pt-4 pb-4">
+        <!-- wrapper footer starts -->
+        <div b-q7lk333kj3 id="footer-top" class="footer  footer-top py-3 px-2 text-white">
+            <!-- footer-top starts  -->
+            <div b-q7lk333kj3 class=" align-items-center justify-content-center text-white">
+                <div b-q7lk333kj3 class="row text-lg-start ms-0 pl-0 ">
+                    <!-- footer-top row 12 col wrapper-->
+                    <div b-q7lk333kj3 class="col-lg-4 col-md-6 footer-contact">
+                        <!-- footer-top EAA Location Info Email and Phone Number -->
+                        <h3 b-q7lk333kj3 class="h4 text-white">EAA</h3>
+                        <p b-q7lk333kj3>
+                            900 E. Quincy, <br b-q7lk333kj3>
+                            San Antonio, TX 78215<br b-q7lk333kj3>
+                            United States <br b-q7lk333kj3><br b-q7lk333kj3>
+                            <strong b-q7lk333kj3>Phone: </strong>(210) 222-2204<br b-q7lk333kj3>
+                            <strong b-q7lk333kj3>Phone: </strong>or 1 800-292-1047<br b-q7lk333kj3>
+                            <strong b-q7lk333kj3>Fax: </strong>(210) 222-9869<br b-q7lk333kj3>
+                        </p>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-6 footer-links">
+                        <!-- footer-top First Useful links  -->
+                        <h4 b-q7lk333kj3 class="h4 text-white">Useful Links</h4>
+                        <ul b-q7lk333kj3>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/" class="link-light">The EAA</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/news-community/" class="link-light">News & Community</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/education/" class="link-light">Education</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/habitat-conservation-plan/" class="link-light">Habitat Conservation Plan  </a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/learning-zone/" class="link-light">Learning Zone</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.eaconservancy.org/" class="link-light">EA Conservancy  </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-6 footer-links">
+                        <!-- footer-top Second Useful links -->
+                        <h4 b-q7lk333kj3 class="h4 text-white">Services Links</h4>
+                        <ul b-q7lk333kj3>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.eaconservancy.org/" class="link-light">Support EAC</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/business-center/" class="link-light">Business Center</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/groundwater-users/" class="link-light">Groundwater Users</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/eaa/doing-business-with-eaa/online-payments/" class="link-light">Online Payments</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/eaa/contact-us/" class="link-light">Contact Us</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/eaa/human-resources/" class="link-light">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-4 col-md-6 footer-links">
+                        <!-- footer-top About EAA and Social Media Links  -->
+                        <h4 b-q7lk333kj3 class="h4 text-white">Our Social Networks</h4>
+                        <p b-q7lk333kj3 class="section-subtext me-lg-2 pe-lg-3">
+                            The Edwards Aquifer Authority is a groundwater district,
+                            mandated by the 1993 Edwards Aquifer Authority Act.
+                            The Act grants all of the powers, rights, and privileges
+                            necessary to manage, conserve, preserve, and protect the aquifer.
+                        </p>
+                        <div b-q7lk333kj3 class="section-text social-links-container mt-1 pt-1 justify-content-evenly align-content-center">
+                            <a b-q7lk333kj3 href="https://twitter.com/EdwardsAquifer" class="twitter" aria-label="Twitter">
+                                <i b-q7lk333kj3 class="bi bi-twitter"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.facebook.com/TheEdwardsAquifer#!/pages/San-Antonio-TX/Edwards-Aquifer-Authority-Education-official/220422387977159?sk=wall" class="facebook" aria-label="Facebook">
+                                <i b-q7lk333kj3 class="bi bi-facebook"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.instagram.com/edwardsaquiferauthority/" class="instagram" aria-label="Instagram">
+                                <i b-q7lk333kj3 class="bi bi-instagram"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.linkedin.com/company/edwards-aquifer-authority/" class="linkedin" aria-label="linkedin">
+                                <i b-q7lk333kj3 class="bi bi-linkedin"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.youtube.com/eaatx" class="youtube" aria-label="Youtube">
+                                <i b-q7lk333kj3 class="bi bi-youtube"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.flickr.com/photos/67745209@N07" class="flickr" aria-label="Flickr">
+                                <i b-q7lk333kj3 class="bi bi-chat-square-dots-fill"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.pinterest.com/edwardsaquifer/" class="pinterest" aria-label="Pinterest">
+                                <i b-q7lk333kj3 class="bi bi-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- footer-top ends -->
+
+        <div b-q7lk333kj3 class="footer-separator">
+            <!-- footer-sperator-horizontal starts -->
+            <div b-q7lk333kj3 class="row">
+                <div b-q7lk333kj3 class="container container-fluid">
+                    <hr b-q7lk333kj3 class="solid">
+                </div>
+            </div>
+        </div><!-- footer-sperator-horizontal starts -->
+
+        <div b-q7lk333kj3 id="footer-bottom" class="footer footer-bottom text-white">
+            <!-- footer-bottom starts  -->
+            <div b-q7lk333kj3 class="  justify-content-tart text-white">
+                <div b-q7lk333kj3 class="row text-start ms-0 pl-0  mt-1 mb-1 pt-2 pb-2">
+                    <div b-q7lk333kj3 class="col-lg-4 col-md-4  text-center">
+                        <strong b-q7lk333kj3><span b-q7lk333kj3>&copy;2025 Edwards Aquifer Authority</span></strong>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-2">
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-2 ">
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-4  col-md-4 text-center ">                        
+                        <strong b-q7lk333kj3><span b-q7lk333kj3><a b-q7lk333kj3 href=""class="link-light">Aquifer Management Services</a>  &nbsp;&nbsp;</span></strong>
+                        <strong b-q7lk333kj3><span b-q7lk333kj3 class="text-white">Data Management</span></strong>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- footer-bottom ends  -->
+
+    </footer>
+    <!-- wrapper footer  ends  -->
+    <!-------------------------------------------------------------------------->
+
+    
+    <script src="/js/site.js"></script>
+     <script>        
+        // Hide the spinner once the page is fully loaded
+        window.addEventListener('load', function() {
+            document.getElementById('loadingSpinnerWrapper').style.display = 'none';
+        });
+    </script>
+
+    <!-- Render the Scripts section -->
+    
+
+</body>
+</html>

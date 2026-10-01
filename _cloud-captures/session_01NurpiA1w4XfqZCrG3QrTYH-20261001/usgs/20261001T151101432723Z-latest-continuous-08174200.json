@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "time_series_id": "3d571aefab834eebb62ec104df9a1aa1",
+        "monitoring_location_id": "USGS-08174200",
+        "parameter_code": "00065",
+        "statistic_id": "00011",
+        "time": "2026-10-01T14:30:00+00:00",
+        "value": "2.22",
+        "unit_of_measure": "ft",
+        "approval_status": "Provisional",
+        "qualifier": null,
+        "last_modified": "2026-10-01T14:35:25.516887+00:00"
+      },
+      "id": "2fa00721-0c06-473b-a04d-e660e179d9ef",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3207444444444,
+          29.6249138888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time_series_id": "c981d0ce566049b1bbdd38b2cbbe74d6",
+        "monitoring_location_id": "USGS-08174200",
+        "parameter_code": "00060",
+        "statistic_id": "00011",
+        "time": "2026-10-01T14:30:00+00:00",
+        "value": "0.00",
+        "unit_of_measure": "ft^3/s",
+        "approval_status": "Provisional",
+        "qualifier": null,
+        "last_modified": "2026-10-01T14:35:24.998634+00:00"
+      },
+      "id": "3b654ba3-b8ce-4b4e-9b6d-42bffa5dc7a8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3207444444444,
+          29.6249138888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time_series_id": "98a1e91246cf46de9024d16eb49e3df0",
+        "monitoring_location_id": "USGS-08174200",
+        "parameter_code": "00045",
+        "statistic_id": null,
+        "time": "2026-10-01T14:30:00+00:00",
+        "value": "0.00",
+        "unit_of_measure": "in",
+        "approval_status": "Provisional",
+        "qualifier": null,
+        "last_modified": "2026-10-01T14:35:20.589498+00:00"
+      },
+      "id": "fe1ead8f-68f7-4a1b-88fb-4cc2cd192f76",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3207444444444,
+          29.6249138888889
+        ]
+      }
+    }
+  ],
+  "numberReturned": 3,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=json&monitoring_location_id=USGS-08174200&limit=100"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=jsonld&monitoring_location_id=USGS-08174200&limit=100"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=html&monitoring_location_id=USGS-08174200&limit=100"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=csv&monitoring_location_id=USGS-08174200&limit=100"
+    },
+    {
+      "type": "application/json",
+      "title": "Latest continuous",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous"
+    }
+  ],
+  "timeStamp": "2026-10-01T15:11:01.408088Z"
+}

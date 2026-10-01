@@ -1,0 +1,1871 @@
+{
+  "purpose": "Series availability for candidate stations; catalog presence is insufficient. Probing adds nothing to the map.",
+  "stations": {
+    "08157700": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08157700&limit=1",
+        "retrieved_at": "2026-09-29T01:06:03.227725+00:00",
+        "status": 200,
+        "sha256": "759c0843e2374823df922f3cb40b99d7f884475ea7c46e3eaa44fcea226f2bcf",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08157700/20260929T010603227725Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08157700/20260929T010603227725Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08157700&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:05.159866+00:00",
+        "status": 200,
+        "sha256": "ec4438f6bbfc73faae5cc5d19614eab6e64bce4a49befbb4b53fb88bff4a6afd",
+        "feature_count": 9,
+        "raw_path": "data/raw/usgs-daily/08157700/20260929T010605159866Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08157700/20260929T010605159866Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Blunn Ck nr Little Stacy Pk, Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050306",
+        "drainage_area": 1.2,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.7438938610302,
+          30.2474315810876
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-04-17T05:00:00+00:00",
+          "end": "2001-01-31T06:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-04-17T05:00:00+00:00",
+          "end": "2001-01-31T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1998-03-16T06:00:00+00:00",
+          "end": "2009-09-12T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-04-17T05:00:00+00:00",
+          "end": "2001-01-31T06:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-04-17T05:00:00+00:00",
+          "end": "2001-01-31T06:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-04-17T05:00:00+00:00",
+          "end": "2001-01-31T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "1997-04-17T10:00:00+00:00",
+          "end": "2001-02-01T11:55:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1998-03-16T06:00:00+00:00",
+          "end": "2009-09-12T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-04-16T05:00:00+00:00",
+          "end": "2001-01-31T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2009-09-12T05:00:00+00:00"
+    },
+    "08154645": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08154645&limit=1",
+        "retrieved_at": "2026-09-29T01:06:06.815768+00:00",
+        "status": 200,
+        "sha256": "8fce93db57458451f445c8f873a6ad34ba7ceaf64381df9d3ee24b19c6dab2c6",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08154645/20260929T010606815768Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08154645/20260929T010606815768Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08154645&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:08.465802+00:00",
+        "status": 200,
+        "sha256": "af975a09bda69086756050890cb41e9e8c9111d97c645eb60439d7f6869c91e6",
+        "feature_count": 0,
+        "raw_path": "data/raw/usgs-daily/08154645/20260929T010608465802Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08154645/20260929T010608465802Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Bull Ck N Cem on Spicewood Spgs Rd nr Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050302",
+        "drainage_area": null,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.79371111111111,
+          30.420172222222224
+        ]
+      },
+      "series": [],
+      "has_instantaneous_discharge": false,
+      "latest_00060_00065_end": null
+    },
+    "08154760": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08154760&limit=1",
+        "retrieved_at": "2026-09-29T01:06:10.179543+00:00",
+        "status": 200,
+        "sha256": "aab1bfc6f9f1928737dedb9e1123e83f9f39aa8bc9b8e79984af1fda969519e7",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08154760/20260929T010610179543Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08154760/20260929T010610179543Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08154760&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:11.811393+00:00",
+        "status": 200,
+        "sha256": "ca2b51cbf5e790613c801a8eba83edc97bc3c80deece0e235232369563f6e7e0",
+        "feature_count": 0,
+        "raw_path": "data/raw/usgs-daily/08154760/20260929T010611811393Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08154760/20260929T010611811393Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Bull Ck at FM 2222, Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050302",
+        "drainage_area": 30.4,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.7880633044475,
+          30.3593709387966
+        ]
+      },
+      "series": [],
+      "has_instantaneous_discharge": false,
+      "latest_00060_00065_end": null
+    },
+    "08154750": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08154750&limit=1",
+        "retrieved_at": "2026-09-29T01:06:13.422472+00:00",
+        "status": 200,
+        "sha256": "ea2422eea35b3cd07c1d8c417f01c26527f73a8cabb10cb8d1a1acd0e259ae9b",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08154750/20260929T010613422472Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08154750/20260929T010613422472Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08154750&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:15.181621+00:00",
+        "status": 200,
+        "sha256": "8f40f85f933374a24064cb389b2b4f8ae052a603ca97d964354c21f724b00ab5",
+        "feature_count": 0,
+        "raw_path": "data/raw/usgs-daily/08154750/20260929T010615181621Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08154750/20260929T010615181621Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "W Bull Ck at Loop 360 nr Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050302",
+        "drainage_area": 6.77,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.7902855792852,
+          30.3596486735887
+        ]
+      },
+      "series": [],
+      "has_instantaneous_discharge": false,
+      "latest_00060_00065_end": null
+    },
+    "08158100": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158100&limit=1",
+        "retrieved_at": "2026-09-29T01:06:16.825747+00:00",
+        "status": 200,
+        "sha256": "0696381c9630099b1c94dd072ab1373fb138a66519c7d35c7aacdb07a37220cc",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158100/20260929T010616825747Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158100/20260929T010616825747Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158100&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:18.638894+00:00",
+        "status": 200,
+        "sha256": "949b1b5732dda3bb9871bd090ebfe532c7c4e2bea10ee2e400d13d67426d44eb",
+        "feature_count": 3,
+        "raw_path": "data/raw/usgs-daily/08158100/20260929T010618638894Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158100/20260929T010618638894Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Walnut Ck at FM 1325 nr Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050307",
+        "drainage_area": 12.6,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.7116732723164,
+          30.4099253669348
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1976-04-18T06:00:00+00:00",
+          "end": "1982-05-13T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1976-04-18T06:00:00+00:00",
+          "end": "1982-05-13T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1984-10-19T05:00:00+00:00",
+          "end": "1986-09-07T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        }
+      ],
+      "has_instantaneous_discharge": false,
+      "latest_00060_00065_end": "1986-09-07T05:00:00+00:00"
+    },
+    "08158105": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158105&limit=1",
+        "retrieved_at": "2026-09-29T01:06:20.302075+00:00",
+        "status": 200,
+        "sha256": "43769247fdd5e087dacd6be5060be70877aa273a86e17e24558ff2e9df1a3460",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158105/20260929T010620302075Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158105/20260929T010620302075Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158105&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:22.020479+00:00",
+        "status": 200,
+        "sha256": "3235c48c216e47b526c57c577bb998092c0c9cba8b46480664510c82cffad5cd",
+        "feature_count": 0,
+        "raw_path": "data/raw/usgs-daily/08158105/20260929T010622020479Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158105/20260929T010622020479Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Walnut Ck at Metric Blvd nr Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050307",
+        "drainage_area": null,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.6975638888889,
+          30.406049999999997
+        ]
+      },
+      "series": [],
+      "has_instantaneous_discharge": false,
+      "latest_00060_00065_end": null
+    },
+    "08155500": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08155500&limit=1",
+        "retrieved_at": "2026-09-29T01:06:23.698093+00:00",
+        "status": 200,
+        "sha256": "4e9beb50c7afcdaf50aa35e9602c5826a5b24822f594e1c816c191750de8d45a",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08155500/20260929T010623698093Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08155500/20260929T010623698093Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08155500&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:25.464074+00:00",
+        "status": 200,
+        "sha256": "9759516a3f0d17e881678ea54d5d6d4e75298695013400a3ceb6d2ebabd77b86",
+        "feature_count": 46,
+        "raw_path": "data/raw/usgs-daily/08155500/20260929T010625464074Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08155500/20260929T010625464074Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Barton Spgs at Austin, TX",
+        "site_type": "Spring",
+        "hydrologic_unit_code": "120902050305",
+        "drainage_area": null,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.7713946863112,
+          30.2635416941315
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00011",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2023-09-11T05:00:00+00:00",
+          "end": "2026-09-28T10:00:00+00:00",
+          "unit_of_measure": "degF"
+        },
+        {
+          "parameter_code": "63684",
+          "parameter_name": "Turbidity, FNMU",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-10-05T05:00:00+00:00",
+          "end": "2006-09-29T05:00:00+00:00",
+          "unit_of_measure": "_FNMU"
+        },
+        {
+          "parameter_code": "72253",
+          "parameter_name": "Temperature, soil",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-28T11:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "32295",
+          "parameter_name": "fDOM, water, in situ",
+          "statistic_id": "00008",
+          "computation_identifier": "Median",
+          "computation_period_identifier": "Daily",
+          "begin": "2023-09-28T05:00:00+00:00",
+          "end": "2026-09-27T05:00:00+00:00",
+          "unit_of_measure": "QSE"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "31200",
+          "computation_identifier": "SelectedValue",
+          "computation_period_identifier": "Daily",
+          "begin": "1978-03-01T06:00:00+00:00",
+          "end": "2000-08-09T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "72253",
+          "parameter_name": "Temperature, soil",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-28T12:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "63684",
+          "parameter_name": "Turbidity, FNMU",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-10-05T05:00:00+00:00",
+          "end": "2006-09-29T05:00:00+00:00",
+          "unit_of_measure": "_FNMU"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-30T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-07-04T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "99133",
+          "parameter_name": "NO3+NO2,water,insitu as N",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2020-01-24T01:15:00+00:00",
+          "end": "2026-09-28T13:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-28T10:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "1991-04-10T10:00:00+00:00",
+          "end": "2026-09-28T10:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-28T12:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-28T13:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-06-21T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-06-21T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "32295",
+          "parameter_name": "fDOM, water, in situ",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2020-01-15T02:00:00+00:00",
+          "end": "2026-09-28T13:00:00+00:00",
+          "unit_of_measure": "QSE"
+        },
+        {
+          "parameter_code": "00003",
+          "parameter_name": "Sampling depth",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-09-30T05:00:00+00:00",
+          "end": "2026-08-12T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-06-20T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "72253",
+          "parameter_name": "Temperature, soil",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-28T12:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-28T13:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2006-10-01T05:00:00+00:00",
+          "end": "2007-06-24T05:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "99133",
+          "parameter_name": "NO3+NO2,water,insitu as N",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2022-08-18T05:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-30T05:00:00+00:00",
+          "end": "2026-09-27T05:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-30T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "99133",
+          "parameter_name": "NO3+NO2,water,insitu as N",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2022-08-18T05:00:00+00:00",
+          "end": "2026-09-27T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-06-21T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2006-10-01T05:00:00+00:00",
+          "end": "2007-06-24T05:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-07-04T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-03-11T06:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-28T13:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-03-11T06:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-07-04T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-06-20T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-03-11T06:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00008",
+          "computation_identifier": "Median",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-30T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "74207",
+          "parameter_name": "Soil moisture",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-28T12:00:00+00:00",
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2006-10-01T05:00:00+00:00",
+          "end": "2007-06-24T05:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-06-20T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "74207",
+          "parameter_name": "Soil moisture",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-28T12:00:00+00:00",
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "99133",
+          "parameter_name": "NO3+NO2,water,insitu as N",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2022-08-18T05:00:00+00:00",
+          "end": "2026-09-27T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "63680",
+          "parameter_name": "Turbidity, FNU",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-28T13:00:00+00:00",
+          "unit_of_measure": "_FNU"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-30T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "74207",
+          "parameter_name": "Soil moisture",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-28T11:00:00+00:00",
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-30T05:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1978-03-01T06:00:00+00:00",
+          "end": "2026-09-26T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2026-09-28T10:00:00+00:00"
+    },
+    "08155450": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08155450&limit=1",
+        "retrieved_at": "2026-09-29T01:06:27.278087+00:00",
+        "status": 200,
+        "sha256": "79e165e7abcc2221e0bb26ae4d86aefc858ea0bfa116703424313d78016c1726",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08155450/20260929T010627278087Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08155450/20260929T010627278087Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08155450&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-29T01:06:28.917971+00:00",
+        "status": 200,
+        "sha256": "cf89964caac14dc8a02535515286b982bf967dbe0c2d79b94835526b99146058",
+        "feature_count": 0,
+        "raw_path": "data/raw/usgs-daily/08155450/20260929T010628917971Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08155450/20260929T010628917971Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Barton Spgs Pool abv Barton Sprgs at Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050305",
+        "drainage_area": 125.0,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.7713888888889,
+          30.2633333333333
+        ]
+      },
+      "series": [],
+      "has_instantaneous_discharge": false,
+      "latest_00060_00065_end": null
+    },
+    "08158700": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158700&limit=1",
+        "retrieved_at": "2026-09-30T22:12:48.466663+00:00",
+        "status": 200,
+        "sha256": "a4d48b5020bbe294ac4e9603472e2deccd01fc5776ada6bb6db7c7357ccbd415",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158700/20260930T221248466663Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158700/20260930T221248466663Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158700&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-30T22:12:50.133454+00:00",
+        "status": 200,
+        "sha256": "a3ee2265711560628adaa7cbd5606d708c29c00b3e782517fcda5cb23be77e69",
+        "feature_count": 31,
+        "raw_path": "data/raw/usgs-daily/08158700/20260930T221250133454Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158700/20260930T221250133454Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Onion Ck nr Driftwood, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050404",
+        "drainage_area": 124.0,
+        "county_name": "Hays County",
+        "coordinates_lon_lat": [
+          -98.0077858912633,
+          30.0829892407753
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00301",
+          "parameter_name": "Diss oxygen saturtn",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "00301",
+          "parameter_name": "Diss oxygen saturtn",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-10-22T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-03-21T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": null,
+          "end": null,
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "00301",
+          "parameter_name": "Diss oxygen saturtn",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T12:15:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00045",
+          "parameter_name": "Precipitation",
+          "statistic_id": null,
+          "computation_identifier": "Decumulated",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-30T12:45:00+00:00",
+          "unit_of_measure": "in"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-10-22T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1941-02-01T06:00:00+00:00",
+          "end": "2025-06-12T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1941-02-01T06:00:00+00:00",
+          "end": "2025-06-12T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": null,
+          "end": null,
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": null,
+          "end": null,
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-03-21T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1979-07-01T05:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-03-21T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "00301",
+          "parameter_name": "Diss oxygen saturtn",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": null,
+          "end": null,
+          "unit_of_measure": "%"
+        },
+        {
+          "parameter_code": "00300",
+          "parameter_name": "Dissolved oxygen",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": null,
+          "end": null,
+          "unit_of_measure": "mg/l"
+        },
+        {
+          "parameter_code": "00010",
+          "parameter_name": "Temperature, water",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "degC"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "00095",
+          "parameter_name": "Specific cond at 25C",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "uS/cm"
+        },
+        {
+          "parameter_code": "00400",
+          "parameter_name": "pH",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2005-09-17T05:00:00+00:00",
+          "end": "2005-09-18T05:00:00+00:00",
+          "unit_of_measure": "pH Units"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "1990-10-01T10:15:00+00:00",
+          "end": "2026-09-30T12:15:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2026-09-30T12:15:00+00:00"
+    },
+    "08158800": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158800&limit=1",
+        "retrieved_at": "2026-09-30T22:12:51.631647+00:00",
+        "status": 200,
+        "sha256": "3198df62369d36edad5dedc759467aa7ce221f360ee8ba0d2374663723facf1a",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158800/20260930T221251631647Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158800/20260930T221251631647Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158800&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-30T22:12:53.162300+00:00",
+        "status": 200,
+        "sha256": "7e7bc6583869c3c180bc009a6c54d48a550305e1f27e0d200f4f4823305f747b",
+        "feature_count": 9,
+        "raw_path": "data/raw/usgs-daily/08158800/20260930T221253162300Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158800/20260930T221253162300Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Onion Ck at Buda, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050405",
+        "drainage_area": 166.0,
+        "county_name": "Hays County",
+        "coordinates_lon_lat": [
+          -97.8480606025134,
+          30.0860466962736
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1929-05-28T05:00:00+00:00",
+          "end": "1995-05-30T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1979-07-01T05:00:00+00:00",
+          "end": "1996-02-20T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "1992-01-31T12:00:00+00:00",
+          "end": "1996-02-21T11:45:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1929-05-28T05:00:00+00:00",
+          "end": "1995-05-30T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-01-31T06:00:00+00:00",
+          "end": "1995-06-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-01-31T06:00:00+00:00",
+          "end": "1995-06-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-01-31T06:00:00+00:00",
+          "end": "1995-06-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-01-31T06:00:00+00:00",
+          "end": "1995-06-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1992-01-31T06:00:00+00:00",
+          "end": "1995-06-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "1996-02-21T11:45:00+00:00"
+    },
+    "08158810": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158810&limit=1",
+        "retrieved_at": "2026-09-30T22:12:54.809149+00:00",
+        "status": 200,
+        "sha256": "51065ac3ddf3aa25cb38f748259065ec21824b90cdc4a9fbab81a5276fec7958",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158810/20260930T221254809149Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158810/20260930T221254809149Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158810&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-30T22:12:56.410727+00:00",
+        "status": 200,
+        "sha256": "b8dda2f99d7d3c83e9d44dd80fb66e85a1a61bf79750086a188101142d7fdcbe",
+        "feature_count": 8,
+        "raw_path": "data/raw/usgs-daily/08158810/20260930T221256410727Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158810/20260930T221256410727Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Bear Ck bl FM 1826 nr Driftwood, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050406",
+        "drainage_area": 12.2,
+        "county_name": "Hays County",
+        "coordinates_lon_lat": [
+          -97.9400076181383,
+          30.1554874900834
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1939-01-01T06:00:00+00:00",
+          "end": "2025-02-11T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1979-07-07T05:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1939-01-01T06:00:00+00:00",
+          "end": "2025-02-11T06:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T12:15:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T12:15:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-02-11T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2026-09-30T12:15:00+00:00"
+    },
+    "08158827": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158827&limit=1",
+        "retrieved_at": "2026-09-30T22:12:58.052231+00:00",
+        "status": 200,
+        "sha256": "1879543e23bcb998a4afddb35e18ecbca38756c8162a5e91186a2ff253e07471",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158827/20260930T221258052231Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158827/20260930T221258052231Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158827&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-30T22:12:59.611081+00:00",
+        "status": 200,
+        "sha256": "a60afa6b2e45e26bd396d96c0dd2d5dff5e2f69c8da26aabd88212919d94ad57",
+        "feature_count": 12,
+        "raw_path": "data/raw/usgs-daily/08158827/20260930T221259611081Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158827/20260930T221259611081Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Onion Ck at Twin Creeks Rd nr Manchaca, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050405",
+        "drainage_area": 181.0,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.8211161263302,
+          30.1263234529586
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-04-03T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "2004-06-09T05:00:00+00:00",
+          "end": "2025-02-11T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-04-03T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-04-03T06:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-06-15T14:50:00+00:00",
+          "end": "2026-07-16T22:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-10-01T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "2004-06-09T05:00:00+00:00",
+          "end": "2025-02-11T06:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2003-04-03T12:00:00+00:00",
+          "end": "2026-09-30T13:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T13:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-04-03T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2026-05-11T05:00:00+00:00",
+          "end": "2026-09-30T12:25:00+00:00",
+          "unit_of_measure": "ft"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2026-09-30T13:00:00+00:00"
+    },
+    "08158840": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158840&limit=1",
+        "retrieved_at": "2026-09-30T22:13:01.136155+00:00",
+        "status": 200,
+        "sha256": "1289f753bbf062b24133c6bb2528057a83e73ff3b83f10420a2b7bc9d7655a77",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158840/20260930T221301136155Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158840/20260930T221301136155Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158840&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-30T22:13:02.628410+00:00",
+        "status": 200,
+        "sha256": "5b4143191a23cd83522977f0290f5fd5ba797a9de8c9dd19eeef222ee545f803",
+        "feature_count": 10,
+        "raw_path": "data/raw/usgs-daily/08158840/20260930T221302628410Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158840/20260930T221302628410Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Slaughter Ck at FM 1826 nr Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050407",
+        "drainage_area": 8.24,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.90336491612015,
+          30.209099670763052
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T10:45:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-02-13T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-02-13T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T12:30:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1978-06-06T05:00:00+00:00",
+          "end": "2025-07-05T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-10-22T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1978-01-16T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2007-10-22T05:00:00+00:00",
+          "end": "2026-09-29T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1978-06-06T05:00:00+00:00",
+          "end": "2025-07-05T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "1997-02-13T06:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2026-09-30T12:30:00+00:00"
+    },
+    "08158860": {
+      "location_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158860&limit=1",
+        "retrieved_at": "2026-09-30T22:13:04.152341+00:00",
+        "status": 200,
+        "sha256": "f8b82e02c53fe4ef6ace656073725b10ae7f2bb7eea0d5c4dce57e289ebf3d5b",
+        "feature_count": 1,
+        "raw_path": "data/raw/usgs-daily/08158860/20260930T221304152341Z-location.json",
+        "capture_path": "data/captures/usgs-daily/08158860/20260930T221304152341Z-location.json.gz"
+      },
+      "time_series_request": {
+        "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08158860&limit=1000&skipGeometry=true",
+        "retrieved_at": "2026-09-30T22:13:05.762547+00:00",
+        "status": 200,
+        "sha256": "b4b416f9f03058a3cae9b6f8c443ef24e5a626989d2aec046f17d5a3e10d74b5",
+        "feature_count": 10,
+        "raw_path": "data/raw/usgs-daily/08158860/20260930T221305762547Z-timeseries-metadata.json",
+        "capture_path": "data/captures/usgs-daily/08158860/20260930T221305762547Z-timeseries-metadata.json.gz"
+      },
+      "station": {
+        "monitoring_location_name": "Slaughter Ck at FM 2304 nr Austin, TX",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050407",
+        "drainage_area": 23.1,
+        "county_name": "Travis County",
+        "coordinates_lon_lat": [
+          -97.8322278784219,
+          30.162155416966
+        ]
+      },
+      "series": [
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-05-31T05:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2003-05-31T10:00:00+00:00",
+          "end": "2026-09-30T10:05:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-05-31T05:00:00+00:00",
+          "end": "2012-09-25T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00011",
+          "computation_identifier": "Instantaneous",
+          "computation_period_identifier": "Points",
+          "begin": "2007-10-01T11:00:00+00:00",
+          "end": "2026-09-30T10:05:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00003",
+          "computation_identifier": "Mean",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-05-31T05:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-05-31T05:00:00+00:00",
+          "end": "2026-09-28T05:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00060",
+          "parameter_name": "Discharge",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1979-05-22T05:00:00+00:00",
+          "end": "2025-02-11T06:00:00+00:00",
+          "unit_of_measure": "ft^3/s"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": null,
+          "computation_identifier": "Max At Event Time",
+          "computation_period_identifier": "Water Year",
+          "begin": "1979-05-22T05:00:00+00:00",
+          "end": "2025-02-11T06:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00001",
+          "computation_identifier": "Max",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-05-31T05:00:00+00:00",
+          "end": "2012-09-25T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        },
+        {
+          "parameter_code": "00065",
+          "parameter_name": "Gage height",
+          "statistic_id": "00002",
+          "computation_identifier": "Min",
+          "computation_period_identifier": "Daily",
+          "begin": "2003-05-31T05:00:00+00:00",
+          "end": "2012-09-25T05:00:00+00:00",
+          "unit_of_measure": "ft"
+        }
+      ],
+      "has_instantaneous_discharge": true,
+      "latest_00060_00065_end": "2026-09-30T10:05:00+00:00"
+    }
+  },
+  "probed_at": "2026-09-30T22:13:06.764922+00:00"
+}

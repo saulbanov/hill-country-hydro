@@ -1,0 +1,72 @@
+{
+  "station_id": "USGS-08158927",
+  "source_csv": "data/history/08158927-00060-daily-mean.csv",
+  "record": {
+    "first_day": "2007-09-14",
+    "last_day": "2026-09-30",
+    "numeric_days": 6957,
+    "zero_days": 6382,
+    "median_daily_mean": 0.0
+  },
+  "event_definition": {
+    "high_threshold": 1.0,
+    "low_threshold": 0.0,
+    "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
+    "low_rule": "P75 of all numeric daily means at this station",
+    "unit": "ft^3/s daily mean",
+    "method": "event starts on the first day >= high threshold and ends on the last day before a day < low threshold, a calendar gap, or a non-numeric value",
+    "percentile_method": "nearest-rank"
+  },
+  "events": [
+    {
+      "start": "2008-03-10",
+      "end": "2026-09-30",
+      "end_reason": "record_ends_inside_event",
+      "duration_days": 6779,
+      "peak_date": "2013-10-13",
+      "peak_value": 1360.0,
+      "rise_days": 2044,
+      "recession_days": 4735,
+      "mean_value": 1.26,
+      "has_provisional": true,
+      "water_year": 2014,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 0.002
+      }
+    }
+  ],
+  "summary": {
+    "event_count": 1,
+    "events_per_water_year": {
+      "2014": 1
+    },
+    "median_duration_days": 6779,
+    "median_peak_value": 1360.0,
+    "peak_month_counts": {
+      "10": 1
+    },
+    "events_ended_by_gap": 0
+  },
+  "labels": [],
+  "holdout_split": {
+    "unit": "water_year (Oct 1\u2013Sep 30)",
+    "fold": "water_year mod 5",
+    "protocol": "leave-one-fold-out over whole events; an event belongs to the water year of its peak; never a random split of adjacent readings",
+    "defined_before_any_fit": true
+  },
+  "rule_fit": {
+    "attempted": false,
+    "positive_personal_labels": 0,
+    "negative_labels": 0,
+    "labels_with_resolved_reach": 0,
+    "independent_dated_labels": 0,
+    "reason": "No threshold can be evaluated: no labels attach to this station. No fitted threshold exists; any color comes only from a hand-authored provisional rule recorded in data/rules.json."
+  },
+  "limits": [
+    "Daily means hide within-day peaks and the timing of a visit inside a day.",
+    "Thresholds are descriptive event boundaries for this station, not swimming thresholds.",
+    "A note attached through a context relationship describes the station, not the place; the reach may be far from the gauge."
+  ]
+}

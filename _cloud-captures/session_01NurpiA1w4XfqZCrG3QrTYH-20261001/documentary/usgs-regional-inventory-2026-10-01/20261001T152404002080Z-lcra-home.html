@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQFM5KNPNK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WQFM5KNPNK');
+
+        function urchinTracker(category, action, label, value) {
+            gtag('event', category, {
+                'action': action,
+                'label': label,
+                'value': value
+            });
+            console.log(category + " " + action + " " + label);
+        }
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:description" content="LCRA’s Hydromet is a system of more than 280 automated river and weather gauges throughout the lower Colorado River basin in Texas. The Hydromet provides near-real-time data* on streamflow, river stage, rainfall totals, temperature and humidity." />
+    <meta property="og:title" content="LCRA HYDROMET" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hydromet.lcra.org/">
+    <meta property="og:image" content="https://hydromet.lcra.org/Images/LCRA-Hydromet-230x270.jpg">
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link href="/lib/leaflet/leaflet.min.css?v=tXCrvaljxgtN5LT_Syb5Mm9T-yzPFGH98JVcoJT7JTk" rel="stylesheet" />
+    <link href="/css/mapbox-gl.css?v=eMWe63uSBMQsTw4W0qBeUH2Yvn0NG1zXGVTPTqYlhnQ" rel="stylesheet" />
+
+    <style>
+
+        .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+            width: 40px !important;
+            height: 40px !important;
+            padding-top: 5px;
+        }
+
+        .leaflet-button {
+            padding-left: 65px;
+            padding-top: 10px;
+            pointer-events: auto;
+        }
+
+        #ButtonBasemap {
+            background-color: #fff;
+            padding: 5px 10px 10px 10px;
+            width: 90px;
+            border-color: #e9ecef;
+            text-align: center;
+            text-decoration: none;
+            height: 40px;
+            font-size: 16px;
+        }
+
+        #map #ButtonBasemap:hover {
+            background-color: #dddddd;
+            cursor: pointer;
+            border-color: white;
+        }
+
+        #zoomToLocationContainer {
+            top: 183px !important;
+        }
+
+        #ModalClose {
+            width: 80px;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        #DontShowAgainMessage {
+            font-size: .9em;
+        }
+    </style>
+        <title>Hydromet - Map View - Stream Flow and Weather</title>
+    <link rel="shortcut icon" href="/images/faviconLCRA.ico" type="image/x-icon" />
+    <link href="/lib/fontawesome/css/all.min.css?v=9sWQSWbvKc7NvB2NhyQKwP1ZVTLbZHUUPg4iCSTGiNA" rel="stylesheet" />
+        <link href="/lib/twitter-bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" rel="stylesheet" />
+        <link href="/css/aquario.min.css?v=7hzFMUYnqG3zmAp8emP7v5xVvm7GV-uvO7udRF2sPLQ" rel="stylesheet" />
+    <script type="text/javascript">
+        var appRoot = "https://hydromet.lcra.org/";
+        var dateFormatString = "M/D/YY h:mm A";
+    </script>
+</head>
+<body>
+    <script src="/lib/twitter-bootstrap/js/bootstrap.bundle.min.js?v=5P1JGBOIxI7FBAvT_mb1fCnI5n_NhQKzNUuW7Hq0fMc"></script>
+
+    <nav class="navbar bg-dark navbar-dark navbar-expand" style='background-color: #004488!important;'>
+        <button id="MenuButton" type="button" class="btn btn-outline-light navbar-toggle" onclick="AquaRio.toggleSidebar();">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>
+        </button>
+
+        <div class="navbar-brand">
+
+            &nbsp;
+            <a style="text-decoration: none;" href="//www.lcra.org" target="_blank">
+                <span>
+                    <img class="navbar-brand-image lcra-logo" height="35" src="/images/LCRA-logo-white-no-tag.svg" alt="LCRA Logo" /> <span class="d-none d-md-inline-block"></span>
+                    <img class="navbar-brand-image divider d-none d-md-inline-block" height="35" width="2" src="/images/white.png" alt="Divider" /> <span class="d-none d-md-inline-block"></span>
+                </span>
+            </a>
+                <span class="navbar-text d-none d-md-inline-block">Hydromet</span>
+
+
+        </div>
+
+
+            <div class="navbar-nav">
+
+                <div id="Links" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="LinksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Links
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="//floodstatus.lcra.org" target="_blank">Flood Operations Report</a></li>
+                            <li><a class="dropdown-item" href="/riverreport/" target="_blank">River Operations Report</a></li>
+                            <li><a class="dropdown-item" href="https://www.atxfloods.com/" target="_blank">ATXFloods</a></li>
+                            <li><a class="dropdown-item" href="/HistoricalData" target="_blank">Historical data by gauge</a></li>
+                            <li><a class="dropdown-item" href="/HistoricalData/Coa" target="_blank">COA Historical data by gauge</a></li>
+                            <li><a class="dropdown-item" href="https://www.lcra.org/download/Historical_Lake_levels.pdf/?wpdmdl=21289" target="_blank">Historical lake levels</a></li>
+                            <li><a class="dropdown-item" href="/Faq" target="_blank">Hydromet FAQ</a></li>
+                            <li><a class="dropdown-item" href="//floodstatus.lcra.org/#rlevels" target="_blank">River levels and forecasts</a></li>
+                            <li><a class="dropdown-item" href="//waterdatafortexas.org/reservoirs/statewide" target="_blank">TWDB Texas Reservoirs</a></li>
+                            <li><a class="dropdown-item" href="//www.texmesonet.org/viewer" target="_blank">TWDB TexMesonet</a></li>
+                            <li><a class="dropdown-item" href="//txpub.usgs.gov/txwaterdashboard/" target="_blank">USGS Texas Water Dashboard</a></li>
+                            <li><a class="dropdown-item" href="https://www.lcra.org/water/water-glossary/" target="_blank">Water glossary</a></li>
+                            <li><a class="dropdown-item" href="http://waterquality.lcra.org" target="_blank">Water quality data</a></li>
+                            <li><a class="dropdown-item" href="https://www.lcra.org/news/bob-rose-on-the-weather/" target="_blank">Weather forecast</a></li>
+                            <li><a class="dropdown-item" href="https://www.lcra.org/contact-us/">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="navbar-nav">
+            <div id="Reports" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="ReportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Reports
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/Reports">View Report Descriptions</a></li>
+                    <li><h6 class="dropdown-header">River Operations</h6></li>
+                    <li><a class="dropdown-item" href="/floodstatus/" target="_blank">Flood Operations Report</a></li>
+                    <li><a class="dropdown-item" href="/riverreport/" target="_blank">River Operations Report</a></li>
+                    <li><h6 class="dropdown-header">Lake Data</h6></li>
+                    <li><a class="dropdown-item" href="/Reports/HighlandLakesSummary">Highland Lakes Summary</a></li>
+                    <li><a class="dropdown-item" href="/Reports/LakeLevel">All Lake Levels</a></li>
+                    <li><h6 class="dropdown-header">Rainfall Data</h6></li>
+                    <li><a class="dropdown-item" href="/Reports/Rainfall">Rainfall</a></li>
+                    <li><a class="dropdown-item" href="/Reports/RainfallSummary">Rainfall Summary</a></li>
+                    <li><a class="dropdown-item" href="/Reports/RainfallCoa">Rainfall - COA</a></li>
+                    <li><a class="dropdown-item" href="/Reports/RainfallUsgs">Rainfall - USGS</a></li>
+
+                    <li><h6 class="dropdown-header">Stage / Flow</h6></li>
+
+                    <li><a class="dropdown-item" href="/Reports/RiverStageFlow">Stage / Flow</a></li>
+
+                    <li><a class="dropdown-item" href="/Reports/USGS">Stage / Flow - USGS</a></li>
+
+                    <li><h6 class="dropdown-header">Meteorological</h6></li>
+                    <li><a class="dropdown-item" href="/Reports/Temperature">Temperature</a></li>
+                    <li><a class="dropdown-item" href="/Reports/Humidity">Humidity</a></li>
+                    <li><h6 class="dropdown-header">Water Quality</h6></li>
+                    <li><a class="dropdown-item" href="/Reports/Conductivity">Conductivity</a></li>
+                    <li><a class="dropdown-item" href="/Reports/WaterTemperature">Surface Water Temperature</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="navbar-nav">
+            <a class="nav-item nav-link d-none d-md-block" href="/Home/GaugeDataList">Gauge Data</a>
+
+        </div>
+
+            <div id="LCRA-social" class="ms-dialogHidden LCRA-social">
+                <div id="LCRA-social-items">
+                    <a href="https://x.com/LCRA/" class="fa-brands fa-square-x-twitter" target="_blank"><span>twitter</span></a>
+                    <a href="https://www.facebook.com/lowercoloradoriverauthority/" class="fa-brands fa-square-facebook" target="_blank"><span>facebook</span></a>
+                    <a href="https://www.linkedin.com/company/lcra/" class="fa-brands fa-square-linkedin" target="_blank"><span>LinkedIn</span></a>
+                </div>
+
+            </div>
+
+    </nav>
+
+    
+
+
+<div id="map">
+    <div id="ButtonBasemapContainer" class="leaflet-top leaflet-left leaflet-button">
+        <button id="ButtonBasemap" class="button-basemap">Satellite</button>
+    </div>
+</div>
+
+<div id="sidebar" class="sidebar sidebarMenu">
+    <span class="headings d-block d-md-none" onclick="AquaRio.toggleSidebar()">
+        <span alt="Close sidebar" class="float-end" style="cursor: pointer; font-size: 20px; color: #033968; line-height: 32px; margin-right: -8px; margin-top: -4px;"><i class="fa fa-window-close" aria-hidden="true"></i>&nbsp;</span>
+    </span>
+
+    <span class="headings" onclick="AquaRio.shareMapState()" onmouseover="Utils.toggleDiv('infoShare', 1)" onmouseout="Utils.toggleDiv('infoShare', 0)">
+        <span alt="Share current map view" class="float-end" style="cursor: pointer; font-size: 20px; line-height: 32px; margin-top: -4px;"><i class="fa fa-share-square" aria-hidden="true"></i>&nbsp;</span>
+    </span>
+    <span class="headings" onclick="AquaRio.clearMapState()" onmouseover="Utils.toggleDiv('infoClear', 1)" onmouseout="Utils.toggleDiv('infoClear', 0)">
+        <span alt="Clear map state" class="float-end" style="cursor: pointer; font-size: 20px; line-height: 32px; margin-top: -4px;"><i class="fa fa-trash-alt" aria-hidden="true"></i>&nbsp;</span>
+    </span>
+    <span class="headings" onclick="AquaRio.saveMapState()" onmouseover="Utils.toggleDiv('infoSave', 1)" onmouseout="Utils.toggleDiv('infoSave', 0)">
+        <span alt="Save map state" class="float-end" style="cursor: pointer; font-size: 22px; line-height: 32px; margin-top: -3px;"><i class="fa fa-save" aria-hidden="true"></i>&nbsp;</span>
+    </span>
+    <div class="d-block d-md-none">
+        <br />
+    </div>
+
+    <div class="headings d-none d-md-inline-block">Map View</div>
+    <select name="MapExtents" id="MapExtents" onchange="AquaRio.changeExtent();Utils.toggleDiv('infoExtent', 0);" onmouseover="Utils.toggleDiv('infoExtent',1)" onmouseout="Utils.toggleDiv('infoExtent',0)" class="form-select form-select-sm d-none d-md-inline-block">
+        <option value="Lower Colorado River Basin">Lower Colorado River basin</option>
+        <option value="Upper Northeast">Upper northeast basin</option>
+        <option value="Upper Southwest">Upper southwest basin</option>
+        <option value="Lake Area">Highland Lakes area</option>
+        <option value="Expanded Lake Area">Expanded Highland Lakes area</option>
+        <option value="City of Austin">City of Austin (COA)</option>
+        <option value="Lower Basin">Lower basin</option>
+        <option value="Matagorda Bay">Matagorda Bay</option>
+    </select>
+
+    <div class="headings mt-1">Hydromet Data</div>
+
+    <select name="HydrometDataList" id="HydrometDataList" onchange="AquaRio.Layers();Utils.toggleDiv('infoHydromet', 0);" onmouseover="Utils.toggleDiv('infoHydromet',1)" onmouseout="Utils.toggleDiv('infoHydromet',0)" class="form-select form-select-sm">
+
+        <optgroup label="Streamflow (including stage)">
+            <option value="flow">Streamflow</option>
+            <option value="stage">River stage</option>
+        </optgroup>
+
+        <optgroup label="Lake levels">
+            <option value="lakelevel">Lake levels</option>
+        </optgroup>
+
+        <optgroup label="Rainfall">
+            <option value="rain">Rainfall - most recent</option>
+            <option value="rain30min">Rainfall - past 30 minutes</option>
+            <option value="rain1">Rainfall - past hour</option>
+            <option value="rain2">Rainfall - past 2 hours</option>
+            <option value="rain3">Rainfall - past 3 hours</option>
+            <option value="rain6">Rainfall - past 6 hours</option>
+            <option value="rain12">Rainfall - past 12 hours</option>
+            <option value="raintoday">Rainfall - since midnight</option>
+            <option value="rain1day">Rainfall - past 24 hours</option>
+            <option value="rain2day">Rainfall - past 48 hours</option>
+            <option value="rain3day">Rainfall - past 3 days</option>
+            <option value="rain4day">Rainfall - past 4 days</option>
+            <option value="rain5day">Rainfall - past 5 days</option>
+            <option value="rain1wk">Rainfall - past week</option>
+            <option value="rain2wk">Rainfall - past 2 weeks</option>
+            <option value="rainMonth">Rainfall - October 2026</option>
+            <option value="rainPrevMonth">Rainfall - September 2026</option>
+            <option value="rainPrev2Month">Rainfall - August 2026</option>
+            <option value="rainPrev3Month">Rainfall - July 2026</option>
+            <option value="rainYear">Rainfall - this year (2026)</option>
+            <option value="rainPrevYear">Rainfall - previous year (2025)</option>
+        </optgroup>
+
+        <optgroup label="Temperature and humidity">
+            <option value="temp">Temperature - current</option>
+            <option value="mintemp">Temperature - min - since midnight</option>
+            <option value="maxtemp">Temperature - max - since midnight</option>
+            <option value="humidity">Relative humidity</option>
+        </optgroup>
+
+        <optgroup label="Surface water temperature">
+            <option value="wtemp">Surface water temperature</option>
+        </optgroup>
+    </select>
+
+    <span class="headings d-none d-md-inline" onclick="AquaRio.toggleGauges(true)" onmouseover="Utils.toggleDiv('infoSort', 1)" onmouseout="Utils.toggleDiv('infoSort', 0)">
+        <span alt="Sort data by gauge" class="float-end" style="cursor:pointer; font-size: 16px;"><i class="fa fa-sort-amount-down" aria-hidden="true"></i>&nbsp;</span>
+    </span>
+    <div class="headings d-none d-md-inline-block">Data by Gauge</div>
+
+    <select name="gaugeDropDown" id="gaugeDropDown" onchange="AquaRio.getData();Utils.toggleDiv('infoGaugeList',0)" onmouseover="Utils.toggleDiv('infoGaugeList',1)" onmouseout="Utils.toggleDiv('infoGaugeList',0)" class="form-select form-select-sm d-none d-md-inline-block"></select>
+    <div class="mb-3 " style="position:relative;z-index:1029">
+        <span class="datadate" id="dataTime">Retrieving data...</span>
+        <span class="headings" onclick="AquaRio.getNewData()" onmouseover="Utils.toggleDiv('infoRefresh', 1)" onmouseout="Utils.toggleDiv('infoRefresh', 0)">
+            <span alt="Refresh data" class="float-end" style="cursor:pointer; padding-top: 3px; font-size: 16px;"><i class="fa fa-redo-alt" aria-hidden="true"></i>&nbsp;</span>
+        </span>
+    </div>
+
+    <div class="headings">Map Layers</div>
+<div class="layer-buttons btn-group-vertical" data-toggle="buttons">
+    <div id="RadarContainer" name="Radar" class="btn btn-default layer-list-item" onmouseover="Utils.toggleDiv('infoRadar', 1)" onmouseout="Utils.toggleDiv('infoRadar', 0)">
+        <span class="btn-text float-start">Current radar</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+    <div id="RadarLoopContainer" name="RadarLoop" class="btn btn-default layer-list-item" onmouseover="Utils.toggleDiv('infoRadarLoop', 1)" onmouseout="Utils.toggleDiv('infoRadarLoop', 0)">
+        <span class="btn-text float-start">&nbsp;&nbsp;&nbsp;Radar loop</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+    <div id="CountiesContainer" class="btn btn-default layer-list-item" name="Counties" onmouseover="Utils.toggleDiv('infoCounties', 1)" onmouseout="Utils.toggleDiv('infoCounties', 0)">
+        <span class="btn-text float-start">County boundaries</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+    <div id="DroughtContainer" class="btn btn-default layer-list-item" name="Drought" onmouseover="Utils.toggleDiv('infoDrought', 1)" onmouseout="Utils.toggleDiv('infoDrought', 0)">
+        <span class="btn-text float-start">Drought Monitor</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+
+    <div id="SoilMoistureContainer" class="btn btn-default layer-list-item" name="Soil Moisture" onmouseover="Utils.toggleDiv('infoSoilMoisture', 1)" onmouseout="Utils.toggleDiv('infoSoilMoisture', 0)">
+        <span class="btn-text float-start">Soil Moisture</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+
+    <div id="StreamsContainer" class="btn btn-default active layer-list-item" name="Streams" onmouseover="Utils.toggleDiv('infoStreams', 1)" onmouseout="Utils.toggleDiv('infoStreams', 0)">
+        <span class="btn-text float-start">Streams overlay</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+    <div id="WatershedsContainer" class="btn btn-default active layer-list-item" name="Watersheds" onmouseover="Utils.toggleDiv('infoWatershed', 1)" onmouseout="Utils.toggleDiv('infoWatershed', 0)">
+        <span class="btn-text float-start">Watersheds</span><i class="fa fa-check float-end" aria-hidden="true"></i>
+    </div>
+</div>
+
+    <div id="TemperatureLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span> °F</div>
+    <span class="temp100 legend">100s</span>
+    <span class="temp90 legend">90s</span>
+    <span class="temp80 legend">80s</span>
+    <span class="temp70 legend">70s</span>
+    <span class="temp60 legend">60s</span>
+    <span class="temp50 legend">50s</span>
+    <span class="temp40 legend">40s</span>
+    <span class="temp30 legend">30s</span>
+    <span class="temp20 legend">20s</span>
+    <span class="temp10 legend">10s</span>
+    <span class="temp0 legend">0-9</span>
+    <span class="tempbelow0 legend">&lt;0</span>
+    <br /> <br />
+</div>
+
+<div id="MoistureLegend" class="legend-container">
+    <div class="legend-heading">Volumetric Water Content m³/m³:</div>
+    <span class="moisture60 legend">.5 +</span>
+    <span class="moisture50 legend">.4 - .5</span>
+    <span class="moisture40 legend">.3 - .4</span><br />
+    <span class="moisture30 legend">.2 - .3</span>
+    <span class="moisture20 legend">.1 - .2</span>
+    <span class="moisture10 legend">0 - .1</span>
+    <br /> <br />
+</div>
+
+<div id="HumidityLegend" class="legend-container">
+    <div class="legend-heading">Relative Humidity (%):</div>
+    <span class="humid100 legend">100</span>
+    <span class="humid90 legend">90-99</span>
+    <span class="humid80 legend">80-89</span>
+    <span class="humid70 legend">70-79</span>
+    <span class="humid60 legend">60-69</span>
+    <span class="humid50 legend">50-59</span>
+    <span class="humid40 legend">40-49</span>
+    <span class="humid30 legend">30-39</span>
+    <span class="humid20 legend">20-29</span>
+    <span class="humid10 legend">10-19</span>
+    <span class="humid0 legend">0-9</span>
+    <br /> <br />
+</div>
+
+<div id="BatteryLegend" class="legend-container">
+    <div class="legend-heading">Battery Health:</div>
+    <span class="batteryExtreme legend">Extreme</span>
+    <span class="batteryHigh legend">High</span>
+    <span class="batteryGood legend">Good</span>
+    <span class="batteryFair legend">Fair</span>
+    <span class="batteryPoor legend">Poor</span>
+    <span class="batteryLow legend">Low</span>
+    <br /> <br />
+</div>
+
+<div id="FlowLegend" class="legend-container">
+    <div class="legend-heading">Streamflow (cubic feet per second):</div>
+    <span class="bankfull legend">Action stage</span>
+    <span class="floodstage legend">Flood stage</span>
+    <br /> <br />
+</div>
+
+<div id="StageLegend" class="legend-container">
+    <div class="legend-heading">River Stage:</div>
+    <span class="bankfull legend">Action stage</span>
+    <span class="floodstage legend">Flood stage</span>
+    <br /> <br />
+</div>
+
+<div id="LakeLegend" class="legend-container">
+    <div class="legend-heading">Lake Levels:</div>
+    <span class="legend">Official dam site</span>
+    <span class="notrated legend">Lake site</span>
+    <br /> <br />
+</div>
+
+<div id="RainLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span> (inches)</div>
+    <span class="rain10 legend">8+</span>
+    <span class="rain8 legend">6-8</span>
+    <span class="rain6 legend">5-6</span>
+    <span class="rain5 legend">4-5</span>
+    <span class="rain4 legend">3-4</span>
+    <span class="rain3 legend">2.5-3</span>
+    <span class="rain2x5 legend">2-2.5</span>
+    <span class="rain2 legend">1.5-2</span>
+    <span class="rain1x5 legend">1-1.5</span>
+    <span class="rain1 legend">.75-1</span>
+    <span class="rainx75 legend">.5-.75</span>
+    <span class="rainx50 legend">.25-.5</span>
+    <span class="rainx25 legend">.1-.25</span>
+    <span class="rainx10 legend">.02-.1</span>
+    <span class="rainx01 legend">.01</span>
+    <span class="rainna legend">None</span>
+    <br /> <br />
+</div>
+
+<div id="RainLegendYear" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span> (inches)</div>
+    <span class="rain10 legend">56+</span>
+    <span class="rain8 legend">52-56</span>
+    <span class="rain6 legend">48-52</span>
+    <span class="rain5 legend">44-48</span>
+    <span class="rain4 legend">40-44</span>
+    <span class="rain3 legend">36-40</span>
+    <span class="rain2x5 legend">32-36</span>
+    <span class="rain2 legend">28-32</span>
+    <span class="rain1x5 legend">24-28</span>
+    <span class="rain1 legend">20-24</span>
+    <span class="rainx75 legend">16-20</span>
+    <span class="rainx50 legend">12-16</span>
+    <span class="rainx25 legend">8-12</span>
+    <span class="rainx10 legend">4-8</span>
+    <span class="rainx01 legend">0-4</span>
+    <span class="rainna legend">None</span>
+    <br /> <br />
+</div>
+
+<div id="DoLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &gt; 8 mg/L</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 4-8 mg/L</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 2-4 mg/L</div>
+    <div style="width: 150px;" class="temp90 legend">&nbsp;&nbsp;Poor &lt; 2 mg/L</div>    
+    <br /> <br />
+</div>
+
+<div id="DoSatLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &gt; 90 %</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 70-90 %</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 50-70 %</div>
+    <div style="width: 150px;" class="temp90 legend">&nbsp;&nbsp;Poor &lt; 50 %</div>    
+    <br /> <br />
+</div>
+
+<div id="NitrateLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &lt; 2 mg/L</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 2-5 mg/L</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 5-8 mg/L</div>
+    <div style="width: 150px;" class="temp80 legend">&nbsp;&nbsp;Poor &gt; 8 mg/L</div>
+    <br /> <br />
+</div>
+
+<div id="ChloroLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &lt; 2 μg/L</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 2-10 μg/L</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 10-20 μg/L</div>
+    <div style="width: 150px;" class="temp80 legend">&nbsp;&nbsp;Poor &gt; 20 μg/L</div>
+    <br /> <br />
+</div>
+
+<div id="ChloroLegendRfu" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &lt; 1 RFU</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 1-3 RFU</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 3-4 RFU</div>
+    <div style="width: 150px;" class="temp80 legend">&nbsp;&nbsp;Poor &gt; 4 RFU</div>
+    <br /> <br />
+</div>
+
+<div id="ConductivityLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 170px;" class="temp40 legend">&nbsp;&nbsp;Low &lt; 400 (μS/cm)</div>
+    <div style="width: 170px;" class="temp50 legend">&nbsp;&nbsp;Normal 400-600 (μS/cm)</div>
+    <div style="width: 170px;" class="temp60 legend">&nbsp;&nbsp;High 600-700 (μS/cm)</div>
+    <div style="width: 170px;" class="temp80 legend">&nbsp;&nbsp;Very High &gt; 700 (μS/cm)</div>
+    <br /> <br />
+</div>
+
+<div id="PhLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp90 legend">&nbsp;&nbsp;Very Low &lt; 6.5</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Low 6.5-7.5</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Normal 7.5-8.5</div>
+    <div style="width: 150px;" class="temp10 legend">&nbsp;&nbsp;High &gt; 8.5</div>
+    <br /> <br />
+</div>
+
+<div id="PhycocyaninRfuLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &lt; 0.5 RFU</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 0.5-1.5 RFU</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 1.5-2.5 RFU</div>
+    <div style="width: 150px;" class="temp80 legend">&nbsp;&nbsp;Poor &gt; 2.5 RFU</div>
+    <br /> <br />
+</div>
+
+<div id="TurbidityLegend" class="legend-container">
+    <div class="legend-heading"><span class="LegendType"></span></div>
+    <div style="width: 150px;" class="temp30 legend">&nbsp;&nbsp;Excellent &lt; 2 NTU</div>
+    <div style="width: 150px;" class="temp40 legend">&nbsp;&nbsp;Good 2-10 NTU</div>
+    <div style="width: 150px;" class="temp50 legend">&nbsp;&nbsp;Fair 10-20 NTU</div>
+    <div style="width: 150px;" class="temp80 legend">&nbsp;&nbsp;Poor &gt; 20 NTU</div>
+    <br /> <br />
+</div>
+
+
+    <div id="infoHydromet" class="tocTooltip"><b>Select Hydromet data to display:</b><br /><br /> LCRA's Hydromet system uses gauges throughout the Lower Colorado River basin to supply real-time information concerning streamflow, current lake levels, recent rainfall amounts, and current temperatures throughout the basin.  Use this drop down list to select the data you want to display on the map.</div>
+<div id="infoSort" class="tocTooltip"><b>Sort Data By Gauge Drop Down:</b><br /><br /> Press the link to sort sites in the drop down alphabetically.  The default sort is by agency name then by site number.  For LCRA sites this works out to a sort of upstream to downstream.  Press the 'Refresh data' link for the original sort.</div>
+<div id="infoRadar" class="tocTooltip"><b>Current radar:</b><br /><br /> Toggle this button to add and remove radar imagery from the map.  The radar information is provided by Iowa Environmental Mesonet at Iowa State University.  The radar images are updated every 5 minutes.</div>
+<div id="infoRadarLoop" class="tocTooltip"><b>Start radar loop:</b><br /><br /> Toggle this button to add and remove animated radar imagery from the map.  The radar information is provided by Iowa Environmental Mesonet at Iowa State University.  The radar images are updated every 5 minutes.</div>
+<div id="infoStreams" class="tocTooltip"><b>Stream overlay:</b><br /><br /> Toggle this button to add and remove water features from the map.  As you zoom in further on the map the water features become more detailed.</div>
+<div id="infoCounties" class="tocTooltip"><b>County boundaries:</b><br /><br /> Toggle this button to add and remove counties from the map.  County boundaries are available for the entire state of Texas.</div>
+<div id="infoWatershed" class="tocTooltip"><b>Watershed overlay:</b><br /><br /> Toggle this button to add and remove watersheds from the map.  Watersheds are available for the Colorado River basin and are more detailed in and around the City of Austin.</div>
+<div id="infoDrought" class="tocTooltip"><b>Drought overlay:</b><br /><br /> Toggle this button to add and remove current drought information from the map.  Drought information provided by the National Drought Mitigation Center (NDMC), the U.S. Department of Agriculture (USDA) and the National Oceanic and Atmospheric Administration (NOAA).<br /><br /><b>Current drought data</b><br /><table><tr><td><div class="droughtD0" style="height:13px; width:20px; border:none"></div></td><td class="legendDrought">Abnormally dry</td></tr><tr><td><div class="droughtD1" style="height:13px; width:20px; border:none"></div></td><td class="legendDrought">Drought - moderate</td></tr><tr><td><div class="droughtD2" style="height:13px; width:20px; border:none"></div></td><td class="legendDrought">Drought - severe</td></tr><tr><td><div class="droughtD3" style="height:13px; width:20px; border:none"></div></td><td class="legendDrought">Drought - extreme</td></tr><tr><td><div class="droughtD4" style="height:13px; width:20px; border:none"></div></td><td class="legendDrought">Drought - exceptional</td></tr></table></div>
+<div id="infoSoilMoisture" class="tocTooltip"><b>Shallow Soil Moisture overlay:</b><br /><br /> Toggle this button to add and remove soil moisture information from the map.  The Shallow Soil Moisture overlay displays the estimated relative moisture content (%) of the upper 10cm of soil.  Data is from the National Aeronautics and Space Administration (NASA).  The overlay is updated daily from the NLDAS-NOAH Land Surface  model. </div>
+<div id="infoExtent" class="tocTooltip"><b>Default map areas:</b><br /><br /> LCRA's Hydromet system allows you to select one of eight map locations to highlight.  The maps range from the upper northeast region near Abilene to the Highland Lakes area to the City of Austin and down to the Gulf Coast at Matagorda Bay.</div>
+<div id="infoAgency" class="tocTooltip"><b>Visible Agencies:</b><br /><br /> Use this menu to select which agency data is available on the map.  Data is available from LCRA, U.S. Geological Survey and City of Austin.</div>
+<div id="infoGaugeList" class="tocTooltip"><b>Gauge data list:</b><br /><br /> LCRA's Hydromet system allows visitors to obtain detailed information for any of its gauges throughout the Lower Colorado River basin.  Select the type of Hydromet data to display in the drop down above, and then select a specific gauge to obtain the most detailed Hydromet information.</div>
+<div id="infoRefresh" class="tocTooltip">Refresh for the latest Hydromet gauge data. The page also automatically retrieves new data every 10 minutes.</div>
+<div id="infoSave" class="tocTooltip">Save the current map view and the Hydromet data displayed. This map view and Hydromet data will be displayed the next time you return to this page.</div>
+<div id="infoClear" class="tocTooltip">Clear the current map view and the Hydromet data displayed. The default map view and Hydromet data will be displayed the next time you return to this page.</div>
+<div id="infoShare" class="tocTooltip">Share the current map view and the Hydromet data displayed.  A url representing this map view and Hydromet data will be copied to the clipboard to be shared with others.</div>
+<div id="infoZoomToLocation" class="tocTooltip"><b>Zoom To Location:</b><br /><br />Pressing this button will zoom and pan the map to your location.</div>
+
+<div id="legendRadar" class="radarLegend"><img alt="radar legend" src="/Images/radarlegend.gif" /><br /><span class="datadate" id="radarTime"></span><br /></div>
+<div id="legendSoilMoisture"><img alt="soil moisture legend" src="/images/SoilMoistureLegend2.png" /><br /><div id="SoilMoistureDate" style="font-size: .8em; font-weight: 600;"></div></div>
+
+
+</div>
+
+<div id="selectGauge" class="gaugeBox">
+    <a href="#" onclick="AquaRio.printPage();"><i class="fa fa-upload"></i><span class="desclink">Pop Out</span></a>
+    <span class="float-end">
+        <a href="#" onclick="AquaRio.refreshFrame();"><i class="fa fa-sync-alt"></i><span class="desclink">Refresh</span></a>
+        <a href="#" onclick="AquaRio.zoomSite();"><i class="fa fa-search-plus"></i><span class="desclink">Zoom to Site</span></a>
+        <a href="#" onclick="AquaRio.closeFrame();"><i class="fa fa-window-close"></i></a>
+    </span><br />
+    <iframe id="dataFrame" style="border:none;height:95%;width:100%" src=""></iframe>
+</div>
+
+
+<div id="disclaimer" class="disclaimerBox alert alert-danger" role="alert">
+    <span class='fa fa-exclamation-triangle'> </span> Data may be unreliable due to damage to gauge or other issues. Use with caution. <a class="fa fa-circle-info" data-bs-toggle="popover" title="Details" data-bs-content="Data may be unreliable due to damage to gauge or other issues. Use with caution."></a>
+</div>
+
+
+<div id="zoomToLocationContainer" onmouseover="Utils.toggleDiv('infoZoomToLocation', 1)" onmouseout="Utils.toggleDiv('infoZoomToLocation', 0)"><div id="zoomToLocation"></div></div>
+<div id="alert-share" class="alert alert-success" role="alert">
+    Map url saved to the clipboard.
+</div>
+<div id="alert-cleared" class="alert alert-success" role="alert">
+    Map state cleared.
+</div>
+<div id="alert-saved" class="alert alert-success" role="alert">
+    Map state saved.
+</div>
+
+
+    <div id="IntroScreen" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="lbsrc-HydrometDisclaimer-Content-Desktop">
+                        LCRA’s Hydromet is a system of more than 280 automated river and weather gauges throughout the lower Colorado River basin in Texas.  In addition, the website displays gauges maintained by the City of Austin and USGS.  The Hydromet provides near-real-time data* on streamflow, river stage, rainfall totals, temperature and humidity.<br /><br />Navigate LCRA’s Hydromet by:<br /><ul><li>Selecting a <strong>Map View</strong> from the drop down menu or zooming in on a specific area.</li><li>Selecting the data you would like to see from the <strong>Hydromet Data</strong> drop-down menu.</li></ul>You may add additional <strong>Map Layers</strong>, including current radar and drought conditions, and view historic data under the <strong>Links</strong> section.<br /><br /><span style="font-size:11px;">*Data displayed is automatically retrieved and subject to revision.</span><br /><br />
+                    </div>
+                    <div id="lbsrc-HydrometDisclaimer-Content-Mobile">
+                        LCRA’s Hydromet is a system of more than 280 automated river and weather gauges throughout the lower Colorado River basin in Texas. In addition, the website displays gauges maintained by the City of Austin and USGS.  The Hydromet provides near-real-time data* on streamflow, river stage, rainfall totals, temperature and humidity.<br /><br />Navigate LCRA’s Hydromet by:<br /><ul><li>Zooming in on a specific area.</li><li>Selecting the data you would like to see from the <strong>Hydromet Data</strong> drop-down menu.</li></ul>You may add additional <strong>Map Layers</strong>, including current radar and drought conditions.<br /><br /><span style="font-size:11px;">*Data displayed is automatically retrieved and subject to revision.</span><br /><br />
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <input id="DontShowAgain" type="checkbox" /> <span id="DontShowAgainMessage">&nbsp;&nbsp;Please do not show me this message again.</span>
+                        </div>
+                        <div class="col-3">
+                            <button id="ModalClose" type="button" onclick="AquaRio.modalCloseHandler()" class="btn btn-primary btn-sm float-end" data-bs-dismiss="modal"><span><i class="fa fa-times-circle"></i> Close</span></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 no-padding-mobile">
+                            <img src="/images/City_of_Austin_Watershed_Protection_logo.svg" />
+                        </div>
+                        <div class="col-4">
+                            <img src="/images/City_of_Austin_USGS_logo.svg" />
+                        </div>
+                        <div class="col-4">
+                            <img src="/images/LCRA-logo-black-tagline.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="loading">
+        <div id="loadingcontent">
+            <div id="loadingspinner">
+                <div class="progress w-25 m-auto d-none d-md-inline-block" style="height: 30px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated w-100" style="background-color: #004488;"><h5>Loading....</h5></div>
+                </div>
+
+                <div class="progress w-50 m-auto d-md-none d-inline-block" style="height: 30px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated w-100" style="background-color: #004488;"><h5>Loading....</h5></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <script>
+        var isAquaRio = false;
+        var mapConfigAgency = '';
+        var mapTileRoot = "https://hydromet.lcra.org/tiles/";
+        var soilMoistureUrl = "https://securegis.lcra.org/image/rest/services/Imagery/Soil_Moisture/ImageServer";
+        var droughtMonitorUrl = "https://services5.arcgis.com/0OTVzJS4K09zlixn/arcgis/rest/services/USDM_current/FeatureServer/0/";
+        var apiKey = "AAPK05ff756b8d014a77b52efd4318dcf05ed3kaWE_fduK04zHbtAYXgZ3gYYQW32iux_pHwDeh2rCB_MeJ5uFMBt4_Fub21q_s";
+        var useEsriApiKey = false;
+        var esriHillShadeEndpoint = "https://server.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer";
+        var esriImageryEndpoint = "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
+        var esriBaseMapEnpoint = "7dc6cea0b1764a1f9af2e679f642f0f5";
+        var basemapEnum = "ArcGIS:Topographic";
+
+        // if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        //     window.L_DISABLE_3D = true;
+        // }
+
+        var showDisclaimer = false;
+        if(showDisclaimer){
+            document.getElementById("disclaimer").style.display = "block";
+        }
+    </script>
+
+
+    <script src="/lib/leaflet/leaflet.min.js?v=XJrs_DDkVkUZ29zdzFOkGCJ9zHVo5hnpdi3c7HYJ7Uc"></script>
+    <script src="/lib/esri-leaflet/esri-leaflet.min.js?v=eHqfzLpksjGT7_sykMkeR7p7qeT-iSqG2HQMrPA0emE"></script>
+    <script src="/lib/esri-leaflet-vector/dist/esri-leaflet-vector.min.js?v=TAfHyGVSFMl9WVTqQeIOH9E5SqFI7ugkSs_wIwl1ihg"></script>
+    <script src="/lib/esri-leaflet-renderers/esri-leaflet-renderers.min.js?v=6qPKFnVQ06C2S3Bt0teR3wG-btiJykz23NTyUEY1Gfo"></script>
+
+        <script src="/js/leafletmap.min.js?v=nTNOxemuuuV1v-20n25SLkV7TCShyq3-HdiflQ7Dp6c"></script>
+
+
+    <div class="container-fluid body-content layout-footer">
+        <footer>
+            <p>Data is automatically displayed and subject to revision.  <br />&copy;  1996 - 2026 Lower Colorado River Authority.  All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

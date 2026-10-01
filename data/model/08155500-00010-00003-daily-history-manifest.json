@@ -1,0 +1,29 @@
+{
+  "station_id": "USGS-08155500",
+  "series": {
+    "parameter_code": "00010",
+    "statistic_id": "00003",
+    "label": "water-temperature-daily-mean"
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08155500&parameter_code=00010&statistic_id=00003&skipGeometry=true&limit=50000",
+    "retrieved_at": "2026-10-01T15:32:00.401647+00:00",
+    "status": 200,
+    "sha256": "24973b3a37c57fb9eeb8bd6a4f5d034dc1048777caeea2a23a9e71c6ef56176d",
+    "bytes": 4526384,
+    "feature_count": 8363,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08155500/20261001T153200401647Z-daily-00010-00003.json",
+    "capture_path": "data/captures/usgs-daily/08155500/20261001T153200401647Z-daily-00010-00003.json.gz"
+  },
+  "csv": "data/history/08155500-00010-water-temperature-daily-mean.csv",
+  "time_series_id": "b200c049305345bc9289bc1f349e0576",
+  "other_time_series_for_same_statistic": {},
+  "days": 8363,
+  "numeric_days": 8363,
+  "first_day": "2003-06-20",
+  "last_day": "2026-09-30",
+  "limits": [
+    "Daily statistics describe the station; missing days are absent, never zero."
+  ]
+}

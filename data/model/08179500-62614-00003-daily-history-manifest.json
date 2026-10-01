@@ -1,0 +1,29 @@
+{
+  "station_id": "USGS-08179500",
+  "series": {
+    "parameter_code": "62614",
+    "statistic_id": "00003",
+    "label": "lake-elevation-ngvd29-daily-mean"
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08179500&parameter_code=62614&statistic_id=00003&skipGeometry=true&limit=50000",
+    "retrieved_at": "2026-10-01T15:33:18.271591+00:00",
+    "status": 200,
+    "sha256": "ff46c5ab546dc078c8327623e13b6a35c8301f3d32942ab3f6e22a2076dccfa5",
+    "bytes": 5362321,
+    "feature_count": 9893,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08179500/20261001T153318271591Z-daily-62614-00003.json",
+    "capture_path": "data/captures/usgs-daily/08179500/20261001T153318271591Z-daily-62614-00003.json.gz"
+  },
+  "csv": "data/history/08179500-62614-lake-elevation-ngvd29-daily-mean.csv",
+  "time_series_id": "3a098c33a90e4ac5ace4540293981d3d",
+  "other_time_series_for_same_statistic": {},
+  "days": 9893,
+  "numeric_days": 9893,
+  "first_day": "1997-08-09",
+  "last_day": "2026-09-30",
+  "limits": [
+    "Daily statistics describe the station; missing days are absent, never zero."
+  ]
+}

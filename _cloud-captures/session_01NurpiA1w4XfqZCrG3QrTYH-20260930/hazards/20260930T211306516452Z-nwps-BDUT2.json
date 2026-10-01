@@ -1,0 +1,230 @@
+{
+  "lid": "BDUT2",
+  "usgsId": "",
+  "reachId": "5781477",
+  "name": "Onion Creek at Buda",
+  "description": "",
+  "rfc": {
+    "abbreviation": "WGRFC",
+    "name": "West Gulf River Forecast Center"
+  },
+  "wfo": {
+    "abbreviation": "EWX",
+    "name": "New Braunfels"
+  },
+  "state": {
+    "abbreviation": "TX",
+    "name": "Texas"
+  },
+  "county": "Hays",
+  "timeZone": "CST6CDT",
+  "latitude": 30.086666666667,
+  "longitude": -97.848611111111,
+  "pedts": {
+    "observed": "HGIRZ",
+    "forecast": "HGIFZ"
+  },
+  "status": {
+    "observed": {
+      "primary": 0.65,
+      "primaryUnit": "ft",
+      "secondary": -999,
+      "secondaryUnit": "kcfs",
+      "floodCategory": "no_flooding",
+      "validTime": "2026-09-30T20:00:00Z"
+    },
+    "forecast": {
+      "primary": -999,
+      "primaryUnit": "",
+      "secondary": -999,
+      "secondaryUnit": "",
+      "floodCategory": "fcst_not_current",
+      "validTime": "0001-01-01T00:00:00Z"
+    }
+  },
+  "flood": {
+    "stageUnits": "ft",
+    "flowUnits": "cfs",
+    "categories": {
+      "major": {
+        "stage": 35,
+        "flow": -9999
+      },
+      "moderate": {
+        "stage": 25,
+        "flow": -9999
+      },
+      "minor": {
+        "stage": 15,
+        "flow": 9988
+      },
+      "action": {
+        "stage": 8,
+        "flow": 1449
+      }
+    },
+    "lro": {
+      "minorCS": "0.0807",
+      "moderateCS": "< 0.05",
+      "majorCS": "< 0.05",
+      "producedTime": "2026-09-28T17:12:10Z",
+      "interval": "OND"
+    },
+    "crests": {
+      "historic": [
+        {
+          "occurredTime": "2015-10-30T16:00:00Z",
+          "stage": 23.39,
+          "flow": 30312,
+          "preliminary": "P",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2019-05-04T08:00:00Z",
+          "stage": 23.02,
+          "flow": 25583,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2019-05-09T02:00:00Z",
+          "stage": 16.7,
+          "flow": 13090,
+          "preliminary": "O",
+          "olddatum": false
+        }
+      ],
+      "recent": [
+        {
+          "occurredTime": "2019-05-09T02:00:00Z",
+          "stage": 16.7,
+          "flow": 13090,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2019-05-04T08:00:00Z",
+          "stage": 23.02,
+          "flow": 25583,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-10-30T16:00:00Z",
+          "stage": 23.39,
+          "flow": 30312,
+          "preliminary": "P",
+          "olddatum": false
+        }
+      ]
+    },
+    "lowWaters": {
+      "historic": []
+    },
+    "impacts": [
+      {
+        "stage": 35,
+        "statement": "Major flooding. Structures north of FM 967 near Onion Creek are cut off or flooded. Numerous structures between Onion Creek and west of Bluff Street become cut off or flooded. Onion Creek Village Apartments may be cut off and experience flooding."
+      },
+      {
+        "stage": 25,
+        "statement": "Moderate flooding. Intersection of Old Black Colony Road and Cole Springs Road is flooded. Water is approaching foundations of residential and business structures north of FM 967 on left and right banks"
+      },
+      {
+        "stage": 23,
+        "statement": "Many seocondary roads near and along Onion Creek are flooded. Many locations on Cole Springs Road are flooded"
+      },
+      {
+        "stage": 18,
+        "statement": "FM 967 is flooded. Travel east and west is impacted in this area near Onion Creek."
+      },
+      {
+        "stage": 15,
+        "statement": "Minor flooding. Flooding on Cole Springs Road in the lowest locations. Roadway is impassable in the lowest locations."
+      },
+      {
+        "stage": 14,
+        "statement": "Water begins to flow across Cole Springs Road in the lowest locations."
+      },
+      {
+        "stage": 13,
+        "statement": "Water begins to approach Cole Springs Road."
+      },
+      {
+        "stage": 8,
+        "statement": "Bankfull. Flooding along Onion Creek in the flood plain."
+      }
+    ]
+  },
+  "images": {
+    "probability": {
+      "weekint": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/BDUT2.SSTG.prob.weekint.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/BDUT2.QINE.prob.weekint.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/BDUT2.volume.prob.weekint.gif"
+      },
+      "entperiod": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/BDUT2.SSTG.exceed.90day.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/BDUT2.QINE.exceed.90day.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/BDUT2.volume.exceed.90day.gif"
+      },
+      "shortrange": "https://water.noaa.gov/resources/probabilistic/short_term/BDUT2.shortrange.hefs.png"
+    },
+    "hydrograph": {
+      "default": "https://water.noaa.gov/resources/hydrographs/bdut2_hg.png",
+      "floodcat": "https://water.noaa.gov/resources/hydrographs/bdut2_record.png"
+    },
+    "photos": []
+  },
+  "dataAttribution": [
+    {
+      "abbrev": "Lower Colorado River Authority",
+      "text": "LCRA - Lower Colorado River Authority",
+      "title": "Lower Colorado River Authority",
+      "url": "http://www.lcra.org"
+    }
+  ],
+  "impactsLowWaters": [],
+  "normalThreshold": {
+    "value": 0,
+    "units": "ft"
+  },
+  "hydronotes": [
+    {
+      "statement": "River forecasts for this location take into account past precipitation and the precipitation amounts expected approximately 24 hours into the future from the forecast issuance time.",
+      "effective": "0101",
+      "expiration": "1231"
+    }
+  ],
+  "datums": {
+    "vertical": {
+      "value": []
+    },
+    "horizontal": {
+      "value": []
+    },
+    "notes": {
+      "value": []
+    }
+  },
+  "inundation": {
+    "enabled": false,
+    "url": "",
+    "zeroDatum": null,
+    "downloads": null,
+    "siteSpecificInfo": "",
+    "dataAttribution": []
+  },
+  "upstreamLid": "DRWT2",
+  "downstreamLid": "ONIT2",
+  "inService": {
+    "enabled": true,
+    "message": ""
+  },
+  "lowThreshold": null,
+  "forecastReliability": "Forecasts are issued as needed during times of high water, but are not routinely available.",
+  "TruncateObs": "-1",
+  "TruncateFcst": "7",
+  "ObservedFloodCategory": "no_flooding",
+  "ForecastFloodCategory": "fcst_not_current"
+}

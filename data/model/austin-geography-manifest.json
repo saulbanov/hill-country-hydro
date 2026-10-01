@@ -1,0 +1,19 @@
+{
+  "raw_path": "data/raw/austin-osm/20260928T163548031322Z.json",
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:60];way[\"waterway\"~\"^(stream|river)$\"][\"name\"~\"^(Barton Creek|Bull Creek|Shoal Creek|Blunn Creek|Walnut Creek|Onion Creek|Williamson Creek)$\"](30.10,-97.98,30.48,-97.64);out geom;",
+  "retrieved_at": "2026-09-28T16:35:48.031322+00:00",
+  "sha256": "f63c8feb99646100d61a478996ed1bdcda91ef7f4131d855238bdcc64a72de5a",
+  "segment_count": 86,
+  "names": [
+    "Barton Creek",
+    "Blunn Creek",
+    "Bull Creek",
+    "Onion Creek",
+    "Shoal Creek",
+    "Walnut Creek",
+    "Williamson Creek"
+  ],
+  "license": "OpenStreetMap ODbL; https://www.openstreetmap.org/copyright",
+  "interpretation": "Separate OSM waterway ways; display only. No swimming access, reach connection, or condition claim."
+}
