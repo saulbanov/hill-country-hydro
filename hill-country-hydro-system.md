@@ -40,6 +40,9 @@ See `AGENTS.md`. The ones that matter most when adding a source: preserve the ra
 
 A claude.ai Routine fires at 6:57 AM Central into the cloud session that seeded this repo. It runs the README chain here, publishes the bundle, commits `Daily run <date>` and pushes, then runs the swim lens off the bundle. Sundays add the full history refresh and the event ledgers. The long-term home for the run is Saul's Mac; the cloud export of raw captures (`_cloud-captures/`) is the stopgap until then and grows roughly 25 MB a day.
 
+## Synchronizing with the Mac copy and the swim lens
+The order of operations (merge the swim repo on the Mac, clone this repo beside it, move the measurement raw archive here, rebuild, publish, verify the lens, then prune the swim repo and move the daily run home) is written once, in `saulbanov/austin-swim-map/HANDOFF_2026-10-01_local-integration.md` section 10. This repo's `tools/cloud_capture_restore.py` is still to be written; the restore rule is in that section.
+
 ## Open items
 
 - Public visibility: the collectors send Saul's contact email in their User-Agent header; swap for a project address before making the repository public.
