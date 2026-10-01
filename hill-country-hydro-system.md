@@ -41,7 +41,7 @@ See `AGENTS.md`. The ones that matter most when adding a source: preserve the ra
 A claude.ai Routine fires at 6:57 AM Central into the cloud session that seeded this repo. It runs the README chain here, publishes the bundle, commits `Daily run <date>` and pushes, then runs the swim lens off the bundle. Sundays add the full history refresh and the event ledgers. The long-term home for the run is Saul's Mac; the cloud export of raw captures (`_cloud-captures/`) is the stopgap until then and grows roughly 25 MB a day.
 
 ## Synchronizing with the Mac copy and the swim lens
-The order of operations (merge the swim repo on the Mac, clone this repo beside it, move the measurement raw archive here, rebuild, publish, verify the lens, then prune the swim repo and move the daily run home) is written once, in `saulbanov/austin-swim-map/HANDOFF_2026-10-01_local-integration.md` section 10. This repo's `tools/cloud_capture_restore.py` is still to be written; the restore rule is in that section.
+The order of operations (merge the swim repo on the Mac, clone this repo beside it, move the measurement raw archive here, rebuild, publish, verify the lens, then prune the swim repo and move the daily run home) is written once, in `saulbanov/austin-swim-map/HANDOFF_2026-10-01_local-integration.md` section 10. The same walkthrough is copied here as `HANDOFF_2026-10-01_split-and-sync.md`; `tools/cloud_capture_restore.py` exists and is tested.
 
 ## Open items
 
@@ -62,4 +62,4 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ### 2026-10-01 — seeded, pushed, documented
 - First commit `f3dfcd9` pushed to `saulbanov/hill-country-hydro` (private) after Saul created the empty repository; the session's GitHub integration cannot create repositories itself.
-- Added this system document and `IDEAS.md`; linked both from `README.md` and `AGENTS.md`. Tests: 23 pass.
+- Added this system document and `IDEAS.md`; linked both from `README.md` and `AGENTS.md`. Added `tools/cloud_capture_restore.py` (checksum-verified restore of `_cloud-captures/` into `data/raw/`, never overwriting a differing file) and the split-and-sync handoff. Tests: 24 pass.
