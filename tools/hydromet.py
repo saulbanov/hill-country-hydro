@@ -14,8 +14,9 @@ flood-warning network. One public feed carries every current reading; two histor
   Dates are inclusive calendar days in Central time; records come newest first with UTC timestamps. Both endpoints
   answer HTTP 400 "Start and End date must be within 180 days of each other" past the limit, so history is pulled in
   three fixed windows per calendar year (Jan 1-Apr 30, May 1-Aug 31, Sep 1-Dec 31) that never move, one gzip each.
-  Record starts seen 2026-10-02: LCRA creek and river sites 1995 (hourly before 2010, 15-minute since), Lake Austin
-  2005, COA sites November 2015.
+  Record starts seen 2026-10-02: LCRA creek and river sites 1993 at 15 minutes (the hourly series is patchy: whole windows
+  come back empty where the 15-minute series is complete, so an empty hourly window is asked again at 15 minutes), Lake
+  Austin 2005, COA sites November 2015.
 
   collect    all-sites feed + the six site lists -> data/raw/hydromet/current/ (verbatim, with .meta.json)
   history    windows per site/param -> data/captures/hydromet/<agency>/<site>-<param>-<yyyy>-<n>.json.gz + manifest.json
@@ -36,7 +37,7 @@ LISTS = {'lcra-flow': 'GetSitesBySensorType/flow', 'lcra-rain': 'GetSitesBySenso
          'lcra-wtemp': 'GetSitesBySensorType/wtemp', 'coa-flow': 'Coa/GetSitesBySensorType/flow', 'coa-rain': 'Coa/GetSitesBySensorType/rain'}
 HISTORY = {'LCRA': 'HistoricData/GetDataBySite/', 'COA': 'CoaHistoricalData/GetDataBySite/'}
 WINDOWS = ((1, 1, 4, 30), (5, 1, 8, 31), (9, 1, 12, 31))   # (start month, start day, end month, end day); each < 180 days
-DEFAULT_SINCE = {'LCRA': 1994, 'COA': 2014}                  # one year before the earliest record seen in probes
+DEFAULT_SINCE = {'LCRA': 1988, 'COA': 2014}                  # a few years before the earliest record seen in probes (LCRA 1993, COA Nov 2015)
 RECORD_WALKBACK_EMPTY_YEARS = 2                              # stop walking back after this many consecutive empty years once data has been seen
 # The sites pulled in full by `history` without --sites. Chosen 2026-10-02 for the Austin creeks the swim lens cites,
 # the Hill Country rivers, and the lake levels the region reads. Everything else is still captured daily by `collect`.
