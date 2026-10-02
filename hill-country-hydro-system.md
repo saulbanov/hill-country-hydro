@@ -69,6 +69,9 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Session log
 
+### 2026-10-02 — Mac capture reconciliation for the swim split
+- Restored the October 2 water and swim cloud exports into the ignored local `data/raw/` archive, then checked all five swim-side export folders against it. The restore reported zero bad or missing files; identical captures were skipped. The raw archive is now about 2.7 GB. This was an archive reconciliation, not another provider collection run. The swim repo's tracked duplicate exports and water-only histories were then eligible for its approved §7 prune.
+
 ### 2026-10-02 — LCRA Hydromet gauges
 Saul pointed out that the Hydromet network carries more Bull, Barton, Onion and Williamson creek gauges than USGS does. A local session had already found the all-sites feed; this one mapped the history endpoints from the site's own JavaScript (`HistoricData/GetDataBySite` for LCRA, `CoaHistoricalData/GetDataBySite` for the City; both refuse windows of 180 days or more; LCRA offers `/hourly`), probed the record starts (1995 for LCRA creek sites, 2005 for Lake Austin, November 2015 for the City), and wrote `tools/hydromet.py` with tests. Full history pulled for the priority sites in six parallel shards; sizes and refusals are in the manifests.
 
