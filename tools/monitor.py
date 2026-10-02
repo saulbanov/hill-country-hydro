@@ -99,9 +99,20 @@ def evaluate_rule(rule, reading, at):
     band=next((b for b in rule['bands'] if ('lt' not in b or value < b['lt']) and ('gte' not in b or value >= b['gte'])),None)
     return band, None if band else 'Reading falls outside the published rule bands'
 
+def readings():
+    """Write app/gauge-readings.json (newest value per station and parameter) from the parsed latest-by-station file.
+    This is the measurement half of the old assess step; it needs no places or rules and runs in the water repo daily."""
+    parsed=ROOT/'data/parsed/latest-by-station.json'
+    if not parsed.exists(): raise SystemExit('no data/parsed/latest-by-station.json; run signal_pipeline.py parse first')
+    out={}
+    for r in json.loads(parsed.read_text()):
+        out.setdefault(r['station_id'],[]).append({'parameter':r['parameter'],'unit':r['unit'],'observed_at':r['observed_at'],'value':r['value'],'qualifiers':json.loads(r['qualifiers']) if isinstance(r['qualifiers'],str) else r['qualifiers']})
+    APP.mkdir(exist_ok=True); (APP/'gauge-readings.json').write_text(json.dumps({'generated_at':now(),'readings':out},indent=2))
+    print(f'gauge-readings.json: {len(out)} stations, {sum(len(v) for v in out.values())} latest values')
+
 def assess(at=None):
     if not (ROOT/'data/holes.json').exists() or not (ROOT/'data/rules.json').exists():
-        raise SystemExit('assess is a lens-side step (places and rules); this repo publishes the water-state bundle instead: python3 tools/publish_bundle.py')
+        raise SystemExit('assess is a lens-side step (places and rules); this repo writes readings with: python3 tools/monitor.py readings, then publishes the bundle: python3 tools/publish_bundle.py')
     at=at or dt.datetime.now(dt.timezone.utc)
     parsed=ROOT/'data/parsed/latest-by-station.json'
     if parsed.exists():
@@ -144,8 +155,8 @@ def assess(at=None):
 if __name__=='__main__':
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest='cmd',required=True)
     c=sub.add_parser('collect'); c.add_argument('--stations',nargs='*',default=[]); c.add_argument('--inventory',action='store_true',help='every station in data/stations-regional.json plus the Austin ten')
-    sub.add_parser('normalize'); sub.add_parser('assess'); a=p.parse_args()
+    sub.add_parser('normalize'); sub.add_parser('readings'); sub.add_parser('assess'); a=p.parse_args()
     if a.cmd=='collect' and a.inventory:
         import sys as _s; _s.path.insert(0,str(ROOT/'tools')); from station_lists import all_stations; a.stations=all_stations()
     if a.cmd=='collect' and not a.stations: p.error('collect needs --stations or --inventory')
-    {'collect':lambda:collect(a.stations),'normalize':normalize,'assess':assess}[a.cmd]()
+    {'collect':lambda:collect(a.stations),'normalize':normalize,'readings':readings,'assess':assess}[a.cmd]()

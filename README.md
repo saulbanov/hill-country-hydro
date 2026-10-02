@@ -26,7 +26,7 @@ Plan, decisions and log: [`hill-country-hydro-system.md`](hill-country-hydro-sys
 
 ```sh
 python3 tools/monitor.py collect --inventory && python3 tools/monitor.py normalize
-python3 tools/signal_pipeline.py normalize && python3 tools/signal_pipeline.py parse
+python3 tools/signal_pipeline.py normalize && python3 tools/signal_pipeline.py parse && python3 tools/monitor.py readings   # readings = app/gauge-readings.json, the newest value per station the bundle carries
 python3 tools/groundwater.py collect && python3 tools/groundwater.py normalize && python3 tools/groundwater.py assess
 python3 tools/reservoirs.py collect && python3 tools/reservoirs.py normalize && python3 tools/reservoirs.py assess
 python3 tools/eaa.py conditions && python3 tools/eaa.py collect --pause-seconds 4 && python3 tools/eaa.py normalize && python3 tools/eaa.py assess   # conditions = the EAA summary table, springflow and index-well histories, and the stated reduction, daily

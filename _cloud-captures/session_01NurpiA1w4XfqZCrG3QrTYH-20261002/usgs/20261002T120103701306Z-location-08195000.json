@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "USGS-08195000",
+        "agency_code": "USGS",
+        "agency_name": "U.S. Geological Survey",
+        "monitoring_location_number": "08195000",
+        "monitoring_location_name": "Frio Rv at Concan, TX",
+        "district_code": "48",
+        "country_code": "US",
+        "country_name": "United States of America",
+        "state_code": "48",
+        "state_name": "Texas",
+        "county_code": "463",
+        "county_name": "Uvalde County",
+        "minor_civil_division_code": null,
+        "site_type_code": "ST",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "121101060205",
+        "basin_code": null,
+        "altitude": 1203.54,
+        "altitude_accuracy": 0.87,
+        "altitude_method_code": "X",
+        "altitude_method_name": "GNSS2 - Level 2 Quality Survey Grade Global Navigation Satellite System",
+        "vertical_datum": "NAVD88",
+        "vertical_datum_name": "North American Vertical Datum of 1988",
+        "horizontal_positional_accuracy_code": "F",
+        "horizontal_positional_accuracy": "Accurate to + or - 5 sec.",
+        "horizontal_position_method_code": "M",
+        "horizontal_position_method_name": "Interpolated from map",
+        "original_horizontal_datum": "NAD27",
+        "original_horizontal_datum_name": "North American Datum of 1927",
+        "drainage_area": 389.0,
+        "contributing_drainage_area": 389.0,
+        "time_zone_abbreviation": "CST",
+        "uses_daylight_savings": "Y",
+        "construction_date": null,
+        "aquifer_code": null,
+        "national_aquifer_code": null,
+        "aquifer_type_code": null,
+        "well_constructed_depth": null,
+        "hole_constructed_depth": null,
+        "depth_source_code": null,
+        "revision_note": "WSP 1512: 1926, 1931-32, 1934(M), 1935-36. WSP 1712: 1958. WSP 1923: 1954(M), 1957(M). WDR TX-83-3: Drainage area.",
+        "revision_created": "2017-11-13T06:00:00+00:00",
+        "revision_modified": null
+      },
+      "id": "USGS-08195000",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.7047756215394,
+          29.488564955177
+        ]
+      }
+    }
+  ],
+  "numberReturned": 1,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08195000&limit=1"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=jsonld&id=USGS-08195000&limit=1"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=html&id=USGS-08195000&limit=1"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=csv&id=USGS-08195000&limit=1"
+    },
+    {
+      "type": "application/geo+json",
+      "rel": "next",
+      "title": "Items (next)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&offset=1&id=USGS-08195000&limit=1"
+    },
+    {
+      "type": "application/json",
+      "title": "Monitoring locations",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations"
+    }
+  ],
+  "timeStamp": "2026-10-02T12:01:03.688850Z"
+}

@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "time_series_id": "7a57a166d2f34f39adec3639960a90fe",
+        "monitoring_location_id": "USGS-303223097450600",
+        "parameter_code": "62615",
+        "statistic_id": "00011",
+        "time": "2026-10-02T11:45:00+00:00",
+        "value": "827.31",
+        "unit_of_measure": "ft",
+        "approval_status": "Provisional",
+        "qualifier": null,
+        "last_modified": "2026-10-02T12:03:17.501967+00:00"
+      },
+      "id": "51ecd6b0-0e64-4244-9e37-8e8988405635",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75178333333334,
+          30.539833333333334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time_series_id": "fa8d08f87d8a4807a754a26eaa9ff03e",
+        "monitoring_location_id": "USGS-303223097450600",
+        "parameter_code": "00045",
+        "statistic_id": null,
+        "time": "2026-10-02T11:45:00+00:00",
+        "value": "0.00",
+        "unit_of_measure": "in",
+        "approval_status": "Provisional",
+        "qualifier": null,
+        "last_modified": "2026-10-02T12:04:15.505481+00:00"
+      },
+      "id": "8e98f72b-e1c0-436a-9e0b-f88a8b4b8931",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75178333333334,
+          30.539833333333334
+        ]
+      }
+    }
+  ],
+  "numberReturned": 2,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=json&monitoring_location_id=USGS-303223097450600&limit=100"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=jsonld&monitoring_location_id=USGS-303223097450600&limit=100"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=html&monitoring_location_id=USGS-303223097450600&limit=100"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=csv&monitoring_location_id=USGS-303223097450600&limit=100"
+    },
+    {
+      "type": "application/json",
+      "title": "Latest continuous",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous"
+    }
+  ],
+  "timeStamp": "2026-10-02T12:04:15.677723Z"
+}

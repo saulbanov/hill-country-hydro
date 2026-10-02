@@ -13,7 +13,7 @@
     "Daily means lag by a day; the gauge column fills in after the next weekly history refresh or a current-window collection.",
     "A wet hourly description (rain, showers, thunder) is counted separately from measured inches."
   ],
-  "generated_at": "2026-10-02T01:20:02.453482+00:00",
+  "generated_at": "2026-10-02T12:15:10.182189+00:00",
   "days": [
     {
       "date": "2026-09-20",
@@ -217,23 +217,23 @@
           "Showers And Thunderstorms"
         ]
       },
-      "observed": "measured rain at KATT (0.031 in over 1 h with values; 1 wet hourly descriptions)",
+      "observed": "measured rain at KATT (3.697 in over 36 h with values; 17 wet hourly descriptions), KAUS (1.803 in over 18 h with values; 123 wet hourly descriptions)",
       "station_days": [
         {
           "date": "2026-10-01",
           "station": "KATT",
-          "hours_reported": 13,
-          "hours_with_precip_value": 1,
-          "precip_in": 0.031,
-          "wet_descriptions": 1
+          "hours_reported": 62,
+          "hours_with_precip_value": 36,
+          "precip_in": 3.697,
+          "wet_descriptions": 17
         },
         {
           "date": "2026-10-01",
           "station": "KAUS",
-          "hours_reported": 89,
-          "hours_with_precip_value": 2,
-          "precip_in": 0.0,
-          "wet_descriptions": 11
+          "hours_reported": 316,
+          "hours_with_precip_value": 18,
+          "precip_in": 1.803,
+          "wet_descriptions": 123
         }
       ],
       "gauges": {},
@@ -249,10 +249,27 @@
           "Showers And Thunderstorms Likely"
         ]
       },
-      "observed": "no station observations captured for this day",
-      "station_days": [],
+      "observed": "measured rain at KATT (0.079 in over 4 h with values; 4 wet hourly descriptions), KAUS (0.106 in over 4 h with values; 24 wet hourly descriptions)",
+      "station_days": [
+        {
+          "date": "2026-10-02",
+          "station": "KATT",
+          "hours_reported": 12,
+          "hours_with_precip_value": 4,
+          "precip_in": 0.079,
+          "wet_descriptions": 4
+        },
+        {
+          "date": "2026-10-02",
+          "station": "KAUS",
+          "hours_reported": 90,
+          "hours_with_precip_value": 4,
+          "precip_in": 0.106,
+          "wet_descriptions": 24
+        }
+      ],
       "gauges": {},
-      "verdict": "no storm evidence in captured sources"
+      "verdict": "measured rain; no gauge reached its event threshold (yet)"
     },
     {
       "date": "2026-10-03",
@@ -317,6 +334,21 @@
       "date": "2026-10-07",
       "forecast": {
         "first_forecast_retrieved_at": "2026-10-01T11:59:35.941790+00:00",
+        "max_rain_chance_pct": 2,
+        "short_forecasts": [
+          "Sunny",
+          "Mostly Clear"
+        ]
+      },
+      "observed": "no station observations captured for this day",
+      "station_days": [],
+      "gauges": {},
+      "verdict": "no storm evidence in captured sources"
+    },
+    {
+      "date": "2026-10-08",
+      "forecast": {
+        "first_forecast_retrieved_at": "2026-10-02T12:01:57.615493+00:00",
         "max_rain_chance_pct": 2,
         "short_forecasts": [
           "Sunny",

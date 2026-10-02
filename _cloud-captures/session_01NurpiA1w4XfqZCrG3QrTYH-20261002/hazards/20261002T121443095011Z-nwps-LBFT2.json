@@ -1,0 +1,243 @@
+{
+  "lid": "LBFT2",
+  "usgsId": "08170890",
+  "reachId": "1628229",
+  "name": "Little Blanco River at FM32 near Fischer",
+  "description": "",
+  "rfc": {
+    "abbreviation": "WGRFC",
+    "name": "West Gulf River Forecast Center"
+  },
+  "wfo": {
+    "abbreviation": "EWX",
+    "name": "New Braunfels"
+  },
+  "state": {
+    "abbreviation": "TX",
+    "name": "Texas"
+  },
+  "county": "Blanco",
+  "timeZone": "CST6CDT",
+  "latitude": 30.020806,
+  "longitude": -98.330556,
+  "pedts": {
+    "observed": "HGIRG",
+    "forecast": "HGIFF"
+  },
+  "status": {
+    "observed": {
+      "primary": 2.7,
+      "primaryUnit": "ft",
+      "secondary": 0.0011,
+      "secondaryUnit": "kcfs",
+      "floodCategory": "no_flooding",
+      "validTime": "2026-10-02T12:00:00Z"
+    },
+    "forecast": {
+      "primary": -999,
+      "primaryUnit": "",
+      "secondary": -999,
+      "secondaryUnit": "",
+      "floodCategory": "fcst_not_current",
+      "validTime": "0001-01-01T00:00:00Z"
+    }
+  },
+  "flood": {
+    "stageUnits": "ft",
+    "flowUnits": "cfs",
+    "categories": {
+      "major": {
+        "stage": 25,
+        "flow": 40698
+      },
+      "moderate": {
+        "stage": 17,
+        "flow": 9462
+      },
+      "minor": {
+        "stage": 12,
+        "flow": 2534
+      },
+      "action": {
+        "stage": 8,
+        "flow": 547
+      }
+    },
+    "lro": {
+      "minorCS": "0.0544",
+      "moderateCS": "< 0.05",
+      "majorCS": "< 0.05",
+      "producedTime": "2026-09-28T17:12:10Z",
+      "interval": "OND"
+    },
+    "crests": {
+      "historic": [
+        {
+          "occurredTime": "2021-10-14T04:45:00Z",
+          "stage": 16.72,
+          "flow": 8762,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2019-05-08T19:15:00Z",
+          "stage": 16.61,
+          "flow": 8669,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2016-05-31T21:45:00Z",
+          "stage": 11.35,
+          "flow": -9999,
+          "preliminary": "O",
+          "olddatum": false
+        }
+      ],
+      "recent": [
+        {
+          "occurredTime": "2021-10-14T04:45:00Z",
+          "stage": 16.72,
+          "flow": 8762,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2019-05-08T19:15:00Z",
+          "stage": 16.61,
+          "flow": 8669,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2016-05-31T21:45:00Z",
+          "stage": 11.35,
+          "flow": -9999,
+          "preliminary": "O",
+          "olddatum": false
+        }
+      ]
+    },
+    "lowWaters": {
+      "historic": []
+    },
+    "impacts": [
+      {
+        "stage": 30,
+        "statement": "Water is to the top of the staff gauge located on the USGS gauge shelter. This level is also to floor of the equipment located in the shelter. "
+      },
+      {
+        "stage": 25,
+        "statement": "Water is in or surrounding many structures along the river and in the flood plain. "
+      },
+      {
+        "stage": 20,
+        "statement": "Water reaches the bottom of staff gauge located on the USGS gauge shelter."
+      },
+      {
+        "stage": 18,
+        "statement": "Water is flowing across FM 32 roadway."
+      },
+      {
+        "stage": 17,
+        "statement": "Secondary roadways could be cut off and lowest structures and those structures closest to the river may begin to experience flooding."
+      },
+      {
+        "stage": 16,
+        "statement": "Bottom of FM 32 bridge."
+      },
+      {
+        "stage": 12,
+        "statement": "Lowest bridges and roadways along the river will begin to flood."
+      },
+      {
+        "stage": 8,
+        "statement": "Overbank conditions may cut off livestock in low areas."
+      }
+    ]
+  },
+  "images": {
+    "probability": {
+      "weekint": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/LBFT2.SSTG.prob.weekint.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/LBFT2.QINE.prob.weekint.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/LBFT2.volume.prob.weekint.gif"
+      },
+      "entperiod": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/LBFT2.SSTG.exceed.90day.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/LBFT2.QINE.exceed.90day.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/LBFT2.volume.exceed.90day.gif"
+      },
+      "shortrange": "https://water.noaa.gov/resources/probabilistic/short_term/LBFT2.shortrange.hefs.png"
+    },
+    "hydrograph": {
+      "default": "https://water.noaa.gov/resources/hydrographs/lbft2_hg.png",
+      "floodcat": "https://water.noaa.gov/resources/hydrographs/lbft2_record.png"
+    },
+    "photos": []
+  },
+  "dataAttribution": [
+    {
+      "abbrev": "US Geological Survey",
+      "text": "USGS--Water Resources of the United States",
+      "title": "US Geological Survey",
+      "url": "https://waterdata.usgs.gov/nwis"
+    },
+    {
+      "abbrev": "USGS",
+      "text": "08170890",
+      "title": "Observations courtesy of U.S. Geological Survey",
+      "url": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08170890"
+    }
+  ],
+  "impactsLowWaters": [],
+  "normalThreshold": {
+    "value": 0,
+    "units": "ft"
+  },
+  "hydronotes": [
+    {
+      "statement": "River forecasts for this location take into account past precipitation and the precipitation amounts expected approximately 24 hours into the future from the forecast issuance time.",
+      "effective": "0101",
+      "expiration": "1231"
+    }
+  ],
+  "datums": {
+    "vertical": {
+      "value": [
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 1149.41
+        }
+      ]
+    },
+    "horizontal": {
+      "value": []
+    },
+    "notes": {
+      "value": []
+    }
+  },
+  "inundation": {
+    "enabled": false,
+    "url": "",
+    "zeroDatum": null,
+    "downloads": null,
+    "siteSpecificInfo": "",
+    "dataAttribution": []
+  },
+  "upstreamLid": "",
+  "downstreamLid": "WMBT2",
+  "inService": {
+    "enabled": true,
+    "message": ""
+  },
+  "lowThreshold": null,
+  "forecastReliability": "Forecasts are issued routinely year-round.",
+  "TruncateObs": "-1",
+  "TruncateFcst": "5",
+  "ObservedFloodCategory": "no_flooding",
+  "ForecastFloodCategory": "fcst_not_current"
+}
