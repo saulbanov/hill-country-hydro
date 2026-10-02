@@ -2,12 +2,12 @@
    Context only. Every card says what was measured, when, and how it compares with the same station's record. */
 const $=s=>document.querySelector(s); const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const LAKE_LL={austin:[30.325,-97.820],travis:[30.392,-97.906],buchanan:[30.790,-98.420],inks:[30.737,-98.370],'lyndon-b-johnson':[30.556,-98.370],'marble-falls':[30.567,-98.270],canyon:[29.873,-98.198],medina:[29.545,-98.930],georgetown:[30.670,-97.730],granger:[30.700,-97.330]};
-let bundle=null,map=null,layers={stations:[],wells:[],lakes:[],eaa:[]};
-const on={stations:true,wells:false,lakes:true,eaa:false};
+let bundle=null,map=null,layers={stations:[],wells:[],lakes:[],eaa:[],hydromet:[]};
+const on={stations:true,wells:false,lakes:true,eaa:false,hydromet:false};
 function fmt(s){ if(!s) return 'not recorded'; const d=new Date(s); return Number.isNaN(d.getTime())?String(s):d.toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+' CT'; }
 function chg(v,unit){ return v==null?'not enough record':`${v>0?'+':''}${v} ${unit}`; }
 function pin(kind,stale,label){ return L.divIcon({className:'',html:`<span class="pin ${kind}${stale?' stale':''}" title="${esc(label)}"></span>`,iconSize:[16,16],iconAnchor:[8,8]}); }
-function clear(){ Object.values(layers).flat().forEach(m=>m.remove()); layers={stations:[],wells:[],lakes:[],eaa:[]}; }
+function clear(){ Object.values(layers).flat().forEach(m=>m.remove()); layers={stations:[],wells:[],lakes:[],eaa:[],hydromet:[]}; }
 function render(){ if(!bundle||!map) return; clear();
   if(on.stations) for(const [id,s] of Object.entries(bundle.stations)){ if(s.lat==null) continue; const q=s.latest['00060']||s.latest['00065']||Object.values(s.latest)[0]; const stale=!q||!q.fresh_within_1h;
     const m=L.marker([s.lat,s.lon],{icon:pin('station',stale,s.name||id)}); m.bindTooltip(`${esc(s.name||id)}${q?` · ${esc(q.value)} ${esc(q.unit)}`:''}`); m.on('click',()=>showStation(id,s)); m.addTo(map); layers.stations.push(m); }
@@ -15,8 +15,17 @@ function render(){ if(!bundle||!map) return; clear();
   if(on.lakes) for(const [slug,l] of Object.entries(bundle.lakes)){ const ll=LAKE_LL[slug]; if(!ll||!l.latest) continue; const m=L.marker(ll,{icon:pin('lake',l.data_health!=='fresh',l.name)}); m.bindTooltip(`${esc(l.name)} · ${esc(l.latest.percent_full)}% full`); m.on('click',()=>showLake(slug,l)); m.addTo(map); layers.lakes.push(m); }
   if(on.eaa&&bundle.eaa){ for(const [id,w] of Object.entries(bundle.eaa.wells)){ if(w.latitude==null) continue; const m=L.marker([w.latitude,w.longitude],{icon:pin('eaa',w.data_health!=='fresh',w.siteName)}); m.bindTooltip(`EAA well ${esc(id)} · ${esc(w.siteName)}`); m.on('click',()=>showEaaWell(id,w)); m.addTo(map); layers.eaa.push(m); }
     for(const [id,g] of Object.entries(bundle.eaa.rain_gauges)){ if(g.latitude==null) continue; const m=L.marker([g.latitude,g.longitude],{icon:pin('eaa',g.data_health!=='fresh',g.siteName)}); m.bindTooltip(`Rain gauge ${esc(id)} · ${esc(g.siteName)}`); m.on('click',()=>showRain(id,g)); m.addTo(map); layers.eaa.push(m); } }
+  if(on.hydromet&&bundle.hydromet) for(const [key,s] of Object.entries(bundle.hydromet.sites)){ if(s.lat==null||s.agency==='USGS') continue; const q=s.flow_cfs!=null?`${s.flow_cfs} cfs`:s.stage_ft!=null?`stage ${s.stage_ft} ft`:s.head_ft!=null?`head ${s.head_ft} ft`:s.rain_in&&s.rain_in['1Day']!=null?`${s.rain_in['1Day']} in / 24 h`:null;
+    const m=L.marker([s.lat,s.lon],{icon:pin('hydromet',!s.fresh_within_1h,s.name)}); m.bindTooltip(`${esc(s.agency)} ${esc(s.site)} · ${esc(s.name)}${q?` · ${esc(q)}`:''}`); m.on('click',()=>showHydromet(key,s)); m.addTo(map); layers.hydromet.push(m); }
 }
 function card(html){ $('#detail').innerHTML=html; }
+function showHydromet(key,s){ const rows=[]; if(s.flow_cfs!=null) rows.push(`<div><b>Flow:</b> ${esc(s.flow_cfs)} cfs</div>`); if(s.stage_ft!=null) rows.push(`<div><b>Stage:</b> ${esc(s.stage_ft)} ft${s.flood_stage_ft!=null?` <span class="muted">(NWS flood stage ${esc(s.flood_stage_ft)} ft)</span>`:''}</div>`);
+  if(s.head_ft!=null) rows.push(`<div><b>Headwater:</b> ${esc(s.head_ft)} ft msl${s.tail_ft!=null?` · <b>tailwater:</b> ${esc(s.tail_ft)} ft`:''}</div>`); if(s.water_temp_f!=null) rows.push(`<div><b>Water temperature:</b> ${esc(s.water_temp_f)} °F</div>`);
+  const r=s.rain_in||{}; if(r['1Day']!=null||r['1Week']!=null) rows.push(`<div><b>Rain:</b> ${esc(r['1Hour']??'–')} in last hour · ${esc(r['1Day']??'–')} in / 24 h · ${esc(r['3Days']??'–')} in / 3 days · ${esc(r['1Week']??'–')} in / week · ${esc(r['30Days']??'–')} in / 30 days</div>`);
+  const hist=(s.history||[]).length?`<div><b>History on file:</b> ${esc(s.history.join(', '))} (see <code>data/captures/hydromet/</code>)</div>`:'<div class="muted">Live readings only; no history pulled for this site yet.</div>';
+  card(`<p class="eyebrow">${esc(s.agency==='COA'?'City of Austin flood-warning gauge':'LCRA Hydromet gauge')} · site ${esc(s.site)} · ${esc(s.site_type)}${s.creek?` · ${esc(s.creek)}`:''}</p><h2>${esc(s.name)}</h2><span class="badge">${s.fresh_within_1h?'fresh':'not within an hour of the bundle'}</span>
+  ${rows.join('')||'<div class="muted">No numeric reading in the latest capture.</div>'}<div class="muted">reported ${esc(fmt(s.observed_at))}</div>${hist}
+  <p class="muted">A reading at the gauge, as the operator publishes it. A City gauge's 0.00 cfs is the City's value, not a verdict on the creek downstream. Source: <a href="https://hydromet.lcra.org/" target="_blank" rel="noopener">hydromet.lcra.org</a>.</p>`); }
 function showStation(id,s){ const rows=Object.entries(s.latest).map(([p,v])=>`<div><b>${esc(v.unit==='ft^3/s'?'Flow':p==='00065'?'Gage height':p)}:</b> ${esc(v.value)} ${esc(v.unit)} · ${esc(fmt(v.observed_at))} ${v.fresh_within_1h?'':'<span class="muted">· not within an hour of the bundle</span>'}</div>`).join('')||'<div class="muted">No reading in the latest capture.</div>';
   const c=s.context; const ctx=c?`<p>${esc(c.narrative||'')}</p>`:'<p class="muted">No history-tier context for this station (current readings only).</p>';
   const th=s.thresholds?`<div><b>Station's own event thresholds:</b> high ${esc(s.thresholds.high)}, low ${esc(s.thresholds.low)} (${esc(s.thresholds.unit)}); descriptive, not a swim or flood line.</div>`:'';
@@ -45,6 +54,6 @@ const BASES={
 };
 function boot(){ map=L.map('map',{zoomControl:true}).setView([30.05,-98.6],8);
   const baseLayers=Object.fromEntries(Object.entries(BASES).map(([k,f])=>[k,f()])); baseLayers['USGS topo + hydro'].addTo(map); L.control.layers(baseLayers,null,{position:'topright',collapsed:true}).addTo(map);
-  for(const k of ['stations','wells','lakes','eaa']){ const el=$('#l-'+k); el.checked=on[k]; el.addEventListener('change',()=>{on[k]=el.checked; render();}); }
+  for(const k of ['stations','wells','lakes','eaa','hydromet']){ const el=$('#l-'+k); el.checked=on[k]; el.addEventListener('change',()=>{on[k]=el.checked; render();}); }
   fetch('../dist/water-state.json').then(r=>r.json()).then(b=>{ bundle=b; $('#bundle-meta').textContent=`Bundle ${b.schema_version} generated ${fmt(b.generated_at)} · ${b.counts.stations} stations, ${b.counts.wells} wells, ${b.counts.lakes} lakes · missing inputs: ${(b.missing_inputs||[]).join(', ')||'none'}`; render(); }).catch(e=>{ $('#bundle-meta').textContent='Could not load dist/water-state.json: '+e; }); }
 document.addEventListener('DOMContentLoaded',boot);

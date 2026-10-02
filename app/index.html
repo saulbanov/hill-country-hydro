@@ -18,7 +18,7 @@ main{display:grid;grid-template-columns:1fr;gap:0}@media(min-width:900px){main{g
 #detail{padding:16px;overflow:auto;border-left:1px solid var(--line);background:var(--card)}#detail h2{font-size:17px;margin:0 0 6px}
 .eyebrow{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:0 0 4px}.muted{color:var(--muted)}
 .fact{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0}.fact h3{font-size:13px;margin:0 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-.pin{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 2px #0005}.pin.station{background:var(--water)}.pin.well{background:var(--well)}.pin.lake{background:var(--lake);border-radius:3px}.pin.eaa{background:var(--rain)}.pin.stale{opacity:.45}
+.pin{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 2px #0005}.pin.station{background:var(--water)}.pin.well{background:var(--well)}.pin.lake{background:var(--lake);border-radius:3px}.pin.eaa{background:var(--rain)}.pin.hydromet{background:#7b4ea3;border-radius:2px;transform:rotate(45deg)}.pin.stale{opacity:.45}
 .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--line);margin-right:6px}
 a{color:var(--water)}footer{padding:10px 16px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
 </style>
@@ -32,6 +32,7 @@ a{color:var(--water)}footer{padding:10px 16px;font-size:12px;color:var(--muted);
     <label><input id="l-wells" type="checkbox"> <span class="pin well"></span> TWDB wells</label>
     <label><input id="l-lakes" type="checkbox" checked> <span class="pin lake"></span> Lakes</label>
     <label><input id="l-eaa" type="checkbox"> <span class="pin eaa"></span> EAA wells &amp; rain gauges</label>
+    <label><input id="l-hydromet" type="checkbox"> <span class="pin hydromet"></span> LCRA &amp; City of Austin gauges (Hydromet)</label>
   </div>
 </header>
 <main>

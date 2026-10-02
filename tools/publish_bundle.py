@@ -9,6 +9,7 @@ schema with one timestamp, so a lens never has to know which tool wrote what. Sh
   wells:    {state_well_number: app/groundwater.json record},
   lakes:    {slug: app/reservoirs.json record},
   eaa:      {wells: {...}, rain_gauges: {...}}  (absent when app/eaa.json is missing),
+  hydromet: {sites: {'AGENCY:site': app/hydromet.json record}, history_coverage, counts}  (LCRA Hydromet: LCRA, City of Austin and mirrored USGS gauges; absent when app/hydromet.json is missing),
   alerts:   app/hazards-status.json 'alerts' and 'gauges' (NWS notices and flood-stage categories),
   captures: path and sha256 of the day's capture manifest when present.
 Absent inputs are recorded under `missing_inputs`; they are never filled in.
@@ -44,15 +45,16 @@ def build(at=None):
     for sid, g in gauges.items():  # hand-placed gauges not in the inventory (e.g. the Austin ten before an inventory rebuild)
         if sid not in stations:
             stations[sid] = {'name': g['name'], 'lat': g['lat'], 'lon': g['lon'], 'county': g.get('county'), 'tier': g.get('tier', 'austin'), 'kind': 'stream', 'live_parameters': [], 'latest': {}, 'context': context.get('stations', {}).get(sid), 'thresholds': None, 'source': g.get('source')}
-    gw = load(APP / 'groundwater.json'); rv = load(APP / 'reservoirs.json'); ea = load(APP / 'eaa.json'); hz = load(APP / 'hazards-status.json')
-    for name, obj in (('groundwater.json', gw), ('reservoirs.json', rv), ('eaa.json', ea), ('hazards-status.json', hz), ('gauge-readings.json', readings or None), ('hydro-context.json', context or None)):
+    gw = load(APP / 'groundwater.json'); rv = load(APP / 'reservoirs.json'); ea = load(APP / 'eaa.json'); hz = load(APP / 'hazards-status.json'); hm = load(APP / 'hydromet.json')
+    for name, obj in (('groundwater.json', gw), ('reservoirs.json', rv), ('eaa.json', ea), ('hazards-status.json', hz), ('hydromet.json', hm), ('gauge-readings.json', readings or None), ('hydro-context.json', context or None)):
         if obj is None: missing.append(name)
     manifests = sorted(MODEL.glob('austin-current-usgs-capture-manifest*.json'))
     cap = {'path': str(manifests[-1].relative_to(ROOT)), 'sha256': hashlib.sha256(manifests[-1].read_bytes()).hexdigest()} if manifests else None
     bundle = {'schema_version': SCHEMA_VERSION, 'generated_at': at.isoformat(), 'source_repo': 'saulbanov/hill-country-hydro',
               'meaning': 'Measurements and deterministic station context for Central Texas water. A reading describes a station, a well or a lake. Nothing here is a verdict about a place, a person, or safety.',
-              'counts': {'stations': len(stations), 'stations_with_fresh_reading': sum(1 for s in stations.values() if any(v['fresh_within_1h'] for v in s['latest'].values())), 'wells': len((gw or {}).get('wells', {})), 'lakes': len((rv or {}).get('lakes', {})), 'eaa_wells': len((ea or {}).get('wells', {})), 'eaa_rain_gauges': len((ea or {}).get('rain_gauges', {}))},
+              'counts': {'stations': len(stations), 'stations_with_fresh_reading': sum(1 for s in stations.values() if any(v['fresh_within_1h'] for v in s['latest'].values())), 'wells': len((gw or {}).get('wells', {})), 'lakes': len((rv or {}).get('lakes', {})), 'eaa_wells': len((ea or {}).get('wells', {})), 'eaa_rain_gauges': len((ea or {}).get('rain_gauges', {})), 'hydromet_sites': len((hm or {}).get('sites', {}))},
               'stations': stations, 'wells': (gw or {}).get('wells', {}), 'wells_meta': {k: v for k, v in (gw or {}).items() if k != 'wells'}, 'lakes': (rv or {}).get('lakes', {}), 'eaa': ({'wells': ea.get('wells', {}), 'rain_gauges': ea.get('rain_gauges', {}), 'critical_period': ea.get('critical_period'), 'generated_at': ea.get('generated_at')} if ea else None),
+              'hydromet': ({'generated_at': hm.get('generated_at'), 'source': hm.get('source'), 'meaning': hm.get('meaning'), 'capture': hm.get('capture'), 'sites': hm.get('sites', {}), 'history_coverage': hm.get('history_coverage', {}), 'counts': hm.get('counts')} if hm else None),
               'alerts': ({'generated_at': hz.get('generated_at'), 'alerts': hz.get('alerts', []), 'gauges': hz.get('gauges', []), 'coverage': hz.get('coverage')} if hz else None), 'captures': cap, 'missing_inputs': missing}
     return bundle
 

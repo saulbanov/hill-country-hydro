@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-02 — additive: `hydromet` (LCRA Hydromet: LCRA and City of Austin gauges)
+- `hydromet.py` captures `hydromet.lcra.org/api/GetDataForAllSites` (407 sites: 275 LCRA river, rain, lake and dam gauges across the Colorado basin; 81 City of Austin flood-warning gauges; 51 mirrored USGS sites) and the six per-sensor site lists every day. History comes from two endpoints that refuse windows of 180 days or more, so it is pulled in three fixed windows per calendar year, one gzip each under `data/captures/hydromet/<agency>/`, with a manifest per site. LCRA sites reach back to 1995 (hourly), Lake Austin to 2005, City sites to November 2015 (15-minute). A priority list (`PRIORITY` in the tool) names the Austin creeks the swim lens cites, the Hill Country rivers and the lake levels; everything else is captured live only.
+- The bundle gains `hydromet{sites{'AGENCY:site': ...}, history_coverage, counts}` and `counts.hydromet_sites`. Each site record carries agency, name, type, coordinates, a creek tag, the latest stage, flow, dam head and tail, water temperature, the feed's rain accumulations, freshness, and which history params are on file. Schema stays 1; the field is additive. A City gauge's 0.00 flow is the reading the City publishes, not a verdict; a missing flow stays absent.
+
 ## 2026-10-01 (later still) — full records for every live TWDB well
 - `data/wells-regional.json` index rule changed to every well with a feed row at most 7 days old (90 wells, was 22). Full records fetched for the other 77; `data/captures/twdb-wells/` grows accordingly. Bundle shape unchanged; more wells gain a 13-month percentile.
 

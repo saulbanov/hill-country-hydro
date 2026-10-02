@@ -16,7 +16,8 @@ Plan, decisions and log: [`hill-country-hydro-system.md`](hill-country-hydro-sys
 ## How a day works
 1. **Collect** (raw first): `monitor.py collect --inventory` reads every live USGS location; `groundwater.py collect`
    one statewide TWDB well file; `reservoirs.py collect` ten lake CSVs; `eaa.py collect` the EAA pages and CSVs
-   at a gentle pace; `hazards.py assess` NWS alerts and flood-stage categories; `weather_validation.py collect` NWS observations.
+   at a gentle pace; `hydromet.py collect` the LCRA Hydromet all-sites feed (LCRA, City of Austin and mirrored USGS
+   gauges: creek stage and flow, rain accumulations, lake and dam levels) plus the window of 15-minute history holding today; `hazards.py assess` NWS alerts and flood-stage categories; `weather_validation.py collect` NWS observations.
 2. **Normalize**: typed rows into `data/normalized/water.sqlite`; daily histories into `data/history/*.csv`.
 3. **Context**: `hydro_context.py` (freshness, 6-hour trend, 48-hour peak, same-time-of-year percentile) and,
    weekly, `event_ledger.py` (hysteresis events and per-station thresholds) for the 68 history-tier stations.
@@ -29,6 +30,7 @@ python3 tools/signal_pipeline.py normalize && python3 tools/signal_pipeline.py p
 python3 tools/groundwater.py collect && python3 tools/groundwater.py normalize && python3 tools/groundwater.py assess
 python3 tools/reservoirs.py collect && python3 tools/reservoirs.py normalize && python3 tools/reservoirs.py assess
 python3 tools/eaa.py conditions && python3 tools/eaa.py collect --pause-seconds 4 && python3 tools/eaa.py normalize && python3 tools/eaa.py assess   # conditions = the EAA summary table, springflow and index-well histories, and the stated reduction, daily
+python3 tools/hydromet.py collect && python3 tools/hydromet.py history --recent-only && python3 tools/hydromet.py normalize && python3 tools/hydromet.py assess   # LCRA Hydromet; history windows < 180 days, three fixed per year
 python3 tools/hazards.py assess
 python3 tools/hydro_context.py
 python3 tools/weather_validation.py collect && python3 tools/weather_validation.py validate
@@ -37,15 +39,18 @@ python3 tools/publish_bundle.py
 python3 tools/usgs_history.py collect && python3 tools/usgs_history.py normalize
 python3 tools/usgs_series_history.py collect && python3 tools/usgs_series_history.py normalize
 python3 tools/event_ledger.py
+# Once (or when PRIORITY in hydromet.py grows): full Hydromet records back to 1995 (LCRA, hourly) and 2015 (City, 15-minute), in parallel shards over disjoint site lists
+python3 tools/hydromet.py history --agency LCRA --pause-seconds 0.5 && python3 tools/hydromet.py history --agency COA --pause-seconds 0.5
 python3 -m unittest discover -s tests
 ```
 
 ## Inventories (rebuilt only from saved captures)
 - `data/usgs-locations-regional.json` — every live USGS location, kinds and live parameters; `data/stations-regional.json` — discharge stations by tier; `data/usgs-history-plan.json` — non-flow daily series kept as history.
-- `data/wells-regional.json` — TWDB wells (22 marked index with full records); `data/eaa-sites.json` — EAA wells, streams, rain gauges.
+- `data/wells-regional.json` — TWDB wells (90 live wells with full records); `data/eaa-sites.json` — EAA wells, streams, rain gauges.
+- `data/raw/hydromet/lists/` — the Hydromet site lists per sensor type (LCRA flow, rain, lake level, water temperature; City flow, rain), captured daily; `data/captures/hydromet/<agency>/<site>-manifest.json` — which history windows are on file.
 - `python3 tools/regional_inventory.py` and `--all-locations` rebuild them from `data/raw/documentary/usgs-regional-inventory-*/`.
 
 ## Rules
 See `AGENTS.md`: raw before interpretation, missing is never zero, no color and no verdict here, ids frozen,
-official sources only, gentle with providers. Attribution: USGS, TWDB (Water Data for Texas), Edwards Aquifer
+official sources only, gentle with providers. Attribution: USGS, TWDB (Water Data for Texas), LCRA Hydromet (LCRA and City of Austin gauges), Edwards Aquifer
 Authority, National Weather Service, OpenStreetMap contributors (ODbL), City of Austin GIS.

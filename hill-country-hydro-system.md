@@ -31,6 +31,7 @@ forecast, no verdict about a place or a person. Lenses do that, and they say so.
 - TWDB: 127 wells in the box, one statewide daily feed; full records for every live well (90; J-17 from 1932; Lovelady with 15-minute data), fetched once and extended by the feed. By aquifer among the live wells: Trinity 55, Edwards (Balcones Fault Zone) 12, Carrizo-Wilcox 7, Edwards-Trinity Plateau 6, Ellenburger-San Saba 5, Hickory 2, Yegua-Jackson 2. Ten lakes with full records (Lake Austin from 1940).
 - EAA: 69 wells, 18 streams, 85 rain gauges listed; per-site CSVs are the full record; the server throttles bulk pulls (HTTP 500 and resets after a few dozen files on 2026-10-01), so coverage fills in slowly.
 - EAA conditions: the Aquifer Conditions page carries the Comal springflow daily record since 1927 and San Marcos since 1956 (not served live by USGS), the J-17 and J-27 daily highs, today's 15-minute readings, and a summary table with the 10-day averages the Critical Period rules use; captured daily. The stage trigger tables are images, captured and transcribed with checksums into `data/eaa-cpm-stages.json`. On 2026-10-01 the arithmetic (J-17 10-day 638.7 ft, Comal 145 cfs) and the EAA's own page agree on Stage 3, 35% reduction for the San Antonio Pool; Uvalde stable.
+- LCRA Hydromet (added 2026-10-02): 407 gauges in one feed, every reading captured daily. 81 City of Austin flood-warning sites (47 creek stage sites, 34 rain gauges) fill the gaps USGS leaves on Williamson (Emerald Forest, Silvermine, Kincheon Branch), Slaughter at Brodie, Walnut, Little Walnut, Shoal, Waller, Boggy, Fort Branch, Bouldin and Blunn; 275 LCRA sites add Bull Creek at Loop 360, Barton at SH 71 and Loop 360, Onion at Buda and US 183, Walnut at Webberville Road, the Pedernales, Llano, San Saba and Sandy Creek gauges, and lake and dam levels for Buchanan through Lady Bird Lake. Full history on file for the priority sites (LCRA hourly from 1995, City 15-minute from November 2015), extended by the daily run; the rest can be pulled the same way by adding a site to `PRIORITY`.
 - NWS: active alerts by county and flood-stage categories for 14 forecast gauges; hourly observations at Camp Mabry and Bergstrom for the rain validation.
 
 ## Standing rules
@@ -49,11 +50,13 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - Public visibility: the collectors send Saul's contact email in their User-Agent header; swap for a project address before making the repository public.
 - EAA throttling: find the rate the server tolerates, or ask data@edwardsaquifer.org for a bulk export.
 - Two incomplete USGS daily responses (a Lovelady well-depth mean and one lake elevation) to re-fetch.
-- LCRA Hydromet (City of Austin flood gauges, lake operations) has no data endpoint found; TWDB relays the lake levels.
+- LCRA Hydromet: the site lists name 81 LCRA flow, 246 LCRA rain and 19 lake-level sites, plus 42 City flow and 78 City rain sites; only the priority set has full history. Growing it is a matter of request budget (about one request per site per four months of record; the server answered roughly one request every four seconds on 2026-10-02).
 - Nothing live measures bacteria; the 8 water-temperature and 6 turbidity series are the closest water-quality signals.
 - A `CHANGELOG.md` schema bump process for the bundle once the first lens change needs one.
 
 ## Decision log
+
+- 2026-10-02 — Hydromet history is stored in fixed calendar windows (Jan-Apr, May-Aug, Sep-Dec) rather than rolling ones, so a window's file name never changes and a closed window is fetched once. The window holding today is refreshed every run. One manifest per site so shards over disjoint site lists can run in parallel without clobbering each other. LCRA history at hourly resolution by default (the server offers it; 15-minute is four times the bytes and available with `--fifteen-minute`); City history at its native 15 minutes because the City endpoint has no hourly form.
 
 - 2026-10-01 · Every live well keeps its full record · Saul asked whether all the relevant wells had been pulled into the layer. They had not: an aquifer-and-size rule had kept full records for 22 wells and left out the 31 Kerr, Kendall and Bandera Trinity wells that carry the Hill Country rivers' base flow. The rule is now "every well with a daily-feed row at most 7 days old" (90 wells); the remaining 77 records (1.6 GB raw, roughly 40 MB gzipped) were fetched the same day. J-17 stays what it is: the San Antonio Pool's regulatory index well, relevant to the Comal and San Marcos springs, not to Austin or the Hill Country rivers; Lovelady is the Austin well, and the Trinity wells are the rivers'.
 
@@ -65,6 +68,9 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - 2026-10-01 · Ideas file · Saul asked for the build ideas to live in a Markdown file cross-linked with this document: `IDEAS.md`.
 
 ## Session log
+
+### 2026-10-02 — LCRA Hydromet gauges
+Saul pointed out that the Hydromet network carries more Bull, Barton, Onion and Williamson creek gauges than USGS does. A local session had already found the all-sites feed; this one mapped the history endpoints from the site's own JavaScript (`HistoricData/GetDataBySite` for LCRA, `CoaHistoricalData/GetDataBySite` for the City; both refuse windows of 180 days or more; LCRA offers `/hourly`), probed the record starts (1995 for LCRA creek sites, 2005 for Lake Austin, November 2015 for the City), and wrote `tools/hydromet.py` with tests. Full history pulled for the priority sites in six parallel shards; sizes and refusals are in the manifests.
 
 ### 2026-10-01 — Mac archive restored and bundle rebuilt
 - Cloned beside `swimming-hole-alerts`. Copied existing USGS raw captures and checksum-restored four cloud capture folders (1,845 files; zero mismatches); the swim repo's duplicate folders matched byte-for-byte. Restored 99 TWDB well histories and ten reservoir histories from versioned gzips with manifest SHA-256 and byte-length checks. Raw archive is 2.5 GB; no collectors ran.

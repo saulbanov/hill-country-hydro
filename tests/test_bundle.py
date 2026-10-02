@@ -13,4 +13,8 @@ class BundleTests(unittest.TestCase):
         for sid, st in b['stations'].items():
             for p, v in st['latest'].items(): self.assertIn('observed_at', v); self.assertIn('fresh_within_1h', v)
         self.assertIsInstance(b['missing_inputs'], list)
+        if (ROOT / 'app/hydromet.json').exists():
+            h = b['hydromet']; self.assertIn('COA:950', h['sites']); self.assertEqual(h['sites']['COA:950']['creek'], 'williamson-creek'); self.assertIn('LCRA:3992', h['sites'])
+            for s in h['sites'].values(): self.assertNotIn('status', s); self.assertIn('fresh_within_1h', s)
+            self.assertEqual(b['counts']['hydromet_sites'], len(h['sites']))
 if __name__ == '__main__': unittest.main()

@@ -28,7 +28,7 @@ reading means for a person.
 
 ## Layout
 - `tools/` collectors (`monitor.py collect/normalize`, `usgs_history.py`, `usgs_series_history.py`,
-  `groundwater.py`, `reservoirs.py`, `eaa.py`, `hazards.py`, `weather_validation.py`), inventories
+  `groundwater.py`, `reservoirs.py`, `eaa.py`, `hydromet.py`, `hazards.py`, `weather_validation.py`), inventories
   (`regional_inventory.py`, `station_lists.py`), context (`hydro_context.py`, `event_ledger.py`,
   `reach_geometry.py`), export (`cloud_capture_export.py`, `austin_capture_manifest.py`), and the
   publisher (`publish_bundle.py` → `dist/water-state.json`).
@@ -38,5 +38,5 @@ reading means for a person.
 
 ## The bundle contract
 `dist/water-state.json` carries `schema_version`, `generated_at`, and per-id blocks for stations,
-wells, lakes, eaa sites and alerts. A lens may read it; it may not write back. Changes to the shape
+wells, lakes, eaa sites, hydromet sites and alerts. A lens may read it; it may not write back. Changes to the shape
 bump `schema_version` and are logged in `CHANGELOG.md`.
