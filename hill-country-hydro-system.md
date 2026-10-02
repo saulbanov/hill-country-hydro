@@ -66,6 +66,10 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Session log
 
+### 2026-10-01 — Mac archive restored and bundle rebuilt
+- Cloned beside `swimming-hole-alerts`. Copied existing USGS raw captures and checksum-restored four cloud capture folders (1,845 files; zero mismatches); the swim repo's duplicate folders matched byte-for-byte. Restored 99 TWDB well histories and ten reservoir histories from versioned gzips with manifest SHA-256 and byte-length checks. Raw archive is 2.5 GB; no collectors ran.
+- Rebuilt normalized observations, 68 flow histories, 126 non-flow histories, well and reservoir history, EAA context, station context and event ledgers, storm validation, and `dist/water-state.json`. Bundle reports 218 stations, 127 wells, ten lakes, 69 EAA wells, 85 EAA rain gauges, and no missing inputs. The two previously noted USGS non-flow responses remain skipped. At publication time all station readings were beyond the bundle's freshness window, so zero were labeled fresh. All 26 tests pass; local map cards opened for a USGS station, a TWDB well, and Lake Austin.
+
 ### 2026-10-01 — seeded, pushed, documented
 - First commit `f3dfcd9` pushed to `saulbanov/hill-country-hydro` (private) after Saul created the empty repository; the session's GitHub integration cannot create repositories itself.
 - Added this system document and `IDEAS.md`; linked both from `README.md` and `AGENTS.md`. Added `tools/cloud_capture_restore.py` (checksum-verified restore of `_cloud-captures/` into `data/raw/`, never overwriting a differing file) and the split-and-sync handoff. Tests: 24 pass.

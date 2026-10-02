@@ -13,7 +13,7 @@
     "Daily means lag by a day; the gauge column fills in after the next weekly history refresh or a current-window collection.",
     "A wet hourly description (rain, showers, thunder) is counted separately from measured inches."
   ],
-  "generated_at": "2026-10-01T11:59:37.921883+00:00",
+  "generated_at": "2026-10-02T01:20:02.453482+00:00",
   "days": [
     {
       "date": "2026-09-20",
@@ -131,7 +131,10 @@
           "wet_descriptions": 1
         }
       ],
-      "gauges": {},
+      "gauges": {
+        "stations_at_or_above_high_threshold": [],
+        "max_daily_mean_cfs": 17.7
+      },
       "verdict": "wet descriptions only; no measured rain and no gauge event"
     },
     {
@@ -163,7 +166,10 @@
           "wet_descriptions": 1
         }
       ],
-      "gauges": {},
+      "gauges": {
+        "stations_at_or_above_high_threshold": [],
+        "max_daily_mean_cfs": 18.2
+      },
       "verdict": "wet descriptions only; no measured rain and no gauge event"
     },
     {
@@ -195,7 +201,10 @@
           "wet_descriptions": 18
         }
       ],
-      "gauges": {},
+      "gauges": {
+        "stations_at_or_above_high_threshold": [],
+        "max_daily_mean_cfs": 19.5
+      },
       "verdict": "measured rain; no gauge reached its event threshold (yet)"
     },
     {

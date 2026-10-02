@@ -1031,46 +1031,7 @@
     },
     "events_ended_by_gap": 0
   },
-  "labels": [
-    {
-      "observation_id": "onion-playground-2025-04-27",
-      "verbatim": "Other spot was onion creek by onion creek playground 4/27/25",
-      "reported_quality": null,
-      "date_precision": "day",
-      "date": "2025-04-27",
-      "date_start": null,
-      "date_end": null,
-      "reach": null,
-      "reach_precision": null,
-      "links": [
-        {
-          "place_id": "onion-creek-greenbelt-playground",
-          "relationship_class": "context_station_upstream",
-          "confidence": "low"
-        }
-      ],
-      "scenarios": [
-        {
-          "scenario": "as recorded",
-          "start": "2025-04-27",
-          "end": "2025-04-27",
-          "station_record": {
-            "days_with_data": 1,
-            "first": "2025-04-27",
-            "last": "2025-04-27",
-            "min": 0.56,
-            "max": 0.56,
-            "mean": 0.56,
-            "seasonal_percentile_of_mean": 21.5,
-            "inside_event": false,
-            "overlapping_event_peaks": [],
-            "days_since_previous_event_end": 72,
-            "previous_event_peak_value": 151.0
-          }
-        }
-      ]
-    }
-  ],
+  "labels": [],
   "holdout_split": {
     "unit": "water_year (Oct 1\u2013Sep 30)",
     "fold": "water_year mod 5",
@@ -1083,7 +1044,7 @@
     "negative_labels": 0,
     "labels_with_resolved_reach": 0,
     "independent_dated_labels": 0,
-    "reason": "No threshold can be evaluated: 0 positive personal notes, 0 negative notes, 0 independent dated labels, and 1 note(s) with an unresolved reach; whole-event holdout evaluation needs both sides of the boundary and reach-resolved dates. No fitted threshold exists; any color comes only from a hand-authored provisional rule recorded in data/rules.json."
+    "reason": "No threshold can be evaluated: no labels attach to this station. No fitted threshold exists; any color comes only from a hand-authored provisional rule recorded in data/rules.json."
   },
   "limits": [
     "Daily means hide within-day peaks and the timing of a visit inside a day.",
