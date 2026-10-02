@@ -42,6 +42,8 @@ See `AGENTS.md`. The ones that matter most when adding a source: preserve the ra
 
 A claude.ai Routine fires at 6:57 AM Central into the cloud session that seeded this repo. It runs the README chain here, publishes the bundle, commits `Daily run <date>` and pushes, then runs the swim lens off the bundle. Sundays add the full history refresh and the event ledgers. The long-term home for the run is Saul's Mac; the cloud export of raw captures (`_cloud-captures/`) is the stopgap until then and grows roughly 25 MB a day.
 
+On 2026-10-02 Saul chose the Mac as the new daily-run home. The Mac runner and plist are prepared but the plist is not loaded. The handoff reports that the cloud routine is active; its current status has not been inspected in claude.ai. See `tools/README.md` for the guarded cutover.
+
 ## Synchronizing with the Mac copy and the swim lens
 The order of operations (merge the swim repo on the Mac, clone this repo beside it, move the measurement raw archive here, rebuild, publish, verify the lens, then prune the swim repo and move the daily run home) is written once, in `saulbanov/austin-swim-map/HANDOFF_2026-10-01_local-integration.md` section 10. The same walkthrough is copied here as `HANDOFF_2026-10-01_split-and-sync.md`; `tools/cloud_capture_restore.py` exists and is tested.
 
@@ -56,6 +58,8 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Decision log
 
+- 2026-10-02 · Move the daily run to the Mac · Saul chose the Mac launchd option from the split-and-sync handoff. The cutover is pending confirmed deactivation of the claude.ai routine described in the handoff; the Mac plist must remain unloaded until that is confirmed. The runner permits one provider attempt per Central-time day and uses offline fault tests. Saul's intended meaning of “multiple fault runs” remains under clarification.
+
 - 2026-10-02 — Hydromet history is stored in fixed calendar windows (Jan-Apr, May-Aug, Sep-Dec) rather than rolling ones, so a window's file name never changes and a closed window is fetched once. The window holding today is refreshed every run. One manifest per site so shards over disjoint site lists can run in parallel without clobbering each other. LCRA history at hourly resolution by default (the server offers it; 15-minute is four times the bytes and available with `--fifteen-minute`); City history at its native 15 minutes because the City endpoint has no hourly form.
 
 - 2026-10-01 · Every live well keeps its full record · Saul asked whether all the relevant wells had been pulled into the layer. They had not: an aquifer-and-size rule had kept full records for 22 wells and left out the 31 Kerr, Kendall and Bandera Trinity wells that carry the Hill Country rivers' base flow. The rule is now "every well with a daily-feed row at most 7 days old" (90 wells); the remaining 77 records (1.6 GB raw, roughly 40 MB gzipped) were fetched the same day. J-17 stays what it is: the San Antonio Pool's regulatory index well, relevant to the Comal and San Marcos springs, not to Austin or the Hill Country rivers; Lovelady is the Austin well, and the Trinity wells are the rivers'.
@@ -68,6 +72,9 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - 2026-10-01 · Ideas file · Saul asked for the build ideas to live in a Markdown file cross-linked with this document: `IDEAS.md`.
 
 ## Session log
+
+### 2026-10-02 — Mac daily runner prepared; cloud cutover pending
+- Added `tools/daily_mac_run.py` and an unloaded 6:57 AM Central launchd plist. The runner syncs clean branches, blocks a duplicate day from either existing `Daily run YYYYMMDD` commit or its own dated claim, runs the water chain before the swim lens, tests both, and pushes each repo only after its chain succeeds. The Mac keeps raw captures locally, so neither cloud export command appears in its plan. A failed water command, bundle validation, or push stops before the lens. Five offline tests passed, including seven injected fault points; the full water suite passed 37 tests. No provider collection or Mac scheduled run occurred in this session. The cloud routine's current status and deactivation still require confirmation before the plist can be loaded.
 
 ### 2026-10-02 — Mac capture reconciliation for the swim split
 - Restored the October 2 water and swim cloud exports into the ignored local `data/raw/` archive, then checked all five swim-side export folders against it. The restore reported zero bad or missing files; identical captures were skipped. The raw archive is now about 2.7 GB. This was an archive reconciliation, not another provider collection run. The swim repo's tracked duplicate exports and water-only histories were then eligible for its approved §7 prune.

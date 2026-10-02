@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>org.saulelbein.hill-country-hydro</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9</string>
+    <string>/Users/saulelbein/Documents/job-runtime/ops/launchd/launchd-run.py</string>
+    <string>--label</string>
+    <string>org.saulelbein.hill-country-hydro</string>
+    <string>--cwd</string>
+    <string>/Users/saulelbein/Documents/Codex/hill-country-hydro</string>
+    <string>--lock</string>
+    <string>--</string>
+    <string>/opt/homebrew/bin/python3</string>
+    <string>/Users/saulelbein/Documents/Codex/hill-country-hydro/tools/daily_mac_run.py</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/saulelbein/Documents/Codex/hill-country-hydro</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/saulelbein/Library/Logs/org.saulelbein.hill-country-hydro.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/saulelbein/Library/Logs/org.saulelbein.hill-country-hydro.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>6</integer>
+    <key>Minute</key>
+    <integer>57</integer>
+  </dict>
+</dict>
+</plist>
