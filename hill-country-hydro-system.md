@@ -80,6 +80,12 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Session log
 
+### 2026-10-03 — publish the water map
+- Saul requested a shareable site. Published the existing map, schema-1 bundle and two storm evidence files at https://hill-country-hydro.saul-elbein.chatgpt.site with public link access. No collector code, raw archive or source-repository history is in the hosted artifact.
+- Sites identity: `appgprj_6ac12765acb88191a74ce6c2570385f5`; version 1; source commit `47ecd4214c458afcca229923756367d7bb52f1d4`; successful deployment `appgdep_6ac127b032a88191a8bb6d61c10cf2ea`. The publishing checkout is `../hill-country-hydro-site/`; its `.openai/hosting.json` is the persistent Site identity and uses static directory `out`.
+- For updates, use that existing Site and the Sites hosting workflow. Copy `app/index.html` and `app/map.js` to `out/`, the bundle to `out/dist/water-state.json`, and storm evidence to `out/data/model/storms/`. Source remains this repository. The deployed files total 5,602,844 bytes. All 70 water tests passed before the source push; native deployment status confirmed success.
+- This is a saved snapshot with manual publishing. No schedule or daily routine was changed. The site deployment is authorized by this request; the collector's standing no-deployment rule still applies to automated collection runs.
+
 ### 2026-10-03 — existing build reverified after the Mac daily capture
 - The six storm build commits were already present on origin/main at startup. Verified all 68 annual-peak captures (HTTP 200; checksums match; 64 numeric station records), all 123 box-selected daily-rain series and all 123 September 30–October 3 native rain requests. No provider requests were repeated.
 - Confirmed 15-minute USGS intervals on each date September 29–October 2. Replayed detection and recomputed October and July from the current SQLite store; the original authored storm files remain unchanged. July detection was replayed in scratch because the finer continuous record yields additional candidates already queued for review.

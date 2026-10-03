@@ -1,5 +1,7 @@
 # hill-country-hydro — the Central Texas Water Ledger
 
+Published map: [Central Texas Water Ledger](https://hill-country-hydro.saul-elbein.chatgpt.site). The hosted map is a saved snapshot; publishing updates is separate from the daily collection run.
+
 **What this is.** A dated, sourced record of what Central Texas's official water gauges say: 215 USGS
 locations (streams, springs, wells, lakes) from Junction to Bastrop and Uvalde to Georgetown, 127 state
 wells, ten lakes, and the Edwards Aquifer Authority's wells, rain gauges and streams, plus NWS notices.
