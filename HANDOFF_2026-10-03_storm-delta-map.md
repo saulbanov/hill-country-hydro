@@ -208,3 +208,23 @@ archive, Hydromet history), which the tool must fetch for the window on request 
 
 The prompt in the chat where this handoff was written is the canonical one; a copy is kept here so the handoff
 is self-contained. It assumes the session starts cold.
+
+```
+Build the storm-delta map for hill-country-hydro, following HANDOFF_2026-10-03_storm-delta-map.md in that repo. Saul authorizes commits and pushes to main for this build (2026-10-03), in small commits, each only after the full test suite passes.
+
+Setup first. If /home/user/hill-country-hydro (cloud) or the hill-country-hydro folder beside swimming-hole-alerts (Mac) is missing, clone https://github.com/saulbanov/hill-country-hydro. Then: git checkout main; git pull --rebase origin main. Read, in order: AGENTS.md, HANDOFF_2026-10-03_storm-delta-map.md, hill-country-hydro-system.md (the layer table and the standing rules), tools/hydro_context.py and tools/event_ledger.py (the derived-context pattern to copy), tools/hydromet.py and tools/usgs_series_history.py (the capture, manifest and versioning conventions), app/map.js (the layer and card pattern). Python 3 standard library only; no new dependencies.
+
+Data. On the Mac the raw archive is local and data/normalized/water.sqlite is current. In the cloud, data/raw is absent: run python3 tools/cloud_capture_restore.py for the _cloud-captures folders dated 2026-10-01, 2026-10-02 and 2026-10-03, then the normalize steps from the README chain, before computing anything. Confirm the sqlite observations table holds 15-minute USGS readings from 2026-09-29 through 2026-10-02 before you start; if it does not, say so and stop.
+
+Build, in this order, committing after each numbered step:
+1. tools/usgs_peaks.py (handoff §3): collect, normalize, tests. Try the NWIS peak endpoint; if it is retired, keep the raw refusal and implement the OGC continuous-window fallback. Run collect for the 68 history-tier stations with a one-second pause.
+2. Hill Country rainDaily sites added to PRIORITY['LCRA'] in tools/hydromet.py by the box rule in §3, pulled in full with pause 0.5; then the 15-minute rain window for 2026-09-30 to 2026-10-03 for those sites.
+3. tools/storm_delta.py with detect and compute (§2, §3, §8): the window rule, per-site before/peak/now, ratio, response class with its thresholds written beside it, daily-mean rank, annual rank, instantaneous peak rank where usgs_peaks has one, NWS flood category where app/hazards-status.json has thresholds, rate of rise, springs, wells, lakes with the Llano inflow volume, caveats. Fixture tests per §3. Run detect; it must find the Oct 1–2, 2026 window from the record alone and write data/model/storms/<date>.json with the readings that triggered it. Run compute for that window and also for the July 2026 window (detect --since 2026-07-01). Reproduce the §0 and §8 numbers and report any that differ with the reading that differs.
+4. publish_bundle.py: additive storm_delta block, schema stays 1; CHANGELOG entry; system document layer table and open items; README chain lines from §6. The swim lens's tests (../austin-swim-map or the folder beside) must still pass with the new block present.
+5. app/map.js and app/index.html: the storm layer per §4, off by default, no red, green or yellow in it, cards worded per §4 with every number timed, the standing line under the panel paragraph. Open the page locally to confirm it draws; hollow symbols for missing totals.
+6. The hypotheses box per §5, reading data/model/storms/<date>.json; write the four Oct 1–2 hypotheses into that file with check_by dates and status open, initials "cloud/Mac session", and leave the July 2026 file's hypotheses empty for Saul.
+
+Rules that override anything else: raw before interpretation, with a .meta.json beside every fetched body; missing is never zero; never invent an id, a date or a threshold; every network call keeps its pause and records a refusal instead of retrying in a loop; no color or word that reads as a verdict about a place, no forecast; do not change rules, thresholds, place records, inventories or existing tests; do not touch the daily routine prompt; no PR and no scheduled check-ins. If a step cannot be finished, finish the others, say exactly what is missing and why, and leave the checklist in §9 marked honestly.
+
+Finish with a message of at most fifteen lines: what was built, the Oct 1–2 and July 2026 numbers the tool reproduced and any that differ, the peak-flow endpoint's status, sizes added to the repo, test counts, and the commits pushed.
+```
