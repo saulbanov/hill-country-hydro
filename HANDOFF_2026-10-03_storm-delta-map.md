@@ -80,6 +80,25 @@ the JSON next to the class so the reader can disagree.
 `rank` uses the daily-mean record and says so: an instantaneous peak compared with daily means is a conservative
 comparison and the card must say "against daily means".
 
+Two scrapes are part of this build, not follow-ups (added 2026-10-03 after Saul's "add that to build"):
+
+- **`tools/usgs_peaks.py`** — the USGS peak-flow file: one row per station per water year, the instantaneous
+  annual peak with its date and gage height. Endpoint to try first:
+  `https://nwis.waterdata.usgs.gov/nwis/peak?site_no=<station>&agency_cd=USGS&format=rdb` (tab-separated, `#`
+  comment lines). USGS has been retiring legacy NWIS services; if this one answers with a retirement notice or
+  a redirect, record that response raw and fall back to ranking against the 15-minute `continuous` collection
+  of the OGC API fetched for the storm window only. Raw under `data/raw/usgs-peaks/`, one versioned gzip per
+  station under `data/captures/usgs-peaks/` with a manifest, normalized to `data/history/<station>-peaks.csv`
+  and a sqlite table `usgs_peaks(station, date, peak_cfs, gage_height_ft, qualifiers)`. Run it for the 68
+  history-tier stations; Sundays in the routine. `compute` then writes `peak_rank: {rank, years, record_peak_cfs,
+  record_date}` beside `annual_rank`, and the card prefers the instantaneous rank when it exists.
+- **Hill Country rain history** through `hydromet.py`: add a `rainDaily` entry to `PRIORITY['LCRA']` for every
+  LCRA rain site inside the Hill Country box (lat 29.9–30.9, lon −100.2 to −97.9 in the all-sites feed; about a
+  hundred sites; a daily-rain window is under 1 KB gzipped) and pull it once in full. For intensity, `compute`
+  fetches the 15-minute `rain` window that brackets a detected storm for the same sites, on demand, and keeps it
+  under the same manifest; it never pulls 15-minute rain for all years. `rain_rank: {inches_window, days_on_record,
+  rank_among_daily_totals}` joins the rain record on the card.
+
 Tests (`tests/test_storm_delta.py`): a fixture window with three synthetic stations (flash, sustained, no
 response) and one well pair; the window rule on a fixture feed; a station with no history gets `rank: null`, not
 a number; `missing is never zero` (a station with no reading before t0 gets `start: null` and no ratio).
@@ -133,7 +152,7 @@ from the record. That is the crowd-sourceable list Saul asked for on 2026-10-01,
 
 ## 6. Wire it into the day
 
-- README chain: after `hydro_context.py`, add `python3 tools/storm_delta.py detect && python3 tools/storm_delta.py compute --all-open`.
+- README chain: after `hydro_context.py`, add `python3 tools/storm_delta.py detect && python3 tools/storm_delta.py compute --all-open`. Sundays add `python3 tools/usgs_peaks.py collect && python3 tools/usgs_peaks.py normalize`; the Hill Country `rainDaily` sites ride the existing `hydromet.py history --recent-only` line once they are in `PRIORITY`.
 - Routine (PART A): the same two commands; PART C gets one line: "storm window open since <t0>" or nothing.
 - `publish_bundle.py`: additive `storm_delta` block; `CHANGELOG.md` entry; `hill-country-hydro-system.md` layer
   table gains the tool under L2.
@@ -165,7 +184,7 @@ Four measures do, and three are already on file:
 3. **Rate of rise** (on file for every 15-minute station from the day the daily captures began; for July 2026
    only the daily means are on file, which flatten a wall of water). Max stage change per 15 minutes and per
    hour inside the window, with its time. The Hydromet LCRA sites give this back to 1991 for the priority set.
-4. **Instantaneous peaks for past floods** (not yet scraped). The USGS peak-flow file (annual instantaneous
+4. **Instantaneous peaks for past floods** (a build step in §3 since 2026-10-03). The USGS peak-flow file (annual instantaneous
    peaks per station, `nwis.waterdata.usgs.gov/nwis/peak`) is the missing scrape that lets a July-2026 peak be
    ranked against instantaneous peaks rather than daily means; it is small (one row per station per year) and
    belongs in `usgs_series_history.py`. Rain intensity (inches per hour) wants the LCRA 15-minute rain history,
@@ -184,3 +203,8 @@ archive, Hydromet history), which the tool must fetch for the window on request 
 - [ ] The card text never says "safe", "dangerous", "flood" as a verdict, or "will".
 - [ ] Bundle still schema 1; the swim lens's tests still pass with the new block present.
 - [ ] Hypotheses box shows the four above with their readings and `check_by` dates.
+
+## 10. Prompt to start the build (copy-paste into a Claude Code session, Mac or cloud)
+
+The prompt in the chat where this handoff was written is the canonical one; a copy is kept here so the handoff
+is self-contained. It assumes the session starts cold.
