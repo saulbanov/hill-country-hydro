@@ -42,16 +42,48 @@ python3 tools/eaa.py conditions && python3 tools/eaa.py details --pause-seconds 
 python3 tools/hydromet.py collect && python3 tools/hydromet.py history --recent-only && python3 tools/hydromet.py normalize && python3 tools/hydromet.py assess   # LCRA Hydromet; history windows < 180 days, three fixed per year
 python3 tools/hazards.py assess
 python3 tools/hydro_context.py
+python3 tools/storm_delta.py detect && python3 tools/storm_delta.py compute --all-open
 python3 tools/weather_validation.py collect && python3 tools/weather_validation.py validate
 python3 tools/publish_bundle.py
 # Sundays: full history refresh
 python3 tools/usgs_history.py collect && python3 tools/usgs_history.py normalize
 python3 tools/usgs_series_history.py collect && python3 tools/usgs_series_history.py normalize
 python3 tools/event_ledger.py
+python3 tools/usgs_peaks.py collect && python3 tools/usgs_peaks.py normalize
 # Once (or when PRIORITY in hydromet.py grows): full Hydromet records back to 1995 (LCRA, hourly) and 2015 (City, 15-minute), in parallel shards over disjoint site lists
 python3 tools/hydromet.py history --agency LCRA --pause-seconds 0.5 && python3 tools/hydromet.py history --agency COA --pause-seconds 0.5
 python3 -m unittest discover -s tests
 ```
+
+## Storm windows
+
+`storm_delta.py detect` records the readings that chose each window under `data/model/storms/`.
+Detection preserves an existing file. `compute --storm <date>` rebuilds that window's measurements;
+`compute --all-open` updates windows still open in the derived output. Computation is offline.
+The map's **Storm changes** checkbox is off by default. The optional `storm_delta` bundle block
+keeps schema 1; each reading carries its time, sampling basis and source.
+
+Bounded acquisition precedes computation. For the October case:
+
+```sh
+python3 tools/hydromet.py rain-window --start 2026-09-30 --end 2026-10-03 --pause-seconds 0.5
+python3 tools/hydromet.py normalize
+python3 tools/storm_delta.py compute --storm 2026-09-30
+```
+
+A saved successful rain window is reused; `--refresh` explicitly requests a newer body.
+The dates are inclusive Central-time calendar days. Future portions of a requested interval
+have no readings. Daily rain history covers LCRA sites reporting rain inside 29.9–30.9 latitude,
+−100.2 to −97.9 longitude, including river and lake sites with rain sensors. Those sites join
+`PRIORITY` from the saved all-sites feed and ride `history --recent-only`.
+
+For an older detected window, `usgs_peaks.py collect-window --start <UTC> --end <UTC>`
+fetches flow; add `--parameter 00065` for stage. Both require explicit increasing UTC timestamps
+at most ten days apart, pause one second, and retain refusals. Run `usgs_peaks.py normalize`
+before computing. Continuous-window observations are never represented as an annual peak file.
+See [the comparison report](data/model/storm-delta-validation.json) for the handoff's worked examples;
+regenerate it after both computations with `python3 tools/storm_validation.py`.
+These README commands do not alter the installed daily runner or its prompt.
 
 ## Inventories (rebuilt only from saved captures)
 - `data/usgs-locations-regional.json` — every live USGS location, kinds and live parameters; `data/stations-regional.json` — discharge stations by tier; `data/usgs-history-plan.json` — non-flow daily series kept as history.

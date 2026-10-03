@@ -56,6 +56,8 @@ def build(at=None):
               'stations': stations, 'wells': (gw or {}).get('wells', {}), 'wells_meta': {k: v for k, v in (gw or {}).items() if k != 'wells'}, 'lakes': (rv or {}).get('lakes', {}), 'eaa': ({'wells': ea.get('wells', {}), 'rain_gauges': ea.get('rain_gauges', {}), 'critical_period': ea.get('critical_period'), 'generated_at': ea.get('generated_at')} if ea else None),
               'hydromet': ({'generated_at': hm.get('generated_at'), 'source': hm.get('source'), 'meaning': hm.get('meaning'), 'capture': hm.get('capture'), 'sites': hm.get('sites', {}), 'history_coverage': hm.get('history_coverage', {}), 'counts': hm.get('counts')} if hm else None),
               'alerts': ({'generated_at': hz.get('generated_at'), 'alerts': hz.get('alerts', []), 'gauges': hz.get('gauges', []), 'coverage': hz.get('coverage')} if hz else None), 'captures': cap, 'missing_inputs': missing}
+    storm = load(APP / 'storm-delta.json')
+    if storm is not None: bundle['storm_delta'] = storm
     return bundle
 
 def main():

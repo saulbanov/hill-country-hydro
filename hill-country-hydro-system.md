@@ -19,9 +19,9 @@ forecast, no verdict about a place or a person. Lenses do that, and they say so.
 | Layer | Here | Files |
 |---|---|---|
 | L0 sources | USGS OGC API; TWDB Water Data for Texas (wells, reservoirs); Edwards Aquifer Authority pages and CSVs; NWS alerts and observations; City of Austin GIS creek and park lines; OpenStreetMap waterways | `data/raw/documentary/`, `app/*.geojson` |
-| L1 acquisition | `tools/monitor.py collect`, `usgs_history.py`, `usgs_series_history.py`, `groundwater.py`, `reservoirs.py`, `eaa.py`, `hazards.py collect`, `weather_validation.py collect`, `cloud_capture_export.py` | `data/raw/` (ignored), `data/captures/` (versioned gzips), `_cloud-captures/` |
+| L1 acquisition | `tools/monitor.py collect`, `usgs_history.py`, `usgs_series_history.py`, `usgs_peaks.py`, `hydromet.py`, `groundwater.py`, `reservoirs.py`, `eaa.py`, `hazards.py collect`, `weather_validation.py collect`, `cloud_capture_export.py` | `data/raw/` (ignored), `data/captures/` (versioned gzips), `_cloud-captures/` |
 | L2 store and inventories | `water.sqlite` tables; `data/history/*.csv`; `regional_inventory.py` → `data/usgs-locations-regional.json`, `data/stations-regional.json`, `data/usgs-history-plan.json`, `data/wells-regional.json`; `data/eaa-sites.json`; `station_lists.py` | `data/` |
-| L2 deterministic context | `hydro_context.py`, `event_ledger.py`, `reach_geometry.py`, `weather_validation.py validate` | `app/hydro-context.json`, `data/model/*-event-ledger.json`, `data/model/austin-reach-geometry.json`, `data/model/storm-week-validation.json` |
+| L2 deterministic context | `hydro_context.py`, `event_ledger.py`, `storm_delta.py`, `reach_geometry.py`, `weather_validation.py validate` | `app/hydro-context.json`, `data/model/*-event-ledger.json`, `data/model/austin-reach-geometry.json`, `data/model/storm-week-validation.json`, `data/model/storms/*.json`, `app/storm-delta.json` |
 | L3 products | `publish_bundle.py` → `dist/water-state.json`; the map page `app/index.html` + `app/map.js`; the ideas in `IDEAS.md` | `dist/`, `app/` |
 
 ## What the record holds (2026-10-01)
@@ -49,7 +49,10 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 - Observe the first scheduled Mac run and check both `Daily run YYYYMMDD` commits. At 2026-10-02 21:50 Central the water checkout contained concurrent uncommitted Hydromet history work. If it remains dirty at 6:57, the runner's clean-branch guard will fail before any provider request; finish or move that work through its own session, then assess the next day's run without a same-day retry.
 
-- Storm-delta map: a before/after layer for each storm window (rain per gauge, creek and river peak ratio and rank, springs, wells, lakes), specified in `HANDOFF_2026-10-03_storm-delta-map.md`; needs `tools/storm_delta.py`, tests, a map layer and an additive bundle block.
+- Storm-delta coverage: the restored USGS record ends October 2 at 12:10 UTC; no October 3 cloud export was found. July has bounded USGS flow and stage, but no matching Hydromet rolling-total snapshots, so July rain symbols are hollow. EAA detail bodies lack their original exported fetch sidecars; that provenance gap is disclosed.
+- Storm response rule: a zero start makes “below twice start” unreachable for nonnegative flow. The tool preserves the handoff’s literal threshold and withholds recession-dependent classifications when observations are incomplete. Any rule revision needs Saul’s decision.
+- July detection review: the original July 11 record was created from daily means. Added continuous readings produce a July 10 23:40 UTC first crossing and a separate post-cap July 19 candidate. The original is preserved; `data/model/storm-delta-validation.json` retains the newer candidate readings for review.
+- Storm review: hypotheses are reviewed from saved observations by their recorded check dates, without a scheduled check-in. The two EAA spring records lack verified coordinates in the existing inventory and appear as cards; the three inventoried USGS springs have map bars.
 
 - Public visibility: the collectors send Saul's contact email in their User-Agent header; swap for a project address before making the repository public.
 - EAA: the CSV download door has been closed (HTTP 500 to everything) since 2026-10-01. Wells now come from the detail pages; rain gauges have no other door (ask data@edwardsaquifer.org for an export, or use LCRA Hydromet's 246 rain gauges for the Hill Country); streams exist as 130 MB pages, opt-in.
@@ -59,6 +62,8 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - A `CHANGELOG.md` schema bump process for the bundle once the first lens change needs one.
 
 ## Decision log
+
+- 2026-10-03 · Storm computation stays offline · Acquisition retains raw bodies and metadata first, then normalization and deterministic computation use them. This follows Saul’s scrape/analysis separation over the handoff’s shorthand “compute fetches.” Additive `storm_delta` keeps schema 1 as explicitly requested. Daily records use the last complete day before t0 as baseline; within-day clock times are not invented. Hand-authored storm hypotheses remain separate from computed measurements.
 
 - 2026-10-02 · Move the daily run to the Mac · Saul chose Mac launchd and confirmed he disabled the claude.ai routine before the Mac job was loaded. The runner permits one provider attempt per Central-time day and uses repeatable offline fault tests; no same-day provider retry is scheduled. The first live scheduled run is the end-to-end check.
 
@@ -74,6 +79,14 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - 2026-10-01 · Ideas file · Saul asked for the build ideas to live in a Markdown file cross-linked with this document: `IDEAS.md`.
 
 ## Session log
+
+### 2026-10-03 — storm-delta build
+- Validation: 67 water tests pass. A temporary copy of the swim lens fetched and applied the new bundle, then passed its 78-test suite (one existing skip). The layer drew in BrowserOS with hollow missing symbols and timed cards. Final hypothesis review and checklist are recorded below when complete.
+- Added raw-first annual peak acquisition for 68 USGS history stations (64 numeric annual records; four without annual peaks), plus explicit bounded July flow/stage acquisition. The NWIS peak endpoint responded normally; redirects/refusals remain preserved and the OGC window command is available as fallback.
+- Expanded daily rain priority to all 123 LCRA rain-reporting sites in the specified box, including river and lake sites with rain sensors. All 123 were pulled; 121 have historical readings. Five series reach 1988, with empty 1987 and 1986 responses retained to establish the earlier boundary. Bounded native rain supplies intensity without requesting every year's 15-minute rain.
+- Added immutable detection records, offline storm computation, an optional schema-1 bundle block, and an off-by-default map layer. Comparisons preserve daily/instantaneous sampling, missing readings, source dates, long baseline gaps and the unchanged response thresholds. `tools/storm_validation.py` writes the worked-example comparison report. The original July detection remains frozen after continuous data enrichment.
+- The October record reproduces Shoal 541 cfs, Walnut 650 cfs, Junction 35,000 cfs, Barton Springs 26.5 cfs, J-17 640.07 ft and its +1.74 ft daily rise, the 36-well +0.05 ft seven-day median and recharge-zone −0.11 ft median. The detected t0 changes Barton’s baseline to 19.5 cfs and the complete-day Travis baseline to September 28, giving +0.10 ft. Llano integration yields 15,216.9 acre-ft through October 2 11:00 UTC. Detailed differing readings are retained in `data/model/storm-delta-validation.json`.
+- July daily maxima and ranks match all five examples: Comfort 52,900 cfs (#2/88), Kerrville 29,400 (#3/41), Llano 53,600 (#7/88), Pedernales 23,600 (#15/88), Junction 30,400 (#14/109). Acquired instantaneous peaks are stored separately; they do not replace those daily comparisons.
 
 ### 2026-10-02 — Mac daily-run cutover
 - After Saul reported the claude.ai routine disabled, loaded `org.saulelbein.hill-country-hydro` in `gui/501`. `launchctl print` showed one 6:57 calendar trigger, zero runs, and no immediate collection. `plutil -lint` passed. The job uses `RunAtLoad=false`; it does not catch up after a full power-off. The cloud state is based on Saul's confirmation, not an independent claude.ai inspection. No provider collection was repeated on October 2.
