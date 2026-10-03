@@ -55,7 +55,7 @@ const BASES={
 function boot(){ map=L.map('map',{zoomControl:true}).setView([30.05,-98.6],8);
   const baseLayers=Object.fromEntries(Object.entries(BASES).map(([k,f])=>[k,f()])); baseLayers['USGS topo + hydro'].addTo(map); L.control.layers(baseLayers,null,{position:'topright',collapsed:true}).addTo(map);
   for(const k of ['stations','wells','lakes','eaa','hydromet','storm']){ const el=$('#l-'+k); el.checked=on[k]; el.addEventListener('change',()=>{on[k]=el.checked; render();}); }
-  fetch('../dist/water-state.json').then(r=>r.json()).then(b=>{ bundle=b; initStorm(); $('#bundle-meta').textContent=`Bundle ${b.schema_version} generated ${fmt(b.generated_at)} · ${b.counts.stations} stations, ${b.counts.wells} wells, ${b.counts.lakes} lakes · missing inputs: ${(b.missing_inputs||[]).join(', ')||'none'}`; render(); }).catch(e=>{ $('#bundle-meta').textContent='Could not load dist/water-state.json: '+e; }); }
+  fetch('../dist/water-state.json',{cache:'no-cache'}).then(r=>r.json()).then(b=>{ bundle=b; initStorm(); $('#bundle-meta').textContent=`Bundle ${b.schema_version} generated ${fmt(b.generated_at)} · ${b.counts.stations} stations, ${b.counts.wells} wells, ${b.counts.lakes} lakes · missing inputs: ${(b.missing_inputs||[]).join(', ')||'none'}`; render(); }).catch(e=>{ $('#bundle-meta').textContent='Could not load dist/water-state.json: '+e; }); }
 document.addEventListener('DOMContentLoaded',boot);
 
 /* Storm measurements use their own palette and card functions. */
