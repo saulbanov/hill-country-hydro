@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-03 — creek-measurements/v1 prototype analytic contract
+- Added offline USGS/Hydromet creek adapters, source checksums and observation locators, explicit time/unit/aggregation states, primary-series selection, retained revisions and mirror evidence.
+- Independent JSONL/catalog/reference outputs, coverage audit, reader API and seasonal daily comparisons are documented in `docs/CREEK_ANALYTICS.md`. The schema-1 water bundle and daily routine are unchanged.
+
+
 ## 2026-10-03 — additive: retrospective storm changes
 - Optional `storm_delta` contains detected windows, timed rain/flow/spring/well/lake measurements, sampling-specific ranks, coverage caveats and reviewer hypotheses. Schema stays 1 under Saul’s explicit authorization for this additive block. Existing blocks retain their shape. Detection records its triggering readings; computation reads saved data only. The map layer starts off and uses measurement colors without a place verdict.
 - USGS annual peak bodies and bounded July continuous flow/stage captures are retained with metadata. LCRA rain history expands by the handoff’s geographic rule; bounded native rain captures supply observed hourly intensity.

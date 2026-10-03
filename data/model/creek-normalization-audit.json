@@ -1,0 +1,3304 @@
+{
+  "schema_version": "creek-measurements/v1",
+  "status": "prototype",
+  "event_interval": {
+    "start": "2026-09-29T09:35:00+00:00",
+    "end": "2026-10-03T12:15:00+00:00"
+  },
+  "candidate_inventory": {
+    "COA:122": {
+      "provider": "COA",
+      "site": "122",
+      "name": "Blunn Creek at Stacy Park",
+      "creek": "Blunn Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:950": {
+      "provider": "COA",
+      "site": "950",
+      "name": "Williamson Creek at Emerald Forest Drive",
+      "creek": "Williamson Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:1130": {
+      "provider": "COA",
+      "site": "1130",
+      "name": "Williamson Creek at Silvermine",
+      "creek": "Williamson Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2060": {
+      "provider": "COA",
+      "site": "2060",
+      "name": "Walnut Creek at Metric Boulevard",
+      "creek": "Walnut Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2070": {
+      "provider": "COA",
+      "site": "2070",
+      "name": "Walnut Creek at Oak Creek Drive",
+      "creek": "Walnut Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2080": {
+      "provider": "COA",
+      "site": "2080",
+      "name": "Walnut Creek near MOPAC",
+      "creek": "Walnut Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2210": {
+      "provider": "COA",
+      "site": "2210",
+      "name": "Little Walnut Creek at Dottie Jordan Park",
+      "creek": "Walnut Creek",
+      "scope": "tributary, not main channel",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2220": {
+      "provider": "COA",
+      "site": "2220",
+      "name": "Little Walnut Creek at Georgian Drive",
+      "creek": "Walnut Creek",
+      "scope": "tributary, not main channel",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2240": {
+      "provider": "COA",
+      "site": "2240",
+      "name": "Little Walnut Creek at Cameron Road",
+      "creek": "Walnut Creek",
+      "scope": "tributary, not main channel",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2300": {
+      "provider": "COA",
+      "site": "2300",
+      "name": "Little Walnut Creek at Rutland Drive",
+      "creek": "Walnut Creek",
+      "scope": "tributary, not main channel",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2340": {
+      "provider": "COA",
+      "site": "2340",
+      "name": "Little Walnut Creek at Golden Meadow Drive",
+      "creek": "Walnut Creek",
+      "scope": "tributary, not main channel",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2400": {
+      "provider": "COA",
+      "site": "2400",
+      "name": "Shoal Creek at W 45th Street",
+      "creek": "Shoal Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2510": {
+      "provider": "COA",
+      "site": "2510",
+      "name": "Shoal Creek at Shoal Creek Boulevard",
+      "creek": "Shoal Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2520": {
+      "provider": "COA",
+      "site": "2520",
+      "name": "Shoal Creek at Foster Lane",
+      "creek": "Shoal Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:2730": {
+      "provider": "COA",
+      "site": "2730",
+      "name": "Barton Creek Boulevard",
+      "creek": "Barton Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "COA:3650": {
+      "provider": "COA",
+      "site": "3650",
+      "name": "Bull Creek Dam",
+      "creek": "Bull Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:2897": {
+      "provider": "LCRA",
+      "site": "2897",
+      "name": "Walnut Creek near Kingsland",
+      "creek": "Walnut Creek",
+      "scope": "outside Austin prototype area; creek-name match alone rejected",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:3992": {
+      "provider": "LCRA",
+      "site": "3992",
+      "name": "Bull Creek at Loop 360, Austin",
+      "creek": "Bull Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:4519": {
+      "provider": "LCRA",
+      "site": "4519",
+      "name": "Barton Creek at SH 71 near Oak Hill",
+      "creek": "Barton Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:4520": {
+      "provider": "LCRA",
+      "site": "4520",
+      "name": "Barton Creek at Loop 360, Austin",
+      "creek": "Barton Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:4561": {
+      "provider": "LCRA",
+      "site": "4561",
+      "name": "Walnut Creek at Webberville Road, Austin",
+      "creek": "Walnut Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:4595": {
+      "provider": "LCRA",
+      "site": "4595",
+      "name": "Onion Creek at Buda",
+      "creek": "Onion Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:4598": {
+      "provider": "LCRA",
+      "site": "4598",
+      "name": "Onion Creek at Hwy 183, Austin",
+      "creek": "Onion Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "LCRA:5524": {
+      "provider": "LCRA",
+      "site": "5524",
+      "name": "Walnut Creek near Rockne",
+      "creek": "Walnut Creek",
+      "scope": "outside Austin prototype area; creek-name match alone rejected",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08155240": {
+      "provider": "USGS",
+      "site": "08155240",
+      "name": "Barton Ck at Lost Ck Blvd nr Austin, TX",
+      "creek": "Barton Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08155400": {
+      "provider": "USGS",
+      "site": "08155400",
+      "name": "Barton Ck abv Barton Spgs at Austin, TX",
+      "creek": "Barton Creek",
+      "scope": "spring, not channel gauge",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08156675": {
+      "provider": "USGS",
+      "site": "08156675",
+      "name": "Shoal Ck at Silverway Dr, Austin, TX",
+      "creek": "Shoal Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158200": {
+      "provider": "USGS",
+      "site": "08158200",
+      "name": "Walnut Ck at Dessau Rd, Austin, TX",
+      "creek": "Walnut Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158380": {
+      "provider": "USGS",
+      "site": "08158380",
+      "name": "Little Walnut Ck at Georgian Dr, Austin, TX",
+      "creek": "Walnut Creek",
+      "scope": "tributary, not main channel",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158700": {
+      "provider": "USGS",
+      "site": "08158700",
+      "name": "Onion Ck nr Driftwood, TX",
+      "creek": "Onion Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158827": {
+      "provider": "USGS",
+      "site": "08158827",
+      "name": "Onion Ck at Twin Creeks Rd nr Manchaca, TX",
+      "creek": "Onion Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158930": {
+      "provider": "USGS",
+      "site": "08158930",
+      "name": "Williamson Ck at Manchaca Rd, Austin, TX",
+      "creek": "Williamson Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158970": {
+      "provider": "USGS",
+      "site": "08158970",
+      "name": "Williamson Ck at Jimmy Clay Rd, Austin, TX",
+      "creek": "Williamson Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08154700": {
+      "provider": "USGS",
+      "site": "08154700",
+      "name": "Bull Ck at Loop 360 nr Austin, TX",
+      "creek": "Bull Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08155200": {
+      "provider": "USGS",
+      "site": "08155200",
+      "name": "Barton Ck at SH 71 nr Oak Hill, TX",
+      "creek": "Barton Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08155300": {
+      "provider": "USGS",
+      "site": "08155300",
+      "name": "Barton Ck at Loop 360, Austin, TX",
+      "creek": "Barton Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158600": {
+      "provider": "USGS",
+      "site": "08158600",
+      "name": "Walnut Ck at Webberville Rd, Austin, TX",
+      "creek": "Walnut Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08159000": {
+      "provider": "USGS",
+      "site": "08159000",
+      "name": "Onion Ck at US Hwy 183, Austin, TX",
+      "creek": "Onion Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08155500": {
+      "provider": "USGS",
+      "site": "08155500",
+      "name": "Barton Spgs at Austin, TX",
+      "creek": "Barton Creek",
+      "scope": "spring, not channel gauge",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08156800": {
+      "provider": "USGS",
+      "site": "08156800",
+      "name": "Shoal Ck at W 12th St, Austin, TX",
+      "creek": "Shoal Creek",
+      "scope": "selected event adapter",
+      "source_id": "3157653ab5353bf469571565"
+    },
+    "USGS:08158922": {
+      "provider": "USGS",
+      "site": "08158922",
+      "name": "Williamson Ck at Brush Cntry Blvd, Oak Hill, TX",
+      "creek": "Williamson Creek",
+      "scope": "outside bounded adapter",
+      "source_id": "3157653ab5353bf469571565"
+    }
+  },
+  "series": {
+    "USGS:08154700:9cf321eed671456f9325c9817f130ff3:00060": {
+      "id": "USGS:08154700:9cf321eed671456f9325c9817f130ff3:00060",
+      "creek": "Bull Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08154700",
+      "original_series_id": "9cf321eed671456f9325c9817f130ff3",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08154700",
+      "coverage": {
+        "records": 1170,
+        "measured": 1170,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:00:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 133
+        },
+        "by_year": {
+          "2026": 1170
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1170
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08154700:bc162e02d808429f8767b0dfe90da10e:00065": {
+      "id": "USGS:08154700:bc162e02d808429f8767b0dfe90da10e:00065",
+      "creek": "Bull Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08154700",
+      "original_series_id": "bc162e02d808429f8767b0dfe90da10e",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08154700",
+      "coverage": {
+        "records": 1170,
+        "measured": 1170,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:00:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 133
+        },
+        "by_year": {
+          "2026": 1170
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1170
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08154700:d599ae89cc5747ed9d8b9b0aeb257856:00065": {
+      "id": "USGS:08154700:d599ae89cc5747ed9d8b9b0aeb257856:00065",
+      "creek": "Bull Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08154700",
+      "original_series_id": "d599ae89cc5747ed9d8b9b0aeb257856",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08154700",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-01T18:10:00+00:00",
+        "last": "2026-10-02T01:15:00+00:00",
+        "by_date": {
+          "2026-10-01": 1,
+          "2026-10-02": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 425.0,
+        "max_gap_minutes": 425.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "Provisional": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08154700:82c75fb004f64d1c88462732a61eac03:00060": {
+      "id": "USGS:08154700:82c75fb004f64d1c88462732a61eac03:00060",
+      "creek": "Bull Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08154700",
+      "original_series_id": "82c75fb004f64d1c88462732a61eac03",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "daily_mean",
+      "primary": true,
+      "physical_gauge_id": "USGS:08154700",
+      "coverage": {
+        "records": 17607,
+        "measured": 17607,
+        "missing": 0,
+        "rejected": 0,
+        "first": "1978-07-18",
+        "last": "2026-09-30",
+        "by_date": {},
+        "by_year": {
+          "1978": 167,
+          "1979": 365,
+          "1980": 366,
+          "1981": 365,
+          "1982": 365,
+          "1983": 365,
+          "1984": 366,
+          "1985": 365,
+          "1986": 365,
+          "1987": 365,
+          "1988": 366,
+          "1989": 365,
+          "1990": 365,
+          "1991": 365,
+          "1992": 366,
+          "1993": 365,
+          "1994": 365,
+          "1995": 365,
+          "1996": 366,
+          "1997": 365,
+          "1998": 365,
+          "1999": 365,
+          "2000": 366,
+          "2001": 365,
+          "2002": 365,
+          "2003": 365,
+          "2004": 366,
+          "2005": 365,
+          "2006": 365,
+          "2007": 365,
+          "2008": 366,
+          "2009": 365,
+          "2010": 365,
+          "2011": 365,
+          "2012": 366,
+          "2013": 365,
+          "2014": 365,
+          "2015": 365,
+          "2016": 366,
+          "2017": 365,
+          "2018": 365,
+          "2019": 365,
+          "2020": 366,
+          "2021": 365,
+          "2022": 365,
+          "2023": 365,
+          "2024": 366,
+          "2025": 365,
+          "2026": 273
+        },
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Approved": 17543,
+          "Provisional": 64
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 179,
+          "DRY": 110,
+          "MAINT": 2,
+          "UNAVAIL": 2,
+          "EQUIP": 2
+        }
+      }
+    },
+    "USGS:08155300:00ceb46e33e44322bcea2d60a426b87b:00065": {
+      "id": "USGS:08155300:00ceb46e33e44322bcea2d60a426b87b:00065",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08155300",
+      "original_series_id": "00ceb46e33e44322bcea2d60a426b87b",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 1180,
+        "measured": 1180,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:50:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 143
+        },
+        "by_year": {
+          "2026": 1180
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1180
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08155300:329ead9b945b405785743d3cfb71fa9f:00065": {
+      "id": "USGS:08155300:329ead9b945b405785743d3cfb71fa9f:00065",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08155300",
+      "original_series_id": "329ead9b945b405785743d3cfb71fa9f",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 1170,
+        "measured": 1170,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:00:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 133
+        },
+        "by_year": {
+          "2026": 1170
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1170
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08155300:c832566ded7746918fd46dfff066039c:00060": {
+      "id": "USGS:08155300:c832566ded7746918fd46dfff066039c:00060",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08155300",
+      "original_series_id": "c832566ded7746918fd46dfff066039c",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 1180,
+        "measured": 1180,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:50:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 143
+        },
+        "by_year": {
+          "2026": 1180
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1180
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08155300:eb4f487f5d6848abba77f3612cf2248e:00060": {
+      "id": "USGS:08155300:eb4f487f5d6848abba77f3612cf2248e:00060",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08155300",
+      "original_series_id": "eb4f487f5d6848abba77f3612cf2248e",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 1170,
+        "measured": 1170,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:00:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 133
+        },
+        "by_year": {
+          "2026": 1170
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1170
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08155300:de61cde9168e4713a7ae1664d44846d7:00060": {
+      "id": "USGS:08155300:de61cde9168e4713a7ae1664d44846d7:00060",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08155300",
+      "original_series_id": "de61cde9168e4713a7ae1664d44846d7",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "daily_mean",
+      "primary": true,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 18139,
+        "measured": 18139,
+        "missing": 0,
+        "rejected": 0,
+        "first": "1977-02-01",
+        "last": "2026-09-30",
+        "by_date": {},
+        "by_year": {
+          "1977": 334,
+          "1978": 365,
+          "1979": 365,
+          "1980": 366,
+          "1981": 365,
+          "1982": 365,
+          "1983": 365,
+          "1984": 366,
+          "1985": 365,
+          "1986": 365,
+          "1987": 365,
+          "1988": 366,
+          "1989": 365,
+          "1990": 365,
+          "1991": 365,
+          "1992": 366,
+          "1993": 365,
+          "1994": 365,
+          "1995": 365,
+          "1996": 366,
+          "1997": 365,
+          "1998": 365,
+          "1999": 365,
+          "2000": 366,
+          "2001": 365,
+          "2002": 365,
+          "2003": 365,
+          "2004": 366,
+          "2005": 365,
+          "2006": 365,
+          "2007": 365,
+          "2008": 366,
+          "2009": 365,
+          "2010": 365,
+          "2011": 365,
+          "2012": 366,
+          "2013": 365,
+          "2014": 365,
+          "2015": 365,
+          "2016": 366,
+          "2017": 365,
+          "2018": 365,
+          "2019": 365,
+          "2020": 366,
+          "2021": 365,
+          "2022": 365,
+          "2023": 365,
+          "2024": 366,
+          "2025": 365,
+          "2026": 273
+        },
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Approved": 18077,
+          "Provisional": 62
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 82,
+          "DRY": 453
+        }
+      }
+    },
+    "USGS:08156800:04905372f35042e098f6e424b9542e13:00065": {
+      "id": "USGS:08156800:04905372f35042e098f6e424b9542e13:00065",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08156800",
+      "original_series_id": "04905372f35042e098f6e424b9542e13",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 897,
+        "measured": 897,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:15:00+00:00",
+        "by_date": {
+          "2026-09-29": 45,
+          "2026-09-30": 140,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 136
+        },
+        "by_year": {
+          "2026": 897
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 1385.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "Provisional": 897
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08156800:2abb693d2d934b0ca78c2dad65c591ad:00060": {
+      "id": "USGS:08156800:2abb693d2d934b0ca78c2dad65c591ad:00060",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08156800",
+      "original_series_id": "2abb693d2d934b0ca78c2dad65c591ad",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 897,
+        "measured": 897,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:15:00+00:00",
+        "by_date": {
+          "2026-09-29": 45,
+          "2026-09-30": 140,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 136
+        },
+        "by_year": {
+          "2026": 897
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 1385.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "Provisional": 897
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08156800:8aa376e4b62c4fb3aea003f25e6aba22:00065": {
+      "id": "USGS:08156800:8aa376e4b62c4fb3aea003f25e6aba22:00065",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08156800",
+      "original_series_id": "8aa376e4b62c4fb3aea003f25e6aba22",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 643,
+        "measured": 643,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:45:00+00:00",
+        "last": "2026-10-03T11:50:00+00:00",
+        "by_date": {
+          "2026-09-29": 37,
+          "2026-10-01": 175,
+          "2026-10-02": 288,
+          "2026-10-03": 143
+        },
+        "by_year": {
+          "2026": 643
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 2580.0,
+        "gaps_over_60_minutes": 2,
+        "approval_counts": {
+          "Provisional": 643
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08156800:b5e30e755f6540c4a4afc852e5bc0ed1:00060": {
+      "id": "USGS:08156800:b5e30e755f6540c4a4afc852e5bc0ed1:00060",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08156800",
+      "original_series_id": "b5e30e755f6540c4a4afc852e5bc0ed1",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 897,
+        "measured": 897,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:15:00+00:00",
+        "by_date": {
+          "2026-09-29": 45,
+          "2026-09-30": 140,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 136
+        },
+        "by_year": {
+          "2026": 897
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 1385.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "Provisional": 897
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08156800:92a89e110825453991534ecd8b9eedd8:00060": {
+      "id": "USGS:08156800:92a89e110825453991534ecd8b9eedd8:00060",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08156800",
+      "original_series_id": "92a89e110825453991534ecd8b9eedd8",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "daily_mean",
+      "primary": true,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 15877,
+        "measured": 15877,
+        "missing": 0,
+        "rejected": 0,
+        "first": "1983-01-08",
+        "last": "2026-09-02",
+        "by_date": {},
+        "by_year": {
+          "1983": 291,
+          "1984": 366,
+          "1985": 365,
+          "1986": 365,
+          "1987": 365,
+          "1988": 366,
+          "1989": 365,
+          "1990": 365,
+          "1991": 365,
+          "1992": 366,
+          "1993": 365,
+          "1994": 365,
+          "1995": 365,
+          "1996": 366,
+          "1997": 365,
+          "1998": 365,
+          "1999": 365,
+          "2000": 366,
+          "2001": 365,
+          "2002": 365,
+          "2003": 365,
+          "2004": 366,
+          "2005": 365,
+          "2006": 365,
+          "2007": 365,
+          "2008": 366,
+          "2009": 365,
+          "2010": 365,
+          "2011": 365,
+          "2012": 366,
+          "2013": 365,
+          "2014": 365,
+          "2015": 365,
+          "2016": 366,
+          "2017": 365,
+          "2018": 365,
+          "2019": 365,
+          "2020": 366,
+          "2021": 365,
+          "2022": 365,
+          "2023": 365,
+          "2024": 366,
+          "2025": 365,
+          "2026": 245
+        },
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Approved": 15846,
+          "Provisional": 31
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 144,
+          "MAINT": 1
+        }
+      }
+    },
+    "USGS:08158600:2eea77b813b94f3f972d32104bd9a275:00065": {
+      "id": "USGS:08158600:2eea77b813b94f3f972d32104bd9a275:00065",
+      "creek": "Walnut Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08158600",
+      "original_series_id": "2eea77b813b94f3f972d32104bd9a275",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158600",
+      "coverage": {
+        "records": 1103,
+        "measured": 1103,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T15:10:00+00:00",
+        "last": "2026-10-03T11:00:00+00:00",
+        "by_date": {
+          "2026-09-29": 106,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 133
+        },
+        "by_year": {
+          "2026": 1103
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1103
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08158600:d3056974f4694648a68ef180964d24fc:00060": {
+      "id": "USGS:08158600:d3056974f4694648a68ef180964d24fc:00060",
+      "creek": "Walnut Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08158600",
+      "original_series_id": "d3056974f4694648a68ef180964d24fc",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158600",
+      "coverage": {
+        "records": 1103,
+        "measured": 1103,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T15:10:00+00:00",
+        "last": "2026-10-03T11:00:00+00:00",
+        "by_date": {
+          "2026-09-29": 106,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 133
+        },
+        "by_year": {
+          "2026": 1103
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1103
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08158600:f8eeee52f4e64e008a82644e7e0e52af:00060": {
+      "id": "USGS:08158600:f8eeee52f4e64e008a82644e7e0e52af:00060",
+      "creek": "Walnut Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08158600",
+      "original_series_id": "f8eeee52f4e64e008a82644e7e0e52af",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "daily_mean",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158600",
+      "coverage": {
+        "records": 22042,
+        "measured": 22042,
+        "missing": 0,
+        "rejected": 0,
+        "first": "1966-05-27",
+        "last": "2026-09-30",
+        "by_date": {},
+        "by_year": {
+          "1966": 219,
+          "1967": 365,
+          "1968": 366,
+          "1969": 365,
+          "1970": 365,
+          "1971": 365,
+          "1972": 366,
+          "1973": 365,
+          "1974": 365,
+          "1975": 365,
+          "1976": 366,
+          "1977": 365,
+          "1978": 365,
+          "1979": 365,
+          "1980": 366,
+          "1981": 365,
+          "1982": 365,
+          "1983": 365,
+          "1984": 366,
+          "1985": 365,
+          "1986": 365,
+          "1987": 365,
+          "1988": 366,
+          "1989": 365,
+          "1990": 365,
+          "1991": 365,
+          "1992": 366,
+          "1993": 365,
+          "1994": 365,
+          "1995": 365,
+          "1996": 366,
+          "1997": 365,
+          "1998": 365,
+          "1999": 365,
+          "2000": 366,
+          "2001": 365,
+          "2002": 365,
+          "2003": 365,
+          "2004": 366,
+          "2005": 365,
+          "2006": 365,
+          "2007": 365,
+          "2008": 366,
+          "2009": 365,
+          "2010": 365,
+          "2011": 365,
+          "2012": 366,
+          "2013": 365,
+          "2014": 365,
+          "2015": 365,
+          "2016": 366,
+          "2017": 365,
+          "2018": 365,
+          "2019": 365,
+          "2020": 366,
+          "2021": 365,
+          "2022": 365,
+          "2023": 365,
+          "2024": 366,
+          "2025": 365,
+          "2026": 273
+        },
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Approved": 21922,
+          "Provisional": 120
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 185
+        }
+      }
+    },
+    "USGS:08158970:26253cc61add4d15ba3154037008db9f:00060": {
+      "id": "USGS:08158970:26253cc61add4d15ba3154037008db9f:00060",
+      "creek": "Williamson Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08158970",
+      "original_series_id": "26253cc61add4d15ba3154037008db9f",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08158970",
+      "coverage": {
+        "records": 1179,
+        "measured": 1179,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:45:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 142
+        },
+        "by_year": {
+          "2026": 1179
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1179
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 6
+        }
+      }
+    },
+    "USGS:08158970:6e087424a1dc47b59fce6e618b5e66cd:00065": {
+      "id": "USGS:08158970:6e087424a1dc47b59fce6e618b5e66cd:00065",
+      "creek": "Williamson Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08158970",
+      "original_series_id": "6e087424a1dc47b59fce6e618b5e66cd",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08158970",
+      "coverage": {
+        "records": 1179,
+        "measured": 1179,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:45:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 142
+        },
+        "by_year": {
+          "2026": 1179
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1179
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08158970:ff97d3e8ee294e9690766846bfa3bc4f:00060": {
+      "id": "USGS:08158970:ff97d3e8ee294e9690766846bfa3bc4f:00060",
+      "creek": "Williamson Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08158970",
+      "original_series_id": "ff97d3e8ee294e9690766846bfa3bc4f",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "daily_mean",
+      "primary": true,
+      "physical_gauge_id": "USGS:08158970",
+      "coverage": {
+        "records": 11016,
+        "measured": 11016,
+        "missing": 0,
+        "rejected": 0,
+        "first": "1975-09-11",
+        "last": "2026-09-30",
+        "by_date": {},
+        "by_year": {
+          "1975": 112,
+          "1976": 366,
+          "1977": 365,
+          "1978": 365,
+          "1979": 365,
+          "1980": 366,
+          "1981": 365,
+          "1982": 365,
+          "1983": 365,
+          "1984": 366,
+          "1985": 365,
+          "1986": 273,
+          "2007": 130,
+          "2008": 366,
+          "2009": 365,
+          "2010": 365,
+          "2011": 365,
+          "2012": 366,
+          "2013": 365,
+          "2014": 365,
+          "2015": 365,
+          "2016": 366,
+          "2017": 365,
+          "2018": 365,
+          "2019": 365,
+          "2020": 366,
+          "2021": 365,
+          "2022": 365,
+          "2023": 365,
+          "2024": 366,
+          "2025": 365,
+          "2026": 273
+        },
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Approved": 10891,
+          "Provisional": 125
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 135
+        }
+      }
+    },
+    "USGS:08159000:d1ce331e7ea1497081d026c5789e55f7:00060": {
+      "id": "USGS:08159000:d1ce331e7ea1497081d026c5789e55f7:00060",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08159000",
+      "original_series_id": "d1ce331e7ea1497081d026c5789e55f7",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 1174,
+        "measured": 1174,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:20:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 137
+        },
+        "by_year": {
+          "2026": 1174
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1174
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08159000:d514b601680c44dcbe0a9776e4bf0cd3:00065": {
+      "id": "USGS:08159000:d514b601680c44dcbe0a9776e4bf0cd3:00065",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08159000",
+      "original_series_id": "d514b601680c44dcbe0a9776e4bf0cd3",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": true,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 1174,
+        "measured": 1174,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:35:00+00:00",
+        "last": "2026-10-03T11:20:00+00:00",
+        "by_date": {
+          "2026-09-29": 173,
+          "2026-09-30": 288,
+          "2026-10-01": 288,
+          "2026-10-02": 288,
+          "2026-10-03": 137
+        },
+        "by_year": {
+          "2026": 1174
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 5.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 1174
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08159000:15552d0f22b0408aab8280e951c22402:00065": {
+      "id": "USGS:08159000:15552d0f22b0408aab8280e951c22402:00065",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08159000",
+      "original_series_id": "15552d0f22b0408aab8280e951c22402",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 504,
+        "measured": 504,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-01T17:25:00+00:00",
+        "last": "2026-10-03T11:50:00+00:00",
+        "by_date": {
+          "2026-10-01": 76,
+          "2026-10-02": 285,
+          "2026-10-03": 143
+        },
+        "by_year": {
+          "2026": 504
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 20.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 504
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08159000:9ac45c751b9d47a7bbcd937cf06a6054:00060": {
+      "id": "USGS:08159000:9ac45c751b9d47a7bbcd937cf06a6054:00060",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08159000",
+      "original_series_id": "9ac45c751b9d47a7bbcd937cf06a6054",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "instantaneous",
+      "primary": false,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 504,
+        "measured": 504,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-01T17:25:00+00:00",
+        "last": "2026-10-03T11:50:00+00:00",
+        "by_date": {
+          "2026-10-01": 76,
+          "2026-10-02": 285,
+          "2026-10-03": 143
+        },
+        "by_year": {
+          "2026": 504
+        },
+        "median_spacing_minutes": 5.0,
+        "max_gap_minutes": 20.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Provisional": 504
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "USGS:08159000:c9d5cf88634b48fa80306a12b7cbe745:00060": {
+      "id": "USGS:08159000:c9d5cf88634b48fa80306a12b7cbe745:00060",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "USGS",
+      "site": "08159000",
+      "original_series_id": "c9d5cf88634b48fa80306a12b7cbe745",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "daily_mean",
+      "primary": true,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 20513,
+        "measured": 20513,
+        "missing": 0,
+        "rejected": 0,
+        "first": "1924-06-01",
+        "last": "2026-09-30",
+        "by_date": {},
+        "by_year": {
+          "1924": 214,
+          "1925": 365,
+          "1926": 365,
+          "1927": 365,
+          "1928": 366,
+          "1929": 365,
+          "1930": 59,
+          "1976": 284,
+          "1977": 365,
+          "1978": 365,
+          "1979": 365,
+          "1980": 366,
+          "1981": 365,
+          "1982": 365,
+          "1983": 365,
+          "1984": 366,
+          "1985": 365,
+          "1986": 365,
+          "1987": 365,
+          "1988": 366,
+          "1989": 365,
+          "1990": 365,
+          "1991": 365,
+          "1992": 366,
+          "1993": 365,
+          "1994": 365,
+          "1995": 365,
+          "1996": 366,
+          "1997": 365,
+          "1998": 365,
+          "1999": 365,
+          "2000": 366,
+          "2001": 365,
+          "2002": 365,
+          "2003": 365,
+          "2004": 366,
+          "2005": 365,
+          "2006": 365,
+          "2007": 365,
+          "2008": 366,
+          "2009": 365,
+          "2010": 365,
+          "2011": 365,
+          "2012": 366,
+          "2013": 365,
+          "2014": 365,
+          "2015": 365,
+          "2016": 366,
+          "2017": 365,
+          "2018": 365,
+          "2019": 365,
+          "2020": 366,
+          "2021": 365,
+          "2022": 365,
+          "2023": 365,
+          "2024": 366,
+          "2025": 365,
+          "2026": 233
+        },
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "Approved": 20501,
+          "Provisional": 12
+        },
+        "qualifier_counts": {
+          "ESTIMATED": 475,
+          "EQUIP": 7,
+          "DRY": 97,
+          "BLWMIN": 69
+        }
+      }
+    },
+    "Hydromet:3992:LCRA:flow:value1:reported_point:value1": {
+      "id": "Hydromet:3992:LCRA:flow:value1:reported_point:value1",
+      "creek": "Bull Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "3992",
+      "original_series_id": "LCRA:flow:value1:reported_point",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:3992",
+      "coverage": {
+        "records": 256,
+        "measured": 256,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:41:42Z",
+        "last": "2026-10-02T01:41:41Z",
+        "by_date": {
+          "2026-09-29": 58,
+          "2026-09-30": 95,
+          "2026-10-01": 96,
+          "2026-10-02": 7
+        },
+        "by_year": {
+          "2026": 256
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 30.016666666666666,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 256
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:3992:LCRA:flow:value2:reported_point:value2": {
+      "id": "Hydromet:3992:LCRA:flow:value2:reported_point:value2",
+      "creek": "Bull Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "3992",
+      "original_series_id": "LCRA:flow:value2:reported_point",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:3992",
+      "coverage": {
+        "records": 256,
+        "measured": 256,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:41:42Z",
+        "last": "2026-10-02T01:41:41Z",
+        "by_date": {
+          "2026-09-29": 58,
+          "2026-09-30": 95,
+          "2026-10-01": 96,
+          "2026-10-02": 7
+        },
+        "by_year": {
+          "2026": 256
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 30.016666666666666,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 256
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4520:LCRA:flow:value1:reported_point:value1": {
+      "id": "Hydromet:4520:LCRA:flow:value1:reported_point:value1",
+      "creek": "Barton Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4520",
+      "original_series_id": "LCRA:flow:value1:reported_point",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4520",
+      "coverage": {
+        "records": 256,
+        "measured": 256,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:41:40Z",
+        "last": "2026-10-02T01:41:41Z",
+        "by_date": {
+          "2026-09-29": 58,
+          "2026-09-30": 95,
+          "2026-10-01": 96,
+          "2026-10-02": 7
+        },
+        "by_year": {
+          "2026": 256
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 30.083333333333332,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 256
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4520:LCRA:flow:value2:reported_point:value2": {
+      "id": "Hydromet:4520:LCRA:flow:value2:reported_point:value2",
+      "creek": "Barton Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4520",
+      "original_series_id": "LCRA:flow:value2:reported_point",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4520",
+      "coverage": {
+        "records": 256,
+        "measured": 256,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:41:40Z",
+        "last": "2026-10-02T01:41:41Z",
+        "by_date": {
+          "2026-09-29": 58,
+          "2026-09-30": 95,
+          "2026-10-01": 96,
+          "2026-10-02": 7
+        },
+        "by_year": {
+          "2026": 256
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 30.083333333333332,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 256
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4561:LCRA:flow:value1:reported_point:value1": {
+      "id": "Hydromet:4561:LCRA:flow:value1:reported_point:value1",
+      "creek": "Walnut Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4561",
+      "original_series_id": "LCRA:flow:value1:reported_point",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4561",
+      "coverage": {
+        "records": 256,
+        "measured": 256,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:41:43Z",
+        "last": "2026-10-02T01:41:44Z",
+        "by_date": {
+          "2026-09-29": 57,
+          "2026-09-30": 96,
+          "2026-10-01": 96,
+          "2026-10-02": 7
+        },
+        "by_year": {
+          "2026": 256
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 29.683333333333334,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 256
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4561:LCRA:flow:value2:reported_point:value2": {
+      "id": "Hydromet:4561:LCRA:flow:value2:reported_point:value2",
+      "creek": "Walnut Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4561",
+      "original_series_id": "LCRA:flow:value2:reported_point",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4561",
+      "coverage": {
+        "records": 256,
+        "measured": 256,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:41:43Z",
+        "last": "2026-10-02T01:41:44Z",
+        "by_date": {
+          "2026-09-29": 57,
+          "2026-09-30": 96,
+          "2026-10-01": 96,
+          "2026-10-02": 7
+        },
+        "by_year": {
+          "2026": 256
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 29.683333333333334,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 256
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4598:LCRA:flow:value1:hourly_unspecified:value1": {
+      "id": "Hydromet:4598:LCRA:flow:value1:hourly_unspecified:value1",
+      "creek": "Onion Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4598",
+      "original_series_id": "LCRA:flow:value1:hourly_unspecified",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "hourly_unspecified",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4598",
+      "coverage": {
+        "records": 99,
+        "measured": 99,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T10:00:00Z",
+        "last": "2026-10-03T12:00:00Z",
+        "by_date": {
+          "2026-09-29": 14,
+          "2026-09-30": 24,
+          "2026-10-01": 24,
+          "2026-10-02": 24,
+          "2026-10-03": 13
+        },
+        "by_year": {
+          "2026": 99
+        },
+        "median_spacing_minutes": 60.0,
+        "max_gap_minutes": 60.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 99
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4598:LCRA:flow:value2:hourly_unspecified:value2": {
+      "id": "Hydromet:4598:LCRA:flow:value2:hourly_unspecified:value2",
+      "creek": "Onion Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4598",
+      "original_series_id": "LCRA:flow:value2:hourly_unspecified",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "hourly_unspecified",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4598",
+      "coverage": {
+        "records": 99,
+        "measured": 99,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T10:00:00Z",
+        "last": "2026-10-03T12:00:00Z",
+        "by_date": {
+          "2026-09-29": 14,
+          "2026-09-30": 24,
+          "2026-10-01": 24,
+          "2026-10-02": 24,
+          "2026-10-03": 13
+        },
+        "by_year": {
+          "2026": 99
+        },
+        "median_spacing_minutes": 60.0,
+        "max_gap_minutes": 60.0,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 99
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:122:COA:flow:value1:reported_point:value1": {
+      "id": "Hydromet:122:COA:flow:value1:reported_point:value1",
+      "creek": "Blunn Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "122",
+      "original_series_id": "COA:flow:value1:reported_point",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:122",
+      "coverage": {
+        "records": 374,
+        "measured": 374,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:45:14Z",
+        "last": "2026-10-03T12:00:10Z",
+        "by_date": {
+          "2026-09-29": 57,
+          "2026-09-30": 95,
+          "2026-10-01": 92,
+          "2026-10-02": 83,
+          "2026-10-03": 47
+        },
+        "by_year": {
+          "2026": 374
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 59.81666666666667,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 374
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:122:COA:flow:value2:reported_point:value2": {
+      "id": "Hydromet:122:COA:flow:value2:reported_point:value2",
+      "creek": "Blunn Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "122",
+      "original_series_id": "COA:flow:value2:reported_point",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:122",
+      "coverage": {
+        "records": 374,
+        "measured": 374,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:45:14Z",
+        "last": "2026-10-03T12:00:10Z",
+        "by_date": {
+          "2026-09-29": 57,
+          "2026-09-30": 95,
+          "2026-10-01": 92,
+          "2026-10-02": 83,
+          "2026-10-03": 47
+        },
+        "by_year": {
+          "2026": 374
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 59.81666666666667,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 374
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:2400:COA:flow:value1:reported_point:value1": {
+      "id": "Hydromet:2400:COA:flow:value1:reported_point:value1",
+      "creek": "Shoal Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "2400",
+      "original_series_id": "COA:flow:value1:reported_point",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:2400",
+      "coverage": {
+        "records": 393,
+        "measured": 393,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:45:14Z",
+        "last": "2026-10-03T12:00:15Z",
+        "by_date": {
+          "2026-09-29": 57,
+          "2026-09-30": 96,
+          "2026-10-01": 96,
+          "2026-10-02": 96,
+          "2026-10-03": 48
+        },
+        "by_year": {
+          "2026": 393
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 29.983333333333334,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 393
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:2400:COA:flow:value2:reported_point:value2": {
+      "id": "Hydromet:2400:COA:flow:value2:reported_point:value2",
+      "creek": "Shoal Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "2400",
+      "original_series_id": "COA:flow:value2:reported_point",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:2400",
+      "coverage": {
+        "records": 393,
+        "measured": 0,
+        "missing": 393,
+        "rejected": 393,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 393
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:950:COA:flow:value1:reported_point:value1": {
+      "id": "Hydromet:950:COA:flow:value1:reported_point:value1",
+      "creek": "Williamson Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "950",
+      "original_series_id": "COA:flow:value1:reported_point",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:950",
+      "coverage": {
+        "records": 394,
+        "measured": 394,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-09-29T09:45:14Z",
+        "last": "2026-10-03T12:00:15Z",
+        "by_date": {
+          "2026-09-29": 57,
+          "2026-09-30": 96,
+          "2026-10-01": 96,
+          "2026-10-02": 96,
+          "2026-10-03": 49
+        },
+        "by_year": {
+          "2026": 394
+        },
+        "median_spacing_minutes": 15.0,
+        "max_gap_minutes": 15.133333333333333,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 394
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:950:COA:flow:value2:reported_point:value2": {
+      "id": "Hydromet:950:COA:flow:value2:reported_point:value2",
+      "creek": "Williamson Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "950",
+      "original_series_id": "COA:flow:value2:reported_point",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:950",
+      "coverage": {
+        "records": 394,
+        "measured": 0,
+        "missing": 394,
+        "rejected": 394,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 394
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:122:COA:current:stage:stage": {
+      "id": "Hydromet:122:COA:current:stage:stage",
+      "creek": "Blunn Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "122",
+      "original_series_id": "COA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:122",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:45:14Z",
+        "last": "2026-10-03T12:00:10Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1454.9333333333334,
+        "max_gap_minutes": 1454.9333333333334,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:122:COA:current:flow:flow": {
+      "id": "Hydromet:122:COA:current:flow:flow",
+      "creek": "Blunn Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "122",
+      "original_series_id": "COA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:122",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:45:14Z",
+        "last": "2026-10-03T12:00:10Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1454.9333333333334,
+        "max_gap_minutes": 1454.9333333333334,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:950:COA:current:stage:stage": {
+      "id": "Hydromet:950:COA:current:stage:stage",
+      "creek": "Williamson Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "950",
+      "original_series_id": "COA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:950",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:45:17Z",
+        "last": "2026-10-03T12:00:15Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1454.9666666666667,
+        "max_gap_minutes": 1454.9666666666667,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:950:COA:current:flow:flow": {
+      "id": "Hydromet:950:COA:current:flow:flow",
+      "creek": "Williamson Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "950",
+      "original_series_id": "COA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:950",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:2400:COA:current:stage:stage": {
+      "id": "Hydromet:2400:COA:current:stage:stage",
+      "creek": "Shoal Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "2400",
+      "original_series_id": "COA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:2400",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:45:16Z",
+        "last": "2026-10-03T12:00:15Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1454.9833333333333,
+        "max_gap_minutes": 1454.9833333333333,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:2400:COA:current:flow:flow": {
+      "id": "Hydromet:2400:COA:current:flow:flow",
+      "creek": "Shoal Creek",
+      "operator": "COA",
+      "feed": "Hydromet",
+      "site": "2400",
+      "original_series_id": "COA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "COA:2400",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:3992:LCRA:current:stage:stage": {
+      "id": "Hydromet:3992:LCRA:current:stage:stage",
+      "creek": "Bull Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "3992",
+      "original_series_id": "LCRA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:3992",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:3992:LCRA:current:flow:flow": {
+      "id": "Hydromet:3992:LCRA:current:flow:flow",
+      "creek": "Bull Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "3992",
+      "original_series_id": "LCRA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:3992",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4520:LCRA:current:stage:stage": {
+      "id": "Hydromet:4520:LCRA:current:stage:stage",
+      "creek": "Barton Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4520",
+      "original_series_id": "LCRA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4520",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4520:LCRA:current:flow:flow": {
+      "id": "Hydromet:4520:LCRA:current:flow:flow",
+      "creek": "Barton Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4520",
+      "original_series_id": "LCRA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4520",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4561:LCRA:current:stage:stage": {
+      "id": "Hydromet:4561:LCRA:current:stage:stage",
+      "creek": "Walnut Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4561",
+      "original_series_id": "LCRA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4561",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4561:LCRA:current:flow:flow": {
+      "id": "Hydromet:4561:LCRA:current:flow:flow",
+      "creek": "Walnut Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4561",
+      "original_series_id": "LCRA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4561",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4598:LCRA:current:stage:stage": {
+      "id": "Hydromet:4598:LCRA:current:stage:stage",
+      "creek": "Onion Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4598",
+      "original_series_id": "LCRA:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4598",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:56:41Z",
+        "last": "2026-10-03T11:56:39Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1439.9666666666667,
+        "max_gap_minutes": 1439.9666666666667,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:4598:LCRA:current:flow:flow": {
+      "id": "Hydromet:4598:LCRA:current:flow:flow",
+      "creek": "Onion Creek",
+      "operator": "LCRA",
+      "feed": "Hydromet",
+      "site": "4598",
+      "original_series_id": "LCRA:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "LCRA:4598",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:56:41Z",
+        "last": "2026-10-03T11:56:39Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1439.9666666666667,
+        "max_gap_minutes": 1439.9666666666667,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08158970:USGS:current:stage:stage": {
+      "id": "Hydromet:08158970:USGS:current:stage:stage",
+      "creek": "Williamson Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08158970",
+      "original_series_id": "USGS:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158970",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:45:00Z",
+        "last": "2026-10-03T11:45:00Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1440.0,
+        "max_gap_minutes": 1440.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08158970:USGS:current:flow:flow": {
+      "id": "Hydromet:08158970:USGS:current:flow:flow",
+      "creek": "Williamson Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08158970",
+      "original_series_id": "USGS:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158970",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:45:00Z",
+        "last": "2026-10-03T11:45:00Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1440.0,
+        "max_gap_minutes": 1440.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08154700:USGS:current:stage:stage": {
+      "id": "Hydromet:08154700:USGS:current:stage:stage",
+      "creek": "Bull Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08154700",
+      "original_series_id": "USGS:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08154700",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 0,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08154700:USGS:current:flow:flow": {
+      "id": "Hydromet:08154700:USGS:current:flow:flow",
+      "creek": "Bull Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08154700",
+      "original_series_id": "USGS:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08154700",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 0,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08155300:USGS:current:stage:stage": {
+      "id": "Hydromet:08155300:USGS:current:stage:stage",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08155300",
+      "original_series_id": "USGS:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:50:00Z",
+        "last": "2026-10-03T11:55:00Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1445.0,
+        "max_gap_minutes": 1445.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08155300:USGS:current:flow:flow": {
+      "id": "Hydromet:08155300:USGS:current:flow:flow",
+      "creek": "Barton Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08155300",
+      "original_series_id": "USGS:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08155300",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:50:00Z",
+        "last": "2026-10-03T11:55:00Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1445.0,
+        "max_gap_minutes": 1445.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08158600:USGS:current:stage:stage": {
+      "id": "Hydromet:08158600:USGS:current:stage:stage",
+      "creek": "Walnut Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08158600",
+      "original_series_id": "USGS:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158600",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 0,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08158600:USGS:current:flow:flow": {
+      "id": "Hydromet:08158600:USGS:current:flow:flow",
+      "creek": "Walnut Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08158600",
+      "original_series_id": "USGS:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08158600",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 0,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08159000:USGS:current:stage:stage": {
+      "id": "Hydromet:08159000:USGS:current:stage:stage",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08159000",
+      "original_series_id": "USGS:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08159000:USGS:current:flow:flow": {
+      "id": "Hydromet:08159000:USGS:current:flow:flow",
+      "creek": "Onion Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08159000",
+      "original_series_id": "USGS:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08159000",
+      "coverage": {
+        "records": 2,
+        "measured": 0,
+        "missing": 2,
+        "rejected": 2,
+        "first": null,
+        "last": null,
+        "by_date": {},
+        "by_year": {},
+        "median_spacing_minutes": null,
+        "max_gap_minutes": null,
+        "gaps_over_60_minutes": 0,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08156800:USGS:current:stage:stage": {
+      "id": "Hydromet:08156800:USGS:current:stage:stage",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08156800",
+      "original_series_id": "USGS:current:stage",
+      "quantity": "stage",
+      "unit": "ft",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:15:00Z",
+        "last": "2026-10-03T11:15:00Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1440.0,
+        "max_gap_minutes": 1440.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    },
+    "Hydromet:08156800:USGS:current:flow:flow": {
+      "id": "Hydromet:08156800:USGS:current:flow:flow",
+      "creek": "Shoal Creek",
+      "operator": "USGS",
+      "feed": "Hydromet",
+      "site": "08156800",
+      "original_series_id": "USGS:current:flow",
+      "quantity": "discharge",
+      "unit": "ft3/s",
+      "statistic": "reported_point",
+      "primary": false,
+      "physical_gauge_id": "USGS:08156800",
+      "coverage": {
+        "records": 2,
+        "measured": 2,
+        "missing": 0,
+        "rejected": 0,
+        "first": "2026-10-02T11:15:00Z",
+        "last": "2026-10-03T11:15:00Z",
+        "by_date": {
+          "2026-10-02": 1,
+          "2026-10-03": 1
+        },
+        "by_year": {
+          "2026": 2
+        },
+        "median_spacing_minutes": 1440.0,
+        "max_gap_minutes": 1440.0,
+        "gaps_over_60_minutes": 1,
+        "approval_counts": {
+          "unknown": 2
+        },
+        "qualifier_counts": {}
+      }
+    }
+  },
+  "display_selection": {
+    "USGS:08154700:instantaneous": {
+      "series_id": "USGS:08154700:9cf321eed671456f9325c9817f130ff3:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    },
+    "USGS:08154700:daily_mean": {
+      "series_id": "USGS:08154700:82c75fb004f64d1c88462732a61eac03:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    },
+    "USGS:08155300:instantaneous": {
+      "series_id": "USGS:08155300:eb4f487f5d6848abba77f3612cf2248e:00060",
+      "reason": "provider-designated primary",
+      "alternates": [
+        "USGS:08155300:c832566ded7746918fd46dfff066039c:00060"
+      ]
+    },
+    "USGS:08155300:daily_mean": {
+      "series_id": "USGS:08155300:de61cde9168e4713a7ae1664d44846d7:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    },
+    "USGS:08156800:instantaneous": {
+      "series_id": "USGS:08156800:2abb693d2d934b0ca78c2dad65c591ad:00060",
+      "reason": "provider-designated primary",
+      "alternates": [
+        "USGS:08156800:b5e30e755f6540c4a4afc852e5bc0ed1:00060"
+      ]
+    },
+    "USGS:08156800:daily_mean": {
+      "series_id": "USGS:08156800:92a89e110825453991534ecd8b9eedd8:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    },
+    "USGS:08158600:instantaneous": {
+      "series_id": "USGS:08158600:d3056974f4694648a68ef180964d24fc:00060",
+      "reason": "only saved series; primary designation unavailable",
+      "alternates": []
+    },
+    "USGS:08158600:daily_mean": {
+      "series_id": "USGS:08158600:f8eeee52f4e64e008a82644e7e0e52af:00060",
+      "reason": "only saved series; primary designation unavailable",
+      "alternates": []
+    },
+    "USGS:08158970:instantaneous": {
+      "series_id": "USGS:08158970:26253cc61add4d15ba3154037008db9f:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    },
+    "USGS:08158970:daily_mean": {
+      "series_id": "USGS:08158970:ff97d3e8ee294e9690766846bfa3bc4f:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    },
+    "USGS:08159000:instantaneous": {
+      "series_id": "USGS:08159000:d1ce331e7ea1497081d026c5789e55f7:00060",
+      "reason": "provider-designated primary",
+      "alternates": [
+        "USGS:08159000:9ac45c751b9d47a7bbcd937cf06a6054:00060"
+      ]
+    },
+    "USGS:08159000:daily_mean": {
+      "series_id": "USGS:08159000:c9d5cf88634b48fa80306a12b7cbe745:00060",
+      "reason": "provider-designated primary",
+      "alternates": []
+    }
+  },
+  "archive_coverage": [
+    {
+      "creek": "Bull Creek",
+      "source": "LCRA:3992",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 120,
+      "failed_windows": 0,
+      "empty_windows": 12,
+      "records": 865853,
+      "first": "1991-12-01T06:03:00Z",
+      "last": "2026-10-02T01:41:41Z",
+      "by_year": {
+        "1989": 0,
+        "1990": 0,
+        "1991": 911,
+        "1992": 7979,
+        "1993": 8009,
+        "1994": 7749,
+        "1995": 7657,
+        "1996": 8005,
+        "1997": 7999,
+        "1998": 8376,
+        "1999": 8667,
+        "2000": 8431,
+        "2001": 8699,
+        "2002": 9313,
+        "2003": 8980,
+        "2004": 8837,
+        "2005": 20679,
+        "2006": 35260,
+        "2007": 35149,
+        "2008": 32278,
+        "2009": 33500,
+        "2010": 33604,
+        "2011": 32719,
+        "2012": 32587,
+        "2013": 32569,
+        "2014": 33554,
+        "2015": 34983,
+        "2016": 35102,
+        "2017": 35000,
+        "2018": 34961,
+        "2019": 34985,
+        "2020": 35084,
+        "2021": 35029,
+        "2022": 35023,
+        "2023": 34499,
+        "2024": 35082,
+        "2025": 35017,
+        "2026": 49577
+      },
+      "manifest": "data/captures/hydromet/lcra/3992-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    },
+    {
+      "creek": "Barton Creek",
+      "source": "LCRA:4520",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 120,
+      "failed_windows": 0,
+      "empty_windows": 12,
+      "records": 897855,
+      "first": "1991-12-01T06:04:00Z",
+      "last": "2026-10-02T01:41:41Z",
+      "by_year": {
+        "1989": 0,
+        "1990": 0,
+        "1991": 949,
+        "1992": 7156,
+        "1993": 8373,
+        "1994": 8103,
+        "1995": 7935,
+        "1996": 8196,
+        "1997": 8161,
+        "1998": 8457,
+        "1999": 8170,
+        "2000": 8320,
+        "2001": 8212,
+        "2002": 9278,
+        "2003": 8965,
+        "2004": 8666,
+        "2005": 20383,
+        "2006": 35180,
+        "2007": 35207,
+        "2008": 35062,
+        "2009": 35035,
+        "2010": 35645,
+        "2011": 35031,
+        "2012": 41061,
+        "2013": 42832,
+        "2014": 42265,
+        "2015": 34296,
+        "2016": 35067,
+        "2017": 34988,
+        "2018": 34971,
+        "2019": 34817,
+        "2020": 35079,
+        "2021": 34892,
+        "2022": 34960,
+        "2023": 32499,
+        "2024": 35091,
+        "2025": 35035,
+        "2026": 49518
+      },
+      "manifest": "data/captures/hydromet/lcra/4520-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    },
+    {
+      "creek": "Walnut Creek",
+      "source": "LCRA:4561",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 117,
+      "failed_windows": 0,
+      "empty_windows": 9,
+      "records": 858262,
+      "first": "1991-12-01T06:04:00Z",
+      "last": "2026-10-02T01:41:44Z",
+      "by_year": {
+        "1989": 0,
+        "1990": 0,
+        "1991": 954,
+        "1992": 8563,
+        "1993": 8259,
+        "1994": 8077,
+        "1995": 7886,
+        "1996": 8286,
+        "1997": 8098,
+        "1998": 8896,
+        "1999": 9081,
+        "2000": 8400,
+        "2001": 7809,
+        "2002": 8881,
+        "2003": 8843,
+        "2004": 8733,
+        "2005": 20817,
+        "2006": 36079,
+        "2007": 25539,
+        "2008": 33317,
+        "2009": 32046,
+        "2010": 33547,
+        "2011": 32166,
+        "2012": 32781,
+        "2013": 33660,
+        "2014": 33070,
+        "2015": 35002,
+        "2016": 35056,
+        "2017": 34962,
+        "2018": 34937,
+        "2019": 34983,
+        "2020": 35083,
+        "2021": 35001,
+        "2022": 34736,
+        "2023": 34993,
+        "2024": 35117,
+        "2025": 35048,
+        "2026": 49556
+      },
+      "manifest": "data/captures/hydromet/lcra/4561-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    },
+    {
+      "creek": "Onion Creek",
+      "source": "LCRA:4598",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 114,
+      "failed_windows": 0,
+      "empty_windows": 8,
+      "records": 402850,
+      "first": "1991-12-01T06:05:00Z",
+      "last": "2026-10-03T12:00:00Z",
+      "by_year": {
+        "1989": 0,
+        "1990": 0,
+        "1991": 959,
+        "1992": 8538,
+        "1993": 8333,
+        "1994": 7995,
+        "1995": 7880,
+        "1996": 8282,
+        "1997": 8101,
+        "1998": 8970,
+        "1999": 8848,
+        "2000": 8230,
+        "2001": 8895,
+        "2002": 9295,
+        "2003": 8849,
+        "2004": 8732,
+        "2005": 11611,
+        "2006": 8763,
+        "2007": 17082,
+        "2008": 17406,
+        "2009": 17586,
+        "2010": 8763,
+        "2011": 17061,
+        "2012": 12392,
+        "2013": 25494,
+        "2014": 17355,
+        "2015": 8689,
+        "2016": 17575,
+        "2017": 17381,
+        "2018": 26129,
+        "2019": 8745,
+        "2020": 8783,
+        "2021": 8746,
+        "2022": 8603,
+        "2023": 8761,
+        "2024": 8787,
+        "2025": 8762,
+        "2026": 6469
+      },
+      "manifest": "data/captures/hydromet/lcra/4598-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    },
+    {
+      "creek": "Blunn Creek",
+      "source": "COA:122",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 39,
+      "failed_windows": 0,
+      "empty_windows": 5,
+      "records": 370238,
+      "first": "2015-11-13T21:27:36Z",
+      "last": "2026-10-03T12:00:10Z",
+      "by_year": {
+        "2014": 0,
+        "2015": 4636,
+        "2016": 33697,
+        "2017": 33768,
+        "2018": 33952,
+        "2019": 31088,
+        "2020": 34254,
+        "2021": 34645,
+        "2022": 34183,
+        "2023": 34813,
+        "2024": 34827,
+        "2025": 34651,
+        "2026": 25724
+      },
+      "manifest": "data/captures/hydromet/coa/122-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    },
+    {
+      "creek": "Shoal Creek",
+      "source": "COA:2400",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 39,
+      "failed_windows": 0,
+      "empty_windows": 5,
+      "records": 376491,
+      "first": "2015-10-28T17:37:36Z",
+      "last": "2026-10-03T12:00:15Z",
+      "by_year": {
+        "2014": 0,
+        "2015": 6104,
+        "2016": 35116,
+        "2017": 34923,
+        "2018": 34936,
+        "2019": 32196,
+        "2020": 34980,
+        "2021": 34715,
+        "2022": 34949,
+        "2023": 34958,
+        "2024": 35043,
+        "2025": 34354,
+        "2026": 24217
+      },
+      "manifest": "data/captures/hydromet/coa/2400-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    },
+    {
+      "creek": "Williamson Creek",
+      "source": "COA:950",
+      "scope": "archive window counts, not unique numeric observations",
+      "windows": 39,
+      "failed_windows": 0,
+      "empty_windows": 5,
+      "records": 379979,
+      "first": "2015-10-28T17:42:35Z",
+      "last": "2026-10-03T12:00:15Z",
+      "by_year": {
+        "2014": 0,
+        "2015": 6188,
+        "2016": 35014,
+        "2017": 35218,
+        "2018": 34972,
+        "2019": 32214,
+        "2020": 35049,
+        "2021": 34931,
+        "2022": 35017,
+        "2023": 35001,
+        "2024": 35108,
+        "2025": 34981,
+        "2026": 26286
+      },
+      "manifest": "data/captures/hydromet/coa/950-manifest.json",
+      "comparison": "event points only; no verified continuous sensor/datum history"
+    }
+  ],
+  "observations": {
+    "path": "observations.jsonl",
+    "rows": 163090,
+    "sha256": "a1f799313aa4cfecff170959a9c447efce511f2afeb191e4e36b96e51b1fc8bb"
+  },
+  "limitations": [
+    "Hydromet flow/stage units follow the captured official field legend and matching history headers.",
+    "Hydromet hourly spacing is not an hourly mean; native history is reported_point, statistic not independently certified.",
+    "No inferred datum, sensor crosswalk, rain/lake/well adapter, rejection flag, or missing observation is fabricated.",
+    "Stage datum unknown. Station land-surface altitude datum is not the gauge datum.",
+    "USGS historical daily means and instantaneous series remain distinct. Hydromet archive counts describe captured windows, not numeric completeness."
+  ],
+  "conflict_count": 445,
+  "mirror_status_counts": {
+    "disagreement": 16,
+    "agreement": 6,
+    "no_exact_time_match": 2
+  },
+  "unit_evidence": "data/captures/documentary/hydromet-normalization/stage-flow-units.meta.json",
+  "scope_exclusions": [
+    "Barton Springs is a spring, not Barton Creek.",
+    "Little Walnut and Kincheon Branch are tributaries, not the named main channel.",
+    "Walnut Creek at Kingsland and Rockne are different waterways.",
+    "Other Austin gauges remain in the original ledger; this adapter is bounded to six USGS and seven LCRA/COA sites."
+  ]
+}

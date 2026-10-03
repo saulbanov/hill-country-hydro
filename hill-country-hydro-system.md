@@ -22,6 +22,7 @@ forecast, no verdict about a place or a person. Lenses do that, and they say so.
 | L1 acquisition | `tools/monitor.py collect`, `usgs_history.py`, `usgs_series_history.py`, `usgs_peaks.py`, `hydromet.py`, `groundwater.py`, `reservoirs.py`, `eaa.py`, `hazards.py collect`, `weather_validation.py collect`, `cloud_capture_export.py` | `data/raw/` (ignored), `data/captures/` (versioned gzips), `_cloud-captures/` |
 | L2 store and inventories | `water.sqlite` tables; `data/history/*.csv`; `regional_inventory.py` → `data/usgs-locations-regional.json`, `data/stations-regional.json`, `data/usgs-history-plan.json`, `data/wells-regional.json`; `data/eaa-sites.json`; `station_lists.py` | `data/` |
 | L2 deterministic context | `hydro_context.py`, `event_ledger.py`, `storm_delta.py`, `reach_geometry.py`, `weather_validation.py validate` | `app/hydro-context.json`, `data/model/*-event-ledger.json`, `data/model/austin-reach-geometry.json`, `data/model/storm-week-validation.json`, `data/model/storms/*.json`, `app/storm-delta.json` |
+| L2 prototype analytics | `creek_normalize.py`, `creek_analytics.py` (offline; `creek-measurements/v1`) | `data/normalized/creek-analytics/`, `data/model/creek-normalization-audit.json`, `docs/CREEK_ANALYTICS.md`, `docs/CREEK_COVERAGE.md` |
 | L3 products | `publish_bundle.py` → `dist/water-state.json`; the map page `app/index.html` + `app/map.js`; the ideas in `IDEAS.md` | `dist/`, `app/` |
 
 ## What the record holds (2026-10-01)
@@ -45,7 +46,15 @@ The Mac LaunchAgent `org.saulelbein.hill-country-hydro` is the daily-run home, s
 ## Synchronizing with the Mac copy and the swim lens
 The order of operations (merge the swim repo on the Mac, clone this repo beside it, move the measurement raw archive here, rebuild, publish, verify the lens, then prune the swim repo and move the daily run home) is written once, in `saulbanov/austin-swim-map/HANDOFF_2026-10-01_local-integration.md` section 10. The same walkthrough is copied here as `HANDOFF_2026-10-01_split-and-sync.md`; `tools/cloud_capture_restore.py` exists and is tested.
 
+## Next build handoff
+
+[Normalize the sources, then build the creek prototype](docs/NORMALIZATION_AND_CREEK_PROTOTYPE_HANDOFF.md) is the self-contained execution brief for architecture, normalization, a bounded creek display and publication to the existing Site. Keep its evolving decisions and implementation status in this system document. Normalization must be integrated and pushed to hill-country-hydro main as a reusable prototype analytic layer, independently of the online map. The handoff does not mean those stages are already implemented or merged.
+
 ## Open items
+
+- Cross-provider normalization before creek rendering: Saul identified normalization across intakes as a necessary intermediate step. Existing ingestion stores typed measurements but keeps USGS observations and Hydromet history in different schemas; Hydromet also republishes USGS readings. Define a derived common measurement record with original provider/station/series IDs, measurement type, units and datum where applicable, observation time and sampling/aggregation interval, qualifiers, missingness and raw provenance. Verify mirrored-source identities before choosing a display series, preserve disagreements, and never average duplicates or equate stage with discharge. Historical normalization to a station’s own seasonal record is a separate downstream step; shared visual scales must state which comparisons are actually comparable. No new schema or metric is approved yet.
+
+- Map redesign: Saul clarified that explaining a particular storm is the entry point, especially during storms; understanding regional water over time is the larger project. He wants to see the creeks themselves appear swollen, with line size or color encoding departure from a usual baseline. The baseline and visual scale remain to be chosen. Inspect existing Austin creek geometry and seasonal station context, then prototype a few named creeks before expanding regionally. Explicitly resolve which channel segment a gauge represents; the existing geometry tool establishes position only, not hydrologic representativeness. Distinguish symbolic stroke width from mapped inundation, missing observations from low flow, and historical daily comparisons from instantaneous readings. Proposed prototype scope and encoding are not yet an approved implementation specification.
 
 - Observe the first scheduled Mac run and check both `Daily run YYYYMMDD` commits. At 2026-10-02 21:50 Central the water checkout contained concurrent uncommitted Hydromet history work. If it remains dirty at 6:57, the runner's clean-branch guard will fail before any provider request; finish or move that work through its own session, then assess the next day's run without a same-day retry.
 
@@ -63,6 +72,10 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Decision log
 
+- 2026-10-03 · Normalization belongs in hydro main · Saul requires the normalization layer to merge into hill-country-hydro as a prototype analytic layer. It must have reusable outputs, tests, a documented contract and an offline command; the website consumes it. Completion requires integration verified on origin/main after passing suites, not merely a branch or a published website.
+
+- 2026-10-03 · Storms lead the water map · Saul clarified that understanding a particular storm is the entry point and regional water conditions over time are the larger project. The intended visual subject is the creek or river channel, with size or color conveying departure from its usual condition. A definition of usual, the visual scale, and gauge-to-reach assignments remain open; no measurement rules were changed.
+
 - 2026-10-03 · Storm computation stays offline · Acquisition retains raw bodies and metadata first, then normalization and deterministic computation use them. This follows Saul’s scrape/analysis separation over the handoff’s shorthand “compute fetches.” Additive `storm_delta` keeps schema 1 as explicitly requested. Daily records use the last complete day before t0 as baseline; within-day clock times are not invented. Hand-authored storm hypotheses remain separate from computed measurements.
 
 - 2026-10-02 · Move the daily run to the Mac · Saul chose Mac launchd and confirmed he disabled the claude.ai routine before the Mac job was loaded. The runner permits one provider attempt per Central-time day and uses repeatable offline fault tests; no same-day provider retry is scheduled. The first live scheduled run is the end-to-end check.
@@ -79,6 +92,28 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - 2026-10-01 · Ideas file · Saul asked for the build ideas to live in a Markdown file cross-linked with this document: `IDEAS.md`.
 
 ## Session log
+
+### 2026-10-03 — require normalization integration
+- Updated the execution handoff after Saul specified that normalization must merge into hill-country-hydro as a prototype analytic layer. Added a distinct integration checkpoint, reusable-output requirements, documentation and verification of the commit on origin/main. Removed the earlier blanket instruction to recheck permission for this now-explicitly requested integration.
+- This session updated the handoff and living plan only; the normalization implementation and integration remain pending.
+
+### 2026-10-03 — normalization and prototype handoff
+- Saul requested a handoff for architecture and an online build, clarifying the sequence as “normalization then prototype.” Wrote `docs/NORMALIZATION_AND_CREEK_PROTOTYPE_HANDOFF.md` with source references, unresolved normalization and display decisions, implementation stages, verification and the existing publishing destination.
+- The brief requires the prototype to consume common normalized measurements and distinguishes source normalization from comparison with a creek’s own history. It preserves the raw archives and existing measurement rules. The document is ready for a fresh executing session; no implementation, commit, push or deployment was performed while authoring it.
+
+### 2026-10-03 — normalize intakes before visual comparison
+- Saul identified normalization between data intakes as a necessary intermediate step toward creek lines that show departure from usual conditions.
+- Inspected monitor.py, hydromet.py, storm_delta.py and publish_bundle.py. USGS rows carry parameter, unit, series ID and qualifiers; Hydromet history retains provider-specific param/value1/value2 fields and hourly flags. The Hydromet feed also contains mirrored USGS sites. Existing typed storage therefore does not by itself establish cross-provider comparability or source identity.
+- Recorded the required normalization review above, separately from the later choice of seasonal comparison and visual scale. Source data and implementation remain unchanged.
+
+### 2026-10-03 — creek-shaped storm display
+- Saul described seeing “the creeks all swollen”: creek size or color should express how far flow differs from a baseline still to be defined. This clarifies the desired visual beyond an inventory of gauge markers.
+- Source inspection found saved Austin creek lines and same-season daily-flow context (median and percentiles within the existing ±15-day calendar window). The geometry tool explicitly does not establish hydrologic relationships. These are reusable inputs, not a completed basis for coloring entire creeks. No interface, data, threshold or deployment changes were made.
+
+### 2026-10-03 — map comprehension review
+- Saul clarified that the map itself is incomprehensible: he sees dots, cannot readily tell what they mean, and is unsure of the intended product. This is a product-purpose and presentation question, not a missing merge.
+- Read the original storm handoff and inspected the published page in BrowserOS with Storm changes off and on. The default view groups controls by provider and begins with “Pick a marker.” The storm view adds overlapping rain, flow, spring, well and lake symbols below a long methods paragraph; the initial sidebar still gives generic station instructions. These observations support the need for a clearer first view, beyond checking that the layer draws.
+- The original handoff aimed to explain change over a storm window. Discussion now needs to establish whether that event explanation or a broader regional water overview should lead the product. No interface changes or deployment were made during this review.
 
 ### 2026-10-03 — publish the water map
 - Saul requested a shareable site. Published the existing map, schema-1 bundle and two storm evidence files at https://hill-country-hydro.saul-elbein.chatgpt.site with public link access. No collector code, raw archive or source-repository history is in the hosted artifact.
@@ -128,3 +163,25 @@ Saul pointed out that the Hydromet network carries more Bull, Barton, Onion and 
 ### 2026-10-01 — seeded, pushed, documented
 - First commit `f3dfcd9` pushed to `saulbanov/hill-country-hydro` (private) after Saul created the empty repository; the session's GitHub integration cannot create repositories itself.
 - Added this system document and `IDEAS.md`; linked both from `README.md` and `AGENTS.md`. Added `tools/cloud_capture_restore.py` (checksum-verified restore of `_cloud-captures/` into `data/raw/`, never overwriting a differing file) and the split-and-sync handoff. Tests: 24 pass.
+
+
+### 2026-10-03 — normalization build in progress
+- Architecture: publish an independently versioned `creek-measurements/v1` analytic artifact under `data/normalized/creek-analytics/`, leaving the schema-1 water bundle and daily routine unchanged. Offline adapters read preserved USGS bodies and Hydromet captures, never modify the source store, and retain original operators, feeds, site IDs, series, timestamps, qualifiers and capture hashes.
+- Scope: six Austin USGS channel gauges plus seven LCRA/City comparison sites, covering the seven named candidate creeks. Audit the broader candidate inventory separately; exclude tributaries, springs and same-name creeks outside Austin from channel assignment. USGS-labeled Hydromet rows with exactly matching station numbers are verified distribution aliases; LCRA-numbered co-located gauges remain separate without a published crosswalk.
+- Comparison decision: contrast instantaneous discharge with the same station's seasonal median **daily mean**, using prior years within ±15 calendar days of October 1. Label both time scales. This is a daily-flow reference, never an instantaneous percentile. Ratios are null at zero baselines; signed cfs difference remains defined. Prefer the provider-designated primary sensor, never the series with the most rows. The map will also provide before/after snapshots with bounded age and no interpolation. Blunn has no USGS daily reference and must remain visibly unavailable on this scale.
+- Alternatives: an instantaneous historical percentile needs a matching continuous reference; annual peaks answer annual extremes; event-relative baselines do not mean usual; stage comparisons need verified datum continuity. These are withheld in this prototype. Inspect seasonal coverage before accepting any reference.
+- Geometry: use short gauge-location strokes on the explicitly named channel, clipped within one saved way, never extrapolate whole creeks. The stroke locates the gauge measurement and does not assert reach-wide flow. Record coordinate/name evidence and the clip limits; all other channel geometry remains dashed and unmeasured.
+- Small official acquisition: retained the Hydromet stage/flow report and sidecar to verify its explicit feet/cfs field labels. No paid services or collection routine changes.
+
+Execution checklist:
+- [x] Source audit and reusable offline analytic layer, contract and tests.
+- [ ] Full water and isolated swim tests; normalization commit verified on origin/main.
+- [ ] Prototype built from integrated output; desktop and narrow browser checks.
+- [ ] Existing public Site updated and deployment confirmed.
+- [ ] Saul's comprehension assessment received.
+
+- Audit refinement: the complete-record approach failed the coverage gate at Williamson and Onion because older records have long gaps. The prior twenty calendar years (2006–2025) form a common explicit reference. Per-year distributions show Williamson resumes in 2007; the other five cover every year. Require 80% of the full 620-date seasonal window, preserving any missing years in the denominator. This supersedes the unrestricted prior-years reference discussed above.
+- Source findings: 163,090 original observation records in 65 distinct feed/sensor/statistic series. There are 445 same-series revision conflicts (224 flow, 221 stage), all at Williamson; every capture remains retained. Hydromet's exact-time mirror audit also keeps disagreements and nonmatches. The normalized store was generated without editing source records.
+
+- Normalization validation: full water suite passed 86 tests; isolated copy of the current swim checkout fetched/applied the unchanged schema-1 bundle and passed 79 tests with one existing skip. Sixteen new analytic tests cover units, unknown datum, missing/zero/nonfinite values, ambiguous/date-only time, provisional/rejected/stale states, aliases, conflicts, multiple sensors, checksum failures, sampling mismatches, zero medians, inadequate history and temporal gaps. Original tests are unchanged.
+- Offline reproduction: `python3 tools/creek_normalize.py --storm 2026-09-30 --through 2026-10-03T12:15:00Z && python3 tools/creek_analytics.py`. All six USGS daily references pass the declared 2006–2025 coverage gate. Normalization is ready for its independent main integration; map implementation begins only after remote verification.

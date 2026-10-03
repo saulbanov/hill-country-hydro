@@ -97,3 +97,21 @@ These README commands do not alter the installed daily runner or its prompt.
 See `AGENTS.md`: raw before interpretation, missing is never zero, no color and no verdict here, ids frozen,
 official sources only, gentle with providers. Attribution: USGS, TWDB (Water Data for Texas), LCRA Hydromet (LCRA and City of Austin gauges), Edwards Aquifer
 Authority, National Weather Service, OpenStreetMap contributors (ODbL), City of Austin GIS.
+
+
+## Reusable creek prototype analytics
+
+The independent [`creek-measurements/v1` contract](docs/CREEK_ANALYTICS.md) normalizes saved
+USGS and LCRA/City creek observations, retaining sources, alternative sensors and conflicts.
+It is an offline prototype analytic layer in this repository; the website consumes its output.
+The existing water bundle stays schema 1. [Source coverage and gaps](docs/CREEK_COVERAGE.md).
+
+```sh
+python3 tools/creek_normalize.py --storm 2026-09-30 --through 2026-10-03T12:15:00Z
+python3 tools/creek_analytics.py
+```
+
+Other consumers can read `data/normalized/creek-analytics/catalog.json`, `observations.jsonl`
+and `references.json`, or use `tools.creek_analytics.load()`. The large store is regenerable
+from the preserved inputs and remains ignored. These commands are manual; the daily routine
+is unchanged. The contract documents missing archive prerequisites and comparison limits.
