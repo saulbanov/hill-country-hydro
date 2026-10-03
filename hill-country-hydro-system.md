@@ -177,7 +177,7 @@ Execution checklist:
 - [x] Source audit and reusable offline analytic layer, contract and tests.
 - [x] Full water and isolated swim tests; normalization commit verified on origin/main.
 - [x] Prototype built from integrated output; desktop and narrow browser checks.
-- [ ] Existing public Site updated and deployment confirmed.
+- [x] Existing public Site updated and deployment confirmed.
 - [ ] Saul's comprehension assessment received.
 
 - Audit refinement: the complete-record approach failed the coverage gate at Williamson and Onion because older records have long gaps. The prior twenty calendar years (2006–2025) form a common explicit reference. Per-year distributions show Williamson resumes in 2007; the other five cover every year. Require 80% of the full 620-date seasonal window, preserving any missing years in the denominator. This supersedes the unrestricted prior-years reference discussed above.
@@ -201,3 +201,11 @@ Execution checklist:
 - Initial-screen inference: the supported Shoal and Walnut locations show the largest absolute departures from their daily references; Barton has a small saved flow; Blunn lacks this comparison. It does not establish how rare a peak is, the condition of entire creeks, flood extent or safety. Saul's actual comprehension judgment remains open.
 - Verification after the final build: 97 water tests passed, including 27 new normalization/analytic/geometry/artifact checks; isolated swim passed 79 tests with one existing skip. JavaScript syntax and the 15-file public package's local links passed. Existing tests, thresholds, inventories, immutable storms, source records and the schema-1 bundle are preserved.
 - Remaining research is recorded here: matching instantaneous reference distributions; Hydromet instrument and datum continuity; verified cross-provider sensor aliases beyond explicit USGS distribution IDs; defensible reach-wide hydrologic inference; Blunn's historical daily reference. None is inferred or silently filled in by this prototype.
+
+
+### 2026-10-03 — creek prototype published
+- Existing public Site updated successfully: https://hill-country-hydro.saul-elbein.chatgpt.site . Same Site ID `appgprj_6ac12765acb88191a74ce6c2570385f5`, same public audience; no replacement Site or automation. Original ledger remains at `/ledger.html` and its markers loaded in the browser check.
+- Native deployment returned `succeeded`: `appgdep_6ac185580a508191befa3e3c458807cc`; Site version 2 (`appgprj_6ac12765acb88191a74ce6c2570385f5~appgver_86d592bebd88819187496b9ad57892b2`). Publishing-source commit `1ed6aaf7761ba89314c21bacfa6b3b2cd99c3e3f`; validated archive 7,557,120 bytes, 16 files including the hosting manifest. Public package has 15 site/data/document files; no raw archive, SQLite or source history.
+- Hydro implementation pushed and verified on origin/main: normalization `a07b067557b9e90bf8df17cfaf42b6b41c042b26`; tested metadata correction `0579c6869e0b22b60cfb9999a94dfc94c8f95396` (pinned by the prototype); map consumer `f49cac0f2e732680760bbc750feb58a5af2d6220`. Both normalization commits remain ancestors of remote main. Final full suites: water 97 passed; swim 79 tests, one existing skip.
+- Final preservation check: the original schema-1 bundle, authored October storm record, inventories, existing tests and daily-run files have no diff from the starting main. Original handoff/discussion notes were retained and integrated. No PR, paid API, new dependency, forecast, schedule or daily-routine change.
+- Delivery is complete through implementation, integration and publication. Saul's judgment of whether the visual is comprehensible is still unreceived; the review checkbox stays open. The map does not claim full-creek measurements, flood extent or an instantaneous historical rank.
