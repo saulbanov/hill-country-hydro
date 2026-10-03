@@ -52,7 +52,8 @@ def plan(day: dt.date) -> list[Step]:
         python_step("water.lakes_normalize", w, "reservoirs", "normalize"),
         python_step("water.lakes_assess", w, "reservoirs", "assess"),
         python_step("water.eaa_conditions", w, "eaa", "conditions"),
-        python_step("water.eaa_collect", w, "eaa", "collect", "--pause-seconds", "4"),
+        python_step("water.eaa_details", w, "eaa", "details", "--pause-seconds", "4",
+                    *(("--version",) if day.weekday() == 6 else ())),
         python_step("water.eaa_normalize", w, "eaa", "normalize"),
         python_step("water.eaa_assess", w, "eaa", "assess"),
         python_step("water.hydromet_collect", w, "hydromet", "collect"),
@@ -129,6 +130,8 @@ def sync_repos() -> None:
         actual = git(repo, "rev-parse", "--show-toplevel", capture=True)
         if pathlib.Path(actual).resolve() != repo.resolve():
             raise RuntimeError("wrong_repo_" + repo.name)
+        if git(repo, "branch", "--show-current", capture=True) != "main":
+            raise RuntimeError("not_main_" + repo.name)
         if git(repo, "status", "--porcelain", capture=True):
             raise RuntimeError("dirty_repo_" + repo.name)
         print("SYNC", repo.name, flush=True)

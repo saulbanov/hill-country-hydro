@@ -24,6 +24,11 @@ class DailyMacRunTests(unittest.TestCase):
                         [s.name for s in sunday].index("water.publish_bundle"))
         self.assertFalse(any("cloud_capture_export" in " ".join(s.args)
                              for s in sunday))
+        for steps, versioned in ((friday, False), (sunday, True)):
+            eaa = next(s for s in steps if s.name == "water.eaa_details")
+            self.assertEqual("details", eaa.args[2])
+            self.assertEqual(versioned, "--version" in eaa.args)
+            self.assertNotIn("water.eaa_collect", [s.name for s in steps])
 
     def test_one_claim_per_day_even_after_failure(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -31,7 +36,7 @@ class DailyMacRunTests(unittest.TestCase):
             day = dt.date(2026, 10, 3)
             first = job.claim_day(day, state)
             self.assertIsNotNone(first)
-            job.progress(first, "failed", "water.eaa_collect")
+            job.progress(first, "failed", "water.eaa_details")
             self.assertIsNone(job.claim_day(day, state))
             self.assertEqual("failed", json.loads(first.read_text())["status"])
             self.assertIsNotNone(job.claim_day(day + dt.timedelta(days=1), state))
@@ -40,7 +45,7 @@ class DailyMacRunTests(unittest.TestCase):
         # Different injected failures exercise water and swim boundaries.
         cases = [
             ("water.usgs_collect", False, 0),
-            ("water.eaa_collect", False, 0),
+            ("water.eaa_details", False, 0),
             ("water.publish_bundle", False, 0),
             ("swim.coa_collect", True, 0),
             ("swim.assess", True, 0),
@@ -84,6 +89,22 @@ class DailyMacRunTests(unittest.TestCase):
                 self.assertEqual(0, job.execute(day))
         claim.assert_not_called()
         run.assert_not_called()
+
+    def test_wrong_branch_stops_before_fetch_or_collection(self):
+        calls = []
+
+        def fake_git(repo, *args, capture=False):
+            calls.append(args)
+            if args == ("rev-parse", "--show-toplevel"):
+                return str(repo)
+            if args == ("branch", "--show-current"):
+                return "unrelated-work"
+            self.fail("Git mutation attempted on a non-main branch")
+
+        with mock.patch.object(job, "git", side_effect=fake_git):
+            with self.assertRaisesRegex(RuntimeError, "not_main_"):
+                job.sync_repos()
+        self.assertEqual(2, len(calls))
 
     def test_water_validation_and_push_failures_block_swim(self):
         day = dt.date(2026, 10, 3)

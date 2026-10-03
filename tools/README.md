@@ -18,6 +18,10 @@ automatically retry providers. Its final stdout line is `RESULT OK`, `RESULT
 SKIPPED`, or `RESULT FAILED` with the date or failed stage. The pinned
 `launchd-run.py` wrapper also records that line in the shared heartbeat log.
 
+The runner refuses branches other than `main`. It uses EAA's current `details`
+command with four-second pauses, adding `--version` on Sundays; it does not use
+the obsolete EAA CSV collection route.
+
 The installed plist is user-local at
 `~/Library/LaunchAgents/org.saulelbein.hill-country-hydro.plist`; the tracked
 reinstall template is `tools/launchd-hill-country-hydro.xml`. It uses the Mac's
@@ -27,12 +31,13 @@ events into one. If the Mac is powered off, this plist has no `RunAtLoad`
 catch-up: the missed day is skipped. The next scheduled day runs once. Keep the
 Mac on Central time if the required wall-clock time is 6:57 AM Central.
 
-Do **not** bootstrap the Mac job until the old claude.ai routine
-`trig_012HVfp2gXNb1wK9K1LBvmyB` has been disabled. This prevents two 6:57
-provider chains. On the cutover day, do not hand-fire collection after the
-cloud has already run. The first scheduled Mac run is the end-to-end proof.
+Saul confirmed that he disabled the old claude.ai routine
+`trig_012HVfp2gXNb1wK9K1LBvmyB` before this LaunchAgent was loaded on
+2026-10-02. The cloud status was not independently visible from the signed-out
+Mac browser. On the cutover day, do not hand-fire collection after the cloud
+has already run. The first scheduled Mac run is the end-to-end proof.
 
-### Install after the cloud routine is off
+### Reinstall after confirming the cloud routine is off
 
 ```sh
 cp tools/launchd-hill-country-hydro.xml ~/Library/LaunchAgents/org.saulelbein.hill-country-hydro.plist

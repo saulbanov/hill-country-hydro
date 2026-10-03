@@ -40,9 +40,7 @@ See `AGENTS.md`. The ones that matter most when adding a source: preserve the ra
 
 ## Daily routine
 
-A claude.ai Routine fires at 6:57 AM Central into the cloud session that seeded this repo. It runs the README chain here, publishes the bundle, commits `Daily run <date>` and pushes, then runs the swim lens off the bundle. Sundays add the full history refresh and the event ledgers. The long-term home for the run is Saul's Mac; the cloud export of raw captures (`_cloud-captures/`) is the stopgap until then and grows roughly 25 MB a day.
-
-On 2026-10-02 Saul chose the Mac as the new daily-run home. The Mac runner and plist are prepared but the plist is not loaded. The handoff reports that the cloud routine is active; its current status has not been inspected in claude.ai. See `tools/README.md` for the guarded cutover.
+The Mac LaunchAgent `org.saulelbein.hill-country-hydro` is the daily-run home, scheduled at 6:57 AM Mac local time (Central at cutover). It runs the water chain, publishes and pushes the bundle, then runs the swim lens. Sundays add the full history refresh and event ledgers. Saul confirmed on 2026-10-02 that he disabled the former claude.ai routine `trig_012HVfp2gXNb1wK9K1LBvmyB` before this job was loaded. The claude.ai state could not be inspected independently because the Mac browser was signed out. See `tools/README.md` for the claim, missed-run, and log behavior. The first scheduled Mac run remains to be observed.
 
 ## Synchronizing with the Mac copy and the swim lens
 The order of operations (merge the swim repo on the Mac, clone this repo beside it, move the measurement raw archive here, rebuild, publish, verify the lens, then prune the swim repo and move the daily run home) is written once, in `saulbanov/austin-swim-map/HANDOFF_2026-10-01_local-integration.md` section 10. The same walkthrough is copied here as `HANDOFF_2026-10-01_split-and-sync.md`; `tools/cloud_capture_restore.py` exists and is tested.
@@ -60,7 +58,7 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Decision log
 
-- 2026-10-02 · Move the daily run to the Mac · Saul chose the Mac launchd option from the split-and-sync handoff. The cutover is pending confirmed deactivation of the claude.ai routine described in the handoff; the Mac plist must remain unloaded until that is confirmed. The runner permits one provider attempt per Central-time day and uses offline fault tests. Saul's intended meaning of “multiple fault runs” remains under clarification.
+- 2026-10-02 · Move the daily run to the Mac · Saul chose Mac launchd and confirmed he disabled the claude.ai routine before the Mac job was loaded. The runner permits one provider attempt per Central-time day and uses repeatable offline fault tests; no same-day provider retry is scheduled. The first live scheduled run is the end-to-end check.
 
 - 2026-10-02 — Hydromet history is stored in fixed calendar windows (Jan-Apr, May-Aug, Sep-Dec) rather than rolling ones, so a window's file name never changes and a closed window is fetched once. The window holding today is refreshed every run. One manifest per site so shards over disjoint site lists can run in parallel without clobbering each other. LCRA history at hourly resolution by default (the server offers it; 15-minute is four times the bytes and available with `--fifteen-minute`); City history at its native 15 minutes because the City endpoint has no hourly form.
 
@@ -74,6 +72,9 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - 2026-10-01 · Ideas file · Saul asked for the build ideas to live in a Markdown file cross-linked with this document: `IDEAS.md`.
 
 ## Session log
+
+### 2026-10-02 — Mac daily-run cutover
+- After Saul reported the claude.ai routine disabled, loaded `org.saulelbein.hill-country-hydro` in `gui/501`. `launchctl print` showed one 6:57 calendar trigger, zero runs, and no immediate collection. `plutil -lint` passed. The job uses `RunAtLoad=false`; it does not catch up after a full power-off. The cloud state is based on Saul's confirmation, not an independent claude.ai inspection. No provider collection was repeated on October 2.
 
 ### 2026-10-03 — storm-delta map handoff
 Saul asked what the week's storm data says and then for a handoff to make it one of the proposed maps. The read: rain fell on the upper Llano, not Austin; paved Austin creeks flashed and emptied, limestone creeks barely moved; the Llano near Junction peaked at 35,000 cfs (top 0.1% of daily means since 1915); Barton Springs rose to 26.5 cfs but stayed at the 17th percentile; Comal did not respond; J-17 jumped 1.7 ft in a day; Travis gained 0.2 ft with about 16,600 acre-ft past Llano and the pulse still running. The handoff specifies the storm window rule, `tools/storm_delta.py`, the map layer, and a hypotheses list with check-by dates.

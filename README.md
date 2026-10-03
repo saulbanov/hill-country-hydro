@@ -14,6 +14,15 @@ or lake is up or down, by how much, and how that compares with the record. It wa
 Plan, decisions and log: [`hill-country-hydro-system.md`](hill-country-hydro-system.md). What could be built on this layer: [`IDEAS.md`](IDEAS.md).
 
 ## How a day works
+
+Saul chose the Mac for the daily run on October 2. The loaded job is
+`org.saulelbein.hill-country-hydro`, scheduled for 6:57 AM Mac local time,
+water first and swim second. Saul reported the old claude.ai trigger disabled
+before the Mac job was loaded; the signed-out Mac browser could not verify its
+state independently. Installation, reversal, logs, sleep behavior, and offline
+checks are in [tools/README.md](tools/README.md). The first scheduled Mac run
+has yet to prove the chain end to end.
+
 1. **Collect** (raw first): `monitor.py collect --inventory` reads every live USGS location; `groundwater.py collect`
    one statewide TWDB well file; `reservoirs.py collect` ten lake CSVs; `eaa.py details` the EAA list pages and every
    active well's page (its full daily record rides in the page) at a gentle pace; `hydromet.py collect` the LCRA Hydromet all-sites feed (LCRA, City of Austin and mirrored USGS
@@ -22,7 +31,7 @@ Plan, decisions and log: [`hill-country-hydro-system.md`](hill-country-hydro-sys
 3. **Context**: `hydro_context.py` (freshness, 6-hour trend, 48-hour peak, same-time-of-year percentile) and,
    weekly, `event_ledger.py` (hysteresis events and per-station thresholds) for the 68 history-tier stations.
 4. **Publish**: `publish_bundle.py` writes `dist/water-state.json` (schema in `CHANGELOG.md`).
-5. **Export**: a cloud run leaves its raw bytes under `_cloud-captures/<session>-<date>/` for a local restore.
+5. **Schedule**: the Mac LaunchAgent `org.saulelbein.hill-country-hydro` runs both repositories at 6:57 AM Mac local time. It keeps raw captures in local `data/raw/`, commits and pushes the water bundle before running the swim lens, and skips a second provider attempt on the same date. See `tools/README.md` for logs and missed runs.
 
 ```sh
 python3 tools/monitor.py collect --inventory && python3 tools/monitor.py normalize
