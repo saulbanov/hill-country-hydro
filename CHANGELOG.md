@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-03 — creek-prototype/v1 consumer
+- Added seven named gauge locations, six seasonal daily-flow contrasts, explicit unavailable comparisons, dated time controls, exact reading provenance and clipped gauge-location strokes.
+- New opening page consumes integrated creek analytics. Original ledger remains at `ledger.html`; raw records, measurement rules, bundle schema and collection schedule are unchanged. Existing Site publication remains manual.
+
+
 ## 2026-10-03 — creek-measurements/v1 prototype analytic contract
 - Added offline USGS/Hydromet creek adapters, source checksums and observation locators, explicit time/unit/aggregation states, primary-series selection, retained revisions and mirror evidence.
 - Independent JSONL/catalog/reference outputs, coverage audit, reader API and seasonal daily comparisons are documented in `docs/CREEK_ANALYTICS.md`. The schema-1 water bundle and daily routine are unchanged.

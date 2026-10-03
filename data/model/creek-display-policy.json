@@ -1,0 +1,113 @@
+{
+  "version": "creek-display/v1",
+  "normalization_integration_commit": "0579c6869e0b22b60cfb9999a94dfc94c8f95396",
+  "storm": "2026-09-30",
+  "anchor_date": "2026-10-01",
+  "gauge_locations": [
+    {
+      "gauge": "USGS:08154700",
+      "creek": "Bull Creek",
+      "label": "Loop 360"
+    },
+    {
+      "gauge": "USGS:08155300",
+      "creek": "Barton Creek",
+      "label": "Loop 360"
+    },
+    {
+      "gauge": "USGS:08156800",
+      "creek": "Shoal Creek",
+      "label": "W 12th Street"
+    },
+    {
+      "gauge": "USGS:08158600",
+      "creek": "Walnut Creek",
+      "label": "Webberville Road"
+    },
+    {
+      "gauge": "USGS:08158970",
+      "creek": "Williamson Creek",
+      "label": "Jimmy Clay Road"
+    },
+    {
+      "gauge": "USGS:08159000",
+      "creek": "Onion Creek",
+      "label": "US 183"
+    },
+    {
+      "gauge": "COA:122",
+      "creek": "Blunn Creek",
+      "label": "Stacy Park"
+    }
+  ],
+  "association_evidence": "Each gauge's provider name explicitly names the creek and crossing/park; provider coordinates locate it on the saved identically named OSM main channel. Geometry alone does not establish the creek identity.",
+  "geometry": {
+    "source": "app/austin-creeks.geojson",
+    "maximum_node_distance_m": 100,
+    "maximum_stroke_each_side_m": 500,
+    "meaning": "A short stroke locates a gauge measurement along the named creek. Its length is a display symbol, not the length of measured or inferred flow. No downstream propagation or reach-wide discharge is asserted.",
+    "limits": "Clip within one saved OSM way, at the 500 m cap on each side, and at any junction shared by saved ways. Unmapped tributaries are not resolved; that is another reason the stroke cannot represent reach-wide flow. Other stretches remain unmeasured."
+  },
+  "views": [
+    {
+      "id": "peak",
+      "label": "Largest saved readings",
+      "at": null,
+      "meaning": "Each gauge's maximum saved reading since the recorded storm start, through its own cutoff. These readings occurred at different times."
+    },
+    {
+      "id": "before",
+      "label": "Oct 1 \u00b7 7 am",
+      "at": "2026-10-01T12:00:00Z",
+      "meaning": "At or before 7 am Central on October 1, within 30 minutes; no interpolation."
+    },
+    {
+      "id": "after",
+      "label": "Oct 2 \u00b7 7 am",
+      "at": "2026-10-02T12:00:00Z",
+      "meaning": "At or before 7 am Central on October 2, within 30 minutes; no interpolation. Later maxima are outside this view."
+    }
+  ],
+  "display_scale": {
+    "quantity": "instantaneous discharge minus seasonal median daily discharge, cfs",
+    "bands": [
+      {
+        "through": 0,
+        "width_px": 3,
+        "color": "#7894a8",
+        "label": "At / below daily reference"
+      },
+      {
+        "through": 10,
+        "width_px": 4,
+        "color": "#609fc7",
+        "label": ">0\u201310 cfs above"
+      },
+      {
+        "through": 100,
+        "width_px": 6,
+        "color": "#337eae",
+        "label": ">10\u2013100 cfs above"
+      },
+      {
+        "through": 500,
+        "width_px": 9,
+        "color": "#4653b5",
+        "label": ">100\u2013500 cfs above"
+      },
+      {
+        "through": null,
+        "width_px": 13,
+        "color": "#64338d",
+        "label": ">500 cfs above"
+      }
+    ],
+    "missing": {
+      "width_px": 3,
+      "color": "#9d9e9c",
+      "dash": "5 5",
+      "label": "Comparison unavailable"
+    },
+    "meaning": "Discrete, capped symbolic line width and sequential color show absolute discharge contrast. Equal widths can hide different values within a band; exact values remain visible. Not inundation, physical channel width, flood severity, event rarity or a safety category."
+  }
+}

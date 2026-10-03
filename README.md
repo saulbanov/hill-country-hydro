@@ -115,3 +115,16 @@ Other consumers can read `data/normalized/creek-analytics/catalog.json`, `observ
 and `references.json`, or use `tools.creek_analytics.load()`. The large store is regenerable
 from the preserved inputs and remains ignored. These commands are manual; the daily routine
 is unchanged. The contract documents missing archive prerequisites and comparison limits.
+
+
+Generate the map snapshot with `python3 tools/creek_prototype.py`. Open `app/index.html`
+through a local HTTP server; `app/ledger.html` retains the original ledger. To prepare the
+existing Site's static package after testing:
+
+```sh
+python3 tools/package_creek_site.py --site-root ../hill-country-hydro-site
+```
+
+This copies public outputs only and does not deploy. Publishing uses the existing Sites
+identity and its normal workflow. The new map uses the public USGS basemap, with symbolic
+localized strokes and a visible saved-data cutoff.

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Central Texas Water Ledger</title>
+<meta name="description" content="What Central Texas's official water gauges said, when, and how that compares with each gauge's own record. No forecasts, no verdicts.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--ink:#1d2b2a;--paper:#f6f3ec;--muted:#6b7570;--line:#d8d2c4;--water:#2b6f8f;--well:#6b5b95;--lake:#2f7d5a;--rain:#b56a2a;--alert:#b4342a;--card:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e8e4da;--paper:#15201f;--muted:#9aa49f;--line:#2f3b39;--card:#1c2a28}}
+:root[data-theme="dark"]{--ink:#e8e4da;--paper:#15201f;--muted:#9aa49f;--line:#2f3b39;--card:#1c2a28}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--paper)}
+header{padding:12px 16px;border-bottom:1px solid var(--line)}h1{font-size:20px;margin:0 0 4px}header p{margin:0;color:var(--muted);font-size:13px}
+.layers{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;font-size:13px}.layers label{display:flex;gap:6px;align-items:center}
+main{display:grid;grid-template-columns:1fr;gap:0}@media(min-width:900px){main{grid-template-columns:1fr 380px;height:calc(100vh - 92px)}}
+#map{height:60vh;min-height:360px}@media(min-width:900px){#map{height:100%}}
+#detail{padding:16px;overflow:auto;border-left:1px solid var(--line);background:var(--card)}#detail h2{font-size:17px;margin:0 0 6px}
+.eyebrow{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:0 0 4px}.muted{color:var(--muted)}
+.fact{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0}.fact h3{font-size:13px;margin:0 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.pin{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 2px #0005}.pin.station{background:var(--water)}.pin.well{background:var(--well)}.pin.lake{background:var(--lake);border-radius:3px}.pin.eaa{background:var(--rain)}.pin.hydromet{background:#7b4ea3;border-radius:2px;transform:rotate(45deg)}.pin.stale{opacity:.45}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--line);margin-right:6px}
+a{color:var(--water)}footer{padding:10px 16px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+#storm-panel{padding:10px 0 0;max-width:1000px;font-size:13px}#storm-panel[hidden]{display:none}#storm-panel p{margin:6px 0}#storm-panel select{font:inherit;padding:5px;background:var(--card);color:var(--ink)}
+.storm-key{display:flex;flex-wrap:wrap;gap:14px;padding:6px 0;color:var(--ink)}.storm-icon{display:block;overflow:visible}.storm-line{margin:6px 0}.storm-reading{font-variant-numeric:tabular-nums}.storm-hypothesis{padding:10px 0;border-top:1px solid var(--line)}
+#storm-summary{max-width:90ch}#storm-hypotheses{max-height:260px;overflow:auto}#storm-unmapped{margin-top:8px}.storm-source{overflow-wrap:anywhere;white-space:pre-wrap}details summary{cursor:pointer}
+</style>
+</head>
+<body>
+<nav style="padding:10px 18px;background:#f6f4ed"><a href="index.html">← Austin creek storm comparison</a></nav>
+<header>
+  <h1>Central Texas Water Ledger</h1>
+  <p>What the official gauges said, when, and how that compares with each gauge's own record. A reading describes a station; nothing here is a forecast or a verdict about a place.</p>
+  <div class="layers">
+    <label><input id="l-stations" type="checkbox" checked> <span class="pin station"></span> USGS stations</label>
+    <label><input id="l-wells" type="checkbox"> <span class="pin well"></span> TWDB wells</label>
+    <label><input id="l-lakes" type="checkbox" checked> <span class="pin lake"></span> Lakes</label>
+    <label><input id="l-eaa" type="checkbox"> <span class="pin eaa"></span> EAA wells &amp; rain gauges</label>
+    <label><input id="l-hydromet" type="checkbox"> <span class="pin hydromet"></span> LCRA &amp; City of Austin gauges (Hydromet)</label>
+    <label><input id="l-storm" type="checkbox"> Storm changes</label>
+  </div>
+  <section id="storm-panel" hidden aria-label="Storm window and evidence">
+    <label for="storm-select">First trigger date </label><select id="storm-select"></select>
+    <p id="storm-summary"></p>
+    <p>Changes at gauges, as the operators published them. Not a flood map, not a swim map, not a forecast.</p>
+    <div class="storm-key"><span>◯ Rain: rolling total, blue</span><span>△ Flow: peak/start</span><span>▥ Springs: start, peak, now</span><span>◇ Wells: brown falling, blue rising</span><span>□ Lakes: elevation change</span></div>
+    <p>Flow fills: gray = no response; purple = flash; blue = sustained; slate = modest. Hollow = missing value or unresolved comparison.</p>
+    <div id="storm-unmapped"></div>
+    <details id="storm-hypotheses"><summary>What this suggests · hypotheses</summary><div id="storm-hypothesis-list"></div></details>
+  </section>
+</header>
+<main>
+  <div id="map" role="application" aria-label="Map of Central Texas water gauges"></div>
+  <aside id="detail"><p class="eyebrow">Pick a marker</p><p class="muted">Stations show the latest reading with its time and freshness, the six-hour trend, the 48-hour peak, the same-time-of-year percentile, and the station's own event thresholds. Wells and lakes show level and 7- and 30-day change. Freshness is judged against the bundle's own timestamp.</p><p id="bundle-meta" class="muted"></p></aside>
+</main>
+<footer>Sources: USGS, Texas Water Development Board (Water Data for Texas), Edwards Aquifer Authority, National Weather Service. Base maps: USGS The National Map (public domain) and CARTO (© OpenStreetMap contributors, © CARTO). Creek lines © OpenStreetMap contributors (ODbL). Repository: saulbanov/hill-country-hydro.</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="map.js"></script>
+</body>
+</html>

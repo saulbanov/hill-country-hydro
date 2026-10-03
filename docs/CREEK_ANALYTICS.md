@@ -111,3 +111,29 @@ normalization itself never asserts a gauge-to-reach relationship.
 Hydromet field labels are evidenced by the preserved official report under
 `data/captures/documentary/hydromet-normalization/`, plus each capture's Stage/Flow headers.
 The report labels stage in feet and flow in cfs. No external metadata is needed on replay.
+
+## Creek map consumer
+
+After normalization is integrated, run `python3 tools/creek_prototype.py`. It reads the
+common catalog/JSONL and checks `references.json` against the normalized daily observations.
+It produces `app/creek-snapshot.json` and `data/model/creek-gauge-associations.json` under
+`creek-prototype/v1`. No provider-specific observation parsing occurs in browser code.
+
+The authored `data/model/creek-display-policy.json` defines selected gauges, geometry caps,
+time views and display bands. Geometry requires an explicit provider creek name and a
+coordinate within 100 m of a saved node on the identically named main channel. Strokes stop
+within one OSM way, at a shared node or at 500 m each side. They are gauge-location symbols,
+not measurements across a 1 km reach. Other stretches remain dashed. Unknown tributary
+junctions prevent a stronger reach-wide claim. The original geometry is never edited.
+
+The default view shows separate largest saved readings (at different times), with 7 am
+Central October 1 and October 2 snapshots available. Purple/blue strokes use cfs difference
+bands: ≤0, >0–10, >10–100, >100–500 and >500. Widths are 3/4/6/9/13 pixels, capped at the top
+band; missing comparisons are dashed gray. This encodes absolute flow contrast, not proportional
+rarity, inundation, literal channel width or safety. Click through for exact measurements,
+source requests, checksums, qualifiers, conflicting-capture flags and an un-interpolated chart.
+
+`app/index.html` is the creek prototype; `app/ledger.html` preserves the original water ledger.
+The existing Site publishes those pages, their static assets, the snapshot, saved geometry,
+methods/audit documents, the existing bundle and storm evidence. It receives no raw archives,
+SQLite databases or source history. Publication remains a manually dated snapshot.
