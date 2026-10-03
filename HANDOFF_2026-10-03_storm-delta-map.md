@@ -196,13 +196,23 @@ archive, Hydromet history), which the tool must fetch for the window on request 
 
 ## 9. Checklist for whoever does this
 
-- [ ] `storm_delta.py detect` finds the Oct 1–2 window from sqlite alone and writes its file with the triggering readings.
+- [x] `storm_delta.py detect` finds the Oct 1–2 window from sqlite alone and writes its file with the triggering readings.
 - [ ] `compute` reproduces the §0 numbers (Shoal 541 at 10-01T19:50Z; Llano near Junction 35,000; J-17 640.07; Travis +0.2) and the §8 July-2026 annual ranks (Comfort #2 of 88, Kerrville #3 of 41, Llano at Llano #7 of 88).
-- [ ] Tests pass; `python3 -m unittest discover -s tests`.
-- [ ] The map layer draws; a hollow symbol appears for a gauge with no window total; no red/green/yellow anywhere in the layer.
-- [ ] The card text never says "safe", "dangerous", "flood" as a verdict, or "will".
-- [ ] Bundle still schema 1; the swim lens's tests still pass with the new block present.
-- [ ] Hypotheses box shows the four above with their readings and `check_by` dates.
+- [x] Tests pass; `python3 -m unittest discover -s tests`.
+- [x] The map layer draws; a hollow symbol appears for a gauge with no window total; no red/green/yellow anywhere in the layer.
+- [x] The card text never says "safe", "dangerous", "flood" as a verdict, or "will".
+- [x] Bundle still schema 1; the swim lens's tests still pass with the new block present.
+- [x] Hypotheses box shows the four above with their readings and `check_by` dates.
+
+
+### Build verification — 2026-10-03
+
+- The comparison checkbox stays open because the recorded figures do not all equal the handoff. [The generated comparison report](data/model/storm-delta-validation.json) retains 28 comparisons, their source readings, 19 exact or explicitly rounded matches and nine differences. July’s five daily-mean ranks match.
+- The October trigger is USGS 08158030 at September 30 10:35 UTC (8.54 cfs after 0 cfs at 10:30; threshold 7.26). The rule gives t0 September 29 10:35 UTC. Williamson crosses 21 cfs at October 1 17:35, after 6.79 at 17:30. The tool preserves these readings instead of adopting the probe dates.
+- Differences include Barton Springs’ 19.5 cfs starting reading; Walnut’s last pre-window reading of 3.05 cfs on July 20, with the long gap disclosed; Bull’s latest 0.43 cfs; Barton Loop’s unrounded 0.05 cfs; Travis +0.10 ft using the last complete day; and Llano volume 15,216.9 acre-ft. Junction’s saved annual record is 319,000 cfs in 1935, not 2018.
+- All 67 water tests pass. The swim lens fetched and applied schema 1 with the new block and passed 78 tests (one existing skip). BrowserOS showed the layer off by default, three spring bars, 335 hollow July rain symbols and four open October hypotheses, all checked by October 9. No red, green or yellow was added to the storm symbols.
+- Limits remain explicit: no October 3 cloud export; USGS observations end October 2 at 12:10 UTC; no July rolling rain totals; EAA detail bodies lack their original exported fetch sidecars; two EAA spring records have no verified map coordinates. The literal zero-start response rule remains unchanged. The July daily-mean detection file is preserved; newer continuous crossing candidates appear in the comparison report.
+- The hypotheses use initials `cloud/Mac session`, status `open`, and the recorded window-cap date as their review deadline. July hypotheses remain empty. The Travis hypothesis is retrospective, replacing the handoff’s forecast wording. No routine prompt or schedule was changed.
 
 ## 10. Prompt to start the build (copy-paste into a Claude Code session, Mac or cloud)
 
