@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-03 — EAA wells through the detail pages
+- The EAA CSV download endpoints (`DownloadGroundwaterCsv`, `DownloadRainGaugesCsv`, `DownloadSpringAndStreamCsv`) have answered HTTP 500 with a generic error page to every request since 2026-10-01, for any site or sensor, with or without browser headers and cookies; this is not throttling. `eaa.py details` now reads each active well's `/GroundWater/Details/<siteInfoId>` page, which embeds the full daily-high record (J-17 from 1932) and the sensor inventory, and `normalize` fills `eaa_well_levels` from it (DHE elevation and DTW depth). `--version` keeps one gzip per well under `data/captures/eaa/details/` (Sundays). Streams: `/SpringsAndStreams/GaugeHeight/<id>` carries the full 5-minute record (~130 MB a site) and is opt-in with `--streams`. Rain gauges have no page that carries data; `eaa.rain_gauges` stays empty until the CSV door reopens or the EAA offers an export. Bundle shape unchanged.
+
 ## 2026-10-02 — fix: `monitor.py readings`
 - Since the split, nothing in this repo rewrote `app/gauge-readings.json` after a collect (the step lived in the lens's `assess`), so the bundle carried the previous day's USGS values. `monitor.py readings` now writes the file from `data/parsed/latest-by-station.json`; it runs after `signal_pipeline.py parse` in the README chain and the routine.
 

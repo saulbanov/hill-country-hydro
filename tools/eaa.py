@@ -16,6 +16,13 @@ CSV rows: siteId, date, value, status flag (A approved, P provisional, Q questio
 Commands:
   conditions            capture the conditions page and the CPM page raw; parse the summary table, today's readings and the
                         current reductions into data/eaa-conditions.json; the embedded histories go to sqlite at normalize.
+  details [--version]   the three list pages, then every active well's /GroundWater/Details/<siteInfoId> page, which embeds the
+                        full daily-high record (wellAllDailyHighElevationJSON: date, water level elevation, depth, status) and the
+                        sensor inventory (wellSensorStatsJSON). This is the working door since 2026-10-01: the CSV download
+                        endpoints answered HTTP 500 to every request (any site, any sensor, any headers) on 2026-10-02 and 03.
+                        --version also keeps one gzip per well under data/captures/eaa/details/ (weekly; a page is 1.5-7 MB).
+                        --streams adds /SpringsAndStreams/GaugeHeight/<id> (the full 5-minute stage record, ~130 MB a site; opt-in).
+                        Rain gauges have no page that carries data; their CSV door is the only one and it is closed.
   collect [--streams]   the three list pages (raw, then parsed to data/eaa-sites.json) and the DHE and DTW
                         CSVs for every active well and the DLRAIN CSV for every active rain gauge; --streams
                         adds GAGHT for active streams (large hourly files; weekly is enough).
@@ -100,14 +107,54 @@ def version(p, group, sid, sensor):
         if old != gz: old.unlink()
     return gz
 
-def collect(streams=False, pause=3.0, only=None, skip_pages=False):
+def list_pages(pause=3.0, skip_pages=False):
+    """The three list pages -> data/eaa-sites.json (raw HTML kept under data/raw/eaa/pages/)."""
+    if skip_pages and SITES.exists(): return json.loads(SITES.read_text())['sites']
     sites = {}
-    if skip_pages and SITES.exists(): sites = json.loads(SITES.read_text())['sites']
-    else:
-        for group, (path, var) in PAGES.items():
-            p, m = fetch(BASE + path, RAW / 'pages', group, '.html')
-            sites[group] = parse_sites(p.read_text(encoding='utf-8', errors='replace'), var) if m['status'] == 200 else []
-            print(f"{group}: HTTP {m['status']}, {len(sites[group])} sites listed"); time.sleep(pause)
+    for group, (path, var) in PAGES.items():
+        p, m = fetch(BASE + path, RAW / 'pages', group, '.html')
+        sites[group] = parse_sites(p.read_text(encoding='utf-8', errors='replace'), var) if m['status'] == 200 else []
+        print(f"{group}: HTTP {m['status']}, {len(sites[group])} sites listed"); time.sleep(pause)
+    return sites
+
+DETAIL_PAGES = {'wells': ('/GroundWater/Details/{id}', 'wellAllDailyHighElevationJSON', 'wellSensorStatsJSON'), 'streams': ('/SpringsAndStreams/GaugeHeight/{id}', 'springStreamGaugeHeightJSON', None)}
+
+def version_page(p, group, sid):
+    d = CAP / 'details'; d.mkdir(parents=True, exist_ok=True); gz = d / f'{p.stem}.html.gz'
+    with gzip.open(gz, 'wb', compresslevel=9) as z: z.write(p.read_bytes())
+    for old in d.glob(f'*-{sid}-{group}-details.html.gz'):
+        if old != gz: old.unlink()
+    return gz
+
+def details(pause=3.0, only=None, skip_pages=False, version=False, streams=False, max_failures=8):
+    sites = list_pages(pause, skip_pages)
+    if not skip_pages: SITES.write_text(json.dumps({'retrieved_at': now_utc().isoformat(), 'source': BASE, 'counts': {g: {'listed': len(v), 'active': sum(1 for s in v if s.get('siteStatus') == 'Active')} for g, v in sites.items()}, 'sites': sites}, indent=1) + '\n')
+    plan = [('wells', s) for s in sites['wells'] if s.get('siteStatus') == 'Active' or s['siteId'] in ('J17WL', 'J27WL')]
+    if streams: plan += [('streams', s) for s in sites['streams'] if s.get('siteStatus') == 'Active']
+    if only: plan = [x for x in plan if x[1]['siteId'] in only]
+    ok = failed = 0
+    for group, s in plan:
+        sid = s['siteId']; path, var, _ = DETAIL_PAGES[group]
+        p, m = fetch(BASE + path.format(id=s['siteInfoId']), RAW / 'details' / group / sid, f'{sid}-{group}-details', '.html')
+        if m['status'] == 0: time.sleep(pause); p, m = fetch(BASE + path.format(id=s['siteInfoId']), RAW / 'details' / group / sid, f'{sid}-{group}-details', '.html')   # one retry for a dropped connection (three of 62 on 2026-10-03 came back on the second ask)
+        n = len(parse_var(p.read_text(encoding='utf-8', errors='replace'), var) or []) if m['status'] == 200 else 0
+        if m['status'] == 200 and n: ok += 1; print(f'{group} {sid}: {n} records, {m["bytes"]} bytes' + (f', versioned {version_page(p, group, sid).name}' if version else ''))
+        else:
+            failed += 1; print(f'{group} {sid}: HTTP {m["status"]}, {m["bytes"]} bytes, {n} records')
+            if failed >= max_failures and ok == 0: print('stopping: the server is refusing every page; try again later'); break
+        time.sleep(pause)
+    print(f'detail pages: {ok} of {len(plan)} carried records')
+
+def newest_details(group):
+    best = {}
+    for meta_path in sorted((RAW / 'details' / group).rglob('*.meta.json')) if (RAW / 'details' / group).exists() else []:
+        meta = json.loads(meta_path.read_text()); body = meta_path.with_suffix('').with_suffix('.html')
+        if meta.get('status') == 200 and body.exists(): best[body.parent.name] = (body, meta)
+    return best
+
+def collect(streams=False, pause=3.0, only=None, skip_pages=False):
+    sites = list_pages(pause, skip_pages)
+    if not skip_pages:
         SITES.write_text(json.dumps({'retrieved_at': now_utc().isoformat(), 'source': BASE, 'counts': {g: {'listed': len(v), 'active': sum(1 for s in v if s.get('siteStatus') == 'Active')} for g, v in sites.items()}, 'sites': sites}, indent=2) + '\n')
     plan = [('wells', s['siteId'], 'DHE') for s in sites['wells'] if s.get('siteStatus') == 'Active'] + [('wells', s['siteId'], 'DTW') for s in sites['wells'] if s.get('siteStatus') == 'Active'] + [('rain', s['siteId'], 'DLRAIN') for s in sites['rain'] if s.get('siteStatus') == 'Active']
     if streams: plan += [('streams', s['siteId'], 'GAGHT') for s in sites['streams'] if s.get('siteStatus') == 'Active']
@@ -159,7 +206,22 @@ def normalize():
                 for r in parse_var(h, var) or []:
                     if r.get('waterLevelElevation') is None: continue
                     db.execute('insert or replace into eaa_index_daily values(?,?,?,?,?,?,?)', (r.get('siteId'), r['dailyHighDate'][:10], r.get('waterLevelElevation'), r.get('depthFromLsd'), r.get('measStatusDesc'), str(body.relative_to(ROOT)), meta['retrieved_at']))
-    n = 0
+    n = 0; stats = {}
+    for sid, (body, meta) in newest_details('wells').items():
+        h = body.read_text(encoding='utf-8', errors='replace'); src = str(body.relative_to(ROOT))
+        for r in parse_var(h, 'wellAllDailyHighElevationJSON') or []:
+            d = (r.get('dailyHighDate') or '')[:10]
+            if not d: continue
+            if r.get('waterLevelElevation') is not None: db.execute('insert or replace into eaa_well_levels values(?,?,?,?,?,?,?)', (r.get('siteId') or sid, d, 'DHE', r['waterLevelElevation'], r.get('measStatusDesc'), src, meta['retrieved_at'])); n += 1
+            if r.get('depthFromLsd') is not None: db.execute('insert or replace into eaa_well_levels values(?,?,?,?,?,?,?)', (r.get('siteId') or sid, d, 'DTW', r['depthFromLsd'], r.get('measStatusDesc'), src, meta['retrieved_at'])); n += 1
+        st = parse_var(h, 'wellSensorStatsJSON') or []
+        if st: stats[sid] = [{k: x.get(k) for k in ('sensorName', 'sensorDesc', 'unitsDesc', 'mn', 'mx', 'nm')} for x in st]
+    for sid, (body, meta) in newest_details('streams').items():
+        h = body.read_text(encoding='utf-8', errors='replace'); src = str(body.relative_to(ROOT))
+        rows = [(r.get('siteId') or sid, r['dtCst'], r['valFin'], r.get('measStatusName'), src, meta['retrieved_at']) for r in parse_var(h, 'springStreamGaugeHeightJSON') or [] if r.get('dtCst') and r.get('valFin') is not None]
+        db.executemany('insert or replace into eaa_stream_stage values(?,?,?,?,?,?)', rows); n += len(rows)
+    if stats:
+        (ROOT / 'data/model').mkdir(parents=True, exist_ok=True); (ROOT / 'data/model/eaa-well-sensors.json').write_text(json.dumps({'generated_at': now_utc().isoformat(), 'meaning': 'Sensors each EAA well page lists, with record span (mn, mx) and count (nm), read verbatim from wellSensorStatsJSON.', 'wells': stats}, indent=1) + '\n')
     for key, (body, meta) in newest_captures('wells').items():
         sid, sensor = key.rsplit('-', 1)
         for s, d, v, st in rows_of(body.read_text(errors='replace')): db.execute('insert or replace into eaa_well_levels values(?,?,?,?,?,?,?)', (s, d[:10], sensor, v, st, str(body.relative_to(ROOT)), meta['retrieved_at'])); n += 1
@@ -227,8 +289,10 @@ def assess(at=None):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(); sub = p.add_subparsers(dest='cmd', required=True)
     c = sub.add_parser('collect'); c.add_argument('--streams', action='store_true'); c.add_argument('--pause-seconds', type=float, default=3.0); c.add_argument('--sites', nargs='*'); c.add_argument('--skip-pages', action='store_true')
+    d = sub.add_parser('details'); d.add_argument('--streams', action='store_true'); d.add_argument('--pause-seconds', type=float, default=3.0); d.add_argument('--sites', nargs='*'); d.add_argument('--skip-pages', action='store_true'); d.add_argument('--version', action='store_true')
     sub.add_parser('normalize'); sub.add_parser('assess'); sub.add_parser('conditions'); a = p.parse_args()
     if a.cmd == 'collect': collect(a.streams, a.pause_seconds, set(a.sites) if a.sites else None, a.skip_pages)
+    elif a.cmd == 'details': details(a.pause_seconds, set(a.sites) if a.sites else None, a.skip_pages, a.version, a.streams)
     elif a.cmd == 'conditions': conditions()
     elif a.cmd == 'normalize': normalize()
     else: assess()

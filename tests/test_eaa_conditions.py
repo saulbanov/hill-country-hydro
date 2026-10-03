@@ -17,4 +17,15 @@ class EaaConditionsTests(unittest.TestCase):
             if img.exists(): self.assertEqual(hashlib.sha256(img.read_bytes()).hexdigest(), st[pool]['image_sha256'])
         sa = st['san_antonio_pool']['stages']; j17 = [s['j17_ft_amsl']['lt'] for s in sa[1:]]; self.assertEqual(j17, sorted(j17, reverse=True)); self.assertEqual(sa[3]['reduction_pct'], 35)
         self.assertIn('transcribed', st['how_obtained'])
+
+class EaaDetailsTests(unittest.TestCase):
+    def test_well_detail_page_yields_daily_highs_and_sensor_inventory_without_inventing_values(self):
+        from tools import eaa
+        h = (Path(__file__).resolve().parent / 'fixtures/eaa-well-details-sample.html').read_text()
+        rows = eaa.parse_var(h, 'wellAllDailyHighElevationJSON'); stats = eaa.parse_var(h, 'wellSensorStatsJSON')
+        self.assertEqual(len(rows), 3); self.assertEqual(rows[0]['siteId'], 'ENR806'); self.assertIsNone(rows[1]['waterLevelElevation'], 'a missing elevation stays missing')
+        self.assertTrue(all(r['dailyHighDate'][:4].isdigit() for r in rows)); self.assertIn('DHE', {x['sensorName'] for x in stats})
+        self.assertEqual(eaa.DETAIL_PAGES['wells'][0].format(id=211), '/GroundWater/Details/211')
+        self.assertEqual(eaa.parse_var('<html>no data</html>', 'wellAllDailyHighElevationJSON'), None)
+
 if __name__ == '__main__': unittest.main()

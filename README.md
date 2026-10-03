@@ -15,8 +15,8 @@ Plan, decisions and log: [`hill-country-hydro-system.md`](hill-country-hydro-sys
 
 ## How a day works
 1. **Collect** (raw first): `monitor.py collect --inventory` reads every live USGS location; `groundwater.py collect`
-   one statewide TWDB well file; `reservoirs.py collect` ten lake CSVs; `eaa.py collect` the EAA pages and CSVs
-   at a gentle pace; `hydromet.py collect` the LCRA Hydromet all-sites feed (LCRA, City of Austin and mirrored USGS
+   one statewide TWDB well file; `reservoirs.py collect` ten lake CSVs; `eaa.py details` the EAA list pages and every
+   active well's page (its full daily record rides in the page) at a gentle pace; `hydromet.py collect` the LCRA Hydromet all-sites feed (LCRA, City of Austin and mirrored USGS
    gauges: creek stage and flow, rain accumulations, lake and dam levels) plus the window of 15-minute history holding today; `hazards.py assess` NWS alerts and flood-stage categories; `weather_validation.py collect` NWS observations.
 2. **Normalize**: typed rows into `data/normalized/water.sqlite`; daily histories into `data/history/*.csv`.
 3. **Context**: `hydro_context.py` (freshness, 6-hour trend, 48-hour peak, same-time-of-year percentile) and,
@@ -29,7 +29,7 @@ python3 tools/monitor.py collect --inventory && python3 tools/monitor.py normali
 python3 tools/signal_pipeline.py normalize && python3 tools/signal_pipeline.py parse && python3 tools/monitor.py readings   # readings = app/gauge-readings.json, the newest value per station the bundle carries
 python3 tools/groundwater.py collect && python3 tools/groundwater.py normalize && python3 tools/groundwater.py assess
 python3 tools/reservoirs.py collect && python3 tools/reservoirs.py normalize && python3 tools/reservoirs.py assess
-python3 tools/eaa.py conditions && python3 tools/eaa.py collect --pause-seconds 4 && python3 tools/eaa.py normalize && python3 tools/eaa.py assess   # conditions = the EAA summary table, springflow and index-well histories, and the stated reduction, daily
+python3 tools/eaa.py conditions && python3 tools/eaa.py details --pause-seconds 3 && python3 tools/eaa.py normalize && python3 tools/eaa.py assess   # conditions = the EAA summary table, springflow and index-well histories, and the stated reduction; details = every active well's page with its full daily-high record (the CSV download door has answered HTTP 500 since 2026-10-01); Sundays add --version
 python3 tools/hydromet.py collect && python3 tools/hydromet.py history --recent-only && python3 tools/hydromet.py normalize && python3 tools/hydromet.py assess   # LCRA Hydromet; history windows < 180 days, three fixed per year
 python3 tools/hazards.py assess
 python3 tools/hydro_context.py
