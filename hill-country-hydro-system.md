@@ -47,6 +47,8 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Open items
 
+- Observe the first scheduled Mac run and check both `Daily run YYYYMMDD` commits. At 2026-10-02 21:50 Central the water checkout contained concurrent uncommitted Hydromet history work. If it remains dirty at 6:57, the runner's clean-branch guard will fail before any provider request; finish or move that work through its own session, then assess the next day's run without a same-day retry.
+
 - Storm-delta map: a before/after layer for each storm window (rain per gauge, creek and river peak ratio and rank, springs, wells, lakes), specified in `HANDOFF_2026-10-03_storm-delta-map.md`; needs `tools/storm_delta.py`, tests, a map layer and an additive bundle block.
 
 - Public visibility: the collectors send Saul's contact email in their User-Agent header; swap for a project address before making the repository public.
