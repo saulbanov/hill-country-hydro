@@ -21,6 +21,9 @@ main{display:grid;grid-template-columns:1fr;gap:0}@media(min-width:900px){main{g
 .pin{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 2px #0005}.pin.station{background:var(--water)}.pin.well{background:var(--well)}.pin.lake{background:var(--lake);border-radius:3px}.pin.eaa{background:var(--rain)}.pin.hydromet{background:#7b4ea3;border-radius:2px;transform:rotate(45deg)}.pin.stale{opacity:.45}
 .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--line);margin-right:6px}
 a{color:var(--water)}footer{padding:10px 16px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+#storm-panel{padding:10px 0 0;max-width:1000px;font-size:13px}#storm-panel[hidden]{display:none}#storm-panel p{margin:6px 0}#storm-panel select{font:inherit;padding:5px;background:var(--card);color:var(--ink)}
+.storm-key{display:flex;flex-wrap:wrap;gap:14px;padding:6px 0;color:var(--ink)}.storm-icon{display:block;overflow:visible}.storm-line{margin:6px 0}.storm-reading{font-variant-numeric:tabular-nums}.storm-hypothesis{padding:10px 0;border-top:1px solid var(--line)}
+#storm-summary{max-width:90ch}#storm-hypotheses{max-height:260px;overflow:auto}#storm-unmapped{margin-top:8px}.storm-source{overflow-wrap:anywhere;white-space:pre-wrap}details summary{cursor:pointer}
 </style>
 </head>
 <body>
@@ -33,7 +36,17 @@ a{color:var(--water)}footer{padding:10px 16px;font-size:12px;color:var(--muted);
     <label><input id="l-lakes" type="checkbox" checked> <span class="pin lake"></span> Lakes</label>
     <label><input id="l-eaa" type="checkbox"> <span class="pin eaa"></span> EAA wells &amp; rain gauges</label>
     <label><input id="l-hydromet" type="checkbox"> <span class="pin hydromet"></span> LCRA &amp; City of Austin gauges (Hydromet)</label>
+    <label><input id="l-storm" type="checkbox"> Storm changes</label>
   </div>
+  <section id="storm-panel" hidden aria-label="Storm window and evidence">
+    <label for="storm-select">First trigger date </label><select id="storm-select"></select>
+    <p id="storm-summary"></p>
+    <p>Changes at gauges, as the operators published them. Not a flood map, not a swim map, not a forecast.</p>
+    <div class="storm-key"><span>◯ Rain: rolling total, blue</span><span>△ Flow: peak/start</span><span>▥ Springs: start, peak, now</span><span>◇ Wells: brown falling, blue rising</span><span>□ Lakes: elevation change</span></div>
+    <p>Flow fills: gray = no response; purple = flash; blue = sustained; slate = modest. Hollow = missing value or unresolved comparison.</p>
+    <div id="storm-unmapped"></div>
+    <details id="storm-hypotheses"><summary>What this suggests · hypotheses</summary><div id="storm-hypothesis-list"></div></details>
+  </section>
 </header>
 <main>
   <div id="map" role="application" aria-label="Map of Central Texas water gauges"></div>
