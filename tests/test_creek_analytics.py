@@ -24,6 +24,10 @@ class NormalizationTests(unittest.TestCase):
     def test_missing_zero_invalid_and_negative(self):
         self.assertEqual(row(0)['state'],'measured');self.assertIsNone(row(None)['value'])
         for v in [float('nan'),float('inf'),'ice',-1]: self.assertEqual(row(v)['state'],'unavailable')
+    def test_explicit_offset_and_known_datum(self):
+        self.assertEqual(row()['time']['original_offset'],'Z')
+        self.assertEqual(row(when='2026-10-01T07:00:00-05:00')['time']['original_offset'],'-05:00')
+        self.assertEqual(row(quantity='stage',unit='ft',datum='NAVD88')['datum_status'],'known')
     def test_times(self):
         self.assertEqual(row(when='2026-10-01T07:00:00-05:00')['time']['instant'],row()['time']['instant'])
         self.assertEqual(row(when='2026-10-01')['state'],'unavailable')

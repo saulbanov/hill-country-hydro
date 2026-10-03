@@ -36,7 +36,7 @@ def temporal(s, statistic):
         except ValueError: date_only=False
     return dict(original=s, instant=t.isoformat() if t and not date_only else None,
                 date=s if date_only else None, precision='date' if date_only else 'instant' if t else 'unknown',
-                timezone='UTC' if t else None, original_offset=str(s)[-6:] if t else None,
+                timezone='UTC' if t else None, original_offset=('Z' if str(s).endswith('Z') else str(s)[-6:]) if t else None,
                 interval_start=None, interval_end=None, statistic=statistic)
 
 
@@ -73,7 +73,7 @@ def record(*, operator, feed, site, series, parameter, quantity, unit, value, wh
     return dict(id=rid,series_id=sid,operator=operator,feed=feed,original_site_id=site,
                 physical_gauge_id=f'{operator}:{site}', original_series_id=series,parameter=parameter,
                 quantity=quantity,original_value=value,original_unit=unit,value=cv,unit=cu,
-                vertical_datum=datum,datum_status='unknown' if quantity=='stage' and datum is None else 'not_applicable',
+                vertical_datum=datum,datum_status=('unknown' if datum is None else 'known') if quantity=='stage' else 'not_applicable',
                 time=t,sampling=sampling,qualifiers=q,approval=approval or 'unknown',primary=primary,
                 state='unavailable' if reasons else 'measured',issues=reasons,
                 source_id=source,source_locator=locator)
