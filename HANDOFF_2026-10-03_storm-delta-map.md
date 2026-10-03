@@ -147,10 +147,38 @@ from the record. That is the crowd-sourceable list Saul asked for on 2026-10-01,
 - Stations without a daily history (the San Antonio River sites, the North Llano) rank as `null`.
 - Everything after Sept 30 is provisional at every provider.
 
-## 8. Checklist for whoever does this
+## 8. How extreme was it — the measures that answer "how bad" (added 2026-10-03 after Saul asked)
+
+The response class and the daily-mean percentile say "unusual"; they do not by themselves say "catastrophic".
+Four measures do, and three are already on file:
+
+1. **Rank among annual maxima** (on file). For each station take the largest daily mean of every year in its
+   record and rank this storm's peak among them: "the 3rd-largest year in 41". This is the number a reader
+   understands. From the record as of 2026-10-03, July 2026 ranked: Guadalupe at Comfort #2 of 88 years
+   (52,900 cfs daily mean on 07-16; record 74,200), Guadalupe at Kerrville #3 of 41 (29,400), Llano at Llano
+   #7 of 88 (53,600), Pedernales near Johnson City #15 of 88, Llano near Junction #14 of 109. The Oct 1–2 storm,
+   by contrast, is a top-year event at Junction and nowhere else. `compute` writes `annual_rank: {rank, years,
+   record_daily_mean, record_year}` for every station with a history; the card shows it first.
+2. **NWS flood category** (on file for the forecast gauges in `app/hazards-status.json`; 59 gauges carry an
+   observed stage, a subset carry the action/minor/moderate/major thresholds). Compare peak stage to the
+   thresholds: "crested 4.2 ft above major flood stage". Where a gauge has no thresholds, say so.
+3. **Rate of rise** (on file for every 15-minute station from the day the daily captures began; for July 2026
+   only the daily means are on file, which flatten a wall of water). Max stage change per 15 minutes and per
+   hour inside the window, with its time. The Hydromet LCRA sites give this back to 1991 for the priority set.
+4. **Instantaneous peaks for past floods** (not yet scraped). The USGS peak-flow file (annual instantaneous
+   peaks per station, `nwis.waterdata.usgs.gov/nwis/peak`) is the missing scrape that lets a July-2026 peak be
+   ranked against instantaneous peaks rather than daily means; it is small (one row per station per year) and
+   belongs in `usgs_series_history.py`. Rain intensity (inches per hour) wants the LCRA 15-minute rain history,
+   which the Hydromet tool can pull with `--params rain` for any rain site.
+
+Two honest limits. The map is retrospective: it reconstructs, it does not warn. And for an event that happened
+before the daily captures began, the 15-minute shape comes only from providers that keep it (USGS instantaneous
+archive, Hydromet history), which the tool must fetch for the window on request rather than assume.
+
+## 9. Checklist for whoever does this
 
 - [ ] `storm_delta.py detect` finds the Oct 1–2 window from sqlite alone and writes its file with the triggering readings.
-- [ ] `compute` reproduces the §0 numbers (Shoal 541 at 10-01T19:50Z; Llano near Junction 35,000; J-17 640.07; Travis +0.2).
+- [ ] `compute` reproduces the §0 numbers (Shoal 541 at 10-01T19:50Z; Llano near Junction 35,000; J-17 640.07; Travis +0.2) and the §8 July-2026 annual ranks (Comfort #2 of 88, Kerrville #3 of 41, Llano at Llano #7 of 88).
 - [ ] Tests pass; `python3 -m unittest discover -s tests`.
 - [ ] The map layer draws; a hollow symbol appears for a gauge with no window total; no red/green/yellow anywhere in the layer.
 - [ ] The card text never says "safe", "dangerous", "flood" as a verdict, or "will".
