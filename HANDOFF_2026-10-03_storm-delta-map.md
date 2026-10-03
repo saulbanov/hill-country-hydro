@@ -214,6 +214,21 @@ archive, Hydromet history), which the tool must fetch for the window on request 
 - Limits remain explicit: no October 3 cloud export; USGS observations end October 2 at 12:10 UTC; no July rolling rain totals; EAA detail bodies lack their original exported fetch sidecars; two EAA spring records have no verified map coordinates. The literal zero-start response rule remains unchanged. The July daily-mean detection file is preserved; newer continuous crossing candidates appear in the comparison report.
 - The hypotheses use initials `cloud/Mac session`, status `open`, and the recorded window-cap date as their review deadline. July hypotheses remain empty. The Travis hypothesis is retrospective, replacing the handoff’s forecast wording. No routine prompt or schedule was changed.
 
+### Reverification after the October 3 Mac capture
+
+The six-step build was already on main when this request was repeated. The current store now reaches
+October 3 11:50 UTC. Detection and both computations were rerun; the original storm records and
+hypotheses remain unchanged. The comparison report now reports its observed cutoff and source dates
+instead of retaining the earlier session's cutoff. It contains 10 matches and 18 differences; several
+are later readings rather than failures to reproduce the earlier snapshot.
+
+Shoal remains 541 cfs, Walnut 650, Junction 35,000; all five July daily ranks still match. Later observations
+raise Barton Springs' peak to 28.6 cfs at October 2 22:00 UTC and J-17's daily high to 641.29 ft on October 2.
+Travis is 676.32 ft on October 3, +1.57 ft from the complete-day baseline of 674.75 ft on September 28.
+Llano integration reaches 33,119.0 acre-ft through October 3 11:00 UTC. The report preserves all differing
+readings; the exact-reproduction checkbox remains unchecked. Water tests: 70 passed. Swim tests: 79 run,
+one existing skip. Browser verification still shows the layer off by default and hollow July rain symbols.
+
 ## 10. Prompt to start the build (copy-paste into a Claude Code session, Mac or cloud)
 
 The prompt in the chat where this handoff was written is the canonical one; a copy is kept here so the handoff
