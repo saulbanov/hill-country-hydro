@@ -49,6 +49,8 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Open items
 
+- Storm-delta map: a before/after layer for each storm window (rain per gauge, creek and river peak ratio and rank, springs, wells, lakes), specified in `HANDOFF_2026-10-03_storm-delta-map.md`; needs `tools/storm_delta.py`, tests, a map layer and an additive bundle block.
+
 - Public visibility: the collectors send Saul's contact email in their User-Agent header; swap for a project address before making the repository public.
 - EAA: the CSV download door has been closed (HTTP 500 to everything) since 2026-10-01. Wells now come from the detail pages; rain gauges have no other door (ask data@edwardsaquifer.org for an export, or use LCRA Hydromet's 246 rain gauges for the Hill Country); streams exist as 130 MB pages, opt-in.
 - Two incomplete USGS daily responses (a Lovelady well-depth mean and one lake elevation) to re-fetch.
@@ -72,6 +74,9 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 - 2026-10-01 · Ideas file · Saul asked for the build ideas to live in a Markdown file cross-linked with this document: `IDEAS.md`.
 
 ## Session log
+
+### 2026-10-03 — storm-delta map handoff
+Saul asked what the week's storm data says and then for a handoff to make it one of the proposed maps. The read: rain fell on the upper Llano, not Austin; paved Austin creeks flashed and emptied, limestone creeks barely moved; the Llano near Junction peaked at 35,000 cfs (top 0.1% of daily means since 1915); Barton Springs rose to 26.5 cfs but stayed at the 17th percentile; Comal did not respond; J-17 jumped 1.7 ft in a day; Travis gained 0.2 ft with about 16,600 acre-ft past Llano and the pulse still running. The handoff specifies the storm window rule, `tools/storm_delta.py`, the map layer, and a hypotheses list with check-by dates.
 
 ### 2026-10-03 — EAA refusals diagnosed; wells rerouted through the detail pages
 Saul asked for a way around the EAA refusals. Probing showed the CSV download endpoints answer HTTP 500 (a generic "Oops" page) to every request, for every site and sensor, with plain or browser-like headers and a session cookie, so it is a closed door rather than a rate limit. The site's own well pages embed the full daily-high record and the sensor list, and that is now what `eaa.py details` reads. Stream pages carry the full 5-minute record but weigh about 130 MB each (opt-in); rain-gauge pages carry no data. Cross-reference: 20 of the 69 EAA wells also have USGS site numbers and 3 are in the TWDB daily feed (J-17, J-27, ANR602).
