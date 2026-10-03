@@ -55,6 +55,7 @@ def number(value):
     except (ValueError, TypeError): return None
 
 def parse_rdb(body, station):
+    if b'No sites/data found using the selection criteria specified' in body: return []
     lines = [line for line in body.decode('utf-8', 'replace').splitlines() if line and not line.startswith('#')]
     if not lines or 'peak_va' not in lines[0].split('\t'): return None
     out = []
@@ -79,14 +80,14 @@ def collect(stations, pause=1):
         m = capture(station, 'annual', url, pause)
         print(f"{station}: HTTP {m['status']}, {m['bytes']} bytes", flush=True)
 
-def collect_window(stations, start, end, pause=1):
+def collect_window(stations, start, end, pause=1, parameter="00060"):
     # Date validation before network or writes. An explicit window is mandatory.
     a = dt.datetime.fromisoformat(start.replace('Z','+00:00')); b = dt.datetime.fromisoformat(end.replace('Z','+00:00'))
     if a.tzinfo is None or b.tzinfo is None or not 0 < (b-a).total_seconds() <= 10*86400:
         raise ValueError('window must be timezone-aware, increasing, at most ten days')
     for station in stations:
-        url = 'https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?' + urllib.parse.urlencode(dict(f='json', monitoring_location_id='USGS-'+station, parameter_code='00060', datetime=start+'/'+end, limit=LIMIT))
-        m = capture(station, 'window-'+a.strftime('%Y%m%dT%H%M')+'-'+b.strftime('%Y%m%dT%H%M'), url, pause)
+        url = 'https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?' + urllib.parse.urlencode(dict(f='json', monitoring_location_id='USGS-'+station, parameter_code=parameter, datetime=start+'/'+end, limit=LIMIT))
+        m = capture(station, ('stage-window-' if parameter=='00065' else 'window-')+a.strftime('%Y%m%dT%H%M')+'-'+b.strftime('%Y%m%dT%H%M'), url, pause)
         print(f"{station}: continuous window HTTP {m['status']}, {m['bytes']} bytes", flush=True)
 
 def normalize():
@@ -94,6 +95,7 @@ def normalize():
     db = sqlite3.connect(DB)
     db.execute('create table if not exists usgs_peaks(station text, date text, peak_cfs real, gage_height_ft real, qualifiers text, primary key(station,date))')
     db.execute('create table if not exists usgs_peak_window(station text, observed_at text, value real, series_id text, qualifiers text, source_file text, primary key(station,observed_at,series_id))')
+    db.execute('create table if not exists usgs_stage_window(station text, observed_at text, value real, series_id text, qualifiers text, source_file text, primary key(station,observed_at,series_id))')
     report = {}
     for mp in sorted(CAP.glob('*/manifest.json')):
         sid = mp.parent.name; man = json.loads(mp.read_text()); entry = dict(annual_available=False, window_readings=0)
@@ -107,7 +109,7 @@ def normalize():
                     entry[kind] = 'not an RDB peak response; body preserved; use collect-window'; continue
                 dest = ROOT / 'data/history' / f'{sid}-peaks.csv'; dest.parent.mkdir(parents=True, exist_ok=True)
                 with dest.open('w', newline='') as f:
-                    w = csv.DictWriter(f, fieldnames=['station','date','peak_cfs','gage_height_ft','qualifiers']); w.writeheader(); w.writerows(rows)
+                    w = csv.DictWriter(f, fieldnames=['station','date','peak_cfs','gage_height_ft','qualifiers'],lineterminator='\n'); w.writeheader(); w.writerows(rows)
                 db.executemany('insert or replace into usgs_peaks values(?,?,?,?,?)', [tuple(r.values()) for r in rows])
                 entry.update(annual_available=bool(rows), annual_rows=len(rows))
             else:
@@ -119,10 +121,11 @@ def normalize():
                 rows=[]
                 for f in features:
                     p=f['properties']
-                    if p.get('monitoring_location_id')!='USGS-'+sid or p.get('parameter_code')!='00060': raise ValueError('continuous identity mismatch')
+                    if p.get('monitoring_location_id')!='USGS-'+sid or p.get('parameter_code')!=('00065' if kind.startswith('stage-') else '00060'): raise ValueError('continuous identity mismatch')
                     if number(p.get('value')) is None: continue
                     rows.append((sid,p['time'],number(p['value']),p['time_series_id'],json.dumps(p.get('qualifier')),meta['capture_path']))
-                db.executemany('insert or replace into usgs_peak_window values(?,?,?,?,?,?)', rows)
+                table='usgs_stage_window' if kind.startswith('stage-') else 'usgs_peak_window'
+                db.executemany('insert or replace into '+table+' values(?,?,?,?,?,?)', rows)
                 entry['window_readings'] += len(rows)
         report[sid]=entry
     db.commit(); db.close()
@@ -133,8 +136,8 @@ def normalize():
 if __name__ == '__main__':
     ap=argparse.ArgumentParser(description=__doc__); sub=ap.add_subparsers(dest='cmd',required=True)
     c=sub.add_parser('collect'); c.add_argument('--stations',nargs='+',default=history_stations()); c.add_argument('--pause-seconds',type=float,default=1)
-    w=sub.add_parser('collect-window'); w.add_argument('--stations',nargs='+',default=history_stations()); w.add_argument('--start',required=True); w.add_argument('--end',required=True); w.add_argument('--pause-seconds',type=float,default=1)
+    w=sub.add_parser('collect-window'); w.add_argument('--stations',nargs='+',default=history_stations()); w.add_argument('--parameter',choices=['00060','00065'],default='00060'); w.add_argument('--start',required=True); w.add_argument('--end',required=True); w.add_argument('--pause-seconds',type=float,default=1)
     sub.add_parser('normalize'); a=ap.parse_args()
     if a.cmd=='collect': collect(a.stations,a.pause_seconds)
-    elif a.cmd=='collect-window': collect_window(a.stations,a.start,a.end,a.pause_seconds)
+    elif a.cmd=='collect-window': collect_window(a.stations,a.start,a.end,a.pause_seconds,a.parameter)
     else: normalize()

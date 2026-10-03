@@ -16,3 +16,17 @@ class PeaksTests(unittest.TestCase):
         for v in ['NaN','Infinity',None,'']: self.assertIsNone(p.number(v))
     def test_window_bounds_before_network(self):
         with self.assertRaises(ValueError): p.collect_window(['08155500'],'2026-01-01T00:00Z','2026-02-01T00:00Z')
+    def test_provider_no_data_is_empty_not_retired(self):
+        self.assertEqual(p.parse_rdb(b'No sites/data found using the selection criteria specified','08155500'),[])
+    def test_refusal_preserved_once_with_sidecar_and_gzip(self):
+        import gzip, hashlib, io, json, tempfile, urllib.error
+        from unittest.mock import patch, Mock
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); opener=Mock()
+            opener.open.side_effect=urllib.error.HTTPError('https://example.invalid',410,'Gone',{},io.BytesIO(b'retired'))
+            with patch.object(p,'ROOT',root),patch.object(p,'RAW',root/'raw'),patch.object(p,'CAP',root/'captures'),patch.object(p.urllib.request,'build_opener',return_value=opener),patch.object(p.time,'sleep') as pause:
+                meta=p.capture('fixture','annual','https://example.invalid',1)
+                self.assertEqual(opener.open.call_count,1); pause.assert_called_once_with(1)
+                raw=root/meta['raw_path']; self.assertEqual(raw.read_bytes(),b'retired'); self.assertTrue(raw.with_suffix('.meta.json').exists())
+                self.assertEqual(gzip.decompress((root/meta['capture_path']).read_bytes()),b'retired')
+                self.assertEqual(meta['status'],410); self.assertEqual(meta['sha256'],hashlib.sha256(b'retired').hexdigest())

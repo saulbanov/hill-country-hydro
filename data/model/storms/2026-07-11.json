@@ -1,0 +1,880 @@
+{
+  "id": "2026-07-11",
+  "window": {
+    "t0": "2026-07-10T00:00:00Z",
+    "t1": "2026-07-20T00:00:00Z",
+    "cap_at": "2026-07-20T00:00:00Z",
+    "observed_through": "2026-10-02T12:10:00Z",
+    "status": "closed",
+    "rule": {
+      "rain_fraction": 0.2,
+      "rainfall1Day_inches": 1.0,
+      "baseline_hours": 24,
+      "recession_hours": 72,
+      "cap_days": 10,
+      "trigger": "rainfall1Day >= 1 inch at >=20% of reporting rain gauges, or a flow crossing of its ledger high threshold",
+      "end": "72 hours after all crossing gauges are observed below threshold, capped at t0 + 10 days",
+      "daily_precision": "Daily means can identify a trigger day only; its UTC midnight is a window boundary, not an observed crossing time."
+    },
+    "triggered_by": [
+      {
+        "at": "2026-07-11",
+        "kind": "flow",
+        "station": "08156800",
+        "threshold_cfs": 29.8,
+        "reading": {
+          "at": "2026-07-11",
+          "value": 36.6,
+          "source": "data/history/08156800-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-10",
+          "value": 0.0,
+          "source": "data/history/08156800-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-11",
+        "kind": "flow",
+        "station": "08157560",
+        "threshold_cfs": 17.2,
+        "reading": {
+          "at": "2026-07-11",
+          "value": 20.3,
+          "source": "data/history/08157560-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-10",
+          "value": 10.6,
+          "source": "data/history/08157560-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-11",
+        "kind": "flow",
+        "station": "08158035",
+        "threshold_cfs": 11.1,
+        "reading": {
+          "at": "2026-07-11",
+          "value": 11.5,
+          "source": "data/history/08158035-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-10",
+          "value": 0.5,
+          "source": "data/history/08158035-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08156800",
+        "threshold_cfs": 29.8,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 85.0,
+          "source": "data/history/08156800-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 1.39,
+          "source": "data/history/08156800-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08158970",
+        "threshold_cfs": 21.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 38.9,
+          "source": "data/history/08158970-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 4.49,
+          "source": "data/history/08158970-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08195000",
+        "threshold_cfs": 295.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 447.0,
+          "source": "data/history/08195000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 16.1,
+          "source": "data/history/08195000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08155541",
+        "threshold_cfs": 5.63,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 21.5,
+          "source": "data/history/08155541-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.16,
+          "source": "data/history/08155541-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08156910",
+        "threshold_cfs": 4.52,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 8.0,
+          "source": "data/history/08156910-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.01,
+          "source": "data/history/08156910-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08158030",
+        "threshold_cfs": 7.26,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 8.29,
+          "source": "data/history/08158030-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.0,
+          "source": "data/history/08158030-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08158035",
+        "threshold_cfs": 11.1,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 15.5,
+          "source": "data/history/08158035-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.54,
+          "source": "data/history/08158035-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08158200",
+        "threshold_cfs": 58.3,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 72.5,
+          "source": "data/history/08158200-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.01,
+          "source": "data/history/08158200-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08158380",
+        "threshold_cfs": 24.6,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 40.6,
+          "source": "data/history/08158380-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.38,
+          "source": "data/history/08158380-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08158600",
+        "threshold_cfs": 108.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 124.0,
+          "source": "data/history/08158600-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.48,
+          "source": "data/history/08158600-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08105095",
+        "threshold_cfs": 69.7,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 75.1,
+          "source": "data/history/08105095-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 13.5,
+          "source": "data/history/08105095-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08105872",
+        "threshold_cfs": 133.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 295.0,
+          "source": "data/history/08105872-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 13.9,
+          "source": "data/history/08105872-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08105883",
+        "threshold_cfs": 241.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 494.0,
+          "source": "data/history/08105883-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 28.7,
+          "source": "data/history/08105883-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08105886",
+        "threshold_cfs": 8.12,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 9.43,
+          "source": "data/history/08105886-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.64,
+          "source": "data/history/08105886-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08105888",
+        "threshold_cfs": 322.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 614.0,
+          "source": "data/history/08105888-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 32.7,
+          "source": "data/history/08105888-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08168000",
+        "threshold_cfs": 99.2,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 99.6,
+          "source": "data/history/08168000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 29.9,
+          "source": "data/history/08168000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08178880",
+        "threshold_cfs": 384.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 1020.0,
+          "source": "data/history/08178880-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 44.1,
+          "source": "data/history/08178880-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08167000",
+        "threshold_cfs": 540.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 616.0,
+          "source": "data/history/08167000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 57.3,
+          "source": "data/history/08167000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08183900",
+        "threshold_cfs": 84.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 1430.0,
+          "source": "data/history/08183900-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 12.4,
+          "source": "data/history/08183900-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08166200",
+        "threshold_cfs": 252.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 729.0,
+          "source": "data/history/08166200-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 118.0,
+          "source": "data/history/08166200-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08190000",
+        "threshold_cfs": 392.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 1260.0,
+          "source": "data/history/08190000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 42.1,
+          "source": "data/history/08190000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-14",
+        "kind": "flow",
+        "station": "08198000",
+        "threshold_cfs": 182.0,
+        "reading": {
+          "at": "2026-07-14",
+          "value": 771.0,
+          "source": "data/history/08198000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-13",
+          "value": 0.33,
+          "source": "data/history/08198000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08159000",
+        "threshold_cfs": 258.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 296.0,
+          "source": "data/history/08159000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 68.4,
+          "source": "data/history/08159000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08158930",
+        "threshold_cfs": 9.3,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 13.1,
+          "source": "data/history/08158930-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 3.92,
+          "source": "data/history/08158930-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08169000",
+        "threshold_cfs": 423.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 1360.0,
+          "source": "data/history/08169000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 201.0,
+          "source": "data/history/08169000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08158827",
+        "threshold_cfs": 89.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 132.0,
+          "source": "data/history/08158827-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 27.6,
+          "source": "data/history/08158827-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08158860",
+        "threshold_cfs": 1.72,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 5.52,
+          "source": "data/history/08158860-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 0.1,
+          "source": "data/history/08158860-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08153500",
+        "threshold_cfs": 471.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 917.0,
+          "source": "data/history/08153500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 15.4,
+          "source": "data/history/08153500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08167500",
+        "threshold_cfs": 1020.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 12000.0,
+          "source": "data/history/08167500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 64.5,
+          "source": "data/history/08167500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08152900",
+        "threshold_cfs": 143.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 1450.0,
+          "source": "data/history/08152900-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 134.0,
+          "source": "data/history/08152900-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08170950",
+        "threshold_cfs": 119.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 136.0,
+          "source": "data/history/08170950-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 20.4,
+          "source": "data/history/08170950-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08149900",
+        "threshold_cfs": 136.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 621.0,
+          "source": "data/history/08149900-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 111.0,
+          "source": "data/history/08149900-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08150000",
+        "threshold_cfs": 297.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 2500.0,
+          "source": "data/history/08150000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 235.0,
+          "source": "data/history/08150000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-15",
+        "kind": "flow",
+        "station": "08151500",
+        "threshold_cfs": 832.0,
+        "reading": {
+          "at": "2026-07-15",
+          "value": 1490.0,
+          "source": "data/history/08151500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-14",
+          "value": 54.4,
+          "source": "data/history/08151500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-16",
+        "kind": "flow",
+        "station": "08158927",
+        "threshold_cfs": 1.0,
+        "reading": {
+          "at": "2026-07-16",
+          "value": 1.39,
+          "source": "data/history/08158927-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-15",
+          "value": 0.28,
+          "source": "data/history/08158927-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-16",
+        "kind": "flow",
+        "station": "08159110",
+        "threshold_cfs": 10.3,
+        "reading": {
+          "at": "2026-07-16",
+          "value": 24.8,
+          "source": "data/history/08159110-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-15",
+          "value": 9.1,
+          "source": "data/history/08159110-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-16",
+        "kind": "flow",
+        "station": "08171000",
+        "threshold_cfs": 419.0,
+        "reading": {
+          "at": "2026-07-16",
+          "value": 604.0,
+          "source": "data/history/08171000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-15",
+          "value": 34.7,
+          "source": "data/history/08171000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-16",
+        "kind": "flow",
+        "station": "08171290",
+        "threshold_cfs": 214.0,
+        "reading": {
+          "at": "2026-07-16",
+          "value": 452.0,
+          "source": "data/history/08171290-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-15",
+          "value": 74.5,
+          "source": "data/history/08171290-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-16",
+        "kind": "flow",
+        "station": "08165500",
+        "threshold_cfs": 116.0,
+        "reading": {
+          "at": "2026-07-16",
+          "value": 10800.0,
+          "source": "data/history/08165500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-15",
+          "value": 66.9,
+          "source": "data/history/08165500-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-16",
+        "kind": "flow",
+        "station": "08152000",
+        "threshold_cfs": 187.0,
+        "reading": {
+          "at": "2026-07-16",
+          "value": 188.0,
+          "source": "data/history/08152000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-15",
+          "value": 154.0,
+          "source": "data/history/08152000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-17",
+        "kind": "flow",
+        "station": "08171350",
+        "threshold_cfs": 284.0,
+        "reading": {
+          "at": "2026-07-17",
+          "value": 345.0,
+          "source": "data/history/08171350-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-16",
+          "value": 85.7,
+          "source": "data/history/08171350-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      },
+      {
+        "at": "2026-07-18",
+        "kind": "flow",
+        "station": "08158000",
+        "threshold_cfs": 5950.0,
+        "reading": {
+          "at": "2026-07-18",
+          "value": 9870.0,
+          "source": "data/history/08158000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "previous": {
+          "at": "2026-07-17",
+          "value": 1080.0,
+          "source": "data/history/08158000-00060-daily-mean.csv",
+          "precision": "daily mean"
+        },
+        "gap_hours": 24.0
+      }
+    ],
+    "end_candidate": "2026-07-20T00:00:00Z",
+    "gauges_without_observed_recession": []
+  },
+  "hypotheses": []
+}
