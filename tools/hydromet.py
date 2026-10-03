@@ -149,24 +149,27 @@ def history(agency, sites, params, since=None, until_year=None, hourly=None, pau
                     if start > today: continue
                     name = capture_name(site, param, year, n, hourly); key = f'{agency.lower()}/{name}'; prev = man['windows'].get(key)
                     is_open = start <= today <= end
-                    if prev and not refresh and not is_open and prev.get('status') == 200 and (prev.get('records', 0) > 0 or prev.get('attempts', 1) >= 2):
+                    if prev and not refresh and not is_open and prev.get('status') == 200 and (prev.get('records', 0) > 0 or prev.get('attempts', 1) >= 2 or prev.get('param') in ('rainDaily', 'rain')):
                         year_records += prev.get('records', 0); continue
                     recs, hdr, body, status, err, used_hourly, attempts, url = [], {}, b'', 0, None, hourly, 0, None
-                    for try_hourly in attempt_plan(agency, hourly):   # an empty closed window is asked again: LCRA at 15 minutes, otherwise once more
+                    for try_hourly in (attempt_plan(agency, hourly)[:1] if param in ('rainDaily', 'rain') else attempt_plan(agency, hourly)):   # rain is requested once; other params retain their existing empty-window resolution plan
                         url = history_url(agency, site, param, start, min(end, today), try_hourly); used_hourly = try_hourly; attempts += 1
-                        body, status, err = fetch(url); time.sleep(pause)
+                        body, status, err = fetch(url)
+                        raw, meta = save_raw(RAW / 'history' / str(site), f'{param}-{year}-{n}', url, body, status, err)
+                        time.sleep(pause)
                         recs, hdr = parse_history(body) if status == 200 else ([], {})
                         if status != 200 or recs or is_open: break
                     if status == 200:
                         failures = 0; fetched += 1; gz = out_dir / capture_name(site, param, year, n, used_hourly)
                         with gzip.open(gz, 'wb', compresslevel=9) as z: z.write(body)
+                        gz.with_name(gz.name.replace('.json.gz', '.meta.json')).write_text(json.dumps(meta, indent=2) + '\n')
                         man['windows'][key] = {'agency': agency, 'site': str(site), 'param': param, 'year': year, 'window': n, 'start': start.isoformat(), 'end': min(end, today).isoformat(), 'hourly': used_hourly, 'file': f'{agency.lower()}/{gz.name}', 'attempts': attempts, 'url': url, 'status': 200,
-                                               'retrieved_at': now_utc().isoformat(), 'sha256': hashlib.sha256(body).hexdigest(), 'bytes': len(body), 'gz_bytes': gz.stat().st_size, 'records': len(recs),
+                                               'retrieved_at': now_utc().isoformat(), 'sha256': hashlib.sha256(body).hexdigest(), 'bytes': len(body), 'gz_bytes': gz.stat().st_size, 'records': len(recs), 'raw_path': str(raw.relative_to(ROOT)),
                                                'first': recs[-1]['dateTime'] if recs else None, 'last': recs[0]['dateTime'] if recs else None, 'value1Type': hdr.get('value1Type'), 'value2Type': hdr.get('value2Type'), 'site_name': hdr.get('siteName'), 'open_window': is_open}
                         year_records += len(recs)
                     else:
                         failures += 1
-                        man['windows'][key] = {'agency': agency, 'site': str(site), 'param': param, 'year': year, 'window': n, 'start': start.isoformat(), 'end': min(end, today).isoformat(), 'hourly': hourly, 'url': url, 'status': status, 'error': err or body[:200].decode('utf-8', 'replace'), 'retrieved_at': now_utc().isoformat(), 'records': 0}
+                        man['windows'][key] = {**meta, 'raw_path': str(raw.relative_to(ROOT)), 'agency': agency, 'site': str(site), 'param': param, 'year': year, 'window': n, 'start': start.isoformat(), 'end': min(end, today).isoformat(), 'hourly': hourly, 'url': url, 'status': status, 'error': err or body[:200].decode('utf-8', 'replace'), 'retrieved_at': now_utc().isoformat(), 'records': 0}
                         log(f'{agency} {site} {param} {year}-{n}: HTTP {status} {err or body[:80]!r}')
                         if failures >= max_failures:
                             log(f'stopping after {failures} straight refusals; coverage recorded as partial'); _save_manifest(man); return fetched
@@ -189,6 +192,12 @@ def newest_current():
         m = json.loads(mp.read_text())
         if m.get('status') == 200: return mp.with_name(mp.name.replace('.meta.json', '.json')), m
     return None, None
+
+def hill_country_rain_sites(sites):
+    """Frozen box from the storm handoff; only provider-identified LCRA rain sites."""
+    return sorted({s['site'] for s in sites if s['agency'] == 'LCRA' and (s['site_type'] == 'rain' or bool(s.get('rain_in')))
+                   and s['lat'] is not None and s['lon'] is not None
+                   and 29.9 <= s['lat'] <= 30.9 and -100.2 <= s['lon'] <= -97.9})
 
 def num(x):
     if x is None or x == '': return None
@@ -261,12 +270,47 @@ def assess(at=None):
                      'with_creek_tag': sum(1 for s in out['sites'].values() if s['creek']), 'history_series': len(out['history_coverage'])}
     APP.mkdir(exist_ok=True); (APP / 'hydromet.json').write_text(json.dumps(out, indent=1) + '\n'); print(f"hydromet.json: {out['counts']}"); return out
 
+def expand_rain_priority():
+    p, _ = newest_current()
+    if p:
+        PRIORITY['LCRA']['rainDaily'] = sorted(set(PRIORITY['LCRA']['rainDaily']) | set(hill_country_rain_sites(parse_sites(p.read_bytes()))))
+
+
+def rain_window(sites, start, end, pause=0.5, refresh=False):
+    """One bounded native rain request per site; preserve each refusal, never retry."""
+    if not 0 <= (end-start).days < 180: raise ValueError('rain window must be 0..179 days')
+    for site in sites:
+        name = f'{site}-rain-window-{start}-{end}.json.gz'
+        previous = load_manifest('LCRA', site)['windows'].get('lcra/'+name)
+        if previous and previous.get('status') == 200 and not refresh:
+            print(f'{site}: preserved existing rain window', flush=True); continue
+        url = history_url('LCRA', site, 'rain', start, end, False)
+        body, status, err = fetch(url)
+        raw, meta = save_raw(RAW / 'history' / site, 'rain-window', url, body, status, err)
+        time.sleep(pause)
+        # Interpretation begins only after the raw body and sidecar are on disk.
+        recs, hdr = parse_history(body) if status == 200 else ([], {})
+        gz = CAP / 'lcra' / f'{site}-rain-window-{start}-{end}.json.gz'; gz.parent.mkdir(parents=True, exist_ok=True)
+        gz.write_bytes(gzip.compress(body, mtime=0))
+        gz.with_name(gz.name.replace('.json.gz','.meta.json')).write_text(json.dumps(meta, indent=2)+'\n')
+        key = 'lcra/' + gz.name; man = load_manifest('LCRA', site)
+        man['windows'][key] = {**meta, 'agency':'LCRA', 'site':site, 'param':'rain', 'file':key,
+            'start':str(start), 'end':str(end), 'hourly':False, 'records':len(recs), 'value1Type':hdr.get('value1Type'),
+            'value2Type':hdr.get('value2Type'), 'first':recs[-1]['dateTime'] if recs else None,
+            'last':recs[0]['dateTime'] if recs else None, 'raw_path':str(raw.relative_to(ROOT))}
+        _save_manifest(man)
+        print(f"{site} rain window: HTTP {status}, {len(recs)} records", flush=True)
+
+
+expand_rain_priority()
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter); sub = ap.add_subparsers(dest='cmd', required=True)
     sub.add_parser('collect').add_argument('--pause-seconds', type=float, default=1.0)
     h = sub.add_parser('history'); h.add_argument('--agency', choices=['COA', 'LCRA', 'both'], default='both'); h.add_argument('--sites', nargs='*', help='site numbers; default PRIORITY')
     h.add_argument('--params', nargs='*', help='history params; default PRIORITY per agency'); h.add_argument('--since', type=int); h.add_argument('--until-year', type=int, help='newest year to ask (a site whose record ended)'); h.add_argument('--hourly', action='store_true'); h.add_argument('--fifteen-minute', action='store_true', help='LCRA at native 15-minute (default hourly)')
     h.add_argument('--pause-seconds', type=float, default=1.0); h.add_argument('--refresh', action='store_true'); h.add_argument('--recent-only', action='store_true', help='only the window holding today (the daily routine)')
+    w = sub.add_parser('rain-window'); w.add_argument('--start', type=dt.date.fromisoformat, required=True); w.add_argument('--end', type=dt.date.fromisoformat, required=True); w.add_argument('--pause-seconds', type=float, default=0.5); w.add_argument('--refresh', action='store_true')
     sub.add_parser('normalize'); sub.add_parser('assess')
     a = ap.parse_args()
     if a.cmd == 'collect': collect(a.pause_seconds)
@@ -279,6 +323,10 @@ def main():
                 since = dt.date.today().year if a.recent_only else a.since
                 n = history(agency, sites, [param], since=since, until_year=a.until_year, hourly=hourly, pause=a.pause_seconds, refresh=a.refresh)
                 print(f'{agency} {param}: {n} windows fetched for {len(sites)} sites')
+    elif a.cmd == 'rain-window':
+        p, _ = newest_current()
+        if not p: raise SystemExit('no saved all-sites feed')
+        rain_window(hill_country_rain_sites(parse_sites(p.read_bytes())), a.start, a.end, a.pause_seconds, a.refresh)
     elif a.cmd == 'normalize': normalize()
     elif a.cmd == 'assess': assess()
 
