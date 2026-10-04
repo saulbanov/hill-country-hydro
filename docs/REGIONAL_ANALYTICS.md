@@ -36,6 +36,15 @@ report counts resolved adapted observations. These are deliberately different de
 Unsupported USGS quantities remain in the archive audit. Unknown Hydromet headers remain
 excluded with a reason. No raw record is edited.
 
+## Full histories
+
+The compact store above is the fast path. `docs/REGIONAL_HISTORY.md` describes the second store,
+built by the same adapters with the retention gates opened for 173 named pilot stations, and the
+fixed 2006–2025 baseline used to rank any historical date. `Builder(..., daily_start=, only=,
+hydromet_params=, audit_path=)` are the added parameters; their defaults reproduce this store
+byte for byte (SQLite SHA-256 `0a4e8a26…3120` on the October 3 replay). `seasonal_reference`
+accepts `reference_years` and `exclude_year`; without them it behaves as before.
+
 ## Meaning of each record
 
 Every record retains provider, distributing feed, original site/series/field, original

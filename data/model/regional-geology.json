@@ -1,0 +1,2554 @@
+{
+ "schema_version": "regional-geology/v1",
+ "evidence_class": "mapped and published geological interpretation; no instrument observation",
+ "pilot_box_lon_lat": [
+  -100.35,
+  29.95,
+  -97.55,
+  31.05
+ ],
+ "sources": {
+  "usgs-ha730e-text10-minor-aquifers": {
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text10.html",
+   "retrieved_at": "2026-10-04T03:01:03.781896+00:00",
+   "sha256": "033a85f91dac48e79722443a36e16ac8c4b8fede3b174b3a52926253e31600bd",
+   "bytes": 23586
+  },
+  "usgs-ha730e-text8-edwards-trinity": {
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text8.html",
+   "retrieved_at": "2026-10-04T03:00:59.085737+00:00",
+   "sha256": "0878c3ec388058d225cdc86a4116f9ba57906e5f889c769d4bdc22ca424afd02",
+   "bytes": 45858
+  },
+  "twdb-gat-rockunit-bbox-p01": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=0&resultRecordCount=500&f=geojson",
+   "retrieved_at": "2026-10-04T02:58:09.247425+00:00",
+   "sha256": "1c5a8a296f4b4b560f2c9a97315c20353f777308dbc8519f4b61cd5c97180247",
+   "bytes": 11274129
+  },
+  "twdb-gat-rockunit-bbox-p02": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:58:28.396448+00:00",
+   "sha256": "7d7da0c6c4ebc1004f0b392f294fa731b61d7c9329f42eb8086ca3f228dfb569",
+   "bytes": 22002520
+  },
+  "twdb-gat-rockunit-bbox-p03": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=1500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:58:44.590740+00:00",
+   "sha256": "b8f6ba6c6ad47cd191a768266d25f7e59a2956bd3392b99129416dd8c913b77a",
+   "bytes": 8899073
+  },
+  "twdb-gat-rockunit-bbox-p04": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=2500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:58:52.037395+00:00",
+   "sha256": "ab5e148ef348030d61d6ce95160158a1c0940f77304ab0dc17b8e34444d893d7",
+   "bytes": 4060851
+  },
+  "twdb-gat-rockunit-bbox-p05": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=3500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:58:59.352816+00:00",
+   "sha256": "d2274b9961dbd94c1a658b72915c1a1227137cff5ab460288b37f52eab1753d9",
+   "bytes": 5460323
+  },
+  "twdb-gat-rockunit-bbox-p06": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=4500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:59:07.561223+00:00",
+   "sha256": "8c4e60e2e0f6c28b3a74a733e6b36e98d1931ff6fcb38450b9059355ad71430d",
+   "bytes": 5950207
+  },
+  "twdb-gat-rockunit-bbox-p07": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=5500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:59:16.370761+00:00",
+   "sha256": "add9eaa54fe17c85e5163e23be4b14697a30f38d0f254cdfe2818d7c14414445",
+   "bytes": 9700523
+  },
+  "twdb-gat-rockunit-bbox-p08": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/11/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=6500&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:59:26.321415+00:00",
+   "sha256": "e83fcde5a7bd9200b04d8cbcccaed4bbb8321025bafb13583c537815bc8c1008",
+   "bytes": 30496332
+  },
+  "twdb-major-aquifers-bbox": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/1/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=MajorAquiferId&f=geojson",
+   "retrieved_at": "2026-10-04T02:57:05.604992+00:00",
+   "sha256": "e2afc562a3ab49215929fc16f5e6e115e607ad6b5542489ae1cb43c54afdfae5",
+   "bytes": 24886440
+  },
+  "twdb-minor-aquifers-bbox": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/2/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=MinorAquiferId&f=geojson",
+   "retrieved_at": "2026-10-04T02:57:15.847826+00:00",
+   "sha256": "067ce296772eac10071bde9a5e5b0aaa34751c2921d5c30b8d47a843daf3fa43",
+   "bytes": 3337195
+  },
+  "twdb-gat-structure-bbox-p1": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/13/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:57:55.186283+00:00",
+   "sha256": "7e5b9de958122d24987c631db129fea6676d7375e1fee4e7a5731a86578c6932",
+   "bytes": 552135
+  },
+  "twdb-gat-structure-bbox-p2": {
+   "url": "https://services.twdb.texas.gov/arcgis/rest/services/Base/BaseLayerQueryService/MapServer/13/query?where=1%3D1&geometry=-100.3%2C30.0%2C-97.6%2C31.0&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=4326&orderByFields=ObjectId&resultOffset=1000&resultRecordCount=1000&f=geojson",
+   "retrieved_at": "2026-10-04T02:57:59.873151+00:00",
+   "sha256": "c79ef03ec6cf99863b39e06df28a51f6829c618767046823b726b8009545d14b",
+   "bytes": 365610
+  },
+  "gwdb-welldata-5621401": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5621401&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:01.805888+00:00",
+   "sha256": "b7803948ff53ccf1ac45d749f2fb8024a2c43c5d3dde7cf3805e205aef58a2a0",
+   "bytes": 167721
+  },
+  "gwdb-welldata-5630102": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5630102&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:06.877751+00:00",
+   "sha256": "acce5ad174355c95b62f7d6ba440ea7635a08816da6e396731a971e4644a4b6d",
+   "bytes": 47320
+  },
+  "gwdb-welldata-5634504": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5634504&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:11.541149+00:00",
+   "sha256": "b55564ecaaf51dc9cea1bd4d37432b4055effe1bbd4de3fdfff48d4dd0ca9060",
+   "bytes": 141213
+  },
+  "gwdb-welldata-5634505": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5634505&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:16.505812+00:00",
+   "sha256": "3d12f53e5a93b5bbd875fe310f631cd6e9b0e1cf6404f3f2f19847c80b9f8e64",
+   "bytes": 186827
+  },
+  "gwdb-welldata-5642403": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5642403&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:21.552678+00:00",
+   "sha256": "5f459766abbef56e5d46f1231825572cf9f3b04f6aca76b83b7358e4ca0ea1f9",
+   "bytes": 207958
+  },
+  "gwdb-welldata-5643901": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5643901&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:26.787802+00:00",
+   "sha256": "d2c599ad20df74fe5c5ad5224d2a3681c0b3d728931fca25110e5c2aefa6ef82",
+   "bytes": 86218
+  },
+  "gwdb-welldata-5644901": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5644901&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:31.508020+00:00",
+   "sha256": "f34d9088ec33777a3e65d08c2d84b200d53427706252151c815ec863dde99d47",
+   "bytes": 231014
+  },
+  "gwdb-welldata-5652704": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5652704&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:36.875505+00:00",
+   "sha256": "455025008ff90b78af67a719f8975a547e7f080a1e1596fda574d21ae306ba9f",
+   "bytes": 89469
+  },
+  "gwdb-welldata-5659201": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5659201&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:41.826726+00:00",
+   "sha256": "63d32eb0030cc4e5d04729cdd3e149f1d0003c504e907bfc5911c69a51475f7e",
+   "bytes": 233420
+  },
+  "gwdb-welldata-5664301": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5664301&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:47.130264+00:00",
+   "sha256": "9f86878d0635e7bc0a0a6357746bd0985f577ada6ab0ae02f012c68203d5a1ec",
+   "bytes": 73429
+  },
+  "gwdb-welldata-5664302": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5664302&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:51.909449+00:00",
+   "sha256": "04e5325a4741587828561c25c70970bcbc13b81b66fa953d659ee8cdba25b790",
+   "bytes": 60825
+  },
+  "gwdb-welldata-5714604": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5714604&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:04:56.856638+00:00",
+   "sha256": "ea0d89964c8248e64c2d37291b826b8e2e7681b6bc8211cd93a0e7939cc9418a",
+   "bytes": 243750
+  },
+  "gwdb-welldata-5722505": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5722505&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:03.990126+00:00",
+   "sha256": "49cf33ba03b7555af8a7e998c221a4e2109db1d144de921014a6637ac22681d5",
+   "bytes": 265050
+  },
+  "gwdb-welldata-5723406": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5723406&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:11.761090+00:00",
+   "sha256": "531fe8450d634ea91cb97b2cd9b9f0071f6b11d11749b07e8dda742b0784116d",
+   "bytes": 14714
+  },
+  "gwdb-welldata-5745822": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5745822&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:16.931168+00:00",
+   "sha256": "56a0ad2a520efe12d4ebc46c474e9fb21beb9a8232d87aa4847bd2d2c00d799c",
+   "bytes": 383493
+  },
+  "gwdb-welldata-5747310": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5747310&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:25.357671+00:00",
+   "sha256": "d01a6b9e9b16d334c63708f1c81ab7d30a1de58870b9596639f5a7a5a174655b",
+   "bytes": 49535
+  },
+  "gwdb-welldata-5747312": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5747312&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:30.230060+00:00",
+   "sha256": "aa30de64fb41eea349228020fc34c1a6a9533b32d76b62e54c19949b4583cce2",
+   "bytes": 212963
+  },
+  "gwdb-welldata-5747314": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5747314&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:35.167825+00:00",
+   "sha256": "a1d7a7d01c9938d27017f372525d59069786ade9e24e6534ff361af35b4b0137",
+   "bytes": 193178
+  },
+  "gwdb-welldata-5748109": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5748109&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:40.332992+00:00",
+   "sha256": "29e82d121754ec70f81c6d336785471a00189beec015fad0dda4db3be6a7d71a",
+   "bytes": 148896
+  },
+  "gwdb-welldata-5748505": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5748505&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:47.283691+00:00",
+   "sha256": "5e71891a58c0fa270cd53306b59d6c60e3ba254ab42f41b77e82d292100ea310",
+   "bytes": 230594
+  },
+  "gwdb-welldata-5748811": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5748811&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:52.391398+00:00",
+   "sha256": "7df44d61650af9898deba7e97c6bef47641578224e42fc9e2d9f6281d2da6ba6",
+   "bytes": 243605
+  },
+  "gwdb-welldata-5750108": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5750108&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:05:57.353741+00:00",
+   "sha256": "f3e1229404594b6d60492aab84e1d2823f67f23953dda9ca53336f7a38e69864",
+   "bytes": 405178
+  },
+  "gwdb-welldata-5750324": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5750324&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:04.084237+00:00",
+   "sha256": "06f9639624afbf92bdef854497098b8e7bcb2e06fb7164477c2cf5cc5e432e80",
+   "bytes": 342389
+  },
+  "gwdb-welldata-5751407": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5751407&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:11.056503+00:00",
+   "sha256": "e2de044a9dce457fcadd884c01ea1351f152868061c487908ffff2dbe913acff",
+   "bytes": 285561
+  },
+  "gwdb-welldata-5755405": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5755405&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:20.068497+00:00",
+   "sha256": "2047164b013d49088990a237bba88a1a69078ae6f2dd4cbef6e2329b089c8ce6",
+   "bytes": 280919
+  },
+  "gwdb-welldata-5755607": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5755607&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:26.927341+00:00",
+   "sha256": "6a26b1ecd3b4258ae3e5cd2faa00e9cdc0deeea02af6b62145413d7dec09d5e7",
+   "bytes": 304624
+  },
+  "gwdb-welldata-5755803": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5755803&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:32.048479+00:00",
+   "sha256": "da12204565b3ab153eda31db098b9d54c3535731fb02d27fd64dafce28239c61",
+   "bytes": 31233
+  },
+  "gwdb-welldata-5756702": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5756702&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:36.731439+00:00",
+   "sha256": "63a2f5dc0390421ca5c7f546108f8cc7695646cfa0f3a8ad8f1478a556400088",
+   "bytes": 68897
+  },
+  "gwdb-welldata-5756716": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5756716&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:41.994271+00:00",
+   "sha256": "25f9d07aa5fe0bcdd845a747aef90986211335d7f888c6e9a8648caf5f233965",
+   "bytes": 276659
+  },
+  "gwdb-welldata-5758203": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5758203&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:49.887438+00:00",
+   "sha256": "8ec26db7ef9f00c0659eb8b60b19dd33972248c81db21a8c3a95234a9b22177b",
+   "bytes": 240682
+  },
+  "gwdb-welldata-5764502": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5764502&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:06:55.149771+00:00",
+   "sha256": "0657fd30c91de677b377538404e93480c3b72fa0286686c5d8476a969f478006",
+   "bytes": 252488
+  },
+  "gwdb-welldata-5835811": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5835811&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:07:00.286199+00:00",
+   "sha256": "90349e05ec57651dfad240c5316c860e1ad00195506b45dfaf66aecc7c56b90a",
+   "bytes": 197895
+  },
+  "gwdb-welldata-5841406": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5841406&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:07:05.239972+00:00",
+   "sha256": "e526c96c79fd69ed3888b942b98118ad95819904aa96035f689b8c791471b233",
+   "bytes": 26361
+  },
+  "gwdb-welldata-5849326": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5849326&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:07:09.889762+00:00",
+   "sha256": "527c7231edcb6a7eb08ba4b7ca7989c20ab5ae64f214140d346e75d177863b77",
+   "bytes": 184567
+  },
+  "gwdb-welldata-5850120": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5850120&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:07:14.981250+00:00",
+   "sha256": "ed52456fdc141ed338452253d04e8d3b590a7911edbd4773b161eec1d62bc232",
+   "bytes": 297522
+  },
+  "gwdb-welldata-5850301": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5850301&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:07:20.322197+00:00",
+   "sha256": "1eb452eb9000a977f727164b8e7dffd9b3fed03601fd54e241b850a05d7efc0a",
+   "bytes": 364195
+  },
+  "gwdb-welldata-5857502": {
+   "url": "https://www3.twdb.texas.gov/apps/reports/GWDB/WellData?StateWellNumber=5857502&rs:Format=CSV",
+   "retrieved_at": "2026-10-04T03:07:26.686376+00:00",
+   "sha256": "ae13482e1bd5b1f313321915ff14d6e0e8d9f1a48fc2db474dbf296b1f1dcbb5",
+   "bytes": 228278
+  },
+  "usgs-ha730e-fig112": {
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/gif/E112.GIF",
+   "retrieved_at": "2026-10-04T03:01:47.144932+00:00",
+   "sha256": "5351de2a2e41a89a455e822a7fd5affef6545ab70d6367a5a19cf10555b21e37",
+   "bytes": 14507
+  },
+  "usgs-ha730e-fig079": {
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/gif/E079.GIF",
+   "retrieved_at": "2026-10-04T03:01:08.396328+00:00",
+   "sha256": "70ad60cc13ebd1ec8f17b812f149eb9ee26e8980df9dee415b39706b5f3baa80",
+   "bytes": 10356
+  },
+  "usgs-copyrights-and-credits-page": {
+   "url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+   "retrieved_at": "2026-10-04T03:02:21.608362+00:00",
+   "sha256": "6cd71c1b50077ca10e13a88d199c42855d9cb08f37a8104092fb65df07223c31",
+   "bytes": 88963
+  },
+  "twdb-gisdata-page": {
+   "url": "https://www.twdb.texas.gov/mapping/gisdata.asp",
+   "retrieved_at": "2026-10-04T02:56:38.247732+00:00",
+   "sha256": "8eb744d02f06980204bb564a4e7e9ecef526e583468108464c4cae94b6776719",
+   "bytes": 68885
+  },
+  "twdb-map-disclaimer": {
+   "url": "https://www3.twdb.texas.gov/apps/waterdatainteractive/Home/Disclaimer",
+   "retrieved_at": "2026-10-04T02:56:52.707470+00:00",
+   "sha256": "0d80aea60cb9dfb202380ef16ac98bc5d33655239179334bb791ef4dc9b304c0",
+   "bytes": 19825
+  },
+  "twdb-gat-index-page": {
+   "url": "https://www.twdb.texas.gov/groundwater/aquifer/GAT/index.asp",
+   "retrieved_at": "2026-10-04T02:57:37.907249+00:00",
+   "sha256": "9f09c137770ec44647dd10fbc2d5792af16b5ee5d91f7f75b885c54e62f0afc3",
+   "bytes": 76878
+  },
+  "twdb-r346-paleozoic-aquifers-central-texas-pdf": {
+   "url": "https://www.twdb.texas.gov/publications/reports/numbered_reports/doc/R346/R346.pdf",
+   "retrieved_at": "2026-10-04T03:02:11.218453+00:00",
+   "sha256": "6615a0f73a694d12756b87750ca4784661d3bee87d8aebe1af6ec30b5b1b96e7",
+   "bytes": 3840829
+  },
+  "twdb-r377-hill-country-trinity-gam-pdf": {
+   "url": "https://www.twdb.texas.gov/publications/reports/numbered_reports/doc/R377_HillCountryGAM.pdf",
+   "retrieved_at": "2026-10-04T03:02:16.033100+00:00",
+   "sha256": "a7b0f804d7f8fff8bd09ac4aeeef49dde0b94857ad1fc5ec816f663b71d7ea64",
+   "bytes": 18887691
+  },
+  "twdb-major-aquifers-shp-zip": {
+   "url": "https://www.twdb.texas.gov/mapping/gisdata/doc/major_aquifers.zip",
+   "retrieved_at": "2026-10-04T02:56:42.659494+00:00",
+   "sha256": "6b7bb13a8d8551e9d90d33087e46e4d00ba76611d2665d2090c582f93c7cf718",
+   "bytes": 11029569
+  },
+  "twdb-minor-aquifers-shp-zip": {
+   "url": "https://www.twdb.texas.gov/mapping/gisdata/doc/minor_aquifers.zip",
+   "retrieved_at": "2026-10-04T02:56:47.712352+00:00",
+   "sha256": "2c75e522b79ac24aab9fef1dfd45a3fb8adc58b5e2e721fdb1f9c5b88bdf1541",
+   "bytes": 7863821
+  },
+  "txgio-gat-collection-json": {
+   "url": "https://api.tnris.org/api/v1/collections/e28d8df6-cd30-4e89-bf0f-833e1ed0e670",
+   "retrieved_at": "2026-10-04T03:00:18.154123+00:00",
+   "sha256": "4f15f3da4f5c6f18d3d50ae77f254e4158931cd663cee404dbacb1a45a9c50fe",
+   "bytes": 5029
+  }
+ },
+ "aquifer_extents": {
+  "features": 323,
+  "by_aquifer": {
+   "Carrizo-Wilcox \u00b7 outcrop": 1,
+   "Trinity \u00b7 outcrop": 6,
+   "Trinity \u00b7 subsurface": 4,
+   "Edwards (Balcones Fault Zone) \u00b7 outcrop": 2,
+   "Edwards (Balcones Fault Zone) \u00b7 subsurface": 1,
+   "Edwards-Trinity (Plateau) \u00b7 outcrop": 1,
+   "Hickory \u00b7 subsurface": 79,
+   "Marble Falls \u00b7 outcrop": 30,
+   "Hickory \u00b7 outcrop": 77,
+   "Ellenburger-San Saba \u00b7 outcrop": 51,
+   "Ellenburger-San Saba \u00b7 subsurface": 70,
+   "Lipan \u00b7 subsurface": 1
+  },
+  "publisher": "Texas Water Development Board; major aquifers dated December 2006 and minor aquifers December 2017 on the TWDB GIS data page; source scale 1:250,000 stated for the major-aquifer shapefile",
+  "processing": "clipped to the pilot rectangle and simplified to about 150 m for display",
+  "code_meaning": {
+   "1": "outcrop",
+   "2": "subsurface (downdip)",
+   "basis": "not stated in TWDB layer metadata; checked by overlaying each coded Llano Uplift minor-aquifer polygon on Geologic Atlas of Texas surface units",
+   "check": {
+    "Hickory": {
+     "1": {
+      "matching surface unit": 50,
+      "other surface unit": 31
+     },
+     "2": {
+      "no single mapped unit": 18,
+      "other surface unit": 64
+     }
+    },
+    "Marble Falls": {
+     "1": {
+      "no single mapped unit": 1,
+      "other surface unit": 10,
+      "matching surface unit": 19
+     },
+     "2": {}
+    },
+    "Ellenburger-San Saba": {
+     "1": {
+      "matching surface unit": 40,
+      "other surface unit": 12
+     },
+     "2": {
+      "no single mapped unit": 3,
+      "other surface unit": 67
+     }
+    }
+   },
+   "summary": "109 of 163 code-1 polygons sit on a surface unit of the aquifer\u2019s own formations; 0 of 152 code-2 polygons do"
+  }
+ },
+ "faults": {
+  "features": 1593,
+  "by_type": {
+   "Normal": 1108,
+   "Unspecified": 455,
+   "Inferred Normal": 18,
+   "Concealed Normal": 5,
+   "Thrust": 7
+  },
+  "publisher": "Geologic Atlas of Texas (Bureau of Economic Geology, 1:250,000 sheets) as digitized and served by TWDB",
+  "limit": "a mapped fault trace at the surface; it does not show whether water moves along or across the fault"
+ },
+ "surface_units": {
+  "features": 3097,
+  "by_period": {
+   "Cretaceous": 894,
+   "Quaternary": 583,
+   "Cambrian": 895,
+   "Ordovician": 266,
+   "Mississippian": 24,
+   "Precambrian": 344,
+   "Pennsylvanian": 75,
+   "Permian": 3,
+   "water": 9,
+   "Tertiary": 4
+  },
+  "processing": "clipped and simplified to about 300 m for display; station lookups use the unsimplified captured polygons"
+ },
+ "wells": {
+  "TWDB:5621401": {
+   "well": "5621401",
+   "county": "Mason",
+   "gwdb_aquifer_code": "367ELBG - Ellenburger Group",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": "Interpreted from surface maps, no depth information available",
+   "well_depth_ft": 180.0,
+   "well_depth_source": "Person Other than Owner",
+   "land_surface_elevation_ft": 1717.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Interpreted from surface maps, no depth information available"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Gorman Formation",
+    "code": "Og",
+    "period": "Ordovician",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5621401"
+  },
+  "TWDB:5630102": {
+   "well": "5630102",
+   "county": "Mason",
+   "gwdb_aquifer_code": "367TNRD - Tanyard Formation",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": "Assigned by Professional Geoscientist using all available documentation",
+   "well_depth_ft": 40.0,
+   "well_depth_source": "Owner",
+   "land_surface_elevation_ft": 1622.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Assigned by Professional Geoscientist using all available documentation"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Tanyard Formation",
+    "code": "Ot",
+    "period": "Ordovician",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5630102"
+  },
+  "TWDB:5634504": {
+   "well": "5634504",
+   "county": "Kimble",
+   "gwdb_aquifer_code": "218TRNT - Trinity Group",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": "Assigned by Professional Geoscientist using all available documentation",
+   "well_depth_ft": 200.0,
+   "well_depth_source": "Owner",
+   "land_surface_elevation_ft": 1780.0,
+   "land_surface_elevation_method": "Global Positioning System-GPS",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Assigned by Professional Geoscientist using all available documentation"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Hensell Sand",
+    "code": "Kh",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5634504"
+  },
+  "TWDB:5634505": {
+   "well": "5634505",
+   "county": "Kimble",
+   "gwdb_aquifer_code": "110AVLC - Alluvium and Lower Cretaceous Rocks",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": "Assigned by Professional Geoscientist using all available documentation",
+   "well_depth_ft": 33.0,
+   "well_depth_source": "Owner",
+   "land_surface_elevation_ft": 1744.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Assigned by Professional Geoscientist using all available documentation"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Alluvium",
+    "code": "Qal",
+    "period": "Quaternary",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5634505"
+  },
+  "TWDB:5642403": {
+   "well": "5642403",
+   "county": "Kimble",
+   "gwdb_aquifer_code": "218EDRDA - Edwards and Associated Limestones",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 212.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 2135.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": null,
+   "drilling_end_date": "0/0/1900",
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Segovia Member of Edwards Limestone",
+    "code": "Ks",
+    "period": "Cretaceous",
+    "sheet": "Sonora",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5642403"
+  },
+  "TWDB:5643901": {
+   "well": "5643901",
+   "county": "Kerr",
+   "gwdb_aquifer_code": "218HNSL - Hensell Sand Member of Travis Peak Formation",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 870.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 2043.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Straight Wall",
+   "drilling_end_date": "12/15/2007",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 255.0,
+     "material": "Steel",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 740.0,
+     "material": "Steel",
+     "diameter_in": 2.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 740.0,
+     "bottom_ft": 840.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 2.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 840.0,
+     "bottom_ft": 870.0,
+     "material": "Steel",
+     "diameter_in": 2.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 740.0,
+     "bottom_ft": 840.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 19,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Confined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Segovia Member of Edwards Limestone",
+    "code": "Ks",
+    "period": "Cretaceous",
+    "sheet": "Sonora",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5643901"
+  },
+  "TWDB:5644901": {
+   "well": "5644901",
+   "county": "Kerr",
+   "gwdb_aquifer_code": "218TRNT - Trinity Group",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": "Provided by Third Party",
+   "well_depth_ft": 1040.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 2197.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "2/1/2015",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 750.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 683.0,
+     "bottom_ft": 740.0,
+     "material": "Steel",
+     "diameter_in": 7.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 740.0,
+     "bottom_ft": 1040.0,
+     "material": "Steel",
+     "diameter_in": 7.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 740.0,
+     "bottom_ft": 1040.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 10,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Confined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Third Party"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Segovia Member of Edwards Limestone",
+    "code": "Ks",
+    "period": "Cretaceous",
+    "sheet": "Sonora",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5644901"
+  },
+  "TWDB:5652704": {
+   "well": "5652704",
+   "county": "Kerr",
+   "gwdb_aquifer_code": "218HNSL - Hensell Sand Member of Travis Peak Formation",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 1073.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 2239.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Filter Packed; Straight Wall",
+   "drilling_end_date": "8/25/2008",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 378.0,
+     "material": "Steel",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 793.0,
+     "material": "Steel",
+     "diameter_in": 4.0
+    },
+    {
+     "type": "Perforated or Slotted",
+     "top_ft": 793.0,
+     "bottom_ft": 1073.0,
+     "material": "Steel",
+     "diameter_in": 4.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Perforated or Slotted",
+     "top_ft": 793.0,
+     "bottom_ft": 1073.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 27,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Confined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Segovia Member of Edwards Limestone",
+    "code": "Ks",
+    "period": "Cretaceous",
+    "sheet": "Sonora",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5652704"
+  },
+  "TWDB:5659201": {
+   "well": "5659201",
+   "county": "Kerr",
+   "gwdb_aquifer_code": "218HNSL - Hensell Sand Member of Travis Peak Formation",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": "Assigned by Professional Geoscientist using all available documentation",
+   "well_depth_ft": 1055.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 2314.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Filter Packed; Straight Wall",
+   "drilling_end_date": "10/26/2007",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 705.0,
+     "material": "Steel",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 1050.0,
+     "material": "Steel",
+     "diameter_in": 2.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 950.0,
+     "bottom_ft": 1050.0,
+     "material": null,
+     "diameter_in": 2.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 950.0,
+     "bottom_ft": 1050.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 12,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Confined",
+   "basin": "Llano",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Assigned by Professional Geoscientist using all available documentation"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Segovia Member of Edwards Limestone",
+    "code": "Ks",
+    "period": "Cretaceous",
+    "sheet": "Sonora",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5659201"
+  },
+  "TWDB:5664301": {
+   "well": "5664301",
+   "county": "Kerr",
+   "gwdb_aquifer_code": "218TSEB - Trinity (Hensell Sand) and Ellenburger Group",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": "Assigned by Professional Geoscientist using all available documentation",
+   "well_depth_ft": 740.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 2010.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Gravel Pack w/Perforations",
+   "drilling_end_date": "11/21/2011",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 545.0,
+     "material": "Steel",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 523.0,
+     "bottom_ft": 740.0,
+     "material": "Steel",
+     "diameter_in": 6.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 523.0,
+     "bottom_ft": 740.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 11,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Confined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Assigned by Professional Geoscientist using all available documentation"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Fort Terrett Member",
+    "code": "Kft",
+    "period": "Cretaceous",
+    "sheet": "San Antonio",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5664301"
+  },
+  "TWDB:5664302": {
+   "well": "5664302",
+   "county": "Kerr",
+   "gwdb_aquifer_code": "218EDRDA - Edwards and Associated Limestones",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 231.0,
+   "well_depth_source": "Another Government Agency",
+   "land_surface_elevation_ft": 2010.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Filter Packed",
+   "drilling_end_date": "11/21/2011",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 543.0,
+     "material": "Steel",
+     "diameter_in": 8.625
+    },
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 231.0,
+     "material": "Unknown",
+     "diameter_in": 1.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 191.0,
+     "bottom_ft": 231.0,
+     "material": null,
+     "diameter_in": 1.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 191.0,
+     "bottom_ft": 231.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 11,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Fort Terrett Member",
+    "code": "Kft",
+    "period": "Cretaceous",
+    "sheet": "San Antonio",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5664302"
+  },
+  "TWDB:5714604": {
+   "well": "5714604",
+   "county": "Burnet",
+   "gwdb_aquifer_code": "371HCKR - Hickory Sandstone",
+   "gwdb_aquifer": "Hickory",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 715.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1537.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Screened",
+   "drilling_end_date": "5/20/2013",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 615.0,
+     "material": null,
+     "diameter_in": 5.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 617.0,
+     "bottom_ft": 675.0,
+     "material": null,
+     "diameter_in": 5.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 617.0,
+     "bottom_ft": 675.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 6,
+   "feed_aquifer": "Hickory",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Walnut Formation",
+    "code": "Kwa",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5714604"
+  },
+  "TWDB:5722505": {
+   "well": "5722505",
+   "county": "Burnet",
+   "gwdb_aquifer_code": "371HCKR - Hickory Sandstone",
+   "gwdb_aquifer": "Hickory",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 420.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1050.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Straight Wall",
+   "drilling_end_date": "9/30/2010",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 420.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 5.0
+    }
+   ],
+   "screen_or_open_intervals": [],
+   "interval_status": "casing recorded without a screen or open interval",
+   "lithology_rows": 10,
+   "feed_aquifer": "Hickory",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Lion Mountain Sandstone and Cap Mountain Limestone Members undivided",
+    "code": "Crc",
+    "period": "Cambrian",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5722505"
+  },
+  "TWDB:5723406": {
+   "well": "5723406",
+   "county": "Burnet",
+   "gwdb_aquifer_code": "367ELBG - Ellenburger Group",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 375.0,
+   "well_depth_source": "Another Government Agency",
+   "land_surface_elevation_ft": 1165.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Hensell Sand",
+    "code": "Kh",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5723406"
+  },
+  "TWDB:5745822": {
+   "well": "5745822",
+   "county": "Blanco",
+   "gwdb_aquifer_code": "367ELBG - Ellenburger Group",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 464.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1233.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "4/30/2004",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 95.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 6.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 95.0,
+     "bottom_ft": 126.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 6.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 126.0,
+     "bottom_ft": 464.0,
+     "material": null,
+     "diameter_in": 6.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 95.0,
+     "bottom_ft": 126.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 126.0,
+     "bottom_ft": 464.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 0,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Lower Glen Rose Limestone",
+    "code": "Kgrl",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5745822"
+  },
+  "TWDB:5747310": {
+   "well": "5747310",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Assigned by Professional Geoscientist using all available documentation",
+   "well_depth_ft": 240.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 831.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Filter Packed",
+   "drilling_end_date": "3/10/2017",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 12.0,
+     "material": "Steel",
+     "diameter_in": 14.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 20.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 6.9
+    },
+    {
+     "type": "Screen",
+     "top_ft": 20.0,
+     "bottom_ft": 60.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 6.9
+    },
+    {
+     "type": "Blank",
+     "top_ft": 60.0,
+     "bottom_ft": 200.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 6.9
+    },
+    {
+     "type": "Screen",
+     "top_ft": 200.0,
+     "bottom_ft": 220.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 6.9
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 20.0,
+     "bottom_ft": 60.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 200.0,
+     "bottom_ft": 220.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 8,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Assigned by Professional Geoscientist using all available documentation"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Sycamore Sand",
+    "code": "Ksy",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5747310"
+  },
+  "TWDB:5747312": {
+   "well": "5747312",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 244.0,
+   "well_depth_source": "Another Government Agency",
+   "land_surface_elevation_ft": 833.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Sycamore Sand",
+    "code": "Ksy",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5747312"
+  },
+  "TWDB:5747314": {
+   "well": "5747314",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 215.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 968.0,
+   "land_surface_elevation_method": "Global Positioning System-GPS",
+   "borehole_completion": null,
+   "drilling_end_date": "10/8/2020",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 170.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.5
+    },
+    {
+     "type": "Screen",
+     "top_ft": 170.0,
+     "bottom_ft": 210.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.5
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 170.0,
+     "bottom_ft": 210.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 11,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Confined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Lower Glen Rose Limestone",
+    "code": "Kgrl",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5747314"
+  },
+  "TWDB:5748109": {
+   "well": "5748109",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 165.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 916.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": "11/30/2010",
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Lower Glen Rose Limestone",
+    "code": "Kgrl",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5748109"
+  },
+  "TWDB:5748505": {
+   "well": "5748505",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218GLRSL - Glen Rose Limestone, Lower Member",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 436.0,
+   "well_depth_source": "Owner",
+   "land_surface_elevation_ft": 1150.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5748505"
+  },
+  "TWDB:5748811": {
+   "well": "5748811",
+   "county": "Hays",
+   "gwdb_aquifer_code": "219SLGH - Sligo and Hosston Formations",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 840.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1203.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Straight Wall",
+   "drilling_end_date": "6/20/2011",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 780.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 780.0,
+     "bottom_ft": 840.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 780.0,
+     "bottom_ft": 840.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 21,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5748811"
+  },
+  "TWDB:5750108": {
+   "well": "5750108",
+   "county": "Gillespie",
+   "gwdb_aquifer_code": "367ELBG - Ellenburger Group",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 360.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1590.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "2/23/1972",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 55.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 112.0,
+     "material": "Steel",
+     "diameter_in": 7.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 112.0,
+     "bottom_ft": 360.0,
+     "material": null,
+     "diameter_in": null
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 112.0,
+     "bottom_ft": 360.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 7,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Confined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Hensell Sand",
+    "code": "Kh",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5750108"
+  },
+  "TWDB:5750324": {
+   "well": "5750324",
+   "county": "Gillespie",
+   "gwdb_aquifer_code": "367ELBG - Ellenburger Group",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 280.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1550.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "6/29/1993",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 63.0,
+     "material": "Steel",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 63.0,
+     "bottom_ft": 280.0,
+     "material": null,
+     "diameter_in": 6.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 63.0,
+     "bottom_ft": 280.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 9,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Confined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Hensell Sand",
+    "code": "Kh",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5750324"
+  },
+  "TWDB:5751407": {
+   "well": "5751407",
+   "county": "Gillespie",
+   "gwdb_aquifer_code": "367ELBG - Ellenburger Group",
+   "gwdb_aquifer": "Ellenburger-San Saba",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 228.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1510.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "5/0/1973",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 151.0,
+     "material": "Steel",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 151.0,
+     "bottom_ft": 228.0,
+     "material": null,
+     "diameter_in": 8.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 151.0,
+     "bottom_ft": 228.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 23,
+   "feed_aquifer": "Ellenburger-San Saba",
+   "feed_aquifer_type": "Confined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Hensell Sand",
+    "code": "Kh",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5751407"
+  },
+  "TWDB:5755405": {
+   "well": "5755405",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 506.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1362.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Filter Packed; Screened; Straight Wall",
+   "drilling_end_date": "9/8/2017",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 426.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.95
+    },
+    {
+     "type": "Screen",
+     "top_ft": 426.0,
+     "bottom_ft": 506.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.95
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 426.0,
+     "bottom_ft": 506.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 10,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5755405"
+  },
+  "TWDB:5755607": {
+   "well": "5755607",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218GLRSL - Glen Rose Limestone, Lower Member",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 372.0,
+   "well_depth_source": "Measured",
+   "land_surface_elevation_ft": 1127.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": null,
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 39.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 8.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 39.0,
+     "bottom_ft": 372.0,
+     "material": null,
+     "diameter_in": 8.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 39.0,
+     "bottom_ft": 372.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 0,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Alluvium",
+    "code": "Qal",
+    "period": "Quaternary",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5755607"
+  },
+  "TWDB:5755803": {
+   "well": "5755803",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 475.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1325.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Filter Packed",
+   "drilling_end_date": "5/6/2015",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 375.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.5
+    },
+    {
+     "type": "Screen",
+     "top_ft": 375.0,
+     "bottom_ft": 475.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.5
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 375.0,
+     "bottom_ft": 475.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 7,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5755803"
+  },
+  "TWDB:5756702": {
+   "well": "5756702",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 820.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1048.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Perforated or Slotted",
+   "drilling_end_date": "6/0/1964",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 310.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 315.0,
+     "bottom_ft": 345.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 345.0,
+     "bottom_ft": 395.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 395.0,
+     "bottom_ft": 440.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 440.0,
+     "bottom_ft": 496.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 496.0,
+     "bottom_ft": 560.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 560.0,
+     "bottom_ft": 600.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 600.0,
+     "bottom_ft": 640.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 640.0,
+     "bottom_ft": 660.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 660.0,
+     "bottom_ft": 690.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Blank",
+     "top_ft": 690.0,
+     "bottom_ft": 700.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 700.0,
+     "bottom_ft": 820.0,
+     "material": null,
+     "diameter_in": null
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 315.0,
+     "bottom_ft": 345.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 395.0,
+     "bottom_ft": 440.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 496.0,
+     "bottom_ft": 560.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 600.0,
+     "bottom_ft": 640.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 660.0,
+     "bottom_ft": 690.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 700.0,
+     "bottom_ft": 820.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 21,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Alluvium",
+    "code": "Qal",
+    "period": "Quaternary",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5756702"
+  },
+  "TWDB:5756716": {
+   "well": "5756716",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 392.0,
+   "well_depth_source": "Geophysical Log",
+   "land_surface_elevation_ft": 1085.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": "1/24/2018",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 312.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.5
+    },
+    {
+     "type": "Perforated or Slotted",
+     "top_ft": 312.0,
+     "bottom_ft": 392.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 4.5
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Perforated or Slotted",
+     "top_ft": 312.0,
+     "bottom_ft": 392.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 17,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5756716"
+  },
+  "TWDB:5758203": {
+   "well": "5758203",
+   "county": "Kendall",
+   "gwdb_aquifer_code": "218EDRDA - Edwards and Associated Limestones",
+   "gwdb_aquifer": "Edwards-Trinity Plateau",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 155.0,
+   "well_depth_source": "Another Government Agency",
+   "land_surface_elevation_ft": 1985.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 97.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 5.0
+    },
+    {
+     "type": "Screen",
+     "top_ft": 97.0,
+     "bottom_ft": 155.0,
+     "material": null,
+     "diameter_in": 5.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Screen",
+     "top_ft": 97.0,
+     "bottom_ft": 155.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards-Trinity Plateau",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Pedernales",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Fort Terrett Member",
+    "code": "Kft",
+    "period": "Cretaceous",
+    "sheet": "San Antonio",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5758203"
+  },
+  "TWDB:5764502": {
+   "well": "5764502",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218CCRK - Cow Creek Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 600.0,
+   "well_depth_source": "Another Government Agency",
+   "land_surface_elevation_ft": 1215.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": null,
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5764502"
+  },
+  "TWDB:5835811": {
+   "well": "5835811",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218EBFZA - Edwards and Associated Limestones - (Balcones Fault Zone Aquifer)",
+   "gwdb_aquifer": "Edwards (Balcones Fault Zone)",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 610.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 677.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "5/26/1999",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 238.0,
+     "material": "Steel",
+     "diameter_in": 7.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 238.0,
+     "bottom_ft": 610.0,
+     "material": null,
+     "diameter_in": 6.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 238.0,
+     "bottom_ft": 610.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards (Balcones Fault Zone)",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Austin Chalk",
+    "code": "Kau",
+    "period": "Cretaceous",
+    "sheet": "Austin",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5835811"
+  },
+  "TWDB:5841406": {
+   "well": "5841406",
+   "county": "Travis",
+   "gwdb_aquifer_code": "217HSTN - Hosston Formation",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 860.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 965.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "1/6/1986",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 590.0,
+     "material": "Steel",
+     "diameter_in": 7.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 590.0,
+     "bottom_ft": 860.0,
+     "material": null,
+     "diameter_in": 6.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 590.0,
+     "bottom_ft": 860.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 0,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5841406"
+  },
+  "TWDB:5849326": {
+   "well": "5849326",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218GLRS - Glen Rose Limestone",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": "Provided by Groundwater Conservation District",
+   "well_depth_ft": 475.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 1012.0,
+   "land_surface_elevation_method": "Global Positioning System-GPS",
+   "borehole_completion": null,
+   "drilling_end_date": "5/10/2018",
+   "casing_rows": [
+    {
+     "type": null,
+     "top_ft": 0.0,
+     "bottom_ft": 340.0,
+     "material": "Plastic (PVC)",
+     "diameter_in": 3.0
+    }
+   ],
+   "screen_or_open_intervals": [],
+   "interval_status": "casing recorded without a screen or open interval",
+   "lithology_rows": 1,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "Provided by Groundwater Conservation District"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Upper Glen Rose Limestone",
+    "code": "Kgru",
+    "period": "Cretaceous",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5849326"
+  },
+  "TWDB:5850120": {
+   "well": "5850120",
+   "county": "Travis",
+   "gwdb_aquifer_code": "217HSTN - Hosston Formation",
+   "gwdb_aquifer": "Trinity",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 855.0,
+   "well_depth_source": "Driller's Log",
+   "land_surface_elevation_ft": 832.0,
+   "land_surface_elevation_method": "Interpolated From Topo Map",
+   "borehole_completion": "Open Hole",
+   "drilling_end_date": "11/10/1984",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": 760.0,
+     "material": "Steel",
+     "diameter_in": 9.0
+    },
+    {
+     "type": "Open Hole",
+     "top_ft": 760.0,
+     "bottom_ft": 855.0,
+     "material": null,
+     "diameter_in": 8.0
+    }
+   ],
+   "screen_or_open_intervals": [
+    {
+     "type": "Open Hole",
+     "top_ft": 760.0,
+     "bottom_ft": 855.0
+    }
+   ],
+   "interval_status": "documented",
+   "lithology_rows": 12,
+   "feed_aquifer": "Trinity",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Alluvium",
+    "code": "Qal",
+    "period": "Quaternary",
+    "sheet": "Austin",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5850120"
+  },
+  "TWDB:5850301": {
+   "well": "5850301",
+   "county": "Travis",
+   "gwdb_aquifer_code": "218EDRDA - Edwards and Associated Limestones",
+   "gwdb_aquifer": "Edwards (Balcones Fault Zone)",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 388.0,
+   "well_depth_source": "Another Government Agency",
+   "land_surface_elevation_ft": 653.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": "0/0/1949",
+   "casing_rows": [
+    {
+     "type": "Blank",
+     "top_ft": 0.0,
+     "bottom_ft": null,
+     "material": "Steel",
+     "diameter_in": 6.0
+    }
+   ],
+   "screen_or_open_intervals": [],
+   "interval_status": "casing recorded without a screen or open interval",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards (Balcones Fault Zone)",
+   "feed_aquifer_type": "Confined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Austin Chalk",
+    "code": "Kau",
+    "period": "Cretaceous",
+    "sheet": "Austin",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5850301"
+  },
+  "TWDB:5857502": {
+   "well": "5857502",
+   "county": "Hays",
+   "gwdb_aquifer_code": "218EBFZA - Edwards and Associated Limestones - (Balcones Fault Zone Aquifer)",
+   "gwdb_aquifer": "Edwards (Balcones Fault Zone)",
+   "aquifer_pick_method": null,
+   "well_depth_ft": 385.0,
+   "well_depth_source": "Owner",
+   "land_surface_elevation_ft": 895.0,
+   "land_surface_elevation_method": "Digital Elevation Model -DEM",
+   "borehole_completion": null,
+   "drilling_end_date": "0/0/1938",
+   "casing_rows": [],
+   "screen_or_open_intervals": [],
+   "interval_status": "not documented in the Groundwater Database",
+   "lithology_rows": 0,
+   "feed_aquifer": "Edwards (Balcones Fault Zone)",
+   "feed_aquifer_type": "Unconfined",
+   "basin": "Highland Lakes",
+   "aquifer_assignment": {
+    "source": "TWDB provider assignment (Water Data for Texas feed and Groundwater Database code)",
+    "agreement": "same aquifer name",
+    "pick_method": "not recorded"
+   },
+   "surface_unit": {
+    "available": true,
+    "unit": "Fredricksburg Group undivided",
+    "code": "Kfr",
+    "period": "Cretaceous",
+    "sheet": "Austin",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   },
+   "capture": "gwdb-welldata-5857502"
+  }
+ },
+ "well_summary": {
+  "not documented in the Groundwater Database": 11,
+  "documented": 23,
+  "casing recorded without a screen or open interval": 3
+ },
+ "river_gauges": {
+  "USGS:08150000": {
+   "name": "Llano Rv nr Junction, TX",
+   "surface_unit": {
+    "available": true,
+    "unit": "Alluvium",
+    "code": "Qal",
+    "period": "Quaternary",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   }
+  },
+  "USGS:08151500": {
+   "name": "Llano Rv at Llano, TX",
+   "surface_unit": {
+    "available": true,
+    "unit": "Packsaddle Schist undivided",
+    "code": "pCps",
+    "period": "Precambrian",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   }
+  },
+  "USGS:08152900": {
+   "name": "Pedernales Rv nr Fredericksburg, TX",
+   "surface_unit": {
+    "available": true,
+    "unit": "Alluvium",
+    "code": "Qal",
+    "period": "Quaternary",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   }
+  },
+  "USGS:08153500": {
+   "name": "Pedernales Rv nr Johnson City, TX",
+   "surface_unit": {
+    "available": true,
+    "unit": "Tanyard Formation",
+    "code": "Ot",
+    "period": "Ordovician",
+    "sheet": "Llano",
+    "meaning": "rock mapped at the land surface at this point (Geologic Atlas of Texas, 1:250,000); not the unit a well draws from"
+   }
+  }
+ },
+ "sections": [
+  {
+   "capture": "usgs-ha730e-fig112",
+   "file": "geology/usgs-ha730e-fig112.gif",
+   "figure": "Figure 112",
+   "kind": "published hydrogeologic section",
+   "caption": "In the Hill Country of south-central Texas, the southward-dipping Trinity aquifer is juxtaposed with the highly permeable Edwards aquifer as a result of faulting. The line of the hydrogeologic section is shown in figure 108.",
+   "credit": "U.S. Geological Survey, Ground Water Atlas of the United States, HA 730-E (Ryder, 1996), fig. 112; modified from Ashworth, J.B., 1983, Texas Department of Water Resources Report 273.",
+   "relevance": "Section C\u2013C\u2032 runs from Gillespie County through Kendall County into Bexar County and crosses the Pedernales River. Its vertical scale is greatly exaggerated and its potentiometric surface is dated 1975.",
+   "limits": "A published interpretation from 1983 data. It is not a measurement of today\u2019s water levels and it does not cross the Llano River watershed.",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/gif/E112.GIF",
+   "sha256": "5351de2a2e41a89a455e822a7fd5affef6545ab70d6367a5a19cf10555b21e37"
+  },
+  {
+   "capture": "usgs-ha730e-fig079",
+   "file": "geology/usgs-ha730e-fig079.gif",
+   "figure": "Figure 79",
+   "kind": "published diagrammatic section, not to scale",
+   "caption": "A diagrammatic section through the Edwards-Trinity aquifer system shows how the three aquifers relate to each other and to contiguous rocks.",
+   "credit": "U.S. Geological Survey, Ground Water Atlas of the United States, HA 730-E (Ryder, 1996), fig. 79; modified from E.L. Kuniansky, U.S. Geological Survey, written communication, 1990.",
+   "relevance": "Northwest to southeast across the Edwards Plateau, the Llano Uplift, the Hill Country and the Balcones Fault Zone.",
+   "limits": "Diagrammatic and marked \u201cnot to scale\u201d: it shows the order and juxtaposition of units, with no depths or thicknesses. It does not name the Paleozoic aquifers of the Llano Uplift.",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/gif/E079.GIF",
+   "sha256": "70ad60cc13ebd1ec8f17b812f149eb9ee26e8980df9dee415b39706b5f3baa80"
+  }
+ ],
+ "relationships": [
+  {
+   "source": "usgs-ha730e-text10-minor-aquifers",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text10.html",
+   "subject": "Hickory aquifer",
+   "quote": "The aquifer is underlain by Precambrian rocks and is overlain and separated from the Ellenburger-San Saba aquifer by the Cap Mountain Limestone and the Lion Mountain Sandstone Members of the Riley Formation."
+  },
+  {
+   "source": "usgs-ha730e-text10-minor-aquifers",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text10.html",
+   "subject": "Ellenburger-San Saba aquifer",
+   "quote": "The aquifer is a sequence of limestone and dolomite beds that crop out in a circular pattern around the Llano Uplift and dip radially into the subsurface away from the center of the uplift."
+  },
+  {
+   "source": "usgs-ha730e-text10-minor-aquifers",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text10.html",
+   "subject": "Marble Falls aquifer",
+   "quote": "The Marble Falls aquifer consists of the Marble Falls Limestone of Pennsylvanian age, which crops out along the flanks of the Llano Uplift, primarily in McCulloch, San Saba, Lam-pasas, and Burnet Counties."
+  },
+  {
+   "source": "usgs-ha730e-text8-edwards-trinity",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text8.html",
+   "subject": "Trinity aquifer",
+   "quote": "In the Hill Country, water might flow laterally into the Trinity aquifer from the adjacent Edwards-Trinity aquifer."
+  },
+  {
+   "source": "usgs-ha730e-text8-edwards-trinity",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text8.html",
+   "subject": "Trinity aquifer",
+   "quote": "In the Hill Country, the largest yields from wells completed in the Trinity aquifer are in the outcrop areas of the lower part of the Glen Rose Limestone and the upper part of the Travis Peak Formation."
+  },
+  {
+   "source": "usgs-ha730e-text8-edwards-trinity",
+   "url": "https://pubs.usgs.gov/ha/ha730/ch_e/E-text8.html",
+   "subject": "Edwards aquifer",
+   "quote": "The Edwards aquifer is underlain by the much less permeable Walnut Formation or Glen Rose Limestone of the Trinity aquifer."
+  }
+ ],
+ "linked_not_reproduced": [
+  {
+   "title": "TWDB Report 346, Paleozoic aquifers of central Texas (1996): Llano Uplift sections, figures 3\u20137",
+   "url": "https://www.twdb.texas.gov/publications/reports/numbered_reports/doc/R346/R346.pdf"
+  },
+  {
+   "title": "TWDB Report 377, Hill Country Trinity groundwater availability model (2011): hydrostratigraphic column fig. 3-14, sections fig. 3-17",
+   "url": "https://www.twdb.texas.gov/publications/reports/numbered_reports/doc/R377_HillCountryGAM.pdf"
+  }
+ ],
+ "evidence_gaps": [
+  "No free, reproducible cross-section through the Llano River watershed is shown. TWDB Report 346 (1996) holds Llano Uplift sections in its figures 3\u20137; its reuse grant covers original material and those figures are adapted from other authors, so the report is linked and its figures are not reproduced.",
+  "TWDB publishes aquifer extents with a numeric outcrop/subsurface code whose meaning is not stated in the layer or shapefile metadata. The meaning used here was checked against the Geologic Atlas of Texas surface units; the check is reported below.",
+  "Eleven of the 37 pilot wells have no casing, screen or open-hole rows in the TWDB Groundwater Database. Their completion interval is not documented; no interval is assumed.",
+  "BEG mapping was not audited beyond the Geologic Atlas of Texas sheets as digitized and served by TWDB. USGS statewide geology downloads over 40 MB were not captured.",
+  "No recharge-zone polygons and no confining-unit polygons were acquired. Confining relationships appear only as the quoted USGS sentences."
+ ],
+ "limits": [
+  "Surface watersheds (USGS WBD) and aquifer extents are different things; neither bounds the other.",
+  "A surface polygon does not identify a well\u2019s producing unit; aquifer assignments are the provider\u2019s.",
+  "No underground connection between any well, spring, stream or reservoir is inferred from position or timing.",
+  "Published sections are reproduced as published; no depth, thickness, water level or flow path is added."
+ ]
+}

@@ -55,21 +55,26 @@ def change(a,b):
         'continuity_note':b.get('continuity')}
 
 
-def seasonal_reference(rows,day,years=20,half_window=15):
+def seasonal_reference(rows,day,years=20,half_window=15,reference_years=None,exclude_year=None):
     """Exact daily sampling only; prior 20 calendar years, circular month/day window.
 
     Expected dates enumerated in each real calendar year (Feb 29 exists only in leap years).
     80% of dates in a year and 80% overall plus 5 years required. Midrank ties include zeros.
+    `reference_years=(first,last)` fixes the era regardless of the anchor year; `exclude_year`
+    leaves one whole year out of the pool and the expected-day denominator.
     """
     anchor=dt.date.fromisoformat(day);end=anchor.year-1;start=anchor.year-years
+    if reference_years:start,end=reference_years
     out={'available':False,'reference_years':[start,end],'anchor':day,'half_window_days':half_window,'tie_rule':'100*(below + half ties)/n; measured zeros retained','leap_rule':'circular month/day distance on leap calendar; expected dates enumerated in each actual year'}
     if len({r['series_id'] for r in rows})!=1:return dict(out,reason='no single sensor series')
     out['series_id']=rows[0]['series_id']
+    if exclude_year is not None:out['excluded_year']=exclude_year
     if any(r['quantity']!='discharge' or r['unit']!='ft3/s' or r['time']['statistic']!='daily_mean' for r in rows):return dict(out,reason='requires daily mean discharge')
     def near(d):
         n=abs((dt.date(2000,d.month,d.day)-dt.date(2000,anchor.month,anchor.day)).days);return min(n,366-n)<=half_window
     expected={}
     for y in range(start,end+1):
+        if y==exclude_year:continue
         d=dt.date(y,1,1);n=0
         while d.year==y:
             n+=int(near(d));d+=dt.timedelta(days=1)
@@ -78,7 +83,7 @@ def seasonal_reference(rows,day,years=20,half_window=15):
     for r in rows:
         if r['state']!='measured' or r['approval']!='Approved' or not r['time']['date']:continue
         d=dt.date.fromisoformat(r['time']['date'])
-        if start<=d.year<=end and near(d):eligible[str(d)]=r
+        if start<=d.year<=end and d.year!=exclude_year and near(d):eligible[str(d)]=r
     counts=Counter(d[:4] for d in eligible);accepted=[y for y,n in expected.items() if counts[y]>=.8*n]
     pool=[r for d,r in eligible.items() if d[:4] in accepted];coverage=len(pool)/sum(expected.values())
     out.update(expected_by_year=expected,numeric_by_year=dict(counts),accepted_years=accepted,days=len(pool),expected_days=sum(expected.values()),coverage=coverage)

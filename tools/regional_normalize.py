@@ -53,14 +53,19 @@ def measurement(**kw):
 
 
 class Builder:
-    def __init__(self, root, out, since, through):
+    def __init__(self, root, out, since, through, daily_start='2006-01-01', only=None, audit_path='data/model/regional-normalization-audit.json', hydromet_params=None):
+        """`only` restricts adaptation to named site keys before bodies are read (full-history partitions);
+        `daily_start` is the retention gate for daily USGS, reservoir and spring records."""
         self.root=Path(root); self.out=Path(out); self.out.mkdir(parents=True,exist_ok=True)
-        self.since=since; self.through=through; self.sources={};self.series={};self.sites={};self.gaps=[];self.audits={}
+        self.since=since; self.through=through; self.daily_start=daily_start; self.only=set(only) if only else None; self.audit_path=audit_path; self.hydromet_params=set(hydromet_params) if hydromet_params else None; self.sources={};self.series={};self.sites={};self.gaps=[];self.audits={}
         # A new scratch database is atomically published only after a successful build.
         self.dbpath=self.out/'building.sqlite';self.db=sqlite3.connect(self.dbpath)
         self.db.execute('drop table if exists observations')
         self.db.execute('create table observations(id text primary key, series text, at text, retrieved text, payload blob)')
         self.n=0
+
+    def wanted(self,key):
+        return self.only is None or key in self.only
 
     def source(self,path,meta=None,capture=None,url=None):
         p=self.root/(capture or path)
@@ -98,7 +103,9 @@ class Builder:
         self.sites.update({'USGS:'+s['id']:{'name':s['name'],'coordinates':[s['lon'],s['lat']],'kind':s['kind'],'basin':'unassigned','evidence':'data/usgs-locations-regional.json'} for s in inventory})
         metadata={}
         for p in sorted((self.root/'data/model').glob('*-daily-history-manifest.json')):
-            man=json.loads(p.read_text());m=man['daily_request'];site=p.name.split('-')[0]
+            site=p.name.split('-')[0]
+            if not self.wanted('USGS:'+site):continue
+            man=json.loads(p.read_text());m=man['daily_request']
             if 'station' in man:
                 metadata[site]={x['id']:x for x in man['station_series_inventory_00060_00065']}
                 self.sites['USGS:'+site].update(huc=man['station'].get('hydrologic_unit_code'),basin={'12090204':'Llano','12090206':'Pedernales'}.get(str(man['station'].get('hydrologic_unit_code'))[:8],'regional context'))
@@ -109,7 +116,7 @@ class Builder:
             for i,f in enumerate(json.loads(body).get('features',[])):
                 x=f['properties'];param=x.get('parameter_code');ts=x['time_series_id'];when=x['time'][:10]
                 self.inspect(f'USGS:{site}:{ts}:{param}:daily',when,x.get('value'),x.get('approval_status'))
-                if param not in PARAMS or when<'2006-01-01' or when>self.through[:10]:continue
+                if param not in PARAMS or when<self.daily_start or when>self.through[:10]:continue
                 quantity,datum=PARAMS[param];stat={'00003':'daily_mean','00006':'daily_sum','00001':'daily_max','00002':'daily_min'}.get(x.get('statistic_id'),'unknown_daily')
                 self.add(measurement(operator='USGS',feed='USGS',site=site,series=ts,parameter=param,quantity=quantity,unit=x.get('unit_of_measure'),value=x.get('value'),when=when,statistic=stat,source=source,locator=f'features/{i}/properties',qualifiers=x.get('qualifier'),approval=x.get('approval_status'),datum=datum,primary=metadata.get(site,{}).get(ts,{}).get('primary')=='Primary',sampling='provider calendar day; timezone not established',extra={'source_time':x['time'],'last_modified':x.get('last_modified')}))
         for folder in ['data/raw/usgs','data/raw/usgs-history']:
@@ -120,7 +127,7 @@ class Builder:
                 if body is None:continue
                 for i,f in enumerate(json.loads(body).get('features',[])):
                     x=f['properties'];site=x.get('monitoring_location_id','').replace('USGS-','');param=x.get('parameter_code');when=x.get('time','');t=stamp(when)
-                    if 'USGS:'+site not in self.sites or param not in PARAMS or (t and not stamp(self.since+'T00:00:00Z')<=t<=stamp(self.through)):continue
+                    if 'USGS:'+site not in self.sites or not self.wanted('USGS:'+site) or param not in PARAMS or (t and not stamp(self.since+'T00:00:00Z')<=t<=stamp(self.through)):continue
                     quantity,datum=PARAMS[param];ts=x.get('time_series_id','unknown');stat='instantaneous' if x.get('statistic_id')=='00011' else 'unknown'
                     self.inspect(f'USGS:{site}:{ts}:{param}:continuous',when,x.get('value'),x.get('approval_status'))
                     self.add(measurement(operator='USGS',feed='USGS',site=site,series=ts,parameter=param,quantity=quantity,unit=x.get('unit_of_measure'),value=x.get('value'),when=when,statistic=stat,source=source,locator=f'features/{i}/properties',qualifiers=x.get('qualifier'),approval=x.get('approval_status'),datum=datum,primary=metadata.get(site,{}).get(ts,{}).get('primary')=='Primary',sampling='provider point',extra={'last_modified':x.get('last_modified')}))
@@ -132,6 +139,7 @@ class Builder:
             if body is None:continue
             for i,x in enumerate(json.loads(body)):
                 agency=x['agency'];site=str(x['siteNumber']);key=f'{agency}:{site}'
+                if not self.wanted(key):continue
                 if agency!='USGS':self.sites[key]={'name':x['siteName'],'coordinates':[numeric(x.get('longitude')),numeric(x.get('latitude'))],'kind':x.get('siteType'),'basin':'unassigned','evidence_source_id':source}
                 fields=[('stage','stage','ft','reported_point'),('flow','discharge','cfs','reported_point'),('rainfall1Day','rain','in','rolling_24h'),('rainfallToday','rain','in','since_midnight')]
                 for field,q,u,stat in fields:
@@ -148,6 +156,7 @@ class Builder:
         for p in sorted((self.root/'data/raw/hydromet/history').rglob('*rain-window.meta.json')):
             m=json.loads(p.read_text());sources.append((str(p.relative_to(self.root)).replace('.meta.json','.json'),m,None,'LCRA',p.parent.name,'rain'))
         for path,m,cap,agency,site,param in sources:
+            if not self.wanted(f'{agency}:{site}') or (self.hydromet_params is not None and param not in self.hydromet_params):continue
             if m.get('status')!=200:
                 self.gaps.append({'path':path,'reason':f"HTTP {m.get('status')}"});continue
             body,source=self.source(path,m,cap)
@@ -173,6 +182,7 @@ class Builder:
         man=json.loads((self.root/'data/captures/twdb-wells/manifest.json').read_text());sources=[]
         for site,m in sorted(man.items()):sources.append((site,m['raw_path'],m,m.get('capture_path')))
         for site,path,m,cap in sources:
+            if not self.wanted('TWDB:'+site):continue
             body,source=self.source(path,m,cap)
             if body is None:continue
             for i,x in enumerate(json.loads(body).get('values',[])):
@@ -189,7 +199,7 @@ class Builder:
             if body is None:continue
             for i,x in enumerate(json.loads(body).get('values',[])):
                 site=str(x['state_well_number']);field='daily_high_water_level(ft below land surface)'
-                if 'TWDB:'+site not in self.sites or x['date']>=self.through[:10]:continue
+                if 'TWDB:'+site not in self.sites or not self.wanted('TWDB:'+site) or x['date']>=self.through[:10]:continue
                 self.add(measurement(operator='TWDB',feed='TWDB',site=site,series='recent:'+field,parameter=field,quantity='groundwater_depth',unit='ft',value=x.get(field),when=x['date'],statistic='daily_high',source=source,locator=f'values/{i}/{field}',datum='land surface',sampling='daily high',extra={'continuity':'not certified'}))
         self.db.commit();print('TWDB wells normalized',self.n,flush=True)
 
@@ -198,6 +208,7 @@ class Builder:
         for p in sorted((self.root/'data/raw/twdb-reservoirs/daily').glob('*.csv')):
             sources.append((p.stem.split('-',1)[1],str(p.relative_to(self.root)),json.loads(p.with_suffix('.meta.json').read_text()),None))
         for site,path,m,cap in sources:
+            if not self.wanted('TWDB-lake:'+site):continue
             body,source=self.source(path,m,cap)
             if body is None:continue
             self.sites['TWDB-lake:'+site]={'name':site,'kind':'reservoir','basin':'Highland Lakes' if site in ('austin','travis','buchanan','inks','lyndon-b-johnson','marble-falls') else 'regional context','coordinates':None,'evidence_source_id':source}
@@ -205,7 +216,7 @@ class Builder:
             for i,x in enumerate(reader):
                 for field,q,u in [('water_level','reservoir_elevation','ft'),('reservoir_storage','storage','acre-ft'),('conservation_storage','conservation_storage','acre-ft'),('percent_full','percent_full','%')]:
                     self.inspect(f'TWDB-lake:{site}:{field}',x['date'],x.get(field))
-                    if x['date']<'2006-01-01' or x['date']>=self.through[:10]:continue
+                    if x['date']<self.daily_start or x['date']>=self.through[:10]:continue
                     self.add(measurement(operator='TWDB-lake',feed='TWDB',site=site,series=field,parameter=field,quantity=q,unit=u,value=x.get(field),when=x['date'],statistic='daily_report',source=source,locator=f'line/{lines[i+1][0]+1}/{field}',sampling='date-only report; not a daily mean',extra={'capacity':{'conservation_capacity_af':numeric(x.get('conservation_capacity')),'dead_pool_capacity_af':numeric(x.get('dead_pool_capacity')),'definition':'percent_full = 100 × conservation_storage / conservation_capacity; conservation_storage capped at capacity','version':None,'effective_date':x['date'],'evidence_source_id':source},'continuity':'capacity values preserved per date; survey version not supplied'}))
         self.db.commit();print('Reservoirs normalized',self.n,flush=True)
 
@@ -213,24 +224,27 @@ class Builder:
         inventory=json.loads((self.root/'data/eaa-sites.json').read_text())['sites']
         for w in inventory['wells']:
             self.sites['EAA:'+w['siteId']]={'name':w['siteName'],'coordinates':[w['longitude'],w['latitude']],'kind':'well','aquifer':w.get('aquifer'),'basin':w.get('basin'),'screen':None,'evidence':'data/eaa-sites.json'}
-        for p in sorted((self.root/'data/raw/eaa/details/wells').glob('*/*.html')):
+        scoped=self.only is None or any(k.startswith('EAA:') for k in self.only)
+        for p in sorted((self.root/'data/raw/eaa/details/wells').glob('*/*.html')) if scoped else []:
             mp=p.with_suffix('.meta.json');meta=json.loads(mp.read_text()) if mp.exists() else None
             body,source=self.source(str(p.relative_to(self.root)),meta,url=None)
             if body is None:continue
             for i,x in enumerate(parse_var(body.decode(errors='replace'),'wellAllDailyHighElevationJSON') or []):
                 site=x['siteId'];when=x['dailyHighDate'][:10]
+                if not self.wanted('EAA:'+site):continue
                 for field,q in [('depthFromLsd','groundwater_depth'),('waterLevelElevation','groundwater_elevation')]:
                     self.inspect(f'EAA:{site}:{field}',when,x.get(field),x.get('measStatusDesc'))
                     if when<self.since or when>=self.through[:10]:continue
                     self.add(measurement(operator='EAA',feed='EAA',site=site,series=field,parameter=field,quantity=q,unit='ft',value=x.get(field),when=when,statistic='daily_high',source=source,locator=f'wellAllDailyHighElevationJSON/{i}/{field}',approval=x.get('measStatusDesc'),qualifiers=x.get('comments'),datum='land surface' if q=='groundwater_depth' else None,sampling='daily high, not mean',extra={'source_time':x['dailyHighDate'],'continuity':'not certified'}))
-        for p in sorted((self.root/'data/raw/eaa/conditions').glob('*aquifer-conditions.html')):
+        for p in sorted((self.root/'data/raw/eaa/conditions').glob('*aquifer-conditions.html')) if scoped else []:
             mp=p.with_suffix('.meta.json');body,source=self.source(str(p.relative_to(self.root)),json.loads(mp.read_text()) if mp.exists() else None)
             if body is None:continue
             for i,x in enumerate(parse_var(body.decode(errors='replace'),'springsHistoricalDailyMeanCFS') or []):
                 site=str(x['siteNo']).zfill(8);when=x['meanDate'][:10]
+                if not self.wanted('EAA:'+site):continue
                 self.sites['EAA:'+site]={'name':x['siteName']+' Springs','kind':'spring','basin':'regional context','coordinates':None,'evidence_source_id':source}
                 self.inspect(f'EAA:{site}:meanCfsFin',when,x.get('meanCfsFin'))
-                if when<'2006-01-01' or when>=self.through[:10]:continue
+                if when<self.daily_start or when>=self.through[:10]:continue
                 self.add(measurement(operator='EAA',feed='EAA',site=site,series='meanCfsFin',parameter='flow',quantity='discharge',unit='cfs',value=x.get('meanCfsFin'),when=when,statistic='daily_mean',source=source,locator=f'springsHistoricalDailyMeanCFS/{i}/meanCfsFin',approval='unknown',sampling='daily mean',extra={'source_time':x['meanDate'],'provider_raw_value':x.get('meanCfsRaw'),'last_modified':x.get('lastUpdateDate')}))
         for kind in ('rain','streams'):
             self.gaps.append({'provider':'EAA','kind':kind,'inventory_count':len(inventory[kind]),'reason':'inventory is not numeric coverage; rain download refusals, stream detail acquisition not in this adapter; two conditions-page spring series adapted separately'})
@@ -241,16 +255,19 @@ class Builder:
         counts=dict(self.db.execute('select series,count(*) from observations group by series'))
         for sid,s in self.series.items():s['original_records']=counts[sid]
         self.db.close();self.dbpath.replace(self.out/'observations.sqlite')
-        result={'schema_version':SCHEMA,'event_id':'2026-09-30','recent_start':self.since,'cutoff':self.through,'historical_daily_start':'2006-01-01','sources':self.sources,'sites':self.sites,'series':self.series,'gaps':self.gaps,'archive_audit':self.audits,'observations':{'path':'observations.sqlite','rows':sum(counts.values()),'sha256':hashlib.sha256((self.out/'observations.sqlite').read_bytes()).hexdigest()},'limits':['Full numeric archive audit counts original records, including repeat captures; never station-days.','Point history retained from recent_start; compatible daily USGS and reservoir histories retained from 2006.','Hydromet rain counter/increments retain unknown interval boundaries; no event accumulation fabricated.','Unassigned basin is explicit until a sourced surface watershed association is made. No aquifer connection inferred.']}
+        result={'schema_version':SCHEMA,'event_id':'2026-09-30','recent_start':self.since,'cutoff':self.through,'historical_daily_start':self.daily_start,'sources':self.sources,'sites':self.sites,'series':self.series,'gaps':self.gaps,'archive_audit':self.audits,'observations':{'path':'observations.sqlite','rows':sum(counts.values()),'sha256':hashlib.sha256((self.out/'observations.sqlite').read_bytes()).hexdigest()},'limits':['Full numeric archive audit counts original records, including repeat captures; never station-days.','Point history retained from recent_start; compatible daily USGS and reservoir histories retained from 2006.','Hydromet rain counter/increments retain unknown interval boundaries; no event accumulation fabricated.','Unassigned basin is explicit until a sourced surface watershed association is made. No aquifer connection inferred.']}
+        if self.only is not None:
+            result['scope']={'only':sorted(self.only),'hydromet_history_params':sorted(self.hydromet_params) if self.hydromet_params else 'all','meaning':'full-history partition for named stations; other stations are not adapted here'}
+            result['sites']={k:v for k,v in self.sites.items() if k in self.only}
         (self.out/'catalog.json').write_text(json.dumps(result,indent=2)+'\n')
         audit={k:v for k,v in result.items() if k not in ('sources',)}
         audit['source_count']=len(self.sources);audit['missing_fetch_metadata']=sum(x['provenance_status']!='verified_capture' for x in self.sources.values())
-        (self.root/'data/model/regional-normalization-audit.json').write_text(json.dumps(audit,indent=2)+'\n')
+        if self.audit_path:(self.root/self.audit_path).write_text(json.dumps(audit,indent=2)+'\n')
         print('COMPLETE',result['observations'],flush=True);return result
 
 
-def build(root=ROOT,out=None,since='2026-09-01',through='2026-10-03T12:15:00Z'):
-    b=Builder(root,out or Path(root)/'data/normalized/regional-analytics',since,through)
+def build(root=ROOT,out=None,since='2026-09-01',through='2026-10-03T12:15:00Z',**kw):
+    b=Builder(root,out or Path(root)/'data/normalized/regional-analytics',since,through,**kw)
     b.usgs();b.hydromet();b.wells();b.reservoirs();b.eaa();return b.finish()
 
 if __name__=='__main__':
