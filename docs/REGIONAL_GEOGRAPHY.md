@@ -62,6 +62,25 @@ Buchanan reaches Lake Lyndon B. Johnson next, so Buchanan lies upstream on the s
 no pilot gauge's route enters it. Inks Lake has no saved outline, so its place on the route is not
 derived here.
 
+## Austin creeks: a named group
+
+The six gauged creeks of the Austin prototype (Bull, Barton, Shoal, Walnut, Williamson, Onion) are
+on the same map as a named group. It is not a watershed outline: no creek-level WBD polygon is
+captured. USGS station metadata places all six gauges in HUC8 12090205. Their channel lines are the
+OpenStreetMap ways of the creek prototype, and each gauge's position evidence (7.4 to 76.2 m from
+its named way) comes from `data/model/creek-gauge-associations.json`. Those ways are not part of the
+captured NHD network, so no downstream route or receiving reservoir is derived for them. The rain
+gauges shown with the group are the City of Austin network, grouped by operator.
+
+## Gauge strokes
+
+`gauge_stroke` draws at most 500 m each side of a gauge along the one saved line the gauge is
+associated with. It stops at the end of that line and never continues onto another piece. The
+stroke's width and color come from `data/model/regional-display-policy.json`: the largest saved
+instantaneous reading in the storm window minus the same gauge's seasonal median daily mean, in one
+band per factor of ten. It marks the gauge. It is not a measured or inferred reach, and the
+contrast is not a rank of the peak.
+
 ## Dam labels
 
 Reservoir labels sit at the LCRA Hydromet dam site whose own site name states the lake in

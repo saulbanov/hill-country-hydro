@@ -35,6 +35,22 @@ class RouteTests(unittest.TestCase):
         r = geo.downstream_route('a', [piece('a', [0, 0], [1, 0], flowdir=0)], self.lakes)
         self.assertEqual(r['pieces'], 0); self.assertIn('direction', r['stopped'])
 
+    def length(self, line):
+        import math
+        return sum(math.hypot((b[0]-a[0])*math.cos(math.radians(a[1])), b[1]-a[1])*111195 for a, b in zip(line, line[1:]))
+
+    def test_gauge_stroke_is_at_most_a_kilometre_on_one_line(self):
+        line = [[0, 30], [0.02, 30], [0.04, 30]]
+        stroke = geo.gauge_stroke([0.02, 30.0001], line, 500)
+        self.assertAlmostEqual(self.length(stroke), 1000, delta=2)
+        self.assertEqual(stroke[len(stroke)//2], [0.02, 30])
+
+    def test_gauge_stroke_stops_at_the_end_of_its_line(self):
+        line = [[0, 30], [0.02, 30], [0.04, 30]]
+        stroke = geo.gauge_stroke([0.0395, 30], line, 500)
+        self.assertEqual(stroke[-1], [0.04, 30])
+        self.assertLess(self.length(stroke), 600)
+
     def test_position_association_stays_inside_the_watershed(self):
         basin = {'type': 'Feature', 'properties': {'huc8': '12090204', 'name': 'Llano'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[0, 0], [2, 0], [2, 2], [0, 2], [0, 0]]]}}
         near = dict(piece('x', [0.5, 1.0001], [1.5, 1.0001], 'Llano River'))
@@ -57,7 +73,7 @@ class SavedGeographyTests(unittest.TestCase):
 
     def test_receiving_reservoirs_come_from_the_route_walk(self):
         lake = {x['id']: x['name'] for x in self.snapshot['items'] if x['kind'] == 'reservoir'}
-        rivers = [x for x in self.snapshot['items'] if x['kind'] == 'river']
+        rivers = [x for x in self.snapshot['items'] if x['kind'] == 'river' and x['basin'] != 'Austin creeks']
         self.assertEqual(len(rivers), 4)
         for x in rivers:
             route = x['association']['downstream_route']
@@ -74,7 +90,7 @@ class SavedGeographyTests(unittest.TestCase):
 
     def test_snapshot_keeps_missing_selections_missing(self):
         counts = {v: {k: sum(x['kind'] == k and bool(x['views'][v]['observation']) for x in self.snapshot['items']) for k in ('river', 'rain', 'well', 'reservoir')} for v in ('storm', 'seasonal')}
-        self.assertEqual(counts['storm']['river'], 4); self.assertEqual(counts['seasonal']['rain'], 0); self.assertEqual(counts['storm']['well'], 0)
+        self.assertEqual(counts['storm']['river'], 10); self.assertEqual(counts['seasonal']['river'], 9); self.assertEqual(counts['seasonal']['rain'], 0); self.assertEqual(counts['storm']['well'], 0)
         self.assertEqual(self.snapshot['coverage']['local_springs'], 0)
         self.assertNotIn('<br', json.dumps([x['name'] for x in self.snapshot['items']]))
 
@@ -88,6 +104,33 @@ class SavedGeographyTests(unittest.TestCase):
             inc = x['aligned']['increments']
             if inc['available']:
                 self.assertTrue(all(p[1] > 0 for p in inc['points'])); self.assertGreaterEqual(inc['reports'], len(inc['points']))
+
+    def test_austin_creeks_are_a_named_group_not_a_watershed(self):
+        creeks = [x for x in self.snapshot['items'] if x['kind'] == 'river' and x['basin'] == 'Austin creeks']
+        self.assertEqual(len(creeks), 6)
+        group = self.snapshot['basins']['Austin creeks']
+        self.assertIsNone(group['receiving_reservoir']); self.assertIn('not a watershed outline', group['grouping'])
+        for x in creeks:
+            self.assertNotIn('downstream_route', x['association']); self.assertIsNone(x['association']['reach_estimate'])
+        city = [x for x in self.snapshot['items'] if x['kind'] == 'rain' and x['id'].startswith('COA:')]
+        self.assertTrue(city and all(x['basin'] == 'Austin creeks' and 'not by a watershed outline' in x['basin_basis'] for x in city))
+        shoal = next(x for x in creeks if x['id'] == 'USGS:08156800')
+        self.assertIsNone(shoal['views']['seasonal']['observation'])  # its daily record stops September 2; no later value is borrowed
+
+    def test_strokes_follow_the_display_policy(self):
+        import math
+        policy = self.snapshot['display_policy']
+        for x in self.snapshot['items']:
+            if x['kind'] != 'river':
+                continue
+            line = x['stroke']['coordinates']
+            metres = sum(math.hypot((b[0]-a[0])*math.cos(math.radians(a[1])), b[1]-a[1])*111195 for a, b in zip(line, line[1:]))
+            self.assertLessEqual(metres, 2*policy['stroke']['half_length_m']+2, x['id'])
+            excess = x['stroke']['excess_cfs']
+            expected = max(b['id'] for b in policy['bands'] if b['min_excess_cfs'] is None or excess >= b['min_excess_cfs'])
+            self.assertEqual(x['stroke']['band'], expected)
+        bands = {x['id']: x['stroke']['band'] for x in self.snapshot['items'] if x['kind'] == 'river'}
+        self.assertEqual((bands['USGS:08150000'], bands['USGS:08156800'], bands['USGS:08155300']), (5, 3, 0))
 
     def test_clean_strips_only_markup(self):
         self.assertEqual(pilot.clean('Mansfield Dam <br />(Lake Travis)'), 'Mansfield Dam (Lake Travis)')
@@ -139,7 +182,7 @@ class HistoryPartitionTests(unittest.TestCase):
     def test_unfetched_wells_are_named_as_gaps(self):
         missing = [k for k, v in self.index['stations'].items() if not v['file']]
         self.assertEqual(len(missing), 11); self.assertTrue(all(k.startswith('TWDB:') and 'never captured' in self.index['stations'][k]['reason'] for k in missing))
-        self.assertEqual(len(self.index['stations']), 173)
+        self.assertEqual(len(self.index['stations']), 179)
 
     def test_growing_network_is_reported_as_network(self):
         rain = self.index['stations_reporting_by_year']['rain']
@@ -165,7 +208,7 @@ class HistoryPartitionTests(unittest.TestCase):
 class EarlierFloodTests(unittest.TestCase):
     def test_public_artifact_keeps_statistics_apart(self):
         doc = json.loads((APP/'regional-events.json').read_text())
-        self.assertEqual(len(doc['gauges']), 4)
+        self.assertEqual(len(doc['gauges']), 10)
         junction = doc['gauges']['USGS:08150000']
         self.assertEqual(junction['storm_reading']['statistic'], 'instantaneous')
         self.assertEqual((junction['placement']['larger'], junction['placement']['published_peaks']), (31, 105))

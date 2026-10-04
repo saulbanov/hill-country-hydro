@@ -17,7 +17,7 @@ function lanes(){
   const rain=data.items.filter(x=>x.kind==='rain'&&inBasin(x)),stat=mode==='storm'?'increments':'daily';
   const rs=rain.filter(x=>x.aligned?.[stat]?.available).map(x=>({name:x.name,id:x.id,points:x.aligned[stat].points.map(p=>({t:pointTime(p[0]),v:p[1],dateOnly:p[0].length===10})).filter(inside),last:x.aligned[stat].last}));
   out.push({kind:'rain',title:'Rain at individual gauges',unit:mode==='storm'?'inches per report':'inches per reported day',marks:'dots',series:rs,
-    note:mode==='storm'?`${rs.length} of ${rain.length} gauges have saved native reports in this window. Each dot is one nonzero reported increment at its report time. Interval endpoints are not certified, so nothing is added up; the space between gauges is unmeasured.`:`${rs.length} of ${rain.length} gauges have provider daily totals in this window. Each dot is one gauge-day; the provider's day boundary is unverified and days are not added.`,
+    note:(basin!=='all'&&data.basins[basin]?.grouping?'Rain gauges here are the City of Austin network, grouped by operator and not by a watershed outline. ':'')+(mode==='storm'?`${rs.length} of ${rain.length} gauges have saved native reports in this window. Each dot is one nonzero reported increment at its report time. Interval endpoints are not certified, so nothing is added up; the space between gauges is unmeasured.`:`${rs.length} of ${rain.length} gauges have provider daily totals in this window. Each dot is one gauge-day; the provider's day boundary is unverified and days are not added.`),
     empty:'No rain gauge with a saved report series in this watershed and window.'});
   const rivers=data.items.filter(x=>x.kind==='river'&&inBasin(x));
   out.push({kind:'river',title:'River flow at gauges',unit:mode==='storm'?'cfs, instantaneous (log scale)':'cfs, daily mean (log scale)',marks:'lines',log:true,series:rivers.map(x=>({name:shortName(x.name),id:x.id,points:pts(x.chart[mode])})),
@@ -26,11 +26,11 @@ function lanes(){
   const ws=wells.map(x=>{const p=pts(x.chart[mode]).filter(q=>q.v!=null);return {name:x.name,id:x.id,points:p.map(q=>({t:q.t,v:-(q.v-p[0].v),dateOnly:q.dateOnly}))};}).filter(s=>s.points.length>1);
   out.push({kind:'well',title:'Groundwater level at wells',unit:'ft change since each well’s first reading in the window (up = shallower)',marks:'lines',thin:true,series:ws,
     note:`${ws.length} of ${wells.length} inventoried wells have two or more saved readings here. A well reports the level at that well, not aquifer volume. No spring gauge in the saved records lies in these watersheds.`,empty:'No well with two saved readings in this watershed and window. No local spring record exists either.'});
-  const target=basin==='all'||basin==='Highland Lakes'?null:data.basins[basin].receiving_reservoir;
-  const lakes=data.items.filter(x=>x.kind==='reservoir'&&(target?x.id===target:true));
+  const target=basin==='all'||basin==='Highland Lakes'?null:data.basins[basin].receiving_reservoir,none=basin!=='all'&&basin!=='Highland Lakes'&&!target;
+  const lakes=none?[]:data.items.filter(x=>x.kind==='reservoir'&&(target?x.id===target:true));
   const ls=lakes.map(x=>{const p=pts(x.chart[mode]).filter(q=>q.v!=null);return {name:shortName(x.name),id:x.id,points:p.map(q=>({t:q.t,v:q.v-p[0].v,dateOnly:true}))};}).filter(s=>s.points.length);
   out.push({kind:'reservoir',title:target?`Storage in ${lakes[0]?.name||'the receiving reservoir'}`:'Storage in the Highland Lakes',unit:'acre-ft change since the first report in the window',marks:'steps',series:ls,
-    note:(target?`${data.basins[basin].receiving_basis}. `:'')+'Date-only reports drawn at the middle of their date. Storage also changes with releases, withdrawals and other inflows; this is not gauged inflow.',empty:'No reservoir storage report in this window.'});
+    note:(target?`${data.basins[basin].receiving_basis}. `:'')+'Date-only reports drawn at the middle of their date. Storage also changes with releases, withdrawals and other inflows; this is not gauged inflow.',empty:none?'No receiving reservoir is derived for this group: '+data.basins[basin].receiving_basis+'.':'No reservoir storage report in this window.'});
   return out;
 }
 function lanePlot(lane,lo,hi,W,l,r){

@@ -5,19 +5,21 @@ from pathlib import Path
 try:
     from .regional_analytics import Reader,exact_day,change,rank,at_or_before
     from .creek_normalize import stamp
-    from .regional_geography import basin_at,association,downstream_route
+    from .regional_geography import basin_at,association,downstream_route,gauge_stroke
     from . import regional_events as events
 except ImportError:
     from regional_analytics import Reader,exact_day,change,rank,at_or_before
     from creek_normalize import stamp
-    from regional_geography import basin_at,association,downstream_route
+    from regional_geography import basin_at,association,downstream_route,gauge_stroke
     import regional_events as events
 ROOT=Path(__file__).resolve().parents[1]
-INTEGRATED='646e045a508062952cf141702819b733ed8aeeb7'
+INTEGRATED='a9ec2504bb7184160692c5aace6c01f08bcd9762'
 RIVERS=['08150000','08151500','08152900','08153500']
+AUSTIN=['08154700','08155300','08156800','08158600','08158970','08159000']
 # Receiving reservoirs are set only from the directed NHD route walk recorded with each gauge association.
 BASINS={'Llano':{'surface_hucs':['12090202','12090203','12090204'],'receiving_reservoir':'TWDB-lake:lyndon-b-johnson','receiving_basis':'first reference waterbody on the captured NHD route below both Llano gauges'},
     'Pedernales':{'surface_hucs':['12090206'],'receiving_reservoir':'TWDB-lake:travis','receiving_basis':'first reference waterbody on the captured NHD route below both Pedernales gauges'},
+    'Austin creeks':{'surface_hucs':[],'receiving_reservoir':None,'receiving_basis':'not derived: these creek channels are not in the captured NHD network','grouping':'the six gauged creeks of the Austin creek prototype and the City of Austin rain-gauge network; a named group, not a watershed outline'},
     'Highland Lakes':{'surface_hucs':['12090201','12090205'],'receiving_reservoir':None,'receiving_basis':'the reservoir chain itself; no pilot river gauge lies in these subbasins'}}
 DAY='2026-09-30';RAIN_AT='2026-10-02T12:00:00Z';SEASON_AT='2026-09-30T12:00:00Z'
 
@@ -68,7 +70,9 @@ def build(rain_at=RAIN_AT,storm_daily_end=None):
     def base(key,kind):
         site=cat['sites'][key];basin=basin_at(site.get('coordinates'),basins)
         return {'id':key,'kind':kind,'name':clean(site['name']) or key,'coordinates':site.get('coordinates'),'basin':basin['name'],'huc8':basin['huc8'],'aquifer':site.get('aquifer'),'views':{},'series':{},'chart':{}}
-    for site in RIVERS:
+    creek_lines={f['properties']['osm_id']:f['geometry']['coordinates'] for f in json.loads((ROOT/'app/austin-creeks.geojson').read_text())['features']}
+    creek_evidence=json.loads((ROOT/'data/model/creek-gauge-associations.json').read_text());policy=json.loads((ROOT/'data/model/regional-display-policy.json').read_text())
+    for site in RIVERS+AUSTIN:
         key='USGS:'+site;item=base(key,'river');sid,why=r.choose(key,'discharge','instantaneous','USGS');rows,recent=series(sid,window['t0'][:10]);event=[x for x in recent if x['time']['instant'] and start<=stamp(x['time']['instant'])<=end];good=[x for x in event if x['state']=='measured']
         peak=max(good,key=lambda x:x['value']) if good else None
         first=at_or_before(rows,window['t0']);last=at_or_before(rows,cat['cutoff'])
@@ -77,13 +81,27 @@ def build(rain_at=RAIN_AT,storm_daily_end=None):
         daily,why=r.choose(key,'discharge','daily_mean','USGS');drows,drecent=series(daily,'2026-09-01');obs=exact_day(drows,DAY);ref=refs.get(daily,{'available':False,'reason':'no daily reference'})
         item['views']['seasonal']={'observation':public(obs),'basis':'daily mean on the shared complete date','rank':rank(obs,ref),'reference':{k:v for k,v in ref.items() if k not in ('values','observation_ids','source_ids')}}
         item['chart']['seasonal']=chart([x for x in drecent if x['time']['date']<=DAY]);item['series']['seasonal']={'id':daily,'selection':why}
-        item['association']=association(cat['sites'][key],channels,basins)
-        if item['association']['available']:item['association']['downstream_route']=downstream_route(item['association']['channel_id'],channels,lakes)
-        associations[key]=item['association'];items.append(item)
+        line=None
+        if site in AUSTIN:
+            item['basin']='Austin creeks';pos=creek_evidence[key]['position']
+            item['association']={'available':True,'channel':pos['waterbody'],'osm_way_id':pos['osm_way_id'],'distance_m':pos['distance_to_channel_m'],'basis':'named OpenStreetMap creek line within 100 m of the gauge, from the creek prototype evidence','reach_estimate':None,'meaning':'position association only; no measured reach or causal relationship'}
+            line=creek_lines.get(pos['osm_way_id'])
+        else:
+            item['association']=association(cat['sites'][key],channels,basins)
+            if item['association']['available']:
+                item['association']['downstream_route']=downstream_route(item['association']['channel_id'],channels,lakes)
+                line=next(f['geometry']['coordinates'] for f in channels if f['properties']['id']==item['association']['channel_id'])
+            associations[key]=item['association']
+        median=ref.get('median') if ref.get('available') else None;excess=peak['value']-median if peak and median is not None else None
+        band=None if excess is None else max(b['id'] for b in policy['bands'] if b['min_excess_cfs'] is None or excess>=b['min_excess_cfs'])
+        item['stroke']={'coordinates':gauge_stroke(item['coordinates'],line,policy['stroke']['half_length_m']) if line else None,'excess_cfs':excess,'band':band,'seasonal_median_daily_cfs':median,
+            'reason':None if band is not None else policy['unavailable']['reason']}
+        items.append(item)
     # Native LCRA rolling totals only. Exact USGS distribution aliases are not counted twice.
     for key,site in sorted(cat['sites'].items()):
-        if not key.startswith('LCRA:'):continue
+        if not key.startswith(('LCRA:','COA:')):continue
         item=base(key,'rain')
+        if key.startswith('COA:'):item['basin']='Austin creeks';item['basin_basis']='City of Austin gauge network; grouped by operator, not by a watershed outline'
         if item['basin']=='unassigned':continue
         sid,why=r.choose(key,'rain','rolling_24h','Hydromet')
         if not sid:continue
@@ -130,7 +148,7 @@ def build(rain_at=RAIN_AT,storm_daily_end=None):
             item['chart'][view]=chart([x for x in recent if x['time']['date']<=last]);item['series'][view]={'id':sid,'selection':why}
         items.append(item)
     for x in items:
-        if x['kind']=='river':
+        if x['kind']=='river' and BASINS[x['basin']]['receiving_reservoir']:
             first=(x['association'].get('downstream_route') or {}).get('first_receiving_reservoir')
             if first!=lake_names[BASINS[x['basin']]['receiving_reservoir'].split(':')[1]]:raise ValueError(f"{x['id']}: stated receiving reservoir is not the first lake on the captured route ({first})")
     springs=[]
@@ -139,7 +157,7 @@ def build(rain_at=RAIN_AT,storm_daily_end=None):
         sid,why=r.choose(key,'discharge','daily_mean','USGS' if key.startswith('USGS:') else 'EAA');rows,recent=series(sid,'2026-09-01');a=exact_day(rows,'2026-09-01');b=exact_day(rows,DAY)
         springs.append({'id':key,'name':site['name'],'observation':public(b),'start':public(a),'change':change(a,b),'series':sid,'chart':chart([x for x in recent if x['time']['date']<=DAY]),'meaning':'separate regional context; not a spring in the Llano or Pedernales pilot basins'})
     r.close()
-    result={'schema_version':'regional-pilot/v1','analytic_schema':cat['schema_version'],'analytic_integration_commit':INTEGRATED,'normalized_sha256':cat['observations']['sha256'],'publication_date':str(dt.date.today()),'saved_data_cutoff':cat['cutoff'],'storm':{'id':'2026-09-30','t0':window['t0'],'through':cat['cutoff'],'rain_at':rain_at,'daily_start':'2026-09-28','daily_end':storm_end},'seasonal':{'date':DAY,'start':'2026-09-01','rain_at':SEASON_AT,'reference_years':[2006,2025]},'items':items,'regional_springs':springs,'sources':sources,'basins':BASINS,'routes':{k:v.get('downstream_route') for k,v in associations.items()},'coverage':{'inventory_wells_in_pilot':sum(x['kind']=='well' for x in items),'local_springs':0,'storm_total_rain':'unavailable: interval boundaries unverified','reach_estimates':'none; gauge observations only'},'geometry_hashes':{n:hashlib.sha256((ROOT/'app'/n).read_bytes()).hexdigest() for n in ['regional-channels.geojson','regional-basins.geojson','regional-lakes.geojson']}}
+    result={'schema_version':'regional-pilot/v1','analytic_schema':cat['schema_version'],'analytic_integration_commit':INTEGRATED,'normalized_sha256':cat['observations']['sha256'],'publication_date':str(dt.date.today()),'saved_data_cutoff':cat['cutoff'],'storm':{'id':'2026-09-30','t0':window['t0'],'through':cat['cutoff'],'rain_at':rain_at,'daily_start':'2026-09-28','daily_end':storm_end},'seasonal':{'date':DAY,'start':'2026-09-01','rain_at':SEASON_AT,'reference_years':[2006,2025]},'items':items,'regional_springs':springs,'sources':sources,'basins':BASINS,'display_policy':policy,'routes':{k:v.get('downstream_route') for k,v in associations.items()},'coverage':{'inventory_wells_in_pilot':sum(x['kind']=='well' for x in items),'local_springs':0,'storm_total_rain':'unavailable: interval boundaries unverified','reach_estimates':'none; gauge observations only'},'geometry_hashes':{n:hashlib.sha256((ROOT/'app'/n).read_bytes()).hexdigest() for n in ['regional-channels.geojson','regional-basins.geojson','regional-lakes.geojson']}}
     (ROOT/'app/regional-snapshot.json').write_text(json.dumps(result,separators=(',',':'),allow_nan=False)+'\n')
     (ROOT/'data/model/regional-gauge-associations.json').write_text(json.dumps(associations,indent=2)+'\n')
     earlier=json.loads((ROOT/'data/model/regional-events.json').read_text());floods={}
@@ -150,7 +168,7 @@ def build(rain_at=RAIN_AT,storm_daily_end=None):
             'placement':events.place_among_peaks(peak['value'] if peak else None,g['annual_peaks']),
             'annual_peaks':[[r['date'],r['peak_cfs'],r['peak_codes'],r['gage_height_codes']] for r in g['annual_peaks']['rows']],'code_meanings':g['annual_peaks']['code_meanings'],'annual_source':g['annual_peaks']['source'],
             'daily_events':g['daily_events'],'last_daily_mean':g['last_daily_mean'],
-            'storm_daily_means':'in the saved record' if peak and g['last_daily_mean'] and g['last_daily_mean']>=peak['time']['instant'][:10] else f"not in the saved record yet: the last daily mean is {g['last_daily_mean']}, before the storm’s largest saved reading"}
+            'storm_daily_means':'in the saved record' if peak and g['last_daily_mean'] and g['last_daily_mean']>=peak['time']['instant'][:10] else f"not in the saved record yet: the last daily mean is {g['last_daily_mean'] or 'unavailable'}, before the storm’s largest saved reading"}
     (ROOT/'app/regional-events.json').write_text(json.dumps({'schema_version':'regional-events-public/v1','cutoff':cat['cutoff'],'gauges':floods,'pair_lags':earlier['pair_lags'],'limits':earlier['limits'],'history_sha256':earlier['history_sha256']},separators=(',',':'),allow_nan=False)+'\n')
     print('Pilot items',len(items),'springs',len(springs),'associations',associations)
     print('View numeric counts',{view:{kind:sum(x['kind']==kind and bool(x['views'][view]['observation']) for x in items) for kind in ['river','rain','well','reservoir']} for view in ['storm','seasonal']})

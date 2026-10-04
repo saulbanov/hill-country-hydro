@@ -56,6 +56,31 @@ def association(site,features,basins):
     return {'available':True,'channel_id':ident,'distance_m':round(distance,1),'basis':'provider river name, WBD watershed containment and distance to NHD line','reach_estimate':None,'meaning':'position association only; no measured reach or causal relationship'}
 
 
+def gauge_stroke(point,line,half_m=500):
+    """A display stroke of at most `half_m` each side of the gauge along ONE saved line.
+
+    It locates the gauge reading on its channel. It never crosses onto another piece and is
+    not a measured or inferred reach.
+    """
+    scale=math.cos(math.radians(point[1]));metres=lambda a,b:math.hypot((a[0]-b[0])*scale,a[1]-b[1])*111195
+    best=None
+    for i,(a,b) in enumerate(zip(line,line[1:])):
+        dx=(b[0]-a[0])*scale;dy=b[1]-a[1];t=max(0,min(1,(((point[0]-a[0])*scale)*dx+(point[1]-a[1])*dy)/(dx*dx+dy*dy))) if dx*dx+dy*dy else 0
+        q=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];d=metres(point,q)
+        if best is None or d<best[0]:best=(d,i,q)
+    _,i,q=best
+    def walk(points):
+        out=[];left=half_m;prev=q
+        for p in points:
+            step=metres(prev,p)
+            if step>=left:
+                f=left/step if step else 0;out.append([prev[0]+f*(p[0]-prev[0]),prev[1]+f*(p[1]-prev[1])]);return out
+            out.append(list(p[:2]));left-=step;prev=p
+        return out
+    back=walk(line[i::-1]);ahead=walk(line[i+1:])
+    return [[round(x,6),round(y,6)] for x,y in back[::-1]+[q]+ahead]
+
+
 def topology(features):
     nodes=defaultdict(list)
     for f in features:
