@@ -116,7 +116,8 @@ def station(reader, key, meta, site, series_ids):
             sources[source_id] = {k: src.get(k) for k in ('url', 'sha256', 'retrieved_at', 'provenance_status', 'bytes')}
         item['source_ids'] = cont['source_ids']
         out.append(item)
-    return {'schema_version': SCHEMA, 'station': key, 'name': ' '.join(str(site.get('name') or key).replace('<br />', ' ').split()), 'kind': meta['kind'], 'basin': meta.get('basin'), 'aquifer': site.get('aquifer'),
+    lake = {'buchanan': 'Lake Buchanan', 'inks': 'Inks Lake', 'lyndon-b-johnson': 'Lake Lyndon B Johnson', 'marble-falls': 'Lake Marble Falls', 'travis': 'Lake Travis', 'austin': 'Lake Austin'}
+    return {'schema_version': SCHEMA, 'station': key, 'name': lake.get(key.split(':')[-1]) if key.startswith('TWDB-lake:') else ' '.join(str(site.get('name') or key).replace('<br />', ' ').split()), 'kind': meta['kind'], 'basin': meta.get('basin'), 'aquifer': site.get('aquifer'),
             'cutoff': cat['cutoff'], 'series': out, 'sources': sources,
             'baseline': {'reference_years': list(history.REFERENCE), 'half_window_days': history.HALF_WINDOW, 'policy': history.FixedBaseline.__doc__.split('Policy. ')[1].strip(),
                          'applies_to': 'daily mean discharge only'},
@@ -147,7 +148,7 @@ def package(folder=history.OUT, out=ROOT/'app/history'):
             continue
         name = slug(key)+'.json'; keep.add(name)
         (out/name).write_text(json.dumps(doc, separators=(',', ':'), allow_nan=False)+'\n')
-        index[key] = {'name': doc['name'], 'kind': meta['kind'], 'basin': meta.get('basin'), 'file': 'history/'+name, 'bytes': (out/name).stat().st_size,
+        index[key] = {'name': doc['name'], 'kind': meta['kind'], 'basin': meta.get('basin'), 'coordinates': cat['sites'].get(key, {}).get('coordinates'), 'file': 'history/'+name, 'bytes': (out/name).stat().st_size,
                       'series': [{'id': s['id'], 'label': s['label'], 'first': s['continuity']['first'], 'last': s['continuity']['last'],
                                   'days_with_values': s['continuity']['days_with_values'], 'missing_years': len(s['continuity']['missing_years'])} for s in doc['series']]}
         years = set()

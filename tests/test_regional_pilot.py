@@ -184,6 +184,12 @@ class HistoryPartitionTests(unittest.TestCase):
         self.assertEqual(len(missing), 11); self.assertTrue(all(k.startswith('TWDB:') and 'never captured' in self.index['stations'][k]['reason'] for k in missing))
         self.assertEqual(len(self.index['stations']), 179)
 
+    def test_stations_can_be_placed_on_a_map(self):
+        snapshot = {x['id']: x for x in json.loads((APP/'regional-snapshot.json').read_text())['items']}
+        unplaced = [k for k, v in self.index['stations'].items() if v['file'] and not (v.get('coordinates') and v['coordinates'][0] is not None)
+                    and not (snapshot.get(k, {}).get('coordinates'))]
+        self.assertEqual(sorted(unplaced), ['EAA:08168710', 'EAA:08170000'])  # the two EAA springs have no verified coordinates
+
     def test_growing_network_is_reported_as_network(self):
         rain = self.index['stations_reporting_by_year']['rain']
         self.assertLess(rain['1990'], rain['2026']); self.assertIn('not a regional trend', self.index['network_note'])
@@ -247,6 +253,27 @@ class GeologyTests(unittest.TestCase):
                 self.assertEqual(w['screen_or_open_intervals'], [])
         differing = self.doc['wells']['TWDB:5750108']
         self.assertEqual((differing['feed_aquifer'], differing['surface_unit']['unit']), ('Ellenburger-San Saba', 'Hensell Sand'))
+
+    def test_every_mapped_station_gets_its_own_geology_lookup(self):
+        at = self.doc['stations']
+        self.assertGreater(len(at), 400)
+        well = at['TWDB:5750108']
+        self.assertEqual(well['surface_unit']['unit'], 'Hensell Sand')
+        self.assertIn({'aquifer': 'Ellenburger-San Saba', 'extent': 'subsurface'}, well['aquifer_extents'])
+        llano = at['USGS:08151500']
+        self.assertEqual((llano['surface_unit']['period'], llano['aquifer_extents']), ('Precambrian', []))
+        self.assertNotEqual(at['USGS:08156800']['surface_unit']['unit'], llano['surface_unit']['unit'])
+        self.assertIn('does not connect a station', self.doc['station_basis'])
+
+    def test_well_log_rows_are_recorded_values_without_names(self):
+        w = self.doc['wells']['TWDB:5750108']
+        self.assertEqual(w['lithology'][0], {'top_ft': 0.0, 'bottom_ft': 18.0, 'description': 'Black Top Soil and Clay'})
+        self.assertEqual(len(w['lithology']), w['lithology_rows'])
+        self.assertNotIn('City of Fredericksburg', json.dumps(w))
+
+    def test_sections_say_which_watershed_they_cross(self):
+        by = {s['figure']: s['applies_to_basins'] for s in self.doc['sections']}
+        self.assertEqual(by, {'Figure 112': ['Pedernales'], 'Figure 79': []})
 
     def test_outside_mapped_units_is_unavailable(self):
         square = {'type': 'Feature', 'properties': {'RockUnitName': 'u', 'RockUnitCode': 'c', 'Period': 'p', 'SheetName': 's'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]}}

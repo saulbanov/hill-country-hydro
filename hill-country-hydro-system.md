@@ -389,3 +389,13 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 - **Fixes found in the browser.** Choosing Austin zoomed to the lake subbasins; the reservoir panel listed all six lakes for a group with no derived reservoir. Both corrected.
 - **Checks.** Water suite 174 passing (4 added); isolated swim copy 79, one existing skip. BrowserOS at 960 px: Austin view frames the six gauges with strokes, no overflow.
 - **Integration.** Analytic commit `a9ec2504bb7184160692c5aace6c01f08bcd9762` verified on `origin/main` before the consumer was pinned to it.
+
+
+### 2026-10-04 — stations picked from a map; geology follows the station
+- Saul's two points: the geology illustration did not change with the station, and nobody knows stations by name, so the long record should be opened from a map.
+- **Station map.** The long-record section now opens with a map of the 166 stations that have a record and coordinates (rivers and creeks, reservoirs, wells, rain gauges, springs). Clicking a dot opens that record; a click on the main map does the same. The two EAA springs have no verified coordinates and are named under the map. The list remains for anyone who knows a name; reservoirs now carry their lake names instead of slugs.
+- **Geology at the selected station.** One panel follows the selection: the surface rock unit, the TWDB aquifer extents at that point, whether a reproduced section crosses the station's watershed, and for a well a depth diagram drawn from its own Groundwater Database report (driller's log bands, casing, screen or open interval, total depth, latest saved water level). `regional_geology.py` computes the lookup for 445 stations. Example: well 5750108 has Hensell Sand at the surface, sits on the Trinity outcrop and above the Ellenburger-San Saba and Hickory subsurface extents, and is open from 112 to 360 ft with water 77.37 ft down.
+- **Decision.** The two published sections stay as published; what varies per station is the lookup and the well's own log. No per-station cross-section is drawn, because no captured source supports one.
+- **Bugs found in the browser and fixed.** The station map threw inside Leaflet when layers were added before the map had a view, which left markers unprojected and failed the whole page load; the view is now set first. Reload-based checks were reading a cached script, so later checks used a fresh port.
+- **Checks.** Water suite 178 passing (4 added); BrowserOS at 960 px: 166 dots, selection from either map updates the record and the geology panel, no overflow, no console errors.
+- **Integration.** Geology commit `30e104b1` on `origin/main`; consumer commit follows.
