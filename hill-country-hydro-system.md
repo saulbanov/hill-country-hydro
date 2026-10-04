@@ -370,3 +370,10 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 - **Fix.** The new section stayed hidden after its data loaded; found in the browser, fixed, rechecked.
 - **Checks.** Water suite 170 passing (8 added). Isolated swim copy: 79, one existing skip. BrowserOS at 960 px: four cards, no overflow, no console errors.
 - **Integration.** Analytic commit `646e045a508062952cf141702819b733ed8aeeb7` verified on `origin/main` before the consumer was pinned to it. The Codex session's publication record for version 3 (the entries dated 22:47 above) was uncommitted in the working tree; it is committed unchanged together with this entry.
+
+
+### 2026-10-04 — second public surface: a Claude artifact
+- Saul asked whether the Claude session could publish its own site. It can: `tools/package_claude_artifact.py --out <dir>` lays out the same public file plan for a Claude artifact (stylesheets inlined, including a vendored `app/vendor/leaflet.css`; document links pointed at the artifact root), and the session published it as https://claude.ai/artifact/HAeHaFwjtveEb3VpQjwpfp (version 1, 200 files). It is private to Saul until he shares it from the page's Share menu.
+- It carries the current build, including the earlier-floods section that the chatgpt.site (version 3) does not have yet. Snapshot publication date regenerated to 2026-10-04.
+- Limits of that surface: the artifact host blocks images from other hosts, so the USGS base-map tiles do not load there; channels, watersheds, lakes, geology layers and readings are the page's own files. The published page was not opened in a browser by the session, so its rendering there is unverified.
+- To update it from a later session: rebuild, run the artifact packager, and publish to the same artifact URL.
