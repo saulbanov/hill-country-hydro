@@ -1,0 +1,3671 @@
+{
+ "schema_version": "regional-events/v1",
+ "cutoff": "2026-10-03T12:15:00Z",
+ "history_sha256": "d8e2566c0847132a91e7f84c7e214588092dd247c2191cba29c2a528a9062b90",
+ "gauges": {
+  "USGS:08150000": {
+   "name": "Llano Rv nr Junction, TX",
+   "daily_series": "USGS:08150000:e1480d7098fa43d39cef68fe8c72ebaa:00060",
+   "daily_selection": "provider-designated primary",
+   "daily_events": {
+    "available": true,
+    "rule": "a day whose daily mean is the largest within 7 days either side; ties go to the first day",
+    "events": [
+     {
+      "date": "1935-06-14",
+      "daily_mean_cfs": 124000.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 895.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "24d56882832000ede4009ae4"
+     },
+     {
+      "date": "1936-09-16",
+      "daily_mean_cfs": 59700.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 48.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "4944026ac9dc06d8ad979cb7"
+     },
+     {
+      "date": "2000-11-03",
+      "daily_mean_cfs": 57500.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 568.0,
+      "days_at_or_above_half_peak_after": 1,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "9d1f2bca1ba91ecf24049bf6"
+     },
+     {
+      "date": "1923-10-29",
+      "daily_mean_cfs": 47400.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 250.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "803406f3892d7fdec990c7d7"
+     },
+     {
+      "date": "1925-05-29",
+      "daily_mean_cfs": 47400.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 87.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "2f4983810e109ab7002dd081"
+     },
+     {
+      "date": "1938-07-22",
+      "daily_mean_cfs": 46800.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 64.0,
+      "days_at_or_above_half_peak_after": 2,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "e42c0eefedf930c249b5a381"
+     },
+     {
+      "date": "2004-11-17",
+      "daily_mean_cfs": 45900.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 132.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "5bc6e5974b43603fe93be1e4"
+     },
+     {
+      "date": "1948-06-25",
+      "daily_mean_cfs": 45100.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 28.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "af3bca11b8905f6b532051c7"
+     },
+     {
+      "date": "1973-10-13",
+      "daily_mean_cfs": 42900.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 87.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "de1cb215ac81fc3d59c979c7"
+     },
+     {
+      "date": "2018-10-16",
+      "daily_mean_cfs": 40400.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 571.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "43a20e2ecd29bb883974b1c9"
+     }
+    ],
+    "first": "1915-10-01",
+    "last": "2026-09-30"
+   },
+   "annual_peaks": {
+    "site": "08150000",
+    "rows": [
+     {
+      "date": "1916-05-22",
+      "time": null,
+      "peak_cfs": 11100.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1917-05-11",
+      "time": null,
+      "peak_cfs": 192.0,
+      "peak_codes": [],
+      "gage_height_ft": 1.88,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1918-04-14",
+      "time": null,
+      "peak_cfs": 14900.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.5,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1919-09-24",
+      "time": null,
+      "peak_cfs": 35700.0,
+      "peak_codes": [],
+      "gage_height_ft": null,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1920-05-14",
+      "time": null,
+      "peak_cfs": 13700.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1921-03-19",
+      "time": null,
+      "peak_cfs": 880.0,
+      "peak_codes": [],
+      "gage_height_ft": 2.19,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1922-04-03",
+      "time": null,
+      "peak_cfs": 16100.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.97,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1923-04-25",
+      "time": null,
+      "peak_cfs": 60400.0,
+      "peak_codes": [],
+      "gage_height_ft": null,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1923-10-29",
+      "time": null,
+      "peak_cfs": 85500.0,
+      "peak_codes": [],
+      "gage_height_ft": 24.83,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1925-05-29",
+      "time": null,
+      "peak_cfs": 76900.0,
+      "peak_codes": [],
+      "gage_height_ft": 23.3,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1925-10-16",
+      "time": null,
+      "peak_cfs": 5600.0,
+      "peak_codes": [],
+      "gage_height_ft": 6.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1927-07-23",
+      "time": null,
+      "peak_cfs": 607.0,
+      "peak_codes": [],
+      "gage_height_ft": 2.5,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1927-10-01",
+      "time": null,
+      "peak_cfs": 32000.0,
+      "peak_codes": [],
+      "gage_height_ft": 16.1,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1929-05-28",
+      "time": null,
+      "peak_cfs": 2100.0,
+      "peak_codes": [],
+      "gage_height_ft": 3.77,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1930-04-24",
+      "time": null,
+      "peak_cfs": 2770.0,
+      "peak_codes": [],
+      "gage_height_ft": 4.2,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1930-10-06",
+      "time": null,
+      "peak_cfs": 89700.0,
+      "peak_codes": [],
+      "gage_height_ft": 25.2,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1932-09-01",
+      "time": null,
+      "peak_cfs": 106000.0,
+      "peak_codes": [],
+      "gage_height_ft": 27.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1933-05-25",
+      "time": null,
+      "peak_cfs": 15800.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.68,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1934-04-04",
+      "time": null,
+      "peak_cfs": 4720.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.85,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1935-06-14",
+      "time": null,
+      "peak_cfs": 319000.0,
+      "peak_codes": [],
+      "gage_height_ft": 43.3,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1936-09-16",
+      "time": null,
+      "peak_cfs": 158000.0,
+      "peak_codes": [],
+      "gage_height_ft": 32.2,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1936-10-29",
+      "time": null,
+      "peak_cfs": 2000.0,
+      "peak_codes": [],
+      "gage_height_ft": null,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1938-07-22",
+      "time": null,
+      "peak_cfs": 137000.0,
+      "peak_codes": [],
+      "gage_height_ft": 30.3,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1939-07-13",
+      "time": null,
+      "peak_cfs": 74400.0,
+      "peak_codes": [],
+      "gage_height_ft": 21.85,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1939-10-10",
+      "time": null,
+      "peak_cfs": 6000.0,
+      "peak_codes": [],
+      "gage_height_ft": 6.01,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1941-04-27",
+      "time": null,
+      "peak_cfs": 7250.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.05,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1942-08-22",
+      "time": null,
+      "peak_cfs": 43000.0,
+      "peak_codes": [],
+      "gage_height_ft": 20.05,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1943-06-05",
+      "time": null,
+      "peak_cfs": 10000.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.47,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1944-05-01",
+      "time": null,
+      "peak_cfs": 8640.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1944-10-04",
+      "time": null,
+      "peak_cfs": 3270.0,
+      "peak_codes": [],
+      "gage_height_ft": 4.56,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1946-09-26",
+      "time": null,
+      "peak_cfs": 1290.0,
+      "peak_codes": [],
+      "gage_height_ft": 3.18,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1947-05-18",
+      "time": null,
+      "peak_cfs": 4540.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.29,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1948-06-24",
+      "time": null,
+      "peak_cfs": 122000.0,
+      "peak_codes": [],
+      "gage_height_ft": 27.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1949-02-23",
+      "time": null,
+      "peak_cfs": 12100.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.13,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1949-10-24",
+      "time": null,
+      "peak_cfs": 568.0,
+      "peak_codes": [],
+      "gage_height_ft": 2.37,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1951-06-10",
+      "time": null,
+      "peak_cfs": 5320.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.63,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1952-05-18",
+      "time": null,
+      "peak_cfs": 2540.0,
+      "peak_codes": [],
+      "gage_height_ft": 4.07,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1953-05-11",
+      "time": null,
+      "peak_cfs": 5030.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.52,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1954-06-29",
+      "time": null,
+      "peak_cfs": 3090.0,
+      "peak_codes": [],
+      "gage_height_ft": 4.42,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1955-09-24",
+      "time": null,
+      "peak_cfs": 36800.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.76,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1955-10-03",
+      "time": null,
+      "peak_cfs": 1020.0,
+      "peak_codes": [],
+      "gage_height_ft": 2.88,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1957-05-27",
+      "time": null,
+      "peak_cfs": 40500.0,
+      "peak_codes": [],
+      "gage_height_ft": 13.55,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1957-10-14",
+      "time": null,
+      "peak_cfs": 63600.0,
+      "peak_codes": [],
+      "gage_height_ft": 18.24,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1959-06-26",
+      "time": null,
+      "peak_cfs": 17500.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.08,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1960-08-15",
+      "time": null,
+      "peak_cfs": 35500.0,
+      "peak_codes": [],
+      "gage_height_ft": 13.1,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1961-06-18",
+      "time": null,
+      "peak_cfs": 55700.0,
+      "peak_codes": [],
+      "gage_height_ft": 16.54,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1961-10-11",
+      "time": null,
+      "peak_cfs": 385.0,
+      "peak_codes": [],
+      "gage_height_ft": 2.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1963-05-06",
+      "time": null,
+      "peak_cfs": 1630.0,
+      "peak_codes": [],
+      "gage_height_ft": 3.38,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1964-09-24",
+      "time": null,
+      "peak_cfs": 26400.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 11.21,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1965-05-18",
+      "time": null,
+      "peak_cfs": 8180.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 6.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1966-09-09",
+      "time": null,
+      "peak_cfs": 13800.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 8.65,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1967-07-20",
+      "time": null,
+      "peak_cfs": 658.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 2.35,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1968-01-18",
+      "time": null,
+      "peak_cfs": 16600.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 9.52,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1969-08-27",
+      "time": null,
+      "peak_cfs": 1610.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 3.37,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1970-05-15",
+      "time": null,
+      "peak_cfs": 21600.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 10.55,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1971-08-11",
+      "time": null,
+      "peak_cfs": 19800.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 10.48,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1971-10-20",
+      "time": null,
+      "peak_cfs": 8750.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 7.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1973-07-31",
+      "time": null,
+      "peak_cfs": 6570.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 5.98,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1973-10-13",
+      "time": null,
+      "peak_cfs": 97800.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 26.77,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1974-10-31",
+      "time": null,
+      "peak_cfs": 4180.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 4.95,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1976-09-01",
+      "time": null,
+      "peak_cfs": 25700.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 11.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1977-05-11",
+      "time": null,
+      "peak_cfs": 41600.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 15.76,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1978-08-02",
+      "time": null,
+      "peak_cfs": 76700.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 22.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1979-08-11",
+      "time": null,
+      "peak_cfs": 3770.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 4.76,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1980-09-08",
+      "time": null,
+      "peak_cfs": 139000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 32.23,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-06-17",
+      "time": null,
+      "peak_cfs": 19900.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 10.7,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-10-13",
+      "time": null,
+      "peak_cfs": 129000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 31.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1982-11-26",
+      "time": null,
+      "peak_cfs": 163.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.67,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1983-11-06",
+      "time": null,
+      "peak_cfs": 213.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.86,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1984-12-31",
+      "time": null,
+      "peak_cfs": 106000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 29.43,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1985-10-19",
+      "time": null,
+      "peak_cfs": 36600.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 20.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1987-06-03",
+      "time": null,
+      "peak_cfs": 12700.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 12.02,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1988-07-11",
+      "time": null,
+      "peak_cfs": 54300.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 23.38,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1989-05-17",
+      "time": null,
+      "peak_cfs": 324.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1990-09-17",
+      "time": null,
+      "peak_cfs": 50300.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 24.7,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-09-16",
+      "time": null,
+      "peak_cfs": 24000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 18.69,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-12-20",
+      "time": null,
+      "peak_cfs": 5370.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 8.92,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1992-12-13",
+      "time": null,
+      "peak_cfs": 289.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.96,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1998-08-23",
+      "time": null,
+      "peak_cfs": 53100.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 25.18,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1999-06-22",
+      "time": null,
+      "peak_cfs": 409.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.52,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-06-10",
+      "time": null,
+      "peak_cfs": 615.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 2.2,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-11-03",
+      "time": null,
+      "peak_cfs": 158000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 35.08,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2001-11-15",
+      "time": null,
+      "peak_cfs": 49700.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 22.51,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2002-10-23",
+      "time": null,
+      "peak_cfs": 4310.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 7.24,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2003-10-12",
+      "time": null,
+      "peak_cfs": 11200.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 9.97,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-11-17",
+      "time": null,
+      "peak_cfs": 120000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 31.78,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2006-04-29",
+      "time": null,
+      "peak_cfs": 313.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 4.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2007-03-26",
+      "time": null,
+      "peak_cfs": 22000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 14.36,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2008-05-14",
+      "time": null,
+      "peak_cfs": 323.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 2.77,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2009-04-27",
+      "time": null,
+      "peak_cfs": 5190.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 7.44,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2010-05-25",
+      "time": null,
+      "peak_cfs": 18000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 13.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2010-12-24",
+      "time": null,
+      "peak_cfs": 88.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.88,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2011-10-09",
+      "time": null,
+      "peak_cfs": 606.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 3.55,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2013-05-24",
+      "time": null,
+      "peak_cfs": 13900.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 11.53,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2014-05-27",
+      "time": null,
+      "peak_cfs": 271.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 2.77,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2015-05-21",
+      "time": null,
+      "peak_cfs": 30200.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 17.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2016-09-26",
+      "time": null,
+      "peak_cfs": 14600.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 11.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2017-06-01",
+      "time": null,
+      "peak_cfs": 2880.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 6.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-09-22",
+      "time": "03:55",
+      "peak_cfs": 32000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 17.25,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-10-08",
+      "time": "08:55",
+      "peak_cfs": 121000.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 31.53,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2020-03-20",
+      "time": "14:30",
+      "peak_cfs": 4270.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 7.01,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2021-05-29",
+      "time": "03:05",
+      "peak_cfs": 1320.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 4.12,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2022-09-06",
+      "time": "06:30",
+      "peak_cfs": 112.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 1.95,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2023-09-25",
+      "time": "09:15",
+      "peak_cfs": 1180.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 4.76,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2024-07-23",
+      "time": "14:55",
+      "peak_cfs": 33700.0,
+      "peak_codes": [
+       "6"
+      ],
+      "gage_height_ft": 19.07,
+      "gage_height_codes": []
+     }
+    ],
+    "code_meanings": {
+     "peak_cd": {
+      "1": "Discharge is a Maximum Daily Average",
+      "2": "Discharge is an Estimate",
+      "3": "Discharge affected by Dam Failure",
+      "4": "Discharge less than indicated value, which is Minimum Recordable Discharge at this site",
+      "5": "Discharge affected to unknown degree by Regulation or Diversion",
+      "6": "Discharge affected by Regulation or Diversion",
+      "7": "Discharge is an Historic Peak",
+      "8": "Discharge actually greater than indicated value",
+      "9": "Discharge due to Snowmelt, Hurricane, Ice-Jam or Debris Dam breakup",
+      "A": "Year of occurrence is unknown or not exact",
+      "C": "All or part of the record affected by Urbanization, Mining, Agricultural changes, Channelization, or other",
+      "F": "Peak supplied by another agency",
+      "O": "Opportunistic value not from systematic data collection",
+      "R": "Revised"
+     },
+     "gage_ht_cd": {
+      "1": "Gage height affected by backwater",
+      "2": "Gage height not the maximum for the year",
+      "3": "Gage height at different site and(or) datum",
+      "4": "Gage height below minimum recordable elevation",
+      "5": "Gage height is an estimate",
+      "6": "Gage datum changed during this year",
+      "7": "Debris, mud, or hyper-concentrated flow",
+      "8": "Gage height tidally affected",
+      "F": "Peak supplied by another agency",
+      "R": "Revised"
+     }
+    },
+    "source": {
+     "url": "https://nwis.waterdata.usgs.gov/nwis/peak?site_no=08150000&agency_cd=USGS&format=rdb",
+     "retrieved_at": "2026-10-03T02:45:25.551675+00:00",
+     "sha256": "006f16b665f999a44d5efe91269bac38f0ccf45408690dd8a8cc0e326ece077f",
+     "bytes": 8377
+    },
+    "statistic": "annual instantaneous peak discharge by water year, as published by USGS"
+   },
+   "last_daily_mean": "2026-09-30"
+  },
+  "USGS:08151500": {
+   "name": "Llano Rv at Llano, TX",
+   "daily_series": "USGS:08151500:3ec578b2b5cc4d32ac8be75b8da0fb58:00060",
+   "daily_selection": "provider-designated primary",
+   "daily_events": {
+    "available": true,
+    "rule": "a day whose daily mean is the largest within 7 days either side; ties go to the first day",
+    "events": [
+     {
+      "date": "2018-10-16",
+      "daily_mean_cfs": 166000.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 1460.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "cc43f0b88386c97b3c6582b1"
+     },
+     {
+      "date": "2000-11-04",
+      "daily_mean_cfs": 88500.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 856.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "31de7c4eafa95cbd02f58381"
+     },
+     {
+      "date": "1997-06-23",
+      "daily_mean_cfs": 78100.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 261.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "dd5b0c6507b173c54aa98368"
+     },
+     {
+      "date": "1980-09-08",
+      "daily_mean_cfs": 71200.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 13.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "52efc1c3d66e9a37d15c4bc5"
+     },
+     {
+      "date": "1948-06-25",
+      "daily_mean_cfs": 54900.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 10.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "111c356cd4611590540f60c1"
+     },
+     {
+      "date": "1978-08-03",
+      "daily_mean_cfs": 54300.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 112.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "e2d05236f5d2fce94fe4222c"
+     },
+     {
+      "date": "2026-07-17",
+      "daily_mean_cfs": 53600.0,
+      "approval": "Provisional",
+      "three_days_before_cfs": 54.4,
+      "days_at_or_above_half_peak_after": 1,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "49199b9a415b107015a0efae"
+     },
+     {
+      "date": "1952-09-10",
+      "daily_mean_cfs": 52000.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 0.0,
+      "days_at_or_above_half_peak_after": 1,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "0af45584be3800719a71f248"
+     },
+     {
+      "date": "1969-10-05",
+      "daily_mean_cfs": 49600.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 109.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "00b4b28a94fa5197e2c57d00"
+     },
+     {
+      "date": "1957-10-15",
+      "daily_mean_cfs": 48800.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 162.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "fbb283fcb178ff7f49e96bb9"
+     }
+    ],
+    "first": "1939-09-17",
+    "last": "2026-09-30"
+   },
+   "annual_peaks": {
+    "site": "08151500",
+    "rows": [
+     {
+      "date": "1935-06-14",
+      "time": null,
+      "peak_cfs": 380000.0,
+      "peak_codes": [
+       "7"
+      ],
+      "gage_height_ft": 41.5,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1940-06-20",
+      "time": null,
+      "peak_cfs": 28200.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.9,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1941-04-27",
+      "time": null,
+      "peak_cfs": 26700.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.64,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1942-08-23",
+      "time": null,
+      "peak_cfs": 23400.0,
+      "peak_codes": [],
+      "gage_height_ft": 11.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1943-06-05",
+      "time": null,
+      "peak_cfs": 50600.0,
+      "peak_codes": [],
+      "gage_height_ft": 16.92,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1944-05-25",
+      "time": null,
+      "peak_cfs": 10100.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.24,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1945-01-18",
+      "time": null,
+      "peak_cfs": 8500.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.61,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1946-05-17",
+      "time": null,
+      "peak_cfs": 18200.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.47,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1947-01-18",
+      "time": null,
+      "peak_cfs": 8500.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.55,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1948-06-25",
+      "time": null,
+      "peak_cfs": 108000.0,
+      "peak_codes": [],
+      "gage_height_ft": 22.9,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1949-04-25",
+      "time": null,
+      "peak_cfs": 14600.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.78,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1950-05-16",
+      "time": null,
+      "peak_cfs": 7770.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.49,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1951-05-25",
+      "time": null,
+      "peak_cfs": 13900.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.27,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1952-09-10",
+      "time": null,
+      "peak_cfs": 232000.0,
+      "peak_codes": [],
+      "gage_height_ft": 32.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1953-05-12",
+      "time": null,
+      "peak_cfs": 16500.0,
+      "peak_codes": [],
+      "gage_height_ft": 11.88,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1953-10-04",
+      "time": null,
+      "peak_cfs": 3460.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.09,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1955-05-19",
+      "time": null,
+      "peak_cfs": 72000.0,
+      "peak_codes": [],
+      "gage_height_ft": 19.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1956-08-31",
+      "time": null,
+      "peak_cfs": 1850.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.82,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1957-05-27",
+      "time": null,
+      "peak_cfs": 47200.0,
+      "peak_codes": [],
+      "gage_height_ft": 16.39,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1957-10-14",
+      "time": null,
+      "peak_cfs": 83700.0,
+      "peak_codes": [],
+      "gage_height_ft": 21.78,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1959-06-26",
+      "time": null,
+      "peak_cfs": 35600.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.06,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1959-10-04",
+      "time": null,
+      "peak_cfs": 103000.0,
+      "peak_codes": [],
+      "gage_height_ft": 22.28,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1961-06-19",
+      "time": null,
+      "peak_cfs": 57600.0,
+      "peak_codes": [],
+      "gage_height_ft": 18.87,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1962-06-02",
+      "time": null,
+      "peak_cfs": 1700.0,
+      "peak_codes": [],
+      "gage_height_ft": 4.48,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1963-09-16",
+      "time": null,
+      "peak_cfs": 1810.0,
+      "peak_codes": [],
+      "gage_height_ft": 4.58,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1964-09-24",
+      "time": null,
+      "peak_cfs": 67200.0,
+      "peak_codes": [],
+      "gage_height_ft": 20.1,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1965-05-16",
+      "time": null,
+      "peak_cfs": 24800.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.66,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1966-04-25",
+      "time": null,
+      "peak_cfs": 15400.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.97,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1967-05-20",
+      "time": null,
+      "peak_cfs": 27400.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.56,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1968-01-20",
+      "time": null,
+      "peak_cfs": 44400.0,
+      "peak_codes": [],
+      "gage_height_ft": 16.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1969-05-07",
+      "time": null,
+      "peak_cfs": 4520.0,
+      "peak_codes": [],
+      "gage_height_ft": 6.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1969-10-05",
+      "time": null,
+      "peak_cfs": 154000.0,
+      "peak_codes": [],
+      "gage_height_ft": 27.02,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1971-08-12",
+      "time": null,
+      "peak_cfs": 28000.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1971-10-20",
+      "time": null,
+      "peak_cfs": 24500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.37,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1973-08-01",
+      "time": null,
+      "peak_cfs": 11400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 9.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1973-10-13",
+      "time": null,
+      "peak_cfs": 154000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 26.98,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1975-05-24",
+      "time": null,
+      "peak_cfs": 19400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.92,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1976-07-04",
+      "time": null,
+      "peak_cfs": 61500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.92,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1977-04-16",
+      "time": null,
+      "peak_cfs": 67500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 18.66,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1978-08-03",
+      "time": null,
+      "peak_cfs": 139000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 25.61,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1979-06-01",
+      "time": null,
+      "peak_cfs": 25800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 12.31,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1980-09-08",
+      "time": null,
+      "peak_cfs": 210000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 31.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-06-18",
+      "time": null,
+      "peak_cfs": 32900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.24,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-10-14",
+      "time": null,
+      "peak_cfs": 116000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 23.79,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1983-06-06",
+      "time": null,
+      "peak_cfs": 5970.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 7.58,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1984-07-28",
+      "time": null,
+      "peak_cfs": 490.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 3.29,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1984-12-31",
+      "time": null,
+      "peak_cfs": 119000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 24.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1985-10-20",
+      "time": null,
+      "peak_cfs": 47100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 16.47,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1987-06-04",
+      "time": null,
+      "peak_cfs": 35200.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1988-07-12",
+      "time": null,
+      "peak_cfs": 72100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 19.21,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1989-06-11",
+      "time": null,
+      "peak_cfs": 3310.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 5.33,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1990-05-03",
+      "time": null,
+      "peak_cfs": 87900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 20.94,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-09-17",
+      "time": null,
+      "peak_cfs": 9530.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 8.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1992-02-04",
+      "time": null,
+      "peak_cfs": 83700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 20.51,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1992-11-19",
+      "time": null,
+      "peak_cfs": 7160.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 7.25,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1994-05-15",
+      "time": null,
+      "peak_cfs": 7390.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 7.34,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1995-05-30",
+      "time": null,
+      "peak_cfs": 13000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 9.26,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1996-08-30",
+      "time": null,
+      "peak_cfs": 9530.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 8.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1997-06-23",
+      "time": null,
+      "peak_cfs": 260000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 38.86,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1998-08-24",
+      "time": null,
+      "peak_cfs": 34700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.05,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1999-03-18",
+      "time": null,
+      "peak_cfs": 37800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.64,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-05-02",
+      "time": null,
+      "peak_cfs": 2020.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 4.21,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-11-04",
+      "time": null,
+      "peak_cfs": 151000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 29.05,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2001-11-16",
+      "time": null,
+      "peak_cfs": 61700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 18.81,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2003-06-15",
+      "time": null,
+      "peak_cfs": 6720.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 6.39,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-06-09",
+      "time": null,
+      "peak_cfs": 85200.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 22.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-11-17",
+      "time": null,
+      "peak_cfs": 79600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 22.07,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2006-05-06",
+      "time": null,
+      "peak_cfs": 4700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 5.18,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2007-06-27",
+      "time": "10:45",
+      "peak_cfs": 72700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 20.46,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2008-04-27",
+      "time": "21:45",
+      "peak_cfs": 2440.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 4.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2009-04-28",
+      "time": "00:50",
+      "peak_cfs": 6730.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 6.12,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2010-04-16",
+      "time": "08:55",
+      "peak_cfs": 12400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 8.61,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2011-05-12",
+      "time": "08:15",
+      "peak_cfs": 415.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 2.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2011-10-09",
+      "time": "03:30",
+      "peak_cfs": 7510.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 6.79,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2013-09-22",
+      "time": "04:55",
+      "peak_cfs": 6550.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 6.62,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2014-05-28",
+      "time": "02:45",
+      "peak_cfs": 3600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 5.27,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2015-05-29",
+      "time": "07:05",
+      "peak_cfs": 25800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 12.28,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2016-05-31",
+      "time": "19:45",
+      "peak_cfs": 30000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 12.78,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2017-04-11",
+      "time": null,
+      "peak_cfs": 12500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 9.2,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-09-23",
+      "time": "03:00",
+      "peak_cfs": 19500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.52,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-10-16",
+      "time": "06:20",
+      "peak_cfs": 278000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 40.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2020-03-22",
+      "time": "05:10",
+      "peak_cfs": 7250.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 6.73,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2021-06-03",
+      "time": "17:40",
+      "peak_cfs": 1620.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 4.09,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2022-09-01",
+      "time": "03:15",
+      "peak_cfs": 7730.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 6.91,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2023-05-21",
+      "time": "03:30",
+      "peak_cfs": 1470.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 4.06,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2024-07-23",
+      "time": "23:40",
+      "peak_cfs": 58600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.39,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2025-07-04",
+      "time": "18:20",
+      "peak_cfs": 132000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 27.07,
+      "gage_height_codes": []
+     }
+    ],
+    "code_meanings": {
+     "peak_cd": {
+      "1": "Discharge is a Maximum Daily Average",
+      "2": "Discharge is an Estimate",
+      "3": "Discharge affected by Dam Failure",
+      "4": "Discharge less than indicated value, which is Minimum Recordable Discharge at this site",
+      "5": "Discharge affected to unknown degree by Regulation or Diversion",
+      "6": "Discharge affected by Regulation or Diversion",
+      "7": "Discharge is an Historic Peak",
+      "8": "Discharge actually greater than indicated value",
+      "9": "Discharge due to Snowmelt, Hurricane, Ice-Jam or Debris Dam breakup",
+      "A": "Year of occurrence is unknown or not exact",
+      "C": "All or part of the record affected by Urbanization, Mining, Agricultural changes, Channelization, or other",
+      "F": "Peak supplied by another agency",
+      "O": "Opportunistic value not from systematic data collection",
+      "R": "Revised"
+     },
+     "gage_ht_cd": {
+      "1": "Gage height affected by backwater",
+      "2": "Gage height not the maximum for the year",
+      "3": "Gage height at different site and(or) datum",
+      "4": "Gage height below minimum recordable elevation",
+      "5": "Gage height is an estimate",
+      "6": "Gage datum changed during this year",
+      "7": "Debris, mud, or hyper-concentrated flow",
+      "8": "Gage height tidally affected",
+      "F": "Peak supplied by another agency",
+      "R": "Revised"
+     }
+    },
+    "source": {
+     "url": "https://nwis.waterdata.usgs.gov/nwis/peak?site_no=08151500&agency_cd=USGS&format=rdb",
+     "retrieved_at": "2026-10-03T02:45:27.104683+00:00",
+     "sha256": "a131dcf2a494d3974cc7049bd60dacf98368f965ae5577e4bdd1288f72dc225b",
+     "bytes": 7669
+    },
+    "statistic": "annual instantaneous peak discharge by water year, as published by USGS"
+   },
+   "last_daily_mean": "2026-09-30"
+  },
+  "USGS:08152900": {
+   "name": "Pedernales Rv nr Fredericksburg, TX",
+   "daily_series": "USGS:08152900:788351d2cc114a27957023b2661100e2:00060",
+   "daily_selection": "provider-designated primary",
+   "daily_events": {
+    "available": true,
+    "rule": "a day whose daily mean is the largest within 7 days either side; ties go to the first day",
+    "events": [
+     {
+      "date": "2026-07-16",
+      "daily_mean_cfs": 21800.0,
+      "approval": "Provisional",
+      "three_days_before_cfs": 18.7,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "364b1077b13dbaac800034fe"
+     },
+     {
+      "date": "2007-05-25",
+      "daily_mean_cfs": 16300.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 45.3,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "1fdcb2764b1d4dc7a3a02a46"
+     },
+     {
+      "date": "1991-12-20",
+      "daily_mean_cfs": 14800.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 14.0,
+      "days_at_or_above_half_peak_after": 1,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "dc0ed8cbc05d475b2b85c74b"
+     },
+     {
+      "date": "2007-08-17",
+      "daily_mean_cfs": 14600.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 106.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "2b5d8a326758dac2977e0f42"
+     },
+     {
+      "date": "2002-07-05",
+      "daily_mean_cfs": 14500.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 5620.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "300e1a355b308bb74a0eb6da"
+     },
+     {
+      "date": "2018-10-16",
+      "daily_mean_cfs": 11500.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 18.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "1ee00faff146f8179b8327fc"
+     },
+     {
+      "date": "1985-10-19",
+      "daily_mean_cfs": 10200.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 30.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "a109bbf58aa0ab8efa797431"
+     },
+     {
+      "date": "2001-11-15",
+      "daily_mean_cfs": 8060.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 9.8,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "5718d5dc20f62be13c629be0"
+     },
+     {
+      "date": "2004-04-06",
+      "daily_mean_cfs": 7370.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 122.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "bedfb493e4d831c8bddafca4"
+     },
+     {
+      "date": "2004-06-09",
+      "daily_mean_cfs": 5920.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 33.1,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "457473e2eabceda0a56f430a"
+     }
+    ],
+    "first": "1979-06-28",
+    "last": "2026-09-30"
+   },
+   "annual_peaks": {
+    "site": "08152900",
+    "rows": [
+     {
+      "date": "1952-09-00",
+      "time": null,
+      "peak_cfs": null,
+      "peak_codes": [],
+      "gage_height_ft": 38.7,
+      "gage_height_codes": [
+       "Bd"
+      ]
+     },
+     {
+      "date": "1978-08-02",
+      "time": null,
+      "peak_cfs": null,
+      "peak_codes": [],
+      "gage_height_ft": 41.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1979-06-01",
+      "time": null,
+      "peak_cfs": 64000.0,
+      "peak_codes": [],
+      "gage_height_ft": 34.4,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1980-05-15",
+      "time": null,
+      "peak_cfs": 3600.0,
+      "peak_codes": [],
+      "gage_height_ft": 13.59,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-06-04",
+      "time": null,
+      "peak_cfs": 13400.0,
+      "peak_codes": [],
+      "gage_height_ft": 23.23,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-10-13",
+      "time": null,
+      "peak_cfs": 12500.0,
+      "peak_codes": [],
+      "gage_height_ft": 22.45,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1983-06-25",
+      "time": null,
+      "peak_cfs": 2480.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.41,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1984-01-09",
+      "time": null,
+      "peak_cfs": 134.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1984-12-31",
+      "time": null,
+      "peak_cfs": 12800.0,
+      "peak_codes": [],
+      "gage_height_ft": 22.68,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1985-10-19",
+      "time": null,
+      "peak_cfs": 46000.0,
+      "peak_codes": [],
+      "gage_height_ft": 31.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1987-07-17",
+      "time": null,
+      "peak_cfs": 9130.0,
+      "peak_codes": [],
+      "gage_height_ft": 19.14,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1988-07-11",
+      "time": null,
+      "peak_cfs": 7490.0,
+      "peak_codes": [],
+      "gage_height_ft": 17.27,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1989-06-14",
+      "time": null,
+      "peak_cfs": 4080.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.84,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1990-05-03",
+      "time": null,
+      "peak_cfs": 18600.0,
+      "peak_codes": [],
+      "gage_height_ft": 25.68,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-09-15",
+      "time": null,
+      "peak_cfs": 627.0,
+      "peak_codes": [],
+      "gage_height_ft": 6.64,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-12-20",
+      "time": null,
+      "peak_cfs": 49900.0,
+      "peak_codes": [],
+      "gage_height_ft": 32.09,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1994-10-00",
+      "time": null,
+      "peak_cfs": null,
+      "peak_codes": [],
+      "gage_height_ft": 36.71,
+      "gage_height_codes": [
+       "Bd"
+      ]
+     },
+     {
+      "date": "1999-03-18",
+      "time": null,
+      "peak_cfs": 6340.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.08,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-05-02",
+      "time": null,
+      "peak_cfs": 353.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.13,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-11-03",
+      "time": null,
+      "peak_cfs": 8880.0,
+      "peak_codes": [],
+      "gage_height_ft": 15.07,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2002-07-05",
+      "time": null,
+      "peak_cfs": 55700.0,
+      "peak_codes": [],
+      "gage_height_ft": 27.42,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2002-10-08",
+      "time": null,
+      "peak_cfs": 6030.0,
+      "peak_codes": [],
+      "gage_height_ft": 13.01,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-04-06",
+      "time": null,
+      "peak_cfs": 33100.0,
+      "peak_codes": [],
+      "gage_height_ft": 23.49,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-11-17",
+      "time": null,
+      "peak_cfs": 2650.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2006-05-06",
+      "time": null,
+      "peak_cfs": 2140.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.89,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2007-08-17",
+      "time": null,
+      "peak_cfs": 58500.0,
+      "peak_codes": [],
+      "gage_height_ft": 31.7,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2008-05-15",
+      "time": "11:30",
+      "peak_cfs": 212.0,
+      "peak_codes": [],
+      "gage_height_ft": 6.26,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2009-09-10",
+      "time": "15:30",
+      "peak_cfs": 1790.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.86,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2010-04-16",
+      "time": "05:10",
+      "peak_cfs": 7780.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2011-03-27",
+      "time": "10:55",
+      "peak_cfs": 115.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.94,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2012-03-20",
+      "time": "03:55",
+      "peak_cfs": 5770.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.72,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2013-09-20",
+      "time": "15:30",
+      "peak_cfs": 500.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2013-10-13",
+      "time": "10:35",
+      "peak_cfs": 4990.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2015-05-25",
+      "time": "15:45",
+      "peak_cfs": 3910.0,
+      "peak_codes": [],
+      "gage_height_ft": 11.74,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2016-05-29",
+      "time": "05:30",
+      "peak_cfs": 9190.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.89,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2017-02-14",
+      "time": "06:30",
+      "peak_cfs": 1470.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.35,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-09-16",
+      "time": "05:10",
+      "peak_cfs": 677.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.17,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-10-15",
+      "time": "22:00",
+      "peak_cfs": 27800.0,
+      "peak_codes": [],
+      "gage_height_ft": 22.56,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2020-05-28",
+      "time": "18:30",
+      "peak_cfs": 8040.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.21,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2021-05-01",
+      "time": "21:25",
+      "peak_cfs": 7290.0,
+      "peak_codes": [],
+      "gage_height_ft": 13.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2022-09-01",
+      "time": "00:45",
+      "peak_cfs": 204.0,
+      "peak_codes": [],
+      "gage_height_ft": 6.84,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2023-06-16",
+      "time": "22:45",
+      "peak_cfs": 2720.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.75,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2024-07-23",
+      "time": "21:00",
+      "peak_cfs": 2010.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.02,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2025-07-04",
+      "time": "17:00",
+      "peak_cfs": 9030.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.8,
+      "gage_height_codes": []
+     }
+    ],
+    "code_meanings": {
+     "peak_cd": {
+      "1": "Discharge is a Maximum Daily Average",
+      "2": "Discharge is an Estimate",
+      "3": "Discharge affected by Dam Failure",
+      "4": "Discharge less than indicated value, which is Minimum Recordable Discharge at this site",
+      "5": "Discharge affected to unknown degree by Regulation or Diversion",
+      "6": "Discharge affected by Regulation or Diversion",
+      "7": "Discharge is an Historic Peak",
+      "8": "Discharge actually greater than indicated value",
+      "9": "Discharge due to Snowmelt, Hurricane, Ice-Jam or Debris Dam breakup",
+      "A": "Year of occurrence is unknown or not exact",
+      "C": "All or part of the record affected by Urbanization, Mining, Agricultural changes, Channelization, or other",
+      "F": "Peak supplied by another agency",
+      "O": "Opportunistic value not from systematic data collection",
+      "R": "Revised"
+     },
+     "gage_ht_cd": {
+      "1": "Gage height affected by backwater",
+      "2": "Gage height not the maximum for the year",
+      "3": "Gage height at different site and(or) datum",
+      "4": "Gage height below minimum recordable elevation",
+      "5": "Gage height is an estimate",
+      "6": "Gage datum changed during this year",
+      "7": "Debris, mud, or hyper-concentrated flow",
+      "8": "Gage height tidally affected",
+      "F": "Peak supplied by another agency",
+      "R": "Revised"
+     }
+    },
+    "source": {
+     "url": "https://nwis.waterdata.usgs.gov/nwis/peak?site_no=08152900&agency_cd=USGS&format=rdb",
+     "retrieved_at": "2026-10-03T02:45:05.924787+00:00",
+     "sha256": "0dc895337e255722f2b420bb1094cbbd5eec58a48728d20dd61c321368b35337",
+     "bytes": 5641
+    },
+    "statistic": "annual instantaneous peak discharge by water year, as published by USGS"
+   },
+   "last_daily_mean": "2026-09-30"
+  },
+  "USGS:08153500": {
+   "name": "Pedernales Rv nr Johnson City, TX",
+   "daily_series": "USGS:08153500:d908827a66f14ffbaa2980470c2a2589:00060",
+   "daily_selection": "provider-designated primary",
+   "daily_events": {
+    "available": true,
+    "rule": "a day whose daily mean is the largest within 7 days either side; ties go to the first day",
+    "events": [
+     {
+      "date": "1952-09-11",
+      "daily_mean_cfs": 129000.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 0.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "6fc95675dbd4c514baa39079"
+     },
+     {
+      "date": "1991-12-21",
+      "daily_mean_cfs": 50200.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 36.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "77d851cf7058cd39f3adbec2"
+     },
+     {
+      "date": "2002-07-04",
+      "daily_mean_cfs": 49100.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 1700.0,
+      "days_at_or_above_half_peak_after": 1,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "8456d11857bd1fb3ba51d62c"
+     },
+     {
+      "date": "1959-10-04",
+      "daily_mean_cfs": 48800.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 149.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "b6a028eeba7b86dfd567624f"
+     },
+     {
+      "date": "1997-06-22",
+      "daily_mean_cfs": 40100.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 346.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "d42c27a95ec598aea606b7de"
+     },
+     {
+      "date": "2007-08-17",
+      "daily_mean_cfs": 39700.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 242.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "3458480e3198b1faebfc4919"
+     },
+     {
+      "date": "1977-04-15",
+      "daily_mean_cfs": 36400.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 87.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "c7db037a3dbb468aded72996"
+     },
+     {
+      "date": "1992-02-04",
+      "daily_mean_cfs": 36200.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 626.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "4a576db46d240976f1d48a37"
+     },
+     {
+      "date": "1957-04-24",
+      "daily_mean_cfs": 32900.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 82.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "1200fe332289207bae639d31"
+     },
+     {
+      "date": "1978-08-03",
+      "daily_mean_cfs": 30100.0,
+      "approval": "Approved",
+      "three_days_before_cfs": 54.0,
+      "days_at_or_above_half_peak_after": 0,
+      "recession_note": "counted to the first day below half the peak",
+      "observation_id": "03aacff72aec99d28583a82c"
+     }
+    ],
+    "first": "1939-05-04",
+    "last": "2026-09-30"
+   },
+   "annual_peaks": {
+    "site": "08153500",
+    "rows": [
+     {
+      "date": "1869-07-00",
+      "time": null,
+      "peak_cfs": null,
+      "peak_codes": [],
+      "gage_height_ft": 33.0,
+      "gage_height_codes": [
+       "5",
+       "Bd"
+      ]
+     },
+     {
+      "date": "1913-12-00",
+      "time": null,
+      "peak_cfs": null,
+      "peak_codes": [],
+      "gage_height_ft": 21.7,
+      "gage_height_codes": [
+       "5",
+       "Bd"
+      ]
+     },
+     {
+      "date": "1929-05-28",
+      "time": null,
+      "peak_cfs": null,
+      "peak_codes": [],
+      "gage_height_ft": 22.9,
+      "gage_height_codes": [
+       "5"
+      ]
+     },
+     {
+      "date": "1939-10-25",
+      "time": null,
+      "peak_cfs": 42900.0,
+      "peak_codes": [],
+      "gage_height_ft": 17.53,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1941-04-27",
+      "time": null,
+      "peak_cfs": 21100.0,
+      "peak_codes": [],
+      "gage_height_ft": 12.83,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1942-08-22",
+      "time": null,
+      "peak_cfs": 26600.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.1,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1942-10-18",
+      "time": null,
+      "peak_cfs": 27000.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.25,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1944-08-30",
+      "time": null,
+      "peak_cfs": 104000.0,
+      "peak_codes": [],
+      "gage_height_ft": 26.1,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1945-09-29",
+      "time": null,
+      "peak_cfs": 25500.0,
+      "peak_codes": [],
+      "gage_height_ft": 13.96,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1946-05-25",
+      "time": null,
+      "peak_cfs": 9680.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.4,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1946-12-11",
+      "time": null,
+      "peak_cfs": 10200.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.57,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1948-04-13",
+      "time": null,
+      "peak_cfs": 8380.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.78,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1949-04-24",
+      "time": null,
+      "peak_cfs": 8170.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.74,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1950-08-28",
+      "time": null,
+      "peak_cfs": 2910.0,
+      "peak_codes": [],
+      "gage_height_ft": 5.79,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1951-06-12",
+      "time": null,
+      "peak_cfs": 11800.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.18,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1952-09-11",
+      "time": null,
+      "peak_cfs": 441000.0,
+      "peak_codes": [],
+      "gage_height_ft": 42.5,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1952-12-19",
+      "time": null,
+      "peak_cfs": 32200.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.7,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1954-04-30",
+      "time": null,
+      "peak_cfs": 5340.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1955-09-24",
+      "time": null,
+      "peak_cfs": 13600.0,
+      "peak_codes": [],
+      "gage_height_ft": 10.67,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1955-10-03",
+      "time": null,
+      "peak_cfs": 164.0,
+      "peak_codes": [],
+      "gage_height_ft": 2.91,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1957-04-24",
+      "time": null,
+      "peak_cfs": 125000.0,
+      "peak_codes": [],
+      "gage_height_ft": 24.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1958-06-17",
+      "time": null,
+      "peak_cfs": 50200.0,
+      "peak_codes": [],
+      "gage_height_ft": 17.45,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1959-06-26",
+      "time": null,
+      "peak_cfs": 47000.0,
+      "peak_codes": [],
+      "gage_height_ft": 17.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1959-10-04",
+      "time": null,
+      "peak_cfs": 142000.0,
+      "peak_codes": [],
+      "gage_height_ft": 26.1,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1960-10-29",
+      "time": null,
+      "peak_cfs": 15600.0,
+      "peak_codes": [],
+      "gage_height_ft": 11.08,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1962-06-07",
+      "time": null,
+      "peak_cfs": 8550.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.83,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1963-05-28",
+      "time": null,
+      "peak_cfs": 5270.0,
+      "peak_codes": [],
+      "gage_height_ft": 7.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1964-03-19",
+      "time": null,
+      "peak_cfs": 10600.0,
+      "peak_codes": [],
+      "gage_height_ft": 9.58,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1965-09-22",
+      "time": null,
+      "peak_cfs": 32200.0,
+      "peak_codes": [],
+      "gage_height_ft": 14.68,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1965-10-18",
+      "time": null,
+      "peak_cfs": 7550.0,
+      "peak_codes": [],
+      "gage_height_ft": 8.4,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1967-09-15",
+      "time": null,
+      "peak_cfs": 5830.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 12.44,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1968-01-20",
+      "time": null,
+      "peak_cfs": 27900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 15.53,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1969-06-24",
+      "time": null,
+      "peak_cfs": 12700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1970-05-23",
+      "time": null,
+      "peak_cfs": 28900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 16.3,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1971-08-13",
+      "time": null,
+      "peak_cfs": 9070.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.33,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1971-10-19",
+      "time": null,
+      "peak_cfs": 35700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.15,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1973-07-15",
+      "time": null,
+      "peak_cfs": 21400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 15.33,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1974-05-01",
+      "time": null,
+      "peak_cfs": 44400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.94,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1974-10-31",
+      "time": null,
+      "peak_cfs": 90100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 21.95,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1976-05-26",
+      "time": null,
+      "peak_cfs": 16800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.66,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1977-04-15",
+      "time": null,
+      "peak_cfs": 98000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 22.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1978-08-03",
+      "time": null,
+      "peak_cfs": 127000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 24.9,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1979-06-01",
+      "time": null,
+      "peak_cfs": 64200.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 19.75,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1980-05-16",
+      "time": null,
+      "peak_cfs": 2790.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-06-04",
+      "time": null,
+      "peak_cfs": 49600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 18.43,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1981-10-13",
+      "time": null,
+      "peak_cfs": 32300.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 16.67,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1983-05-11",
+      "time": null,
+      "peak_cfs": 62600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 19.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1983-11-06",
+      "time": null,
+      "peak_cfs": 1270.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1984-12-16",
+      "time": null,
+      "peak_cfs": 14600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.31,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1985-10-19",
+      "time": null,
+      "peak_cfs": 74000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 20.59,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1987-07-17",
+      "time": null,
+      "peak_cfs": 44800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.98,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1988-05-21",
+      "time": null,
+      "peak_cfs": 14300.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.27,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1989-05-17",
+      "time": null,
+      "peak_cfs": 23700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 15.63,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1990-05-03",
+      "time": null,
+      "peak_cfs": 24600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 15.75,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-05-08",
+      "time": null,
+      "peak_cfs": 7220.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.19,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1991-12-20",
+      "time": null,
+      "peak_cfs": 82700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 21.32,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1993-09-13",
+      "time": null,
+      "peak_cfs": 19000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.99,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1994-05-13",
+      "time": null,
+      "peak_cfs": 29700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 16.37,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1995-05-30",
+      "time": null,
+      "peak_cfs": 83400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 21.38,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1995-11-01",
+      "time": null,
+      "peak_cfs": 2850.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.73,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1997-06-22",
+      "time": null,
+      "peak_cfs": 94900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 25.16,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1998-03-16",
+      "time": null,
+      "peak_cfs": 29500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.65,
+      "gage_height_codes": []
+     },
+     {
+      "date": "1998-10-18",
+      "time": null,
+      "peak_cfs": 18900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 15.65,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2000-05-02",
+      "time": null,
+      "peak_cfs": 356.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.77,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2001-09-05",
+      "time": null,
+      "peak_cfs": 16400.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 15.13,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2002-07-04",
+      "time": null,
+      "peak_cfs": 108000.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 26.0,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2003-02-21",
+      "time": null,
+      "peak_cfs": 11700.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.16,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-04-06",
+      "time": null,
+      "peak_cfs": 25900.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 16.99,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2004-11-17",
+      "time": null,
+      "peak_cfs": 30100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 17.74,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2006-05-05",
+      "time": null,
+      "peak_cfs": 9100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.55,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2007-08-17",
+      "time": "05:15",
+      "peak_cfs": 90600.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 24.8,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2007-10-23",
+      "time": "04:15",
+      "peak_cfs": 264.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.67,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2009-04-27",
+      "time": "05:35",
+      "peak_cfs": 7200.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.06,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2010-09-08",
+      "time": "11:25",
+      "peak_cfs": 37800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 19.04,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2011-01-09",
+      "time": "18:25",
+      "peak_cfs": 87.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.48,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2012-03-20",
+      "time": "05:15",
+      "peak_cfs": 8660.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.44,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2013-05-25",
+      "time": "14:45",
+      "peak_cfs": 674.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.96,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2013-10-13",
+      "time": "06:50",
+      "peak_cfs": 3780.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 12.11,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2015-05-23",
+      "time": "21:00",
+      "peak_cfs": 40100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 19.39,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2016-06-02",
+      "time": "11:55",
+      "peak_cfs": 21800.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 16.22,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2017-02-14",
+      "time": "05:40",
+      "peak_cfs": 2520.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.69,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2018-09-16",
+      "time": "19:10",
+      "peak_cfs": 686.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.92,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2019-05-08",
+      "time": "15:25",
+      "peak_cfs": 35100.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 18.6,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2020-05-29",
+      "time": "02:50",
+      "peak_cfs": 7770.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.21,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2021-05-02",
+      "time": "02:50",
+      "peak_cfs": 13200.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 14.47,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2022-09-01",
+      "time": "00:15",
+      "peak_cfs": 1500.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.31,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2023-05-15",
+      "time": "22:50",
+      "peak_cfs": 662.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 10.92,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2024-09-03",
+      "time": "21:10",
+      "peak_cfs": 1860.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 11.45,
+      "gage_height_codes": []
+     },
+     {
+      "date": "2025-07-05",
+      "time": "01:25",
+      "peak_cfs": 9970.0,
+      "peak_codes": [
+       "5"
+      ],
+      "gage_height_ft": 13.76,
+      "gage_height_codes": []
+     }
+    ],
+    "code_meanings": {
+     "peak_cd": {
+      "1": "Discharge is a Maximum Daily Average",
+      "2": "Discharge is an Estimate",
+      "3": "Discharge affected by Dam Failure",
+      "4": "Discharge less than indicated value, which is Minimum Recordable Discharge at this site",
+      "5": "Discharge affected to unknown degree by Regulation or Diversion",
+      "6": "Discharge affected by Regulation or Diversion",
+      "7": "Discharge is an Historic Peak",
+      "8": "Discharge actually greater than indicated value",
+      "9": "Discharge due to Snowmelt, Hurricane, Ice-Jam or Debris Dam breakup",
+      "A": "Year of occurrence is unknown or not exact",
+      "C": "All or part of the record affected by Urbanization, Mining, Agricultural changes, Channelization, or other",
+      "F": "Peak supplied by another agency",
+      "O": "Opportunistic value not from systematic data collection",
+      "R": "Revised"
+     },
+     "gage_ht_cd": {
+      "1": "Gage height affected by backwater",
+      "2": "Gage height not the maximum for the year",
+      "3": "Gage height at different site and(or) datum",
+      "4": "Gage height below minimum recordable elevation",
+      "5": "Gage height is an estimate",
+      "6": "Gage datum changed during this year",
+      "7": "Debris, mud, or hyper-concentrated flow",
+      "8": "Gage height tidally affected",
+      "F": "Peak supplied by another agency",
+      "R": "Revised"
+     }
+    },
+    "source": {
+     "url": "https://nwis.waterdata.usgs.gov/nwis/peak?site_no=08153500&agency_cd=USGS&format=rdb",
+     "retrieved_at": "2026-10-03T02:44:55.323326+00:00",
+     "sha256": "a44105a88254651e11d503fb9b90fd91982386373284f327be2060816cf9a140",
+     "bytes": 7787
+    },
+    "statistic": "annual instantaneous peak discharge by water year, as published by USGS"
+   },
+   "last_daily_mean": "2026-09-30"
+  }
+ },
+ "pair_lags": {
+  "USGS:08150000>USGS:08151500": [
+   {
+    "downstream_date": "2018-10-16",
+    "upstream_date": "2018-10-16",
+    "lag_days": 0
+   },
+   {
+    "downstream_date": "2000-11-04",
+    "upstream_date": "2000-11-03",
+    "lag_days": 1
+   },
+   {
+    "downstream_date": "1997-06-23",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1980-09-08",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1948-06-25",
+    "upstream_date": "1948-06-25",
+    "lag_days": 0
+   },
+   {
+    "downstream_date": "1978-08-03",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "2026-07-17",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1952-09-10",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1969-10-05",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1957-10-15",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   }
+  ],
+  "USGS:08152900>USGS:08153500": [
+   {
+    "downstream_date": "1952-09-11",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1991-12-21",
+    "upstream_date": "1991-12-20",
+    "lag_days": 1
+   },
+   {
+    "downstream_date": "2002-07-04",
+    "upstream_date": "2002-07-05",
+    "lag_days": -1
+   },
+   {
+    "downstream_date": "1959-10-04",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1997-06-22",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "2007-08-17",
+    "upstream_date": "2007-08-17",
+    "lag_days": 0
+   },
+   {
+    "downstream_date": "1977-04-15",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1992-02-04",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1957-04-24",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   },
+   {
+    "downstream_date": "1978-08-03",
+    "upstream_date": null,
+    "lag_days": null,
+    "reason": "no single upstream event among its largest within three days"
+   }
+  ]
+ },
+ "meaning": "earlier floods at the same gauge, from its own record; annual peaks are instantaneous and daily events are daily means, never mixed",
+ "limits": [
+  "An event list ranks saved daily means; it is not a return period or a forecast.",
+  "A lag is the difference between two dates; hours are not resolved.",
+  "Volume, rainfall and starting conditions are not compared here."
+ ]
+}

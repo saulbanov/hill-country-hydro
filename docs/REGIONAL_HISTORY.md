@@ -89,6 +89,46 @@ date's daily mean discharge against one reference: the same series' Approved dai
 `tests/test_regional_history.py` checks the fast baseline against
 `regional_analytics.seasonal_reference(..., reference_years=(2006, 2025), exclude_year=...)`.
 
+## Earlier floods at the same gauge
+
+`tools/regional_events.py` writes `data/model/regional-events.json` for the four river gauges. It
+keeps two records apart:
+
+- **Annual peaks.** The preserved USGS peak-flow file gives one instantaneous peak per water year,
+  with qualification codes whose meanings are read from the file's own header (5 and 6 mark
+  regulation or diversion; gage-height code 6 marks a datum change in that year).
+  `place_among_peaks` counts how many published peaks exceed one instantaneous reading. It is used
+  for the storm's largest saved reading, which is the same kind of value. The count is a place in
+  the record. It is not a return period, the storm's true peak may be higher than the largest
+  saved reading, and the current water year's peak is not yet published.
+- **Daily events.** `daily_events` lists the largest daily means, each the largest within seven
+  days either side, with the daily mean three days earlier and the number of following days at or
+  above half the peak. A missing day inside that count withholds it. `pair_lags` reports the date
+  difference between upstream and downstream events only where exactly one upstream event lies
+  within three days; daily values cannot resolve hours.
+
+On the October 3 build: 31 of 105 published annual peaks at Llano near Junction exceed the storm's
+35,000 cfs; 40 of 87 at Llano exceed 27,500 cfs; all 41 at Pedernales near Fredericksburg exceed
+15.1 cfs; 85 of 86 near Johnson City exceed 105 cfs. The storm's daily means are not in the saved
+record yet (the last daily mean is September 30), so it does not appear in the daily-event lists.
+
+## Rebuilding for a later cutoff
+
+```
+python3 tools/regional_rebuild.py --through 2026-10-10T12:15:00Z
+python3 -m unittest discover -s tests
+python3 tools/package_regional_site.py --site-root ../hill-country-hydro-site
+```
+
+The first command reruns every offline stage for one saved-data cutoff: compact store, coverage
+audit, full-history store, continuity audit, earlier floods, history partitions, geology, snapshot.
+It reads only what the daily run has already captured and fetches nothing. The storm window on the
+page follows the cutoff (its daily end is the last whole date before it); the seasonal view stays
+on September 30. Run at the October 3 cutoff it reproduces the committed outputs. Several tests pin
+October 3 values (selection counts, the 31-of-105 placement, the unranked gap dates); a later
+cutoff is expected to change the first two, and those assertions should be updated to the new
+audited values in the same commit.
+
 ## Browser partitions
 
 `tools/regional_history_package.py` writes one file per station under `app/history/` and an index.
