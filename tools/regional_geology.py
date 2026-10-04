@@ -33,12 +33,12 @@ RELATIONSHIPS = [
     ('usgs-ha730e-text8-edwards-trinity', 'Edwards aquifer', 'The Edwards aquifer is underlain by the much less permeable Walnut Formation or Glen Rose Limestone of the Trinity aquifer.'),
 ]
 SECTIONS = [
-    {'capture': 'usgs-ha730e-fig112', 'file': 'geology/usgs-ha730e-fig112.gif', 'figure': 'Figure 112', 'kind': 'published hydrogeologic section',
+    {'capture': 'usgs-ha730e-fig112', 'file': 'geology/usgs-ha730e-fig112.gif', 'figure': 'Figure 112', 'kind': 'published hydrogeologic section', 'applies_to_basins': ['Pedernales'],
      'caption': 'In the Hill Country of south-central Texas, the southward-dipping Trinity aquifer is juxtaposed with the highly permeable Edwards aquifer as a result of faulting. The line of the hydrogeologic section is shown in figure 108.',
      'credit': 'U.S. Geological Survey, Ground Water Atlas of the United States, HA 730-E (Ryder, 1996), fig. 112; modified from Ashworth, J.B., 1983, Texas Department of Water Resources Report 273.',
      'relevance': 'Section C–C′ runs from Gillespie County through Kendall County into Bexar County and crosses the Pedernales River. Its vertical scale is greatly exaggerated and its potentiometric surface is dated 1975.',
      'limits': 'A published interpretation from a 1983 report, with a water-level surface dated 1975. It is not a measurement of today’s water levels and it does not cross the Llano River watershed.'},
-    {'capture': 'usgs-ha730e-fig079', 'file': 'geology/usgs-ha730e-fig079.gif', 'figure': 'Figure 79', 'kind': 'published diagrammatic section, not to scale',
+    {'capture': 'usgs-ha730e-fig079', 'file': 'geology/usgs-ha730e-fig079.gif', 'figure': 'Figure 79', 'kind': 'published diagrammatic section, not to scale', 'applies_to_basins': [],
      'caption': 'A diagrammatic section through the Edwards-Trinity aquifer system shows how the three aquifers relate to each other and to contiguous rocks.',
      'credit': 'U.S. Geological Survey, Ground Water Atlas of the United States, HA 730-E (Ryder, 1996), fig. 79; modified from E.L. Kuniansky, U.S. Geological Survey, written communication, 1990.',
      'relevance': 'Northwest to southeast across the Edwards Plateau, the Llano Uplift, the Hill Country and the Balcones Fault Zone.',
@@ -178,7 +178,8 @@ def well_record(text):
             'borehole_completion': (head['BoreholeCompletion'] or '').strip() or None, 'drilling_end_date': head['DrillingEndDate'] or None,
             'casing_rows': casing, 'screen_or_open_intervals': [{'type': c['type'], 'top_ft': c['top_ft'], 'bottom_ft': c['bottom_ft']} for c in open_rows],
             'interval_status': 'documented' if open_rows else 'casing recorded without a screen or open interval' if casing else 'not documented in the Groundwater Database',
-            'lithology_rows': len(tables.get('LITHOLOGY', []))}
+            'lithology_rows': len(tables.get('LITHOLOGY', [])),
+            'lithology': [{'top_ft': num(r['LithTopDepth']), 'bottom_ft': num(r['LithBottomDepth']), 'description': r['LithDescription'].strip()} for r in tables.get('LITHOLOGY', [])]}
 
 
 def build():
@@ -248,6 +249,16 @@ def build():
     for key, meta in sorted(stations.items()):
         if meta['kind'] == 'river':
             s = usgs[key.split(':')[1]]; gauges[key] = {'name': s['name'], 'surface_unit': units.at([s['lon'], s['lat']])}
+    # What is mapped at each station's coordinates. Extents are the display-simplified ones (about 150 m).
+    def aquifers_at(point):
+        return sorted({(f['properties']['aquifer'], f['properties']['extent']) for f in aquifers if inside(point, f['geometry'])})
+    stations_at = {}
+    catalog = ROOT/'data/normalized/regional-analytics/catalog.json'
+    for key, site in sorted(json.loads(catalog.read_text())['sites'].items()) if catalog.exists() else []:
+        point = site.get('coordinates')
+        if not point or any(v is None for v in point) or not (BOX[0] <= point[0] <= BOX[2] and BOX[1] <= point[1] <= BOX[3]):
+            continue
+        stations_at[key] = {'surface_unit': units.at(point), 'aquifer_extents': [{'aquifer': a, 'extent': e} for a, e in aquifers_at(point)]}
     figures = []
     (ROOT/'app/geology').mkdir(parents=True, exist_ok=True)
     for s in SECTIONS:
@@ -266,6 +277,7 @@ def build():
            'faults': {'features': len(faults), 'by_type': dict(Counter(f['properties']['fault_type'] for f in faults)), 'publisher': 'Geologic Atlas of Texas (Bureau of Economic Geology, 1:250,000 sheets) as digitized and served by TWDB',
                       'limit': 'a mapped fault trace at the surface; it does not show whether water moves along or across the fault'},
            'surface_units': {'features': len(surface), 'by_period': dict(Counter(f['properties']['period'] for f in surface)), 'processing': 'clipped and simplified to about 300 m for display; station lookups use the unsimplified captured polygons'},
+           'stations': stations_at, 'station_basis': 'Surface unit from the unsimplified Geologic Atlas polygons; aquifer extents from the TWDB polygons simplified to about 150 m, so a point near a boundary may fall on the wrong side. Being on an extent does not connect a station to that aquifer.',
            'wells': wells, 'well_summary': dict(Counter(w['interval_status'] for w in wells.values())), 'river_gauges': gauges,
            'sections': figures, 'relationships': [{'source': n, 'url': sources[n]['url'], 'subject': s, 'quote': q} for n, s, q in RELATIONSHIPS],
            'linked_not_reproduced': [{'title': 'TWDB Report 346, Paleozoic aquifers of central Texas (1996): Llano Uplift sections, figures 3–7', 'url': sources['twdb-r346-paleozoic-aquifers-central-texas-pdf']['url']},

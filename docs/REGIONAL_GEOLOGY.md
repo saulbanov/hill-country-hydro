@@ -38,6 +38,21 @@ rock. It is often a different unit from the aquifer: well 5750108 is assigned to
 Ellenburger-San Saba aquifer with an open hole from 112 to 360 ft, and the rock mapped at the
 surface there is Cretaceous Hensell Sand. The surface polygon never sets or changes an assignment.
 
+## What changes with the selected station
+
+The geology panel follows the station chosen on either map. For each of the 445 catalogued
+stations with coordinates inside the pilot rectangle the tool looks up the surface rock unit (from
+the unsimplified atlas polygons) and every TWDB aquifer extent that covers the point (from the
+extents simplified to about 150 m, so a point near a boundary may fall on the wrong side). The
+panel also says whether a reproduced section crosses the station's watershed: figure 112 is tagged
+to the Pedernales, and its section line is not captured as geometry, so no distance is given.
+
+For a well the panel draws a depth diagram from that well's own Groundwater Database report: the
+driller's log bands with their recorded descriptions, casing rows, any screen or open interval,
+total depth, and the latest saved water level from the measurement record. Nothing in the diagram
+is inferred; a well with no completion rows shows only what was recorded. Being on an aquifer's
+mapped extent does not connect a station to that aquifer.
+
 ## Sections
 
 Two published USGS figures are reproduced unaltered from the captured files:
