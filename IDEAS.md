@@ -7,9 +7,9 @@ the data it needs so it can be checked against the record described in the syste
 new data layer, especially assuming I can get historical data."
 
 The record today: 68 flow histories (Onion Creek at US 183 from 1924), 126 non-flow daily series (stage,
-lake elevation, precipitation, well depth, water temperature), 22 wells with full records (J-17 from 1932),
+lake elevation, precipitation, well depth, water temperature), 99 captured well histories (90 selected live wells; J-17 from 1932),
 ten lakes with full records (Lake Austin from 1940), the Edwards Aquifer Authority's wells and rain gauges
-(history arriving slowly), NWS alerts and flood categories, and per-station event ledgers.
+(well detail records and two conditions-page spring histories acquired; rain history unavailable), NWS alerts and flood categories, and per-station event ledgers.
 
 ## Reporting products that could run on today's data
 
@@ -32,7 +32,7 @@ ten lakes with full records (Lake Austin from 1940), the Edwards Aquifer Authori
 | **Urban flashiness** | Rise-and-fall speed of Walnut, Shoal, Williamson across the decades Austin grew | the Austin-tier daily means and instantaneous windows | Needs the station history (rebuilds, channel work) alongside. |
 | **Return periods** | Flood-frequency estimates for peaks at long-record stations | annual peak series from the daily or instantaneous records | State the method; expect it to be contested, which is the point. |
 | **First-dry-day tracker** | The date each creek first reads zero each year, and how it moves | daily CSVs | Simple, visual, and tied to the dry index. |
-| **Well recovery times** | How long after a wet month a well regains a foot | the 22 full well records + rain | Per aquifer; Trinity and Edwards behave differently. |
+| **Well recovery times** | How long after a wet month a well regains a foot | the captured TWDB well records + rain | Per aquifer; Trinity and Edwards behave differently. |
 
 ## Infrastructure products
 
@@ -47,7 +47,7 @@ ten lakes with full records (Lake Austin from 1940), the Edwards Aquifer Authori
 - USGS daily values stay provisional for months; ratings get revised; a number can change after it is cited.
 - Daily means hide peaks; flood stories must use the instantaneous captures.
 - Stations move and get rebuilt; a long trend needs the station's own history read from USGS before it is trusted.
-- The EAA server throttles bulk pulls, so its history arrives over weeks, not hours.
+- EAA well detail pages carry daily-high histories; the CSV endpoint refused requests. Rain inventory entries do not establish acquired rainfall records. See the generated regional coverage audit for actual numeric coverage.
 - Nothing here measures bacteria or safety. A lens that claims either must bring its own evidence.
 
 ## If only one thing gets built

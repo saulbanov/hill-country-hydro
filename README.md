@@ -128,3 +128,17 @@ python3 tools/package_creek_site.py --site-root ../hill-country-hydro-site
 This copies public outputs only and does not deploy. Publishing uses the existing Sites
 identity and its normal workflow. The new map uses the public USGS basemap, with symbolic
 localized strokes and a visible saved-data cutoff.
+
+## Regional analytics
+
+The [regional analytic contract](docs/REGIONAL_ANALYTICS.md) extends saved-source normalization
+to rain, rivers, springs, groundwater and reservoirs. Its [coverage report](docs/REGIONAL_COVERAGE.md)
+distinguishes numeric observations from inventory entries and absent archives.
+
+```sh
+python3 tools/regional_normalize.py
+python3 tools/regional_analytics.py
+```
+
+These commands are offline and manual. The existing creek output, water bundle and daily run
+remain unchanged. Other consumers use `tools.regional_analytics.Reader`.

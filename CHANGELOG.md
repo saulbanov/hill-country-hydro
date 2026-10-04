@@ -41,3 +41,9 @@
 
 ## Daily runs
 - 20261002: stations 218 (126 with a reading within an hour), wells 127, lakes 10, EAA wells 69, EAA rain gauges 85, Hydromet sites 407; EAA critical period: San Antonio Pool implied Stage 3 (J-17 10-day 639.0 ft, Comal 143 cfs, San Marcos 92 cfs), EAA states 35%, agree; Uvalde stable, agree; Hydromet: 407 sites in the feed, 393 fresh within an hour, 67 windows refreshed, no refusals; failures: EAA per-site downloads refused 8 in a row (HTTP 500), stopped as designed; the first bundle of the run carried the previous day's USGS values until `monitor.py readings` was added and the bundle republished.
+
+## 2026-10-03 — regional analytic contract
+
+Added `regional-measurements/v1` offline adapters and a read-only reader for regional flow,
+rain, well and reservoir records. Added source/coverage audits and sampling-compatible
+comparisons. `creek-measurements/v1` and water-state schema 1 are unchanged.
