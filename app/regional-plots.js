@@ -69,6 +69,29 @@ function together(){
   el.onmouseleave=()=>{cursor.hidden=true;label.textContent='';};
 }
 
+/* ---------- this storm against earlier floods ---------- */
+let floods=null;
+function floodChart(g){
+  const W=420,H=170,l=52,r=10,t=12,b=22,rows=g.annual_peaks.filter(p=>p[1]!=null),storm=g.storm_reading?.value;
+  const years=rows.map(p=>+p[0].slice(0,4)),y0=Math.min(...years),y1=Math.max(...years,2026),vals=rows.map(p=>p[1]).concat(storm?[storm]:[]);
+  const min=Math.max(1,Math.min(...vals.filter(v=>v>0))),max=Math.max(...vals),f=v=>Math.log10(Math.max(v,min)),x=yr=>l+(yr-y0)/(y1-y0||1)*(W-l-r),y=v=>H-b-(f(v)-f(min))/((f(max)-f(min))||1)*(H-t-b);
+  const sticks=rows.map(p=>`<path d="M${x(+p[0].slice(0,4)).toFixed(1)},${H-b}V${y(p[1]).toFixed(1)}" stroke="${p[2].length?'#7fa7ab':'#176a74'}" stroke-width="1.6"><title>${p[0]}: ${num(p[1])} cfs${p[2].length?' · code '+p[2].join(','):''}</title></path>`).join('');
+  const ticks=[1,10,100,1000,10000,100000,1000000].filter(v=>v>=min&&v<=max).map(v=>`<text x="${l-5}" y="${(y(v)+3).toFixed(1)}" text-anchor="end">${num(v)}</text><path d="M${l},${y(v).toFixed(1)}H${W-r}" stroke="#d9dfd3" stroke-width=".6"/>`).join('');
+  const yrs=[[y0,'start'],[Math.round((y0+y1)/20)*10,'middle'],[y1,'end']].map(([v,k])=>`<text x="${x(v).toFixed(1)}" y="${H-6}" text-anchor="${k}">${v}</text>`).join('');
+  const line=storm?`<path d="M${l},${y(storm).toFixed(1)}H${W-r}" stroke="#b36234" stroke-width="1.4" stroke-dasharray="5 3"/><text x="${l+4}" y="${(y(storm)-5).toFixed(1)}" fill="#8a4a22" font-weight="600" style="paint-order:stroke;stroke:#fffdf6;stroke-width:3px">this storm: ${num(storm)} cfs</text>`:'';
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Published annual peaks at this gauge with this storm’s largest saved reading">${ticks}${sticks}${line}${yrs}</svg>`;
+}
+function renderFloods(){
+  const el=$('#flood-cards');if(!el)return;$('#floods').hidden=!floods;if(!floods)return;
+  const list=Object.entries(floods.gauges).filter(([,g])=>basin==='all'||g.basin===basin);
+  if(!list.length){el.innerHTML='<p class="gap">No pilot river gauge lies in these subbasins, so there is no flood record to compare here.</p>';return;}
+  el.innerHTML=list.map(([id,g])=>{const p=g.placement,sr=g.storm_reading,codes=[...new Set(g.annual_peaks.flatMap(x=>x[2]))];
+    const lead=p.available?`<p class="flood-lead"><b>${num(p.larger)} of ${num(p.published_peaks)}</b> published annual peaks here (${p.first_year}–${p.last_year}) were larger than this storm’s largest saved reading, <b>${num(sr.value)} cfs</b> on ${esc(when(sr.at))}. The largest published peak is ${num(p.largest_published)} cfs.</p>`:`<p class="gap">${esc(p.reason)}</p>`;
+    const ev=g.daily_events.available?`<details><summary>Ten largest daily means in this gauge’s record</summary><p class="meta">${esc(g.daily_events.rule)}. Record ${esc(g.daily_events.first)} to ${esc(g.daily_events.last)}. This storm’s daily means are ${esc(g.storm_daily_means)}.</p><div class="table-wrap"><table class="slim"><thead><tr><th>Date</th><th>Daily mean</th><th>Three days before</th><th>Days at or above half the peak, after</th></tr></thead><tbody>${g.daily_events.events.map(e=>`<tr><td>${esc(e.date)}</td><td>${num(e.daily_mean_cfs)} cfs</td><td>${e.three_days_before_cfs==null?'no value':num(e.three_days_before_cfs)+' cfs'}</td><td>${e.days_at_or_above_half_peak_after==null?'gap in record':e.days_at_or_above_half_peak_after}</td></tr>`).join('')}</tbody></table></div></details>`:'';
+    return `<article class="flood"><h3>${esc(g.name.replace(', TX',''))}</h3>${lead}${floodChart(g)}<p class="meta">One stick per water year: the instantaneous annual peak USGS published.${codes.length?' Lighter sticks carry a USGS code: '+codes.map(c=>`${esc(c)} = ${esc(g.code_meanings.peak_cd[c]||'see source')}`).join('; ')+'.':''} The storm’s true peak can exceed its largest saved reading, and USGS has not yet published this water year’s peak. <a href="${esc(g.annual_source.url)}" target="_blank" rel="noopener">USGS peak file ↗</a></p>${ev}</article>`;}).join('')+
+    `<p class="meta flood-foot">${Object.entries(floods.pair_lags).map(([k,v])=>{const [a,b]=k.split('>'),m=v.filter(x=>x.lag_days!=null);return `${esc(shortName(floods.gauges[b].name))}: ${m.length} of its ${v.length} largest daily-mean events have one matching event at ${esc(shortName(floods.gauges[a].name))} within three days; the downstream peak date minus the upstream one was ${[...new Set(m.map(x=>x.lag_days))].sort((p,q)=>p-q).join(', ')} days.`;}).join(' ')} Dates only: daily values cannot resolve hours. ${floods.limits.map(esc).join(' ')}</p>`;
+}
+
 /* ---------- the long record ---------- */
 const dayIndex=(start,iso)=>Math.round((Date.parse(iso+'T00:00:00Z')-Date.parse(start+'T00:00:00Z'))/DAY);
 const isoAt=(start,i)=>new Date(Date.parse(start+'T00:00:00Z')+i*DAY).toISOString().slice(0,10);
@@ -172,5 +195,5 @@ window.initGeology=async()=>{try{const r=await fetch('regional-geology.json',{ca
   $('#geo-gaps').innerHTML='<h3>What is not established</h3><ul>'+geology.evidence_gaps.map(g=>`<li>${esc(g)}</li>`).join('')+`<li>Outcrop check: ${esc(cm.summary)}.</li>`+geology.limits.map(g=>`<li>${esc(g)}</li>`).join('')+'</ul>';
 };
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{together();if(hist.doc)renderHistory();},200);});
-window.regionalHooks={afterRender:together,detailExtra:item=>wellEvidence(item)+(historyIndex?.stations[item.id]?.file?`<p><button class="open-history" data-history="${esc(item.id)}">Open this station’s full record ↓</button></p>`:''),bindDetail:()=>document.querySelectorAll('[data-history]').forEach(b=>b.onclick=()=>openHistory(b.dataset.history,true)),
-  afterBoot:async()=>{try{const r=await fetch('history/index.json',{cache:'no-cache'});if(r.ok)historyIndex=await r.json();}catch(e){}initHistory();if(window.initGeology)await window.initGeology();render();}};
+window.regionalHooks={afterRender:()=>{together();renderFloods();},detailExtra:item=>wellEvidence(item)+(historyIndex?.stations[item.id]?.file?`<p><button class="open-history" data-history="${esc(item.id)}">Open this station’s full record ↓</button></p>`:''),bindDetail:()=>document.querySelectorAll('[data-history]').forEach(b=>b.onclick=()=>openHistory(b.dataset.history,true)),
+  afterBoot:async()=>{try{const r=await fetch('history/index.json',{cache:'no-cache'});if(r.ok)historyIndex=await r.json();}catch(e){}try{const r=await fetch('regional-events.json',{cache:'no-cache'});if(r.ok)floods=await r.json();}catch(e){}initHistory();if(window.initGeology)await window.initGeology();render();}};

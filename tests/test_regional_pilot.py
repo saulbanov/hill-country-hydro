@@ -162,6 +162,18 @@ class HistoryPartitionTests(unittest.TestCase):
                         self.assertNotIn('years', s)
 
 
+class EarlierFloodTests(unittest.TestCase):
+    def test_public_artifact_keeps_statistics_apart(self):
+        doc = json.loads((APP/'regional-events.json').read_text())
+        self.assertEqual(len(doc['gauges']), 4)
+        junction = doc['gauges']['USGS:08150000']
+        self.assertEqual(junction['storm_reading']['statistic'], 'instantaneous')
+        self.assertEqual((junction['placement']['larger'], junction['placement']['published_peaks']), (31, 105))
+        self.assertIn('not in the saved record yet', junction['storm_daily_means'])
+        self.assertTrue(all(g['daily_events']['events'][0]['date'] <= g['last_daily_mean'] for g in doc['gauges'].values()))
+
+
+
 class GeologyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

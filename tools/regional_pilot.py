@@ -6,12 +6,14 @@ try:
     from .regional_analytics import Reader,exact_day,change,rank,at_or_before
     from .creek_normalize import stamp
     from .regional_geography import basin_at,association,downstream_route
+    from . import regional_events as events
 except ImportError:
     from regional_analytics import Reader,exact_day,change,rank,at_or_before
     from creek_normalize import stamp
     from regional_geography import basin_at,association,downstream_route
+    import regional_events as events
 ROOT=Path(__file__).resolve().parents[1]
-INTEGRATED='9124fd0d5780f3925b1c510648a84cc7388a01b2'
+INTEGRATED='646e045a508062952cf141702819b733ed8aeeb7'
 RIVERS=['08150000','08151500','08152900','08153500']
 # Receiving reservoirs are set only from the directed NHD route walk recorded with each gauge association.
 BASINS={'Llano':{'surface_hucs':['12090202','12090203','12090204'],'receiving_reservoir':'TWDB-lake:lyndon-b-johnson','receiving_basis':'first reference waterbody on the captured NHD route below both Llano gauges'},
@@ -43,13 +45,15 @@ def rain_aligned(r,cat,key,t0,cutoff):
     return out
 
 
-def build():
+def build(rain_at=RAIN_AT,storm_daily_end=None):
+    """The storm window follows the store's cutoff; `storm_daily_end` defaults to the last whole date before it."""
     subprocess.run(['git','merge-base','--is-ancestor',INTEGRATED,'origin/main'],cwd=ROOT,check=True)
     r=Reader(ROOT/'data/normalized/regional-analytics');cat=r.catalog
     refs=json.loads((ROOT/'data/normalized/regional-analytics/references.json').read_text())
     channels=json.loads((ROOT/'app/regional-channels.geojson').read_text())['features'];basins=json.loads((ROOT/'app/regional-basins.geojson').read_text())['features'];lakes=json.loads((ROOT/'app/regional-lakes.geojson').read_text())['features']
     window=json.loads((ROOT/'data/model/storms/2026-09-30.json').read_text())['window'];start=stamp(window['t0']);end=stamp(cat['cutoff'])
     sources={};items=[];associations={}
+    storm_end=storm_daily_end or str(stamp(cat['cutoff']).date()-dt.timedelta(days=1))
     def public(obs):
         if not obs:return None
         src=cat['sources'][obs['source_id']];sources[obs['source_id']]={k:src.get(k) for k in ('url','sha256','retrieved_at','provenance_status')}
@@ -84,7 +88,7 @@ def build():
         sid,why=r.choose(key,'rain','rolling_24h','Hydromet')
         if not sid:continue
         rows,recent=series(sid,'2026-09-01')
-        for view,at in [('storm',RAIN_AT),('seasonal',SEASON_AT)]:
+        for view,at in [('storm',rain_at),('seasonal',SEASON_AT)]:
             obs=at_or_before(rows,at)
             item['views'][view]={'observation':public(obs),'basis':'provider rolling 24-hour rainfall; end at or up to 30 minutes before shared selection','selected_at':at,'event_total':None,'event_total_reason':'native historical increment boundaries not certified; overlapping rolling totals never added'}
             item['chart'][view]=chart(recent);item['series'][view]={'id':sid,'selection':why}
@@ -101,7 +105,7 @@ def build():
             candidates=[s for s in cat['series'].values() if s['site_key']==key and s['quantity']=='groundwater_depth' and s['statistic']=='daily_high' and not s['original_series_id'].startswith('recent:')]
             sid=candidates[0]['series_id'] if len(candidates)==1 else None;stat='daily_high';why='single saved history daily-high series; recent feed kept separate'
         rows,recent=series(sid,'2026-09-01')
-        for view,first,last in [('seasonal','2026-09-01',DAY),('storm','2026-09-28','2026-10-02')]:
+        for view,first,last in [('seasonal','2026-09-01',DAY),('storm','2026-09-28',storm_end)]:
             a=exact_day(rows,first) if stat=='daily_high' else at_or_before(rows,first+'T12:00:00Z')
             b=exact_day(rows,last) if stat=='daily_high' else at_or_before(rows,last+'T12:00:00Z')
             item['views'][view]={'observation':public(b),'start':public(a),'basis':'daily high' if stat=='daily_high' else '7 am Central point observation, maximum age 30 minutes','change':change(a,b),'from_date':first,'to_date':last,'continuity':'well location within surface watershed only; no aquifer-to-river connection inferred; screen/continuity not certified'}
@@ -120,7 +124,7 @@ def build():
         identity=cat['sites'].get(hyd_dams.get(slug),{})
         item['coordinates']=identity.get('coordinates');item['location_note']=clean(identity.get('name'));item['geometry_available']=bool(geo)
         sid,why=r.choose(key,'storage','daily_report','TWDB');rows,recent=series(sid,'2026-09-01');psid,_=r.choose(key,'percent_full','daily_report','TWDB');prows=r.rows(psid) if psid else []
-        for view,first,last in [('seasonal','2026-09-01',DAY),('storm','2026-09-28','2026-10-02')]:
+        for view,first,last in [('seasonal','2026-09-01',DAY),('storm','2026-09-28',storm_end)]:
             a=exact_day(rows,first);b=exact_day(rows,last)
             item['views'][view]={'observation':public(b),'start':public(a),'percent_full':public(exact_day(prows,last)),'basis':'date-only TWDB storage report; not measured inflow','change':change(a,b),'from_date':first,'to_date':last,'causal_limit':'storage reflects inflows, releases, withdrawals and other operations; these readings do not attribute the change'}
             item['chart'][view]=chart([x for x in recent if x['time']['date']<=last]);item['series'][view]={'id':sid,'selection':why}
@@ -135,11 +139,23 @@ def build():
         sid,why=r.choose(key,'discharge','daily_mean','USGS' if key.startswith('USGS:') else 'EAA');rows,recent=series(sid,'2026-09-01');a=exact_day(rows,'2026-09-01');b=exact_day(rows,DAY)
         springs.append({'id':key,'name':site['name'],'observation':public(b),'start':public(a),'change':change(a,b),'series':sid,'chart':chart([x for x in recent if x['time']['date']<=DAY]),'meaning':'separate regional context; not a spring in the Llano or Pedernales pilot basins'})
     r.close()
-    result={'schema_version':'regional-pilot/v1','analytic_schema':cat['schema_version'],'analytic_integration_commit':INTEGRATED,'normalized_sha256':cat['observations']['sha256'],'publication_date':str(dt.date.today()),'saved_data_cutoff':cat['cutoff'],'storm':{'id':'2026-09-30','t0':window['t0'],'through':cat['cutoff'],'rain_at':RAIN_AT,'daily_start':'2026-09-28','daily_end':'2026-10-02'},'seasonal':{'date':DAY,'start':'2026-09-01','rain_at':SEASON_AT,'reference_years':[2006,2025]},'items':items,'regional_springs':springs,'sources':sources,'basins':BASINS,'routes':{k:v.get('downstream_route') for k,v in associations.items()},'coverage':{'inventory_wells_in_pilot':sum(x['kind']=='well' for x in items),'local_springs':0,'storm_total_rain':'unavailable: interval boundaries unverified','reach_estimates':'none; gauge observations only'},'geometry_hashes':{n:hashlib.sha256((ROOT/'app'/n).read_bytes()).hexdigest() for n in ['regional-channels.geojson','regional-basins.geojson','regional-lakes.geojson']}}
+    result={'schema_version':'regional-pilot/v1','analytic_schema':cat['schema_version'],'analytic_integration_commit':INTEGRATED,'normalized_sha256':cat['observations']['sha256'],'publication_date':str(dt.date.today()),'saved_data_cutoff':cat['cutoff'],'storm':{'id':'2026-09-30','t0':window['t0'],'through':cat['cutoff'],'rain_at':rain_at,'daily_start':'2026-09-28','daily_end':storm_end},'seasonal':{'date':DAY,'start':'2026-09-01','rain_at':SEASON_AT,'reference_years':[2006,2025]},'items':items,'regional_springs':springs,'sources':sources,'basins':BASINS,'routes':{k:v.get('downstream_route') for k,v in associations.items()},'coverage':{'inventory_wells_in_pilot':sum(x['kind']=='well' for x in items),'local_springs':0,'storm_total_rain':'unavailable: interval boundaries unverified','reach_estimates':'none; gauge observations only'},'geometry_hashes':{n:hashlib.sha256((ROOT/'app'/n).read_bytes()).hexdigest() for n in ['regional-channels.geojson','regional-basins.geojson','regional-lakes.geojson']}}
     (ROOT/'app/regional-snapshot.json').write_text(json.dumps(result,separators=(',',':'),allow_nan=False)+'\n')
     (ROOT/'data/model/regional-gauge-associations.json').write_text(json.dumps(associations,indent=2)+'\n')
+    earlier=json.loads((ROOT/'data/model/regional-events.json').read_text());floods={}
+    for x in items:
+        if x['kind']!='river':continue
+        g=earlier['gauges'][x['id']];peak=x['views']['storm']['observation']
+        floods[x['id']]={'name':x['name'],'basin':x['basin'],'storm_reading':{'value':peak['value'],'at':peak['time']['instant'],'statistic':peak['time']['statistic'],'approval':peak['approval']} if peak else None,
+            'placement':events.place_among_peaks(peak['value'] if peak else None,g['annual_peaks']),
+            'annual_peaks':[[r['date'],r['peak_cfs'],r['peak_codes'],r['gage_height_codes']] for r in g['annual_peaks']['rows']],'code_meanings':g['annual_peaks']['code_meanings'],'annual_source':g['annual_peaks']['source'],
+            'daily_events':g['daily_events'],'last_daily_mean':g['last_daily_mean'],
+            'storm_daily_means':'in the saved record' if peak and g['last_daily_mean'] and g['last_daily_mean']>=peak['time']['instant'][:10] else f"not in the saved record yet: the last daily mean is {g['last_daily_mean']}, before the storm’s largest saved reading"}
+    (ROOT/'app/regional-events.json').write_text(json.dumps({'schema_version':'regional-events-public/v1','cutoff':cat['cutoff'],'gauges':floods,'pair_lags':earlier['pair_lags'],'limits':earlier['limits'],'history_sha256':earlier['history_sha256']},separators=(',',':'),allow_nan=False)+'\n')
     print('Pilot items',len(items),'springs',len(springs),'associations',associations)
     print('View numeric counts',{view:{kind:sum(x['kind']==kind and bool(x['views'][view]['observation']) for x in items) for kind in ['river','rain','well','reservoir']} for view in ['storm','seasonal']})
     return result
 
-if __name__=='__main__':build()
+if __name__=='__main__':
+    import argparse
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--rain-at',default=RAIN_AT);p.add_argument('--storm-daily-end');a=p.parse_args();build(a.rain_at,a.storm_daily_end)

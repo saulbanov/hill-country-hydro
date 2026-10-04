@@ -14,7 +14,7 @@ from urllib.parse import urljoin, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'appgprj_6ac12765acb88191a74ce6c2570385f5'
 APP = ['index.html', 'regional.js', 'regional-plots.js', 'regional.css', 'regional-snapshot.json', 'regional-channels.geojson', 'regional-basins.geojson',
-       'regional-lakes.geojson', 'regional-aquifers.geojson', 'regional-faults.geojson', 'regional-surface-geology.geojson', 'regional-geology.json',
+       'regional-lakes.geojson', 'regional-aquifers.geojson', 'regional-faults.geojson', 'regional-surface-geology.geojson', 'regional-geology.json', 'regional-events.json',
        'austin.html', 'creeks.js', 'creeks.css', 'creek-icon.svg', 'creek-snapshot.json', 'austin-creeks.geojson', 'ledger.html', 'map.js']
 OTHER = ['dist/water-state.json', 'data/model/storms/2026-09-30.json', 'data/model/storms/2026-07-11.json', 'docs/CREEK_ANALYTICS.md', 'docs/CREEK_COVERAGE.md',
          'data/model/creek-normalization-audit.json', 'data/model/creek-gauge-associations.json', 'docs/REGIONAL_ANALYTICS.md', 'docs/REGIONAL_COVERAGE.md',
