@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Austin creeks after the October storm · Central Texas Water Ledger</title>
+<meta name="description" content="A saved October 2026 storm snapshot: measured creek flow beside each gauge’s seasonal daily-flow reference, with sources and gaps.">
+<link rel="icon" href="creek-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="creeks.css">
+</head>
+<body>
+<header class="masthead"><a class="wordmark" href="index.html">CENTRAL TEXAS <strong>WATER LEDGER</strong></a><a href="ledger.html">Explore all water gauges ↗</a></header>
+<main>
+<section class="intro"><p class="eyebrow">AUSTIN CREEKS / OCTOBER 2026 / SAVED SNAPSHOT</p><h1>What did the storm do<br class="desktop-break"> to Austin’s creeks?</h1><p class="dek">Thicker, darker creek strokes show more flow above a usual day’s flow at that gauge. Dashed stretches have no comparison.</p></section>
+<section class="explorer" aria-label="Creek measurements">
+<div class="toolbar"><div class="view-buttons" role="group" aria-label="Choose a time view"><button data-view="peak" aria-pressed="true">Largest saved readings</button><button data-view="before" aria-pressed="false">Oct 1 · 7 am</button><button data-view="after" aria-pressed="false">Oct 2 · 7 am</button></div><label class="check"><input id="gauges" type="checkbox"> Show gauge points</label></div>
+<p id="time-note" class="time-note" aria-live="polite">Loading the dated measurements…</p>
+<div class="map-grid"><div class="map-shell"><div id="map" aria-label="Named Austin creeks and gauge measurements"></div><div class="map-caption">Short strokes locate gauge readings. Stroke size is symbolic, not channel width or inundation.</div></div><aside class="readings"><h2>At the gauges</h2><p class="mini">Difference from that gauge’s seasonal median daily flow</p><div id="creek-list"></div></aside></div>
+<div class="legend" id="legend" aria-label="Line thickness legend"></div>
+<p class="cutoff" id="cutoff"></p>
+</section>
+<section class="details-grid"><article id="detail" tabindex="-1"><p class="eyebrow">READ THE RECORD</p><h2>Select a creek</h2><p>Choose a named stroke or a gauge in the list to see its measurements, timing, history and sources.</p></article><aside class="method"><p class="eyebrow">WHAT “USUAL” MEANS</p><h2>A daily reference,<br>from the same gauge</h2><p>The median of daily flow for September 16–October 16 in 2006–2025. The storm readings are instantaneous. This contrast shows flow above a usual day; it does not rank how rare an instantaneous peak was.</p><p>Each stroke sits at a named gauge crossing. The rest of the creek stays dashed because a point measurement does not establish flow along the whole channel.</p><p>Blunn has measured City flow, but no verified daily reference on this scale. A missing comparison does not mean zero water.</p><details><summary>Methods, coverage &amp; limits</summary><p>One primary USGS sensor per gauge. Repeated captures retain conflicting values; the latest retrieval is shown and flagged. Snapshots use prior readings at most 30 minutes old. Gaps are not interpolated.</p><p>Widths use five bands and stop increasing above 500 cfs of excess flow. Exact values remain in the list. A cfs is one cubic foot per second. Colors describe a measurement comparison, not flood severity or safety.</p><p><a href="../docs/CREEK_ANALYTICS.md">Analytic contract</a> · <a href="../docs/CREEK_COVERAGE.md">Source audit</a> · <a href="creek-snapshot.json">Snapshot data</a></p></details></aside></section>
+</main>
+<footer><span>Measurements: USGS · LCRA Hydromet / City of Austin. Creek geometry: © OpenStreetMap contributors, ODbL.</span><a href="ledger.html">Open the original water ledger</a></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="creeks.js"></script>
+</body></html>

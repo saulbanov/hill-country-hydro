@@ -32,6 +32,9 @@ reading means for a person.
   (`regional_inventory.py`, `station_lists.py`), context (`hydro_context.py`, `event_ledger.py`,
   `reach_geometry.py`), export (`cloud_capture_export.py`, `austin_capture_manifest.py`), and the
   publisher (`publish_bundle.py` → `dist/water-state.json`).
+- Regional pilot: `regional_normalize.py` → `regional_analytics.py` (compact store), `regional_history.py` (full records, continuity,
+  fixed baseline), `regional_geography.py`, `regional_geology.py`, then the consumer `regional_pilot.py`, `regional_history_package.py`
+  and `package_regional_site.py`. Contracts in `docs/REGIONAL_*.md`. All offline.
 - `data/` inventories, `history/` daily CSVs, `captures/` versioned gzips, `model/` ledgers and manifests.
 - `app/` generated context files and the map page. `dist/` the bundle lenses read.
 - `tests/` unittest; run `python3 -m unittest discover -s tests` before any push.

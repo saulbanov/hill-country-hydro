@@ -37,7 +37,7 @@ SECTIONS = [
      'caption': 'In the Hill Country of south-central Texas, the southward-dipping Trinity aquifer is juxtaposed with the highly permeable Edwards aquifer as a result of faulting. The line of the hydrogeologic section is shown in figure 108.',
      'credit': 'U.S. Geological Survey, Ground Water Atlas of the United States, HA 730-E (Ryder, 1996), fig. 112; modified from Ashworth, J.B., 1983, Texas Department of Water Resources Report 273.',
      'relevance': 'Section C–C′ runs from Gillespie County through Kendall County into Bexar County and crosses the Pedernales River. Its vertical scale is greatly exaggerated and its potentiometric surface is dated 1975.',
-     'limits': 'A published interpretation from 1983 data. It is not a measurement of today’s water levels and it does not cross the Llano River watershed.'},
+     'limits': 'A published interpretation from a 1983 report, with a water-level surface dated 1975. It is not a measurement of today’s water levels and it does not cross the Llano River watershed.'},
     {'capture': 'usgs-ha730e-fig079', 'file': 'geology/usgs-ha730e-fig079.gif', 'figure': 'Figure 79', 'kind': 'published diagrammatic section, not to scale',
      'caption': 'A diagrammatic section through the Edwards-Trinity aquifer system shows how the three aquifers relate to each other and to contiguous rocks.',
      'credit': 'U.S. Geological Survey, Ground Water Atlas of the United States, HA 730-E (Ryder, 1996), fig. 79; modified from E.L. Kuniansky, U.S. Geological Survey, written communication, 1990.',
