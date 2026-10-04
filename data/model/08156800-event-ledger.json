@@ -3,13 +3,13 @@
   "source_csv": "data/history/08156800-00060-daily-mean.csv",
   "record": {
     "first_day": "1983-01-08",
-    "last_day": "2026-09-02",
-    "numeric_days": 15877,
+    "last_day": "2026-10-03",
+    "numeric_days": 15880,
     "zero_days": 7132,
     "median_daily_mean": 0.03
   },
   "event_definition": {
-    "high_threshold": 29.8,
+    "high_threshold": 29.9,
     "low_threshold": 0.84,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -7111,24 +7111,6 @@
       }
     },
     {
-      "start": "2020-06-20",
-      "end": "2020-06-21",
-      "end_reason": "fell_below_low_threshold",
-      "duration_days": 2,
-      "peak_date": "2020-06-20",
-      "peak_value": 29.8,
-      "rise_days": 1,
-      "recession_days": 1,
-      "mean_value": 15.525,
-      "has_provisional": false,
-      "water_year": 2020,
-      "peak_month": 6,
-      "antecedent_30_day": {
-        "days_available": 30,
-        "mean": 5.76
-      }
-    },
-    {
       "start": "2020-06-23",
       "end": "2020-06-24",
       "end_reason": "fell_below_low_threshold",
@@ -8261,6 +8243,24 @@
         "days_available": 30,
         "mean": 14.777
       }
+    },
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-03",
+      "end_reason": "record_ends_inside_event",
+      "duration_days": 3,
+      "peak_date": "2026-10-01",
+      "peak_value": 78.0,
+      "rise_days": 1,
+      "recession_days": 2,
+      "mean_value": 45.13,
+      "has_provisional": true,
+      "water_year": 2027,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 2,
+        "mean": 0.0
+      }
     }
   ],
   "summary": {
@@ -8302,13 +8302,14 @@
       "2017": 10,
       "2018": 10,
       "2019": 4,
-      "2020": 11,
+      "2020": 10,
       "2021": 8,
       "2022": 7,
       "2023": 12,
       "2024": 13,
       "2025": 8,
-      "2026": 10
+      "2026": 10,
+      "2027": 1
     },
     "median_duration_days": 3.0,
     "median_peak_value": 85.95,
@@ -8318,11 +8319,11 @@
       "3": 37,
       "4": 36,
       "5": 68,
-      "6": 55,
+      "6": 54,
       "7": 24,
       "8": 24,
       "9": 44,
-      "10": 46,
+      "10": 47,
       "11": 42,
       "12": 29
     },
