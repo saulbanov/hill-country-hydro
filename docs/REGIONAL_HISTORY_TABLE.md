@@ -1,6 +1,6 @@
 # Regional station histories
 
-Generated offline by `tools/regional_history.py audit`. Saved-data cutoff 2026-10-03T12:15:00Z. 4174181 original records in 549 series for 173 named stations.
+Generated offline by `tools/regional_history.py audit`. Saved-data cutoff 2026-10-03T12:15:00Z. 4444641 original records in 588 series for 179 named stations.
 Series with fewer than 30 values and the current-snapshot feeds are in the JSON report only. First and last are the first and last preserved values, not the first measurement ever made.
 
 
@@ -168,6 +168,34 @@ Series with fewer than 30 values and the current-snapshot feeds are in the JSON 
 | USGS:08153500 | river | discharge / daily_mean | 1939-05-04 | 2026-09-30 | 31927 | 0 | 0 |
 | USGS:08153500 | river | stage / instantaneous | 2026-09-29 | 2026-10-03 | 5 | 0 | 0 |
 | USGS:08153500 | river | stage / daily_mean | 1987-05-15 | 2026-09-30 | 13656 | 0 | 366 |
+| USGS:08154700 | river | discharge / daily_mean | 1978-07-18 | 2026-09-30 | 17607 | 0 | 0 |
+| USGS:08154700 | river | discharge / instantaneous | 2025-09-15 | 2026-10-03 | 14 | 0 | 360 |
+| USGS:08154700 | river | stage / daily_mean | 1997-03-06 | 2026-09-30 | 10621 | 0 | 34 |
+| USGS:08154700 | river | stage / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08155300 | river | discharge / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08155300 | river | discharge / daily_mean | 1977-02-01 | 2026-09-30 | 18139 | 0 | 0 |
+| USGS:08155300 | river | discharge / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08155300 | river | stage / instantaneous | 2026-05-11 | 2026-10-03 | 13 | 0 | 123 |
+| USGS:08155300 | river | stage / daily_mean | 1997-03-11 | 2026-09-30 | 9720 | 0 | 346 |
+| USGS:08155300 | river | stage / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08156800 | river | discharge / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08156800 | river | discharge / daily_mean | 1983-01-08 | 2026-09-02 | 15877 | 0 | 41 |
+| USGS:08156800 | river | discharge / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08156800 | river | stage / instantaneous | 2025-09-15 | 2026-10-03 | 14 | 0 | 360 |
+| USGS:08156800 | river | stage / instantaneous | 2026-07-29 | 2026-10-03 | 11 | 0 | 45 |
+| USGS:08158600 | river | discharge / instantaneous | 2026-09-29 | 2026-10-03 | 5 | 0 | 0 |
+| USGS:08158600 | river | discharge / daily_mean | 1966-05-27 | 2026-09-30 | 22042 | 0 | 0 |
+| USGS:08158600 | river | stage / instantaneous | 2026-09-29 | 2026-10-03 | 5 | 0 | 0 |
+| USGS:08158600 | river | stage / daily_mean | 1997-08-02 | 2026-09-30 | 10377 | 0 | 18 |
+| USGS:08158970 | river | discharge / instantaneous | 2025-09-15 | 2026-10-03 | 14 | 0 | 360 |
+| USGS:08158970 | river | discharge / daily_mean | 1975-09-11 | 2026-09-30 | 11016 | 20 | 7632 |
+| USGS:08158970 | river | stage / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08159000 | river | discharge / instantaneous | 2026-08-15 | 2026-10-03 | 4 | 0 | 46 |
+| USGS:08159000 | river | discharge / daily_mean | 1924-06-01 | 2026-09-30 | 20513 | 45 | 16824 |
+| USGS:08159000 | river | discharge / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
+| USGS:08159000 | river | stage / instantaneous | 2026-05-11 | 2026-10-03 | 6 | 0 | 94 |
+| USGS:08159000 | river | stage / daily_mean | 1997-02-12 | 2026-09-30 | 10296 | 0 | 138 |
+| USGS:08159000 | river | stage / instantaneous | 2026-09-13 | 2026-10-03 | 11 | 0 | 10 |
 | EAA:08168710 | spring | discharge / daily_mean | 1927-12-19 | 2026-10-02 | 36035 | 0 | 5 |
 | EAA:08170000 | spring | discharge / daily_mean | 1956-05-26 | 2026-10-02 | 25696 | 0 | 1 |
 | USGS:08155500 | spring | discharge / instantaneous | 2026-09-27 | 2026-10-03 | 7 | 0 | 0 |

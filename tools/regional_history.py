@@ -27,6 +27,8 @@ HALF_WINDOW = 15
 DAILY = ('daily_mean', 'daily_sum', 'daily_max', 'daily_min', 'unknown_daily', 'daily_report', 'daily_high',
          'daily_total_boundary_unverified')
 RIVERS = ['08150000', '08151500', '08152900', '08153500']
+# Austin creek gauges of the creek prototype; USGS places all six in HUC8 12090205.
+AUSTIN = ['08154700', '08155300', '08156800', '08158600', '08158970', '08159000']
 LAKES = ['buchanan', 'inks', 'lyndon-b-johnson', 'marble-falls', 'travis', 'austin']
 
 
@@ -47,6 +49,8 @@ def select(root=ROOT, analytics=None):
     out = {}
     for site in RIVERS:
         out['USGS:'+site] = {'kind': 'river', 'basis': 'pilot river gauge; USGS daily history manifest'}
+    for site in AUSTIN:
+        out['USGS:'+site] = {'kind': 'river', 'basin': 'Austin creeks', 'basis': 'Austin creek gauge of the creek prototype; USGS daily history manifest'}
     for slug in LAKES:
         out['TWDB-lake:'+slug] = {'kind': 'reservoir', 'basis': 'Highland Lakes chain; TWDB reservoir history capture'}
     for key, site in sorted(catalog['sites'].items()):

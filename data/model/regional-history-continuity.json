@@ -9,8 +9,8 @@
  ],
  "observations": {
   "path": "observations.sqlite",
-  "rows": 4174181,
-  "sha256": "d8e2566c0847132a91e7f84c7e214588092dd247c2191cba29c2a528a9062b90"
+  "rows": 4444641,
+  "sha256": "2b226cfb7023e80de10ba78f9d7638ea021d9d4c7fb65a2a3beafae5865d81e3"
  },
  "stations": {
   "USGS:08150000": {
@@ -28,6 +28,36 @@
   "USGS:08153500": {
    "kind": "river",
    "basis": "pilot river gauge; USGS daily history manifest"
+  },
+  "USGS:08154700": {
+   "kind": "river",
+   "basin": "Austin creeks",
+   "basis": "Austin creek gauge of the creek prototype; USGS daily history manifest"
+  },
+  "USGS:08155300": {
+   "kind": "river",
+   "basin": "Austin creeks",
+   "basis": "Austin creek gauge of the creek prototype; USGS daily history manifest"
+  },
+  "USGS:08156800": {
+   "kind": "river",
+   "basin": "Austin creeks",
+   "basis": "Austin creek gauge of the creek prototype; USGS daily history manifest"
+  },
+  "USGS:08158600": {
+   "kind": "river",
+   "basin": "Austin creeks",
+   "basis": "Austin creek gauge of the creek prototype; USGS daily history manifest"
+  },
+  "USGS:08158970": {
+   "kind": "river",
+   "basin": "Austin creeks",
+   "basis": "Austin creek gauge of the creek prototype; USGS daily history manifest"
+  },
+  "USGS:08159000": {
+   "kind": "river",
+   "basin": "Austin creeks",
+   "basis": "Austin creek gauge of the creek prototype; USGS daily history manifest"
   },
   "TWDB-lake:buchanan": {
    "kind": "reservoir",
@@ -1385,6 +1415,179 @@
     ]
    }
   },
+  "Hydromet:08154700:USGS:current:flow:flow": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 0,
+   "unavailable": 2,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": null,
+   "last": null,
+   "by_year": {},
+   "missing_years": [],
+   "gaps": [],
+   "daily": false
+  },
+  "Hydromet:08154700:USGS:current:stage:stage": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 0,
+   "unavailable": 2,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": null,
+   "last": null,
+   "by_year": {},
+   "missing_years": [],
+   "gaps": [],
+   "daily": false
+  },
+  "Hydromet:08155300:USGS:current:flow:flow": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 2,
+   "unavailable": 0,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": "2026-10-02",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 2,
+   "by_year": {
+    "2026": 2
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "Hydromet:08155300:USGS:current:stage:stage": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 2,
+   "unavailable": 0,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": "2026-10-02",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 2,
+   "by_year": {
+    "2026": 2
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
   "Hydromet:08155500:USGS:current:flow:flow": {
    "station": "USGS:08155500",
    "kind": "spring",
@@ -1456,6 +1659,280 @@
    "missing_years": [],
    "gaps": [],
    "daily": false
+  },
+  "Hydromet:08156800:USGS:current:flow:flow": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 2,
+   "unavailable": 0,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": "2026-10-02",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 2,
+   "by_year": {
+    "2026": 2
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "Hydromet:08156800:USGS:current:stage:stage": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 2,
+   "unavailable": 0,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": "2026-10-02",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 2,
+   "by_year": {
+    "2026": 2
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "Hydromet:08158600:USGS:current:flow:flow": {
+   "station": "USGS:08158600",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 0,
+   "unavailable": 2,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": null,
+   "last": null,
+   "by_year": {},
+   "missing_years": [],
+   "gaps": [],
+   "daily": false
+  },
+  "Hydromet:08158600:USGS:current:stage:stage": {
+   "station": "USGS:08158600",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 0,
+   "unavailable": 2,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": null,
+   "last": null,
+   "by_year": {},
+   "missing_years": [],
+   "gaps": [],
+   "daily": false
+  },
+  "Hydromet:08158970:USGS:current:flow:flow": {
+   "station": "USGS:08158970",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 2,
+   "unavailable": 0,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": "2026-10-02",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 2,
+   "by_year": {
+    "2026": 2
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "Hydromet:08158970:USGS:current:stage:stage": {
+   "station": "USGS:08158970",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "Hydromet",
+   "primary": false,
+   "records": 2,
+   "numeric": 2,
+   "unavailable": 0,
+   "statistics": [
+    "reported_point"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "provisional": 2
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2
+   },
+   "source_ids": [
+    "b407471278b38683b0b6f1bd",
+    "c25c9140a5ed661fcc714ee1"
+   ],
+   "first": "2026-10-02",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 2,
+   "by_year": {
+    "2026": 2
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
   },
   "Hydromet:1972:LCRA:current:rainfall1Day:rainfall1Day": {
    "station": "LCRA:1972",
@@ -53202,6 +53679,1186 @@
     ]
    }
   },
+  "USGS:08154700:82c75fb004f64d1c88462732a61eac03:00060": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 17607,
+   "numeric": 17607,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 17543,
+    "Provisional": 64
+   },
+   "qualified_records": 289,
+   "provenance": {
+    "verified_capture": 17607
+   },
+   "source_ids": [
+    "287d8e307b9a95630c172358"
+   ],
+   "first": "1978-07-18",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 17607,
+   "by_year": {
+    "1978": 167,
+    "1979": 365,
+    "1980": 366,
+    "1981": 365,
+    "1982": 365,
+    "1983": 365,
+    "1984": 366,
+    "1985": 365,
+    "1986": 365,
+    "1987": 365,
+    "1988": 366,
+    "1989": 365,
+    "1990": 365,
+    "1991": 365,
+    "1992": 366,
+    "1993": 365,
+    "1994": 365,
+    "1995": 365,
+    "1996": 366,
+    "1997": 365,
+    "1998": 365,
+    "1999": 365,
+    "2000": 366,
+    "2001": 365,
+    "2002": 365,
+    "2003": 365,
+    "2004": 366,
+    "2005": 365,
+    "2006": 365,
+    "2007": 365,
+    "2008": 366,
+    "2009": 365,
+    "2010": 365,
+    "2011": 365,
+    "2012": 366,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 273
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 1.0,
+   "provider_declared_span": {
+    "begin": "1978-07-18T05:00:00+00:00",
+    "end": "2026-09-29T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08154700:9cf321eed671456f9325c9817f130ff3:00060": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 3024,
+   "numeric": 3024,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 500,
+    "Provisional": 2524
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 3024
+   },
+   "source_ids": [
+    "0f010e5deb9e953594e2a450",
+    "1840a07fa7e68822f7d14cec",
+    "1b10f682cffa732c5da1acad",
+    "1c14b912f5b94672dfec3f86",
+    "8841c1b11c0191a5727379b3",
+    "8dc873b11ff550cc0a50a7e5",
+    "9ab5d570ce23ed3d6c5305d3",
+    "a085ed68de885d965ce163de",
+    "affc9f1898c3741c74db068a",
+    "bc6a694df93b5e1a1c5dd623",
+    "cd9763fa8d3c88857287eaae",
+    "d188850bbd16ebd3b1c9244e",
+    "d257ef4e171a5be24c7dc46e",
+    "d9c723c1087b030be3862f29",
+    "e1dfb61265db62f13714c8dc",
+    "ed6a613bcb054af475f28636",
+    "fc8036226c7bfbea6f4fb998"
+   ],
+   "first": "2025-09-15",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 14,
+   "by_year": {
+    "2025": 3,
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 2,
+   "missing_days_total": 370,
+   "gaps": [
+    {
+     "after": "2025-09-17",
+     "before": "2026-09-13",
+     "missing_days": 360
+    },
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-03T10:00:00+00:00",
+    "end": "2026-10-01T13:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2007-10-03, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08154700:a7c65c6fa5a746c69a8cb2b7ab8a6499:00065": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 10621,
+   "numeric": 10621,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 10557,
+    "Provisional": 64
+   },
+   "qualified_records": 110,
+   "provenance": {
+    "verified_capture": 10621
+   },
+   "source_ids": [
+    "03c844fa09d5e9eda612504a"
+   ],
+   "first": "1997-03-06",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 10621,
+   "by_year": {
+    "1997": 298,
+    "1998": 356,
+    "1999": 360,
+    "2000": 345,
+    "2001": 358,
+    "2002": 342,
+    "2003": 363,
+    "2004": 363,
+    "2005": 363,
+    "2006": 363,
+    "2007": 350,
+    "2008": 357,
+    "2009": 359,
+    "2010": 356,
+    "2011": 362,
+    "2012": 365,
+    "2013": 365,
+    "2014": 365,
+    "2015": 351,
+    "2016": 366,
+    "2017": 364,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 361,
+    "2024": 361,
+    "2025": 329,
+    "2026": 273
+   },
+   "missing_years": [],
+   "gap_count": 68,
+   "missing_days_total": 180,
+   "gaps": [
+    {
+     "after": "2025-09-20",
+     "before": "2025-10-25",
+     "missing_days": 34
+    },
+    {
+     "after": "2010-12-14",
+     "before": "2010-12-24",
+     "missing_days": 9
+    },
+    {
+     "after": "2000-10-03",
+     "before": "2000-10-11",
+     "missing_days": 7
+    },
+    {
+     "after": "2015-07-07",
+     "before": "2015-07-14",
+     "missing_days": 6
+    },
+    {
+     "after": "1998-03-26",
+     "before": "1998-04-01",
+     "missing_days": 5
+    },
+    {
+     "after": "2007-10-31",
+     "before": "2007-11-06",
+     "missing_days": 5
+    },
+    {
+     "after": "2002-06-10",
+     "before": "2002-06-15",
+     "missing_days": 4
+    },
+    {
+     "after": "2002-08-24",
+     "before": "2002-08-29",
+     "missing_days": 4
+    },
+    {
+     "after": "2015-07-24",
+     "before": "2015-07-29",
+     "missing_days": 4
+    },
+    {
+     "after": "2000-05-21",
+     "before": "2000-05-25",
+     "missing_days": 3
+    },
+    {
+     "after": "2001-12-16",
+     "before": "2001-12-20",
+     "missing_days": 3
+    },
+    {
+     "after": "2002-06-04",
+     "before": "2002-06-08",
+     "missing_days": 3
+    },
+    {
+     "after": "2002-06-23",
+     "before": "2002-06-27",
+     "missing_days": 3
+    },
+    {
+     "after": "2007-01-15",
+     "before": "2007-01-19",
+     "missing_days": 3
+    },
+    {
+     "after": "2008-01-13",
+     "before": "2008-01-17",
+     "missing_days": 3
+    },
+    {
+     "after": "2009-04-04",
+     "before": "2009-04-08",
+     "missing_days": 3
+    },
+    {
+     "after": "2015-07-17",
+     "before": "2015-07-21",
+     "missing_days": 3
+    },
+    {
+     "after": "1997-07-29",
+     "before": "1997-08-01",
+     "missing_days": 2
+    },
+    {
+     "after": "1998-10-25",
+     "before": "1998-10-28",
+     "missing_days": 2
+    },
+    {
+     "after": "1998-12-22",
+     "before": "1998-12-25",
+     "missing_days": 2
+    },
+    {
+     "after": "1999-02-21",
+     "before": "1999-02-24",
+     "missing_days": 2
+    },
+    {
+     "after": "2000-03-22",
+     "before": "2000-03-25",
+     "missing_days": 2
+    },
+    {
+     "after": "2000-07-27",
+     "before": "2000-07-30",
+     "missing_days": 2
+    },
+    {
+     "after": "2000-09-12",
+     "before": "2000-09-15",
+     "missing_days": 2
+    },
+    {
+     "after": "2000-12-11",
+     "before": "2000-12-14",
+     "missing_days": 2
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.9833,
+   "provider_declared_span": {
+    "begin": "1997-03-06T06:00:00+00:00",
+    "end": "2026-09-29T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08154700:bc162e02d808429f8767b0dfe90da10e:00065": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2524,
+   "numeric": 2524,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2524
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2524
+   },
+   "source_ids": [
+    "0f010e5deb9e953594e2a450",
+    "1840a07fa7e68822f7d14cec",
+    "1b10f682cffa732c5da1acad",
+    "1c14b912f5b94672dfec3f86",
+    "8841c1b11c0191a5727379b3",
+    "8dc873b11ff550cc0a50a7e5",
+    "9ab5d570ce23ed3d6c5305d3",
+    "a085ed68de885d965ce163de",
+    "affc9f1898c3741c74db068a",
+    "cd9763fa8d3c88857287eaae",
+    "d188850bbd16ebd3b1c9244e",
+    "d257ef4e171a5be24c7dc46e",
+    "d9c723c1087b030be3862f29",
+    "e1dfb61265db62f13714c8dc",
+    "ed6a613bcb054af475f28636",
+    "fc8036226c7bfbea6f4fb998"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-03T10:00:00+00:00",
+    "end": "2026-10-01T12:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2007-10-03, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08154700:d599ae89cc5747ed9d8b9b0aeb257856:00065": {
+   "station": "USGS:08154700",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 3,
+   "numeric": 3,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 3
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 3
+   },
+   "source_ids": [
+    "8dc873b11ff550cc0a50a7e5",
+    "cba9e432b698887052a16672",
+    "d188850bbd16ebd3b1c9244e"
+   ],
+   "first": "2026-08-27",
+   "last": "2026-10-02",
+   "daily": false,
+   "days_with_values": 3,
+   "by_year": {
+    "2026": 3
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 34,
+   "gaps": [
+    {
+     "after": "2026-08-27",
+     "before": "2026-10-01",
+     "missing_days": 34
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-06-04T05:35:00+00:00",
+    "end": "2026-08-28T03:10:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2026-06-04, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08155300:00ceb46e33e44322bcea2d60a426b87b:00065": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 3034,
+   "numeric": 3034,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 3034
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 3034
+   },
+   "source_ids": [
+    "0d17166960b88dd353995181",
+    "17a7d509b539c2a48a0c661e",
+    "19f0854c53413cc9248863ef",
+    "42e5c1c79cf66d5229f54ac8",
+    "53a787e4671076d69ee89e3c",
+    "64e8e58163d028df013a6d87",
+    "6e1e59b0650b8c42651e9a43",
+    "900c146d3fd3b8d88855e197",
+    "9790582679b954d8151997e2",
+    "9fa7d20bdfe6433c81b7e052",
+    "c37a568282a26d62374e2c48",
+    "cbfd5f297f36ff02cfab4566",
+    "dc41977738ca8263c0a97d2e",
+    "f29fcaa77e7e5edfcba31ea8",
+    "f859738435cfd92969840015",
+    "f8d2c7f28412894e1a2cf63e",
+    "fa8082e1ef9867c103cad85d"
+   ],
+   "first": "2026-05-11",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 13,
+   "by_year": {
+    "2026": 13
+   },
+   "missing_years": [],
+   "gap_count": 2,
+   "missing_days_total": 133,
+   "gaps": [
+    {
+     "after": "2026-05-12",
+     "before": "2026-09-13",
+     "missing_days": 123
+    },
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-05-11T05:00:00+00:00",
+    "end": "2026-10-01T13:10:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08155300:2c80d5d7df67409baba37c4798ccae67:00065": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 9720,
+   "numeric": 9720,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 9659,
+    "Provisional": 61
+   },
+   "qualified_records": 451,
+   "provenance": {
+    "verified_capture": 9720
+   },
+   "source_ids": [
+    "183f40156d480530eb16f8bd"
+   ],
+   "first": "1997-03-11",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 9720,
+   "by_year": {
+    "1997": 263,
+    "1998": 339,
+    "1999": 358,
+    "2000": 353,
+    "2001": 365,
+    "2002": 361,
+    "2003": 359,
+    "2004": 366,
+    "2005": 365,
+    "2006": 364,
+    "2007": 365,
+    "2008": 348,
+    "2009": 365,
+    "2010": 331,
+    "2011": 352,
+    "2012": 365,
+    "2013": 365,
+    "2014": 364,
+    "2015": 364,
+    "2016": 366,
+    "2017": 362,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 358,
+    "2024": 20,
+    "2025": 4,
+    "2026": 72
+   },
+   "missing_years": [],
+   "gap_count": 84,
+   "missing_days_total": 1076,
+   "gaps": [
+    {
+     "after": "2024-07-24",
+     "before": "2025-07-06",
+     "missing_days": 346
+    },
+    {
+     "after": "2025-07-10",
+     "before": "2026-06-06",
+     "missing_days": 330
+    },
+    {
+     "after": "2024-02-13",
+     "before": "2024-06-01",
+     "missing_days": 108
+    },
+    {
+     "after": "2024-06-03",
+     "before": "2024-07-23",
+     "missing_days": 49
+    },
+    {
+     "after": "2026-06-23",
+     "before": "2026-08-01",
+     "missing_days": 38
+    },
+    {
+     "after": "2023-12-26",
+     "before": "2024-01-23",
+     "missing_days": 27
+    },
+    {
+     "after": "2008-03-26",
+     "before": "2008-04-03",
+     "missing_days": 7
+    },
+    {
+     "after": "2024-02-05",
+     "before": "2024-02-13",
+     "missing_days": 7
+    },
+    {
+     "after": "2026-06-07",
+     "before": "2026-06-15",
+     "missing_days": 7
+    },
+    {
+     "after": "1997-09-28",
+     "before": "1997-10-05",
+     "missing_days": 6
+    },
+    {
+     "after": "2000-11-23",
+     "before": "2000-11-30",
+     "missing_days": 6
+    },
+    {
+     "after": "2010-11-03",
+     "before": "2010-11-10",
+     "missing_days": 6
+    },
+    {
+     "after": "2011-09-14",
+     "before": "2011-09-21",
+     "missing_days": 6
+    },
+    {
+     "after": "1997-03-19",
+     "before": "1997-03-25",
+     "missing_days": 5
+    },
+    {
+     "after": "1998-02-16",
+     "before": "1998-02-21",
+     "missing_days": 4
+    },
+    {
+     "after": "1998-03-01",
+     "before": "1998-03-06",
+     "missing_days": 4
+    },
+    {
+     "after": "1999-06-25",
+     "before": "1999-06-30",
+     "missing_days": 4
+    },
+    {
+     "after": "2010-08-05",
+     "before": "2010-08-10",
+     "missing_days": 4
+    },
+    {
+     "after": "2010-10-05",
+     "before": "2010-10-10",
+     "missing_days": 4
+    },
+    {
+     "after": "1997-09-08",
+     "before": "1997-09-12",
+     "missing_days": 3
+    },
+    {
+     "after": "1997-09-14",
+     "before": "1997-09-18",
+     "missing_days": 3
+    },
+    {
+     "after": "1998-02-02",
+     "before": "1998-02-06",
+     "missing_days": 3
+    },
+    {
+     "after": "2000-10-15",
+     "before": "2000-10-19",
+     "missing_days": 3
+    },
+    {
+     "after": "2003-09-21",
+     "before": "2003-09-25",
+     "missing_days": 3
+    },
+    {
+     "after": "2008-03-18",
+     "before": "2008-03-22",
+     "missing_days": 3
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.9003,
+   "provider_declared_span": {
+    "begin": "1997-03-11T06:00:00+00:00",
+    "end": "2026-09-29T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08155300:329ead9b945b405785743d3cfb71fa9f:00065": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2524,
+   "numeric": 2524,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2524
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2524
+   },
+   "source_ids": [
+    "0d17166960b88dd353995181",
+    "17a7d509b539c2a48a0c661e",
+    "19f0854c53413cc9248863ef",
+    "42e5c1c79cf66d5229f54ac8",
+    "53a787e4671076d69ee89e3c",
+    "6e1e59b0650b8c42651e9a43",
+    "900c146d3fd3b8d88855e197",
+    "9790582679b954d8151997e2",
+    "9fa7d20bdfe6433c81b7e052",
+    "c37a568282a26d62374e2c48",
+    "cbfd5f297f36ff02cfab4566",
+    "dc41977738ca8263c0a97d2e",
+    "f29fcaa77e7e5edfcba31ea8",
+    "f859738435cfd92969840015",
+    "f8d2c7f28412894e1a2cf63e",
+    "fa8082e1ef9867c103cad85d"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-01T11:00:00+00:00",
+    "end": "2026-10-01T13:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2007-10-01, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08155300:c832566ded7746918fd46dfff066039c:00060": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": false,
+   "records": 2534,
+   "numeric": 2534,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2534
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2534
+   },
+   "source_ids": [
+    "0d17166960b88dd353995181",
+    "17a7d509b539c2a48a0c661e",
+    "19f0854c53413cc9248863ef",
+    "42e5c1c79cf66d5229f54ac8",
+    "53a787e4671076d69ee89e3c",
+    "6e1e59b0650b8c42651e9a43",
+    "900c146d3fd3b8d88855e197",
+    "9790582679b954d8151997e2",
+    "9fa7d20bdfe6433c81b7e052",
+    "c37a568282a26d62374e2c48",
+    "cbfd5f297f36ff02cfab4566",
+    "dc41977738ca8263c0a97d2e",
+    "f29fcaa77e7e5edfcba31ea8",
+    "f859738435cfd92969840015",
+    "f8d2c7f28412894e1a2cf63e",
+    "fa8082e1ef9867c103cad85d"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-05-11T05:00:00+00:00",
+    "end": "2026-10-01T13:05:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2026-05-11, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08155300:de61cde9168e4713a7ae1664d44846d7:00060": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 18139,
+   "numeric": 18139,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 18077,
+    "Provisional": 62
+   },
+   "qualified_records": 533,
+   "provenance": {
+    "verified_capture": 18139
+   },
+   "source_ids": [
+    "85b3d0c3a4e2b8c832382e48"
+   ],
+   "first": "1977-02-01",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 18139,
+   "by_year": {
+    "1977": 334,
+    "1978": 365,
+    "1979": 365,
+    "1980": 366,
+    "1981": 365,
+    "1982": 365,
+    "1983": 365,
+    "1984": 366,
+    "1985": 365,
+    "1986": 365,
+    "1987": 365,
+    "1988": 366,
+    "1989": 365,
+    "1990": 365,
+    "1991": 365,
+    "1992": 366,
+    "1993": 365,
+    "1994": 365,
+    "1995": 365,
+    "1996": 366,
+    "1997": 365,
+    "1998": 365,
+    "1999": 365,
+    "2000": 366,
+    "2001": 365,
+    "2002": 365,
+    "2003": 365,
+    "2004": 366,
+    "2005": 365,
+    "2006": 365,
+    "2007": 365,
+    "2008": 366,
+    "2009": 365,
+    "2010": 365,
+    "2011": 365,
+    "2012": 366,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 273
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 1.0,
+   "provider_declared_span": {
+    "begin": "1977-02-01T06:00:00+00:00",
+    "end": "2026-09-29T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08155300:eb4f487f5d6848abba77f3612cf2248e:00060": {
+   "station": "USGS:08155300",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2524,
+   "numeric": 2524,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2524
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2524
+   },
+   "source_ids": [
+    "0d17166960b88dd353995181",
+    "17a7d509b539c2a48a0c661e",
+    "19f0854c53413cc9248863ef",
+    "42e5c1c79cf66d5229f54ac8",
+    "53a787e4671076d69ee89e3c",
+    "6e1e59b0650b8c42651e9a43",
+    "900c146d3fd3b8d88855e197",
+    "9790582679b954d8151997e2",
+    "9fa7d20bdfe6433c81b7e052",
+    "c37a568282a26d62374e2c48",
+    "cbfd5f297f36ff02cfab4566",
+    "dc41977738ca8263c0a97d2e",
+    "f29fcaa77e7e5edfcba31ea8",
+    "f859738435cfd92969840015",
+    "f8d2c7f28412894e1a2cf63e",
+    "fa8082e1ef9867c103cad85d"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-01T11:00:00+00:00",
+    "end": "2026-10-01T10:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2007-10-01, earlier than the first preserved value"
+    ]
+   }
+  },
   "USGS:08155500:3e74791e63d74f138b8e84a12395f4ba:00065": {
    "station": "USGS:08155500",
    "kind": "spring",
@@ -53652,6 +55309,1803 @@
     ],
     "unknown": [
      "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08156800:04905372f35042e098f6e424b9542e13:00065": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2754,
+   "numeric": 2754,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2754
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2754
+   },
+   "source_ids": [
+    "3291e91a863918c4d944750e",
+    "39d24a5d0242bbbfb6057193",
+    "4b7aa0fecd1cb03c5dcbbcdf",
+    "557a948f9417cce9e10ec4e9",
+    "816c1ff1c72599529ce92056",
+    "87164206dc40bb70312c5c39",
+    "917d051d7a26874a946491c1",
+    "a5c45c136fb07c4b2f913798",
+    "ad97008a344b60a5fe301156",
+    "b516d973133aac5e257f9236",
+    "bcacdc5908bed25465bd3679",
+    "ec787442da249ff698dfa5fe"
+   ],
+   "first": "2025-09-15",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 14,
+   "by_year": {
+    "2025": 3,
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 2,
+   "missing_days_total": 370,
+   "gaps": [
+    {
+     "after": "2025-09-17",
+     "before": "2026-09-13",
+     "missing_days": 360
+    },
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-01T11:00:00+00:00",
+    "end": "2026-10-01T13:15:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2007-10-01, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08156800:2abb693d2d934b0ca78c2dad65c591ad:00060": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2254,
+   "numeric": 2254,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2254
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2254
+   },
+   "source_ids": [
+    "3291e91a863918c4d944750e",
+    "39d24a5d0242bbbfb6057193",
+    "4b7aa0fecd1cb03c5dcbbcdf",
+    "557a948f9417cce9e10ec4e9",
+    "816c1ff1c72599529ce92056",
+    "87164206dc40bb70312c5c39",
+    "917d051d7a26874a946491c1",
+    "a5c45c136fb07c4b2f913798",
+    "ad97008a344b60a5fe301156",
+    "b516d973133aac5e257f9236",
+    "ec787442da249ff698dfa5fe"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-01T11:00:00+00:00",
+    "end": "2026-10-01T12:15:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2007-10-01, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08156800:8aa376e4b62c4fb3aea003f25e6aba22:00065": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 1675,
+   "numeric": 1675,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 1675
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 1675
+   },
+   "source_ids": [
+    "3291e91a863918c4d944750e",
+    "39d24a5d0242bbbfb6057193",
+    "4b7aa0fecd1cb03c5dcbbcdf",
+    "557a948f9417cce9e10ec4e9",
+    "816c1ff1c72599529ce92056",
+    "87164206dc40bb70312c5c39",
+    "917d051d7a26874a946491c1",
+    "a5c45c136fb07c4b2f913798",
+    "ad97008a344b60a5fe301156",
+    "eae44d6ec81cb8fde590681a",
+    "ec787442da249ff698dfa5fe"
+   ],
+   "first": "2026-07-29",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 3,
+   "missing_days_total": 56,
+   "gaps": [
+    {
+     "after": "2026-07-29",
+     "before": "2026-09-13",
+     "missing_days": 45
+    },
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    },
+    {
+     "after": "2026-09-29",
+     "before": "2026-10-01",
+     "missing_days": 1
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-05-11T05:00:00+00:00",
+    "end": "2026-07-29T17:25:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2026-05-11, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08156800:92a89e110825453991534ecd8b9eedd8:00060": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 15877,
+   "numeric": 15877,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 15846,
+    "Provisional": 31
+   },
+   "qualified_records": 144,
+   "provenance": {
+    "verified_capture": 15877
+   },
+   "source_ids": [
+    "1c8d014028981439c0528e90"
+   ],
+   "first": "1983-01-08",
+   "last": "2026-09-02",
+   "daily": true,
+   "days_with_values": 15877,
+   "by_year": {
+    "1983": 291,
+    "1984": 366,
+    "1985": 365,
+    "1986": 365,
+    "1987": 365,
+    "1988": 366,
+    "1989": 365,
+    "1990": 365,
+    "1991": 365,
+    "1992": 366,
+    "1993": 365,
+    "1994": 365,
+    "1995": 365,
+    "1996": 366,
+    "1997": 365,
+    "1998": 365,
+    "1999": 365,
+    "2000": 366,
+    "2001": 365,
+    "2002": 365,
+    "2003": 365,
+    "2004": 366,
+    "2005": 365,
+    "2006": 365,
+    "2007": 365,
+    "2008": 366,
+    "2009": 365,
+    "2010": 365,
+    "2011": 365,
+    "2012": 366,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 245
+   },
+   "missing_years": [],
+   "gap_count": 3,
+   "missing_days_total": 67,
+   "gaps": [
+    {
+     "after": "1983-07-27",
+     "before": "1983-09-07",
+     "missing_days": 41
+    },
+    {
+     "after": "1983-05-07",
+     "before": "1983-06-01",
+     "missing_days": 24
+    },
+    {
+     "after": "1983-09-17",
+     "before": "1983-09-20",
+     "missing_days": 2
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.9958,
+   "provider_declared_span": {
+    "begin": "1983-01-08T06:00:00+00:00",
+    "end": "2026-09-02T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08156800:b5e30e755f6540c4a4afc852e5bc0ed1:00060": {
+   "station": "USGS:08156800",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": false,
+   "records": 2254,
+   "numeric": 2254,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2254
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2254
+   },
+   "source_ids": [
+    "3291e91a863918c4d944750e",
+    "39d24a5d0242bbbfb6057193",
+    "4b7aa0fecd1cb03c5dcbbcdf",
+    "557a948f9417cce9e10ec4e9",
+    "816c1ff1c72599529ce92056",
+    "87164206dc40bb70312c5c39",
+    "917d051d7a26874a946491c1",
+    "a5c45c136fb07c4b2f913798",
+    "ad97008a344b60a5fe301156",
+    "b516d973133aac5e257f9236",
+    "ec787442da249ff698dfa5fe"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-05-11T05:00:00+00:00",
+    "end": "2026-10-01T12:15:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2026-05-11, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08158600:2eea77b813b94f3f972d32104bd9a275:00065": {
+   "station": "USGS:08158600",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 1103,
+   "numeric": 1103,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 1103
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 1103
+   },
+   "source_ids": [
+    "26595fe53320dea02a9caa93",
+    "590a1ddd54f6084a9e905b4e",
+    "823ca938d0ff47007571ede0",
+    "a17b25b54dc03272c0f12e45"
+   ],
+   "first": "2026-09-29",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 5,
+   "by_year": {
+    "2026": 5
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08158600:d3056974f4694648a68ef180964d24fc:00060": {
+   "station": "USGS:08158600",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": false,
+   "records": 1103,
+   "numeric": 1103,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 1103
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 1103
+   },
+   "source_ids": [
+    "26595fe53320dea02a9caa93",
+    "590a1ddd54f6084a9e905b4e",
+    "823ca938d0ff47007571ede0",
+    "a17b25b54dc03272c0f12e45"
+   ],
+   "first": "2026-09-29",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 5,
+   "by_year": {
+    "2026": 5
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08158600:d51b7e43a9824feb98dad255f04224cc:00065": {
+   "station": "USGS:08158600",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 10377,
+   "numeric": 10377,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 10257,
+    "Provisional": 120
+   },
+   "qualified_records": 3,
+   "provenance": {
+    "verified_capture": 10377
+   },
+   "source_ids": [
+    "feb8980ac2c6e4c0beb165b8"
+   ],
+   "first": "1997-08-02",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 10377,
+   "by_year": {
+    "1997": 152,
+    "1998": 342,
+    "1999": 346,
+    "2000": 264,
+    "2001": 326,
+    "2002": 364,
+    "2003": 365,
+    "2004": 366,
+    "2005": 359,
+    "2006": 356,
+    "2007": 359,
+    "2008": 362,
+    "2009": 354,
+    "2010": 365,
+    "2011": 358,
+    "2012": 360,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 361,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 362,
+    "2023": 365,
+    "2024": 357,
+    "2025": 342,
+    "2026": 270
+   },
+   "missing_years": [],
+   "gap_count": 96,
+   "missing_days_total": 275,
+   "gaps": [
+    {
+     "after": "2025-09-07",
+     "before": "2025-09-26",
+     "missing_days": 18
+    },
+    {
+     "after": "2001-02-17",
+     "before": "2001-03-05",
+     "missing_days": 15
+    },
+    {
+     "after": "1998-06-07",
+     "before": "1998-06-19",
+     "missing_days": 11
+    },
+    {
+     "after": "2000-09-13",
+     "before": "2000-09-25",
+     "missing_days": 11
+    },
+    {
+     "after": "2000-10-23",
+     "before": "2000-11-03",
+     "missing_days": 10
+    },
+    {
+     "after": "2000-07-25",
+     "before": "2000-08-04",
+     "missing_days": 9
+    },
+    {
+     "after": "2024-11-25",
+     "before": "2024-12-05",
+     "missing_days": 9
+    },
+    {
+     "after": "1998-12-21",
+     "before": "1998-12-30",
+     "missing_days": 8
+    },
+    {
+     "after": "2000-05-03",
+     "before": "2000-05-11",
+     "missing_days": 7
+    },
+    {
+     "after": "2000-10-02",
+     "before": "2000-10-09",
+     "missing_days": 6
+    },
+    {
+     "after": "2009-07-01",
+     "before": "2009-07-08",
+     "missing_days": 6
+    },
+    {
+     "after": "2000-02-03",
+     "before": "2000-02-09",
+     "missing_days": 5
+    },
+    {
+     "after": "2000-03-18",
+     "before": "2000-03-24",
+     "missing_days": 5
+    },
+    {
+     "after": "2000-09-25",
+     "before": "2000-10-01",
+     "missing_days": 5
+    },
+    {
+     "after": "2000-03-09",
+     "before": "2000-03-14",
+     "missing_days": 4
+    },
+    {
+     "after": "2000-04-03",
+     "before": "2000-04-08",
+     "missing_days": 4
+    },
+    {
+     "after": "2001-06-11",
+     "before": "2001-06-16",
+     "missing_days": 4
+    },
+    {
+     "after": "2005-10-27",
+     "before": "2005-11-01",
+     "missing_days": 4
+    },
+    {
+     "after": "2006-11-14",
+     "before": "2006-11-19",
+     "missing_days": 4
+    },
+    {
+     "after": "2009-04-01",
+     "before": "2009-04-06",
+     "missing_days": 4
+    },
+    {
+     "after": "2011-04-02",
+     "before": "2011-04-07",
+     "missing_days": 4
+    },
+    {
+     "after": "1998-08-07",
+     "before": "1998-08-11",
+     "missing_days": 3
+    },
+    {
+     "after": "1999-12-05",
+     "before": "1999-12-09",
+     "missing_days": 3
+    },
+    {
+     "after": "2000-03-25",
+     "before": "2000-03-29",
+     "missing_days": 3
+    },
+    {
+     "after": "2000-04-21",
+     "before": "2000-04-25",
+     "missing_days": 3
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.9742,
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08158600:f8eeee52f4e64e008a82644e7e0e52af:00060": {
+   "station": "USGS:08158600",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": false,
+   "records": 22042,
+   "numeric": 22042,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 21922,
+    "Provisional": 120
+   },
+   "qualified_records": 185,
+   "provenance": {
+    "verified_capture": 22042
+   },
+   "source_ids": [
+    "ed3faa00e43a13a8bf53e5a3"
+   ],
+   "first": "1966-05-27",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 22042,
+   "by_year": {
+    "1966": 219,
+    "1967": 365,
+    "1968": 366,
+    "1969": 365,
+    "1970": 365,
+    "1971": 365,
+    "1972": 366,
+    "1973": 365,
+    "1974": 365,
+    "1975": 365,
+    "1976": 366,
+    "1977": 365,
+    "1978": 365,
+    "1979": 365,
+    "1980": 366,
+    "1981": 365,
+    "1982": 365,
+    "1983": 365,
+    "1984": 366,
+    "1985": 365,
+    "1986": 365,
+    "1987": 365,
+    "1988": 366,
+    "1989": 365,
+    "1990": 365,
+    "1991": 365,
+    "1992": 366,
+    "1993": 365,
+    "1994": 365,
+    "1995": 365,
+    "1996": 366,
+    "1997": 365,
+    "1998": 365,
+    "1999": 365,
+    "2000": 366,
+    "2001": 365,
+    "2002": 365,
+    "2003": 365,
+    "2004": 366,
+    "2005": 365,
+    "2006": 365,
+    "2007": 365,
+    "2008": 366,
+    "2009": 365,
+    "2010": 365,
+    "2011": 365,
+    "2012": 366,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 273
+   },
+   "missing_years": [],
+   "gap_count": 0,
+   "missing_days_total": 0,
+   "gaps": [],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 1.0,
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08158970:26253cc61add4d15ba3154037008db9f:00060": {
+   "station": "USGS:08158970",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2998,
+   "numeric": 2998,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 500,
+    "Provisional": 2498
+   },
+   "qualified_records": 6,
+   "provenance": {
+    "verified_capture": 2998
+   },
+   "source_ids": [
+    "0194ee48f7c2784104c68e98",
+    "027848699513398ecfd9b042",
+    "043ca3f56573f7b30c26f0aa",
+    "13d5559e473ca4c1262816ec",
+    "1687fecb9f881b2e793ebda1",
+    "1b6f8b88744ec255ad6c5baf",
+    "1ee9dca6c23acc366d816b06",
+    "21dfe4bf5efbd0a5a7a1cd81",
+    "23d80427b1460c669bb36415",
+    "34f1d1045330e49649d78ff2",
+    "5f227d78113a62fcd4b1eb7c",
+    "73a0dfe10fe143ac0da90a0f",
+    "7804e15db5b95e7476fe8b52",
+    "81fa11f24c0e34fd2e85be6c",
+    "c4a101919e333acf12b0676a",
+    "e435abc81dc1753201e4e768",
+    "faeeaa475a75f605ea22d688"
+   ],
+   "first": "2025-09-15",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 14,
+   "by_year": {
+    "2025": 3,
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 2,
+   "missing_days_total": 370,
+   "gaps": [
+    {
+     "after": "2025-09-17",
+     "before": "2026-09-13",
+     "missing_days": 360
+    },
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-08-24T10:00:00+00:00",
+    "end": "2026-10-01T13:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2007-08-24, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08158970:6e087424a1dc47b59fce6e618b5e66cd:00065": {
+   "station": "USGS:08158970",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2498,
+   "numeric": 2498,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2498
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2498
+   },
+   "source_ids": [
+    "0194ee48f7c2784104c68e98",
+    "027848699513398ecfd9b042",
+    "043ca3f56573f7b30c26f0aa",
+    "13d5559e473ca4c1262816ec",
+    "1687fecb9f881b2e793ebda1",
+    "1b6f8b88744ec255ad6c5baf",
+    "1ee9dca6c23acc366d816b06",
+    "21dfe4bf5efbd0a5a7a1cd81",
+    "23d80427b1460c669bb36415",
+    "34f1d1045330e49649d78ff2",
+    "5f227d78113a62fcd4b1eb7c",
+    "73a0dfe10fe143ac0da90a0f",
+    "7804e15db5b95e7476fe8b52",
+    "81fa11f24c0e34fd2e85be6c",
+    "c4a101919e333acf12b0676a",
+    "e435abc81dc1753201e4e768"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-01T11:00:00+00:00",
+    "end": "2026-10-01T13:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2007-10-01, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08158970:ff97d3e8ee294e9690766846bfa3bc4f:00060": {
+   "station": "USGS:08158970",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 11016,
+   "numeric": 11016,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 10891,
+    "Provisional": 125
+   },
+   "qualified_records": 135,
+   "provenance": {
+    "verified_capture": 11016
+   },
+   "source_ids": [
+    "6987b4dcf273763e6008dcd6"
+   ],
+   "first": "1975-09-11",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 11016,
+   "by_year": {
+    "1975": 112,
+    "1976": 366,
+    "1977": 365,
+    "1978": 365,
+    "1979": 365,
+    "1980": 366,
+    "1981": 365,
+    "1982": 365,
+    "1983": 365,
+    "1984": 366,
+    "1985": 365,
+    "1986": 273,
+    "2007": 130,
+    "2008": 366,
+    "2009": 365,
+    "2010": 365,
+    "2011": 365,
+    "2012": 366,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 273
+   },
+   "missing_years": [
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gap_count": 1,
+   "missing_days_total": 7632,
+   "gaps": [
+    {
+     "after": "1986-09-30",
+     "before": "2007-08-24",
+     "missing_days": 7632
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.5907,
+   "provider_declared_span": {
+    "begin": "1975-09-11T05:00:00+00:00",
+    "end": "2026-09-30T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08159000:15552d0f22b0408aab8280e951c22402:00065": {
+   "station": "USGS:08159000",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 1005,
+   "numeric": 1005,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 1005
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 1005
+   },
+   "source_ids": [
+    "4bbed2593ea869084d5aa320",
+    "8f81ec9025d4922d8b73a1b0",
+    "b956f1e57e380485ea277f06",
+    "b9ec8c4fd019628d9d4cce45"
+   ],
+   "first": "2026-05-11",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 6,
+   "by_year": {
+    "2026": 6
+   },
+   "missing_years": [],
+   "gap_count": 2,
+   "missing_days_total": 140,
+   "gaps": [
+    {
+     "after": "2026-05-12",
+     "before": "2026-08-15",
+     "missing_days": 94
+    },
+    {
+     "after": "2026-08-15",
+     "before": "2026-10-01",
+     "missing_days": 46
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-05-11T05:00:00+00:00",
+    "end": "2026-08-15T17:40:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08159000:15a0d7fd06c44c759f6a1cac19b997f8:00065": {
+   "station": "USGS:08159000",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": false,
+   "records": 10296,
+   "numeric": 10296,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 10284,
+    "Provisional": 12
+   },
+   "qualified_records": 124,
+   "provenance": {
+    "verified_capture": 10296
+   },
+   "source_ids": [
+    "ec24c5fb699b2b95a9d4c6c6"
+   ],
+   "first": "1997-02-12",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 10296,
+   "by_year": {
+    "1997": 268,
+    "1998": 358,
+    "1999": 363,
+    "2000": 357,
+    "2001": 363,
+    "2002": 354,
+    "2003": 313,
+    "2004": 366,
+    "2005": 364,
+    "2006": 360,
+    "2007": 359,
+    "2008": 343,
+    "2009": 362,
+    "2010": 356,
+    "2011": 355,
+    "2012": 360,
+    "2013": 364,
+    "2014": 364,
+    "2015": 365,
+    "2016": 365,
+    "2017": 362,
+    "2018": 365,
+    "2019": 365,
+    "2020": 359,
+    "2021": 365,
+    "2022": 294,
+    "2023": 354,
+    "2024": 315,
+    "2025": 227,
+    "2026": 231
+   },
+   "missing_years": [],
+   "gap_count": 70,
+   "missing_days_total": 527,
+   "gaps": [
+    {
+     "after": "2025-08-02",
+     "before": "2025-12-19",
+     "missing_days": 138
+    },
+    {
+     "after": "2022-07-07",
+     "before": "2022-08-23",
+     "missing_days": 46
+    },
+    {
+     "after": "2024-09-23",
+     "before": "2024-11-06",
+     "missing_days": 43
+    },
+    {
+     "after": "2026-08-15",
+     "before": "2026-09-25",
+     "missing_days": 40
+    },
+    {
+     "after": "2003-08-15",
+     "before": "2003-09-12",
+     "missing_days": 27
+    },
+    {
+     "after": "1997-07-02",
+     "before": "1997-07-29",
+     "missing_days": 26
+    },
+    {
+     "after": "2003-07-28",
+     "before": "2003-08-13",
+     "missing_days": 15
+    },
+    {
+     "after": "2022-06-13",
+     "before": "2022-06-29",
+     "missing_days": 15
+    },
+    {
+     "after": "2008-12-11",
+     "before": "2008-12-25",
+     "missing_days": 13
+    },
+    {
+     "after": "2023-10-12",
+     "before": "2023-10-24",
+     "missing_days": 11
+    },
+    {
+     "after": "1997-06-12",
+     "before": "1997-06-22",
+     "missing_days": 9
+    },
+    {
+     "after": "2000-06-20",
+     "before": "2000-06-30",
+     "missing_days": 9
+    },
+    {
+     "after": "2010-09-13",
+     "before": "2010-09-23",
+     "missing_days": 9
+    },
+    {
+     "after": "2024-02-18",
+     "before": "2024-02-27",
+     "missing_days": 8
+    },
+    {
+     "after": "1997-05-08",
+     "before": "1997-05-16",
+     "missing_days": 7
+    },
+    {
+     "after": "2020-08-12",
+     "before": "2020-08-20",
+     "missing_days": 7
+    },
+    {
+     "after": "2002-10-24",
+     "before": "2002-10-31",
+     "missing_days": 6
+    },
+    {
+     "after": "2022-09-27",
+     "before": "2022-10-04",
+     "missing_days": 6
+    },
+    {
+     "after": "1997-10-15",
+     "before": "1997-10-21",
+     "missing_days": 5
+    },
+    {
+     "after": "2003-09-28",
+     "before": "2003-10-04",
+     "missing_days": 5
+    },
+    {
+     "after": "2008-12-05",
+     "before": "2008-12-10",
+     "missing_days": 4
+    },
+    {
+     "after": "2022-01-14",
+     "before": "2022-01-19",
+     "missing_days": 4
+    },
+    {
+     "after": "1997-08-30",
+     "before": "1997-09-03",
+     "missing_days": 3
+    },
+    {
+     "after": "1997-09-12",
+     "before": "1997-09-16",
+     "missing_days": 3
+    },
+    {
+     "after": "2008-11-14",
+     "before": "2008-11-18",
+     "missing_days": 3
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.9513,
+   "provider_declared_span": {
+    "begin": "1997-02-12T06:00:00+00:00",
+    "end": "2026-09-29T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied"
+    ]
+   }
+  },
+  "USGS:08159000:9ac45c751b9d47a7bbcd937cf06a6054:00060": {
+   "station": "USGS:08159000",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": false,
+   "records": 505,
+   "numeric": 505,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 505
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 505
+   },
+   "source_ids": [
+    "8f81ec9025d4922d8b73a1b0",
+    "b956f1e57e380485ea277f06",
+    "b9ec8c4fd019628d9d4cce45"
+   ],
+   "first": "2026-08-15",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 4,
+   "by_year": {
+    "2026": 4
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 46,
+   "gaps": [
+    {
+     "after": "2026-08-15",
+     "before": "2026-10-01",
+     "missing_days": 46
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2026-05-11T05:00:00+00:00",
+    "end": "2026-08-15T17:40:00+00:00",
+    "primary": null,
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 2026-05-11, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08159000:c9d5cf88634b48fa80306a12b7cbe745:00060": {
+   "station": "USGS:08159000",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 20513,
+   "numeric": 20513,
+   "unavailable": 0,
+   "statistics": [
+    "daily_mean"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Approved": 20501,
+    "Provisional": 12
+   },
+   "qualified_records": 616,
+   "provenance": {
+    "verified_capture": 20513
+   },
+   "source_ids": [
+    "56557d8104715f03a2125547"
+   ],
+   "first": "1924-06-01",
+   "last": "2026-09-30",
+   "daily": true,
+   "days_with_values": 20513,
+   "by_year": {
+    "1924": 214,
+    "1925": 365,
+    "1926": 365,
+    "1927": 365,
+    "1928": 366,
+    "1929": 365,
+    "1930": 59,
+    "1976": 284,
+    "1977": 365,
+    "1978": 365,
+    "1979": 365,
+    "1980": 366,
+    "1981": 365,
+    "1982": 365,
+    "1983": 365,
+    "1984": 366,
+    "1985": 365,
+    "1986": 365,
+    "1987": 365,
+    "1988": 366,
+    "1989": 365,
+    "1990": 365,
+    "1991": 365,
+    "1992": 366,
+    "1993": 365,
+    "1994": 365,
+    "1995": 365,
+    "1996": 366,
+    "1997": 365,
+    "1998": 365,
+    "1999": 365,
+    "2000": 366,
+    "2001": 365,
+    "2002": 365,
+    "2003": 365,
+    "2004": 366,
+    "2005": 365,
+    "2006": 365,
+    "2007": 365,
+    "2008": 366,
+    "2009": 365,
+    "2010": 365,
+    "2011": 365,
+    "2012": 366,
+    "2013": 365,
+    "2014": 365,
+    "2015": 365,
+    "2016": 366,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 233
+   },
+   "missing_years": [
+    1931,
+    1932,
+    1933,
+    1934,
+    1935,
+    1936,
+    1937,
+    1938,
+    1939,
+    1940,
+    1941,
+    1942,
+    1943,
+    1944,
+    1945,
+    1946,
+    1947,
+    1948,
+    1949,
+    1950,
+    1951,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1959,
+    1960,
+    1961,
+    1962,
+    1963,
+    1964,
+    1965,
+    1966,
+    1967,
+    1968,
+    1969,
+    1970,
+    1971,
+    1972,
+    1973,
+    1974,
+    1975
+   ],
+   "gap_count": 2,
+   "missing_days_total": 16864,
+   "gaps": [
+    {
+     "after": "1930-02-28",
+     "before": "1976-03-23",
+     "missing_days": 16824
+    },
+    {
+     "after": "2026-08-15",
+     "before": "2026-09-25",
+     "missing_days": 40
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "day_coverage": 0.5488,
+   "provider_declared_span": {
+    "begin": "1924-06-01T05:00:00+00:00",
+    "end": "2026-09-29T05:00:00+00:00",
+    "primary": "Primary",
+    "computation": "Mean"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies"
+    ]
+   }
+  },
+  "USGS:08159000:d1ce331e7ea1497081d026c5789e55f7:00060": {
+   "station": "USGS:08159000",
+   "kind": "river",
+   "quantity": "discharge",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2532,
+   "numeric": 2532,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft3/s"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2532
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2532
+   },
+   "source_ids": [
+    "1ae366fc2a603bb4ea74dabc",
+    "560ffdc10661cca8d08ea221",
+    "56f1190b18fbcb14581b420b",
+    "5d87dc933d498862e142c41b",
+    "683515de2f0df135d172c39e",
+    "789b8aaa50147656b02c004a",
+    "7b6ce3e4a272e06b183764ef",
+    "8f81ec9025d4922d8b73a1b0",
+    "a2c4637ee5e95ae7b240ba54",
+    "b9ec8c4fd019628d9d4cce45",
+    "d1da156b8eb6b8bb0bd57ff3",
+    "d6739ed1e696e1af9c8b9c75",
+    "de7ac017937e131d6fe2df74",
+    "e4878bec6c458de4f9c6205e",
+    "ea2d416aba0b646dff1b5709",
+    "fdc1486469e2eef4d89edf3a"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "1991-06-12T10:30:00+00:00",
+    "end": "2026-10-01T12:20:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "provider metadata declares a start of 1991-06-12, earlier than the first preserved value"
+    ]
+   }
+  },
+  "USGS:08159000:d514b601680c44dcbe0a9776e4bf0cd3:00065": {
+   "station": "USGS:08159000",
+   "kind": "river",
+   "quantity": "stage",
+   "feed": "USGS",
+   "primary": true,
+   "records": 2520,
+   "numeric": 2520,
+   "unavailable": 0,
+   "statistics": [
+    "instantaneous"
+   ],
+   "units": [
+    "ft"
+   ],
+   "vertical_datum": [
+    "None"
+   ],
+   "approval": {
+    "Provisional": 2520
+   },
+   "qualified_records": 0,
+   "provenance": {
+    "verified_capture": 2520
+   },
+   "source_ids": [
+    "1ae366fc2a603bb4ea74dabc",
+    "560ffdc10661cca8d08ea221",
+    "56f1190b18fbcb14581b420b",
+    "5d87dc933d498862e142c41b",
+    "683515de2f0df135d172c39e",
+    "789b8aaa50147656b02c004a",
+    "7b6ce3e4a272e06b183764ef",
+    "8f81ec9025d4922d8b73a1b0",
+    "a2c4637ee5e95ae7b240ba54",
+    "b9ec8c4fd019628d9d4cce45",
+    "d1da156b8eb6b8bb0bd57ff3",
+    "d6739ed1e696e1af9c8b9c75",
+    "de7ac017937e131d6fe2df74",
+    "e4878bec6c458de4f9c6205e",
+    "ea2d416aba0b646dff1b5709",
+    "fdc1486469e2eef4d89edf3a"
+   ],
+   "first": "2026-09-13",
+   "last": "2026-10-03",
+   "daily": false,
+   "days_with_values": 11,
+   "by_year": {
+    "2026": 11
+   },
+   "missing_years": [],
+   "gap_count": 1,
+   "missing_days_total": 10,
+   "gaps": [
+    {
+     "after": "2026-09-15",
+     "before": "2026-09-26",
+     "missing_days": 10
+    }
+   ],
+   "gap_meaning": "calendar days inside the span with no numeric value; for point series a day without a reading is listed the same way",
+   "provider_declared_span": {
+    "begin": "2007-10-01T11:00:00+00:00",
+    "end": "2026-10-01T12:20:00+00:00",
+    "primary": "Primary",
+    "computation": "Instantaneous"
+   },
+   "continuity": {
+    "known": [
+     "one provider series identifier across the whole preserved span"
+    ],
+    "unknown": [
+     "sensor, gauge-location and method changes are not documented in the preserved bodies",
+     "vertical datum not supplied",
+     "provider metadata declares a start of 2007-10-01, earlier than the first preserved value"
     ]
    }
   },

@@ -21,10 +21,10 @@ catalog and SQLite layout, so `regional_analytics.Reader` opens it without chang
 
 ## What it holds
 
-173 named stations: the four pilot river gauges, the six Highland Lakes reservoirs, 37 TWDB wells
+179 named stations: the four pilot river gauges, the six Austin creek gauges, the six Highland Lakes reservoirs, 37 TWDB wells
 whose coordinates fall inside a pilot WBD subbasin, 121 LCRA rain gauges inside those subbasins that
 have a saved daily-rain history, and five springs outside the pilot watersheds kept as separate
-regional context. The October 3 build holds 4,174,181 original records in 549 series.
+regional context. The October 3 build holds 4,444,641 original records in 588 series.
 
 First and last preserved values (full table: `docs/REGIONAL_HISTORY_TABLE.md`):
 
@@ -34,6 +34,7 @@ First and last preserved values (full table: `docs/REGIONAL_HISTORY_TABLE.md`):
 | Llano River at Llano, daily mean discharge | 1939-09-17 | 2026-09-30 | Longest gap 13 days (2023) |
 | Pedernales River near Fredericksburg, daily mean discharge | 1979-06-28 | 2026-09-30 | No values 1993-05-03 to 1998-03-16 (1,777 days) |
 | Pedernales River near Johnson City, daily mean discharge | 1939-05-04 | 2026-09-30 | No gap |
+| Austin creek gauges, daily mean discharge | 1924 (Onion) to 1983 (Shoal) | 2026-09-30 | Onion lacks 16,864 days and Williamson 7,632; Shoal's daily record stops 2026-09-02 |
 | Lake Buchanan storage | 1937-06-30 | 2026-10-02 | 73 stated conservation-capacity values |
 | Lake Travis storage | 1940-09-30 | 2026-10-02 | 2 stated capacity values |
 | Lake LBJ storage | 1951-08-01 | 2026-10-02 | 2 stated capacity values |

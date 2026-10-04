@@ -115,12 +115,14 @@ def pair_lags(up, down, window=3):
 
 def build(folder=history.OUT, root=ROOT, top=10):
     reader = Reader(folder); cat = reader.catalog; gauges = {}
-    for site in history.RIVERS:
+    for site in history.RIVERS+history.AUSTIN:
         key = 'USGS:'+site; sid, why = reader.choose(key, 'discharge', 'daily_mean', 'USGS')
         rows = reader.rows(sid) if sid else []
         peaks = annual_peaks(site, root)
         gauges[key] = {'name': cat['sites'][key]['name'], 'daily_series': sid, 'daily_selection': why, 'daily_events': daily_events(rows, top),
                        'annual_peaks': peaks, 'last_daily_mean': max((r['time']['date'] for r in rows if r['state'] == 'measured'), default=None)}
+        if not sid:
+            gauges[key]['daily_events'] = {'available': False, 'reason': why}
     reader.close()
     lags = {f'{a}>{b}': pair_lags(gauges[a]['daily_events'], gauges[b]['daily_events']) for a, b in PAIRS}
     doc = {'schema_version': 'regional-events/v1', 'cutoff': cat['cutoff'], 'history_sha256': cat['observations']['sha256'], 'gauges': gauges, 'pair_lags': lags,
@@ -128,7 +130,7 @@ def build(folder=history.OUT, root=ROOT, top=10):
            'limits': ['An event list ranks saved daily means; it is not a return period or a forecast.', 'A lag is the difference between two dates; hours are not resolved.',
                       'Volume, rainfall and starting conditions are not compared here.']}
     (Path(root)/'data/model/regional-events.json').write_text(json.dumps(doc, indent=1)+'\n')
-    print('Events:', {k: (len(g['annual_peaks']['rows']), g['daily_events']['events'][0]['date'], g['daily_events']['events'][0]['daily_mean_cfs']) for k, g in gauges.items()})
+    print('Events:', {k: (len(g['annual_peaks']['rows']), g['daily_events'].get('events', [{}])[0].get('date')) for k, g in gauges.items()})
     return doc
 
 
