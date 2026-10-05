@@ -399,3 +399,9 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 - **Bugs found in the browser and fixed.** The station map threw inside Leaflet when layers were added before the map had a view, which left markers unprojected and failed the whole page load; the view is now set first. Reload-based checks were reading a cached script, so later checks used a fresh port.
 - **Checks.** Water suite 178 passing (4 added); BrowserOS at 960 px: 166 dots, selection from either map updates the record and the geology panel, no overflow, no console errors.
 - **Integration.** Geology commit `30e104b1` on `origin/main`; consumer commit follows.
+
+
+### 2026-10-05 — Claude artifact checked under its own rules
+- Neither browser available to the session (BrowserOS, the desktop app's pane) is signed in to claude.ai, so the private artifact page itself could not be opened. Instead the exact published files were served locally inside the artifact skeleton with a Content-Security-Policy matching the host's published allowlist, and opened in the app's browser pane.
+- Result: the regional page, `/austin.html` and `/ledger.html` load; all page data, history files and both USGS figures load; the only blocked requests are the USGS base-map tiles, as expected. One defect found: the vendored Leaflet stylesheet referenced three icon images that were not packaged (a 404 for the ledger's layer-switcher icon). They are now embedded in `app/vendor/leaflet.css`; artifact republished as version 4.
+- Not covered by that check: the claude.ai frame itself (its sandbox, the published skeleton's exact headers), and the older two pages were served without the policy header.
