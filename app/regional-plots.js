@@ -150,7 +150,7 @@ function renderHistory(){
   $('#h-series').innerHTML=hist.doc.series.map((x,i)=>`<option value="${i}"${i===hist.series?' selected':''}>${esc(x.label)}</option>`).join('');
   $('#h-from').value=hist.from;$('#h-to').value=hist.to;$('#h-date').value=hist.date||'';$('#h-date').min=s.continuity.first;$('#h-date').max=hist.doc.cutoff.slice(0,10);
   $('#h-baseline').disabled=!s.percentile;$('#h-baseline-note').textContent=s.percentile?`Usual is fixed. A day is compared with this gauge’s Approved daily means within ${hist.doc.baseline.half_window_days} calendar days of the same date in ${hist.doc.baseline.reference_years.join('–')}. A day inside those years is compared with the other nineteen. A day before them is compared with the same years and labelled. Changing the years shown never changes this.`:'The seasonal baseline applies to daily mean discharge only. This record is shown as values.';
-  $('#h-chart').innerHTML=historyChart();$('#h-coverage').innerHTML=historyCoverage();$('#h-read').innerHTML=historyRead();$('#h-continuity').innerHTML=historyContinuity();
+  $('#h-swim').innerHTML=swimLink(hist.key);$('#h-chart').innerHTML=historyChart();$('#h-coverage').innerHTML=historyCoverage();$('#h-read').innerHTML=historyRead();$('#h-continuity').innerHTML=historyContinuity();
 }
 async function openHistory(key,scroll){
   const entry=historyIndex?.stations[key];if(!entry)return;$('#h-station').value=key;
@@ -186,7 +186,9 @@ function geoLegend(){const on=n=>GEO[n].layer&&window.regionalPilot.map.hasLayer
   $('#geo-legend').innerHTML=parts.length?parts.join('<br>')+'<br><small>Mapped geological interpretation at 1:250,000. It is not a measurement, and it does not show where water moves underground.</small>':'';}
 /* ---------- one selected station drives the record and the geology panel ---------- */
 const KIND={river:['#176a74','Rivers and creeks'],reservoir:['#38767b','Reservoirs'],well:['#72648c','Wells'],rain:['#346fa2','Rain gauges'],spring:['#8a6d1a','Springs']};
-let hMap=null,hDots={},station=null;
+let hMap=null,hDots={},station=null,swim={stations:{}};
+function swimLink(key){const s=swim.stations?.[key];return s?`<a class="swim-link" href="${esc(swim.swim_map_url+'#'+s.anchor)}" target="_blank" rel="noopener">Swimming places on this gauge: Austin Swim Map ↗</a>`:'';}
+function openFromAddress(){const m=/^#([A-Za-z-]+)\.([0-9A-Za-z-]+)$/.exec(location.hash||'');if(!m)return;const key=m[1]+':'+m[2];if(!historyIndex?.stations[key])return;const item=data.items.find(x=>x.id===key);if(item)details(item);selectStation(key,true);}
 function stationPoint(key){const c=historyIndex?.stations[key]?.coordinates||data.items.find(x=>x.id===key)?.coordinates;return c&&c[0]!=null&&c[1]!=null?[c[1],c[0]]:null;}
 function markStation(){for(const [k,m] of Object.entries(hDots))m.setStyle({weight:k===station?4:1,color:k===station?'#b36234':'#fffdf6'});if(hDots[station])hDots[station].bringToFront();}
 function selectStation(key,scroll){station=key;if(historyIndex?.stations[key])openHistory(key,scroll);markStation();renderGeoStation();}
@@ -230,5 +232,5 @@ window.initGeology=async()=>{try{const r=await fetch('regional-geology.json',{ca
   $('#geo-gaps').innerHTML='<h3>What is not established</h3><ul>'+geology.evidence_gaps.map(g=>`<li>${esc(g)}</li>`).join('')+`<li>Outcrop check: ${esc(cm.summary)}.</li>`+geology.limits.map(g=>`<li>${esc(g)}</li>`).join('')+'</ul>';
 };
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{together();if(hist.doc)renderHistory();},200);});
-window.regionalHooks={afterRender:()=>{together();renderFloods();},detailExtra:item=>wellEvidence(item)+(historyIndex?.stations[item.id]?.file?`<p><button class="open-history" data-history="${esc(item.id)}">Open this station’s full record ↓</button></p>`:''),onSelect:key=>selectStation(key,false),bindDetail:()=>document.querySelectorAll('[data-history]').forEach(b=>b.onclick=()=>selectStation(b.dataset.history,true)),
-  afterBoot:async()=>{try{const r=await fetch('history/index.json',{cache:'no-cache'});if(r.ok)historyIndex=await r.json();}catch(e){}try{const r=await fetch('regional-events.json',{cache:'no-cache'});if(r.ok)floods=await r.json();}catch(e){}initHistory();if(window.initGeology)await window.initGeology();render();initStationMap();markStation();}};
+window.regionalHooks={afterRender:()=>{together();renderFloods();},detailExtra:item=>wellEvidence(item)+(swimLink(item.id)?`<p>${swimLink(item.id)}</p>`:'')+(historyIndex?.stations[item.id]?.file?`<p><button class="open-history" data-history="${esc(item.id)}">Open this station’s full record ↓</button></p>`:''),onSelect:key=>selectStation(key,false),bindDetail:()=>document.querySelectorAll('[data-history]').forEach(b=>b.onclick=()=>selectStation(b.dataset.history,true)),
+  afterBoot:async()=>{try{const r=await fetch('history/index.json',{cache:'no-cache'});if(r.ok)historyIndex=await r.json();}catch(e){}try{const r=await fetch('regional-events.json',{cache:'no-cache'});if(r.ok)floods=await r.json();}catch(e){}try{const r=await fetch('swim-map-links.json',{cache:'no-cache'});if(r.ok)swim=await r.json();}catch(e){}initHistory();if(window.initGeology)await window.initGeology();render();initStationMap();markStation();openFromAddress();window.addEventListener('hashchange',openFromAddress);}};

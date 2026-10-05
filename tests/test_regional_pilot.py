@@ -305,6 +305,26 @@ class GeologyTests(unittest.TestCase):
         self.assertTrue(any('Llano River watershed' in g for g in self.doc['evidence_gaps']))
 
 
+class SwimMapLinkTests(unittest.TestCase):
+    def test_links_only_where_both_maps_have_the_gauge(self):
+        links = json.loads((APP/'swim-map-links.json').read_text())
+        index = json.loads((APP/'history/index.json').read_text())['stations']
+        self.assertTrue(links['stations'])
+        for key, entry in links['stations'].items():
+            self.assertTrue(index[key]['file'], key)
+            self.assertEqual(entry['anchor'], 'gauge.'+key.split(':')[1])
+        self.assertNotIn('USGS:08150000', links['stations'])  # Llano near Junction is not a swim-map gauge
+        self.assertIn('USGS:08156800', links['stations'])
+
+    def test_address_anchor_round_trips_every_station_key(self):
+        import re
+        for key in json.loads((APP/'history/index.json').read_text())['stations']:
+            anchor = key.replace(':', '.', 1)
+            self.assertRegex(anchor, r'^[A-Za-z0-9._~-]+$')  # only characters an artifact link passes through
+            m = re.match(r'^([A-Za-z-]+)\.([0-9A-Za-z-]+)$', anchor)
+            self.assertEqual(m.group(1)+':'+m.group(2), key)
+
+
 class PackagingTests(unittest.TestCase):
     def site(self, project=site.SITE):
         d = Path(tempfile.mkdtemp()); (d/'.openai').mkdir()
@@ -314,7 +334,7 @@ class PackagingTests(unittest.TestCase):
     def test_package_is_public_complete_and_linked(self):
         d = self.site(); files = site.package(d); out = d/'out'
         for page in ('index.html', 'austin.html', 'ledger.html', 'regional-snapshot.json', 'history/index.json', 'history/usgs-08150000.json', 'regional-geology.json',
-                     'geology/usgs-ha730e-fig112.gif', 'docs/REGIONAL_GEOGRAPHY.md', 'docs/REGIONAL_HISTORY.md', 'docs/REGIONAL_GEOLOGY.md', 'dist/water-state.json'):
+                     'geology/usgs-ha730e-fig112.gif', 'swim-map-links.json', 'docs/REGIONAL_GEOGRAPHY.md', 'docs/REGIONAL_HISTORY.md', 'docs/REGIONAL_GEOLOGY.md', 'dist/water-state.json'):
             self.assertTrue((out/page).is_file(), page)
         names = [str(p.relative_to(out)) for p in out.rglob('*') if p.is_file()]
         self.assertFalse([n for n in names if n.endswith(('.sqlite', '.gz', '.py', '.meta.json')) or n.startswith('.git')])
