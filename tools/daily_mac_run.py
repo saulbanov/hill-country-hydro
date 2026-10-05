@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import pathlib
 import subprocess
 import sys
@@ -19,7 +20,11 @@ from zoneinfo import ZoneInfo
 
 
 WATER = pathlib.Path(__file__).resolve().parents[1]
-SWIM = WATER.parent / "swimming-hole-alerts"
+# The swim lens clone: SWIM_REPO if set, else the sibling folder named for its repo
+# (saulbanov/austin-swim-map), else its old folder name (renamed 2026-10-05).
+SWIM = pathlib.Path(os.environ.get("SWIM_REPO") or next(
+    (p for p in (WATER.parent / "austin-swim-map", WATER.parent / "swimming-hole-alerts") if p.is_dir()),
+    WATER.parent / "austin-swim-map"))
 STATE_DIR = WATER / "data" / "raw" / "mac-daily-run"
 LOCAL_TZ = ZoneInfo("America/Chicago")
 PYTHON = pathlib.Path("/opt/homebrew/bin/python3")
