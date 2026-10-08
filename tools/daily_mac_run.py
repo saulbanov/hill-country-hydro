@@ -70,6 +70,8 @@ def plan(day: dt.date) -> list[Step]:
         python_step("water.weather_validate", w, "weather_validation", "validate"),
         python_step("water.operator_notices_collect", w, "operator_notices", "collect"),
         python_step("water.operator_notices_normalize", w, "operator_notices", "normalize"),
+        python_step("water.usdm_collect", w, "usdm", "collect"),
+        python_step("water.usdm_normalize", w, "usdm", "normalize"),
     ]
     if day.weekday() == 6:  # Sunday: refresh histories before context and publishing.
         steps.extend([
