@@ -193,6 +193,27 @@ class BackfillTests(Base):
         cdx = [t for t, u in ia.calls if "cdx/search" in u]
         self.assertGreaterEqual(cdx[1] - cdx[0], on.CDX_RETRY_WAIT, "the retry waited")
 
+    def test_cdx_falls_back_to_one_query_per_year(self):
+        ia = self.ia()
+        real = ia.fetch
+        def fetch(url):
+            if "cdx/search" in url and "from=" not in url:
+                ia.calls.append((ia.t, url)); ia.t += 0.3
+                return 503, b"<html>Temporarily Offline</html>", "HTTP 503", "text/html"
+            if "cdx/search" in url:
+                year = url.split("from=")[1][:4]
+                rows = [r for r in self.ROWS if r[0].startswith(year)]
+                ia.calls.append((ia.t, url)); ia.t += 0.3
+                return 200, cdx_body(rows), None, "application/json"
+            return real(url)
+        ia.fetch = fetch
+        self.use(ia)
+        on.FIRST_YEAR = 2019
+        self.addCleanup(setattr, on, "FIRST_YEAR", 1996)
+        self.quiet(on.backfill, pause=2.0)
+        st = json.loads((self.root / "data/model/operator-notices-backfill-state.json").read_text())["pages"]["jacobs"]
+        self.assertEqual([x["timestamp"] for x in st["planned"]], ["20200106120000", "20200115120000", "20200129120000"])
+
 
 class CollectTests(Base):
     def test_5_5_collect_is_a_daily_step_and_captures_today(self):
