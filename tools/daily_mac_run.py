@@ -136,6 +136,11 @@ def plan(day: dt.date) -> list[Step]:
         python_step("swim.tpwd_assess", s, "tpwd_alerts", "assess"),
         python_step("swim.assess", s, "monitor", "assess"),
         python_step("swim.snapshot", s, "experiment_snapshot", "--experiment", "storm-week-2026-10"),
+        # Posted-hours pages that render only in a browser (Pflugerville): render, check, publish the
+        # check file to the public map's Pages repo. Each stage logs and exits 0 on failure.
+        python_step("swim.browser_hours_collect", s, "browser_hours", "collect"),
+        python_step("swim.browser_hours_assess", s, "browser_hours", "assess"),
+        python_step("swim.browser_hours_publish", s, "browser_hours", "publish"),
         Step("swim.tests", s, (str(PYTHON), "-m", "unittest", "discover", "-s", "tests")),
     ])
     return steps
