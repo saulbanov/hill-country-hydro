@@ -147,6 +147,33 @@ class BackfillTests(Base):
         text = gzip.decompress((self.root / rows[1]["text_path"]).read_bytes()).decode()
         self.assertIn("Closed: low water", text); self.assertNotIn("var x", text, "script text is not page text")
 
+    def test_connection_refused_is_an_outage_not_a_failure(self):
+        ia = self.ia()
+        real = ia.fetch
+        ia.refuse = False
+        def fetch(url):
+            if ia.refuse and "/web/" in url:
+                ia.calls.append((ia.t, url)); ia.t += 0.3
+                return 0, b"", "[Errno 61] Connection refused", ""
+            return real(url)
+        ia.fetch = fetch
+        self.use(ia)
+        ia.refuse = True
+        rc, out = self.quiet(on.backfill, pause=2.0)
+        self.assertEqual(rc, 0); self.assertIn("STOPPED — operator_notices backfill", out)
+        st = json.loads((self.root / "data/model/operator-notices-backfill-state.json").read_text())["pages"]["jacobs"]
+        self.assertEqual(st["failed"], [], "an outage marks nothing failed")
+        self.assertEqual(st["done"], [])
+        ia.refuse = False
+        self.quiet(on.backfill, pause=2.0)
+        st = json.loads((self.root / "data/model/operator-notices-backfill-state.json").read_text())["pages"]["jacobs"]
+        self.assertEqual(len(st["done"]), 3, "the next run resumes every snapshot")
+        ia.snaps["20200129120000"] = (200, html("Closed for repairs"))
+        self.quiet(on.backfill, pause=2.0, retry_failed=True)
+        st = json.loads((self.root / "data/model/operator-notices-backfill-state.json").read_text())["pages"]["jacobs"]
+        self.assertEqual(len(st["done"]), 4, "--retry-failed asks a 5xx snapshot again")
+        self.assertEqual(st["failed"], [])
+
 
 class CollectTests(Base):
     def test_5_5_collect_is_a_daily_step_and_captures_today(self):

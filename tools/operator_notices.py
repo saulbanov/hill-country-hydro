@@ -10,7 +10,10 @@ operator_access, drought_declaration, water_restriction, burn_ban or outlook.
 for each page, keeps 200 HTML snapshots, collapses repeated digests, keeps at most one snapshot per
 page per ISO week, and fetches each ``/web/<timestamp>id_/<url>`` at one Internet Archive request
 every ``--pause`` seconds (2 s or more). Progress lives in ``data/model/operator-notices-backfill-state.json``
-after every snapshot, so a killed run resumes where it stopped. A 404 or 5xx is recorded and skipped.
+after every snapshot, so a killed run resumes where it stopped. A 404 or 5xx is recorded and skipped
+(``--retry-failed`` asks for the 5xx ones again). A refused connection or a 429 is an outage, not an
+answer: nothing is marked, and after OUTAGE_LIMIT in a row the run stops loudly and exits 0; the next
+run resumes.
 
 Every capture writes, before anything reads it:
 * ``data/raw/operator-pages/<page_id>/<stamp>-<source>.<ext>`` verbatim bytes + ``.meta.json`` (Git-ignored);
@@ -43,6 +46,7 @@ WAYBACK = "https://web.archive.org/web/{ts}id_/{url}"
 KINDS = {"operator_access", "drought_declaration", "water_restriction", "burn_ban", "outlook"}
 HTML_TYPES = ("text/html", "application/xhtml+xml", "warc/revisit")
 MIN_PAUSE = 2.0
+OUTAGE_LIMIT = 3
 
 _sleep = time.sleep
 _clock = time.monotonic
@@ -245,7 +249,11 @@ def plan_snapshots(rows: list[dict]) -> list[dict]:
     return kept
 
 
-def cdx_rows(page: dict, pause: float) -> tuple[list[dict] | None, str | None]:
+def transient(status: int) -> bool:
+    return status in (0, 429)
+
+
+def cdx_rows(page: dict, pause: float) -> tuple[list[dict] | None, str | None, int]:
     rows, key = [], None
     while True:
         q = {"url": page["url"].split("://", 1)[-1], "output": "json", "fl": "timestamp,original,statuscode,digest,mimetype",
@@ -255,28 +263,42 @@ def cdx_rows(page: dict, pause: float) -> tuple[list[dict] | None, str | None]:
         url = CDX + "?" + urlencode(q)
         status, body, err, _ = ia_fetch(url, pause)
         if status != 200:
-            return None, f"{url} ({err or f'HTTP {status}'})"
+            return None, f"{url} ({err or f'HTTP {status}'})", status
         rows += parse_cdx(body, url)
         data = json.loads(body or b"[]")
         key = data[-1][0] if data and len(data[-1]) == 1 and len(data) > 1 and data[-2] == [] else None
         if not key:
-            return rows, None
+            return rows, None, 200
 
 
-def backfill(root: Path = ROOT, pause: float = MIN_PAUSE, page_ids=None, max_fetches: int | None = None) -> int:
+def backfill(root: Path = ROOT, pause: float = MIN_PAUSE, page_ids=None, max_fetches: int | None = None,
+             retry_failed: bool = False) -> int:
     P = paths(root)
     state = load_json(P["state"], {"pages": {}})
-    fetched = 0
+    fetched, outage = 0, 0
+
+    def stop(why: str) -> int:
+        save_json(P["state"], state)
+        print(f"STOPPED — operator_notices backfill: Internet Archive unreachable {OUTAGE_LIMIT} times in a row "
+              f"(last: {why}); nothing was marked failed; rerun to resume", flush=True)
+        return 0
+
     for page in load_pages(root):
         if page_ids and page["page_id"] not in page_ids:
             continue
         st = state["pages"].setdefault(page["page_id"], {"url": page["url"], "planned": None, "done": [], "failed": []})
+        if retry_failed:
+            st["failed"] = [f for f in st["failed"] if not (500 <= f.get("status", 0) < 600)]
         if st["planned"] is None:
-            rows, err = cdx_rows(page, pause)
+            rows, err, status = cdx_rows(page, pause)
             if rows is None:
                 print(f"SKIPPED — operator_notices: {err} unreachable", flush=True)
                 note_skip(root, page["url"], f"CDX {err}")
+                outage = outage + 1 if transient(status) else 0
+                if outage >= OUTAGE_LIMIT:
+                    return stop(err)
                 continue
+            outage = 0
             st["planned"] = [{"timestamp": r["timestamp"], "original": r["original"], "digest": r["digest"]} for r in plan_snapshots(rows)]
             st["cdx_rows"] = len(rows)
             st["cdx_at"] = utcnow()
@@ -292,6 +314,13 @@ def backfill(root: Path = ROOT, pause: float = MIN_PAUSE, page_ids=None, max_fet
             url = WAYBACK.format(ts=snap["timestamp"], url=snap["original"])
             status, body, err, ctype = ia_fetch(url, pause)
             fetched += 1
+            if transient(status):
+                outage += 1
+                print(f"SKIPPED — operator_notices: {url} unreachable ({err or f'HTTP {status}'}); left for the next run", flush=True)
+                if outage >= OUTAGE_LIMIT:
+                    return stop(f"{url} ({err or status})")
+                continue
+            outage = 0
             if status != 200 or not body:
                 st["failed"].append({"timestamp": snap["timestamp"], "status": status, "reason": err or f"HTTP {status}", "at": utcnow()})
                 note_skip(root, url, err or f"HTTP {status}")
@@ -341,11 +370,13 @@ def main(argv=None) -> int:
     ap.add_argument("--pause", type=float, default=None)
     ap.add_argument("--pages", nargs="+")
     ap.add_argument("--max-fetches", type=int)
+    ap.add_argument("--retry-failed", action="store_true", help="ask again for snapshots that answered 5xx")
     a = ap.parse_args(argv)
     if a.cmd == "collect":
         return collect(pause=a.pause if a.pause is not None else 1.0)
     if a.cmd == "backfill":
-        return backfill(pause=max(a.pause or MIN_PAUSE, MIN_PAUSE), page_ids=a.pages, max_fetches=a.max_fetches)
+        return backfill(pause=max(a.pause or MIN_PAUSE, MIN_PAUSE), page_ids=a.pages, max_fetches=a.max_fetches,
+                        retry_failed=a.retry_failed)
     return normalize()
 
 
