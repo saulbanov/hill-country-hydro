@@ -1,13 +1,13 @@
 {
  "tool": "operator-notices",
  "last_success": "2026-10-08T18:33:18+00:00",
- "last_attempt": "2026-10-08T19:18:30+00:00",
+ "last_attempt": "2026-10-08T20:12:15+00:00",
  "files": [
   {
    "path": "data/normalized/operator-notices.jsonl",
-   "sha256": "b886854ab3c0394ae3b65ccf0257345e6dfc7a07ffc83ef21b9bbfb4f09d0e53",
-   "rows": 470,
-   "first": "2014-12-27T04:28:59+00:00",
+   "sha256": "fc6c3c38607cbf3d10ccc6c2ebd62e7414dbd9f62011b10a64cd3684ae3eb96b",
+   "rows": 1051,
+   "first": "2000-08-16T07:02:57+00:00",
    "last": "2026-10-08T18:42:43+00:00"
   }
  ],
@@ -166,9 +166,34 @@
    "url": "https://www.austintexas.gov/parks/locations/big-stacy-pool",
    "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Flocations%2Fbig-stacy-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=1000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
    "at": "2026-10-08T19:18:30+00:00"
+  },
+  {
+   "url": "https://web.archive.org/web/20250903000142id_/https://www.austintexas.gov/department/barton-springs-pool",
+   "reason": "HTTP Error 500: INTERNAL SERVER ERROR",
+   "at": "2026-10-08T19:55:03+00:00"
+  },
+  {
+   "url": "https://www.krausesprings.net/",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.krausesprings.net%2F&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=1000&showResumeKey=true&from=2002&to=2002 (HTTP Error 503: Service Unavailable) (by-year fallback stopped at 2002)",
+   "at": "2026-10-08T20:08:47+00:00"
+  },
+  {
+   "url": "https://parks.traviscountytx.gov/find-a-park/hamilton-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=parks.traviscountytx.gov%2Ffind-a-park%2Fhamilton-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=1000&showResumeKey=true (HTTP Error 504: Gateway Time-out)",
+   "at": "2026-10-08T20:09:48+00:00"
+  },
+  {
+   "url": "https://parks.traviscountytx.gov/parks/hamilton-pool-preserve",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=parks.traviscountytx.gov%2Fparks%2Fhamilton-pool-preserve&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=1000&showResumeKey=true&from=1996&to=1996 (HTTP Error 503: Service Unavailable) (by-year fallback stopped at 1996)",
+   "at": "2026-10-08T20:10:48+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/blanco/alert",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fblanco%2Falert&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=1000&showResumeKey=true&from=1997&to=1997 (HTTP Error 503: Service Unavailable) (by-year fallback stopped at 1997)",
+   "at": "2026-10-08T20:12:15+00:00"
   }
  ],
- "captures": 470,
+ "captures": 1051,
  "pages": {
   "austintexas-gov-department-barton-creek-greenbelt": {
    "captures": 22,
@@ -177,15 +202,15 @@
    "last": "2026-10-08T18:41:43+00:00"
   },
   "austintexas-gov-department-barton-springs-pool": {
-   "captures": 2,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:32+00:00",
+   "captures": 405,
+   "wayback": 403,
+   "first": "2012-02-13T01:47:11+00:00",
    "last": "2026-10-08T18:41:44+00:00"
   },
   "austintexas-gov-parks-emma-long-metropolitan-park": {
-   "captures": 2,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:33+00:00",
+   "captures": 7,
+   "wayback": 5,
+   "first": "2026-03-19T15:03:44+00:00",
    "last": "2026-10-08T18:41:46+00:00"
   },
   "austintexas-gov-parks-locations-big-stacy-pool": {
@@ -231,15 +256,15 @@
    "last": "2026-10-08T18:41:56+00:00"
   },
   "austintexas-gov-water-austin-water-drought-response": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:41:57+00:00",
+   "captures": 4,
+   "wayback": 3,
+   "first": "2026-03-19T15:19:34+00:00",
    "last": "2026-10-08T18:41:57+00:00"
   },
   "bseacd-org": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:42:00+00:00",
+   "captures": 17,
+   "wayback": 16,
+   "first": "2000-08-16T07:02:57+00:00",
    "last": "2026-10-08T18:42:00+00:00"
   },
   "cpc-ncep-noaa-gov-sdo-summary": {
@@ -254,11 +279,23 @@
    "first": "2026-10-08T18:42:05+00:00",
    "last": "2026-10-08T18:42:05+00:00"
   },
+  "hayscountytx-com-departments-parks-jacobs-well-natural-area": {
+   "captures": 93,
+   "wayback": 93,
+   "first": "2019-07-23T21:24:04+00:00",
+   "last": "2024-05-27T06:22:08+00:00"
+  },
   "hayscountytx-gov-449-things-to-do": {
    "captures": 1,
    "wayback": 0,
    "first": "2026-10-08T18:32:47+00:00",
    "last": "2026-10-08T18:32:47+00:00"
+  },
+  "hayscountytx-gov-jacobs-well-natural-area": {
+   "captures": 8,
+   "wayback": 8,
+   "first": "2024-12-15T21:22:05+00:00",
+   "last": "2026-06-25T20:18:52+00:00"
   },
   "krausesprings-net": {
    "captures": 2,
@@ -315,9 +352,9 @@
    "last": "2026-10-08T18:42:24+00:00"
   },
   "tpwd-texas-gov-state-parks-garner": {
-   "captures": 2,
-   "wayback": 0,
-   "first": "2026-10-08T18:33:01+00:00",
+   "captures": 55,
+   "wayback": 53,
+   "first": "2014-03-25T02:20:09+00:00",
    "last": "2026-10-08T18:42:25+00:00"
   },
   "tpwd-texas-gov-state-parks-garner-alert": {
