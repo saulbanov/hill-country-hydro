@@ -43,7 +43,12 @@ COUNTY_ELEMENTS = {
     "tmincy": ("tmin", "degF", "county", {-99.99, -99.9}),
     "tmpccy": ("tmpc", "degF", "county", {-99.99, -99.9}),
 }
-ELEMENTS = dict(COUNTY_ELEMENTS)
+# Drought intake (Tier 1, Saul 2026-10-08): collected with no consumer yet. County Palmer indices and
+# climate-division standardized precipitation indices; NCDC ids map to FIPS, the NCDC id kept in a column.
+DROUGHT_COUNTY = {code: (code[:4], "index", "county_drought", {-99.99}) for code in ("pdsicy", "phdicy", "pmdicy", "zndxcy")}
+DIVISION = {code: (code[:4], "index", "division", {-99.99})
+            for code in ("pdsidv", "sp01dv", "sp02dv", "sp03dv", "sp06dv", "sp09dv", "sp12dv", "sp24dv")}
+ELEMENTS = {**COUNTY_ELEMENTS, **DROUGHT_COUNTY, **DIVISION}
 MAPPING_FILE = "county-to-climdivs.txt"
 
 
@@ -90,12 +95,25 @@ def counties(root: Path) -> list[str]:
     return json.loads(p.read_text())["counties"]
 
 
+def division_ids(root: Path) -> list[str] | None:
+    """Climate divisions of the listed counties, from the captured NOAA mapping; None before it exists."""
+    m = load_manifest(root)
+    rec = next((r for r in m.get("raw", []) if r["file"] == MAPPING_FILE and r.get("noaa_file_date") == m.get("noaa_file_date")), None)
+    if not rec or not (root / rec["capture_path"]).is_file():
+        return None
+    mapping = fips_to_ncdc(read_capture(root, rec), MAPPING_FILE)
+    return sorted({mapping[f]["climdiv"] for f in counties(root) if f in mapping})
+
+
 def expected_outputs(root: Path, elements=None) -> list[Path]:
     h = paths(root)["history"]
-    out = []
+    out, divs = [], None
     for code, (name, _u, kind, _s) in (elements or ELEMENTS).items():
-        if kind == "county":
+        if kind in ("county", "county_drought"):
             out += [h / f"climdiv-{f}-{name}-monthly.csv" for f in counties(root)]
+        elif kind == "division":
+            divs = division_ids(root) if divs is None else divs
+            out += [h / f"climdiv-div{d}-{name}-monthly.csv" for d in divs] if divs else [h / "climdiv-div-pending"]
     return out
 
 
@@ -211,6 +229,34 @@ def parse_county_lines(lines: list[str], source: str, sentinels: set, wanted_ncd
     return out
 
 
+def parse_division_lines(lines: list[str], source: str, sentinels: set, known: set, wanted: set) -> dict[str, list]:
+    """Division records: state(2) division(2) element(2) year(4), then 12 values of 7 characters.
+    A division id not in NOAA's county-to-division mapping stops with <file>:<line>."""
+    out: dict[str, list] = {}
+    for i, line in enumerate(lines, 1):
+        if not line.strip():
+            continue
+        if len(line.rstrip("\n")) < 94:
+            raise ValueError(f"{source}:{i}: record is {len(line)} characters, expected 94 (truncated file?)")
+        head = line[:10]
+        if not head.isdigit():
+            raise ValueError(f"{source}:{i}: record id {head!r} is not numeric")
+        div, year = head[:4], int(head[6:10])
+        if div not in known:
+            raise ValueError(f"{source}:{i}: climate division {div} is not in NOAA {MAPPING_FILE}")
+        if div not in wanted:
+            continue
+        rows = out.setdefault(div, [])
+        for mth in range(12):
+            text = line[10 + 7 * mth: 17 + 7 * mth]
+            try:
+                v = float(text)
+            except ValueError:
+                raise ValueError(f"{source}:{i}: month {mth + 1} value {text!r} is not a number") from None
+            rows.append((f"{year:04d}-{mth + 1:02d}", None if round(v, 2) in sentinels else v, text.strip()))
+    return out
+
+
 def write_csv(path: Path, header: list[str], rows: list[list]) -> dict:
     text = ",".join(header) + "\n" + "".join(",".join("" if c is None else str(c) for c in r) + "\n" for r in rows)
     data = text.encode()
@@ -238,16 +284,37 @@ def normalize(root: Path = ROOT, elements=None) -> int:
         raise ValueError(f"{P['counties']}: county FIPS {unknown} not in NOAA {MAPPING_FILE}")
     P["history"].mkdir(parents=True, exist_ok=True)
     files = []
+    by_ncdc = {v["ncdc"]: k for k, v in mapping.items()}
+    divisions = sorted({mapping[f]["climdiv"] for f in wanted})
     for code, (name, unit, kind, sentinels) in elements.items():
-        if kind != "county":
-            continue
         fname = f"climdiv-{code}-v1.0.0-{date}"
-        parsed = parse_county_lines(read_capture(root, recs[fname]), fname, sentinels, {mapping[f]["ncdc"] for f in wanted})
+        lines = read_capture(root, recs[fname])
+        if kind == "division":
+            parsed = parse_division_lines(lines, fname, sentinels, {v["climdiv"] for v in mapping.values()}, set(divisions))
+            for d in divisions:
+                rows = [[mo, v, raw, unit, d, fname] for mo, v, raw in parsed.get(d, []) if v is not None]
+                if not rows:
+                    raise ValueError(f"{fname}: no records for climate division {d}")
+                info = write_csv(P["history"] / f"climdiv-div{d}-{name}-monthly.csv",
+                                 ["month", "value", "raw_value", "unit", "ncdc_id", "source_file"], rows)
+                info["path"] = str(Path(info["path"]).relative_to(root))
+                files.append(info)
+            continue
+        if kind == "county_drought":
+            for i, line in enumerate(lines, 1):  # every county line must map to a FIPS code
+                if line.strip() and line[:5].isdigit() and line[:5] not in by_ncdc:
+                    raise ValueError(f"{fname}:{i}: NCDC county id {line[:5]} is not in NOAA {MAPPING_FILE}")
+        parsed = parse_county_lines(lines, fname, sentinels, {mapping[f]["ncdc"] for f in wanted})
         for f in wanted:
-            rows = [[mo, v, raw, unit, fname] for mo, v, raw in parsed.get(mapping[f]["ncdc"], []) if v is not None]
+            ncdc = mapping[f]["ncdc"]
+            rows = [[mo, v, raw, unit, fname] for mo, v, raw in parsed.get(ncdc, []) if v is not None]
             if not rows:
-                raise ValueError(f"{fname}: no records for county {f} (NCDC {mapping[f]['ncdc']})")
-            info = write_csv(P["history"] / f"climdiv-{f}-{name}-monthly.csv", ["month", "value", "raw_value", "unit", "source_file"], rows)
+                raise ValueError(f"{fname}: no records for county {f} (NCDC {ncdc})")
+            header = ["month", "value", "raw_value", "unit", "source_file"]
+            if kind == "county_drought":
+                rows = [[mo, v, raw, u, ncdc, src] for mo, v, raw, u, src in rows]
+                header = ["month", "value", "raw_value", "unit", "ncdc_id", "source_file"]
+            info = write_csv(P["history"] / f"climdiv-{f}-{name}-monthly.csv", header, rows)
             info["path"] = str(Path(info["path"]).relative_to(root))
             files.append(info)
     m.update(files=files, normalized_from=date, last_success=utcnow())

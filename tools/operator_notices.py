@@ -253,15 +253,23 @@ def transient(status: int) -> bool:
     return status in (0, 429)
 
 
+CDX_PAGE = 1000
+CDX_RETRY_WAIT = 20.0
+
+
 def cdx_rows(page: dict, pause: float) -> tuple[list[dict] | None, str | None, int]:
+    """Pages of CDX_PAGE rows; a 503 (the index's overload answer) waits CDX_RETRY_WAIT and asks once more."""
     rows, key = [], None
     while True:
         q = {"url": page["url"].split("://", 1)[-1], "output": "json", "fl": "timestamp,original,statuscode,digest,mimetype",
-             "limit": "5000", "showResumeKey": "true"}
+             "limit": str(CDX_PAGE), "showResumeKey": "true"}
         if key:
             q["resumeKey"] = key
         url = CDX + "?" + urlencode(q)
         status, body, err, _ = ia_fetch(url, pause)
+        if status == 503:
+            _sleep(CDX_RETRY_WAIT)
+            status, body, err, _ = ia_fetch(url, pause)
         if status != 200:
             return None, f"{url} ({err or f'HTTP {status}'})", status
         rows += parse_cdx(body, url)

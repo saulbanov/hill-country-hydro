@@ -174,6 +174,25 @@ class BackfillTests(Base):
         self.assertEqual(len(st["done"]), 4, "--retry-failed asks a 5xx snapshot again")
         self.assertEqual(st["failed"], [])
 
+    def test_cdx_503_is_retried_once_after_a_wait(self):
+        ia = self.ia()
+        real = ia.fetch
+        seen = {"n": 0}
+        def fetch(url):
+            if "cdx/search" in url and "resumeKey" not in url and seen["n"] == 0:
+                seen["n"] += 1
+                ia.calls.append((ia.t, url)); ia.t += 0.3
+                return 503, b"<html>Temporarily Offline</html>", "HTTP 503", "text/html"
+            return real(url)
+        ia.fetch = fetch
+        self.use(ia)
+        t0 = ia.t
+        self.quiet(on.backfill, pause=2.0)
+        st = json.loads((self.root / "data/model/operator-notices-backfill-state.json").read_text())["pages"]["jacobs"]
+        self.assertIsNotNone(st["planned"], "the retry planned the page")
+        cdx = [t for t, u in ia.calls if "cdx/search" in u]
+        self.assertGreaterEqual(cdx[1] - cdx[0], on.CDX_RETRY_WAIT, "the retry waited")
+
 
 class CollectTests(Base):
     def test_5_5_collect_is_a_daily_step_and_captures_today(self):

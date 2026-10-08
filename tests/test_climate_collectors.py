@@ -9,6 +9,22 @@ def county_line(ncdc, element, year, values):
     return f"{ncdc}{element}{year:04d}" + "".join(f"{v:7.2f}" for v in values) + "\n"
 
 
+def division_line(div, element, year, values):
+    return f"{div}{element}{year:04d}" + "".join(f"{v:7.2f}" for v in values) + "\n"
+
+
+def drought_files(county_extra="", division_extra=""):
+    out = {}
+    for code, el in (("pdsicy", "05"), ("phdicy", "06"), ("pmdicy", "08"), ("zndxcy", "07")):
+        body = "".join(county_line(n, el, 2023, [-1.5] * 11 + [-99.99]) for n in ("41209", "41453")) + county_extra
+        out[f"climdiv-{code}-v1.0.0-{DATE}"] = (200, body.encode())
+    for code, el in (("pdsidv", "05"), ("sp01dv", "71"), ("sp02dv", "72"), ("sp03dv", "73"), ("sp06dv", "74"),
+                     ("sp09dv", "75"), ("sp12dv", "76"), ("sp24dv", "77")):
+        body = division_line("4107", el, 2023, [0.5] * 12) + division_line("4106", el, 2023, [0.1] * 12) + division_extra
+        out[f"climdiv-{code}-v1.0.0-{DATE}"] = (200, body.encode())
+    return out
+
+
 def fake_server(files):
     """fetch() stand-in: url suffix -> (status, bytes); anything else is a network failure."""
     calls = []
@@ -32,7 +48,7 @@ class Fixture(unittest.TestCase):
         self.addCleanup(setattr, gh, "fetch", self.orig_gh)
 
     def climdiv_files(self, pcpn_body=None):
-        mapping = b"header line\n\nPOSTAL_FIPS_ID NCDC_FIPS_ID CLIMDIV_ID\n48209 41209 4107\n48453 41453 4107\n01001 01001 0101\n"
+        mapping = b"header line\n\nPOSTAL_FIPS_ID NCDC_FIPS_ID CLIMDIV_ID\n48209 41209 4107\n48453 41453 4107\n48001 41001 4106\n01001 01001 0101\n"
         pc = pcpn_body or (county_line("41209", "01", 2023, [1.0, 2.0, 0.5, 0, 0, 0, 0.1, 0.0, 3.3, 1, 1, 1])
                            + county_line("41453", "01", 2023, [2.0] * 12)
                            + county_line("41209", "01", 2026, [1.0] * 9 + [-9.99, -9.99, -9.99])
@@ -40,9 +56,11 @@ class Fixture(unittest.TestCase):
                            + county_line("01001", "01", 2023, [9.0] * 12)).encode()
         temp = lambda base: (county_line("41209", "27", 2026, [base] * 9 + [-99.99] * 3)
                              + county_line("41453", "27", 2026, [base] * 9 + [-99.99] * 3)).encode()
-        return {"procdate.txt": (200, DATE.encode() + b"\n"), "county-to-climdivs.txt": (200, mapping),
-                f"climdiv-pcpncy-v1.0.0-{DATE}": (200, pc), f"climdiv-tmaxcy-v1.0.0-{DATE}": (200, temp(90.0)),
-                f"climdiv-tmincy-v1.0.0-{DATE}": (200, temp(70.0)), f"climdiv-tmpccy-v1.0.0-{DATE}": (200, temp(80.0))}
+        files = {"procdate.txt": (200, DATE.encode() + b"\n"), "county-to-climdivs.txt": (200, mapping),
+                 f"climdiv-pcpncy-v1.0.0-{DATE}": (200, pc), f"climdiv-tmaxcy-v1.0.0-{DATE}": (200, temp(90.0)),
+                 f"climdiv-tmincy-v1.0.0-{DATE}": (200, temp(70.0)), f"climdiv-tmpccy-v1.0.0-{DATE}": (200, temp(80.0))}
+        files.update(drought_files())
+        return files
 
 
 class NClimDivTests(Fixture):
