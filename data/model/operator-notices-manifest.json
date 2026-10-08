@@ -1,13 +1,13 @@
 {
  "tool": "operator-notices",
  "last_success": "2026-10-08T18:33:18+00:00",
- "last_attempt": "2026-10-08T18:33:18+00:00",
+ "last_attempt": "2026-10-08T19:16:17+00:00",
  "files": [
   {
    "path": "data/normalized/operator-notices.jsonl",
-   "sha256": "e8bf5261df1ea5b03480c95ef2eb65cf722c02a7216750b8a8dfde078657845a",
-   "rows": 33,
-   "first": "2026-10-08T18:32:30+00:00",
+   "sha256": "80c6a39060fe62a3cc869f39b5bd58c6ccfe3efaab294100431a0a02e5f52792",
+   "rows": 290,
+   "first": "2014-12-27T04:28:59+00:00",
    "last": "2026-10-08T18:33:17+00:00"
   }
  ],
@@ -21,14 +21,149 @@
    "url": "https://tpwd.texas.gov/state-parks/blanco/alert",
    "reason": "HTTP Error 400: Bad Request",
    "at": "2026-10-08T18:33:00+00:00"
+  },
+  {
+   "url": "https://web.archive.org/web/20260115211057id_/https://www.austintexas.gov/department/barton-creek-greenbelt",
+   "reason": "[Errno 61] Connection refused",
+   "at": "2026-10-08T18:34:44+00:00"
+  },
+  {
+   "url": "https://web.archive.org/web/20260217152710id_/https://www.austintexas.gov/department/barton-creek-greenbelt",
+   "reason": "[Errno 61] Connection refused",
+   "at": "2026-10-08T18:34:46+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/department/barton-springs-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fdepartment%2Fbarton-springs-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:34:48+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/emma-long-metropolitan-park",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Femma-long-metropolitan-park&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:34:50+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/locations/big-stacy-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Flocations%2Fbig-stacy-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:34:52+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/locations/commons-ford-ranch",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Flocations%2Fcommons-ford-ranch&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:34:54+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/locations/deep-eddy-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Flocations%2Fdeep-eddy-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:34:56+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/locations/little-stacy-wading-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Flocations%2Flittle-stacy-wading-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:34:58+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/parks-and-recreation-facilities-closures",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Fparks-and-recreation-facilities-closures&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true ([Errno 61] Connection refused)",
+   "at": "2026-10-08T18:35:00+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/department/barton-springs-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fdepartment%2Fbarton-springs-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T18:37:09+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/emma-long-metropolitan-park",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Femma-long-metropolitan-park&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T18:37:14+00:00"
+  },
+  {
+   "url": "https://www.austintexas.gov/parks/locations/big-stacy-pool",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.austintexas.gov%2Fparks%2Flocations%2Fbig-stacy-pool&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T18:37:19+00:00"
+  },
+  {
+   "url": "https://www.krausesprings.net/",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.krausesprings.net%2F&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T18:42:57+00:00"
+  },
+  {
+   "url": "https://parks.traviscountytx.gov/parks/hamilton-pool-preserve",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=parks.traviscountytx.gov%2Fparks%2Fhamilton-pool-preserve&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T18:47:15+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/blanco/alert",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fblanco%2Falert&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:06:34+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/garner",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fgarner&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:06:40+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/garner/alert",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fgarner%2Falert&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:06:45+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/guadalupe-river",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fguadalupe-river&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:06:50+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/inks-lake",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Finks-lake&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:08:39+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/inks-lake/alert",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Finks-lake%2Falert&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:08:44+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/mckinney-falls",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fmckinney-falls&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:08:50+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/mckinney-falls/alert",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fmckinney-falls%2Falert&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:08:55+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/pedernales-falls",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fpedernales-falls&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:09:00+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/south-llano-river",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fsouth-llano-river&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:11:31+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/south-llano-river/alert",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=tpwd.texas.gov%2Fstate-parks%2Fsouth-llano-river%2Falert&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 504: Gateway Time-out)",
+   "at": "2026-10-08T19:12:31+00:00"
+  },
+  {
+   "url": "https://www.txst.edu/about/history-traditions/sewell-park.html",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=www.txst.edu%2Fabout%2Fhistory-traditions%2Fsewell-park.html&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:12:36+00:00"
+  },
+  {
+   "url": "https://wimberleyparksandrec.com/blog/give-nature-a-chance-the-end-of-swim-season-at-blue-hole/",
+   "reason": "CDX https://web.archive.org/cdx/search/cdx?url=wimberleyparksandrec.com%2Fblog%2Fgive-nature-a-chance-the-end-of-swim-season-at-blue-hole%2F&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cdigest%2Cmimetype&limit=5000&showResumeKey=true (HTTP Error 503: Service Unavailable)",
+   "at": "2026-10-08T19:12:42+00:00"
   }
  ],
- "captures": 33,
+ "captures": 290,
  "pages": {
   "austintexas-gov-department-barton-creek-greenbelt": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:30+00:00",
+   "captures": 21,
+   "wayback": 20,
+   "first": "2021-03-02T14:12:08+00:00",
    "last": "2026-10-08T18:32:30+00:00"
   },
   "austintexas-gov-department-barton-springs-pool": {
@@ -50,39 +185,39 @@
    "last": "2026-10-08T18:32:35+00:00"
   },
   "austintexas-gov-parks-locations-commons-ford-ranch": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:37+00:00",
+   "captures": 5,
+   "wayback": 4,
+   "first": "2026-03-19T15:04:01+00:00",
    "last": "2026-10-08T18:32:37+00:00"
   },
   "austintexas-gov-parks-locations-deep-eddy-pool": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:38+00:00",
+   "captures": 14,
+   "wayback": 13,
+   "first": "2026-03-19T15:04:23+00:00",
    "last": "2026-10-08T18:32:38+00:00"
   },
   "austintexas-gov-parks-locations-little-stacy-wading-pool": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:39+00:00",
+   "captures": 4,
+   "wayback": 3,
+   "first": "2026-03-19T15:04:54+00:00",
    "last": "2026-10-08T18:32:39+00:00"
   },
   "austintexas-gov-parks-parks-and-recreation-facilities-closures": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:41+00:00",
+   "captures": 10,
+   "wayback": 9,
+   "first": "2026-03-19T17:34:08+00:00",
    "last": "2026-10-08T18:32:41+00:00"
   },
   "austintexas-gov-ps-af-parks-locations-barton-creek-greenbelt": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:44+00:00",
+   "captures": 2,
+   "wayback": 1,
+   "first": "2026-03-31T16:36:52+00:00",
    "last": "2026-10-08T18:32:44+00:00"
   },
   "austintexas-gov-services-visit-barton-springs-pool": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:45+00:00",
+   "captures": 14,
+   "wayback": 13,
+   "first": "2026-03-19T14:47:14+00:00",
    "last": "2026-10-08T18:32:45+00:00"
   },
   "hayscountytx-gov-449-things-to-do": {
@@ -98,15 +233,15 @@
    "last": "2026-10-08T18:32:48+00:00"
   },
   "newbraunfels-gov-3368-comal-river": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:50+00:00",
+   "captures": 24,
+   "wayback": 23,
+   "first": "2022-08-09T14:22:06+00:00",
    "last": "2026-10-08T18:32:50+00:00"
   },
   "newbraunfels-gov-3369-guadalupe-river": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:51+00:00",
+   "captures": 21,
+   "wayback": 20,
+   "first": "2022-10-01T02:32:08+00:00",
    "last": "2026-10-08T18:32:51+00:00"
   },
   "parks-traviscountytx-gov-parks-hamilton-pool-preserve": {
@@ -116,21 +251,21 @@
    "last": "2026-10-08T18:32:53+00:00"
   },
   "sanmarcostx-gov-facilities-facility-details-city-park-35": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:55+00:00",
+   "captures": 45,
+   "wayback": 44,
+   "first": "2019-07-17T14:34:41+00:00",
    "last": "2026-10-08T18:32:55+00:00"
   },
   "sanmarcostx-gov-facilities-facility-details-riovistapark-41": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:57+00:00",
+   "captures": 2,
+   "wayback": 1,
+   "first": "2026-01-16T23:40:10+00:00",
    "last": "2026-10-08T18:32:57+00:00"
   },
   "tpwd-texas-gov-state-parks-blanco": {
-   "captures": 1,
-   "wayback": 0,
-   "first": "2026-10-08T18:32:58+00:00",
+   "captures": 107,
+   "wayback": 106,
+   "first": "2014-12-27T04:28:59+00:00",
    "last": "2026-10-08T18:32:58+00:00"
   },
   "tpwd-texas-gov-state-parks-garner": {
