@@ -80,7 +80,14 @@ def plan(day: dt.date) -> list[Step]:
             python_step("water.nclimdiv_normalize", w, "nclimdiv", "normalize"),
             python_step("water.ghcn_collect", w, "ghcn_daily", "collect"),
             python_step("water.ghcn_normalize", w, "ghcn_daily", "normalize"),
+            python_step("water.field_measurements_collect", w, "usgs_field_measurements", "collect"),
+            python_step("water.field_measurements_normalize", w, "usgs_field_measurements", "normalize"),
         ])
+        if day.day <= 7:  # first Sunday of the month: TWDB drillers' reports (one ~150 MB file)
+            steps.extend([
+                python_step("water.twdb_gwuse_collect", w, "twdb_groundwater_use", "collect"),
+                python_step("water.twdb_gwuse_normalize", w, "twdb_groundwater_use", "normalize"),
+            ])
     steps.extend([
         python_step("water.hydro_context", w, "hydro_context"),
         python_step("water.publish_bundle", w, "publish_bundle"),

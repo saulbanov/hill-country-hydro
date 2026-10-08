@@ -1,0 +1,62 @@
+{
+ "tool": "usgs-field-measurements",
+ "last_success": "2026-10-08T18:27:12+00:00",
+ "last_attempt": "2026-10-08T18:27:09+00:00",
+ "stations": {
+  "08170990": {
+   "retrieved_at": "2026-10-08T18:27:07+00:00",
+   "pages": [
+    {
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/field-measurements/items?f=json&monitoring_location_id=USGS-08170990&limit=10000",
+     "sha256": "8c3be8cc5785aeedf1332e5104182b9c925b630fdd2310b2592d7a060d320f1b",
+     "bytes": 810520,
+     "features": 712
+    }
+   ],
+   "sha256": "e3e4acdd9be54da9a38c7fed63b549e9285b8f74d7d230bbe372ce651add20ef",
+   "bytes": 810522,
+   "raw_path": "data/raw/usgs-field/08170990/20261008T182707Z.json",
+   "capture_path": "data/captures/usgs-field/08170990/field-measurements.json.gz",
+   "capture_sha256": "5386e73bfb6d7781e75cb3b98dd1bd88ea64ca2259190d4232bbd59e66c1ba04"
+  },
+  "08155500": {
+   "retrieved_at": "2026-10-08T18:27:09+00:00",
+   "pages": [
+    {
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/field-measurements/items?f=json&monitoring_location_id=USGS-08155500&limit=10000",
+     "sha256": "5f1f2c9a6946d52f767711b43d471817f6cd038fa133234ee9dffdfee05a8142",
+     "bytes": 1681853,
+     "features": 1485
+    }
+   ],
+   "sha256": "3d642bc1d712828843f253172dc4f0b7b6551891cf763f4cf0ec5a05ea89d59c",
+   "bytes": 1681855,
+   "raw_path": "data/raw/usgs-field/08155500/20261008T182709Z.json",
+   "capture_path": "data/captures/usgs-field/08155500/field-measurements.json.gz",
+   "capture_sha256": "4925eeb43eefa0901e996b7fba452f510ffab2b2cce6d02d9e93256e972d520f"
+  }
+ },
+ "files": [
+  {
+   "station": "08170990",
+   "path": "data/history/08170990-field-measurements.csv",
+   "sha256": "ca2bee0024169895d1240741e10c8602ef19291b1306f512f177032637640b80",
+   "rows": 712,
+   "first": "2005-04-23",
+   "last": "2026-10-07",
+   "non_numeric_values": 0,
+   "note": null
+  },
+  {
+   "station": "08155500",
+   "path": "data/history/08155500-field-measurements.csv",
+   "sha256": "b7f847b33a0e54e6092c3f3ddf6b598101f3157af031559d784224acee7da647",
+   "rows": 1485,
+   "first": "1894-01-01",
+   "last": "2026-08-28",
+   "non_numeric_values": 0,
+   "note": null
+  }
+ ],
+ "skipped": []
+}
