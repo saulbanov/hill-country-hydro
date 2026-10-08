@@ -257,12 +257,31 @@ CDX_PAGE = 1000
 CDX_RETRY_WAIT = 20.0
 
 
+FIRST_YEAR = 1996
+
+
 def cdx_rows(page: dict, pause: float) -> tuple[list[dict] | None, str | None, int]:
+    """The whole index for a page; when that query keeps failing with a 503, one small query per year."""
+    rows, err, status = _cdx_query(page, pause)
+    if rows is not None or status != 503:
+        return rows, err, status
+    out = []
+    for year in range(FIRST_YEAR, dt.datetime.now(dt.timezone.utc).year + 1):
+        yr, yerr, ystatus = _cdx_query(page, pause, year)
+        if yr is None:
+            return None, f"{yerr} (by-year fallback stopped at {year})", ystatus
+        out += yr
+    return out, None, 200
+
+
+def _cdx_query(page: dict, pause: float, year: int | None = None) -> tuple[list[dict] | None, str | None, int]:
     """Pages of CDX_PAGE rows; a 503 (the index's overload answer) waits CDX_RETRY_WAIT and asks once more."""
     rows, key = [], None
     while True:
         q = {"url": page["url"].split("://", 1)[-1], "output": "json", "fl": "timestamp,original,statuscode,digest,mimetype",
              "limit": str(CDX_PAGE), "showResumeKey": "true"}
+        if year:
+            q.update({"from": str(year), "to": str(year)})
         if key:
             q["resumeKey"] = key
         url = CDX + "?" + urlencode(q)
