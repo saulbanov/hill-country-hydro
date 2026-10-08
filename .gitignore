@@ -1,7 +1,9 @@
 # Raw provider bytes and local indexes stay local; their checksums ride in data/captures and the manifests.
-data/raw/
-data/normalized/
-data/parsed/
+# Slashless: the pin and the shared checkout link these to ~/Documents/job-data/hill-country-hydro/,
+# and a pattern ending in / does not match a symlink.
+/data/raw
+/data/normalized
+/data/parsed
 __pycache__/
 */__pycache__/
 .DS_Store

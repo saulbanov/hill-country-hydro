@@ -17,6 +17,13 @@ reading means for a person.
 - **Official sources only; no paid API, no LLM in the loop, no deployment or notifications from here.**
 - **No git commits without Saul's explicit OK.** The daily routine's own commits were authorized on
   2026-09-29 and extended to this repo on 2026-10-01.
+- **The 6:57 run runs from a pin, never from this checkout (2026-10-08).** `~/Documents/runtime/hill-country-hydro`
+  and `~/Documents/runtime/austin-swim-map` are clones on their own `runtime/*` branches; never edit or commit in
+  them. Code on `main` reaches the run only through `tools/daily_mac_run.py --promote`, which any session may run
+  once its change is on `origin/main` and tests pass. If you commit a file the run writes (`dist/`, `app/*.json`,
+  `data/captures/`, `data/history/`, `data/model/`), promote before the next 6:57, or that day's landing stops on the
+  file. `data/raw`, `data/normalized` and `data/parsed` are links into `~/Documents/job-data/hill-country-hydro/`,
+  the store the job also writes. Details: `tools/README.md`.
 - **Cloud sessions deliver bytes:** a cloud run exports its raw captures under
   `_cloud-captures/<session>-<date>/` with a spool-format `manifest.jsonl`; a local session restores them.
 - **Gentle with providers.** USGS: pause between requests. EAA: 3–4 s pauses, stop after repeated
