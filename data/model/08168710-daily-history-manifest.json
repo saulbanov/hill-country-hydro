@@ -1,0 +1,249 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
+  "station_id": "USGS-08168710",
+  "station": {
+    "monitoring_location_name": "Comal Spgs at New Braunfels, TX",
+    "site_type": "Spring",
+    "hydrologic_unit_code": "121002020106",
+    "drainage_area": null,
+    "contributing_drainage_area": null,
+    "altitude": 582.8,
+    "vertical_datum": "NGVD29",
+    "county_name": "Comal County",
+    "coordinates_lon_lat": [
+      -98.1225085412868,
+      29.7060578784325
+    ]
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08168710&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+    "retrieved_at": "2026-10-08T18:08:31.975651+00:00",
+    "status": 200,
+    "sha256": "99babc6ea9a9b20ecfe4f190a3e0eeedd0e75023c832ad9585c3b411a808039f",
+    "bytes": 19544341,
+    "feature_count": 36011,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08168710/20261008T180831975651Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08168710/20261008T180831975651Z-daily-00060-00003.json.gz"
+  },
+  "metadata_requests": {
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08168710&limit=1",
+      "retrieved_at": "2026-10-08T18:08:21.853579+00:00",
+      "status": 200,
+      "sha256": "f142047b60be247c2544a74f25ea1982c6740fca71f02db856debea6bf0abbcc",
+      "raw_path": "data/raw/usgs-daily/08168710/20261008T180821853579Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08168710/20261008T180821853579Z-location.json.gz"
+    },
+    "time_series_metadata": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08168710&limit=1000&skipGeometry=true",
+      "retrieved_at": "2026-10-08T18:08:24.154516+00:00",
+      "status": 200,
+      "sha256": "790f154068cc7b56bc6a439311da6dd1b5a14070eeffe915d6736c183fa5a85b",
+      "raw_path": "data/raw/usgs-daily/08168710/20261008T180824154516Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08168710/20261008T180824154516Z-timeseries-metadata.json.gz"
+    }
+  },
+  "complete_response": true,
+  "normalized_csv": "data/history/08168710-00060-daily-mean.csv",
+  "series": {
+    "parameter_code": "00060",
+    "statistic_id": "00003",
+    "meaning": "daily mean discharge, ft^3/s; a daily mean is not an instantaneous reading and hides within-day peaks",
+    "time_series_ids": [
+      "3555ce159bfb4dfab98e9e9b7d12f7e6"
+    ],
+    "first_day": "1927-12-19",
+    "last_day": "2026-10-06",
+    "returned_days": 36011,
+    "numeric_days": 36011,
+    "non_numeric_days": 0,
+    "approval_counts": {
+      "Approved": 35732,
+      "Provisional": 279
+    },
+    "qualifier_counts": {
+      "[]": 35256,
+      "[\"ESTIMATED\"]": 755
+    },
+    "zero_days": 144
+  },
+  "station_series_inventory_00060_00065": [
+    {
+      "id": "3555ce159bfb4dfab98e9e9b7d12f7e6",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00003",
+      "computation_identifier": "Mean",
+      "computation_period_identifier": "Daily",
+      "begin": "1927-12-19T06:00:00+00:00",
+      "end": "2026-10-05T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    }
+  ],
+  "gaps": {
+    "count": 30,
+    "missing_days_total": 76,
+    "calendar_gaps": [
+      {
+        "after": "1928-02-20",
+        "before": "1928-02-25",
+        "missing_days": 4
+      },
+      {
+        "after": "1928-03-08",
+        "before": "1928-03-13",
+        "missing_days": 4
+      },
+      {
+        "after": "1928-05-12",
+        "before": "1928-05-15",
+        "missing_days": 2
+      },
+      {
+        "after": "1928-06-12",
+        "before": "1928-06-17",
+        "missing_days": 4
+      },
+      {
+        "after": "1929-05-23",
+        "before": "1929-05-27",
+        "missing_days": 3
+      },
+      {
+        "after": "1929-05-27",
+        "before": "1929-06-02",
+        "missing_days": 5
+      },
+      {
+        "after": "1929-07-04",
+        "before": "1929-07-09",
+        "missing_days": 4
+      },
+      {
+        "after": "1930-05-05",
+        "before": "1930-05-08",
+        "missing_days": 2
+      },
+      {
+        "after": "1930-06-12",
+        "before": "1930-06-14",
+        "missing_days": 1
+      },
+      {
+        "after": "1930-06-14",
+        "before": "1930-06-18",
+        "missing_days": 3
+      },
+      {
+        "after": "1930-10-06",
+        "before": "1930-10-09",
+        "missing_days": 2
+      },
+      {
+        "after": "1930-10-12",
+        "before": "1930-10-14",
+        "missing_days": 1
+      },
+      {
+        "after": "1931-04-28",
+        "before": "1931-05-04",
+        "missing_days": 5
+      },
+      {
+        "after": "1931-05-06",
+        "before": "1931-05-09",
+        "missing_days": 2
+      },
+      {
+        "after": "1931-07-17",
+        "before": "1931-07-20",
+        "missing_days": 2
+      },
+      {
+        "after": "1932-04-27",
+        "before": "1932-05-01",
+        "missing_days": 3
+      },
+      {
+        "after": "1932-09-23",
+        "before": "1932-09-25",
+        "missing_days": 1
+      },
+      {
+        "after": "2017-04-16",
+        "before": "2017-04-18",
+        "missing_days": 1
+      },
+      {
+        "after": "2018-07-06",
+        "before": "2018-07-10",
+        "missing_days": 3
+      },
+      {
+        "after": "2019-04-16",
+        "before": "2019-04-19",
+        "missing_days": 2
+      },
+      {
+        "after": "2019-06-15",
+        "before": "2019-06-18",
+        "missing_days": 2
+      },
+      {
+        "after": "2020-04-01",
+        "before": "2020-04-04",
+        "missing_days": 2
+      },
+      {
+        "after": "2020-05-31",
+        "before": "2020-06-03",
+        "missing_days": 2
+      },
+      {
+        "after": "2021-01-03",
+        "before": "2021-01-06",
+        "missing_days": 2
+      },
+      {
+        "after": "2021-04-28",
+        "before": "2021-05-03",
+        "missing_days": 4
+      },
+      {
+        "after": "2021-05-29",
+        "before": "2021-06-01",
+        "missing_days": 2
+      },
+      {
+        "after": "2021-06-01",
+        "before": "2021-06-04",
+        "missing_days": 2
+      },
+      {
+        "after": "2021-07-19",
+        "before": "2021-07-22",
+        "missing_days": 2
+      },
+      {
+        "after": "2021-07-31",
+        "before": "2021-08-03",
+        "missing_days": 2
+      },
+      {
+        "after": "2022-02-28",
+        "before": "2022-03-03",
+        "missing_days": 2
+      }
+    ],
+    "meaning": "Days the provider did not return. They are absent from the CSV and are never treated as zero flow."
+  },
+  "limits": [
+    "Daily means describe the station, not any swimming reach.",
+    "Provisional values may be revised by USGS.",
+    "This archive is context for percentiles and event detection; it fits no swimming rule."
+  ]
+}

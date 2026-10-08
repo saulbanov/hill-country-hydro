@@ -93,6 +93,8 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Decision log
 
+- 2026-10-08 · New collectors for the swimming-hole-decline investigation land here and join the daily run · Saul's ruling of 2026-10-08 (recorded in `../swimming-hole-decline/swimming-hole-decline-system.md`): rainfall, temperature, pumping, well drilling, USGS field measurements, operator-page history and a drought intake layer are collected in this ledger under its rules, developed in a `.claude/worktrees/shd-*` worktree, tested, then fast-forwarded into `main`. This repo never interprets them; the investigation reads them. First piece: the two EAA springflow records (USGS 08168710 Comal Springs, 08170000 San Marcos Springs) join `usgs_history.py`'s default list only (`station_lists.SPRINGFLOW_HISTORY`), so context, event-ledger and peaks steps are unchanged.
+
 - 2026-10-05 · The water map stays in hill-country-hydro; austin-outdoors holds a pointer · Saul asked whether this belonged in the `austin-outdoors` repo. Hydro is the upstream store with its own daily collector, and the standing rule is that signal stores live upstream and function repos mirror views. Saul chose a pointer: a row in the `austin-outdoors` router (commit `f2b6ff5`) names this repo, the pages and both live addresses. Alternatives declined: moving the pages there as a mirror, or moving the whole project.
 
 - 2026-10-03 · Publish the prepared regional pilot to the existing public Site · Saul explicitly requested the Sites hosting workflow for `../hill-country-hydro-site`. Reused the prepared source and existing public audience. The local date remained October 3, so the date-dependent rebuild was unnecessary. This publication is a fixed snapshot; no recurring Site update was configured.
@@ -427,3 +429,7 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 - **Addresses.** `#USGS.08156800` on the water map opens that station (record, geology panel, main-map detail) and jumps to the record; `#gauge.08156800` on the swim map opens that gauge card. Both use only characters a Claude artifact link passes through.
 - **Checks.** Water suite 180 passing (2 added). BrowserOS: `#USGS.08154700` opened Bull Creek with its record in view; `#gauge.08156800` opened Shoal's swim-map card with the water-map link; Bull Creek District Park's place card carries the link.
 - **Live state.** Both public addresses need a Codex deploy to show the links: the water map package in `../hill-country-hydro-site`, and the swim map at `de57ceb` in `../austin-swim-map-public-site` (its worker is built at deploy; `dist/server/` is ignored). Links from the swim map to the water map land on the live water map, which handles `#USGS.<id>` only after its deploy.
+
+### 2026-10-08 — swimming-hole-decline collectors (session rooted in `~/Documents/austin-outdoors`, worktrees `shd/*`)
+- **Springflow history.** Added USGS 08168710 (Comal Springs at New Braunfels, daily 1927-12-19 to 2026-10-06, 36,011 days, 30 calendar gaps of 76 days) and 08170000 (San Marcos Springs at San Marcos, 1956-05-26 to 2026-10-06, 25,688 days, 5 gaps of 13 days) to the daily-history collector, collected once by hand and normalized. These are the records the EAA publishes as springflow; the ledger had only the rivers below them (08169000, 08170500). Suite 180 OK; `--check` 43 steps.
+

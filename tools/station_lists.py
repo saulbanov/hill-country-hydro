@@ -13,6 +13,11 @@ AUSTIN_TEN = ['08154700', '08155240', '08155300', '08155400', '08155500', '08156
 def _inventory():
     return json.loads(INVENTORY.read_text())['stations'] if INVENTORY.exists() else []
 
+# Springflow records the Edwards Aquifer Authority publishes as Comal and San Marcos springflow. They
+# carry daily discharge history only (no live context here), so only usgs_history.py collects them.
+# Added 2026-10-08 for swimming-hole-decline Track A, which reads the springflow, not the river below it.
+SPRINGFLOW_HISTORY = ['08168710', '08170000']
+
 def history_stations():
     """Full daily history, ledger, and context: the Austin ten plus tiers 'austin' and 'regional-key'."""
     ids = list(AUSTIN_TEN)
