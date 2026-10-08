@@ -76,6 +76,10 @@ def plan(day: dt.date) -> list[Step]:
             python_step("water.usgs_series_collect", w, "usgs_series_history", "collect"),
             python_step("water.usgs_series_normalize", w, "usgs_series_history", "normalize"),
             python_step("water.event_ledger", w, "event_ledger"),
+            python_step("water.nclimdiv_collect", w, "nclimdiv", "collect"),
+            python_step("water.nclimdiv_normalize", w, "nclimdiv", "normalize"),
+            python_step("water.ghcn_collect", w, "ghcn_daily", "collect"),
+            python_step("water.ghcn_normalize", w, "ghcn_daily", "normalize"),
         ])
     steps.extend([
         python_step("water.hydro_context", w, "hydro_context"),

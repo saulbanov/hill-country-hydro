@@ -1,0 +1,1314 @@
+{
+ "tool": "nclimdiv",
+ "noaa_file_date": "20261006",
+ "last_success": "2026-10-08T18:20:49+00:00",
+ "last_attempt": "2026-10-08T18:20:49+00:00",
+ "raw": [
+  {
+   "file": "climdiv-pcpncy-v1.0.0-20261006",
+   "noaa_file_date": "20261006",
+   "url": "https://www.ncei.noaa.gov/monitoring-content/data/us/climdiv/monthly/current/climdiv-pcpncy-v1.0.0-20261006",
+   "retrieved_at": "2026-10-08T18:20:37+00:00",
+   "status": 200,
+   "sha256": "739fc3e9b529e04d406e914be1add2736ca3129c1103246ccebc2e5c76fd9d3a",
+   "bytes": 40923036,
+   "raw_path": "data/raw/nclimdiv/20261006/climdiv-pcpncy-v1.0.0-20261006",
+   "capture_path": "data/captures/noaa-nclimdiv/climdiv-pcpncy-v1.0.0-20261006.tx-nm.gz",
+   "capture_sha256": "22b26e68eceefb758f65b7aac2b1691c2d6f93f5cf0dfebd1b4b74563f4b4d66",
+   "capture_lines": 37884,
+   "capture_scope": "NCDC states 41 (TX) and 29 (NM)"
+  },
+  {
+   "file": "climdiv-tmaxcy-v1.0.0-20261006",
+   "noaa_file_date": "20261006",
+   "url": "https://www.ncei.noaa.gov/monitoring-content/data/us/climdiv/monthly/current/climdiv-tmaxcy-v1.0.0-20261006",
+   "retrieved_at": "2026-10-08T18:20:40+00:00",
+   "status": 200,
+   "sha256": "a226e4ca307a39762401993fa3cb84e68425fe39afa89cab8639d17346750260",
+   "bytes": 40923036,
+   "raw_path": "data/raw/nclimdiv/20261006/climdiv-tmaxcy-v1.0.0-20261006",
+   "capture_path": "data/captures/noaa-nclimdiv/climdiv-tmaxcy-v1.0.0-20261006.tx-nm.gz",
+   "capture_sha256": "b9de0d06c5fcf15cdbee9c7cbfbab75e9dba429889f97f8f2e38480dbf6f3699",
+   "capture_lines": 37884,
+   "capture_scope": "NCDC states 41 (TX) and 29 (NM)"
+  },
+  {
+   "file": "climdiv-tmincy-v1.0.0-20261006",
+   "noaa_file_date": "20261006",
+   "url": "https://www.ncei.noaa.gov/monitoring-content/data/us/climdiv/monthly/current/climdiv-tmincy-v1.0.0-20261006",
+   "retrieved_at": "2026-10-08T18:20:44+00:00",
+   "status": 200,
+   "sha256": "6251c07aedaffda0ba70d9456462beba0cc7701ab08a4246413986b106f4dec4",
+   "bytes": 40923036,
+   "raw_path": "data/raw/nclimdiv/20261006/climdiv-tmincy-v1.0.0-20261006",
+   "capture_path": "data/captures/noaa-nclimdiv/climdiv-tmincy-v1.0.0-20261006.tx-nm.gz",
+   "capture_sha256": "3a50fb5dfcc32f0b4603fd0b55efcb9056afc59a533ac2ba20cd4f8324e937c4",
+   "capture_lines": 37884,
+   "capture_scope": "NCDC states 41 (TX) and 29 (NM)"
+  },
+  {
+   "file": "climdiv-tmpccy-v1.0.0-20261006",
+   "noaa_file_date": "20261006",
+   "url": "https://www.ncei.noaa.gov/monitoring-content/data/us/climdiv/monthly/current/climdiv-tmpccy-v1.0.0-20261006",
+   "retrieved_at": "2026-10-08T18:20:47+00:00",
+   "status": 200,
+   "sha256": "edf9a954c7d7a5bed5ad32e448cfc78aacbf01261b94a4c5224094535108a489",
+   "bytes": 40923036,
+   "raw_path": "data/raw/nclimdiv/20261006/climdiv-tmpccy-v1.0.0-20261006",
+   "capture_path": "data/captures/noaa-nclimdiv/climdiv-tmpccy-v1.0.0-20261006.tx-nm.gz",
+   "capture_sha256": "172692afc23cc9d297acee6acea6b1d755b382fb5ded07e7f85c71037d6375e7",
+   "capture_lines": 37884,
+   "capture_scope": "NCDC states 41 (TX) and 29 (NM)"
+  },
+  {
+   "file": "county-to-climdivs.txt",
+   "noaa_file_date": "20261006",
+   "url": "https://www.ncei.noaa.gov/monitoring-content/data/us/climdiv/monthly/current/county-to-climdivs.txt",
+   "retrieved_at": "2026-10-08T18:20:49+00:00",
+   "status": 200,
+   "sha256": "2343d4b245f7b37c092e20863ecaeb47904f99f497132610e7beafd4dcda9270",
+   "bytes": 53115,
+   "raw_path": "data/raw/nclimdiv/20261006/county-to-climdivs.txt",
+   "capture_path": "data/captures/noaa-nclimdiv/county-to-climdivs.txt.tx-nm.gz",
+   "capture_sha256": "10ef4e51ca8e01e01fc69053cb54bbd4620ce7e6d76f82cecda29004c98a127b",
+   "capture_lines": 292,
+   "capture_scope": "NCDC states 41 (TX) and 29 (NM)"
+  }
+ ],
+ "files": [
+  {
+   "path": "data/history/climdiv-35025-pcpn-monthly.csv",
+   "sha256": "8f18c888b4a42bcb5b0502658416c5c1caea30fdf044e79db01f7178aaa503e0",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48019-pcpn-monthly.csv",
+   "sha256": "f5bec0de41fad6a00b331e28607ab564838f7b9f7a8eff9aab590569b68c3743",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48029-pcpn-monthly.csv",
+   "sha256": "a3a626514ab73339aae0373ea4e8b8e3dc29f1922db5dc1a31f9da0ca3b88883",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48031-pcpn-monthly.csv",
+   "sha256": "8568fd3c9273d981d55b4147953ab712d3536acbc4502d03eef3edc53e68cfbb",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48033-pcpn-monthly.csv",
+   "sha256": "3f005e2ee710023bbb8b7c09dd38e0fe90f30f6f04aca83868f8b8f0182ca321",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48049-pcpn-monthly.csv",
+   "sha256": "450878f033b0b49d1003d637348480dd4b4a5f14506f6e53576666246add3855",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48053-pcpn-monthly.csv",
+   "sha256": "84eb0044f4b94c09455a87f389aa4d042c0087e3dbd6dcb1fcfce2447b61cb08",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48055-pcpn-monthly.csv",
+   "sha256": "ccfb9ee5f247e6719698baaae708ef1bc6a475ee99232ea0dc7ef666840419ff",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48081-pcpn-monthly.csv",
+   "sha256": "46adefabeb5e820aecbe780bb4ef5269c09374930a5a13334caded07ee6de658",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48083-pcpn-monthly.csv",
+   "sha256": "8b3e10ff7209aabc1b3564f8318e8ed5f1c77abaefcdba45029e5e5768683f38",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48091-pcpn-monthly.csv",
+   "sha256": "dca27b28dee4e3292146405f952e5a9b8ef5a0ae40cdadac685264916a761660",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48095-pcpn-monthly.csv",
+   "sha256": "bce72191a9cc71806e25efc880c2fcd83bfcfc86bbfd35b5d59d3661c937c023",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48115-pcpn-monthly.csv",
+   "sha256": "a35193f88471897310e119b63f206970efdac81cca12d2d6f447a6feb486cfa9",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48137-pcpn-monthly.csv",
+   "sha256": "993b5c8d8f0176c13b7bb19a0fdfe64df2e29b4df1838bbd30820ec2a61df633",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48165-pcpn-monthly.csv",
+   "sha256": "03885ab741b9f05097efbbbb85d49d98a37b92dac07e7b7dc5d03fc503d2c311",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48171-pcpn-monthly.csv",
+   "sha256": "3c04f3b4be60f3ab606ed5d4119fbafe92d8b26da33a3df7bc965cab3a700d75",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48173-pcpn-monthly.csv",
+   "sha256": "20c4cc624cbdf677f660b923fd711a5aabc5c253759656e2a52af7caffd31073",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48187-pcpn-monthly.csv",
+   "sha256": "8c05cb3e85eb1b4b801a98512c6e293837cb78abe71b8beb1141c7464ce9cca4",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48209-pcpn-monthly.csv",
+   "sha256": "cef8c73f0aee5722f286d4b757c8914f744d4ed5bd87a6ae5d9248a7e4f2da58",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48227-pcpn-monthly.csv",
+   "sha256": "67ea09cc51c70e1c7e095ac7a71c3d903124b9cb807a3041d52ebbcb86d49c14",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48235-pcpn-monthly.csv",
+   "sha256": "c13e58509eca5a0c45fc0b02533d1536ed274c325d9cccc0545d5a8e11882937",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48259-pcpn-monthly.csv",
+   "sha256": "e71cb613094fa470cb39b4c96fce2e4638e5b851ae1675101c71cd6eb8c0c710",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48265-pcpn-monthly.csv",
+   "sha256": "b95efbbf5a4562aa332c5403bdf6452356fc9dd72e59093a143d7b6c6ef3535a",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48267-pcpn-monthly.csv",
+   "sha256": "8c4327bea4cd8cb53c38f6ca07c7980d062e9377e62995b5e371d561ad0a6dcb",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48271-pcpn-monthly.csv",
+   "sha256": "79d115822dd665f60331cb3eb4fcc3567945ebf394b761b44b431199d3633b18",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48299-pcpn-monthly.csv",
+   "sha256": "389dbdba12cb3f1bda6c3edfe9f49e2a2388c1bc204b4456c71c111bb8db6468",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48307-pcpn-monthly.csv",
+   "sha256": "bc67ebb919ba3c67b6d1cde89cf6c00a80587386719c5104153601491a080248",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48317-pcpn-monthly.csv",
+   "sha256": "ea37092aaa85ed64613b94490ef0ecfa87c0335449c9f964cde3596e4273cc6e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48319-pcpn-monthly.csv",
+   "sha256": "420e66ab640a137685b1f63982bce3fa9d66245c4fc4799049ec1631f352c6ff",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48325-pcpn-monthly.csv",
+   "sha256": "c33413b29c5eb8793e75efea21973a1a5d85897a82af2a3fde4c10f25efe5e92",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48327-pcpn-monthly.csv",
+   "sha256": "7b89c46a36c51efb09d87e0ec30f9b36966799daf4ba5a4ba4fe122cf6086c50",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48329-pcpn-monthly.csv",
+   "sha256": "bd6cb59231f10ab6ba7771b67492df40df44ae6763c9451eb92e3b5684e09fe8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48335-pcpn-monthly.csv",
+   "sha256": "5c4a9643e2995195a0611afaeb0f5640b354888efea71cd837de02e98e82d3ef",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48383-pcpn-monthly.csv",
+   "sha256": "12452eccff2bd3aecf57229a51f24032371253e57af00d2e3895d6f58fe7a304",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48385-pcpn-monthly.csv",
+   "sha256": "5c36888d3c748ffd29a50af15970501061c7e8f4916bbb45e3c02d3b034bf510",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48399-pcpn-monthly.csv",
+   "sha256": "91659c31244c374d261c25c792499a25e1bd1f7b00408d29c94d36c877612f75",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48411-pcpn-monthly.csv",
+   "sha256": "4b00538957924a8fa2ab83eb346cc3392548095178f79a46ea403034036f2822",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48413-pcpn-monthly.csv",
+   "sha256": "15b4f22ff22e7760d695ca8097edfa8fdfa97ea6d44ee47c85bdca96a725fc5f",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48431-pcpn-monthly.csv",
+   "sha256": "8dbc760dc6c973ce71a408f0ad4b6c1bd9bd033dda24b1695f113d0693e0f032",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48435-pcpn-monthly.csv",
+   "sha256": "1971173fe9e9dde09160be6125201ed6e0f6157da5dfa77f4de553968e2fc89b",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48451-pcpn-monthly.csv",
+   "sha256": "de498afb5ecde34d9d4a36aecbdfe4b3951bba3d84ed2bab111a1d56a5d48a7a",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48453-pcpn-monthly.csv",
+   "sha256": "f2807ffa2951f0cfbc8a37ae6edfe95c62715cc35e84a89b5cdd52616cc8e9fb",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48463-pcpn-monthly.csv",
+   "sha256": "3fbd9e58419266db00ae53ccd46311610c0868c1c3be7c7d495cb86491d6c758",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48491-pcpn-monthly.csv",
+   "sha256": "559e8eaf0428d4345fa0282986171dfd51574499b8474d11df7c4faa40f3f6fc",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-35025-tmax-monthly.csv",
+   "sha256": "f7c86932c265dc7039d30904bda697534b6df59cc49bdad80bcde8b78f27f009",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48019-tmax-monthly.csv",
+   "sha256": "35cf0ead64e879096f358bc55a3877e1d52308955e64e14c3973f5dd28311ede",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48029-tmax-monthly.csv",
+   "sha256": "628e99dd32ee394b76a90ff4e70325446681cc092a59827db7af2c340cb9f322",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48031-tmax-monthly.csv",
+   "sha256": "09a5d1bc0bdb772145abe85e867e15d426f7a3c1188d18d26cc1ff1de24c51bb",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48033-tmax-monthly.csv",
+   "sha256": "609659970649eab74dba3e82f9bdff7428655fce13333128ed4934d8a62d60ae",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48049-tmax-monthly.csv",
+   "sha256": "203826adb16d31c1e026b65deeab35aa1c661aba7b2b61ff37c2b5485ccc5176",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48053-tmax-monthly.csv",
+   "sha256": "c82ba70740a82c378747be7fe4fb0f02aeb5bf2137311827da04a427ab31e4ab",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48055-tmax-monthly.csv",
+   "sha256": "3e3b2c6bc1d6894db13b7800bc9e6226e62535c4b7bd7b27fcfa15e62b9bca00",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48081-tmax-monthly.csv",
+   "sha256": "92516091edaf7b632af4dbc8ce22a10cc8026a330e1037a173ef02730aa0595d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48083-tmax-monthly.csv",
+   "sha256": "d338ab6ea898840b6ec3a77c59c2957017efecde94f9c9623816daca57387880",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48091-tmax-monthly.csv",
+   "sha256": "66ede745c1133af313bb2b2d76212f439fd09a6d35966e29e050ad900252f077",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48095-tmax-monthly.csv",
+   "sha256": "426102733433442591fd1fefffabac8316ea74d5faeb7da9be084dcb99cf41fd",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48115-tmax-monthly.csv",
+   "sha256": "23f6a62debd33e3d8c44317d3bb1f82338c8e3cf3c08f0e50435ff6bd86b61a2",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48137-tmax-monthly.csv",
+   "sha256": "6dbb6c4518c63a2c1801b93c56604487a80108a0f720cab1739b49d91912a421",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48165-tmax-monthly.csv",
+   "sha256": "5f41a4b177e1a37d6a2718a38e0c6e2e92b0a5207251aca5551bd2997457b0bd",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48171-tmax-monthly.csv",
+   "sha256": "4f3a9dfe2e9d472c36316c5552dc47855f721a849212cf6dd9d09953ef96866e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48173-tmax-monthly.csv",
+   "sha256": "e22fcc2dc2eecd595dd16df1ed558326395c242b8df853fe99db4ba5c649f289",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48187-tmax-monthly.csv",
+   "sha256": "b976b414de374c86537b886de77d0eddb71b263e45dff424a073b6fec2864742",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48209-tmax-monthly.csv",
+   "sha256": "dde86a6436429e42ca8bc79b6259fc1e3e12c3a6ad55a7a8ac0276d29597fe6e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48227-tmax-monthly.csv",
+   "sha256": "2a946763ce845101f56d12aef2155d544719b771587130c5d125214ef651addc",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48235-tmax-monthly.csv",
+   "sha256": "979d49658007c78f2a4e6d8e02161d1f1091b0b615968a96744f98d06fade174",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48259-tmax-monthly.csv",
+   "sha256": "12e1b20671a71c71536933538753f40af3b15b85a11d0616e888d77fa8baadca",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48265-tmax-monthly.csv",
+   "sha256": "957f3591bbff2021a1a93474dc39139dca75aa9d753cf45ca2f834117cf5dd3d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48267-tmax-monthly.csv",
+   "sha256": "9309ad561e6b425b1c2a5042680f14ea22fd01156bc783dc5d4c98d33269ce8b",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48271-tmax-monthly.csv",
+   "sha256": "4189ae1e2e9dd53319252e3ff55a58d5de918222a8727c72e45cc4d0f0246d8d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48299-tmax-monthly.csv",
+   "sha256": "de42663f1d5eef04731ed432ad24c1fd50247239eeeb5493f11c409ba01831eb",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48307-tmax-monthly.csv",
+   "sha256": "12fbdb7c7948e2cbdd7b59dc9c27e20664188f1298c48d49d821bd2b42a8a9bf",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48317-tmax-monthly.csv",
+   "sha256": "d37bff2d9ac2406cf41dbca864ac8c0f4e8ec295315c634555d331dd74cbd04f",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48319-tmax-monthly.csv",
+   "sha256": "eafd8efa9e38cab62ab07b5813df21c4ae3f925f87546ee25fc2ea14409649a8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48325-tmax-monthly.csv",
+   "sha256": "ce88db6ea8088e21c4beafce1f980ec45929f6aa320b2a0757162062820617fe",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48327-tmax-monthly.csv",
+   "sha256": "a762e8c0e2d7da7e569b8c0e8b19c43257f3ce1bd6b08b2861ecdc5898755811",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48329-tmax-monthly.csv",
+   "sha256": "7922aee0357fc9bacf041af730e8fa513acf271af7ff4aa85d2420d326b6fef6",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48335-tmax-monthly.csv",
+   "sha256": "312ad33fb8b1291de5e2ee0deb46b57b44e4d83bc25cc13cd073ea803c2107e3",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48383-tmax-monthly.csv",
+   "sha256": "4ab711e97d675a1d0c18e38a700212535298f17035c5bb92333d789a1787ff41",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48385-tmax-monthly.csv",
+   "sha256": "06406cf3c3ab072e992e766853a4569a92be88b5d4c67965baef14abbc703036",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48399-tmax-monthly.csv",
+   "sha256": "4137c71f7f4d2ecf6309424a55f7e9ce2f28b85a6d8a98b68191408fc257529a",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48411-tmax-monthly.csv",
+   "sha256": "d053a2cf7d20755943743c2fc1ce05709b6175eec0602a9a692144df0d2c23ef",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48413-tmax-monthly.csv",
+   "sha256": "29f9df597f35f1bdd09c9fb003114fdc956d00c809d77a4d374b6f825b6eaeb5",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48431-tmax-monthly.csv",
+   "sha256": "721589df6ce5f67b4bb9b800c740afb5df2f7b3a0ab41b80e45c2b35dad10783",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48435-tmax-monthly.csv",
+   "sha256": "0442f43ff14e22d7b10457ddb09895a1042d9ff43a330ba2f94e3884e9beb121",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48451-tmax-monthly.csv",
+   "sha256": "7ed1d65f99b0f0cbca6cc0072a4adc0c7c5de8038e12b5dde3dee52e5fcc01b4",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48453-tmax-monthly.csv",
+   "sha256": "e407bc4196e8cef90645a84aa6b5a0ed39579a66e5bb6113166aad99a5cef9c2",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48463-tmax-monthly.csv",
+   "sha256": "e199946ad11b1cb23553af74707f48ce8adc147200d010bb21ab116c749509f2",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48491-tmax-monthly.csv",
+   "sha256": "4ee9a60adc3c123b631d184a9e634d9b10a7230f9692378d2c430c344f6dd513",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-35025-tmin-monthly.csv",
+   "sha256": "ea08057d1ae557fffdc352ef4fa72f1a6b2d7f78f6695115debc17002ad2daa1",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48019-tmin-monthly.csv",
+   "sha256": "a0ef139a8d2434d1c1296ac685f66de9152c2d83956b59f231d0789dc968ad1b",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48029-tmin-monthly.csv",
+   "sha256": "0250bf368080874ab388b72978dcc6009e091ac8d38cbedd7112b2d6798fdb1a",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48031-tmin-monthly.csv",
+   "sha256": "7bcd8e0076dd64ff4b3c12f1c4106dadac31baf7e3d9d563767ee6df527e80c8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48033-tmin-monthly.csv",
+   "sha256": "76d2f5bfca29117ce667177d47e29e29dfc866f2c7b963ac44dcd4685591f235",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48049-tmin-monthly.csv",
+   "sha256": "421792a26c43dc88e2e50cb66bf88b45d0688b5115b8d501498715879d4f6668",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48053-tmin-monthly.csv",
+   "sha256": "4d015ae1431a3ca91947dfd6ea873ef1fb966cbb0083d01ddb1c6e8a85e6e4a3",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48055-tmin-monthly.csv",
+   "sha256": "f344748c9de6730bd11c901dae0e46e55a7e3e07e8f600bc53e2a496a84446a3",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48081-tmin-monthly.csv",
+   "sha256": "83985d4504f692f39979598da0c14ad1ee60910d8b8167a71d97908866ab7d41",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48083-tmin-monthly.csv",
+   "sha256": "70a05c8596d9c9401683366a15dea90638433b624972c0dcb0ab04c901c4404d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48091-tmin-monthly.csv",
+   "sha256": "44ab9a6dd5811baf8b58e64b5e61bdce68c09441f768ced6e11fa4681ad651e5",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48095-tmin-monthly.csv",
+   "sha256": "c63b7585fece938e6bce437bad18dac0c35def34311bddeba4d0171c6cc80867",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48115-tmin-monthly.csv",
+   "sha256": "4c2f995bfdac02adc79136b548bd1d844653cb82d8691f63a0c67e3de6034ded",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48137-tmin-monthly.csv",
+   "sha256": "fdf5cb7ba175d64a8bc13c56fc6ecfda635a4ef7b80d3fa7039ae67f8d646947",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48165-tmin-monthly.csv",
+   "sha256": "7a2c15d0e50759ecfaeb1140f1d2c87f30c3de02c9f80f5a996b0a3b862a4503",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48171-tmin-monthly.csv",
+   "sha256": "025f75cc15e08c33a1f8be9b517ef47d9e5b0779694817b8f102c26a700d0e22",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48173-tmin-monthly.csv",
+   "sha256": "d428656e57332e1c3b328f63da8ea79a6b82dfd1763fd73c083b992c94c92e62",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48187-tmin-monthly.csv",
+   "sha256": "4fb72e4c3f753a212f8bee322598e782174ba2963c1c62aa14b1dc88477ba5dc",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48209-tmin-monthly.csv",
+   "sha256": "4d569ab633ae3ec7a2afe0fd5cb5cc337cfb4efe559387150e0d48264ca648a4",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48227-tmin-monthly.csv",
+   "sha256": "9ae200873cfd612576b1e9a7a20770d93b6636b50fc9cdf7bc4d35b0c30b05d8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48235-tmin-monthly.csv",
+   "sha256": "821710fd76f55faf7c0c7b4c5458f8e616abbddd0d72d4a883292a3d8c3f1944",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48259-tmin-monthly.csv",
+   "sha256": "efa862c78da16a39754d6cbca493028e08ca143757a19e006f281c68e678dde6",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48265-tmin-monthly.csv",
+   "sha256": "fa45880076acc5a785c26ab0843ee349d7170c7ebeca1c1fedc6b45e8ecf4d30",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48267-tmin-monthly.csv",
+   "sha256": "5eaf43eb83804a8e4c91ddd8c0015c0f5402a75875985c662a669b789dda46da",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48271-tmin-monthly.csv",
+   "sha256": "4a399229c4198d459c0943b0563a0ade53cd7fb63407b92cc6a7c29e601ca5fd",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48299-tmin-monthly.csv",
+   "sha256": "cd8f32fc42276b8955f7fa96f217b22641c1606889e680c397beb3d2c4dd6766",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48307-tmin-monthly.csv",
+   "sha256": "6ac5e0f68a77c60880ee65a028dcff11cd442c68c8523b4fb1b0470b2d083a34",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48317-tmin-monthly.csv",
+   "sha256": "2b329a65436e07852710d00f401656088bdfff77b302575970ced446a8c13b82",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48319-tmin-monthly.csv",
+   "sha256": "cea3040cc2c7c2be71ce77751c1245f7826c5a926c072f85e6271b2b4b644568",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48325-tmin-monthly.csv",
+   "sha256": "53eef78a86e2efe949ea53c634d877dc6306e30d856fc787fb4cb4d3a6a11c50",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48327-tmin-monthly.csv",
+   "sha256": "769d8d8988120dee3c472808e3d4646e3e8c50f4475730003390a4da5f3a3f3d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48329-tmin-monthly.csv",
+   "sha256": "355c03fc73cad208fafd3f815cb39ab1850bd72f546982a43fa4253edbe1185d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48335-tmin-monthly.csv",
+   "sha256": "e6fbeb488cf8789a1d1f8f57926ab5b4e641fad5932b425d53355e47b6af7d12",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48383-tmin-monthly.csv",
+   "sha256": "78fc9bea3bd907b940598dfecd6eae8ed7e586f581f05d828568f59c94a8eb11",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48385-tmin-monthly.csv",
+   "sha256": "202daff02a6f00241a40c073eaea386f0ecbf125c666235009e1290f7915e918",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48399-tmin-monthly.csv",
+   "sha256": "45e33f5fc64b167dcfaff891462e391d19c829aeab6327d9ccced01dd553f8a1",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48411-tmin-monthly.csv",
+   "sha256": "fb8ecc2431f89d343bcf78489235fca88e4da94c8a711f1683e27931901143b8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48413-tmin-monthly.csv",
+   "sha256": "e9252e9dd255227c6ad4e036b6a115ef9e4c4552deb0d977d2f7711c540b2952",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48431-tmin-monthly.csv",
+   "sha256": "fe1ba595e809c840b0d595561f78ff359599136b7914f97a9cf9e1a8135b5445",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48435-tmin-monthly.csv",
+   "sha256": "82113452c43552e3beb1c24f2747a88760fbddb18fc76fcd9177e2e0534ff8bc",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48451-tmin-monthly.csv",
+   "sha256": "7d392a6cd2e89c112cd4079d305f57d6a72be6dcd228e1d5ed15e13d83b4c223",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48453-tmin-monthly.csv",
+   "sha256": "375718354bb0f61383f797d2b17d194d22913b7ce733a54a737787760cbc7596",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48463-tmin-monthly.csv",
+   "sha256": "2603929e1921c63f6803cf12f1253b13599cb3072c043ad82eb1fdad60e171ec",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48491-tmin-monthly.csv",
+   "sha256": "2886b121dbd36e7dc05d84bc1c207f253766e6fbce1ad04fb1b0d91303cc9821",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-35025-tmpc-monthly.csv",
+   "sha256": "acd4415ae460152c9e7204f5c5628feb83cef81b900da57547eba86e2bb39715",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48019-tmpc-monthly.csv",
+   "sha256": "95a250dfb83a4dcff56d6f940919c183c5af4aba8a123aba1d4913f2a139ac17",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48029-tmpc-monthly.csv",
+   "sha256": "1e844c35a8f15a80af8a89d8d94806ad7052d08f4736fe6aff2132b251f733fa",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48031-tmpc-monthly.csv",
+   "sha256": "4f0879b14fbc1532666c3fa5e9de1fc18ebabdd46edb6593b78622b978398b3d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48033-tmpc-monthly.csv",
+   "sha256": "200669710d8be40359e948cbfd54807af274c0ca3a6749416ed0c5d7cf6987e4",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48049-tmpc-monthly.csv",
+   "sha256": "b65b1b28a7389e77c82c02366295bb929e10e53e9e8027b2bfc025d567f2dbe9",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48053-tmpc-monthly.csv",
+   "sha256": "805e2c92a377ae150a0a4698ee21de074cda344f33f52ccb291506ecb9769d29",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48055-tmpc-monthly.csv",
+   "sha256": "5680ec96eb6fb890a1a7f50d575316380fd126e7e5bc5b39707c95ace4e41b73",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48081-tmpc-monthly.csv",
+   "sha256": "cec8b0f9d70129e71f3f0578d28ac8110194dc443dbff3a0db21122cc29afcdf",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48083-tmpc-monthly.csv",
+   "sha256": "04157aefa2fba58d77649405f54ecf20aa2814736d5a3ff293d5d72102c91cd1",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48091-tmpc-monthly.csv",
+   "sha256": "5b03480973a314f731ed547926606693171b067a0b25b8d8bdf6e91f5dc567cf",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48095-tmpc-monthly.csv",
+   "sha256": "1c7420786b2242b5f4b29124b551b6d04c077e5f60039f847b7855bfd7ffc903",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48115-tmpc-monthly.csv",
+   "sha256": "d3e3365a86b705f6644c9c8ddaf39a8145e0953a8ac44b3ef9268e7b8f018b43",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48137-tmpc-monthly.csv",
+   "sha256": "574874b653394f09b5fd0b8a1df7476004940949dea854dd9f04c73787ea3203",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48165-tmpc-monthly.csv",
+   "sha256": "82332757b50fc82eaaa85a5493aa0916073c3b951f7a64d394bcc7e0ae0c6d9d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48171-tmpc-monthly.csv",
+   "sha256": "318d5b06615f1af9f7ba81ccc11c93cd12e5cd2dd25baec8454debb64408150a",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48173-tmpc-monthly.csv",
+   "sha256": "7664d9135784ec0c386cb696feb2c0c673a91a9237a81d2879c43614259200cf",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48187-tmpc-monthly.csv",
+   "sha256": "be5b73403c0cd24c876cb6eb36aea32ad0761f10cd5ac5825bbd1feb1cb95cb0",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48209-tmpc-monthly.csv",
+   "sha256": "ce7e3e00a33a0e4db482db7c2051d3f0f0a2ec80372537bed1d5b0f9e2c7e980",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48227-tmpc-monthly.csv",
+   "sha256": "fd1c6f2f19235e3db6765f3bef8f2c6a33cceda09be5c1a3323f1f2ac4a2dcc9",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48235-tmpc-monthly.csv",
+   "sha256": "ae922f78a2ff655cc7fea6d854029f995f68af754d5e8513c944166b716cf493",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48259-tmpc-monthly.csv",
+   "sha256": "37ab32c9689542b5401cb523d4bb1256a1980b751b98ccd8bd6f5383f837b66c",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48265-tmpc-monthly.csv",
+   "sha256": "fc34d530ec4e2b35922681644b34e02f7b193b931e8b97fc922c765c1ca97a61",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48267-tmpc-monthly.csv",
+   "sha256": "182a48a19b066339e92b8a38488a7589dd007a1efec5c370b5c0ad482a18ba2f",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48271-tmpc-monthly.csv",
+   "sha256": "a856d9a45651a74df0d5499b1c2eaa9f55cb761c046f75f840febbbd8cc0ea37",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48299-tmpc-monthly.csv",
+   "sha256": "838207277948c60544e31e2caf18c5427196a684bd59266fe837c26f927607d4",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48307-tmpc-monthly.csv",
+   "sha256": "41dd08353a27fe017be0f518600e90a513be6a8238360cbaf0003a56cf5fe374",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48317-tmpc-monthly.csv",
+   "sha256": "25b763ac491fe2a0c0680cac04aae311c85cf62f2d5acbb53cd145db3f22b947",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48319-tmpc-monthly.csv",
+   "sha256": "220186e539c0d4282b883a26545c2a175f8c987c8afc57c899c099998a141d00",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48325-tmpc-monthly.csv",
+   "sha256": "bc78dd974650055638514d2d483eb715fbdbc74e23b7c1bd93b9926fd2318418",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48327-tmpc-monthly.csv",
+   "sha256": "97f78052350202d228cd5bc0decb4d7e7d44ff826873549ec138517ec487f197",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48329-tmpc-monthly.csv",
+   "sha256": "1a67849f9928c9925096a9a3c07a78c26685f240ea189b2e353255e759e3c4c8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48335-tmpc-monthly.csv",
+   "sha256": "4385968a1d585d17319932ae849c4707559cd38a50fb462aed0c94f18a6c8c73",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48383-tmpc-monthly.csv",
+   "sha256": "509a0cc541659482f0fd8ec71bf5eac7474aeb217cbf9ccbd9a7f0edfbc28d99",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48385-tmpc-monthly.csv",
+   "sha256": "a98215e2505cd6e1c4cbc418168d6be9cfaa6d004ff23a178ba5339ec8aa623e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48399-tmpc-monthly.csv",
+   "sha256": "6b872743d0d1ff471905b8fbc5a46324940b5b332088990e749c30b83aed289e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48411-tmpc-monthly.csv",
+   "sha256": "596086a80f1fda3284657f1ebdd1d4c85da696c7900d0a4c62d8fe82c47bf9a8",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48413-tmpc-monthly.csv",
+   "sha256": "4756fabc91d19ad8195ad79d94145820998e2c91898c25a31fc7d53853efbf4e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48431-tmpc-monthly.csv",
+   "sha256": "d31ae01fe6222ecec981be3fab0e0f957dc88271fab74c81684b965fe3d3c460",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48435-tmpc-monthly.csv",
+   "sha256": "4d3621201d93df338609e3d419058a8aa62e6bec596a683a94f5e0103fb89c71",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48451-tmpc-monthly.csv",
+   "sha256": "949cf4a380cde08ceb956c79eaf7174720892ce242148fd50da41ba70f33993c",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48453-tmpc-monthly.csv",
+   "sha256": "5c93e0204085e3d9c7149a6a5d19ed53f201740bf0d9b9dc1c58aec9c0024dc6",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48463-tmpc-monthly.csv",
+   "sha256": "360238779ec31ed2826d83f16feff3aef067d9d5ec486cc629cea8c0d19b906e",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  },
+  {
+   "path": "data/history/climdiv-48491-tmpc-monthly.csv",
+   "sha256": "7978c4189496ee8dfaf839a16d17a5c027063c2fd4f7439ae2d752268a29548d",
+   "rows": 1581,
+   "first": "1895-01",
+   "last": "2026-09"
+  }
+ ],
+ "skipped": [],
+ "normalized_from": "20261006"
+}
