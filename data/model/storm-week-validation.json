@@ -13,7 +13,7 @@
     "Daily means lag by a day; the gauge column fills in after the next weekly history refresh or a current-window collection.",
     "A wet hourly description (rain, showers, thunder) is counted separately from measured inches."
   ],
-  "generated_at": "2026-10-07T12:14:10.472872+00:00",
+  "generated_at": "2026-10-08T12:14:08.182881+00:00",
   "days": [
     {
       "date": "2026-09-20",
@@ -427,7 +427,7 @@
         {
           "date": "2026-10-07",
           "station": "KATT",
-          "hours_reported": 7,
+          "hours_reported": 21,
           "hours_with_precip_value": 0,
           "precip_in": 0.0,
           "wet_descriptions": 0
@@ -435,7 +435,7 @@
         {
           "date": "2026-10-07",
           "station": "KAUS",
-          "hours_reported": 92,
+          "hours_reported": 285,
           "hours_with_precip_value": 0,
           "precip_in": 0.0,
           "wet_descriptions": 0
@@ -454,8 +454,25 @@
           "Mostly Clear"
         ]
       },
-      "observed": "no station observations captured for this day",
-      "station_days": [],
+      "observed": "no precipitation value or wet description in the captured hours (absence of a value is not zero)",
+      "station_days": [
+        {
+          "date": "2026-10-08",
+          "station": "KATT",
+          "hours_reported": 7,
+          "hours_with_precip_value": 0,
+          "precip_in": 0.0,
+          "wet_descriptions": 0
+        },
+        {
+          "date": "2026-10-08",
+          "station": "KAUS",
+          "hours_reported": 92,
+          "hours_with_precip_value": 0,
+          "precip_in": 0.0,
+          "wet_descriptions": 0
+        }
+      ],
       "gauges": {},
       "verdict": "no storm evidence in captured sources"
     },
@@ -527,6 +544,21 @@
         "short_forecasts": [
           "Slight Chance Rain Showers",
           "Slight Chance Rain Showers"
+        ]
+      },
+      "observed": "no station observations captured for this day",
+      "station_days": [],
+      "gauges": {},
+      "verdict": "no storm evidence in captured sources"
+    },
+    {
+      "date": "2026-10-14",
+      "forecast": {
+        "first_forecast_retrieved_at": "2026-10-08T12:14:06.675013+00:00",
+        "max_rain_chance_pct": 11,
+        "short_forecasts": [
+          "Mostly Sunny",
+          "Partly Cloudy"
         ]
       },
       "observed": "no station observations captured for this day",
