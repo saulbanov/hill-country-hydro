@@ -1,5 +1,7 @@
 # hill-country-hydro — agent rules
 
+Where this sits: `~/Documents/Codex/climate-stack/MAP.md` is the map of the Austin outdoors and climate project; `harness.py status` there checks it.
+
 This repository is the **Central Texas water ledger**: a raw-first, deterministic record of what the
 region's official water gauges said, when, and how that compares with each gauge's own past. It is the
 L1 (acquisition) and L2 (normalized store + deterministic context) substrate in Saul's reporting-os
