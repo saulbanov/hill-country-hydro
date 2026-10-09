@@ -128,7 +128,7 @@ function historyCoverage(){
   for(let y=hist.from;y<=hist.to;y++){const n=by[y]||0,frac=n/(leap(y)?366:365);cells.push(`<span class="yr${n?'':' none'}" style="${n?`background:rgba(23,106,116,${(.15+.85*Math.min(1,frac)).toFixed(2)})`:''}" title="${y}: ${n} days with values"></span>`);}
   const missing=(s.continuity.missing_years||[]).filter(y=>y>=hist.from&&y<=hist.to),net=historyIndex.stations_reporting_by_year[hist.doc.kind]||{};
   const counts=[hist.from,Math.round((hist.from+hist.to)/2),hist.to].map(y=>`${y}: ${net[y]||0}`).join(' · ');
-  return `<div class="coverage" aria-label="Days with values in each year">${cells.join('')}</div><p class="meta">One cell per year, ${hist.from}–${hist.to}; darker means more days with a preserved value, hollow means none. ${missing.length?`Years with no value in this range: ${missing.join(', ')}.`:'No year in this range is empty.'} Pilot ${esc(hist.doc.kind)} stations with any value — ${counts}. ${esc(historyIndex.network_note)}</p>`;
+  return `<div class="coverage" aria-label="Days with values in each year">${cells.join('')}</div><p class="meta">One cell per year, ${hist.from}–${hist.to}; darker means more days with a preserved value, hollow means none. ${missing.length?`Years with no value in this range: ${missing.join(', ')}.`:'No year in this range is empty.'} Mapped ${esc(hist.doc.kind)} stations with any value — ${counts}. ${esc(historyIndex.network_note)}</p>`;
 }
 function historyRead(){
   const s=hist.doc.series[hist.series],d=hist.date;if(!d)return '';let v=null,p=null,at=d;
@@ -215,7 +215,7 @@ function wellDiagram(w,level){
 }
 function renderGeoStation(){
   const el=$('#geo-station');if(!el||!geology)return;const key=station||selected,g=geology.stations?.[key],item=data.items.find(x=>x.id===key),name=item?.name||historyIndex?.stations[key]?.name||key;
-  if(!key||!g){el.innerHTML=`<div class="geo-here"><p class="eyebrow">AT THE SELECTED STATION</p><p class="gap">${key?esc(name)+' has no verified coordinates inside the mapped area, so nothing is looked up for it.':'Select a station on either map to see what is mapped and recorded there.'}</p></div>`;return;}
+  if(!key||!g){el.innerHTML=`<div class="geo-here"><p class="eyebrow">AT THE SELECTED STATION</p><p class="gap">${key?esc(name)+(historyIndex?.stations[key]?.coordinates?' is outside the area the geology layers cover, so nothing is looked up for it.':' has no verified coordinates inside the mapped area, so nothing is looked up for it.'):'Select a station on either map to see what is mapped and recorded there.'}</p></div>`;return;}
   const u=g.surface_unit,aq=g.aquifer_extents,w=geology.wells?.[key],basinName=item?.basin||historyIndex?.stations[key]?.basin;
   const levelPoint=item?.kind==='well'?[...(item.chart.seasonal||[])].reverse().find(p=>p.value!=null):null;
   const sec=geology.sections.find(s=>s.applies_to_basins.includes(basinName));
