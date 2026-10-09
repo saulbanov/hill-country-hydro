@@ -457,3 +457,8 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 - The daily run calls it (`swim.water_map_pages`, `--daily`) as the first step after the water day lands, so the published map carries that morning's commit; it skips an incomplete or stale bundle and always exits 0. Tests: water suite 231.
 - `tools/swim_map_links.py` now links to the swim map's Pages address. The chatgpt.site copy (`../hill-country-hydro-site`) is frozen at 2026-10-05; its AGENTS.md says so.
 
+### 2026-10-09 — Pointer to the project map (climate-stack phase 0)
+- `AGENTS.md` carries the one-line pointer to `~/Documents/Codex/climate-stack/MAP.md`; `climate-stack/harness.py status` checks it. This repo
+  is registered there as the regional store, with its pin, its 06:57 job and the two map-to-map link tables,
+  whose recorded hashes `status` compares with the other map's current files. Docs only; both hydro pins were
+  promoted after the push (RESULT OK mode=promote).
