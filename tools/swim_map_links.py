@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SWIM_MAP = 'https://austin-swim-map.saul-elbein.chatgpt.site/'
+SWIM_MAP = 'https://saulbanov.github.io/austin-swim-map-site/'
 
 
 def build(swim_gauges):

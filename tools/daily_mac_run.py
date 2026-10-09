@@ -117,6 +117,9 @@ def plan(day: dt.date) -> list[Step]:
         Step("water.tests", w, (str(PYTHON), "-m", "unittest", "discover", "-s", "tests")),
     ])
     steps.extend([
+        # First step after the water day lands: publish the water map to GitHub Pages from that
+        # exact commit (tools/publish_pages.py). Logs and exits 0 on any failure.
+        python_step("swim.water_map_pages", w, "publish_pages", "--daily"),
         # The lens reads the bundle this run just published, in the water checkout it ran in.
         python_step("swim.bundle_fetch", s, "water_bundle", "fetch",
                     "--from", str(w / "dist" / "water-state.json")),
