@@ -93,7 +93,8 @@ def publish() -> str:
         subprocess.run(('git', '-C', str(work / 'site'), 'checkout', '--quiet', '-B', 'main'), check=True, capture_output=True, text=True)
         built = work / 'built'
         info = build(built)
-        subprocess.run(('rsync', '-a', '--delete', '--exclude', '.git', f'{built}/', f'{work / "site"}/'), check=True)
+        # --checksum: macOS's openrsync otherwise skips a changed file of the same size (seen 2026-10-09).
+        subprocess.run(('rsync', '-a', '--checksum', '--delete', '--exclude', '.git', f'{built}/', f'{work / "site"}/'), check=True)
         git('add', '-A')
         if subprocess.run(('git', 'diff', '--cached', '--quiet'), cwd=work / 'site').returncode == 0:
             return f'WATER PAGES UNCHANGED at {info["commit"][:8]}'
