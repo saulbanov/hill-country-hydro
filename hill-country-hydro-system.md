@@ -451,3 +451,9 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 
 ### 2026-10-08 — three browser-hours steps in the daily run (session rooted in `~/Documents/austin-outdoors`)
 - `4d2570f3` adds `swim.browser_hours_collect`, `swim.browser_hours_assess` and `swim.browser_hours_publish` after `swim.snapshot`: austin-swim-map `tools/browser_hours.py` renders six Pflugerville hours pages with Playwright's headless shell (the newest under `~/Library/Caches/ms-playwright/`, or `BROWSER_HOURS_SHELL`), writes `data/hours-checks.json`, and pushes it to the public map's Pages repo. Each stage logs `BROWSER HOURS …` and exits 0, so the run cannot fail on them. Promoted with `--promote` the same evening (RESULT OK); `--check` lists 50 steps. Water suite 228 passing.
+
+### 2026-10-09 — the water map moves to GitHub Pages (session rooted in `~/Documents/austin-outdoors`)
+- Saul wants both maps on GitHub with no Codex step. The water map is now https://saulbanov.github.io/hill-country-hydro-map/, from the public repo `saulbanov/hill-country-hydro-map`. `tools/publish_pages.py` builds `package_regional_site`'s checked package (same plan, input and private-content checks), rewrites the pages' `../dist/`, `../data/` and `../docs/` paths so they work one folder down, refuses uncommitted inputs or a leftover `../` path, stamps `pages-source.json` with the source commit, and pushes. It compares files by checksum, because macOS's openrsync skipped a same-size change.
+- The daily run calls it (`swim.water_map_pages`, `--daily`) as the first step after the water day lands, so the published map carries that morning's commit; it skips an incomplete or stale bundle and always exits 0. Tests: water suite 231.
+- `tools/swim_map_links.py` now links to the swim map's Pages address. The chatgpt.site copy (`../hill-country-hydro-site`) is frozen at 2026-10-05; its AGENTS.md says so.
+

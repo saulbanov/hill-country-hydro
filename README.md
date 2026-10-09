@@ -1,6 +1,6 @@
 # hill-country-hydro — the Central Texas Water Ledger
 
-Published map: [Central Texas Water Ledger](https://hill-country-hydro.saul-elbein.chatgpt.site). The hosted map is a saved snapshot; publishing updates is separate from the daily collection run.
+Published map: [Central Texas Water Ledger](https://saulbanov.github.io/hill-country-hydro-map/), on GitHub Pages from the public repo `saulbanov/hill-country-hydro-map`. `tools/publish_pages.py` builds and pushes it, and the daily run calls it right after the day's water data lands, so the map updates each morning. The older chatgpt.site copy is frozen at 2026-10-05.
 
 **What this is.** A dated, sourced record of what Central Texas's official water gauges say: 215 USGS
 locations (streams, springs, wells, lakes) from Junction to Bastrop and Uvalde to Georgetown, 127 state
