@@ -86,6 +86,22 @@ class RegionalTests(unittest.TestCase):
             _,s=b.source('raw');self.assertEqual(b.sources[s]['provenance_status'],'original_fetch_metadata_missing')
             with self.assertRaisesRegex(ValueError,'checksum'):b.source('raw',{'sha256':'wrong'})
             b.db.close();self.assertEqual((root/'raw').read_bytes(),b'[]')
+    def test_gauge_outside_the_location_inventory_takes_identity_from_its_manifest(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'data/model').mkdir(parents=True);(root/'data/raw').mkdir()
+            (root/'data/usgs-locations-regional.json').write_text(json.dumps({'locations':[]}))
+            body=json.dumps({'features':[{'properties':{'parameter_code':'00060','statistic_id':'00003','time_series_id':'ts1','time':'1990-05-01','value':'12.5','unit_of_measure':'ft^3/s','approval_status':'Approved','qualifier':None}}]}).encode()
+            (root/'data/raw/body.json').write_bytes(body)
+            manifest={'station':{'monitoring_location_name':'Frio Rv at Somewhere, TX','site_type':'Stream','coordinates_lon_lat':[-99.7,29.6],'hydrologic_unit_code':'121101060203'},
+                      'station_series_inventory_00060_00065':[{'id':'ts1','primary':'Primary'}],
+                      'daily_request':{'raw_path':'data/raw/body.json','capture_path':None,'sha256':hashlib.sha256(body).hexdigest(),'retrieved_at':'2026-10-09T00:00:00Z','status':200,'feature_count':1,'next_link':None,'url':'https://example.invalid'}}
+            (root/'data/model/08999999-daily-history-manifest.json').write_text(json.dumps(manifest))
+            b=n.Builder(root,root/'out','0001-01-01','2026-10-03T12:15:00Z',daily_start='0001-01-01',only={'USGS:08999999'},audit_path=None)
+            b.usgs();b.db.close()
+            site=b.sites['USGS:08999999']
+            self.assertEqual((site['name'],site['coordinates'],site['kind'],site['basin']),('Frio Rv at Somewhere, TX',[-99.7,29.6],'stream','regional context'))
+            self.assertIn('08999999-daily-history-manifest.json',site['evidence'])
+            self.assertEqual([s['primary'] for s in b.series.values()],[True])
     def test_temporal_no_future_or_gap(self):
         r=row(when='2026-10-01T12:00:00Z',statistic='instantaneous')
         self.assertIsNone(a.at_or_before([r],'2026-10-01T11:59:00Z'));self.assertIsNone(a.at_or_before([r],'2026-10-01T12:31:00Z'))

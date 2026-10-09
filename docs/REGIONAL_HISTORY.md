@@ -21,10 +21,20 @@ catalog and SQLite layout, so `regional_analytics.Reader` opens it without chang
 
 ## What it holds
 
-179 named stations: the four pilot river gauges, the six Austin creek gauges, the six Highland Lakes reservoirs, 37 TWDB wells
+196 named stations: the four pilot river gauges, the six Austin creek gauges, the six Highland Lakes reservoirs, 37 TWDB wells
 whose coordinates fall inside a pilot WBD subbasin, 121 LCRA rain gauges inside those subbasins that
-have a saved daily-rain history, and five springs outside the pilot watersheds kept as separate
-regional context. The October 3 build holds 4,444,641 original records in 588 series.
+have a saved daily-rain history, five springs outside the pilot watersheds kept as separate
+regional context, and (since 2026-10-09) the other 17 USGS gauges the Austin Swim Map rates swimming places from
+(`station_lists.SWIM_MAP_GAUGES`; its two springs are already among the five). The build of 2026-10-09, still cut
+at 2026-10-03 12:15 UTC, holds 5,894,285 original records in 656 series.
+
+Four swim-map gauges have no daily mean discharge at USGS, so they are named with a reason and no
+record: Blanco River at Blanco (08170860) reports gage height only, and the time-series list USGS
+returns for Guadalupe River at Guadalupe River State Park (08167370), Frio River at Rio Frio (08194930)
+and Frio River above Concan (08194970) is empty. Guadalupe River at New Braunfels (08169500) has a daily
+discharge record from 1915 that ends 2011-08-25; the gauge now reports gage height only. Three of these
+gauges are not in the regional location inventory; their names and coordinates come from the USGS
+monitoring-locations capture each daily-history manifest cites.
 
 First and last preserved values (full table: `docs/REGIONAL_HISTORY_TABLE.md`):
 

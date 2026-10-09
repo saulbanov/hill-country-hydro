@@ -14,10 +14,12 @@ try:
     from . import regional_normalize as normalize
     from .regional_analytics import Reader
     from .regional_geography import basin_at
+    from .station_lists import SWIM_MAP_GAUGES
 except ImportError:
     import regional_normalize as normalize
     from regional_analytics import Reader
     from regional_geography import basin_at
+    from station_lists import SWIM_MAP_GAUGES
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'data/normalized/regional-history'
@@ -63,6 +65,8 @@ def select(root=ROOT, analytics=None):
         elif key.startswith('LCRA:') and basin['huc8'] and key in rain_history:
             out[key] = {'kind': 'rain', 'basin': basin['name'], 'huc8': basin['huc8'],
                         'basis': 'coordinates inside one pilot WBD subbasin; saved daily-rain history with records'}
+    for site in SWIM_MAP_GAUGES:  # the swim map's springs are already named above as springs
+        out.setdefault('USGS:'+site, {'kind': 'river', 'basis': 'gauge the Austin Swim Map rates swimming places from (station_lists.SWIM_MAP_GAUGES); USGS daily history manifest'})
     doc = {'purpose': 'Stations whose full preserved record is adapted into data/normalized/regional-history/.',
            'selection': 'tools/regional_history.py select; inventory membership is not evidence of numeric coverage',
            'counts': dict(Counter(v['kind'] for v in out.values())), 'stations': out}

@@ -108,6 +108,13 @@ class Builder:
             man=json.loads(p.read_text());m=man['daily_request']
             if 'station' in man:
                 metadata[site]={x['id']:x for x in man['station_series_inventory_00060_00065']}
+                if 'USGS:'+site not in self.sites:
+                    # Collected for its daily record but not in the regional location inventory (a swim-map gauge, a
+                    # springflow record): identity comes from the USGS monitoring-locations capture the manifest cites.
+                    st=man['station'];t=st.get('site_type')
+                    self.sites['USGS:'+site]={'name':st.get('monitoring_location_name'),'coordinates':st.get('coordinates_lon_lat'),
+                        'kind':{'Stream':'stream','Well':'well','Lake, Reservoir, Impoundment':'lake','Spring':'spring'}.get(t,t or 'unknown'),'basin':'unassigned',
+                        'evidence':f'{p.relative_to(self.root)} station block (USGS monitoring-locations capture); not in data/usgs-locations-regional.json'}
                 self.sites['USGS:'+site].update(huc=man['station'].get('hydrologic_unit_code'),basin={'12090204':'Llano','12090206':'Pedernales'}.get(str(man['station'].get('hydrologic_unit_code'))[:8],'regional context'))
             if m.get('next_link') or m.get('feature_count',0)>=50000:
                 self.gaps.append({'path':str(p.relative_to(self.root)),'reason':'incomplete USGS response'});continue

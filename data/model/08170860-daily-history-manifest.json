@@ -1,0 +1,103 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
+  "station_id": "USGS-08170860",
+  "station": {
+    "monitoring_location_name": "Blanco Rv at Blanco, TX",
+    "site_type": "Stream",
+    "hydrologic_unit_code": "121002030103",
+    "drainage_area": null,
+    "contributing_drainage_area": null,
+    "altitude": null,
+    "vertical_datum": null,
+    "county_name": "Blanco County",
+    "coordinates_lon_lat": [
+      -98.42315,
+      30.092780555555553
+    ]
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08170860&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+    "retrieved_at": "2026-10-09T16:59:16.248904+00:00",
+    "status": 200,
+    "sha256": "bd9c6abc2daa3d5ffe3bf61681a6931e790e83a9bba6232697e3adff2b34dc15",
+    "bytes": 1563,
+    "feature_count": 0,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08170860/20261009T165916248904Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08170860/20261009T165916248904Z-daily-00060-00003.json.gz"
+  },
+  "metadata_requests": {
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08170860&limit=1",
+      "retrieved_at": "2026-10-09T16:59:13.613354+00:00",
+      "status": 200,
+      "sha256": "4db9f8dc420d94b5c126ff7b4bb6c5f1ec9ef24f9a9f8de3330ad8dd7826a940",
+      "raw_path": "data/raw/usgs-daily/08170860/20261009T165913613354Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08170860/20261009T165913613354Z-location.json.gz"
+    },
+    "time_series_metadata": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08170860&limit=1000&skipGeometry=true",
+      "retrieved_at": "2026-10-09T16:59:14.929151+00:00",
+      "status": 200,
+      "sha256": "270f0391986d75df635a48b680a315ab61acbe44af8df3ba07293d57b36aeac4",
+      "raw_path": "data/raw/usgs-daily/08170860/20261009T165914929151Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08170860/20261009T165914929151Z-timeseries-metadata.json.gz"
+    }
+  },
+  "complete_response": true,
+  "normalized_csv": "data/history/08170860-00060-daily-mean.csv",
+  "series": {
+    "parameter_code": "00060",
+    "statistic_id": "00003",
+    "meaning": "daily mean discharge, ft^3/s; a daily mean is not an instantaneous reading and hides within-day peaks",
+    "time_series_ids": [],
+    "first_day": null,
+    "last_day": null,
+    "returned_days": 0,
+    "numeric_days": 0,
+    "non_numeric_days": 0,
+    "approval_counts": {},
+    "qualifier_counts": {},
+    "zero_days": 0
+  },
+  "station_series_inventory_00060_00065": [
+    {
+      "id": "3c181807eb834676ad65620c23cdddc6",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": "00011",
+      "computation_identifier": "Instantaneous",
+      "computation_period_identifier": "Points",
+      "begin": "2025-06-03T16:45:00+00:00",
+      "end": "2026-10-09T07:00:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "d49a0f520df84c59a55ac9aad5c1f67d",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": null,
+      "computation_identifier": "Max At Event Time",
+      "computation_period_identifier": "Water Year",
+      "begin": null,
+      "end": null,
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    }
+  ],
+  "gaps": {
+    "count": 0,
+    "missing_days_total": 0,
+    "calendar_gaps": [],
+    "meaning": "Days the provider did not return. They are absent from the CSV and are never treated as zero flow."
+  },
+  "limits": [
+    "Daily means describe the station, not any swimming reach.",
+    "Provisional values may be revised by USGS.",
+    "This archive is context for percentiles and event detection; it fits no swimming rule."
+  ]
+}

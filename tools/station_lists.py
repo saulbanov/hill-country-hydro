@@ -18,6 +18,15 @@ def _inventory():
 # Added 2026-10-08 for swimming-hole-decline Track A, which reads the springflow, not the river below it.
 SPRINGFLOW_HISTORY = ['08168710', '08170000']
 
+# Every USGS gauge the Austin Swim Map rates swimming places from: the ids in its public Site's
+# dist/data/gauges.json (sha256 91d85de5…, 2026-10-09). The water map keeps the full daily record and
+# a station page for each, so usgs_history.py collects them and regional_history.py names them. Like
+# SPRINGFLOW_HISTORY, they join usgs_history.py's default list only; context, ledger and peaks keep
+# history_stations(). Ids are frozen; add a gauge here when the swim map adds one.
+SWIM_MAP_GAUGES = ['08155240', '08154700', '08155300', '08156800', '08159000', '08158970', '08158930', '08170500',
+                   '08170860', '08170990', '08155400', '08169000', '08168500', '08169500', '08167370', '08194930',
+                   '08194970', '08195000', '08155500', '08104900', '08158827', '08158000', '08159200', '08171400']
+
 def history_stations():
     """Full daily history, ledger, and context: the Austin ten plus tiers 'austin' and 'regional-key'."""
     ids = list(AUSTIN_TEN)

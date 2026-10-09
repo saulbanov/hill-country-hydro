@@ -33,8 +33,8 @@ RAW=ROOT/'data/raw/usgs-daily'; CAPTURES=ROOT/'data/captures/usgs-daily'
 HISTORY=ROOT/'data/history'; MODEL=ROOT/'data/model'
 BASE='https://api.waterdata.usgs.gov/ogcapi/v1/collections'
 import sys as _sys; _sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
-from station_lists import history_stations, SPRINGFLOW_HISTORY
-AUSTIN_STATIONS=history_stations()+[s for s in SPRINGFLOW_HISTORY if s not in history_stations()]  # name kept for callers; the Austin ten, the inventory's history tiers, and the two EAA springflow records
+from station_lists import history_stations, SPRINGFLOW_HISTORY, SWIM_MAP_GAUGES
+AUSTIN_STATIONS=list(dict.fromkeys(history_stations()+SPRINGFLOW_HISTORY+SWIM_MAP_GAUGES))  # name kept for callers; the Austin ten, the inventory's history tiers, the two EAA springflow records, and every swim-map gauge
 LIMIT=50000
 UA='swimming-hole-alerts/0.1 usgs-daily-history'
 

@@ -248,7 +248,11 @@ def build():
     gauges = {}
     for key, meta in sorted(stations.items()):
         if meta['kind'] == 'river':
-            s = usgs[key.split(':')[1]]; gauges[key] = {'name': s['name'], 'surface_unit': units.at([s['lon'], s['lat']])}
+            sid = key.split(':')[1]; s = usgs.get(sid)
+            if s is None:  # a swim-map gauge outside the location inventory: the USGS location capture its manifest cites
+                st = json.loads((ROOT/f'data/model/{sid}-daily-history-manifest.json').read_text())['station']
+                s = {'name': st['monitoring_location_name'], 'lon': st['coordinates_lon_lat'][0], 'lat': st['coordinates_lon_lat'][1]}
+            gauges[key] = {'name': s['name'], 'surface_unit': units.at([s['lon'], s['lat']])}
     # What is mapped at each station's coordinates. Extents are the display-simplified ones (about 150 m).
     def aquifers_at(point):
         return sorted({(f['properties']['aquifer'], f['properties']['extent']) for f in aquifers if inside(point, f['geometry'])})

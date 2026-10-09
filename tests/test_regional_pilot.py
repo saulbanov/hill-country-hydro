@@ -181,8 +181,18 @@ class HistoryPartitionTests(unittest.TestCase):
 
     def test_unfetched_wells_are_named_as_gaps(self):
         missing = [k for k, v in self.index['stations'].items() if not v['file']]
-        self.assertEqual(len(missing), 11); self.assertTrue(all(k.startswith('TWDB:') and 'never captured' in self.index['stations'][k]['reason'] for k in missing))
-        self.assertEqual(len(self.index['stations']), 179)
+        wells = [k for k in missing if k.startswith('TWDB:')]
+        self.assertEqual(len(wells), 11); self.assertTrue(all('never captured' in self.index['stations'][k]['reason'] for k in wells))
+        # Swim-map gauges USGS serves no daily mean discharge for (2026-10-09): Blanco at Blanco reports gage height only;
+        # the Guadalupe State Park and two upper Frio gauges have an empty USGS series list. Named with a reason, never filled.
+        self.assertEqual(sorted(set(missing)-set(wells)), ['USGS:08167370', 'USGS:08170860', 'USGS:08194930', 'USGS:08194970'])
+        self.assertTrue(all('no usable numeric history' in self.index['stations'][k]['reason'] for k in set(missing)-set(wells)))
+        self.assertEqual(len(self.index['stations']), 196)
+
+    def test_every_swim_map_gauge_is_a_named_station(self):
+        from tools.station_lists import SWIM_MAP_GAUGES
+        self.assertEqual(len(SWIM_MAP_GAUGES), 24)
+        self.assertEqual([s for s in SWIM_MAP_GAUGES if 'USGS:'+s not in self.index['stations']], [])
 
     def test_stations_can_be_placed_on_a_map(self):
         snapshot = {x['id']: x for x in json.loads((APP/'regional-snapshot.json').read_text())['items']}
