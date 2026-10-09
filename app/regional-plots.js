@@ -153,10 +153,11 @@ function renderHistory(){
   $('#h-swim').innerHTML=swimLink(hist.key);$('#h-chart').innerHTML=historyChart();$('#h-coverage').innerHTML=historyCoverage();$('#h-read').innerHTML=historyRead();$('#h-continuity').innerHTML=historyContinuity();
 }
 async function openHistory(key,scroll){
-  const entry=historyIndex?.stations[key];if(!entry)return;$('#h-station').value=key;
+  const entry=historyIndex?.stations[key];if(!entry)return;$('#h-station').value=key;hist.want=key; // the last station asked for wins; a slower earlier fetch is dropped
   if(!entry.file){hist.doc=null;$('#h-chart').innerHTML=`<p class="gap">${esc(entry.name)}: ${esc(entry.reason)}</p>`;$('#h-coverage').innerHTML=$('#h-read').innerHTML=$('#h-continuity').innerHTML='';return;}
   $('#h-chart').innerHTML='<p class="gap">Loading this station’s record…</p>';
-  try{const r=await fetch(entry.file,{cache:'no-cache'});if(!r.ok)throw Error('missing file');hist.doc=await r.json();hist.doc.series.forEach(expandSeries);}catch(e){$('#h-chart').innerHTML='<p class="gap">This station’s history file could not load.</p>';return;}
+  let doc;try{const r=await fetch(entry.file,{cache:'no-cache'});if(!r.ok)throw Error('missing file');doc=await r.json();}catch(e){if(hist.want===key)$('#h-chart').innerHTML='<p class="gap">This station’s history file could not load.</p>';return;}
+  if(hist.want!==key)return;hist.doc=doc;hist.doc.series.forEach(expandSeries);
   hist.key=key;hist.series=0;const c=hist.doc.series[0].continuity;hist.from=+c.first.slice(0,4);hist.to=+c.last.slice(0,4);hist.date=hist.doc.series[0].encoding==='dense'?c.last:null;renderHistory();
   if(scroll)$('#history').scrollIntoView({behavior:'smooth',block:'start'});
 }
