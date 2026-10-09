@@ -193,6 +193,8 @@ class HistoryPartitionTests(unittest.TestCase):
         from tools.station_lists import SWIM_MAP_GAUGES
         self.assertEqual(len(SWIM_MAP_GAUGES), 24)
         self.assertEqual([s for s in SWIM_MAP_GAUGES if 'USGS:'+s not in self.index['stations']], [])
+        links = json.loads((APP/'swim-map-links.json').read_text())['stations']
+        self.assertEqual(sorted(links), sorted('USGS:'+s for s in SWIM_MAP_GAUGES if self.index['stations']['USGS:'+s]['file']))
 
     def test_stations_can_be_placed_on_a_map(self):
         snapshot = {x['id']: x for x in json.loads((APP/'regional-snapshot.json').read_text())['items']}
