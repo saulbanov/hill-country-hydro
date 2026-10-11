@@ -3,13 +3,13 @@
   "source_csv": "data/history/08156910-00060-daily-mean.csv",
   "record": {
     "first_day": "2007-07-19",
-    "last_day": "2026-10-03",
-    "numeric_days": 7017,
-    "zero_days": 926,
+    "last_day": "2026-10-10",
+    "numeric_days": 7024,
+    "zero_days": 925,
     "median_daily_mean": 0.08
   },
   "event_definition": {
-    "high_threshold": 4.54,
+    "high_threshold": 4.52,
     "low_threshold": 0.22,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -1297,21 +1297,21 @@
       }
     },
     {
-      "start": "2015-01-03",
+      "start": "2015-01-01",
       "end": "2015-02-08",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 37,
+      "duration_days": 39,
       "peak_date": "2015-01-22",
       "peak_value": 25.3,
-      "rise_days": 20,
+      "rise_days": 22,
       "recession_days": 17,
-      "mean_value": 1.708,
+      "mean_value": 1.752,
       "has_provisional": false,
       "water_year": 2015,
       "peak_month": 1,
       "antecedent_30_day": {
         "days_available": 30,
-        "mean": 0.443
+        "mean": 0.288
       }
     },
     {
@@ -3966,10 +3966,10 @@
       "end_reason": "fell_below_low_threshold",
       "duration_days": 2,
       "peak_date": "2026-10-01",
-      "peak_value": 9.31,
+      "peak_value": 9.32,
       "rise_days": 1,
       "recession_days": 1,
-      "mean_value": 5.095,
+      "mean_value": 5.105,
       "has_provisional": true,
       "water_year": 2027,
       "peak_month": 10,

@@ -3,14 +3,14 @@
   "source_csv": "data/history/08155240-00060-daily-mean.csv",
   "record": {
     "first_day": "1988-12-28",
-    "last_day": "2026-10-03",
-    "numeric_days": 13794,
+    "last_day": "2026-10-10",
+    "numeric_days": 13801,
     "zero_days": 295,
-    "median_daily_mean": 7.1
+    "median_daily_mean": 7.09
   },
   "event_definition": {
-    "high_threshold": 192.0,
-    "low_threshold": 38.6,
+    "high_threshold": 191.0,
+    "low_threshold": 38.4,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
     "unit": "ft^3/s daily mean",
@@ -73,21 +73,21 @@
       }
     },
     {
-      "start": "1991-04-19",
+      "start": "1991-04-14",
       "end": "1991-05-29",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 41,
+      "duration_days": 46,
       "peak_date": "1991-05-09",
       "peak_value": 261.0,
-      "rise_days": 21,
+      "rise_days": 26,
       "recession_days": 20,
-      "mean_value": 102.073,
+      "mean_value": 105.826,
       "has_provisional": false,
       "water_year": 1991,
       "peak_month": 5,
       "antecedent_30_day": {
         "days_available": 30,
-        "mean": 80.333
+        "mean": 68.067
       }
     },
     {
@@ -506,14 +506,14 @@
     },
     {
       "start": "2005-03-03",
-      "end": "2005-04-13",
+      "end": "2005-04-14",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 42,
+      "duration_days": 43,
       "peak_date": "2005-03-07",
       "peak_value": 247.0,
       "rise_days": 5,
-      "recession_days": 37,
-      "mean_value": 106.717,
+      "recession_days": 38,
+      "mean_value": 105.128,
       "has_provisional": false,
       "water_year": 2005,
       "peak_month": 3,
@@ -920,14 +920,14 @@
     },
     {
       "start": "2016-04-17",
-      "end": "2016-07-01",
+      "end": "2016-07-02",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 76,
+      "duration_days": 77,
       "peak_date": "2016-05-19",
       "peak_value": 2120.0,
       "rise_days": 33,
-      "recession_days": 43,
-      "mean_value": 337.937,
+      "recession_days": 44,
+      "mean_value": 334.047,
       "has_provisional": false,
       "water_year": 2016,
       "peak_month": 5,
@@ -1100,14 +1100,14 @@
     },
     {
       "start": "2021-06-01",
-      "end": "2021-06-22",
+      "end": "2021-06-23",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 22,
+      "duration_days": 23,
       "peak_date": "2021-06-03",
       "peak_value": 848.0,
       "rise_days": 3,
-      "recession_days": 19,
-      "mean_value": 199.759,
+      "recession_days": 20,
+      "mean_value": 192.743,
       "has_provisional": false,
       "water_year": 2021,
       "peak_month": 6,
@@ -1189,6 +1189,24 @@
       }
     },
     {
+      "start": "2025-07-05",
+      "end": "2025-07-10",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 6,
+      "peak_date": "2025-07-05",
+      "peak_value": 191.0,
+      "rise_days": 1,
+      "recession_days": 5,
+      "mean_value": 90.017,
+      "has_provisional": false,
+      "water_year": 2025,
+      "peak_month": 7,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 2.544
+      }
+    },
+    {
       "start": "2026-06-15",
       "end": "2026-06-22",
       "end_reason": "fell_below_low_threshold",
@@ -1208,7 +1226,7 @@
     }
   ],
   "summary": {
-    "event_count": 66,
+    "event_count": 67,
     "events_per_water_year": {
       "1989": 1,
       "1990": 1,
@@ -1241,10 +1259,11 @@
       "2021": 3,
       "2022": 2,
       "2024": 1,
+      "2025": 1,
       "2026": 1
     },
-    "median_duration_days": 22.5,
-    "median_peak_value": 482.0,
+    "median_duration_days": 23,
+    "median_peak_value": 476.0,
     "peak_month_counts": {
       "1": 5,
       "2": 5,
@@ -1252,7 +1271,7 @@
       "4": 4,
       "5": 11,
       "6": 7,
-      "7": 4,
+      "7": 5,
       "8": 3,
       "9": 4,
       "10": 8,

@@ -3,13 +3,13 @@
   "source_csv": "data/history/08155400-00060-daily-mean.csv",
   "record": {
     "first_day": "1998-09-24",
-    "last_day": "2026-10-03",
-    "numeric_days": 10237,
-    "zero_days": 2339,
+    "last_day": "2026-10-10",
+    "numeric_days": 10244,
+    "zero_days": 2342,
     "median_daily_mean": 0.97
   },
   "event_definition": {
-    "high_threshold": 158.0,
+    "high_threshold": 157.0,
     "low_threshold": 8.57,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
