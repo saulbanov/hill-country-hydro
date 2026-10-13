@@ -137,6 +137,9 @@ def plan(day: dt.date) -> list[Step]:
         python_step("swim.operator_assess", s, "austin_operator", "assess"),
         python_step("swim.hazards_assess", s, "hazards", "assess"),
         python_step("swim.tpwd_assess", s, "tpwd_alerts", "assess"),
+        # austin-heat's current heat/sun sidecar into the private app (app/outdoor-status.json). Logs and exits 0 when the file is
+        # missing, old or wrong; the public map gets the same file from the swim-map-heat job, not from here.
+        python_step("swim.heat_sidecar", s, "refresh_outdoor_sidecars", "--heat-only"),
         python_step("swim.assess", s, "monitor", "assess"),
         python_step("swim.snapshot", s, "experiment_snapshot", "--experiment", "storm-week-2026-10"),
         # Posted-hours pages that render only in a browser (Pflugerville): render, check, publish the

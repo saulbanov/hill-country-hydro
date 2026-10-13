@@ -474,3 +474,11 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
 - **Links** (`cc154321`). `swim_map_links.py`: 20 stations link to the swim map, up from 7.
 - **Checked.** `publish_pages.py --dry-run` built 220 files. In headless Chromium every one of the 24 addresses selected its own station; the 20 with a record drew their own chart and carried the swim-map link, and the other four showed their reason. A gauge outside the drawn basins (New Braunfels, San Marcos, Frio, Bastrop) appears as a dot outside the shaded watersheds, and the station map now reaches Concan and Bastrop. For gauges outside the geology box the geology panel says the station "has no verified coordinates inside the mapped area", which misdescribes a gauge with known coordinates. The coverage line still calls the counts "pilot river stations", though they now include the swim-map gauges. Suite 233 OK.
 - **Not done.** Nothing pushed or promoted. After the push, promote, so the Sunday refresh collects the six new gauges. The swim Site's `scripts/build-water-map-links.py` needs a rerun before the swim map links to the 13 new pages.
+
+### 2026-10-13 — one step added to the daily run: the private app's heat card (climate-stack session)
+- `daily_mac_run.py` plans `swim.heat_sidecar` after `swim.tpwd_assess`: `tools/refresh_outdoor_sidecars.py --heat-only` in the swim
+  pin copies austin-heat's current heat/sun sidecar (from `~/Documents/runtime/austin-heat`, after the swim map's own checks) into
+  `app/outdoor-status.json`, which the day's commit then carries. It logs and exits 0 when the file is missing, old or wrong, so
+  it cannot fail the day. One test in `tests/test_daily_mac_run.py`. The step's tool arrives in the swim pin with the same
+  `--promote` that brings this plan, so the path check passes. Reason: the private app's copy had been hand-made and was from 09-29.
+

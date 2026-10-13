@@ -34,6 +34,12 @@ class DailyMacRunTests(unittest.TestCase):
             self.assertEqual(versioned, "--version" in eaa.args)
             self.assertNotIn("water.eaa_collect", [s.name for s in steps])
 
+    def test_the_private_apps_heat_file_is_refreshed_after_the_notices_and_cannot_fail_the_day(self):
+        names = [s.name for s in job.plan(dt.date(2026, 10, 2))]
+        self.assertGreater(names.index("swim.heat_sidecar"), names.index("swim.hazards_assess"))
+        step = next(s for s in job.plan(dt.date(2026, 10, 2)) if s.name == "swim.heat_sidecar")
+        self.assertTrue(step.args[-2].endswith("refresh_outdoor_sidecars.py") and step.args[-1] == "--heat-only")
+
     def test_lens_reads_the_bundle_from_the_water_checkout_that_ran(self):
         fetch = next(s for s in job.plan(dt.date(2026, 10, 2)) if s.name == "swim.bundle_fetch")
         self.assertEqual(("--from", str(job.WATER / "dist" / "water-state.json")), fetch.args[-2:])
