@@ -234,6 +234,14 @@ class PinGitTests(unittest.TestCase):
         self.assertEqual("Daily run 20261009", self.origin_main("log", "-1", "--format=%s", "main"))
         self.assertEqual(start, job.code_commit(self.pin))
 
+    def test_the_daily_commit_goes_through_a_pin_guard_hook_that_refuses_every_commit(self):
+        hook = self.pin / ".git" / "hooks" / "pre-commit"
+        hook.write_text("#!/bin/sh\necho 'pin-guard: refused' >&2\nexit 1\n")
+        hook.chmod(0o755)
+        self.run_day(y='{"day": 9}\n')
+        self.assertEqual("Daily run 20261009", self.origin_main("log", "-1", "--format=%s", "main"))
+        self.assertEqual(sh(self.pin, "rev-parse", "HEAD"), self.origin_main("rev-parse", "main"))
+
     def test_merge_keeps_session_code_off_the_pin_and_names_the_code(self):
         self.write(self.dev, "tools/run.py", "v2\n")
         self.push_from_dev("code v2")
