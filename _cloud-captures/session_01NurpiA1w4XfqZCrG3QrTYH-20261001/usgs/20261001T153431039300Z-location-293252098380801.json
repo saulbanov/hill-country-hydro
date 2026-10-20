@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "USGS-293252098380801",
+        "agency_code": "USGS",
+        "agency_name": "U.S. Geological Survey",
+        "monitoring_location_number": "293252098380801",
+        "monitoring_location_name": "AY-68-27-610 (Parkwood Park)",
+        "district_code": "48",
+        "country_code": "US",
+        "country_name": "United States of America",
+        "state_code": "48",
+        "state_name": "Texas",
+        "county_code": "029",
+        "county_name": "Bexar County",
+        "minor_civil_division_code": null,
+        "site_type_code": "GW",
+        "site_type": "Well",
+        "hydrologic_unit_code": "121003020402",
+        "basin_code": null,
+        "altitude": 901.7,
+        "altitude_accuracy": 99.0,
+        "altitude_method_code": "Y",
+        "altitude_method_name": "GNSS3 - Level 3 Quality Survey Grade Global Navigation Satellite System",
+        "vertical_datum": "NAVD88",
+        "vertical_datum_name": "North American Vertical Datum of 1988",
+        "horizontal_positional_accuracy_code": "S",
+        "horizontal_positional_accuracy": "Accurate to + or - 1 sec.",
+        "horizontal_position_method_code": "G",
+        "horizontal_position_method_name": "Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)",
+        "original_horizontal_datum": "NAD83",
+        "original_horizontal_datum_name": "North American Datum of 1983",
+        "drainage_area": null,
+        "contributing_drainage_area": null,
+        "time_zone_abbreviation": "CST",
+        "uses_daylight_savings": "Y",
+        "construction_date": "19980701",
+        "aquifer_code": "218EDRDA",
+        "national_aquifer_code": "S500EDRTRN",
+        "aquifer_type_code": "U",
+        "well_constructed_depth": 229.0,
+        "hole_constructed_depth": 229.0,
+        "depth_source_code": "S",
+        "revision_note": null,
+        "revision_created": null,
+        "revision_modified": null
+      },
+      "id": "USGS-293252098380801",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.6355555555556,
+          29.5477777777778
+        ]
+      }
+    }
+  ],
+  "numberReturned": 1,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-293252098380801&limit=1"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=jsonld&id=USGS-293252098380801&limit=1"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=html&id=USGS-293252098380801&limit=1"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=csv&id=USGS-293252098380801&limit=1"
+    },
+    {
+      "type": "application/geo+json",
+      "rel": "next",
+      "title": "Items (next)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&offset=1&id=USGS-293252098380801&limit=1"
+    },
+    {
+      "type": "application/json",
+      "title": "Monitoring locations",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations"
+    }
+  ],
+  "timeStamp": "2026-10-01T15:34:31.029621Z"
+}

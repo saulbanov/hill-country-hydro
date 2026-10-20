@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/29.98,-100.3",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -100.3,
+            29.98
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/29.98,-100.3",
+        "@type": "wx:Point",
+        "cwa": "EWX",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/EWX",
+        "gridId": "EWX",
+        "gridX": 58,
+        "gridY": 81,
+        "forecast": "https://api.weather.gov/gridpoints/EWX/58,81/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/EWX/58,81/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/EWX/58,81",
+        "observationStations": "https://api.weather.gov/gridpoints/EWX/58,81/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -100.2132958,
+                    30.0170778
+                ]
+            },
+            "properties": {
+                "city": "Rocksprings",
+                "state": "TX",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 8192.3330746078
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 243
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/TXZ184",
+        "county": "https://api.weather.gov/zones/county/TXC137",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/TXZ184",
+        "timeZone": "America/Chicago",
+        "radarStation": "KDFX",
+        "astronomicalData": {
+            "sunrise": "2026-09-30T07:34:08-05:00",
+            "sunset": "2026-09-30T19:28:01-05:00",
+            "transit": "2026-09-30T13:31:05-05:00",
+            "civilTwilightBegin": "2026-09-30T07:10:20-05:00",
+            "civilTwilightEnd": "2026-09-30T19:51:49-05:00",
+            "nauticalTwilightBegin": "2026-09-30T06:42:37-05:00",
+            "nauticalTwilightEnd": "2026-09-30T20:19:32-05:00",
+            "astronomicalTwilightBegin": "2026-09-30T06:14:47-05:00",
+            "astronomicalTwilightEnd": "2026-09-30T20:47:22-05:00"
+        },
+        "nwr": {
+            "transmitter": null,
+            "sameCode": "048137",
+            "areaBroadcast": null,
+            "pointBroadcast": "https://api.weather.gov/points/29.98,-100.3/radio"
+        }
+    }
+}

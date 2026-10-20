@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/29.586,-99.739",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -99.739,
+            29.586
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/29.586,-99.739",
+        "@type": "wx:Point",
+        "cwa": "EWX",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/EWX",
+        "gridId": "EWX",
+        "gridX": 79,
+        "gridY": 63,
+        "forecast": "https://api.weather.gov/gridpoints/EWX/79,63/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/EWX/79,63/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/EWX/79,63",
+        "observationStations": "https://api.weather.gov/gridpoints/EWX/79,63/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.7630679,
+                    29.7253649
+                ]
+            },
+            "properties": {
+                "city": "Leakey",
+                "state": "TX",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 14538.526631155
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 171
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/TXZ203",
+        "county": "https://api.weather.gov/zones/county/TXC463",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/TXZ203",
+        "timeZone": "America/Chicago",
+        "radarStation": "KDFX",
+        "astronomicalData": {
+            "sunrise": "2026-10-01T07:32:21-05:00",
+            "sunset": "2026-10-01T19:24:40-05:00",
+            "transit": "2026-10-01T13:28:31-05:00",
+            "civilTwilightBegin": "2026-10-01T07:08:39-05:00",
+            "civilTwilightEnd": "2026-10-01T19:48:23-05:00",
+            "nauticalTwilightBegin": "2026-10-01T06:41:02-05:00",
+            "nauticalTwilightEnd": "2026-10-01T20:15:59-05:00",
+            "astronomicalTwilightBegin": "2026-10-01T06:13:21-05:00",
+            "astronomicalTwilightEnd": "2026-10-01T20:43:41-05:00"
+        },
+        "nwr": {
+            "transmitter": "KWN51",
+            "sameCode": "048463",
+            "areaBroadcast": "https://api.weather.gov/radio/KWN51/broadcast",
+            "pointBroadcast": "https://api.weather.gov/points/29.586,-99.739/radio"
+        }
+    }
+}

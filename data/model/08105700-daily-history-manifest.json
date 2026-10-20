@@ -1,0 +1,77 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
+  "station_id": "USGS-08105700",
+  "station": {
+    "monitoring_location_name": "San Gabriel Rv at Laneport, TX",
+    "site_type": "Stream",
+    "hydrologic_unit_code": "120702050507",
+    "drainage_area": 738.0,
+    "contributing_drainage_area": 738.0,
+    "altitude": 412.84,
+    "vertical_datum": "NAVD88",
+    "county_name": "Williamson County",
+    "coordinates_lon_lat": [
+      -97.2788848762229,
+      30.6943614564234
+    ]
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08105700&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+    "retrieved_at": "2026-10-01T15:10:32.212970+00:00",
+    "status": 200,
+    "sha256": "85b4915f928a39604edb9c475fb800e38630d83eaac4316935333dea1c2ecab3",
+    "bytes": 12136577,
+    "feature_count": 22357,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08105700/20261001T151032212970Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08105700/20261001T151032212970Z-daily-00060-00003.json.gz"
+  },
+  "metadata_requests": {
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08105700&limit=1",
+      "retrieved_at": "2026-10-01T15:10:16.500120+00:00",
+      "status": 200,
+      "sha256": "2e5e0ae81605ef8d618fcbb6d3b214cae0732635ca4c4dd72015f6bcc35f1951",
+      "raw_path": "data/raw/usgs-daily/08105700/20261001T151016500120Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08105700/20261001T151016500120Z-location.json.gz"
+    },
+    "time_series_metadata": null
+  },
+  "complete_response": true,
+  "normalized_csv": "data/history/08105700-00060-daily-mean.csv",
+  "series": {
+    "parameter_code": "00060",
+    "statistic_id": "00003",
+    "meaning": "daily mean discharge, ft^3/s; a daily mean is not an instantaneous reading and hides within-day peaks",
+    "time_series_ids": [
+      "c00d0b3f44884661a491aa66f12a7001"
+    ],
+    "first_day": "1965-07-16",
+    "last_day": "2026-09-30",
+    "returned_days": 22357,
+    "numeric_days": 22357,
+    "non_numeric_days": 0,
+    "approval_counts": {
+      "Approved": 22232,
+      "Provisional": 125
+    },
+    "qualifier_counts": {
+      "[]": 22299,
+      "[\"ESTIMATED\"]": 58
+    },
+    "zero_days": 53
+  },
+  "station_series_inventory_00060_00065": [],
+  "gaps": {
+    "count": 0,
+    "missing_days_total": 0,
+    "calendar_gaps": [],
+    "meaning": "Days the provider did not return. They are absent from the CSV and are never treated as zero flow."
+  },
+  "limits": [
+    "Daily means describe the station, not any swimming reach.",
+    "Provisional values may be revised by USGS.",
+    "This archive is context for percentiles and event detection; it fits no swimming rule."
+  ]
+}

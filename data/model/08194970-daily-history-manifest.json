@@ -1,0 +1,76 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
+  "station_id": "USGS-08194970",
+  "station": {
+    "monitoring_location_name": "Frio Rv abv Concan, TX",
+    "site_type": "Stream",
+    "hydrologic_unit_code": "121101060204",
+    "drainage_area": 348.0,
+    "contributing_drainage_area": 348.0,
+    "altitude": 1286.0,
+    "vertical_datum": "NAVD88",
+    "county_name": "Uvalde County",
+    "coordinates_lon_lat": [
+      -99.7134,
+      29.5364333333333
+    ]
+  },
+  "daily_request": {
+    "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08194970&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+    "retrieved_at": "2026-10-09T16:59:32.999446+00:00",
+    "status": 200,
+    "sha256": "618644aa2e46b8b135d48f08f616297a19ac21023ec7a88d71df09315dad9e44",
+    "bytes": 1563,
+    "feature_count": 0,
+    "next_link": null,
+    "raw_path": "data/raw/usgs-daily/08194970/20261009T165932999446Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08194970/20261009T165932999446Z-daily-00060-00003.json.gz"
+  },
+  "metadata_requests": {
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08194970&limit=1",
+      "retrieved_at": "2026-10-09T16:59:30.371585+00:00",
+      "status": 200,
+      "sha256": "ce0c5fffee5a65982c6eb7aa10f942572a3172a3f98e462aabc6c42ab3f3a3e3",
+      "raw_path": "data/raw/usgs-daily/08194970/20261009T165930371585Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08194970/20261009T165930371585Z-location.json.gz"
+    },
+    "time_series_metadata": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08194970&limit=1000&skipGeometry=true",
+      "retrieved_at": "2026-10-09T16:59:31.686930+00:00",
+      "status": 200,
+      "sha256": "dd87662eb07210333fc83a7fd91e3cd347b0fee243b784fac7047f2ea55dd76b",
+      "raw_path": "data/raw/usgs-daily/08194970/20261009T165931686930Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08194970/20261009T165931686930Z-timeseries-metadata.json.gz"
+    }
+  },
+  "complete_response": true,
+  "normalized_csv": "data/history/08194970-00060-daily-mean.csv",
+  "series": {
+    "parameter_code": "00060",
+    "statistic_id": "00003",
+    "meaning": "daily mean discharge, ft^3/s; a daily mean is not an instantaneous reading and hides within-day peaks",
+    "time_series_ids": [],
+    "first_day": null,
+    "last_day": null,
+    "returned_days": 0,
+    "numeric_days": 0,
+    "non_numeric_days": 0,
+    "approval_counts": {},
+    "qualifier_counts": {},
+    "zero_days": 0
+  },
+  "station_series_inventory_00060_00065": [],
+  "gaps": {
+    "count": 0,
+    "missing_days_total": 0,
+    "calendar_gaps": [],
+    "meaning": "Days the provider did not return. They are absent from the CSV and are never treated as zero flow."
+  },
+  "limits": [
+    "Daily means describe the station, not any swimming reach.",
+    "Provisional values may be revised by USGS.",
+    "This archive is context for percentiles and event detection; it fits no swimming rule."
+  ]
+}

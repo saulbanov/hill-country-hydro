@@ -1,0 +1,258 @@
+{
+  "lid": "SMCT2",
+  "usgsId": "08167700",
+  "reachId": "3589578",
+  "name": "Guadalupe River at Canyon Lake",
+  "description": "",
+  "rfc": {
+    "abbreviation": "WGRFC",
+    "name": "West Gulf River Forecast Center"
+  },
+  "wfo": {
+    "abbreviation": "EWX",
+    "name": "New Braunfels"
+  },
+  "state": {
+    "abbreviation": "TX",
+    "name": "Texas"
+  },
+  "county": "Comal",
+  "timeZone": "CST6CDT",
+  "latitude": 29.868611111111,
+  "longitude": -98.198611111111,
+  "pedts": {
+    "observed": "HPIRG",
+    "forecast": "HPIFF"
+  },
+  "status": {
+    "observed": {
+      "primary": 907.97,
+      "primaryUnit": "ft",
+      "secondary": -999,
+      "secondaryUnit": "kcfs",
+      "floodCategory": "no_flooding",
+      "validTime": "2026-09-29T12:15:00Z"
+    },
+    "forecast": {
+      "primary": -999,
+      "primaryUnit": "",
+      "secondary": -999,
+      "secondaryUnit": "",
+      "floodCategory": "fcst_not_current",
+      "validTime": "0001-01-01T00:00:00Z"
+    }
+  },
+  "flood": {
+    "stageUnits": "ft",
+    "flowUnits": "cfs",
+    "categories": {
+      "major": {
+        "stage": 945,
+        "flow": -9999
+      },
+      "moderate": {
+        "stage": 945,
+        "flow": -9999
+      },
+      "minor": {
+        "stage": 943,
+        "flow": -9999
+      },
+      "action": {
+        "stage": 943,
+        "flow": -9999
+      }
+    },
+    "lro": null,
+    "crests": {
+      "historic": [
+        {
+          "occurredTime": "2002-07-06T00:00:00Z",
+          "stage": 950.02,
+          "flow": 0,
+          "preliminary": "R",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1987-06-19T00:00:00Z",
+          "stage": 942.68,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1997-06-27T00:00:00Z",
+          "stage": 937.57,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1992-03-09T00:00:00Z",
+          "stage": 937.31,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1991-12-28T00:00:00Z",
+          "stage": 930.76,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1978-08-04T00:00:00Z",
+          "stage": 930.61,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        }
+      ],
+      "recent": [
+        {
+          "occurredTime": "2002-07-06T00:00:00Z",
+          "stage": 950.02,
+          "flow": 0,
+          "preliminary": "R",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1997-06-27T00:00:00Z",
+          "stage": 937.57,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1992-03-09T00:00:00Z",
+          "stage": 937.31,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1991-12-28T00:00:00Z",
+          "stage": 930.76,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1987-06-19T00:00:00Z",
+          "stage": 942.68,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1978-08-04T00:00:00Z",
+          "stage": 930.61,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        }
+      ]
+    },
+    "lowWaters": {
+      "historic": []
+    },
+    "impacts": [
+      {
+        "stage": 943,
+        "statement": "Flow goes uncontrolled across the emergency spillway. Lakeside recreation facilities flood. Parks, docks, marinas, restaurants, and lakeside roads are severely flooded and damaged."
+      },
+      {
+        "stage": 930,
+        "statement": "All marinas, docks, parks, and roads to facilities around the lake are under water. "
+      },
+      {
+        "stage": 913,
+        "statement": "Canyon Lake is four feet into the flood pool, potentially damaging boats and flooding docks if ties are not loosened. "
+      }
+    ]
+  },
+  "images": {
+    "probability": {
+      "weekint": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/SMCT2.SSTG.prob.weekint.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/SMCT2.QINE.prob.weekint.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/SMCT2.volume.prob.weekint.gif"
+      },
+      "entperiod": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/SMCT2.SSTG.exceed.90day.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/SMCT2.QINE.exceed.90day.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/SMCT2.volume.exceed.90day.gif"
+      },
+      "shortrange": "https://water.noaa.gov/resources/probabilistic/short_term/SMCT2.shortrange.hefs.png"
+    },
+    "hydrograph": {
+      "default": "https://water.noaa.gov/resources/hydrographs/smct2_hg.png",
+      "floodcat": "https://water.noaa.gov/resources/hydrographs/smct2_record.png"
+    },
+    "photos": []
+  },
+  "dataAttribution": [
+    {
+      "abbrev": "US Geological Survey",
+      "text": "USGS--Water Resources of the United States",
+      "title": "US Geological Survey",
+      "url": "https://waterdata.usgs.gov/nwis"
+    },
+    {
+      "abbrev": "USGS",
+      "text": "08167700",
+      "title": "Observations courtesy of U.S. Geological Survey",
+      "url": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08167700"
+    },
+    {
+      "abbrev": "COE",
+      "text": "Website",
+      "title": "Observations courtesy of U.S. Army Corps of Engineers",
+      "url": "http://www.swf-wc.usace.army.mil/reports/fly/html/SMCT2.html"
+    }
+  ],
+  "impactsLowWaters": [],
+  "normalThreshold": {
+    "value": 909,
+    "units": "ft"
+  },
+  "hydronotes": [
+    {
+      "statement": "River forecasts for this location take into account past precipitation and the precipitation amounts expected approximately 24 hours into the future from the forecast issuance time.",
+      "effective": "0101",
+      "expiration": "1231"
+    }
+  ],
+  "datums": {
+    "vertical": {
+      "value": []
+    },
+    "horizontal": {
+      "value": []
+    },
+    "notes": {
+      "value": []
+    }
+  },
+  "inundation": {
+    "enabled": false,
+    "url": "",
+    "zeroDatum": null,
+    "downloads": null,
+    "siteSpecificInfo": "",
+    "dataAttribution": []
+  },
+  "upstreamLid": "SRGT2",
+  "downstreamLid": "STLT2",
+  "inService": {
+    "enabled": true,
+    "message": ""
+  },
+  "lowThreshold": null,
+  "forecastReliability": "Forecasts are not available. Only observed stages are available for this point.",
+  "TruncateObs": "-1",
+  "TruncateFcst": "5",
+  "ObservedFloodCategory": "no_flooding",
+  "ForecastFloodCategory": "fcst_not_current"
+}

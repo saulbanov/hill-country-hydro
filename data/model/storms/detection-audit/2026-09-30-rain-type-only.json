@@ -1,0 +1,1731 @@
+{
+  "id": "2026-09-30",
+  "window": {
+    "t0": "2026-09-29T10:35:00Z",
+    "t1": null,
+    "cap_at": "2026-10-09T10:35:00Z",
+    "observed_through": "2026-10-02T12:10:00Z",
+    "status": "open",
+    "rule": {
+      "rain_fraction": 0.2,
+      "rainfall1Day_inches": 1.0,
+      "baseline_hours": 24,
+      "recession_hours": 72,
+      "cap_days": 10,
+      "trigger": "rainfall1Day >= 1 inch at >=20% of reporting rain gauges, or a flow crossing of its ledger high threshold",
+      "end": "72 hours after all crossing gauges are observed below threshold, capped at t0 + 10 days",
+      "daily_precision": "Daily means can identify a trigger day only; its UTC midnight is a window boundary, not an observed crossing time."
+    },
+    "triggered_by": [
+      {
+        "at": "2026-09-30T10:35:00+00:00",
+        "kind": "flow",
+        "station": "08158030",
+        "threshold_cfs": 7.26,
+        "reading": {
+          "at": "2026-09-30T10:35:00+00:00",
+          "value": 8.54,
+          "source": "data/raw/usgs/20261001T150644112014Z-continuous-08158030.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-09-30T10:30:00+00:00",
+          "value": 0.0,
+          "source": "data/raw/usgs/20261001T150644112014Z-continuous-08158030.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T07:50:00+00:00",
+        "kind": "flow",
+        "station": "08149900",
+        "threshold_cfs": 136.0,
+        "reading": {
+          "at": "2026-10-01T07:50:00+00:00",
+          "value": 138.0,
+          "source": "data/raw/usgs/20261002T120053900557Z-continuous-08149900.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T07:45:00+00:00",
+          "value": 134.0,
+          "source": "data/raw/usgs/20261002T120053900557Z-continuous-08149900.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T08:05:00+00:00",
+        "kind": "flow",
+        "station": "08149900",
+        "threshold_cfs": 136.0,
+        "reading": {
+          "at": "2026-10-01T08:05:00+00:00",
+          "value": 140.0,
+          "source": "data/raw/usgs/20261002T120053900557Z-continuous-08149900.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T08:00:00+00:00",
+          "value": 132.0,
+          "source": "data/raw/usgs/20261002T120053900557Z-continuous-08149900.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T09:00:00+00:00",
+        "kind": "flow",
+        "station": "08150000",
+        "threshold_cfs": 297.0,
+        "reading": {
+          "at": "2026-10-01T09:00:00+00:00",
+          "value": 303.0,
+          "source": "data/raw/usgs/20261002T120055872919Z-continuous-08150000.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T08:55:00+00:00",
+          "value": 272.0,
+          "source": "data/raw/usgs/20261002T120055872919Z-continuous-08150000.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T11:25:00+00:00",
+        "kind": "flow",
+        "station": "08166200",
+        "threshold_cfs": 252.0,
+        "reading": {
+          "at": "2026-10-01T11:25:00+00:00",
+          "value": 255.0,
+          "source": "data/raw/usgs/20261002T120052137017Z-continuous-08166200.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T11:20:00+00:00",
+          "value": 248.0,
+          "source": "data/raw/usgs/20261002T120052137017Z-continuous-08166200.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:15:00+00:00",
+        "kind": "flow",
+        "station": "08158930",
+        "threshold_cfs": 9.3,
+        "reading": {
+          "at": "2026-10-01T17:15:00+00:00",
+          "value": 11.9,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:10:00+00:00",
+          "value": 5.87,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:15:00+00:00",
+        "kind": "flow",
+        "station": "08155541",
+        "threshold_cfs": 5.63,
+        "reading": {
+          "at": "2026-10-01T17:15:00+00:00",
+          "value": 14.2,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:10:00+00:00",
+          "value": 0.76,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:15:00+00:00",
+        "kind": "flow",
+        "station": "08183900",
+        "threshold_cfs": 84.0,
+        "reading": {
+          "at": "2026-10-01T17:15:00+00:00",
+          "value": 104.0,
+          "source": "data/raw/usgs/20261002T120047429172Z-continuous-08183900.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:00:00+00:00",
+          "value": 76.1,
+          "source": "data/raw/usgs/20261002T120047429172Z-continuous-08183900.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.25
+      },
+      {
+        "at": "2026-10-01T17:20:00+00:00",
+        "kind": "flow",
+        "station": "08156800",
+        "threshold_cfs": 29.8,
+        "reading": {
+          "at": "2026-10-01T17:20:00+00:00",
+          "value": 53.6,
+          "source": "data/raw/usgs/20261002T121852616622Z-continuous-08156800.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:15:00+00:00",
+          "value": 0.0,
+          "source": "data/raw/usgs/20261002T121852616622Z-continuous-08156800.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:25:00+00:00",
+        "kind": "flow",
+        "station": "08157540",
+        "threshold_cfs": 18.5,
+        "reading": {
+          "at": "2026-10-01T17:25:00+00:00",
+          "value": 43.5,
+          "source": "data/raw/usgs/20261002T115907450043Z-continuous-08157540.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:20:00+00:00",
+          "value": 17.4,
+          "source": "data/raw/usgs/20261002T115907450043Z-continuous-08157540.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:30:00+00:00",
+        "kind": "flow",
+        "station": "08157560",
+        "threshold_cfs": 17.2,
+        "reading": {
+          "at": "2026-10-01T17:30:00+00:00",
+          "value": 22.7,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:25:00+00:00",
+          "value": 14.2,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:35:00+00:00",
+        "kind": "flow",
+        "station": "08158970",
+        "threshold_cfs": 21.0,
+        "reading": {
+          "at": "2026-10-01T17:35:00+00:00",
+          "value": 28.8,
+          "source": "data/raw/usgs/20261002T121857853916Z-continuous-08158970.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:30:00+00:00",
+          "value": 6.79,
+          "source": "data/raw/usgs/20261002T121857853916Z-continuous-08158970.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:40:00+00:00",
+        "kind": "flow",
+        "station": "08156910",
+        "threshold_cfs": 4.52,
+        "reading": {
+          "at": "2026-10-01T17:40:00+00:00",
+          "value": 26.3,
+          "source": "data/raw/usgs/20261002T115905229682Z-continuous-08156910.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:35:00+00:00",
+          "value": 1.59,
+          "source": "data/raw/usgs/20261002T115905229682Z-continuous-08156910.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:45:00+00:00",
+        "kind": "flow",
+        "station": "08156675",
+        "threshold_cfs": 14.9,
+        "reading": {
+          "at": "2026-10-01T17:45:00+00:00",
+          "value": 38.6,
+          "source": "data/raw/usgs/20261002T115902600801Z-continuous-08156675.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:40:00+00:00",
+          "value": 0.0,
+          "source": "data/raw/usgs/20261002T115902600801Z-continuous-08156675.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:45:00+00:00",
+        "kind": "flow",
+        "station": "08158030",
+        "threshold_cfs": 7.26,
+        "reading": {
+          "at": "2026-10-01T17:45:00+00:00",
+          "value": 18.8,
+          "source": "data/raw/usgs/20261002T115912407966Z-continuous-08158030.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:40:00+00:00",
+          "value": 0.06,
+          "source": "data/raw/usgs/20261002T115912407966Z-continuous-08158030.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:45:00+00:00",
+        "kind": "flow",
+        "station": "08158035",
+        "threshold_cfs": 11.1,
+        "reading": {
+          "at": "2026-10-01T17:45:00+00:00",
+          "value": 11.7,
+          "source": "data/raw/usgs/20261002T115914550557Z-continuous-08158035.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:40:00+00:00",
+          "value": 0.23,
+          "source": "data/raw/usgs/20261002T115914550557Z-continuous-08158035.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T17:50:00+00:00",
+        "kind": "flow",
+        "station": "08158380",
+        "threshold_cfs": 24.6,
+        "reading": {
+          "at": "2026-10-01T17:50:00+00:00",
+          "value": 33.2,
+          "source": "data/raw/usgs/20261002T115918688359Z-continuous-08158380.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:45:00+00:00",
+          "value": 24.2,
+          "source": "data/raw/usgs/20261002T115918688359Z-continuous-08158380.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T18:00:00+00:00",
+        "kind": "flow",
+        "station": "08105886",
+        "threshold_cfs": 8.12,
+        "reading": {
+          "at": "2026-10-01T18:00:00+00:00",
+          "value": 9.56,
+          "source": "data/raw/usgs/20261002T115954356100Z-continuous-08105886.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T17:55:00+00:00",
+          "value": 7.41,
+          "source": "data/raw/usgs/20261002T115954356100Z-continuous-08105886.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T18:55:00+00:00",
+        "kind": "flow",
+        "station": "08158600",
+        "threshold_cfs": 108.0,
+        "reading": {
+          "at": "2026-10-01T18:55:00+00:00",
+          "value": 186.0,
+          "source": "data/raw/usgs/20261002T115920379295Z-continuous-08158600.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T18:50:00+00:00",
+          "value": 0.02,
+          "source": "data/raw/usgs/20261002T115920379295Z-continuous-08158600.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T19:45:00+00:00",
+        "kind": "flow",
+        "station": "08158200",
+        "threshold_cfs": 58.3,
+        "reading": {
+          "at": "2026-10-01T19:45:00+00:00",
+          "value": 80.6,
+          "source": "data/raw/usgs/20261002T115916482134Z-continuous-08158200.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T19:40:00+00:00",
+          "value": 16.7,
+          "source": "data/raw/usgs/20261002T115916482134Z-continuous-08158200.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T20:50:00+00:00",
+        "kind": "flow",
+        "station": "08156910",
+        "threshold_cfs": 4.52,
+        "reading": {
+          "at": "2026-10-01T20:50:00+00:00",
+          "value": 4.81,
+          "source": "data/raw/usgs/20261002T115905229682Z-continuous-08156910.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T20:45:00+00:00",
+          "value": 4.46,
+          "source": "data/raw/usgs/20261002T115905229682Z-continuous-08156910.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T21:05:00+00:00",
+        "kind": "flow",
+        "station": "08157560",
+        "threshold_cfs": 17.2,
+        "reading": {
+          "at": "2026-10-01T21:05:00+00:00",
+          "value": 17.6,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T21:00:00+00:00",
+          "value": 17.1,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T22:55:00+00:00",
+        "kind": "flow",
+        "station": "08157560",
+        "threshold_cfs": 17.2,
+        "reading": {
+          "at": "2026-10-01T22:55:00+00:00",
+          "value": 18.7,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T22:50:00+00:00",
+          "value": 16.9,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-01T23:00:00+00:00",
+        "kind": "flow",
+        "station": "08158930",
+        "threshold_cfs": 9.3,
+        "reading": {
+          "at": "2026-10-01T23:00:00+00:00",
+          "value": 10.2,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-01T22:55:00+00:00",
+          "value": 8.57,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T00:15:00+00:00",
+        "kind": "flow",
+        "station": "08151500",
+        "threshold_cfs": 832.0,
+        "reading": {
+          "at": "2026-10-02T00:15:00+00:00",
+          "value": 1150.0,
+          "source": "data/raw/usgs/20261002T120058011616Z-continuous-08151500.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T00:10:00+00:00",
+          "value": 703.0,
+          "source": "data/raw/usgs/20261002T120058011616Z-continuous-08151500.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T00:50:00+00:00",
+        "kind": "flow",
+        "station": "08158922",
+        "threshold_cfs": 1.16,
+        "reading": {
+          "at": "2026-10-02T00:50:00+00:00",
+          "value": 1.26,
+          "source": "data/raw/usgs/20261002T115926424108Z-continuous-08158922.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T00:45:00+00:00",
+          "value": 0.0,
+          "source": "data/raw/usgs/20261002T115926424108Z-continuous-08158922.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T03:15:00+00:00",
+        "kind": "flow",
+        "station": "08190000",
+        "threshold_cfs": 392.0,
+        "reading": {
+          "at": "2026-10-02T03:15:00+00:00",
+          "value": 406.0,
+          "source": "data/raw/usgs/20261002T120102695186Z-continuous-08190000.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T03:10:00+00:00",
+          "value": 185.0,
+          "source": "data/raw/usgs/20261002T120102695186Z-continuous-08190000.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T03:35:00+00:00",
+        "kind": "flow",
+        "station": "08158380",
+        "threshold_cfs": 24.6,
+        "reading": {
+          "at": "2026-10-02T03:35:00+00:00",
+          "value": 32.1,
+          "source": "data/raw/usgs/20261002T115918688359Z-continuous-08158380.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T03:30:00+00:00",
+          "value": 24.2,
+          "source": "data/raw/usgs/20261002T115918688359Z-continuous-08158380.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T06:20:00+00:00",
+        "kind": "flow",
+        "station": "08155541",
+        "threshold_cfs": 5.63,
+        "reading": {
+          "at": "2026-10-02T06:20:00+00:00",
+          "value": 5.63,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T06:15:00+00:00",
+          "value": 5.17,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T07:05:00+00:00",
+        "kind": "flow",
+        "station": "08155541",
+        "threshold_cfs": 5.63,
+        "reading": {
+          "at": "2026-10-02T07:05:00+00:00",
+          "value": 5.63,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T07:00:00+00:00",
+          "value": 5.17,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T09:45:00+00:00",
+        "kind": "flow",
+        "station": "08155541",
+        "threshold_cfs": 5.63,
+        "reading": {
+          "at": "2026-10-02T09:45:00+00:00",
+          "value": 5.63,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T09:40:00+00:00",
+          "value": 5.17,
+          "source": "data/raw/usgs/20261002T115900574364Z-continuous-08155541.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T09:50:00+00:00",
+        "kind": "flow",
+        "station": "08158930",
+        "threshold_cfs": 9.3,
+        "reading": {
+          "at": "2026-10-02T09:50:00+00:00",
+          "value": 10.9,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T09:45:00+00:00",
+          "value": 8.27,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T09:55:00+00:00",
+        "kind": "flow",
+        "station": "08158035",
+        "threshold_cfs": 11.1,
+        "reading": {
+          "at": "2026-10-02T09:55:00+00:00",
+          "value": 11.7,
+          "source": "data/raw/usgs/20261002T115914550557Z-continuous-08158035.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T09:50:00+00:00",
+          "value": 9.21,
+          "source": "data/raw/usgs/20261002T115914550557Z-continuous-08158035.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T10:05:00+00:00",
+        "kind": "flow",
+        "station": "08157560",
+        "threshold_cfs": 17.2,
+        "reading": {
+          "at": "2026-10-02T10:05:00+00:00",
+          "value": 17.6,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T10:00:00+00:00",
+          "value": 12.3,
+          "source": "data/raw/usgs/20261002T115909116377Z-continuous-08157560.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T10:10:00+00:00",
+        "kind": "flow",
+        "station": "08157540",
+        "threshold_cfs": 18.5,
+        "reading": {
+          "at": "2026-10-02T10:10:00+00:00",
+          "value": 38.8,
+          "source": "data/raw/usgs/20261002T115907450043Z-continuous-08157540.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T10:05:00+00:00",
+          "value": 14.4,
+          "source": "data/raw/usgs/20261002T115907450043Z-continuous-08157540.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T10:20:00+00:00",
+        "kind": "flow",
+        "station": "08158930",
+        "threshold_cfs": 9.3,
+        "reading": {
+          "at": "2026-10-02T10:20:00+00:00",
+          "value": 14.3,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T10:15:00+00:00",
+          "value": 8.57,
+          "source": "data/raw/usgs/20261002T121856044452Z-continuous-08158930.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T10:40:00+00:00",
+        "kind": "flow",
+        "station": "08158030",
+        "threshold_cfs": 7.26,
+        "reading": {
+          "at": "2026-10-02T10:40:00+00:00",
+          "value": 9.96,
+          "source": "data/raw/usgs/20261002T115912407966Z-continuous-08158030.json",
+          "precision": "instantaneous"
+        },
+        "previous": {
+          "at": "2026-10-02T10:35:00+00:00",
+          "value": 6.87,
+          "source": "data/raw/usgs/20261002T115912407966Z-continuous-08158030.json",
+          "precision": "instantaneous"
+        },
+        "gap_hours": 0.08333333333333333
+      },
+      {
+        "at": "2026-10-02T11:55:49Z",
+        "kind": "rain",
+        "capture": "data/raw/hydromet/current/20261002T120026988082Z-all-sites.json",
+        "reporting": 196,
+        "wet": 138,
+        "readings": [
+          {
+            "site": "COA:124",
+            "at": "2026-10-02T11:45:14Z",
+            "rainfall1Day": 1.2
+          },
+          {
+            "site": "COA:700",
+            "at": "2026-10-02T11:45:14Z",
+            "rainfall1Day": 1.16
+          },
+          {
+            "site": "COA:810",
+            "at": "2026-10-02T11:45:18Z",
+            "rainfall1Day": 2.2
+          },
+          {
+            "site": "COA:820",
+            "at": "2026-10-02T11:45:19Z",
+            "rainfall1Day": 2.44
+          },
+          {
+            "site": "COA:830",
+            "at": "2026-10-02T11:45:16Z",
+            "rainfall1Day": 2.24
+          },
+          {
+            "site": "COA:840",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.92
+          },
+          {
+            "site": "COA:910",
+            "at": "2026-10-02T11:45:22Z",
+            "rainfall1Day": 1.8
+          },
+          {
+            "site": "COA:1140",
+            "at": "2026-10-02T11:45:32Z",
+            "rainfall1Day": 1.84
+          },
+          {
+            "site": "COA:1180",
+            "at": "2026-10-02T11:45:18Z",
+            "rainfall1Day": 1.52
+          },
+          {
+            "site": "COA:1190",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.48
+          },
+          {
+            "site": "COA:1820",
+            "at": "2026-10-02T11:45:11Z",
+            "rainfall1Day": 1.04
+          },
+          {
+            "site": "COA:1930",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 0.96
+          },
+          {
+            "site": "COA:2030",
+            "at": "2026-10-02T11:45:16Z",
+            "rainfall1Day": 1.6
+          },
+          {
+            "site": "COA:2100",
+            "at": "2026-10-02T11:45:10Z",
+            "rainfall1Day": 1.72
+          },
+          {
+            "site": "COA:2140",
+            "at": "2026-10-02T11:45:15Z",
+            "rainfall1Day": 1.36
+          },
+          {
+            "site": "COA:2200",
+            "at": "2026-10-02T11:45:17Z",
+            "rainfall1Day": 1.36
+          },
+          {
+            "site": "COA:2320",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.4
+          },
+          {
+            "site": "COA:2380",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.8
+          },
+          {
+            "site": "COA:2550",
+            "at": "2026-10-02T11:45:15Z",
+            "rainfall1Day": 1.44
+          },
+          {
+            "site": "COA:2730",
+            "at": "2026-10-02T11:45:28Z",
+            "rainfall1Day": 1.56
+          },
+          {
+            "site": "COA:2800",
+            "at": "2026-10-02T11:45:17Z",
+            "rainfall1Day": 1.76
+          },
+          {
+            "site": "COA:2820",
+            "at": "2026-10-02T11:45:21Z",
+            "rainfall1Day": 2.08
+          },
+          {
+            "site": "COA:2840",
+            "at": "2026-10-02T11:45:24Z",
+            "rainfall1Day": 1.8
+          },
+          {
+            "site": "COA:2910",
+            "at": "2026-10-02T11:45:16Z",
+            "rainfall1Day": 1.6
+          },
+          {
+            "site": "COA:3120",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.88
+          },
+          {
+            "site": "COA:3400",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 2.44
+          },
+          {
+            "site": "COA:3600",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.04
+          },
+          {
+            "site": "COA:3610",
+            "at": "2026-10-02T11:45:17Z",
+            "rainfall1Day": 1.24
+          },
+          {
+            "site": "COA:3620",
+            "at": "2026-10-02T11:45:13Z",
+            "rainfall1Day": 1.12
+          },
+          {
+            "site": "COA:3630",
+            "at": "2026-10-02T11:45:11Z",
+            "rainfall1Day": 1.36
+          },
+          {
+            "site": "COA:3650",
+            "at": "2026-10-02T11:45:17Z",
+            "rainfall1Day": 1.16
+          },
+          {
+            "site": "COA:5000",
+            "at": "2026-10-02T11:45:15Z",
+            "rainfall1Day": 1.88
+          },
+          {
+            "site": "COA:5750",
+            "at": "2026-10-02T11:45:17Z",
+            "rainfall1Day": 1.2
+          },
+          {
+            "site": "COA:5800",
+            "at": "2026-10-02T11:45:14Z",
+            "rainfall1Day": 1.44
+          },
+          {
+            "site": "LCRA:1090",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.04
+          },
+          {
+            "site": "LCRA:1153",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.24
+          },
+          {
+            "site": "LCRA:1169",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 0.38
+          },
+          {
+            "site": "LCRA:1187",
+            "at": "2026-10-02T11:15:00Z",
+            "rainfall1Day": 0.29
+          },
+          {
+            "site": "LCRA:1197",
+            "at": "2026-10-02T11:55:34Z",
+            "rainfall1Day": 0.42
+          },
+          {
+            "site": "LCRA:1215",
+            "at": "2026-10-02T11:55:23Z",
+            "rainfall1Day": 0.22
+          },
+          {
+            "site": "LCRA:1236",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 0.48
+          },
+          {
+            "site": "LCRA:1253",
+            "at": "2026-10-02T11:55:32Z",
+            "rainfall1Day": 0.66
+          },
+          {
+            "site": "LCRA:1307",
+            "at": "2026-10-02T11:15:00Z",
+            "rainfall1Day": 0.0
+          },
+          {
+            "site": "LCRA:1331",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.02
+          },
+          {
+            "site": "LCRA:1345",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.13
+          },
+          {
+            "site": "LCRA:1354",
+            "at": "2026-10-02T11:15:00Z",
+            "rainfall1Day": 0.11
+          },
+          {
+            "site": "LCRA:1357",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.0
+          },
+          {
+            "site": "LCRA:1360",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.19
+          },
+          {
+            "site": "LCRA:1373",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 0.32
+          },
+          {
+            "site": "LCRA:1387",
+            "at": "2026-10-02T11:15:00Z",
+            "rainfall1Day": 0.36
+          },
+          {
+            "site": "LCRA:1397",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 0.5
+          },
+          {
+            "site": "LCRA:1405",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.01
+          },
+          {
+            "site": "LCRA:1453",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.02
+          },
+          {
+            "site": "LCRA:1455",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.0
+          },
+          {
+            "site": "LCRA:1532",
+            "at": "2026-10-02T11:55:41Z",
+            "rainfall1Day": 0.31
+          },
+          {
+            "site": "LCRA:1540",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 0.45
+          },
+          {
+            "site": "LCRA:1578",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.66
+          },
+          {
+            "site": "LCRA:1616",
+            "at": "2026-10-02T11:55:12Z",
+            "rainfall1Day": 0.12
+          },
+          {
+            "site": "LCRA:1646",
+            "at": "2026-10-02T11:55:35Z",
+            "rainfall1Day": 0.27
+          },
+          {
+            "site": "LCRA:1648",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 0.31
+          },
+          {
+            "site": "LCRA:1687",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 0.52
+          },
+          {
+            "site": "LCRA:1707",
+            "at": "2026-10-02T11:55:35Z",
+            "rainfall1Day": 0.99
+          },
+          {
+            "site": "LCRA:1725",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 0.85
+          },
+          {
+            "site": "LCRA:1742",
+            "at": "2026-10-02T11:55:40Z",
+            "rainfall1Day": 0.62
+          },
+          {
+            "site": "LCRA:1752",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 0.51
+          },
+          {
+            "site": "LCRA:1777",
+            "at": "2026-10-02T11:55:37Z",
+            "rainfall1Day": 1.72
+          },
+          {
+            "site": "LCRA:1915",
+            "at": "2026-10-02T11:55:40Z",
+            "rainfall1Day": 1.21
+          },
+          {
+            "site": "LCRA:1922",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.04
+          },
+          {
+            "site": "LCRA:1924",
+            "at": "2026-10-02T11:55:14Z",
+            "rainfall1Day": 1.83
+          },
+          {
+            "site": "LCRA:1926",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 1.27
+          },
+          {
+            "site": "LCRA:1927",
+            "at": "2026-10-02T11:55:14Z",
+            "rainfall1Day": 1.02
+          },
+          {
+            "site": "LCRA:1928",
+            "at": "2026-10-02T11:55:20Z",
+            "rainfall1Day": 1.6
+          },
+          {
+            "site": "LCRA:1936",
+            "at": "2026-10-02T11:55:30Z",
+            "rainfall1Day": 1.47
+          },
+          {
+            "site": "LCRA:1940",
+            "at": "2026-10-02T11:55:20Z",
+            "rainfall1Day": 1.03
+          },
+          {
+            "site": "LCRA:1945",
+            "at": "2026-10-02T11:55:33Z",
+            "rainfall1Day": 1.15
+          },
+          {
+            "site": "LCRA:1949",
+            "at": "2026-10-02T11:55:42Z",
+            "rainfall1Day": 1.23
+          },
+          {
+            "site": "LCRA:1950",
+            "at": "2026-10-02T11:55:36Z",
+            "rainfall1Day": 1.26
+          },
+          {
+            "site": "LCRA:1964",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 1.35
+          },
+          {
+            "site": "LCRA:1966",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 1.42
+          },
+          {
+            "site": "LCRA:1981",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 3.64
+          },
+          {
+            "site": "LCRA:1982",
+            "at": "2026-10-02T11:55:49Z",
+            "rainfall1Day": 1.09
+          },
+          {
+            "site": "LCRA:1983",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 1.62
+          },
+          {
+            "site": "LCRA:1984",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 3.4
+          },
+          {
+            "site": "LCRA:1994",
+            "at": "2026-10-02T11:55:12Z",
+            "rainfall1Day": 0.92
+          },
+          {
+            "site": "LCRA:2029",
+            "at": "2026-10-02T11:55:23Z",
+            "rainfall1Day": 2.18
+          },
+          {
+            "site": "LCRA:2140",
+            "at": "2026-10-02T11:15:00Z",
+            "rainfall1Day": 0.0
+          },
+          {
+            "site": "LCRA:2144",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.12
+          },
+          {
+            "site": "LCRA:2168",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 0.13
+          },
+          {
+            "site": "LCRA:2188",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 0.1
+          },
+          {
+            "site": "LCRA:2200",
+            "at": "2026-10-02T11:55:49Z",
+            "rainfall1Day": 0.11
+          },
+          {
+            "site": "LCRA:2248",
+            "at": "2026-10-02T11:55:39Z",
+            "rainfall1Day": 0.49
+          },
+          {
+            "site": "LCRA:2260",
+            "at": "2026-10-02T11:30:00Z",
+            "rainfall1Day": 0.46
+          },
+          {
+            "site": "LCRA:2310",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.94
+          },
+          {
+            "site": "LCRA:2312",
+            "at": "2026-10-02T11:55:13Z",
+            "rainfall1Day": 1.71
+          },
+          {
+            "site": "LCRA:2328",
+            "at": "2026-10-02T11:55:42Z",
+            "rainfall1Day": 0.84
+          },
+          {
+            "site": "LCRA:2347",
+            "at": "2026-10-02T11:55:34Z",
+            "rainfall1Day": 0.7
+          },
+          {
+            "site": "LCRA:2348",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 0.31
+          },
+          {
+            "site": "LCRA:2367",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 0.4
+          },
+          {
+            "site": "LCRA:2391",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 0.55
+          },
+          {
+            "site": "LCRA:2397",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 1.13
+          },
+          {
+            "site": "LCRA:2398",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.32
+          },
+          {
+            "site": "LCRA:2411",
+            "at": "2026-10-02T11:55:37Z",
+            "rainfall1Day": 2.04
+          },
+          {
+            "site": "LCRA:2422",
+            "at": "2026-10-02T11:55:36Z",
+            "rainfall1Day": 1.34
+          },
+          {
+            "site": "LCRA:2432",
+            "at": "2026-10-02T11:55:21Z",
+            "rainfall1Day": 1.25
+          },
+          {
+            "site": "LCRA:2433",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 1.33
+          },
+          {
+            "site": "LCRA:2434",
+            "at": "2026-10-02T11:55:13Z",
+            "rainfall1Day": 1.38
+          },
+          {
+            "site": "LCRA:2436",
+            "at": "2026-10-02T11:55:21Z",
+            "rainfall1Day": 1.52
+          },
+          {
+            "site": "LCRA:2441",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.62
+          },
+          {
+            "site": "LCRA:2450",
+            "at": "2026-10-02T11:55:40Z",
+            "rainfall1Day": 1.6
+          },
+          {
+            "site": "LCRA:2473",
+            "at": "2026-10-02T11:55:13Z",
+            "rainfall1Day": 1.28
+          },
+          {
+            "site": "LCRA:2476",
+            "at": "2026-10-02T11:55:42Z",
+            "rainfall1Day": 1.85
+          },
+          {
+            "site": "LCRA:2490",
+            "at": "2026-10-02T11:55:16Z",
+            "rainfall1Day": 1.18
+          },
+          {
+            "site": "LCRA:2491",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 1.4
+          },
+          {
+            "site": "LCRA:2614",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 1.83
+          },
+          {
+            "site": "LCRA:2615",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 1.57
+          },
+          {
+            "site": "LCRA:2621",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 1.71
+          },
+          {
+            "site": "LCRA:2634",
+            "at": "2026-10-02T11:55:13Z",
+            "rainfall1Day": 1.02
+          },
+          {
+            "site": "LCRA:2646",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 0.88
+          },
+          {
+            "site": "LCRA:2651",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 1.27
+          },
+          {
+            "site": "LCRA:2655",
+            "at": "2026-10-02T11:55:15Z",
+            "rainfall1Day": 0.96
+          },
+          {
+            "site": "LCRA:2668",
+            "at": "2026-10-02T11:55:37Z",
+            "rainfall1Day": 1.4
+          },
+          {
+            "site": "LCRA:2690",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 0.88
+          },
+          {
+            "site": "LCRA:2843",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.29
+          },
+          {
+            "site": "LCRA:2847",
+            "at": "2026-10-02T11:55:18Z",
+            "rainfall1Day": 1.42
+          },
+          {
+            "site": "LCRA:2849",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 1.33
+          },
+          {
+            "site": "LCRA:2864",
+            "at": "2026-10-02T11:55:21Z",
+            "rainfall1Day": 1.29
+          },
+          {
+            "site": "LCRA:2868",
+            "at": "2026-10-02T11:55:39Z",
+            "rainfall1Day": 1.11
+          },
+          {
+            "site": "LCRA:2869",
+            "at": "2026-10-02T11:55:41Z",
+            "rainfall1Day": 1.15
+          },
+          {
+            "site": "LCRA:2874",
+            "at": "2026-10-02T11:55:21Z",
+            "rainfall1Day": 0.88
+          },
+          {
+            "site": "LCRA:2889",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.45
+          },
+          {
+            "site": "LCRA:2928",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 1.81
+          },
+          {
+            "site": "LCRA:2959",
+            "at": "2026-10-02T11:55:41Z",
+            "rainfall1Day": 1.44
+          },
+          {
+            "site": "LCRA:2991",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 1.86
+          },
+          {
+            "site": "LCRA:2995",
+            "at": "2026-10-02T11:55:29Z",
+            "rainfall1Day": 1.97
+          },
+          {
+            "site": "LCRA:3014",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 2.14
+          },
+          {
+            "site": "LCRA:3015",
+            "at": "2026-10-02T11:55:12Z",
+            "rainfall1Day": 2.38
+          },
+          {
+            "site": "LCRA:3028",
+            "at": "2026-10-02T11:55:20Z",
+            "rainfall1Day": 2.05
+          },
+          {
+            "site": "LCRA:3035",
+            "at": "2026-10-02T11:55:34Z",
+            "rainfall1Day": 2.36
+          },
+          {
+            "site": "LCRA:3064",
+            "at": "2026-10-02T11:55:33Z",
+            "rainfall1Day": 1.86
+          },
+          {
+            "site": "LCRA:3237",
+            "at": "2026-10-02T11:55:30Z",
+            "rainfall1Day": 1.07
+          },
+          {
+            "site": "LCRA:3258",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 0.83
+          },
+          {
+            "site": "LCRA:3268",
+            "at": "2026-10-02T11:55:23Z",
+            "rainfall1Day": 0.81
+          },
+          {
+            "site": "LCRA:3285",
+            "at": "2026-10-02T11:55:23Z",
+            "rainfall1Day": 1.77
+          },
+          {
+            "site": "LCRA:3317",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.46
+          },
+          {
+            "site": "LCRA:3327",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 2.16
+          },
+          {
+            "site": "LCRA:3330",
+            "at": "2026-10-02T11:55:37Z",
+            "rainfall1Day": 2.01
+          },
+          {
+            "site": "LCRA:3350",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 1.36
+          },
+          {
+            "site": "LCRA:3365",
+            "at": "2026-10-02T11:55:41Z",
+            "rainfall1Day": 1.42
+          },
+          {
+            "site": "LCRA:3368",
+            "at": "2026-10-02T11:55:46Z",
+            "rainfall1Day": 1.23
+          },
+          {
+            "site": "LCRA:3370",
+            "at": "2026-10-02T11:55:23Z",
+            "rainfall1Day": 1.88
+          },
+          {
+            "site": "LCRA:3377",
+            "at": "2026-10-02T11:55:23Z",
+            "rainfall1Day": 1.4
+          },
+          {
+            "site": "LCRA:3383",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 1.74
+          },
+          {
+            "site": "LCRA:3448",
+            "at": "2026-10-02T11:55:15Z",
+            "rainfall1Day": 2.89
+          },
+          {
+            "site": "LCRA:3520",
+            "at": "2026-10-02T11:55:15Z",
+            "rainfall1Day": 1.58
+          },
+          {
+            "site": "LCRA:3528",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.53
+          },
+          {
+            "site": "LCRA:3557",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.47
+          },
+          {
+            "site": "LCRA:3576",
+            "at": "2026-10-02T11:55:44Z",
+            "rainfall1Day": 1.99
+          },
+          {
+            "site": "LCRA:3582",
+            "at": "2026-10-02T11:55:40Z",
+            "rainfall1Day": 2.04
+          },
+          {
+            "site": "LCRA:3917",
+            "at": "2026-10-02T11:55:12Z",
+            "rainfall1Day": 1.91
+          },
+          {
+            "site": "LCRA:3918",
+            "at": "2026-10-02T11:55:30Z",
+            "rainfall1Day": 1.7
+          },
+          {
+            "site": "LCRA:3948",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 1.51
+          },
+          {
+            "site": "LCRA:3949",
+            "at": "2026-10-02T11:55:27Z",
+            "rainfall1Day": 1.98
+          },
+          {
+            "site": "LCRA:3951",
+            "at": "2026-10-02T11:55:40Z",
+            "rainfall1Day": 1.71
+          },
+          {
+            "site": "LCRA:3961",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.58
+          },
+          {
+            "site": "LCRA:3964",
+            "at": "2026-10-02T11:55:44Z",
+            "rainfall1Day": 1.86
+          },
+          {
+            "site": "LCRA:3991",
+            "at": "2026-10-02T11:55:31Z",
+            "rainfall1Day": 1.16
+          },
+          {
+            "site": "LCRA:4500",
+            "at": "2026-10-02T11:55:32Z",
+            "rainfall1Day": 1.34
+          },
+          {
+            "site": "LCRA:4517",
+            "at": "2026-10-02T11:55:16Z",
+            "rainfall1Day": 1.55
+          },
+          {
+            "site": "LCRA:4593",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 1.45
+          },
+          {
+            "site": "LCRA:4594",
+            "at": "2026-10-02T11:55:12Z",
+            "rainfall1Day": 1.38
+          },
+          {
+            "site": "LCRA:4596",
+            "at": "2026-10-02T11:55:44Z",
+            "rainfall1Day": 1.33
+          },
+          {
+            "site": "LCRA:5415",
+            "at": "2026-10-02T11:55:43Z",
+            "rainfall1Day": 1.02
+          },
+          {
+            "site": "LCRA:5461",
+            "at": "2026-10-02T11:55:13Z",
+            "rainfall1Day": 0.75
+          },
+          {
+            "site": "LCRA:5519",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 0.82
+          },
+          {
+            "site": "LCRA:5520",
+            "at": "2026-10-02T11:55:16Z",
+            "rainfall1Day": 0.95
+          },
+          {
+            "site": "LCRA:5522",
+            "at": "2026-10-02T11:55:41Z",
+            "rainfall1Day": 2.48
+          },
+          {
+            "site": "LCRA:5590",
+            "at": "2026-10-02T11:55:30Z",
+            "rainfall1Day": 0.86
+          },
+          {
+            "site": "LCRA:5604",
+            "at": "2026-10-02T11:55:43Z",
+            "rainfall1Day": 3.15
+          },
+          {
+            "site": "LCRA:5619",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 3.15
+          },
+          {
+            "site": "LCRA:5691",
+            "at": "2026-10-02T11:55:17Z",
+            "rainfall1Day": 1.63
+          },
+          {
+            "site": "LCRA:5692",
+            "at": "2026-10-02T11:55:49Z",
+            "rainfall1Day": 3.6
+          },
+          {
+            "site": "LCRA:6621",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 3.65
+          },
+          {
+            "site": "LCRA:6790",
+            "at": "2026-10-02T11:55:43Z",
+            "rainfall1Day": 0.12
+          },
+          {
+            "site": "LCRA:6899",
+            "at": "2026-10-02T11:55:39Z",
+            "rainfall1Day": 0.34
+          },
+          {
+            "site": "LCRA:7005",
+            "at": "2026-10-02T11:55:30Z",
+            "rainfall1Day": 4.19
+          },
+          {
+            "site": "LCRA:7040",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 2.65
+          },
+          {
+            "site": "LCRA:7225",
+            "at": "2026-10-02T11:55:40Z",
+            "rainfall1Day": 2.91
+          },
+          {
+            "site": "LCRA:7297",
+            "at": "2026-10-02T11:55:29Z",
+            "rainfall1Day": 2.51
+          },
+          {
+            "site": "LCRA:7303",
+            "at": "2026-10-02T11:55:39Z",
+            "rainfall1Day": 2.56
+          },
+          {
+            "site": "LCRA:7324",
+            "at": "2026-10-02T11:55:38Z",
+            "rainfall1Day": 2.24
+          },
+          {
+            "site": "LCRA:8820",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 0.53
+          },
+          {
+            "site": "LCRA:8830",
+            "at": "2026-10-02T11:55:19Z",
+            "rainfall1Day": 1.3
+          },
+          {
+            "site": "LCRA:8840",
+            "at": "2026-10-02T11:55:26Z",
+            "rainfall1Day": 1.23
+          },
+          {
+            "site": "LCRA:8855",
+            "at": "2026-10-02T11:55:42Z",
+            "rainfall1Day": 3.72
+          },
+          {
+            "site": "LCRA:8860",
+            "at": "2026-10-02T11:55:13Z",
+            "rainfall1Day": 3.87
+          },
+          {
+            "site": "LCRA:8870",
+            "at": "2026-10-02T11:15:00Z",
+            "rainfall1Day": 0.42
+          }
+        ]
+      }
+    ],
+    "end_candidate": null,
+    "gauges_without_observed_recession": [
+      "08158030",
+      "08149900",
+      "08150000",
+      "08166200",
+      "08158930",
+      "08155541",
+      "08156800",
+      "08157540",
+      "08157560",
+      "08158970",
+      "08158035",
+      "08151500",
+      "08190000"
+    ]
+  },
+  "hypotheses": []
+}

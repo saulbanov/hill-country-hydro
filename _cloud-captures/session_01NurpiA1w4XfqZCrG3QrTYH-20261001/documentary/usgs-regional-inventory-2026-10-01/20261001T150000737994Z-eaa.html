@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head starts --><!------------------------------------------------------------------------->
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <!-- Google fonts -->      
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Crimson+Pro:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+        
+    
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" rel="stylesheet" />
+    
+
+    <!-- Google Analytics (GA4) - rendered only when MeasurementId is set and NOT in Development -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS2GPWJQCJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XS2GPWJQCJ', { 'send_page_view': true });
+        </script>
+
+    <!-- JavaScript and JQuery -->
+    
+    
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"></script>
+    
+
+    <!-- Bootstrap 5 -->
+         
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />                
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     
+
+    <!-- Leaflet -->
+    
+    
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />        
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <link rel="stylesheet" href="/assets/maps/leaflet/L.Control.BetterScale.css" />
+        <script src="/assets/maps/leaflet/L.Control.BetterScale.js"></script>
+        
+
+    <!-- Datatables -->
+    
+    
+        <link href="https://cdn.datatables.net/2.1.0/css/dataTables.dataTables.min.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/buttons/3.1.0/css/buttons.dataTables.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/select/2.0.3/css/select.dataTables.css" rel="stylesheet" />
+        <script src="https://cdn.datatables.net/2.1.0/js/dataTables.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/dataTables.buttons.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/buttons.dataTables.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.1.0/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/select/2.0.3/js/dataTables.select.js"></script>
+        <script src="https://cdn.datatables.net/select/2.0.3/js/select.dataTables.js"></script>
+    
+
+    <!-- highcharts highstock -->
+    
+    
+        <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/annotations/popup.css">
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>       
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/stock/indicators/indicators-all.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+        <script src="https://code.highcharts.com/modules/annotations-advanced.js"></script>
+        <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+        <script src="/assets/charts/scripts/highcharts-light-theme.js"></script>
+    
+
+
+    <!-- Add Site Styling and JS Script files -->   
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="icon" type="image/png" href="/assets/icons/well.png" sizes="48x48">
+    <link href="/css/site.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>   
+
+    <style>
+        #loadingSpinnerWrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #EDF4F7;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+
+<!-- head ends --><!--------------------------------------------------------------------------->
+<!-- body starts --><!-------------------------------------------------------------------------->
+<body>
+
+
+    <!--------------------------------------------------------------------------->
+    <!-------------------    Laoding Spinner Wrapper Starts ----------------->
+    <br b-q7lk333kj3 />
+    <br b-q7lk333kj3 />
+    <div b-q7lk333kj3 id="loadingSpinnerWrapper">
+        <span b-q7lk333kj3 class="h1 text-dark fw-bold m-2 p-2">Loading... Please Wait.</span>
+        <div b-q7lk333kj3 class="spinner-border text-dark fw-bold" role="status" id="loadingSpinner" style="display:none;">
+        </div>
+    </div>
+    <br b-q7lk333kj3 />
+    <br b-q7lk333kj3 />
+    <!-------------------    Laoding Spinner Wrapper Ends  ----------------->
+    <!--------------------------------------------------------------------------->
+
+    <!-------------------------------------------------------------------------->
+    <!-- start of header navabar and main navigation menu -->
+    <!--  Header Starts-->
+    <header b-q7lk333kj3 id="header" class=" header fixed-top header-inner-pages">
+        <nav b-q7lk333kj3 class="navbar navbar-expand-lg navbar-top  pt-4 pb-4">
+            <!-- navbar brand / title -->
+            <div b-q7lk333kj3 class="container">                
+               <span b-q7lk333kj3 class=" h5 mb-0 text-secondary text-white">
+                <a b-q7lk333kj3 href="https://www.edwardsaquifer.org" aria-label="Edawards Aquifer Authority"><img src="/assets/logos/EAA Infinity Logo White Type - RGB.png" alt="EAA Logo" style="width:100px;height:50px"></a>  Environmental Data Portal </span>
+                <!-- toggle button for mobile nav -->
+                <button b-q7lk333kj3 class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-q7lk333kj3 class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navbar links -->
+                <div b-q7lk333kj3 class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                    <ul b-q7lk333kj3 class="navbar-nav">
+                        <li b-q7lk333kj3 class="nav-item">
+                            <a class="nav-link scrollto active" href="/">Home</a>
+                        </li>
+                        <li b-q7lk333kj3 class="nav-item">
+                            <a class="nav-link scrollto" href="/AquiferConditions">Aquifer Conditions</a>
+                        </li>
+                        <li b-q7lk333kj3 class="nav-item dropdown">
+                            <a b-q7lk333kj3 class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Site Types</a>
+                            <ul b-q7lk333kj3 class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/GroundWater">Groundwater Wells</a></li>
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/SpringsAndStreams">Springs and Streams</a></li>
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/RainGauges">Rain Gauges</a></li>
+                                <li b-q7lk333kj3><a class="nav-link scrollto" href="/WeatherStations">Weather Stations</a></li>
+                            </ul>
+                        <li b-q7lk333kj3 class="nav-item dropdown">
+                            <a b-q7lk333kj3 class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Research Projects</a>
+                            <ul b-q7lk333kj3 class="dropdown-menu" aria-labelledby="dropdown02">
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.edwardsaquifer.org/aquifer-science/sustainability/frp/" target="_blank">Field Research Park</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.edwardsaquifer.org/habitat-conservation-plan/" target="_blank">Habitat Conservation Plan</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.edwardsaquifer.org/aquifer-science/research/projects/#section2_interformational-flow" target="_blank">Interformational Flow</a></li>
+                            </ul>
+                        </li>
+                        <li b-q7lk333kj3 class="nav-item dropdown">
+                          <a b-q7lk333kj3 class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown" aria-expanded="false">External Resources</a>
+                           <ul b-q7lk333kj3 class="dropdown-menu" aria-labelledby="dropdown05">
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.sariverauthority.org/maps-reports/" target="_blank">San Antonio River Authority</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.gbra.org/conditions/" target="_blank">Guadalupe-Blanco River Authority</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://hydromet.lcra.org/" target="_blank">Lower Colorado River Authority</a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.twdb.texas.gov/groundwater/data/index.asp" target="_blank">Texas Water Development Board Groundwater</a></li>
+                             <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://webapps.usgs.gov/spring_calc/" target="_blank">Comal and San Marcos Springflow</a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.texmesonet.org/" target="_blank">TexMesonet</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://waterdatafortexas.org/reservoirs/statewide" target="_blank">Water Data for Texas </a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/" target="_blank">National Water Dashboard</a></li>                            
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.waterqualitydata.us/" target="_blank">National Water Quality Monitoring Council</a></li>
+                            <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.weather.gov/" target="_blank">National Weather Service</a></li>
+                                <li b-q7lk333kj3><a b-q7lk333kj3 class="dropdown-item" href="https://www.ncdc.noaa.gov/cdo-web/" target="_blank">National Oceanic and Atmospheric Administration</a></li>
+                          </ul>
+                        </li>                        
+                        <li b-q7lk333kj3 class="nav-item">
+                            <a b-q7lk333kj3 class="nav-link" href="https://www.edwardsaquifer.org/aquifer-science/" tabindex="-1" aria-disabled="true">Aquifer Science</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <!-- end of header navabar and main navigation menu -->
+    <!-------------------------------------------------------------------------->
+      
+    <!--------------------------------------------------------------------------->
+
+    <div b-q7lk333kj3 class="container main-container">
+        <main b-q7lk333kj3 role="main" class="pb-3">
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8OQm_u0ERVlJsS9xjaUBAsIhZL3K1BYx0m0H-pA6Qxv5LdFsp40yVY4OD6s5lclgl5MQY8N4IbasJpRqmTdwQbK3CyhB7gAOPn-PBO6Pcs8Mt0bYk1ZmJWCJMOOTF5GygxQXkBDFgWL7zGuo6E6LTto" />
+
+
+<script src="/js/HomePageScripts.js"></script>
+<script>
+    var allStationsJSON = [{"siteInfoId":3,"siteId":"ANR602","siteName":"Annandale Ranch Frio River","siteType":"Water Well","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4458780,"longitude":-99.6652620,"landElevation":1151.00},{"siteInfoId":8,"siteId":"BAN061RG","siteName":"Bandera 061 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bandera","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6980560,"longitude":-99.5508330,"landElevation":1499.00},{"siteInfoId":9,"siteId":"BAN062RG","siteName":"Bandera 062 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Bandera","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.8130560,"longitude":-99.5755560,"landElevation":1806.00},{"siteInfoId":10,"siteId":"BAN073RG","siteName":"Bandera 073 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Bandera","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.8705560,"longitude":-99.3772220,"landElevation":1715.00},{"siteInfoId":11,"siteId":"BAN091RG","siteName":"Bandera 091 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bandera","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6733330,"longitude":-98.9605560,"landElevation":1128.00},{"siteInfoId":12,"siteId":"BAN093RG","siteName":"Bandera 093 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bandera","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6669440,"longitude":-99.3313880,"landElevation":1422.00},{"siteInfoId":13,"siteId":"BAN108RG","siteName":"Bandera 108 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bandera","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.8383330,"longitude":-99.2811110,"landElevation":1548.00},{"siteInfoId":18,"siteId":"BAN02WS","siteName":"BCRAGD Office","siteType":"Weather Station","siteStatus":"Active","county":"Bandera","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.7400470,"longitude":-99.0813600,"landElevation":1309.00},{"siteInfoId":20,"siteId":"BEX107RG","siteName":"Bexar 107 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6730560,"longitude":-98.6538890,"landElevation":1180.00},{"siteInfoId":21,"siteId":"BEX124RG","siteName":"Bexar 124 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6813890,"longitude":-98.5225000,"landElevation":1229.00},{"siteInfoId":22,"siteId":"BEX125RG","siteName":"Bexar 125 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7400000,"longitude":-98.5130560,"landElevation":1142.00},{"siteInfoId":23,"siteId":"BEX127RG","siteName":"Bexar 127 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5125000,"longitude":-98.6327780,"landElevation":839.00},{"siteInfoId":24,"siteId":"BEX128RG","siteName":"Bexar 128 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6077780,"longitude":-98.6522220,"landElevation":1281.00},{"siteInfoId":25,"siteId":"BEX130RG","siteName":"Bexar 130 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.4791670,"longitude":-98.4327780,"landElevation":735.00},{"siteInfoId":26,"siteId":"BEX133RG","siteName":"Bexar 133 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5872220,"longitude":-98.5547220,"landElevation":988.00},{"siteInfoId":27,"siteId":"BEX142RG","siteName":"Bexar 142 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6183330,"longitude":-98.7313890,"landElevation":1376.00},{"siteInfoId":29,"siteId":"BLA151RG","siteName":"Blanco 151 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Blanco","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":30.0894440,"longitude":-98.3066670,"landElevation":1310.00},{"siteInfoId":30,"siteId":"BLA156RG","siteName":"Blanco 156 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Blanco","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":30.0913890,"longitude":-98.4166530,"landElevation":1323.00},{"siteInfoId":31,"siteId":"BR313","siteName":"Blanco Rd 1604 Bexar Met NAWQA Sentinel","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6098330,"longitude":-98.5060280,"landElevation":948.35},{"siteInfoId":89,"siteId":"BRAC208","siteName":"Bracken","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.6102810,"longitude":-98.3196280,"landElevation":797.81},{"siteInfoId":90,"siteId":"COM02WS","siteName":"Bracken Bat Cave","siteType":"Weather Station","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6872790,"longitude":-98.3510060,"landElevation":1051.00},{"siteInfoId":91,"siteId":"BEX02WS","siteName":"Camp Bullis Acan","siteType":"Weather Station","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6368640,"longitude":-98.5266530,"landElevation":1058.00},{"siteInfoId":94,"siteId":"BEX03WS","siteName":"Camp Bullis High Hill","siteType":"Weather Station","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6952190,"longitude":-98.5578530,"landElevation":1345.00},{"siteInfoId":95,"siteId":"BEX04WS","siteName":"Camp Bullis HQ Cave","siteType":"Weather Station","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6326980,"longitude":-98.5806590,"landElevation":663.00},{"siteInfoId":99,"siteId":"BEX05WS","siteName":"Camp Bullis Salado Creek","siteType":"Weather Station","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6842750,"longitude":-98.6051810,"landElevation":1165.00},{"siteInfoId":101,"siteId":"BEX06WS","siteName":"Camp Bullis Well 10","siteType":"Weather Station","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.7396880,"longitude":-98.5729540,"landElevation":1246.00},{"siteInfoId":120,"siteId":"CHS303","siteName":"Chase Hill Sentinel","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5883890,"longitude":-98.6260160,"landElevation":1003.67},{"siteInfoId":122,"siteId":"CC211","siteName":"Cibolo Creek","siteType":"Water Well","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.6049860,"longitude":-98.3281610,"landElevation":776.90},{"siteInfoId":124,"siteId":"CIB080SW","siteName":"Cibolo Creek 080","siteType":"Stream","siteStatus":"Historic","county":"Comal","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7489460,"longitude":-98.5990870,"landElevation":1198.00},{"siteInfoId":125,"siteId":"CIB089SW","siteName":"Cibolo Creek 089","siteType":"Stream","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7495350,"longitude":-98.5337830,"landElevation":1133.00},{"siteInfoId":126,"siteId":"CIB090SW","siteName":"Cibolo Creek 090","siteType":"Stream","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.7489020,"longitude":-98.5339600,"landElevation":1127.00},{"siteInfoId":136,"siteId":"KEN01WS","siteName":"Cibolo Nature Center","siteType":"Weather Station","siteStatus":"Active","county":"Kendall","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.7839050,"longitude":-98.7092290,"landElevation":1387.00},{"siteInfoId":140,"siteId":"COGR808","siteName":"City of Garden Ridge","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.6425560,"longitude":-98.3073750,"landElevation":966.28},{"siteInfoId":141,"siteId":"HONDOWL","siteName":"City of Hondo","siteType":"Water Well","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3463060,"longitude":-99.1389440,"landElevation":886.68},{"siteInfoId":142,"siteId":"COM003RG","siteName":"Comal 003 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.8513890,"longitude":-98.0813890,"landElevation":1063.00},{"siteInfoId":143,"siteId":"COM004RG","siteName":"Comal 004 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.6388880,"longitude":-98.2144440,"landElevation":747.00},{"siteInfoId":144,"siteId":"COM005RG","siteName":"Comal 005 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7177780,"longitude":-98.1811110,"landElevation":890.00},{"siteInfoId":145,"siteId":"COM008RG","siteName":"Comal 008 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7094440,"longitude":-98.2536110,"landElevation":894.00},{"siteInfoId":146,"siteId":"COM010RG","siteName":"Comal 010 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7730560,"longitude":-98.2986110,"landElevation":1209.00},{"siteInfoId":147,"siteId":"COM132RG","siteName":"Comal 132 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":29.8713050,"longitude":-98.3989300,"landElevation":1077.00},{"siteInfoId":148,"siteId":"COM135RG","siteName":"Comal 135 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6269440,"longitude":-98.3319440,"landElevation":832.00},{"siteInfoId":149,"siteId":"COM138RG","siteName":"Comal 138 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.7442900,"longitude":-98.4514740,"landElevation":1097.00},{"siteInfoId":150,"siteId":"COM152RG","siteName":"Comal 152 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":29.9697560,"longitude":-98.2627970,"landElevation":1281.00},{"siteInfoId":172,"siteId":"CCW101","siteName":"Crystal Clear Water Sentinel","siteType":"Water Well","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8555830,"longitude":-97.9801780,"landElevation":686.99},{"siteInfoId":179,"siteId":"HAY01WS","siteName":"DiLeo Ranch","siteType":"Weather Station","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":30.0223180,"longitude":-98.2150570,"landElevation":1034.00},{"siteInfoId":195,"siteId":"UVA01WS","siteName":"Durnell Ranch","siteType":"Weather Station","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.5888880,"longitude":-100.0061110,"landElevation":1347.00},{"siteInfoId":196,"siteId":"BEX01WS","siteName":"Field Research Park Demonstration Area","siteType":"Weather Station","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6643940,"longitude":-98.3817200,"landElevation":910.00},{"siteInfoId":197,"siteId":"EAAS403","siteName":"EAA Solar","siteType":"Water Well","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.9208610,"longitude":-97.9716390,"landElevation":688.43},{"siteInfoId":198,"siteId":"MED02WS","siteName":"East Of Hondo","siteType":"Weather Station","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3427780,"longitude":-99.1166670,"landElevation":873.00},{"siteInfoId":203,"siteId":"EV324","siteName":"East Uvalde","siteType":"Water Well","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2206660,"longitude":-99.7613470,"landElevation":922.50},{"siteInfoId":204,"siteId":"REA063RG","siteName":"Real 063 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6850000,"longitude":-100.0183330,"landElevation":1463.00},{"siteInfoId":205,"siteId":"EDW064RG","siteName":"Edwards 064 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Edwards","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":30.0355560,"longitude":-100.0591670,"landElevation":2281.00},{"siteInfoId":206,"siteId":"EDW065RG","siteName":"Edwards 065 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Edwards","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.8702780,"longitude":-100.1094440,"landElevation":2298.00},{"siteInfoId":207,"siteId":"EDW066RG","siteName":"Edwards 066 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Edwards","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.9425000,"longitude":-100.4222220,"landElevation":2160.00},{"siteInfoId":208,"siteId":"EDW075RG","siteName":"Edwards 075 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Edwards","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":30.0486110,"longitude":-100.1738890,"landElevation":2370.00},{"siteInfoId":210,"siteId":"ELG406","siteName":"Ehler Leona Gravel","siteType":"Water Well","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"None","latitude":29.1691330,"longitude":-99.7397100,"landElevation":874.90},{"siteInfoId":211,"siteId":"ENR806","siteName":"Encino Rio NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6297210,"longitude":-98.4486080,"landElevation":950.26},{"siteInfoId":217,"siteId":"CIB250SW","siteName":"Field Research Park Cibolo Creek","siteType":"Stream","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6626340,"longitude":-98.3787590,"landElevation":842.00},{"siteInfoId":219,"siteId":"BAN01WS","siteName":"Four Sisters Ranch","siteType":"Weather Station","siteStatus":"Active","county":"Bandera","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6403100,"longitude":-99.5868530,"landElevation":1507.00},{"siteInfoId":229,"siteId":"FRPH905","siteName":"Field Research Park House Well","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6633469,"longitude":-98.3798221,"landElevation":874.02},{"siteInfoId":230,"siteId":"FRPW904","siteName":"Field Research Park West Well","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6594660,"longitude":-98.3868310,"landElevation":968.80},{"siteInfoId":232,"siteId":"GSSD624","siteName":"Girl Scout Short Deep","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7074030,"longitude":-98.1362760,"landElevation":634.41},{"siteInfoId":233,"siteId":"GSTS619","siteName":"Girl Scout Tall Shallow","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7074030,"longitude":-98.1362760,"landElevation":634.41},{"siteInfoId":236,"siteId":"GC216","siteName":"Gold Canyon NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6118630,"longitude":-98.4444220,"landElevation":923.86},{"siteInfoId":241,"siteId":"HAY02WS","siteName":"Halifax Ranch","siteType":"Weather Station","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":30.0263100,"longitude":-97.9278790,"landElevation":836.00},{"siteInfoId":244,"siteId":"HAY157RG","siteName":"Hays 157 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.9727780,"longitude":-97.9925000,"landElevation":1017.00},{"siteInfoId":245,"siteId":"HAY158RG","siteName":"Hays 158 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8911280,"longitude":-97.9294160,"landElevation":587.00},{"siteInfoId":246,"siteId":"HAY160RG","siteName":"Hays 160 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Hays","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.9327780,"longitude":-98.0772220,"landElevation":1018.00},{"siteInfoId":247,"siteId":"HAY161RG","siteName":"Hays 161 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Hays","basin":"Colorado","aquiferZone":"None","latitude":30.0777780,"longitude":-97.8466670,"landElevation":708.00},{"siteInfoId":248,"siteId":"HAY162RG","siteName":"Hays 162 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":30.0200000,"longitude":-98.1388890,"landElevation":1067.00},{"siteInfoId":249,"siteId":"HCPASDRIVE","siteName":"HCP Aquarena Springs Drive","siteType":"Stream","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8889100,"longitude":-97.9340200,"landElevation":571.00},{"siteInfoId":250,"siteId":"HCPFISHHAT","siteName":"HCP Fish Hatchery","siteType":"Stream","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"None","latitude":29.8685000,"longitude":-97.9300000,"landElevation":559.00},{"siteInfoId":251,"siteId":"HCPLANDALK","siteName":"HCP Landa Lake","siteType":"Stream","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7133830,"longitude":-98.1349780,"landElevation":655.00},{"siteInfoId":252,"siteId":"HCPNEWCHAN","siteName":"HCP New Channel","siteType":"Stream","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.7079800,"longitude":-98.1272600,"landElevation":602.00},{"siteInfoId":253,"siteId":"HCPOLDCHAN","siteName":"HCP Old Channel","siteType":"Stream","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7115400,"longitude":-98.1319800,"landElevation":656.00},{"siteInfoId":254,"siteId":"HCPRIOVIST","siteName":"HCP Rio Vista Park","siteType":"Stream","siteStatus":"Historic","county":"Hays","basin":"Guadalupe","aquiferZone":"None","latitude":29.8801000,"longitude":-97.9333600,"landElevation":577.00},{"siteInfoId":255,"siteId":"HCPSESSOM","siteName":"HCP Sessom Creek","siteType":"Stream","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8896800,"longitude":-97.9356100,"landElevation":590.00},{"siteInfoId":256,"siteId":"HCPSPRING3","siteName":"HCP Spring 3","siteType":"Spring","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7141800,"longitude":-98.1364100,"landElevation":632.00},{"siteInfoId":257,"siteId":"HCPSPRING7","siteName":"HCP Spring 7","siteType":"Spring","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7154200,"longitude":-98.1348000,"landElevation":643.00},{"siteInfoId":258,"siteId":"HCPUPSPRING","siteName":"HCP Upper Spring Run","siteType":"Spring","siteStatus":"Historic","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7210300,"longitude":-98.1280400,"landElevation":620.00},{"siteInfoId":260,"siteId":"HEL517","siteName":"Helotes NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5662784,"longitude":-98.6817200,"landElevation":996.92},{"siteInfoId":261,"siteId":"HEY503","siteName":"Helotes Yard","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5662552,"longitude":-98.6816559,"landElevation":996.94},{"siteInfoId":262,"siteId":"HCV103","siteName":"Hill Country Village","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5896170,"longitude":-98.4880080,"landElevation":952.55},{"siteInfoId":267,"siteId":"HAO519","siteName":"Huebner at Olmos NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5690039,"longitude":-98.5535720,"landElevation":926.84},{"siteInfoId":268,"siteId":"HAS609","siteName":"Huebner at Salado NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5829576,"longitude":-98.5371210,"landElevation":926.25},{"siteInfoId":271,"siteId":"HW402","siteName":"HWY 187 - UTOPIA","siteType":"Water Well","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4532990,"longitude":-99.4731860,"landElevation":1156.82},{"siteInfoId":272,"siteId":"HW701","siteName":"HWY 306","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":29.7572780,"longitude":-98.1048060,"landElevation":713.74},{"siteInfoId":273,"siteId":"ILALE416","siteName":"ILA Lower Edwards","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.7039690,"longitude":-98.0865080,"landElevation":668.40},{"siteInfoId":274,"siteId":"ILAUE415","siteName":"ILA Upper Edwards","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.7038140,"longitude":-98.0862640,"landElevation":668.74},{"siteInfoId":275,"siteId":"IP925","siteName":"Interchange Parkway","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5162690,"longitude":-98.3973690,"landElevation":754.16},{"siteInfoId":276,"siteId":"J17WL","siteName":"J-17 San Antonio Pool Index","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.4791390,"longitude":-98.4326110,"landElevation":730.81},{"siteInfoId":277,"siteId":"J27WL","siteName":"J-27 Uvalde Pool Index","siteType":"Water Well","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2087500,"longitude":-99.7843610,"landElevation":904.90},{"siteInfoId":280,"siteId":"JEN801","siteName":"Jentsch","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.7867700,"longitude":-98.0528700,"landElevation":752.71},{"siteInfoId":287,"siteId":"KEN068RG","siteName":"Kendall 068 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kendall","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":29.9258330,"longitude":-98.8580560,"landElevation":1592.00},{"siteInfoId":288,"siteId":"KEN095RG","siteName":"Kendall 095 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kendall","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.7705560,"longitude":-98.7777780,"landElevation":1585.00},{"siteInfoId":290,"siteId":"KEN141RG","siteName":"Kendall 141 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kendall","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.8241670,"longitude":-98.5736110,"landElevation":1397.00},{"siteInfoId":291,"siteId":"KEN155RG","siteName":"Kendall 155 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kendall","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":30.1163890,"longitude":-98.5708330,"landElevation":1657.00},{"siteInfoId":294,"siteId":"KIN040RG","siteName":"Kinney 040 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kinney","basin":"Nueces","aquiferZone":"None","latitude":29.2480560,"longitude":-100.2019440,"landElevation":1200.00},{"siteInfoId":295,"siteId":"KIN041RG","siteName":"Kinney 041 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kinney","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.4436110,"longitude":-100.1425000,"landElevation":1238.00},{"siteInfoId":296,"siteId":"KIN043RG","siteName":"Kinney 043 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Kinney","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4136370,"longitude":-100.2612180,"landElevation":1381.00},{"siteInfoId":300,"siteId":"KYLN303","siteName":"Kyle North","siteType":"Water Well","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.9897500,"longitude":-97.8754720,"landElevation":719.12},{"siteInfoId":305,"siteId":"LCRA304","siteName":"LCRA","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7113330,"longitude":-98.1376110,"landElevation":626.17},{"siteInfoId":308,"siteId":"LW621","siteName":"Linda Wass - Owner (formerly RThomas; AJonas)","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.6944530,"longitude":-98.1591730,"landElevation":671.68},{"siteInfoId":315,"siteId":"LP316","siteName":"Loop 337 Sentinel","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7213610,"longitude":-98.1479330,"landElevation":807.58},{"siteInfoId":320,"siteId":"MED002RG","siteName":"Medina 002 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2055560,"longitude":-99.0041670,"landElevation":817.00},{"siteInfoId":321,"siteId":"MED003RG","siteName":"Medina 003 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3427780,"longitude":-99.1166670,"landElevation":873.00},{"siteInfoId":322,"siteId":"MED005RG","siteName":"Medina 005 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4511110,"longitude":-99.1950000,"landElevation":1024.00},{"siteInfoId":323,"siteId":"MED006RG","siteName":"Medina 006 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.1780560,"longitude":-99.1372220,"landElevation":729.00},{"siteInfoId":324,"siteId":"MED007RG","siteName":"Medina 007 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2594440,"longitude":-99.2608330,"landElevation":809.00},{"siteInfoId":325,"siteId":"MED008RG","siteName":"Medina 008 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4611460,"longitude":-99.1171180,"landElevation":966.59},{"siteInfoId":326,"siteId":"MED010RG","siteName":"Medina 010 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4386110,"longitude":-99.2825000,"landElevation":1010.00},{"siteInfoId":327,"siteId":"MED011RG","siteName":"Medina 011 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.5594440,"longitude":-99.4058330,"landElevation":1281.00},{"siteInfoId":328,"siteId":"MED015RG","siteName":"Medina 015 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.1113890,"longitude":-99.2208330,"landElevation":665.00},{"siteInfoId":329,"siteId":"MED094RG","siteName":"Medina 094 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.3050000,"longitude":-98.8275000,"landElevation":730.00},{"siteInfoId":330,"siteId":"MED097RG","siteName":"Medina 097 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Medina","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5394440,"longitude":-98.8169440,"landElevation":1054.00},{"siteInfoId":331,"siteId":"MED098RG","siteName":"Medina 098 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3483330,"longitude":-98.9394440,"landElevation":910.00},{"siteInfoId":332,"siteId":"MED099RG","siteName":"Medina 099 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Medina","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6344440,"longitude":-98.8125000,"landElevation":1288.00},{"siteInfoId":333,"siteId":"MED101RG","siteName":"Medina 101 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5255560,"longitude":-98.9600000,"landElevation":1286.00},{"siteInfoId":334,"siteId":"MED102RG","siteName":"Medina 102 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.5672220,"longitude":-99.0975000,"landElevation":1242.00},{"siteInfoId":335,"siteId":"MED103RG","siteName":"Medina 103 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6036110,"longitude":-99.2483330,"landElevation":1293.00},{"siteInfoId":349,"siteId":"COM04WS","siteName":"Natural Bridge Caverns","siteType":"Weather Station","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.6991450,"longitude":-98.3419620,"landElevation":1106.00},{"siteInfoId":352,"siteId":"NU409","siteName":"North Uvalde","siteType":"Water Well","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3239070,"longitude":-99.7304760,"landElevation":1055.63},{"siteInfoId":376,"siteId":"UVA02WS","siteName":"Open V Ranch","siteType":"Weather Station","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.3531230,"longitude":-99.9539570,"landElevation":1047.00},{"siteInfoId":377,"siteId":"PC302","siteName":"Panther Canyon","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7135830,"longitude":-98.1383610,"landElevation":642.59},{"siteInfoId":378,"siteId":"PASD623","siteName":"Paradise Alley Short Deep","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7043750,"longitude":-98.1331030,"landElevation":635.42},{"siteInfoId":379,"siteId":"PATS616","siteName":"Paradise Alley Tall Shallow","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"None","latitude":29.7043750,"longitude":-98.1331030,"landElevation":635.42},{"siteInfoId":386,"siteId":"QH102","siteName":"Quihi","siteType":"Water Well","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4611460,"longitude":-99.1171180,"landElevation":966.59},{"siteInfoId":387,"siteId":"RAND807","siteName":"Randolph","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5250000,"longitude":-98.2961120,"landElevation":752.56},{"siteInfoId":388,"siteId":"REA002RG","siteName":"Real 002 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6308330,"longitude":-99.7566670,"landElevation":1488.00},{"siteInfoId":389,"siteId":"REA067RG","siteName":"Real 067 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.8477780,"longitude":-99.6786110,"landElevation":2210.00},{"siteInfoId":390,"siteId":"REA069RG","siteName":"Real 069 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6780560,"longitude":-99.7822220,"landElevation":1622.00},{"siteInfoId":391,"siteId":"REA070RG","siteName":"Real 070 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.9063890,"longitude":-99.8819440,"landElevation":2327.00},{"siteInfoId":392,"siteId":"REA071RG","siteName":"Real 071 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.9138890,"longitude":-99.8027780,"landElevation":2279.00},{"siteInfoId":393,"siteId":"REA072RG","siteName":"Real 072 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.8413890,"longitude":-99.9897220,"landElevation":1743.00},{"siteInfoId":394,"siteId":"REA074RG","siteName":"Real 074 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Real","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":30.0433330,"longitude":-99.8902780,"landElevation":2385.00},{"siteInfoId":395,"siteId":"COM03WS","siteName":"Rebecca Springs","siteType":"Weather Station","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Contributing Zone","latitude":29.9245070,"longitude":-98.3732300,"landElevation":1071.00},{"siteInfoId":397,"siteId":"RSEC418","siteName":"Rio Seco - NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5822130,"longitude":-98.4673190,"landElevation":828.15},{"siteInfoId":399,"siteId":"SAA701","siteName":"SA Airport","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5373250,"longitude":-98.4639830,"landElevation":778.71},{"siteInfoId":414,"siteId":"MED01WS","siteName":"San Geronimo Dam","siteType":"Weather Station","siteStatus":"Active","county":"Medina","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5344140,"longitude":-98.8067810,"landElevation":1036.00},{"siteInfoId":419,"siteId":"BLR314","siteName":"SARA Blanco DR NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5930280,"longitude":-98.5113060,"landElevation":900.50},{"siteInfoId":420,"siteId":"BC209","siteName":"SAWS Bull Creek 3","siteType":"Water Well","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4788880,"longitude":-99.0672230,"landElevation":1036.16},{"siteInfoId":421,"siteId":"SAAT510","siteName":"SAWS Saathoff 4","siteType":"Water Well","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4265830,"longitude":-99.0694440,"landElevation":915.39},{"siteInfoId":424,"siteId":"UVA03WS","siteName":"SE Of Uvalde","siteType":"Weather Station","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"None","latitude":29.1694340,"longitude":-99.7389650,"landElevation":876.00},{"siteInfoId":436,"siteId":"MED03WS","siteName":"Seco Sinkhole Dam","siteType":"Weather Station","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.5166150,"longitude":-99.3993750,"landElevation":1207.80},{"siteInfoId":438,"siteId":"SMH709","siteName":"Seven Mile Hill","siteType":"Water Well","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2736210,"longitude":-99.8628500,"landElevation":1005.65},{"siteInfoId":440,"siteId":"SPC518","siteName":"Shavano Park at Cliffside NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5773610,"longitude":-98.5449170,"landElevation":926.61},{"siteInfoId":442,"siteId":"SW517","siteName":"Shavano Woods NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5765779,"longitude":-98.5750460,"landElevation":963.84},{"siteInfoId":443,"siteId":"SVHS407","siteName":"Smithson Valley High School 3","siteType":"Water Well","siteStatus":"Historic","county":"Comal","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.7984010,"longitude":-98.3548760,"landElevation":1206.42},{"siteInfoId":444,"siteId":"SM103","siteName":"South Medina","siteType":"Water Well","siteStatus":"Historic","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.1111210,"longitude":-99.2200290,"landElevation":661.53},{"siteInfoId":447,"siteId":"SWT110","siteName":"SWT Farms","siteType":"Water Well","siteStatus":"Active","county":"Hays","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.8433320,"longitude":-97.9822240,"landElevation":692.83},{"siteInfoId":448,"siteId":"TR504","siteName":"Tarpley Road Sentinel","siteType":"Water Well","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4510010,"longitude":-99.1948890,"landElevation":1021.39},{"siteInfoId":451,"siteId":"COM05WS","siteName":"TNC Cibolo Bluffs Preserve","siteType":"Weather Station","siteStatus":"Active","county":"Comal","basin":"San Antonio","aquiferZone":"Contributing Zone","latitude":29.6572780,"longitude":-98.3277310,"landElevation":1034.00},{"siteInfoId":452,"siteId":"TRIO402","siteName":"Trio","siteType":"Water Well","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4189348,"longitude":-99.6095440,"landElevation":1096.26},{"siteInfoId":455,"siteId":"UVA006RG","siteName":"Uvalde 006 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4569440,"longitude":-99.5377780,"landElevation":1157.00},{"siteInfoId":456,"siteId":"UVA011RG","siteName":"Uvalde 011 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.3719440,"longitude":-99.7041670,"landElevation":1102.00},{"siteInfoId":457,"siteId":"UVA012RG","siteName":"Uvalde 012 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3144440,"longitude":-99.4791670,"landElevation":924.00},{"siteInfoId":458,"siteId":"UVA013RG","siteName":"Uvalde 013 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4088890,"longitude":-99.4975000,"landElevation":1060.00},{"siteInfoId":459,"siteId":"UVA016RG","siteName":"Uvalde 016 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4189380,"longitude":-99.6095240,"landElevation":1095.00},{"siteInfoId":460,"siteId":"UVA017RG","siteName":"Uvalde 017 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.1130560,"longitude":-99.4569440,"landElevation":746.00},{"siteInfoId":461,"siteId":"UVA018RG","siteName":"Uvalde 018 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.6102770,"longitude":-99.5305560,"landElevation":1360.00},{"siteInfoId":462,"siteId":"UVA019RG","siteName":"Uvalde 019 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3263890,"longitude":-99.6386110,"landElevation":1249.00},{"siteInfoId":463,"siteId":"UVA031RG","siteName":"Uvalde 031 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2002780,"longitude":-99.4613890,"landElevation":811.00},{"siteInfoId":464,"siteId":"UVA032RG","siteName":"Uvalde 032 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.3236110,"longitude":-99.7300000,"landElevation":1054.00},{"siteInfoId":465,"siteId":"UVA033RG","siteName":"Uvalde 033 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"None","latitude":29.1691670,"longitude":-99.7397220,"landElevation":876.00},{"siteInfoId":466,"siteId":"UVA034RG","siteName":"Uvalde 034 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2733330,"longitude":-99.8630560,"landElevation":1005.00},{"siteInfoId":467,"siteId":"UVA035RG","siteName":"Uvalde 035 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.5050000,"longitude":-99.7811110,"landElevation":1354.00},{"siteInfoId":468,"siteId":"UVA036RG","siteName":"Uvalde 036 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2397220,"longitude":-100.0558330,"landElevation":1005.00},{"siteInfoId":469,"siteId":"UVA037RG","siteName":"Uvalde 037 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2133330,"longitude":-99.9283330,"landElevation":1004.00},{"siteInfoId":470,"siteId":"UVA039RG","siteName":"Uvalde 039 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Historic","county":"Uvalde","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.4286110,"longitude":-99.9972220,"landElevation":1144.00},{"siteInfoId":471,"siteId":"UVA042RG","siteName":"Uvalde 042 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Contributing Zone","latitude":29.5400000,"longitude":-100.0102780,"landElevation":1286.00},{"siteInfoId":472,"siteId":"UVA044RG","siteName":"Uvalde 044 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4888890,"longitude":-99.7055560,"landElevation":1243.00},{"siteInfoId":473,"siteId":"VW113","siteName":"Valero Way at Loop1604 NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5879120,"longitude":-98.6076460,"landElevation":1022.33},{"siteInfoId":474,"siteId":"VJB407","siteName":"Vance Jackson at Beckwith NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5735384,"longitude":-98.5856060,"landElevation":1000.03},{"siteInfoId":485,"siteId":"WAL920","siteName":"West Ave Landfill","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5417430,"longitude":-98.5107480,"landElevation":925.12},{"siteInfoId":495,"siteId":"LHS515","siteName":"Lockhill Selma PO NAWQA","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.5632570,"longitude":-98.5613570,"landElevation":975.15},{"siteInfoId":496,"siteId":"BM808","siteName":"Blue Mountain","siteType":"Water Well","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2810850,"longitude":-99.7001170,"landElevation":975.15},{"siteInfoId":497,"siteId":"BDT614","siteName":"Blanco Dual Sentinel Lower Zone - Glen Rose","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5824710,"longitude":-98.5135960,"landElevation":859.09},{"siteInfoId":498,"siteId":"BDE608","siteName":"Blanco Dual Sentinel Upper Zone - Edwards","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5824710,"longitude":-98.5135960,"landElevation":859.09},{"siteInfoId":1004,"siteId":"LUMB902","siteName":"Lumbermans Well","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6628580,"longitude":-98.3851560,"landElevation":916.37},{"siteInfoId":1005,"siteId":"FRPRD001SW","siteName":"Field Research Park West Retention Dam","siteType":"Stream","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6613660,"longitude":-98.3864840,"landElevation":931.00},{"siteInfoId":1008,"siteId":"CCIB912","siteName":"City of Cibolo Old Synoptic Well","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.6303780,"longitude":-98.2752630,"landElevation":791.57},{"siteInfoId":1009,"siteId":"EOC906","siteName":"Education Outreach Center old well","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6585160,"longitude":-98.3905440,"landElevation":1033.29},{"siteInfoId":1038,"siteId":"FRPB907","siteName":"Field Research Park Monitor Well","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6644220,"longitude":-98.3836890,"landElevation":905.00},{"siteInfoId":1041,"siteId":"BXEAA","siteName":"Field Research Park TexMesonet","siteType":"Weather Station","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6618100,"longitude":-98.3841100,"landElevation":913.00},{"siteInfoId":1043,"siteId":"HFB315","siteName":"Huebner Fawn Bluff NAWQA","siteType":"Water Well","siteStatus":"Historic","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6033340,"longitude":-98.5222220,"landElevation":940.00},{"siteInfoId":1044,"siteId":"COL201","siteName":"City of Lytle Well #1","siteType":"Water Well","siteStatus":"Active","county":"Atascosa","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.2302860,"longitude":-98.7988940,"landElevation":729.00},{"siteInfoId":1055,"siteId":"MED04WS","siteName":"Parkers Recharge Dam Weather Station","siteType":"Weather Station","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.4431250,"longitude":-99.2526930,"landElevation":1009.00},{"siteInfoId":1068,"siteId":"COM161RG","siteName":"Comal 161 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Artesian Zone","latitude":29.7074030,"longitude":-98.1362760,"landElevation":634.41},{"siteInfoId":1070,"siteId":"COM06WS","siteName":"Dischinger Ranch","siteType":"Weather Station","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7703950,"longitude":-98.2452500,"landElevation":1194.00},{"siteInfoId":1071,"siteId":"BEX07WS","siteName":"FRP Retention Dam","siteType":"Weather Station","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6613660,"longitude":-98.3864840,"landElevation":931.00},{"siteInfoId":1072,"siteId":"UVA045RG","siteName":"Uvalde 045 Rain Gauge","siteType":"Rain Gauge","siteStatus":"Active","county":"Uvalde","basin":"Nueces","aquiferZone":"Artesian Zone","latitude":29.4533330,"longitude":-99.4730530,"landElevation":1156.27},{"siteInfoId":1073,"siteId":"DISR001SG","siteName":"Dischinger Ranch Upstream Spring Pool 01","siteType":"Spring","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7597170,"longitude":-98.2412600,"landElevation":1090.00},{"siteInfoId":1074,"siteId":"FRPWR001SW","siteName":"FRP Weir 1 Arnold","siteType":"Stream","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6635310,"longitude":-98.3897250,"landElevation":988.00},{"siteInfoId":1075,"siteId":"FRPWR002SW","siteName":"FRP Weir 2 Danny","siteType":"Stream","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Recharge Zone","latitude":29.6640290,"longitude":-98.3905880,"landElevation":1021.00},{"siteInfoId":1076,"siteId":"DISW707","siteName":"Dischinger Ranch Windmill","siteType":"Water Well","siteStatus":"Active","county":"Comal","basin":"Guadalupe","aquiferZone":"Recharge Zone","latitude":29.7721940,"longitude":-98.2314470,"landElevation":1155.00},{"siteInfoId":1077,"siteId":"MED05WS","siteName":"Middle Verde Recharge Dam Weather Station","siteType":"Weather Station","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.5038620,"longitude":-99.1004620,"landElevation":1052.45},{"siteInfoId":1078,"siteId":"BOME711","siteName":"SAWS Flow Path Boehme Well","siteType":"Water Well","siteStatus":"Active","county":"Medina","basin":"Nueces","aquiferZone":"Recharge Zone","latitude":29.5071220,"longitude":-98.9815080,"landElevation":1174.30},{"siteInfoId":1079,"siteId":"LOCK404","siteName":"USGS Lockhill","siteType":"Water Well","siteStatus":"Active","county":"Bexar","basin":"San Antonio","aquiferZone":"Artesian Zone","latitude":29.5419100,"longitude":-98.6043840,"landElevation":920.00}];
+    var indexwellsHistricalStats = [{"siteId":"J17WL","todayDate":"2026-10-01T00:00:00","todayWle":638.9,"yesterdayDate":"2026-09-30T00:00:00","yesterdayWle":638.3,"monthDate":"2026-04-01T00:00:00","sixMonthWle":624.9,"yearDate":"2025-10-01T00:00:00","oneYearWle":628.4,"tenDayAvg":638.7,"currentMonth":"October","monthAvgWle":662.0,"variance":-23.1},{"siteId":"J27WL","todayDate":"2026-10-01T00:00:00","todayWle":853.1,"yesterdayDate":"2026-09-30T00:00:00","yesterdayWle":853.1,"monthDate":"2026-04-01T00:00:00","sixMonthWle":834.5,"yearDate":"2025-10-01T00:00:00","oneYearWle":837.6,"tenDayAvg":852.8,"currentMonth":"October","monthAvgWle":865.7,"variance":-12.6}];
+    var springsHistricalStats = [{"siteId":"Comal","todayDate":"2026-10-01T00:00:00","todayCfs":136,"yesterdayDate":"2026-09-30T00:00:00","yesterdayCfs":137,"monthDate":"2026-04-01T00:00:00","sixMonthCfs":53,"yearDate":"2025-10-01T00:00:00","oneYearCfs":78,"tenDayAvg":145,"currentMonth":"October","monthAvgCfs":269,"variance":-133},{"siteId":"San Marcos","todayDate":"2026-10-01T00:00:00","todayCfs":98,"yesterdayDate":"2026-09-30T00:00:00","yesterdayCfs":91,"monthDate":"2026-04-01T00:00:00","sixMonthCfs":72,"yearDate":"2025-10-01T00:00:00","oneYearCfs":89,"tenDayAvg":92,"currentMonth":"October","monthAvgCfs":157,"variance":-59}];
+    var sendEmailUrl = '/Home/SendEmail';
+    
+    // Call the function when the document is ready
+    // Call the function from the external script
+    document.addEventListener('DOMContentLoaded', function () {
+        populateAquiferConditionsTable(indexwellsHistricalStats, springsHistricalStats);
+    });
+</script>
+
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>    
+</div>
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!-- home page hero section starts -->
+<section id="home-page-hero" class="h-auto justify-content-center align-items-center p-3">
+    <div class="container-fluid position-relative home-page-hero-div-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 col-md-12 px-4">
+                <h1 class="home-page-hero-h1 text-start">Edwards Aquifer Authority</h1>
+                <h1 class="home-page-hero-h1 text-start">Environmental Data Portal</h1>
+                <div class="home-page-hero-text-container">
+                    <p class="home-page-hero-text">
+                        The Edwards Aquifer Authority (EAA) collects environmental data from several sites throughout the
+                        Edwards Aquifer region. These continuous data sets provide the foundation for scientific research
+                        and policy decisions. This EAA Environmental Data Portal provides public access to view and download
+                        the observed measurements on demand.
+                    </p>
+                    <p class="home-page-hero-text mt-4">
+                        <strong class="fst-italic"> Unless otherwise noted, all data provided are provisional and subject to revision. The EAA assumes no liability for any damages resulting from its use.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- home page hero section ends -->
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- home-aquifer-conditions-sections --><!----------------------------------------------------->
+
+<section class="home-aquifer-conditions-section align-items-center ">
+    <div class="container mt-5 mb-lg-5 justify-content-center text-center">
+        <h2 class="section-header">AQUIFER CONDITIONS</h2> 
+        <p class="h5">
+            The table below shows the difference in water levels and springflow between the current
+            values and historical averages of our index wells and spring systems.</p>
+        <p class="h5">
+            For more detailed information, please visit the
+            <a style="text-decoration:none;" href="/AquiferConditions">Aquifer Conditions</a> page.</p>
+    </div>   
+    <!-- start of home-aquifer-conditions-section -->
+    <div class="container col-sm-12" id="index-wells-card-wrapper">
+        <div class="card text-dark bg-light border-dark h-auto p-1" id="index-wells-card">           
+              <div class="card-body historic-readings-table-index-wells-card-body col-lg-12  flex-column align-items-center">
+                <table class="table historic-readings-table-index-wells table-striped table-hover" style="font-size:16px;">
+                    <tbody>
+                        <tr style="text-align:center; font-size:16px;">
+                            <td></td>
+                            <td style="font-size:16px;">San Antonio Pool (J-17)</td>
+                            <td style="font-size:16px;">Uvalde Pool (J-27)</td>                            
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td style="font-size:16px;">Comal Springs</td>
+                            <td style="font-size:16px;">San Marcos Springs</td>
+                        </tr>
+                        <tr style="text-align:center; font-size:16px;">
+                            <td style="color:black;font-weight:bold; font-size:16px;">Difference From Historical Average</td>
+                            <td style="font-size:16px;"><span class="positive-value">0.00</span></td>
+                            <td style="font-size:16px;"><span class="negative-value">0.00</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td style="font-size:16px;"><span class="positive-value">0.00</span></td>
+                            <td style="font-size:16px;"><span class="negative-value">0.00</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- end of home-aquifer-conditions-section -->
+</section>
+<!-- shome-aquifer-conditions-section --><!------------------------------------------------------>
+<!--------------------------------------------------------------------------->
+
+
+<!--------------------------------------------------------------------------->
+<!-- section sites locations map  starts --><!------------------------------------------------------->
+
+<section class="home-sites-locations-map-section align-items-center ">
+    <div class="container mt-5 mb-lg-5 justify-content-center text-center">
+        <h2 class="section-header">SITE LOCATIONS</h2> <!-- map title -->
+        <p class="h5">The map below shows the locations of all active and historical EAA continuous data collection sites.</p>
+        <p class="h5">Use the menu in the upper right corner of the map to toggle layers and site types. Click the location to view more information about the site.</p>
+    </div>
+    <div class="container container-lg text-center justify-content-center mt-5 mb-lg-5 home-sites-locations-map-container" id="home-sites-locations-map-div">
+        <!--  here goes the sites locations map -->
+    </div>    
+</section>
+<!-- section sites locations map  ends --><!--------------------------------------------------------->
+<!--------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- ======= site-types-sensors-cards section starts======= -->
+<section class="site-types-sensors-cards">
+    <div class="container mt-5 mb-lg-5 justify-content-center text-center">
+        <h2 class="section-header">SITE TYPES</h2>
+        <p class="h5">In order to better understand the hydrologic cycle, the EAA collects several different types of continuous data.</p>
+        <p class="h5">Click on the links below to get more information on each site type.</p>
+    </div>
+
+    <div class="container">
+        <div class="row g-4">
+            <!-- Row 1 -->
+            <!-- Groundwater Wells Card -->
+            <div class="col-md-6">
+                <div class="site-card">
+                    <div class="site-card-image">
+                        <img src="/assets/images/IMG_0054.JPEG" alt="Groundwater Wells" />
+                    </div>
+                    <div class="site-card-content">
+                        <h5 class="site-card-title">
+                            <a target="_blank" href="/GroundWater">Groundwater Wells</a>
+                        </h5>
+                        <div class="site-card-list">
+                            <ul>
+                                <li>Water Level</li>
+                                <li>Specific Conductivity</li>
+                                <li>Water Temperature</li>
+                            </ul>
+                        </div>
+                        <div class="site-card-link">
+                            <a target="_blank" href="/GroundWater">
+                                <i class="bi bi-arrow-right"></i> View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rain Gauges Card -->
+            <div class="col-md-6">
+                <div class="site-card">
+                    <div class="site-card-image">
+                        <img src="/assets/images/REA067RG.JPEG" alt="Rain Gauges" />
+                    </div>
+                    <div class="site-card-content">
+                        <h5 class="site-card-title">
+                            <a target="_blank" href="/RainGauges">Rain Gauges</a>
+                        </h5>
+                        <div class="site-card-list">
+                            <ul>
+                                <li>One Minute Rainfall Rate</li>
+                                <li>Hourly Rainfall Rate</li>
+                                <li>Daily Rainfall Accumulation</li>
+                            </ul>
+                        </div>
+                        <div class="site-card-link">
+                            <a target="_blank" href="/RainGauges">
+                                <i class="bi bi-arrow-right"></i> View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <!-- Springs & Streams Card -->
+            <div class="col-md-6">
+                <div class="site-card">
+                    <div class="site-card-image">
+                        <img src="/assets/images/Comal Spring 32.jpg" alt="Springs and Streams" />
+                    </div>
+                    <div class="site-card-content">
+                        <h5 class="site-card-title">
+                            <a target="_blank" href="/SpringsAndStreams">Springs & Streams</a>
+                        </h5>
+                        <div class="site-card-list">
+                            <ul>
+                                <li>Gauge Height</li>
+                                <li>Dissolved Oxygen</li>
+                                <li>Specific Conductivity</li>
+                                <li>Turbidity</li>
+                                <li>Water pH</li>
+                                <li>Water Temperature</li>
+                            </ul>
+                        </div>
+                        <div class="site-card-link">
+                            <a target="_blank" href="/SpringsAndStreams">
+                                <i class="bi bi-arrow-right"></i> View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Stations Card -->
+            <div class="col-md-6">
+                <div class="site-card">
+                    <div class="site-card-image">
+                        <img src="/assets/images/IMG_0067.JPEG" alt="Weather Stations" />
+                    </div>
+                    <div class="site-card-content">
+                        <h5 class="site-card-title">
+                            <a target="_blank" href="/WeatherStations">Weather Stations</a>
+                        </h5>
+                        <div class="site-card-list">
+                            <ul>
+                                <li>Air Temperature/Pressure</li>
+                                <li>Dew Point</li>
+                                <li>Relative Humidity</li>
+                                <li>Solar Radiation</li>
+                                <li>Wind Direction/Speed</li>
+                                <li>Soil Moisture</li>
+                                <li>Rainfall Rate</li>
+                            </ul>
+                        </div>
+                        <div class="site-card-link">
+                            <a target="_blank" href="/WeatherStations">
+                                <i class="bi bi-arrow-right"></i> View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======= site-types-sensors-cards section ends ======= -->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- site information section sites details table  starts -->
+<!-- informationsection sites details table  ends -->
+<!--------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- ======= Research Projects section section starts    ======= -->
+<section class="research-projects-section section-bg" data-aos="fade-up">
+    <div class="container mt-5 mb-lg-5 justify-content-center text-center">
+        <h2 class="section-header">RESEARCH PROJECTS</h2> <!-- section research projects  title -->
+    </div>
+    <div class="container">
+        <div class="section-title">
+            <p class="h5">The Edwards Aquifer Authority is actively involved in a variety of projects aimed at managing, enhancing, 
+                and protecting the Edwards Aquifer to ensure its sustainability. These efforts include water conservation initiatives, 
+                habitat restoration, and monitoring programs to safeguard the aquifer's health and water quality.</p>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-5">
+                <br />
+                <img src="/assets/images/20170315_EAA_PedernalesSP_111.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-2">
+                
+            </div>
+            <div class="col-md-5 pt-4">
+                              
+                <ul class="list-style-type:square mt-3 mb-2 h5 text-black">
+
+                    <li>
+                        <a class="link-primary text-decoration-none"
+                           href="https://www.edwardsaquifer.org/aquifer-science/sustainability/frp/" target="_blank">Field Research Park</a>
+                    </li>
+                    <li><a class="link-primary text-decoration-none"
+                           href="https://www.edwardsaquifer.org/habitat-conservation-plan/" target="_blank">Habitat Conservation Plan</a>
+                    </li>
+                    <li><a class="link-primary text-decoration-none"
+                           href="https://www.edwardsaquifer.org/aquifer-science/research/projects/#section2_interformational-flow" target="_blank">Interformational Flow</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row no-gutters">
+        </div>
+    </div>
+</section>
+
+<!-- ======= Research Projects section section ends  ======= -->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<br/>
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<br/>
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<!-- ======= External Resources section section starts    ======= -->
+
+<section class="external-resources-section section-bg" data-aos="fade-up">
+    <div class="container mt-5 mb-lg-5 justify-content-center text-center">
+        <h2 class="section-header">EXTERNAL RESOURCES</h2> <!-- section research projects  title-->
+    </div>
+    <div class="container">
+        <div class="section-title">
+            <p class="h5">
+                Please note that the Edwards Aquifer Authority does not endorse or take responsibility for the content or accuracy of the following links.
+                These links are provided for informational purposes only and are not reflective of the views or opinions of the EAA.
+            </p>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-5 pt-4">
+            <ul class="list-style-type:disc mt-3 mb-2 h5 text-black">
+               <li><a class="link-primary text-decoration-none" href="https://www.sariverauthority.org/maps-reports/" target="_blank" rel="noopener noreferrer">San Antonio River Authority</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://www.gbra.org/conditions/" target=" _blank" rel="noopener noreferrer">Guadalupe-Blanco River Authority</a></li>
+                <li><a class="link-primary text-decoration-none" href="https://hydromet.lcra.org/" target=" _blank" rel="noopener noreferrer">Lower Colorado River Authority</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://www.twdb.texas.gov/groundwater/index.asp" target=" _blank" rel="noopener noreferrer">Texas Water Development Board</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://webapps.usgs.gov/spring_calc/" target=" _blank" rel="noopener noreferrer">Comal and San Marcos Springflow</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://www.texmesonet.org/" target=" _blank" rel="noopener noreferrer">TexMesonet</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://waterdatafortexas.org/reservoirs/statewide" target=" _blank" rel="noopener noreferrer">Water Data for Texas</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://dashboard.waterdata.usgs.gov/app/nwd/en/" target=" _blank" rel="noopener noreferrer">National Water Dashboard</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://www.waterqualitydata.us/" target=" _blank" rel="noopener noreferrer">National Water Quality Monitoring</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://www.weather.gov/" target=" _blank" rel="noopener noreferrer">National Weather Service</a></li>
+                    <li><a class="link-primary text-decoration-none" href="https://www.ncdc.noaa.gov/cdo-web/" target=" _blank" rel="noopener noreferrer">National Oceanic and Atmospheric Administration</a></li>
+            </ul>
+            </div>            
+            <div class="col-md-2">  </div>
+            <div class="col-md-5">
+                <br/>
+                <img src="/assets/images/2020_FrioRiver_GarnerStatePark_Schlegel_02.jpg" class="img-fluid" alt="" />
+            </div>
+        </div>
+        <div class="row no-gutters">
+        </div>
+    </div>
+</section>
+
+<!-- ======= External Resources section section ends    ======= -->
+<!--------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<br />
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<br />
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------->
+<!-- Contact section starts -->
+<!-- contact info starts -->
+<div class="container">
+    <div class="section-title">
+        <p class="h5">
+            For questions or comments send email to <span><a href="mailto:data@edwardsaquifer.org">data@edwardsaquifer.org</a></span>.
+        </p>
+    </div>
+</div>
+<!-- contact info ends   -->
+<!-- Contact section ends -->
+<!--------------------------------------------------------------------------->
+
+
+<!--------------------------------------------------------------------------->
+<!-- section sperator starts-->
+<div class="container-lg justify-content-center">
+    <div class="row">
+        <div class="container container-fluid">
+            <hr class="solid">
+        </div>
+    </div>
+</div>
+<br />
+<!-- section sperator ends-->
+<!--------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+<!-- page required script files -->    
+    <script src="/assets/maps/scripts/sites-locations-map.js"></script>
+    <script src="/assets/tables/scripts/locations-datatable-home.js"></script>
+<!-------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------->
+        </main>
+    </div>
+
+    <!-- main page content section ends --><!--------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------->
+
+    <footer b-q7lk333kj3 id="footer" class="footer  footer-sticky footer-fixed-bottom  mt-2 mb-0 pt-4 pb-4">
+        <!-- wrapper footer starts -->
+        <div b-q7lk333kj3 id="footer-top" class="footer  footer-top py-3 px-2 text-white">
+            <!-- footer-top starts  -->
+            <div b-q7lk333kj3 class=" align-items-center justify-content-center text-white">
+                <div b-q7lk333kj3 class="row text-lg-start ms-0 pl-0 ">
+                    <!-- footer-top row 12 col wrapper-->
+                    <div b-q7lk333kj3 class="col-lg-4 col-md-6 footer-contact">
+                        <!-- footer-top EAA Location Info Email and Phone Number -->
+                        <h3 b-q7lk333kj3 class="h4 text-white">EAA</h3>
+                        <p b-q7lk333kj3>
+                            900 E. Quincy, <br b-q7lk333kj3>
+                            San Antonio, TX 78215<br b-q7lk333kj3>
+                            United States <br b-q7lk333kj3><br b-q7lk333kj3>
+                            <strong b-q7lk333kj3>Phone: </strong>(210) 222-2204<br b-q7lk333kj3>
+                            <strong b-q7lk333kj3>Phone: </strong>or 1 800-292-1047<br b-q7lk333kj3>
+                            <strong b-q7lk333kj3>Fax: </strong>(210) 222-9869<br b-q7lk333kj3>
+                        </p>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-6 footer-links">
+                        <!-- footer-top First Useful links  -->
+                        <h4 b-q7lk333kj3 class="h4 text-white">Useful Links</h4>
+                        <ul b-q7lk333kj3>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/" class="link-light">The EAA</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/news-community/" class="link-light">News & Community</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/education/" class="link-light">Education</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/habitat-conservation-plan/" class="link-light">Habitat Conservation Plan  </a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/learning-zone/" class="link-light">Learning Zone</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.eaconservancy.org/" class="link-light">EA Conservancy  </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-6 footer-links">
+                        <!-- footer-top Second Useful links -->
+                        <h4 b-q7lk333kj3 class="h4 text-white">Services Links</h4>
+                        <ul b-q7lk333kj3>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.eaconservancy.org/" class="link-light">Support EAC</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/business-center/" class="link-light">Business Center</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/groundwater-users/" class="link-light">Groundwater Users</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/eaa/doing-business-with-eaa/online-payments/" class="link-light">Online Payments</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/eaa/contact-us/" class="link-light">Contact Us</a>
+                            </li>
+                            <li b-q7lk333kj3>
+                                <i b-q7lk333kj3 class="bx bx-chevron-right"></i> <a b-q7lk333kj3 href="https://www.edwardsaquifer.org/eaa/human-resources/" class="link-light">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-4 col-md-6 footer-links">
+                        <!-- footer-top About EAA and Social Media Links  -->
+                        <h4 b-q7lk333kj3 class="h4 text-white">Our Social Networks</h4>
+                        <p b-q7lk333kj3 class="section-subtext me-lg-2 pe-lg-3">
+                            The Edwards Aquifer Authority is a groundwater district,
+                            mandated by the 1993 Edwards Aquifer Authority Act.
+                            The Act grants all of the powers, rights, and privileges
+                            necessary to manage, conserve, preserve, and protect the aquifer.
+                        </p>
+                        <div b-q7lk333kj3 class="section-text social-links-container mt-1 pt-1 justify-content-evenly align-content-center">
+                            <a b-q7lk333kj3 href="https://twitter.com/EdwardsAquifer" class="twitter" aria-label="Twitter">
+                                <i b-q7lk333kj3 class="bi bi-twitter"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.facebook.com/TheEdwardsAquifer#!/pages/San-Antonio-TX/Edwards-Aquifer-Authority-Education-official/220422387977159?sk=wall" class="facebook" aria-label="Facebook">
+                                <i b-q7lk333kj3 class="bi bi-facebook"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.instagram.com/edwardsaquiferauthority/" class="instagram" aria-label="Instagram">
+                                <i b-q7lk333kj3 class="bi bi-instagram"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.linkedin.com/company/edwards-aquifer-authority/" class="linkedin" aria-label="linkedin">
+                                <i b-q7lk333kj3 class="bi bi-linkedin"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.youtube.com/eaatx" class="youtube" aria-label="Youtube">
+                                <i b-q7lk333kj3 class="bi bi-youtube"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.flickr.com/photos/67745209@N07" class="flickr" aria-label="Flickr">
+                                <i b-q7lk333kj3 class="bi bi-chat-square-dots-fill"></i>
+                            </a>
+                            <a b-q7lk333kj3 href="https://www.pinterest.com/edwardsaquifer/" class="pinterest" aria-label="Pinterest">
+                                <i b-q7lk333kj3 class="bi bi-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- footer-top ends -->
+
+        <div b-q7lk333kj3 class="footer-separator">
+            <!-- footer-sperator-horizontal starts -->
+            <div b-q7lk333kj3 class="row">
+                <div b-q7lk333kj3 class="container container-fluid">
+                    <hr b-q7lk333kj3 class="solid">
+                </div>
+            </div>
+        </div><!-- footer-sperator-horizontal starts -->
+
+        <div b-q7lk333kj3 id="footer-bottom" class="footer footer-bottom text-white">
+            <!-- footer-bottom starts  -->
+            <div b-q7lk333kj3 class="  justify-content-tart text-white">
+                <div b-q7lk333kj3 class="row text-start ms-0 pl-0  mt-1 mb-1 pt-2 pb-2">
+                    <div b-q7lk333kj3 class="col-lg-4 col-md-4  text-center">
+                        <strong b-q7lk333kj3><span b-q7lk333kj3>&copy;2025 Edwards Aquifer Authority</span></strong>
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-2">
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-2 col-md-2 ">
+                    </div>
+                    <div b-q7lk333kj3 class="col-lg-4  col-md-4 text-center ">                        
+                        <strong b-q7lk333kj3><span b-q7lk333kj3><a b-q7lk333kj3 href=""class="link-light">Aquifer Management Services</a>  &nbsp;&nbsp;</span></strong>
+                        <strong b-q7lk333kj3><span b-q7lk333kj3 class="text-white">Data Management</span></strong>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- footer-bottom ends  -->
+
+    </footer>
+    <!-- wrapper footer  ends  -->
+    <!-------------------------------------------------------------------------->
+
+    
+    <script src="/js/site.js"></script>
+     <script>        
+        // Hide the spinner once the page is fully loaded
+        window.addEventListener('load', function() {
+            document.getElementById('loadingSpinnerWrapper').style.display = 'none';
+        });
+    </script>
+
+    <!-- Render the Scripts section -->
+    
+
+</body>
+</html>

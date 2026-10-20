@@ -1,0 +1,3024 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <!-- tell IE to use the most modern rendering engine available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+
+    <title>Water Data For Texas</title>
+
+    
+    
+    <link rel="stylesheet" href="/static/components/bootstrap-3.3.5-dist/css/bootstrap.css">
+    <!-- WDFT css -->
+    <link rel="stylesheet" href="/static/build/dist.css" >
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="/static/components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
+  <link rel="stylesheet" href="/reservoirs/static/build/dist.css">
+
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+      <!-- EB - extra_head_js is added just in case so that each app can also have flexibility of newer version Jquery or adding other js here also. Otherwise, please use existing extra_js. -->
+      
+      
+
+    
+      
+
+      <!-- Google Tag Manager -->
+        <script>
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WGJG266');
+        </script>
+      <!-- End Google Tag Manager -->
+      
+      
+    
+
+  </head>
+
+  <body lang="en">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGJG266"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="wrapper">
+      <a id="skip-link" href="#content" class="sr-only sr-only-focusable">skip to main content</a>
+      <nav class="navbar navbar-inverse common-nav">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/reservoirs">
+              <img class="logo-wdft" src="/static/img/wdft_logo_light_bg.png" height="40px" style="padding-left:10px" />
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+              <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/reservoirs"> Reservoirs </a></li>
+                <li ><a href="/drought"> Drought </a></li>
+                <li ><a href="/groundwater"> Groundwater </a></li>
+                <li  ><a href="/coastal"> Coastal </a></li>
+                <li  ><a href="/lake-evaporation-rainfall"> Lake Evaporation/Rainfall </a></li>
+                <li ><a id="mesonet-link" href="">TexMesonet</a></li>
+              </ul>
+            
+
+
+            <ul class="nav navbar-nav navbar-right">
+              <li  class="dropdown" >
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/about">Water Data for Texas</a></li>
+                  <li><a href="/disclaimer">Disclaimer</a></li>
+                  <li><a href="/policies">Site Policy</a></li>
+                </ul>
+              </li>
+              <li><a class="navbar-brand logo-image" href="http://www.twdb.texas.gov/">
+                <img class="" src="/static/img/twdb_logo_dark_bg.png" height="45px" />
+              </a></li>
+            </ul>
+            
+            
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- maintenance message - comment out common-nav css line on dist.css along with below lines -->
+      <!--
+        <div class="alert alert-warning" role="alert">
+          We are performing a system upgrade on Thursday, July 10 at 11:00 AM (CT).<br>
+          There will be a brief downtime of approximately one minute.
+          However, in the event of unexpected issues, the downtime may be longer.
+      </div>
+      -->
+
+      <div class="container-fluid">
+        <div id="content">
+          
+<nav class="navbar navbar-default sub-nav" role='navigation'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <button class='navbar-toggle collapsed' data-toggle='collapse' data-target='#reservoirs-nav'>
+        <span class="sr-only">Toggle reservoirs navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  
+    <div class="collapse navbar-collapse" id="reservoirs-nav">
+      <ul class="nav nav-pills">
+          <li class=""><a href="/reservoirs/statewide"> Statewide</a></li>
+          <li class="dropdown " >
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Planning Area<b class="caret"></b></a>
+          <ul id="menu1" class="dropdown-menu">
+            <li><a href="/reservoirs/region/area/summary">Summary</a></li>
+            <li><a href="/reservoirs/region/brazos-g">Brazos G</a></li>
+            <li><a href="/reservoirs/region/coastal-bend">Coastal Bend</a></li>
+            <li><a href="/reservoirs/region/east-texas">East Texas</a></li>
+            <li class='disabled'><a href="/reservoirs/region/far-west-texas">Far West Texas</a></li>
+            <li><a href="/reservoirs/region/lavaca">Lavaca</a></li>
+            <li><a href="/reservoirs/region/llano-estacado">Llano Estacado</a></li>
+            <li><a href="/reservoirs/region/lower-colorado">Lower Colorado</a></li>
+            <li><a href="/reservoirs/region/north-east-texas">North East Texas</a></li>
+            <li><a href="/reservoirs/region/panhandle">Panhandle</a></li>
+            <li><a href="/reservoirs/region/plateau">Plateau</a></li>
+            <li><a href="/reservoirs/region/region-b">Region B</a></li>
+            <li><a href="/reservoirs/region/region-c">Region C</a></li>
+            <li><a href="/reservoirs/region/region-f">Region F</a></li>
+            <li><a href="/reservoirs/region/region-h">Region H</a></li>
+            <li><a href="/reservoirs/region/rio-grande">Rio Grande</a></li>
+            <li><a href="/reservoirs/region/south-central-texas">South Central Texas</a></li>
+          </ul>
+
+        </li>
+        <li class="dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">By River Basin<b class="caret"></b></a>
+          <ul id="menu2" class="dropdown-menu">
+            <li><a href="/reservoirs/basin/area/summary">Summary</a></li>
+            <li><a href="/reservoirs/basin/brazos">Brazos</a></li>
+            <li><a href="/reservoirs/basin/canadian">Canadian</a></li>
+            <li><a href="/reservoirs/basin/colorado">Colorado</a></li>
+            <li><a href="/reservoirs/basin/cypress">Cypress</a></li>
+            <li><a href="/reservoirs/basin/guadalupe">Guadalupe</a></li>
+            <li><a href="/reservoirs/basin/lavaca">Lavaca</a></li>
+            <li><a href="/reservoirs/basin/neches">Neches</a></li>
+            <li><a href="/reservoirs/basin/nueces">Nueces</a></li>
+            <li><a href="/reservoirs/basin/red">Red</a></li>
+            <li><a href="/reservoirs/basin/rio-grande">Rio Grande</a></li>
+            <li><a href="/reservoirs/basin/sabine">Sabine</a></li>
+            <li><a href="/reservoirs/basin/san-antonio">San Antonio</a></li>
+            <li><a href="/reservoirs/basin/san-jacinto">San Jacinto</a></li>
+            <li><a href="/reservoirs/basin/sulphur">Sulphur</a></li>
+            <li><a href="/reservoirs/basin/trinity">Trinity</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Municipal Area<b class="caret"></b></a>
+          <ul id="menu2" class="dropdown-menu">
+            <li><a href="/reservoirs/municipal/area/summary">Summary</a></li>
+            <li><a href="/reservoirs/municipal/abilene">Abilene</a></li>
+            <li><a href="/reservoirs/municipal/amarillo">Amarillo</a></li>
+            <li><a href="/reservoirs/municipal/austin">Austin</a></li>
+            <li><a href="/reservoirs/municipal/beaumont-port-arthur">Beaumont - Port Arthur</a></li>
+            <li><a href="/reservoirs/municipal/brownsville">Brownsville (Lower Rio Grande Valley)</a></li>
+            <li><a href="/reservoirs/municipal/corpus-christi">Corpus Christi</a></li>
+            <li><a href="/reservoirs/municipal/dallas">Dallas</a></li>
+            <li><a href="/reservoirs/municipal/el-paso">El Paso</a></li>
+            <li><a href="/reservoirs/municipal/fort-worth">Fort Worth</a></li>
+            <li><a href="/reservoirs/municipal/houston">Houston</a></li>
+            <li><a href="/reservoirs/municipal/laredo">Laredo</a></li>
+            <li><a href="/reservoirs/municipal/lubbock">Lubbock</a></li>
+            <li><a href="/reservoirs/municipal/midland-odessa">Midland-Odessa</a></li>
+            <li><a href="/reservoirs/municipal/nacogdoches">Nacogdoches</a></li>
+            <li><a href="/reservoirs/municipal/san-angelo">San Angelo</a></li>
+            <li><a href="/reservoirs/municipal/temple-killeen">Temple Killeen</a></li>
+            <li><a href="/reservoirs/municipal/texarkana">Texarkana</a></li>
+            <li><a href="/reservoirs/municipal/tyler">Tyler</a></li>
+            <li><a href="/reservoirs/municipal/waco">Waco</a></li>
+            <li><a href="/reservoirs/municipal/wichita-falls">Wichita Falls</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">By Climate Region<b class="caret"></b></a>
+          <ul id="menu2" class="dropdown-menu">
+            <li><a href="/reservoirs/climate/area/summary">Summary</a></li>
+            <li><a href="/reservoirs/climate/east-texas">East Texas</a></li>
+            <li><a href="/reservoirs/climate/edwards-plateau">Edwards Plateau</a></li>
+            <li><a href="/reservoirs/climate/high-plains">High Plains</a></li>
+            <li><a href="/reservoirs/climate/low-rolling-plains">Low Rolling Plains</a></li>
+            <!-- 01-02-2024 disabled is not working and still takes users to the page and shows 404. Got Nelun's confirmation that it is ok to remove this from the menu.
+            <li class='disabled'><a href="/reservoirs/climate/lower-valley">Lower Valley</a></li>
+            -->
+            <li><a href="/reservoirs/climate/north-central">North Central</a></li>
+            <li><a href="/reservoirs/climate/south">South</a></li>
+            <li><a href="/reservoirs/climate/south-central">South Central</a></li>
+            <li><a href="/reservoirs/climate/trans-pecos">Trans Pecos</a></li>
+            <li><a href="/reservoirs/climate/upper-coast">Upper Coast</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="/reservoirs/flood"> <i class="fa fa-star-o"> </i> Flooding </a>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About  <b class="caret"></b></a>
+          <ul id="menu2" class="dropdown-menu">
+              <li class=""><a href="/reservoirs/glossary"> Glossary</a></li>
+              <li class=""><a href="/reservoirs/faq"> Frequently Asked Questions</a></li>
+              <li class=""><a href="/reservoirs/methodology"> How we get the numbers</a></li>
+              <li class=""><a href="/reservoirs/download"> Downloading Data</a></li>
+              <li class=""><a href="/reservoirs/about"> Data Providers</a></li>
+          </ul>
+        </li>  
+      </ul>
+    </div>
+  </div>
+</nav>
+
+           
+  
+
+          
+  <div class="row">
+    <div class="col-md-12 page-title">
+      
+      <h2> Texas Reservoirs:
+        <small> Monitored Water Supply Reservoirs are 71.1% full on 2026-10-01
+        </small>
+      </h2>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div id="main_map">
+    </div>
+  </div>
+  <div class="row">
+    <div id="perc-full-legend-mobile" class="legend legend-mobile">
+    </div>
+  </div>
+  <div class="row">
+    <div id="res-capacity-legend-mobile" class="legend legend-mobile">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="/reservoirs/statewide/recent-conditions.png" > Static map </a>
+    </div>
+  </div>
+    
+  <div class="row">
+    
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> <i class="fa fa-area-chart"> </i> Statewide Conservation Storage</h3>
+        </div>
+        <div class="panel-body">
+            <div id="storage-plot-carousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="active item plot-recent">
+        <img class="plot image-responsive" src="/reservoirs/statewide/recent-storage.png" alt="plot of recent storage data"> </img>
+      </div>
+      <div class="item plot-historical">
+        <img class="plot image-responsive" src="/reservoirs/statewide/historical-storage.png" alt="plot of storage data for the entire period of record"> </img>
+      </div>
+      <div class="item plot-statistics">
+        <img class="plot image-responsive" src="/reservoirs/statewide/recent-storage-statistics.png" alt="plot of statistics on the past three years of data"> </img>
+      </div>
+      
+    </div>
+  </div>
+  <div class="btn-group-wrap text-center">
+    <div id="storage-plot-carousel-nav" class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary active btn-sm">
+        <input type="radio" name="options" data-slide-to="0"> Recent
+      </label>
+      <label class="btn btn-primary btn-sm">
+        <input type="radio" name="options" data-slide-to="1"> Historical
+      </label>
+      <label class="btn btn-primary btn-sm">
+        <input type="radio" name="options" data-slide-to="2"> Statistics
+      </label>
+
+      
+    </div>
+  </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom: 1em">
+    <div class="col-md-12 text-center hidden-xs">
+      <div class="btn-group">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download"></i> Daily Historical Data <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href=" /reservoirs/statewide.csv">Period of Record</a></li>
+      <li><a href="/reservoirs/statewide-1year.csv">Last One Year</a></li>
+      <li><a href="/reservoirs/statewide-30day.csv">Last 30 Days</a></li>
+    </ul>  
+</div>
+      <div class="btn-group">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download"></i> Recent Averaged Storage Conditions <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="/reservoirs/statewide/recent-conditions.geojson">GeoJSON</a></li>
+            <li><a href="/reservoirs/statewide/recent-conditions.kmz">KMZ</a></li>
+          </ul>
+      </div>
+      
+      <div class="btn-group">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download"></i> Near-Real Time Instantaneous Water Level <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="/reservoirs/api/instantaneous">GeoJSON</a></li>
+            <li><a href="/reservoirs/api/instantaneous?output_format=csv">CSV</a></li>
+          </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default table-responsive">
+        <div class="panel-heading">
+          <h3 class="panel-title"> <i class="fa fa-ellipsis-v"> </i> Summary</h3>
+        </div>
+        
+        <table class="table table-striped table-bordered table-condensed">
+          <thead>
+            <tr>
+              <th>   </th>
+              <th width="15%"> Date </th>
+              <th class="uses-popover" title="Percent Full" data-container="body" data-container="body" data-content="
+        The ratio of conservation storage to conservation capacity expressed as
+        a percentage.
+    ">
+                Percent Full
+              </th>
+              <th class="uses-popover" title="Reservoir Storage" data-container="body" data-content="
+        The amount of water present in a reservoir.
+    ">
+                Reservoir Storage <br> (acre-ft)
+              </th>
+              <th class="uses-popover" title="Conservation Storage" data-container="body" data-content="
+        The amount of water present within a reservoir's conservation pool.
+        Conservation storage is sometimes referred to as normal or multipurpose
+        storage (USACE 2018). If reservoir operations are based on a  normal
+        operating level, conservation storage is calculated based on the normal
+        operating level. If the reservoir is shared with another state or
+        country then conservation storage refers only to the portion that
+        belongs to Texas.
+    ">
+                Conservation Storage <br> (acre-ft)
+              </th>
+              <th class="uses-popover" title="Conservation Capacity" data-container="body" data-content="
+        The capacity of a reservoir's conservation pool; if the reservoir is
+        shared with another state or country then conservation capacity refers
+        only to the portion that belongs to Texas.
+    ">
+                Conservation Capacity <br> (acre-ft)
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td> Today </td>
+                <td> 2026-10-01 </td>
+                <td> 71.1 </td>
+                <td> 26,203,005 </td>
+                <td> 22,427,988 </td>
+                <td> 31,531,332 </td>
+              </tr>
+            
+              <tr>
+                <td> Yesterday </td>
+                <td> 2026-09-30 </td>
+                <td> 71.2 </td>
+                <td> 26,226,744 </td>
+                <td> 22,443,322 </td>
+                <td> 31,531,332 </td>
+              </tr>
+            
+              <tr>
+                <td> 2 days ago </td>
+                <td> 2026-09-29 </td>
+                <td> 71.3 </td>
+                <td> 26,270,663 </td>
+                <td> 22,480,687 </td>
+                <td> 31,533,099 </td>
+              </tr>
+            
+              <tr>
+                <td> 1 week ago </td>
+                <td> 2026-09-24 </td>
+                <td> 71.9 </td>
+                <td> 26,489,670 </td>
+                <td> 22,666,212 </td>
+                <td> 31,542,032 </td>
+              </tr>
+            
+              <tr>
+                <td> 1 month ago </td>
+                <td> 2026-09-01 </td>
+                <td> 74.3 </td>
+                <td> 27,401,604 </td>
+                <td> 23,459,386 </td>
+                <td> 31,558,535 </td>
+              </tr>
+            
+              <tr>
+                <td> 3 months ago </td>
+                <td> 2026-07-01 </td>
+                <td> 77.1 </td>
+                <td> 28,973,907 </td>
+                <td> 24,322,022 </td>
+                <td> 31,558,535 </td>
+              </tr>
+            
+              <tr>
+                <td> 6 months ago </td>
+                <td> 2026-04-01 </td>
+                <td> 73.5 </td>
+                <td> 26,922,886 </td>
+                <td> 23,162,535 </td>
+                <td> 31,531,332 </td>
+              </tr>
+            
+              <tr>
+                <td> 1 year ago </td>
+                <td> 2025-10-01 </td>
+                <td> 75.7 </td>
+                <td> 27,761,832 </td>
+                <td> 23,879,990 </td>
+                <td> 31,531,332 </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        <div class="panel-body">
+          <div class="footnote-number">*</div><p id="*-footnote" class="footnote">&nbsp;Percent Full is based on Conservation Storage and Conservation Capacity and doesn't account for storage in flood pool. </p>
+          
+            <div class="footnote-number">**</div><p id="**-footnote" class="footnote">&nbsp;&nbsp;
+        Water supply reservoirs include reservoirs which provide water for all
+        beneficial purposes such as power generation, recreation, and municipal
+        water supply. Today's total is subject to change as data are updated.
+        See footnotes on individual lakes for cases where special conditions
+        apply.
+     </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2> Recent Conditions </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 table-responsive">
+      <table class="table table-striped table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th> Reservoir </th>
+          <th> Type </th>
+          <!--<th> Type Name </th>-->
+        <th class="uses-popover" title="Percent Full" data-container="body" data-container="body" data-content="
+        The ratio of conservation storage to conservation capacity expressed as
+        a percentage.
+    "> 
+          Percent Full
+        </th>
+        <th class="uses-popover" title="Water Surface Elevation" data-container="body" data-content="
+        The elevation of the top surface of a reservoir&#39;s body of water.
+    "> 
+          Water Level <br> (ft)
+        </th>
+        <th style="" class="uses-popover" title="Height above Conservation Pool" data-container="body" data-content="
+        The vertical distance between a reservoir&#39;s water surface elevation and
+        the top of the conservation pool. Negative numbers indicate how far
+        below &#39;full&#39; the reservoir is, while positive numbers indicate how far
+        above the top of the conservation pool the water surface is.
+    "> 
+          Height Above Conservation Pool <br>(ft)
+        </th>
+        <th class="uses-popover" title="Reservoir Storage" data-container="body" data-content="
+        The amount of water present in a reservoir.
+    "> 
+          Reservoir Storage <br> (acre-ft)
+        </th>
+        <th class="uses-popover" title="Conservation Storage" data-placement="left" data-container="body" data-content="
+        The amount of water present within a reservoir&#39;s conservation pool.
+        Conservation storage is sometimes referred to as normal or multipurpose
+        storage (USACE 2018). If reservoir operations are based on a  normal
+        operating level, conservation storage is calculated based on the normal
+        operating level. If the reservoir is shared with another state or
+        country then conservation storage refers only to the portion that
+        belongs to Texas.
+    "> 
+          Conservation Storage <br> (acre-ft)
+        </th>
+        <th class="uses-popover" title="Conservation Capacity" data-placement="left" data-container="body" data-content="
+        The capacity of a reservoir&#39;s conservation pool; if the reservoir is
+        shared with another state or country then conservation capacity refers
+        only to the portion that belongs to Texas.
+    "> 
+          Conservation Capacity <br> (acre-ft)
+        </th>
+        <th class="uses-popover" title="Area" data-placement="left" data-container="body" data-content="
+        The area of the top surface of a reservoir&#39;s body of water.
+    "> 
+          Surface Area <br> (acres)
+        </th>
+    </thead>
+    <tbody><tr>
+          <td class="left">
+            <a href="/reservoirs/individual/abilene">Abilene</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 7.8 </td>
+          <td> 1,991.58 </td>
+          <td> -20.72 </td>
+          <td> 619 </td>
+          <td> 619 </td>
+          <td> 7,900 </td>
+          <td> 137 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/addicks">Addicks</a><a href="#addicks-footnote" class="footnote-number"> 1</a></td>
+        <td>
+        
+            <!-- attempt to add label for Accessibility solution as per Jeff but does not look good yet. Need more adjustment if I want to add the label to the image. Will work with Jeff at the time of addressing accessibilities issues. -->
+            <!--<label id="fc_icon_img_label">Flood Control</label>&nbsp;-->
+            <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-flood-control.svg" alt="Flood Control"/>
+            <!--&nbsp;<label id="fc_icon_img_label">Flood Control</label>-->
+        
+        </td>
+        <!--
+            <td>
+                
+                    <p id="fc_icon_img_name">Flood Control</p>
+                
+            </td>-->
+          <td> - n.a. - </td>
+          <td> 76.41 </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/alan-henry">Alan Henry</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 71.3 </td>
+          <td> 2,208.66 </td>
+          <td> -11.34 </td>
+          <td> 68,636 </td>
+          <td> 68,636 </td>
+          <td> 96,207 </td>
+          <td> 2,128 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/amistad">Amistad</a><a href="#IBWC-footnote" class="footnote-number"> 2</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 39.1 </td>
+          <td> 1,056.67 </td>
+          <td> -60.33 </td>
+          <td> 777,713 </td>
+          <td> 708,944 </td>
+          <td> 1,813,408 </td>
+          <td> 20,820 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/amon-g-carter">Amon G Carter</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 75.9 </td>
+          <td> 916.54 </td>
+          <td> -3.46 </td>
+          <td> 15,408 </td>
+          <td> 14,624 </td>
+          <td> 19,266 </td>
+          <td> 1,239 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/aquilla">Aquilla</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 82.1 </td>
+          <td> 534.84 </td>
+          <td> -2.66 </td>
+          <td> 35,554 </td>
+          <td> 35,518 </td>
+          <td> 43,243 </td>
+          <td> 2,696 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/arlington">Arlington</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 68.4 </td>
+          <td> 543.15 </td>
+          <td> -6.85 </td>
+          <td> 27,516 </td>
+          <td> 27,484 </td>
+          <td> 40,157 </td>
+          <td> 1,774 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/arrowhead">Arrowhead</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 69.7 </td>
+          <td> 920.68 </td>
+          <td> -5.32 </td>
+          <td> 160,487 </td>
+          <td> 160,487 </td>
+          <td> 230,359 </td>
+          <td> 11,762 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/athens">Athens</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 91.3 </td>
+          <td> 438.56 </td>
+          <td> -1.44 </td>
+          <td> 26,990 </td>
+          <td> 26,949 </td>
+          <td> 29,503 </td>
+          <td> 1,647 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/austin">Austin</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 97.3 </td>
+          <td> 492.38 </td>
+          <td> -0.42 </td>
+          <td> 23,922 </td>
+          <td> 23,313 </td>
+          <td> 23,972 </td>
+          <td> 1,556 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/b-a-steinhagen">B A Steinhagen</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 94.2 </td>
+          <td> 82.60 </td>
+          <td> -0.40 </td>
+          <td> 65,239 </td>
+          <td> 65,166 </td>
+          <td> 69,186 </td>
+          <td> 9,867 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/bardwell">Bardwell</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 85.2 </td>
+          <td> 418.94 </td>
+          <td> -2.06 </td>
+          <td> 37,409 </td>
+          <td> 37,348 </td>
+          <td> 43,856 </td>
+          <td> 3,028 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/barker">Barker</a><a href="#barker-footnote" class="footnote-number"> 3</a></td>
+        <td>
+        
+            <!-- attempt to add label for Accessibility solution as per Jeff but does not look good yet. Need more adjustment if I want to add the label to the image. Will work with Jeff at the time of addressing accessibilities issues. -->
+            <!--<label id="fc_icon_img_label">Flood Control</label>&nbsp;-->
+            <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-flood-control.svg" alt="Flood Control"/>
+            <!--&nbsp;<label id="fc_icon_img_label">Flood Control</label>-->
+        
+        </td>
+        <!--
+            <td>
+                
+                    <p id="fc_icon_img_name">Flood Control</p>
+                
+            </td>-->
+          <td> - n.a. - </td>
+          <td> 69.35 </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/belton">Belton</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 94.7 </td>
+          <td> 592.11 </td>
+          <td> -1.89 </td>
+          <td> 409,579 </td>
+          <td> 409,579 </td>
+          <td> 432,631 </td>
+          <td> 11,949 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/benbrook">Benbrook</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 69.8 </td>
+          <td> 686.14 </td>
+          <td> -7.86 </td>
+          <td> 59,817 </td>
+          <td> 59,817 </td>
+          <td> 85,648 </td>
+          <td> 2,947 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/bob-sandlin">Bob Sandlin</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 88.5 </td>
+          <td> 334.93 </td>
+          <td> -2.57 </td>
+          <td> 180,950 </td>
+          <td> 170,219 </td>
+          <td> 192,417 </td>
+          <td> 8,387 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/bois-darc">Bois d&#39;Arc</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 89.2 </td>
+          <td> 531.54 </td>
+          <td> -2.46 </td>
+          <td> 327,900 </td>
+          <td> 327,900 </td>
+          <td> 367,609 </td>
+          <td> 15,445 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/bonham">Bonham</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 76.9 </td>
+          <td> 562.44 </td>
+          <td> -2.56 </td>
+          <td> 8,496 </td>
+          <td> 8,484 </td>
+          <td> 11,027 </td>
+          <td> 932 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/brady-creek">Brady Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 83.4 </td>
+          <td> 1,740.46 </td>
+          <td> -2.54 </td>
+          <td> 25,645 </td>
+          <td> 24,023 </td>
+          <td> 28,808 </td>
+          <td> 1,803 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/bridgeport">Bridgeport</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 72.6 </td>
+          <td> 826.94 </td>
+          <td> -9.06 </td>
+          <td> 270,146 </td>
+          <td> 270,146 </td>
+          <td> 372,183 </td>
+          <td> 10,209 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/brownwood">Brownwood</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 81.7 </td>
+          <td> 1,421.17 </td>
+          <td> -3.43 </td>
+          <td> 106,941 </td>
+          <td> 106,941 </td>
+          <td> 130,868 </td>
+          <td> 6,026 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/buchanan">Buchanan</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 95.5 </td>
+          <td> 1,018.26 </td>
+          <td> -1.74 </td>
+          <td> 841,610 </td>
+          <td> 827,948 </td>
+          <td> 866,694 </td>
+          <td> 22,102 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/caddo">Caddo</a><a href="#caddo-footnote" class="footnote-number"> 4</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 54.6 </td>
+          <td> 167.48 </td>
+          <td> -1.02 </td>
+          <td> 101,872 </td>
+          <td> 16,334 </td>
+          <td> 29,898 </td>
+          <td> 24,246 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/canyon">Canyon</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 97.6 </td>
+          <td> 907.87 </td>
+          <td> -1.13 </td>
+          <td> 369,619 </td>
+          <td> 369,548 </td>
+          <td> 378,781 </td>
+          <td> 8,106 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/cedar-creek">Cedar Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 71.5 </td>
+          <td> 315.83 </td>
+          <td> -6.17 </td>
+          <td> 461,220 </td>
+          <td> 461,121 </td>
+          <td> 644,686 </td>
+          <td> 26,793 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/champion-creek">Champion Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 42.6 </td>
+          <td> 2,062.60 </td>
+          <td> -20.40 </td>
+          <td> 17,697 </td>
+          <td> 17,697 </td>
+          <td> 41,580 </td>
+          <td> 861 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/cherokee">Cherokee</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 79.2 </td>
+          <td> 277.40 </td>
+          <td> -2.60 </td>
+          <td> 36,132 </td>
+          <td> 31,750 </td>
+          <td> 40,094 </td>
+          <td> 3,063 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/choke-canyon">Choke Canyon</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 21.9 </td>
+          <td> 191.02 </td>
+          <td> -29.48 </td>
+          <td> 145,278 </td>
+          <td> 145,277 </td>
+          <td> 662,820 </td>
+          <td> 10,333 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/cisco">Cisco</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 42.4 </td>
+          <td> 1,502.99 </td>
+          <td> -19.47 </td>
+          <td> 12,310 </td>
+          <td> 12,310 </td>
+          <td> 29,003 </td>
+          <td> 579 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/coleman">Coleman</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 78.2 </td>
+          <td> 1,712.71 </td>
+          <td> -4.79 </td>
+          <td> 29,805 </td>
+          <td> 29,787 </td>
+          <td> 38,075 </td>
+          <td> 1,626 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/coleto-creek">Coleto Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 71.3 </td>
+          <td> 94.15 </td>
+          <td> -3.85 </td>
+          <td> 22,122 </td>
+          <td> 22,122 </td>
+          <td> 31,040 </td>
+          <td> 2,106 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/colorado-city">Colorado City</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 53.2 </td>
+          <td> 2,058.81 </td>
+          <td> -11.39 </td>
+          <td> 16,352 </td>
+          <td> 16,352 </td>
+          <td> 30,758 </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/comanche-creek">Comanche Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 100.0 </td>
+          <td> 775.16 </td>
+          <td> 0.16 </td>
+          <td> 151,780 </td>
+          <td> 151,250 </td>
+          <td> 151,250 </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/conroe">Conroe</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 93.0 </td>
+          <td> 199.50 </td>
+          <td> -1.50 </td>
+          <td> 388,371 </td>
+          <td> 388,344 </td>
+          <td> 417,577 </td>
+          <td> 19,083 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/corpus-christi">Corpus Christi</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 81.7 </td>
+          <td> 91.53 </td>
+          <td> -2.47 </td>
+          <td> 209,367 </td>
+          <td> 209,089 </td>
+          <td> 256,062 </td>
+          <td> 18,286 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/crook">Crook</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 84.0 </td>
+          <td> 474.57 </td>
+          <td> -1.43 </td>
+          <td> 7,743 </td>
+          <td> 7,728 </td>
+          <td> 9,195 </td>
+          <td> 1,003 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/cypress-springs">Cypress Springs</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 89.2 </td>
+          <td> 375.71 </td>
+          <td> -2.29 </td>
+          <td> 59,539 </td>
+          <td> 59,539 </td>
+          <td> 66,756 </td>
+          <td> 3,074 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/e-v-spence">E V Spence</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 9.3 </td>
+          <td> 1,842.11 </td>
+          <td> -55.89 </td>
+          <td> 48,242 </td>
+          <td> 48,242 </td>
+          <td> 517,272 </td>
+          <td> 3,224 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/eagle-mountain">Eagle Mountain</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 70.5 </td>
+          <td> 642.53 </td>
+          <td> -6.57 </td>
+          <td> 130,517 </td>
+          <td> 130,517 </td>
+          <td> 185,087 </td>
+          <td> 7,517 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/elephant-butte">Elephant Butte</a><a href="#elephantbutte-footnote" class="footnote-number"> 5</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 2.5 </td>
+          <td> 4,284.24 </td>
+          <td> -122.06 </td>
+          <td> 49,952 </td>
+          <td> 49,952 </td>
+          <td> 1,985,900 </td>
+          <td> 2,906 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/falcon">Falcon</a><a href="#IBWC-footnote" class="footnote-number"> 2</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 19.6 </td>
+          <td> 260.12 </td>
+          <td> -41.08 </td>
+          <td> 429,163 </td>
+          <td> 305,748 </td>
+          <td> 1,562,367 </td>
+          <td> 26,864 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/fork">Fork</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 81.0 </td>
+          <td> 398.38 </td>
+          <td> -4.62 </td>
+          <td> 522,494 </td>
+          <td> 491,051 </td>
+          <td> 606,088 </td>
+          <td> 23,324 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/fort-phantom-hill">Fort Phantom Hill</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 66.3 </td>
+          <td> 1,628.96 </td>
+          <td> -6.94 </td>
+          <td> 46,424 </td>
+          <td> 46,418 </td>
+          <td> 70,030 </td>
+          <td> 2,965 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/georgetown">Georgetown</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 76.9 </td>
+          <td> 783.74 </td>
+          <td> -7.26 </td>
+          <td> 29,282 </td>
+          <td> 29,219 </td>
+          <td> 38,005 </td>
+          <td> 1,115 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/gibbons-creek">Gibbons Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 86.4 </td>
+          <td> 245.56 </td>
+          <td> -1.44 </td>
+          <td> 23,922 </td>
+          <td> 22,218 </td>
+          <td> 25,721 </td>
+          <td> 2,269 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/graham">Graham</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 65.2 </td>
+          <td> 1,067.87 </td>
+          <td> -7.13 </td>
+          <td> 29,558 </td>
+          <td> 29,544 </td>
+          <td> 45,288 </td>
+          <td> 1,912 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/granbury">Granbury</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 83.8 </td>
+          <td> 689.89 </td>
+          <td> -2.81 </td>
+          <td> 112,334 </td>
+          <td> 111,425 </td>
+          <td> 132,949 </td>
+          <td> 7,158 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/granger">Granger</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 97.1 </td>
+          <td> 503.63 </td>
+          <td> -0.37 </td>
+          <td> 50,318 </td>
+          <td> 50,318 </td>
+          <td> 51,822 </td>
+          <td> 4,023 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/grapevine">Grapevine</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 89.1 </td>
+          <td> 532.18 </td>
+          <td> -2.82 </td>
+          <td> 145,318 </td>
+          <td> 145,318 </td>
+          <td> 163,064 </td>
+          <td> 6,042 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/greenbelt">Greenbelt</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 4.6 </td>
+          <td> 2,607.10 </td>
+          <td> -56.90 </td>
+          <td> 3,168 </td>
+          <td> 2,736 </td>
+          <td> 59,968 </td>
+          <td> 274 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/halbert">Halbert</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 72.0 </td>
+          <td> 364.88 </td>
+          <td> -3.12 </td>
+          <td> 4,343 </td>
+          <td> 4,343 </td>
+          <td> 6,033 </td>
+          <td> 506 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/hords-creek">Hords Creek</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 45.3 </td>
+          <td> 1,888.31 </td>
+          <td> -11.69 </td>
+          <td> 3,680 </td>
+          <td> 3,677 </td>
+          <td> 8,109 </td>
+          <td> 270 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/houston">Houston</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 98.4 </td>
+          <td> 42.19 </td>
+          <td> -0.19 </td>
+          <td> 133,953 </td>
+          <td> 130,152 </td>
+          <td> 132,318 </td>
+          <td> 11,359 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/houston-county">Houston County</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 92.6 </td>
+          <td> 259.01 </td>
+          <td> -0.99 </td>
+          <td> 16,407 </td>
+          <td> 15,855 </td>
+          <td> 17,113 </td>
+          <td> 1,248 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/hubbard-creek">Hubbard Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 35.8 </td>
+          <td> 1,166.00 </td>
+          <td> -17.31 </td>
+          <td> 116,985 </td>
+          <td> 112,109 </td>
+          <td> 313,298 </td>
+          <td> 7,925 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/hubert-h-moss">Hubert H Moss</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 90.5 </td>
+          <td> 712.82 </td>
+          <td> -2.18 </td>
+          <td> 21,858 </td>
+          <td> 21,761 </td>
+          <td> 24,058 </td>
+          <td> 1,027 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/inks">Inks</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 94.9 </td>
+          <td> 887.12 </td>
+          <td> -0.88 </td>
+          <td> 13,312 </td>
+          <td> 13,029 </td>
+          <td> 13,729 </td>
+          <td> 783 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/j-b-thomas">J B Thomas</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 19.9 </td>
+          <td> 2,225.99 </td>
+          <td> -32.01 </td>
+          <td> 40,420 </td>
+          <td> 39,747 </td>
+          <td> 199,931 </td>
+          <td> 3,092 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/jacksonville">Jacksonville</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 95.7 </td>
+          <td> 421.04 </td>
+          <td> -0.96 </td>
+          <td> 24,632 </td>
+          <td> 24,570 </td>
+          <td> 25,670 </td>
+          <td> 1,131 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/jim-chapman">Jim Chapman</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 68.0 </td>
+          <td> 434.99 </td>
+          <td> -5.01 </td>
+          <td> 211,656 </td>
+          <td> 175,881 </td>
+          <td> 258,723 </td>
+          <td> 14,935 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/joe-pool">Joe Pool</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 89.5 </td>
+          <td> 519.54 </td>
+          <td> -2.46 </td>
+          <td> 135,345 </td>
+          <td> 133,975 </td>
+          <td> 149,629 </td>
+          <td> 6,079 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/kemp">Kemp</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 63.4 </td>
+          <td> 1,136.78 </td>
+          <td> -7.22 </td>
+          <td> 155,702 </td>
+          <td> 155,576 </td>
+          <td> 245,307 </td>
+          <td> 7,973 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/kickapoo">Kickapoo</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 77.6 </td>
+          <td> 1,041.45 </td>
+          <td> -3.55 </td>
+          <td> 66,961 </td>
+          <td> 66,961 </td>
+          <td> 86,345 </td>
+          <td> 5,057 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/lake-o-the-pines">Lake O&#39; the Pines</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 92.5 </td>
+          <td> 227.45 </td>
+          <td> -1.05 </td>
+          <td> 223,224 </td>
+          <td> 223,224 </td>
+          <td> 241,363 </td>
+          <td> 16,918 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/lavon">Lavon</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 78.5 </td>
+          <td> 487.52 </td>
+          <td> -4.48 </td>
+          <td> 324,347 </td>
+          <td> 321,506 </td>
+          <td> 409,757 </td>
+          <td> 18,617 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/leon">Leon</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 74.9 </td>
+          <td> 1,370.60 </td>
+          <td> -4.40 </td>
+          <td> 21,087 </td>
+          <td> 20,807 </td>
+          <td> 27,762 </td>
+          <td> 1,419 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/lewisville">Lewisville</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 82.0 </td>
+          <td> 518.07 </td>
+          <td> -3.93 </td>
+          <td> 497,717 </td>
+          <td> 462,043 </td>
+          <td> 563,228 </td>
+          <td> 24,417 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/limestone">Limestone</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 84.8 </td>
+          <td> 360.41 </td>
+          <td> -2.59 </td>
+          <td> 172,889 </td>
+          <td> 172,889 </td>
+          <td> 203,780 </td>
+          <td> 11,337 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/livingston">Livingston</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 90.0 </td>
+          <td> 128.86 </td>
+          <td> -2.14 </td>
+          <td> 1,443,683 </td>
+          <td> 1,443,683 </td>
+          <td> 1,603,504 </td>
+          <td> 72,328 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/lost-creek">Lost Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 87.6 </td>
+          <td> 1,005.45 </td>
+          <td> -4.05 </td>
+          <td> 10,467 </td>
+          <td> 10,467 </td>
+          <td> 11,950 </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/lyndon-b-johnson">Lyndon B Johnson</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 97.3 </td>
+          <td> 824.53 </td>
+          <td> -0.47 </td>
+          <td> 128,605 </td>
+          <td> 109,765 </td>
+          <td> 112,778 </td>
+          <td> 6,388 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/mackenzie">Mackenzie</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 10.9 </td>
+          <td> 3,018.64 </td>
+          <td> -81.36 </td>
+          <td> 5,064 </td>
+          <td> 5,064 </td>
+          <td> 46,450 </td>
+          <td> 236 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/marble-falls">Marble Falls</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 95.3 </td>
+          <td> 736.41 </td>
+          <td> -0.59 </td>
+          <td> 7,239 </td>
+          <td> 7,239 </td>
+          <td> 7,597 </td>
+          <td> 602 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/martin">Martin</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 78.7 </td>
+          <td> 302.53 </td>
+          <td> -3.47 </td>
+          <td> 59,631 </td>
+          <td> 59,631 </td>
+          <td> 75,726 </td>
+          <td> 4,322 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/medina">Medina</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 28.5 </td>
+          <td> 1,020.48 </td>
+          <td> -43.72 </td>
+          <td> 72,630 </td>
+          <td> 72,630 </td>
+          <td> 254,823 </td>
+          <td> 2,440 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/meredith">Meredith</a><a href="#meredith-footnote" class="footnote-number"> 6</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 41.6 </td>
+          <td> 2,889.59 </td>
+          <td> -46.91 </td>
+          <td> 246,639 </td>
+          <td> 208,225 </td>
+          <td> 500,000 </td>
+          <td> 7,443 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/millers-creek">Millers Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 56.9 </td>
+          <td> 1,327.46 </td>
+          <td> -6.54 </td>
+          <td> 16,519 </td>
+          <td> 15,236 </td>
+          <td> 26,768 </td>
+          <td> 1,368 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/mineral-wells">Mineral Wells</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 83.8 </td>
+          <td> 861.09 </td>
+          <td> -1.91 </td>
+          <td> 4,420 </td>
+          <td> 4,420 </td>
+          <td> 5,273 </td>
+          <td> 431 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/monticello">Monticello</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 73.0 </td>
+          <td> 334.80 </td>
+          <td> -5.20 </td>
+          <td> 25,376 </td>
+          <td> 25,376 </td>
+          <td> 34,740 </td>
+          <td> 1,553 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/mountain-creek">Mountain Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 98.6 </td>
+          <td> 456.86 </td>
+          <td> -0.14 </td>
+          <td> 22,531 </td>
+          <td> 22,531 </td>
+          <td> 22,850 </td>
+          <td> 2,663 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/murvaul">Murvaul</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 86.0 </td>
+          <td> 263.70 </td>
+          <td> -1.60 </td>
+          <td> 32,944 </td>
+          <td> 32,944 </td>
+          <td> 38,285 </td>
+          <td> 3,244 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/nacogdoches">Nacogdoches</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 84.8 </td>
+          <td> 276.08 </td>
+          <td> -2.92 </td>
+          <td> 33,526 </td>
+          <td> 33,524 </td>
+          <td> 39,522 </td>
+          <td> 1,935 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/nasworthy">Nasworthy</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 85.4 </td>
+          <td> 1,871.71 </td>
+          <td> -1.00 </td>
+          <td> 8,701 </td>
+          <td> 8,208 </td>
+          <td> 9,615 </td>
+          <td> 1,233 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/navarro-mills">Navarro Mills</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 76.9 </td>
+          <td> 421.93 </td>
+          <td> -2.57 </td>
+          <td> 38,331 </td>
+          <td> 38,330 </td>
+          <td> 49,827 </td>
+          <td> 4,266 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/new-terrell-city">New Terrell City</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 24.1 </td>
+          <td> 493.39 </td>
+          <td> -10.61 </td>
+          <td> 2,083 </td>
+          <td> 2,072 </td>
+          <td> 8,583 </td>
+          <td> 358 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/nocona">Nocona</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 71.5 </td>
+          <td> 822.61 </td>
+          <td> -4.89 </td>
+          <td> 15,640 </td>
+          <td> 15,336 </td>
+          <td> 21,444 </td>
+          <td> 1,146 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/north-fork-buffalo-creek">North Fork Buffalo Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 71.6 </td>
+          <td> 1,045.12 </td>
+          <td> -2.88 </td>
+          <td> 11,030 </td>
+          <td> 11,030 </td>
+          <td> 15,400 </td>
+          <td> 1,208 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/o-c-fisher">O C Fisher</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 10.8 </td>
+          <td> 1,872.28 </td>
+          <td> -35.72 </td>
+          <td> 12,544 </td>
+          <td> 12,543 </td>
+          <td> 115,742 </td>
+          <td> 1,099 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/o-h-ivie">O H Ivie</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 41.6 </td>
+          <td> 1,529.44 </td>
+          <td> -22.06 </td>
+          <td> 230,881 </td>
+          <td> 230,881 </td>
+          <td> 554,340 </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/oak-creek">Oak Creek</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 13.8 </td>
+          <td> 1,973.54 </td>
+          <td> -26.46 </td>
+          <td> 5,576 </td>
+          <td> 5,426 </td>
+          <td> 39,210 </td>
+          <td> 520 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/palestine">Palestine</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 87.9 </td>
+          <td> 343.00 </td>
+          <td> -2.00 </td>
+          <td> 322,876 </td>
+          <td> 322,867 </td>
+          <td> 367,303 </td>
+          <td> 21,323 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/palo-duro">Palo Duro</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 0.4 </td>
+          <td> 2,826.32 </td>
+          <td> -65.68 </td>
+          <td> 231 </td>
+          <td> 231 </td>
+          <td> 61,066 </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/palo-pinto">Palo Pinto</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 79.1 </td>
+          <td> 864.36 </td>
+          <td> -2.64 </td>
+          <td> 21,550 </td>
+          <td> 21,164 </td>
+          <td> 26,766 </td>
+          <td> 2,069 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/pat-cleburne">Pat Cleburne</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 83.7 </td>
+          <td> 730.72 </td>
+          <td> -2.78 </td>
+          <td> 21,771 </td>
+          <td> 21,771 </td>
+          <td> 26,008 </td>
+          <td> 1,485 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/pat-mayse">Pat Mayse</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 90.5 </td>
+          <td> 449.04 </td>
+          <td> -1.96 </td>
+          <td> 107,029 </td>
+          <td> 102,869 </td>
+          <td> 113,683 </td>
+          <td> 5,338 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/possum-kingdom">Possum Kingdom</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 85.3 </td>
+          <td> 994.30 </td>
+          <td> -4.70 </td>
+          <td> 459,245 </td>
+          <td> 459,245 </td>
+          <td> 538,139 </td>
+          <td> 15,489 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/proctor">Proctor</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 57.6 </td>
+          <td> 1,156.16 </td>
+          <td> -5.84 </td>
+          <td> 31,529 </td>
+          <td> 31,529 </td>
+          <td> 54,762 </td>
+          <td> 2,830 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/ray-hubbard">Ray Hubbard</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 82.3 </td>
+          <td> 431.59 </td>
+          <td> -3.91 </td>
+          <td> 361,700 </td>
+          <td> 361,700 </td>
+          <td> 439,559 </td>
+          <td> 19,255 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/ray-roberts">Ray Roberts</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 93.5 </td>
+          <td> 630.65 </td>
+          <td> -1.85 </td>
+          <td> 737,098 </td>
+          <td> 736,775 </td>
+          <td> 788,167 </td>
+          <td> 27,230 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/red-bluff">Red Bluff</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 45.7 </td>
+          <td> 2,814.75 </td>
+          <td> -13.35 </td>
+          <td> 66,388 </td>
+          <td> 66,388 </td>
+          <td> 145,165 </td>
+          <td> 4,529 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/richland-chambers">Richland-Chambers</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 89.3 </td>
+          <td> 312.26 </td>
+          <td> -2.74 </td>
+          <td> 1,007,985 </td>
+          <td> 982,202 </td>
+          <td> 1,099,417 </td>
+          <td> 41,684 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/sam-rayburn">Sam Rayburn</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 64.4 </td>
+          <td> 154.09 </td>
+          <td> -10.31 </td>
+          <td> 1,857,727 </td>
+          <td> 1,838,771 </td>
+          <td> 2,857,077 </td>
+          <td> 83,783 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/somerville">Somerville</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 89.9 </td>
+          <td> 236.61 </td>
+          <td> -1.39 </td>
+          <td> 135,098 </td>
+          <td> 135,098 </td>
+          <td> 150,293 </td>
+          <td> 10,638 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/stamford">Stamford</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 62.5 </td>
+          <td> 1,412.59 </td>
+          <td> -4.21 </td>
+          <td> 32,238 </td>
+          <td> 32,235 </td>
+          <td> 51,570 </td>
+          <td> 3,590 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/stillhouse-hollow">Stillhouse Hollow</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 96.0 </td>
+          <td> 620.56 </td>
+          <td> -1.44 </td>
+          <td> 220,771 </td>
+          <td> 220,685 </td>
+          <td> 229,796 </td>
+          <td> 6,228 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/striker">Striker</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 80.9 </td>
+          <td> 291.30 </td>
+          <td> -1.70 </td>
+          <td> 18,574 </td>
+          <td> 13,652 </td>
+          <td> 16,878 </td>
+          <td> 1,849 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/sulphur-springs">Sulphur Springs</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 84.1 </td>
+          <td> 457.34 </td>
+          <td> -1.61 </td>
+          <td> 14,929 </td>
+          <td> 14,929 </td>
+          <td> 17,747 </td>
+          <td> - n.a. - </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/sweetwater">Sweetwater</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 16.7 </td>
+          <td> 2,090.51 </td>
+          <td> -25.99 </td>
+          <td> 2,047 </td>
+          <td> 2,047 </td>
+          <td> 12,267 </td>
+          <td> 204 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/tawakoni">Tawakoni</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 90.5 </td>
+          <td> 435.18 </td>
+          <td> -2.32 </td>
+          <td> 788,525 </td>
+          <td> 788,517 </td>
+          <td> 871,685 </td>
+          <td> 34,886 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/texana">Texana</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 83.2 </td>
+          <td> 41.25 </td>
+          <td> -2.75 </td>
+          <td> 137,494 </td>
+          <td> 132,281 </td>
+          <td> 158,975 </td>
+          <td> 9,092 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/texoma">Texoma</a><a href="#texoma-footnote" class="footnote-number"> 7</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 93.1 </td>
+          <td> 614.64 </td>
+          <td> -2.36 </td>
+          <td> 2,316,677 </td>
+          <td> 1,158,338 </td>
+          <td> 1,243,801 </td>
+          <td> 69,407 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/toledo-bend">Toledo Bend</a><a href="#toledobend-footnote" class="footnote-number"> 8</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 85.3 </td>
+          <td> 168.00 </td>
+          <td> -4.00 </td>
+          <td> 3,819,347 </td>
+          <td> 1,907,624 </td>
+          <td> 2,236,450 </td>
+          <td> 163,494 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/travis">Travis</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 89.2 </td>
+          <td> 674.51 </td>
+          <td> -6.49 </td>
+          <td> 996,332 </td>
+          <td> 979,300 </td>
+          <td> 1,098,044 </td>
+          <td> 17,538 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/twin-buttes">Twin Buttes</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 5.0 </td>
+          <td> 1,895.43 </td>
+          <td> -44.77 </td>
+          <td> 12,816 </td>
+          <td> 9,067 </td>
+          <td> 182,454 </td>
+          <td> 1,076 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/tyler">Tyler</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 85.4 </td>
+          <td> 373.02 </td>
+          <td> -2.36 </td>
+          <td> 66,735 </td>
+          <td> 61,524 </td>
+          <td> 72,073 </td>
+          <td> 4,252 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/waco">Waco</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 85.4 </td>
+          <td> 458.83 </td>
+          <td> -3.39 </td>
+          <td> 161,556 </td>
+          <td> 161,330 </td>
+          <td> 188,891 </td>
+          <td> 7,765 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/waxahachie">Waxahachie</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 73.8 </td>
+          <td> 526.72 </td>
+          <td> -4.78 </td>
+          <td> 8,744 </td>
+          <td> 8,162 </td>
+          <td> 11,060 </td>
+          <td> 546 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/weatherford">Weatherford</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 57.5 </td>
+          <td> 888.18 </td>
+          <td> -7.82 </td>
+          <td> 10,243 </td>
+          <td> 10,243 </td>
+          <td> 17,812 </td>
+          <td> 868 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/white-river">White River</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 20.9 </td>
+          <td> 2,348.90 </td>
+          <td> -23.30 </td>
+          <td> 6,653 </td>
+          <td> 6,653 </td>
+          <td> 31,846 </td>
+          <td> 662 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/whitney">Whitney</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 89.3 </td>
+          <td> 530.26 </td>
+          <td> -2.74 </td>
+          <td> 505,944 </td>
+          <td> 504,590 </td>
+          <td> 564,808 </td>
+          <td> 20,730 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/worth">Worth</a></td>
+        <td>
+        <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply.svg" alt="Water Supply"/>
+        </td>
+        <!--
+            <td>
+                <p id="fc_icon_img_name">Water Supply</p>
+            </td>-->
+          <td> 64.7 </td>
+          <td> 591.36 </td>
+          <td> -2.64 </td>
+          <td> 24,871 </td>
+          <td> 15,795 </td>
+          <td> 24,419 </td>
+          <td> 3,077 </td>
+        </tr>
+      <tr>
+          <td class="left">
+            <a href="/reservoirs/individual/wright-patman">Wright Patman</a></td>
+        <td>
+        <!--<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>&nbsp;-->
+                <img id="fc_ws_icon_img" data-toggle="tooltip" data-placement="top" title="Water Supply & Flood Control" src="/reservoirs/static/img/WDfT-Reservoirs-water-supply-w-flood-control.svg" alt="Water Supply and Flood Control"/>
+                <!--&nbsp;<label id="fc_ws_icon_img_label">Water Supply <br>& Flood Control</label>-->
+        </td>
+        <!--
+            <td>
+                <p id="ws_and_fc_icon_img_name">Water Supply and<br>Flood Control</p>
+            </td>-->
+          <td> 100.0 </td>
+          <td> 225.26 </td>
+          <td> 4.66 </td>
+          <td> 239,180 </td>
+          <td> 122,593 </td>
+          <td> 122,593 </td>
+          <td> - n.a. - </td>
+        </tr>
+      
+    </tbody>
+  </table>
+  
+    <div class="panel-body">
+      <div class="footnote-title">footnotes</div>
+      
+        <div class="footnote-number">1</div><p id="addicks-footnote" class="footnote">
+        Addicks Reservoir is a flood control lake. It is not used for water
+        supply and under normal conditions it is empty.
+    </p>
+      
+        <div class="footnote-number">2</div><p id="IBWC-footnote" class="footnote">
+        Lake Amistad and Lake Falcon straddle the border of Texas and Mexico. By
+        treaty, Texas has rights to 56.2% of the total conservation capacity of
+        Amistad and 58.6% of the total conservation capacity of Falcon. The
+        fraction of the actual storage that belongs to Texas is formally
+        determined biweekly by the <a
+        href="http://www.ibwc.gov/">International Boundary Water
+        Commission</a> (IBWC). The IBWC is the legal repository of data related
+        to this lake for treaty purposes and official versions of the datasets
+        should be obtained directly from them. Conservation capacity is based on
+        the fixed percent of total conservation capacity. Conservation storage
+        is based on the bi-weekly changing Texas share.
+    </p>
+      
+        <div class="footnote-number">3</div><p id="barker-footnote" class="footnote">
+        Barker Reservoir is a flood control lake. It is not used for water
+        supply and under normal conditions it is empty.
+    </p>
+      
+        <div class="footnote-number">4</div><p id="caddo-footnote" class="footnote">
+        Caddo Lake straddles the border of Texas and Louisiana, Texas has rights
+        to 50% of Lake Caddo's total conservation capacity. Percent full,
+        conservation storage and conservation capacity are based on the Texas
+        share.
+    </p>
+      
+        <div class="footnote-number">5</div><p id="elephantbutte-footnote" class="footnote">
+        Elephant Butte Lake (located in New Mexico) is governed by the Rio Grande
+        Compact. The Rio Grande Compact is an interstate compact signed in 1938
+        between the states of Colorado, New Mexico and Texas and approved by the
+        U.S. Congress, to equitably apportion the waters of the Rio Grande Basin.
+        Water from the lake supplies irrigation water as well as a portion of El
+        Paso's supply when available.
+    </p>
+      
+        <div class="footnote-number">6</div><p id="meredith-footnote" class="footnote">
+        Lake Meredith is governed by the Canadian River Compact. The States of
+        New Mexico, Texas and Oklahoma are all parties to the compact created by
+        agreement of the three states and the federal government in 1950.
+        According to the compact, New Mexico can hold 200,000 acre-feet in Ute
+        Lake before it has to release water to Texas. Texas also can only hold
+        500,000 acre-feet in Lake Meredith before it has to release water for
+        Oklahoma.
+    </p>
+      
+        <div class="footnote-number">7</div><p id="texoma-footnote" class="footnote">
+        Lake Texoma straddles the border of Texas and Oklahoma, Texas has rights
+        to 50% of Lake Texoma's total conservation capacity. Percent full,
+        conservation storage and conservation capacity are based on the Texas
+        share.
+    </p>
+      
+        <div class="footnote-number">8</div><p id="toledobend-footnote" class="footnote">
+        Toledo Bend Reservoir straddles the border of Texas and Louisiana, Texas
+        has rights to 50% of Toledo Bend Reservoir's total conservation
+        capacity.  Percent full, conservation storage and conservation capacity
+        are based on the Texas share.
+    </p>
+      
+    </div>  
+  
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      main_page_controller();
+    })
+  </script>
+
+        </div>
+      </div>
+      <div class="push"></div>
+    </div>
+
+    <div class="modal fade" id="navigate-to-mesonet" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Confirm Navigation</h4>
+          </div>
+          <div class="modal-body">
+            <div>
+                <p> You are about to navigate away from this website to
+                TexMesonet, TWDB's website for accessing weather data. </p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="dismiss-mesonet-modal" />
+              <label class="form-check-label" for="dismiss-mesonet-modal">
+                Don't show me this message again
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-info" id="confirm_navigate_away_btn">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+      <footer class="footer">
+          <div class="">
+            <div class="col-md-12">
+              This website is a product of the <a href="http://www.twdb.texas.gov">Texas Water Development Board</a>
+            </div>
+          </div>
+          <div class="">
+            <div class="col-md-5">
+              <span class="site-links">
+                <a href="/policies" > Site Policies </a> |
+                <a href="http://www.texas.gov" > Texas Online </a> |
+                <a href="http://www.governor.texas.gov/homeland" > Homeland Security </a> |
+                <a href="https://www.tsl.texas.gov/trail/index.html" > TRAIL </a> |
+                <a href="mailto:waterdatafortexas@twdb.texas.gov" > Contact Us </a>
+              </span>
+            </div>
+          </div>
+      </footer>
+    
+
+
+    
+    <script src="/static/components/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/static/build/dist.js"></script>
+
+  <script type="text/javascript">
+      $('#navigate-to-mesonet').modal({ show: false})
+      var mesonetUrl = "https://www.texmesonet.org/"
+      $('#mesonet-link').on('click', function (e) {
+          e.preventDefault()
+          console.log('link clicked', e.target)
+          var dontShowModal = localStorage.getItem('WDFTHideMesonetModal') === 'true'
+          console.log(dontShowModal)
+          if (dontShowModal)
+
+
+
+                     {
+            window.location.href = mesonetUrl ;
+          } else {
+            $('#navigate-to-mesonet').modal('show')
+          }
+      });
+
+      $('#navigate-to-mesonet').on('show.bs.modal', function(e) {
+        $('#confirm_navigate_away_btn').click(function() {
+          console.log($('#dismiss-mesonet-modal').prop('checked'))
+          if ($('#dismiss-mesonet-modal').prop('checked')) {
+            localStorage.setItem('WDFTHideMesonetModal', 'true')
+          }
+          window.location.href = mesonetUrl;
+        })
+      })
+    </script>
+    
+    <!-- order of leaflet.js and defaultextent.js is important for defaultextent functions to be recognized and work.-->
+    <!-- Leaflet.awesome-markers is a plugin and it is required for L.AwesomeMarkers to work and change circle color inside map icon to change based on flood number. -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="/static/components/moment/moment.js"></script>
+    <script src="/static/components/d3/d3.min.js"></script>
+    <script src="/static/components/lodash/dist/lodash.min.js"></script>
+    <!-- defaultextent is required for Texas state leaflet icon -->
+    <script src="/static/components/leaflet.defaultextent/dist/leaflet.defaultextent.js"></script>
+    <!-- awesome-markers is required for map point icon inner circle color change based on flood-* -->
+    <script src="/static/components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.js"></script>
+  <script type="text/javascript" src="/reservoirs/static/build/dist.js"></script>
+
+
+  </body>
+</html>

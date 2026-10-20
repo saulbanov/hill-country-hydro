@@ -1,0 +1,64 @@
+{
+ "version": "regional-display/v1",
+ "stroke": {
+  "half_length_m": 500,
+  "rule": "a stroke of at most 500 m each side of the gauge, along the one saved channel line the gauge is associated with; it locates a reading and is not a measured or inferred reach",
+  "from": "the Austin creek prototype's gauge-location stroke (data/model/creek-display-policy.json)"
+ },
+ "contrast": {
+  "value": "largest saved instantaneous reading in the storm window minus the same gauge's seasonal median daily mean",
+  "note": "an instantaneous reading beside a daily reference: it shows flow above a usual day and is not a rank of the peak"
+ },
+ "bands": [
+  {
+   "id": 0,
+   "min_excess_cfs": null,
+   "label": "at or below a usual day",
+   "width_px": 3,
+   "color": "#8fa7a8"
+  },
+  {
+   "id": 1,
+   "min_excess_cfs": 1,
+   "label": "1\u201310 cfs above",
+   "width_px": 5,
+   "color": "#7fb0cf"
+  },
+  {
+   "id": 2,
+   "min_excess_cfs": 10,
+   "label": "10\u2013100",
+   "width_px": 7,
+   "color": "#4f8fc0"
+  },
+  {
+   "id": 3,
+   "min_excess_cfs": 100,
+   "label": "100\u20131,000",
+   "width_px": 9,
+   "color": "#3566a8"
+  },
+  {
+   "id": 4,
+   "min_excess_cfs": 1000,
+   "label": "1,000\u201310,000",
+   "width_px": 11,
+   "color": "#3a3f93"
+  },
+  {
+   "id": 5,
+   "min_excess_cfs": 10000,
+   "label": "10,000 or more",
+   "width_px": 13,
+   "color": "#4a2775"
+  }
+ ],
+ "band_basis": "one band per factor of ten, because the creeks and rivers on this page span five orders of magnitude; the Austin page's linear bands stop at 500 cfs",
+ "unavailable": {
+  "label": "no comparison",
+  "reason": "no reading in the window or no qualifying daily reference",
+  "width_px": 3,
+  "dash": "4 5",
+  "color": "#7a8d8a"
+ }
+}

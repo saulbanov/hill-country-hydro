@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "USGS-08158813",
+        "agency_code": "USGS",
+        "agency_name": "U.S. Geological Survey",
+        "monitoring_location_number": "08158813",
+        "monitoring_location_name": "Bear Ck at Spillar Ranch Rd nr Manchaca, TX",
+        "district_code": "48",
+        "country_code": "US",
+        "country_name": "United States of America",
+        "state_code": "48",
+        "state_name": "Texas",
+        "county_code": "209",
+        "county_name": "Hays County",
+        "minor_civil_division_code": "92065",
+        "site_type_code": "ST",
+        "site_type": "Stream",
+        "hydrologic_unit_code": "120902050406",
+        "basin_code": "14",
+        "altitude": 793.31,
+        "altitude_accuracy": 0.21,
+        "altitude_method_code": "X",
+        "altitude_method_name": "GNSS2 - Level 2 Quality Survey Grade Global Navigation Satellite System",
+        "vertical_datum": "NAVD88",
+        "vertical_datum_name": "North American Vertical Datum of 1988",
+        "horizontal_positional_accuracy_code": "H",
+        "horizontal_positional_accuracy": "Accurate to + or - .01 sec (Differentially-Corrected GPS).",
+        "horizontal_position_method_code": "G",
+        "horizontal_position_method_name": "Global positioning system (GPS), Standard Positioning Service (SPS) or Precise Positioning Service (PPS)",
+        "original_horizontal_datum": "NAD83",
+        "original_horizontal_datum_name": "North American Datum of 1983",
+        "drainage_area": 20.4,
+        "contributing_drainage_area": 20.4,
+        "time_zone_abbreviation": "CST",
+        "uses_daylight_savings": "Y",
+        "construction_date": null,
+        "aquifer_code": null,
+        "national_aquifer_code": null,
+        "aquifer_type_code": null,
+        "well_constructed_depth": null,
+        "hole_constructed_depth": null,
+        "depth_source_code": null,
+        "revision_note": null,
+        "revision_created": null,
+        "revision_modified": null
+      },
+      "id": "USGS-08158813",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.9070194444444,
+          30.1636611111111
+        ]
+      }
+    }
+  ],
+  "numberReturned": 1,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08158813&limit=1"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=jsonld&id=USGS-08158813&limit=1"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=html&id=USGS-08158813&limit=1"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=csv&id=USGS-08158813&limit=1"
+    },
+    {
+      "type": "application/geo+json",
+      "rel": "next",
+      "title": "Items (next)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&offset=1&id=USGS-08158813&limit=1"
+    },
+    {
+      "type": "application/json",
+      "title": "Monitoring locations",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations"
+    }
+  ],
+  "timeStamp": "2026-10-01T15:11:10.378360Z"
+}

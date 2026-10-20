@@ -1,0 +1,723 @@
+{
+  "version": "v1",
+  "purpose": "Versionable provenance and coverage index for local raw USGS history excluded from Git.",
+  "station_id": "USGS-08169000",
+  "raw_payload_location": "data/raw/usgs-history/08169000/",
+  "completeness_rule": "A window is complete only if HTTP 200, feature_count < requested limit, and next_link is null.",
+  "windows": [
+    {
+      "start": "2021-01-01T00:00:00+00:00",
+      "end_exclusive": "2021-01-29T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5370,
+      "next_link": null,
+      "sha256": "7619f6ec20b21ec0a66820dc00826601d9898ac2846b831b833ab98f9626efef",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-01-01T00%3A00%3A00Z%2F2021-01-29T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:33.500891+00:00"
+    },
+    {
+      "start": "2021-01-29T00:00:00+00:00",
+      "end_exclusive": "2021-02-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "28879b7cd43b493ee55160dadb4ae27e28e4f632588e606570ce9e376bac6f00",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-01-29T00%3A00%3A00Z%2F2021-02-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:39.216522+00:00"
+    },
+    {
+      "start": "2021-02-26T00:00:00+00:00",
+      "end_exclusive": "2021-03-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "29378e04cf9fe5aba4a238cd7bebc45d952964545597c94e770372e1a0f5687a",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-02-26T00%3A00%3A00Z%2F2021-03-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:47.963826+00:00"
+    },
+    {
+      "start": "2021-03-26T00:00:00+00:00",
+      "end_exclusive": "2021-04-23T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "547086d435c2025f924be036664c8e760006a4edbb61c2f1480df1f919c8f916",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-03-26T00%3A00%3A00Z%2F2021-04-23T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:51.308340+00:00"
+    },
+    {
+      "start": "2021-04-23T00:00:00+00:00",
+      "end_exclusive": "2021-05-21T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5368,
+      "next_link": null,
+      "sha256": "e54894e57c5707a7d26e1ee3b233482c690bb2c25fe3597403132c41fbca98a2",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-04-23T00%3A00%3A00Z%2F2021-05-21T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:54.568855+00:00"
+    },
+    {
+      "start": "2021-05-21T00:00:00+00:00",
+      "end_exclusive": "2021-06-18T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5281,
+      "next_link": null,
+      "sha256": "7cec731316496927a7ad08419770780bb2642dd207046717d1952dcc5e90d07c",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-05-21T00%3A00%3A00Z%2F2021-06-18T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:57.117149+00:00"
+    },
+    {
+      "start": "2021-06-18T00:00:00+00:00",
+      "end_exclusive": "2021-07-16T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "e2bbcfcfd665e369610dfd19b088e3e22ff94f0a4c3051163031ed03aecd3593",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-06-18T00%3A00%3A00Z%2F2021-07-16T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:00.594152+00:00"
+    },
+    {
+      "start": "2021-07-16T00:00:00+00:00",
+      "end_exclusive": "2021-08-13T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "412b54f9f1cf7eaddbb2027b72c57dc1d8c043595f3955c52a2a348209f5d30b",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-07-16T00%3A00%3A00Z%2F2021-08-13T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:06.497845+00:00"
+    },
+    {
+      "start": "2021-08-13T00:00:00+00:00",
+      "end_exclusive": "2021-09-10T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "c5dc03680cb4319c0d53a02d82b1d9bded49a301c7374a2e50465fdcb61c84ff",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-08-13T00%3A00%3A00Z%2F2021-09-10T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:14.309272+00:00"
+    },
+    {
+      "start": "2021-09-10T00:00:00+00:00",
+      "end_exclusive": "2021-10-08T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "e76b66395633d2609d35d3bb7e2da365e6145e12fdead2d8a4ad2814dc7f0b41",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-09-10T00%3A00%3A00Z%2F2021-10-08T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:27.520299+00:00"
+    },
+    {
+      "start": "2021-10-08T00:00:00+00:00",
+      "end_exclusive": "2021-11-05T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "44efb250c38948501a502c82fd4080be68b4602904a37eb2d1aa3548ef75a014",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-10-08T00%3A00%3A00Z%2F2021-11-05T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:36.298523+00:00"
+    },
+    {
+      "start": "2021-11-05T00:00:00+00:00",
+      "end_exclusive": "2021-12-03T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5374,
+      "next_link": null,
+      "sha256": "1758e8b410af2da79e8e6ae051aa09de6b1fef2f1617cd226a4303d7dd3b8bc2",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-11-05T00%3A00%3A00Z%2F2021-12-03T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:47.387248+00:00"
+    },
+    {
+      "start": "2021-12-03T00:00:00+00:00",
+      "end_exclusive": "2021-12-31T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "e4886deaff5a2acc53a0a0c95f7aaae90c6a2c6cc062611cd7399ad563050a0f",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-12-03T00%3A00%3A00Z%2F2021-12-31T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:55.709948+00:00"
+    },
+    {
+      "start": "2021-12-31T00:00:00+00:00",
+      "end_exclusive": "2022-01-01T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 194,
+      "next_link": null,
+      "sha256": "b99a696521c07b64aa947ab7999eb9e382b8fc12e41b922ec5720ee8ac222173",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2021-12-31T00%3A00%3A00Z%2F2022-01-01T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:12:57.070038+00:00"
+    },
+    {
+      "start": "2022-01-01T00:00:00+00:00",
+      "end_exclusive": "2022-01-29T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "7b820e5560b7a0b59914501e71883771b66d3144b76d85686ec97be0997ffe7e",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-01-01T00%3A00%3A00Z%2F2022-01-29T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:13:47.227853+00:00"
+    },
+    {
+      "start": "2022-01-29T00:00:00+00:00",
+      "end_exclusive": "2022-02-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "a0d433d9561d9588bcd6809f6e87ed5e49962fa463502ef0fd4809e2419ab436",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-01-29T00%3A00%3A00Z%2F2022-02-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:13:54.063948+00:00"
+    },
+    {
+      "start": "2022-02-26T00:00:00+00:00",
+      "end_exclusive": "2022-03-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5374,
+      "next_link": null,
+      "sha256": "482da4307a6bb67a75c34d491c7a12919af47cab46da0696ec6daa2a73cad9c2",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-02-26T00%3A00%3A00Z%2F2022-03-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:13:57.346642+00:00"
+    },
+    {
+      "start": "2022-03-26T00:00:00+00:00",
+      "end_exclusive": "2022-04-23T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "028799e8d9432c96cc47f8e5db9c6e2fc1760efa142e345ad747021b2e300ed9",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-03-26T00%3A00%3A00Z%2F2022-04-23T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:01.059680+00:00"
+    },
+    {
+      "start": "2022-04-23T00:00:00+00:00",
+      "end_exclusive": "2022-05-21T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "c5c6b3001539da40102559f5ef9d5ae83c96a7b700ee0c1759c396003b8ccba2",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-04-23T00%3A00%3A00Z%2F2022-05-21T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:05.814584+00:00"
+    },
+    {
+      "start": "2022-05-21T00:00:00+00:00",
+      "end_exclusive": "2022-06-18T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "9ba2aa1a8911b953112503cb042d6ad6153c3152fa6333f3af0b6fe80e97c666",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-05-21T00%3A00%3A00Z%2F2022-06-18T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:12.568885+00:00"
+    },
+    {
+      "start": "2022-06-18T00:00:00+00:00",
+      "end_exclusive": "2022-07-16T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "ad8adc329ad6806c512450b6c7d0d705a6d2f32c0e247648bc63e02be2ee1ace",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-06-18T00%3A00%3A00Z%2F2022-07-16T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:19.975839+00:00"
+    },
+    {
+      "start": "2022-07-16T00:00:00+00:00",
+      "end_exclusive": "2022-08-13T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "60a9fbf6150ea295bdc96f6e9e5745fb1003b177abbb88bcb3583e8064e33c67",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-07-16T00%3A00%3A00Z%2F2022-08-13T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:26.304029+00:00"
+    },
+    {
+      "start": "2022-08-13T00:00:00+00:00",
+      "end_exclusive": "2022-09-10T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "e4c59eb2213fba762adbca21b4cb7570c5b1b831bcac008f9d40c045045d6085",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-08-13T00%3A00%3A00Z%2F2022-09-10T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:31.113927+00:00"
+    },
+    {
+      "start": "2022-09-10T00:00:00+00:00",
+      "end_exclusive": "2022-10-08T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5376,
+      "next_link": null,
+      "sha256": "a5f2cc9f334f7145c86be6662ad4c8fc6fea0a5d920fede76f9ed7f30084b218",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-09-10T00%3A00%3A00Z%2F2022-10-08T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:33.739256+00:00"
+    },
+    {
+      "start": "2022-10-08T00:00:00+00:00",
+      "end_exclusive": "2022-11-05T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5372,
+      "next_link": null,
+      "sha256": "b0b57e34cca1e233ba1dc3d7158ceec90fa1ea42444beacfa00e98b176b0673b",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-10-08T00%3A00%3A00Z%2F2022-11-05T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:36.909858+00:00"
+    },
+    {
+      "start": "2022-11-05T00:00:00+00:00",
+      "end_exclusive": "2022-12-03T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "29942b418c1403552daca1ad38a0d0cda654df2996eac89f72ff14c70cfd60fa",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-11-05T00%3A00%3A00Z%2F2022-12-03T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:39.468398+00:00"
+    },
+    {
+      "start": "2022-12-03T00:00:00+00:00",
+      "end_exclusive": "2022-12-31T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "45b41063b9b9b08edd2865818331213083757ac28ad1d03159880d8da5c806a9",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-12-03T00%3A00%3A00Z%2F2022-12-31T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:42.839103+00:00"
+    },
+    {
+      "start": "2022-12-31T00:00:00+00:00",
+      "end_exclusive": "2023-01-01T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 194,
+      "next_link": null,
+      "sha256": "9eaf7f2dd9a224c9f0ca4b28185215aebf22160a08ef84b0e00f523400e0e462",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2022-12-31T00%3A00%3A00Z%2F2023-01-01T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:14:43.493712+00:00"
+    },
+    {
+      "start": "2023-01-01T00:00:00+00:00",
+      "end_exclusive": "2023-01-29T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "bd7a846b0a06edc4eb01f81b20867bb5643c66d72b252121e528a6b1220964c5",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-01-01T00%3A00%3A00Z%2F2023-01-29T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:14.698477+00:00"
+    },
+    {
+      "start": "2023-01-29T00:00:00+00:00",
+      "end_exclusive": "2023-02-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "a6bdc07b48ca6f3d4fe0baeed9c1eeca231d96b0b5bbeceba0cde5d76c0a5a62",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-01-29T00%3A00%3A00Z%2F2023-02-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:18.533196+00:00"
+    },
+    {
+      "start": "2023-02-26T00:00:00+00:00",
+      "end_exclusive": "2023-03-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5372,
+      "next_link": null,
+      "sha256": "7bfac50b9eff744deaf1877dbcc70707d9c06568b8e7bc66ae5e593daec5624d",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-02-26T00%3A00%3A00Z%2F2023-03-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:25.547832+00:00"
+    },
+    {
+      "start": "2023-03-26T00:00:00+00:00",
+      "end_exclusive": "2023-04-23T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5268,
+      "next_link": null,
+      "sha256": "7aaf050cd46ba25dfd21dcd0e00c56e74ab5aa609915dd715584dce202b31deb",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-03-26T00%3A00%3A00Z%2F2023-04-23T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:29.558475+00:00"
+    },
+    {
+      "start": "2023-04-23T00:00:00+00:00",
+      "end_exclusive": "2023-05-21T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5026,
+      "next_link": null,
+      "sha256": "54a924cb9c2bc0073ff857bffa043c2303cc7ba32fc56f97cc0c14cdf3833600",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-04-23T00%3A00%3A00Z%2F2023-05-21T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:34.606888+00:00"
+    },
+    {
+      "start": "2023-05-21T00:00:00+00:00",
+      "end_exclusive": "2023-06-18T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5042,
+      "next_link": null,
+      "sha256": "b2e871b00b4e359b7c64858cd714999dc274d50287a934efa99023533a4a920d",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-05-21T00%3A00%3A00Z%2F2023-06-18T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:38.673412+00:00"
+    },
+    {
+      "start": "2023-06-18T00:00:00+00:00",
+      "end_exclusive": "2023-07-16T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4726,
+      "next_link": null,
+      "sha256": "bc2c74d6bf0bcdba6b3c6bd5d3e376d8330e1861d08e35d18e61a7cc40e0b5df",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-06-18T00%3A00%3A00Z%2F2023-07-16T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:41.451597+00:00"
+    },
+    {
+      "start": "2023-07-16T00:00:00+00:00",
+      "end_exclusive": "2023-08-13T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5048,
+      "next_link": null,
+      "sha256": "115d8785fb8228d1b93fb86c66e1c00ae69ac787a75af1e0bb76160d003c1c20",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-07-16T00%3A00%3A00Z%2F2023-08-13T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:47.130177+00:00"
+    },
+    {
+      "start": "2023-08-13T00:00:00+00:00",
+      "end_exclusive": "2023-09-10T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5334,
+      "next_link": null,
+      "sha256": "7671717e904721e00db7c9bf4e358c6ac82fa4c45234576b8b757af0b9d4c41e",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-08-13T00%3A00%3A00Z%2F2023-09-10T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:53.555030+00:00"
+    },
+    {
+      "start": "2023-09-10T00:00:00+00:00",
+      "end_exclusive": "2023-10-08T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5150,
+      "next_link": null,
+      "sha256": "4233e6e9c0edee9a62080ee7260e0c89d59d218b78608ae2e8cab50cf64ee645",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-09-10T00%3A00%3A00Z%2F2023-10-08T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:15:59.453802+00:00"
+    },
+    {
+      "start": "2023-10-08T00:00:00+00:00",
+      "end_exclusive": "2023-11-05T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4530,
+      "next_link": null,
+      "sha256": "1abafc03ac97bc6b6d2560bdd7416f2363fb90989b652c90088d38d994c02382",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-10-08T00%3A00%3A00Z%2F2023-11-05T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:02.068609+00:00"
+    },
+    {
+      "start": "2023-11-05T00:00:00+00:00",
+      "end_exclusive": "2023-12-03T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4756,
+      "next_link": null,
+      "sha256": "7b249668a0102c7f03d9fe9345cc7dd1478272c9bc96e07e4199233c7f922d34",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-11-05T00%3A00%3A00Z%2F2023-12-03T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:04.590548+00:00"
+    },
+    {
+      "start": "2023-12-03T00:00:00+00:00",
+      "end_exclusive": "2023-12-31T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4820,
+      "next_link": null,
+      "sha256": "18785ee216163fa1ae8f9f0289985e3e719180e67084363edaee96f0409e7298",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-12-03T00%3A00%3A00Z%2F2023-12-31T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:11.550849+00:00"
+    },
+    {
+      "start": "2023-12-31T00:00:00+00:00",
+      "end_exclusive": "2024-01-01T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 180,
+      "next_link": null,
+      "sha256": "290e03367f4df1c7261ee4e83c29593bb2b3ad7245a6945da649d38a033da878",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2023-12-31T00%3A00%3A00Z%2F2024-01-01T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:12.354304+00:00"
+    },
+    {
+      "start": "2024-01-01T00:00:00+00:00",
+      "end_exclusive": "2024-01-29T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5104,
+      "next_link": null,
+      "sha256": "7f91814bdad920a0b31de42148f3f83c0f7bb5e85dc86c2ca761f53eebdf0048",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-01-01T00%3A00%3A00Z%2F2024-01-29T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:42.444044+00:00"
+    },
+    {
+      "start": "2024-01-29T00:00:00+00:00",
+      "end_exclusive": "2024-02-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4964,
+      "next_link": null,
+      "sha256": "a9c883643967deae2c2223d637f08e4ed1b43c43972aed8e40876d73317fcc37",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-01-29T00%3A00%3A00Z%2F2024-02-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:45.010868+00:00"
+    },
+    {
+      "start": "2024-02-26T00:00:00+00:00",
+      "end_exclusive": "2024-03-25T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4734,
+      "next_link": null,
+      "sha256": "052aebca5a6ef3d424887cfc274132331f596839cd7fd5d7ba00144d92d8c8fc",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-02-26T00%3A00%3A00Z%2F2024-03-25T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:48.776959+00:00"
+    },
+    {
+      "start": "2024-03-25T00:00:00+00:00",
+      "end_exclusive": "2024-04-22T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4164,
+      "next_link": null,
+      "sha256": "5361e92005da550d5c0e6f07038a1e847e4c0d8cade4fd3bec1ad89e83c192e7",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-03-25T00%3A00%3A00Z%2F2024-04-22T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:51.421213+00:00"
+    },
+    {
+      "start": "2024-04-22T00:00:00+00:00",
+      "end_exclusive": "2024-05-20T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4618,
+      "next_link": null,
+      "sha256": "a06cf7004f7ce20c5034ffd1fb1f0199b6b838986384fc8faf480ce1c9ce9b83",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-04-22T00%3A00%3A00Z%2F2024-05-20T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:54.457484+00:00"
+    },
+    {
+      "start": "2024-05-20T00:00:00+00:00",
+      "end_exclusive": "2024-06-17T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4964,
+      "next_link": null,
+      "sha256": "79fe3a820dba2f8001d004345850db048eb8e6e156d801d19b8fc37ea8adcc1e",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-05-20T00%3A00%3A00Z%2F2024-06-17T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:57.005327+00:00"
+    },
+    {
+      "start": "2024-06-17T00:00:00+00:00",
+      "end_exclusive": "2024-07-15T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4744,
+      "next_link": null,
+      "sha256": "c0d2e3a0b8c760fef72a8873ff0363af8d12892af193d054a4c78619683d6278",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-06-17T00%3A00%3A00Z%2F2024-07-15T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:16:59.504421+00:00"
+    },
+    {
+      "start": "2024-07-15T00:00:00+00:00",
+      "end_exclusive": "2024-08-12T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 4998,
+      "next_link": null,
+      "sha256": "14b40aa26c28a245dbd8cb2928131973d03b4dc1715e32e4c0ce405ac0621e01",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-07-15T00%3A00%3A00Z%2F2024-08-12T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:01.864594+00:00"
+    },
+    {
+      "start": "2024-08-12T00:00:00+00:00",
+      "end_exclusive": "2024-09-09T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "4a30c6c7bc75fa3eff2b0d7a5872f230ca014729678293efaaaf2a64407672c8",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-08-12T00%3A00%3A00Z%2F2024-09-09T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:04.194496+00:00"
+    },
+    {
+      "start": "2024-09-09T00:00:00+00:00",
+      "end_exclusive": "2024-10-07T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "bcd85923e60ef67cf6e61b80fe402647938f4dcbed641093d9aefdfdb721eeb4",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-09-09T00%3A00%3A00Z%2F2024-10-07T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:06.843370+00:00"
+    },
+    {
+      "start": "2024-10-07T00:00:00+00:00",
+      "end_exclusive": "2024-11-04T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "a8f430bf34a93bae052439a7bbacba986e5ebbb28bc7264e36a19c00f7b701e3",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-10-07T00%3A00%3A00Z%2F2024-11-04T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:11.353901+00:00"
+    },
+    {
+      "start": "2024-11-04T00:00:00+00:00",
+      "end_exclusive": "2024-12-02T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5376,
+      "next_link": null,
+      "sha256": "ff6aa696fc324cf44dc913a67485bd6500dc2bcda5e2f20ef0f80f86557ca95b",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-11-04T00%3A00%3A00Z%2F2024-12-02T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:14.187149+00:00"
+    },
+    {
+      "start": "2024-12-02T00:00:00+00:00",
+      "end_exclusive": "2024-12-30T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "98294c2f24f06150ba3b63d320ee71311b44144d181f8a8e2b216f19782be802",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-12-02T00%3A00%3A00Z%2F2024-12-30T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:16.713632+00:00"
+    },
+    {
+      "start": "2024-12-30T00:00:00+00:00",
+      "end_exclusive": "2025-01-01T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 386,
+      "next_link": null,
+      "sha256": "5baabea170fa29c79ddd3443df5d7a030868060ab45ad7d6b8ccdbdf4fb8d69b",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2024-12-30T00%3A00%3A00Z%2F2025-01-01T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:17:17.435353+00:00"
+    },
+    {
+      "start": "2025-01-01T00:00:00+00:00",
+      "end_exclusive": "2025-01-29T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "c81f435aae79016b6e7e09efc73605211f7f934e940d3487def5150d13a0d628",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-01-01T00%3A00%3A00Z%2F2025-01-29T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:22:28.234844+00:00"
+    },
+    {
+      "start": "2025-01-29T00:00:00+00:00",
+      "end_exclusive": "2025-02-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "b88b18755b48808b21cdad4eee1ecbd8bd2253bb5a229125eeffba3c6c2e592e",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-01-29T00%3A00%3A00Z%2F2025-02-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:22:40.440709+00:00"
+    },
+    {
+      "start": "2025-02-26T00:00:00+00:00",
+      "end_exclusive": "2025-03-26T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "b0382ced3523a0eebdba8239a3b856f648cbb34fd864c8a15c62ea3fc7f21113",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-02-26T00%3A00%3A00Z%2F2025-03-26T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:22:46.593152+00:00"
+    },
+    {
+      "start": "2025-03-26T00:00:00+00:00",
+      "end_exclusive": "2025-04-23T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "80c32503f7e0917ddedee3255f4650778c42d5355a9fc171177fca9c42ccd82f",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-03-26T00%3A00%3A00Z%2F2025-04-23T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:22:53.593541+00:00"
+    },
+    {
+      "start": "2025-04-23T00:00:00+00:00",
+      "end_exclusive": "2025-05-21T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "66ea4cfd62caa29696f24a09a3ba738e447fc9d0807481e2adcfe10bbbe8ff81",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-04-23T00%3A00%3A00Z%2F2025-05-21T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:22:59.914505+00:00"
+    },
+    {
+      "start": "2025-05-21T00:00:00+00:00",
+      "end_exclusive": "2025-06-18T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "51369bda945f8ce6fa825896e08452858bf0f781522eeee8eadb7ccb472c8ba5",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-05-21T00%3A00%3A00Z%2F2025-06-18T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:07.513436+00:00"
+    },
+    {
+      "start": "2025-06-18T00:00:00+00:00",
+      "end_exclusive": "2025-07-16T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5329,
+      "next_link": null,
+      "sha256": "0d9630cda77a62cde8e3bd1e7841abec522a9cf12337038dcadb84cc4ca1b7ae",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-06-18T00%3A00%3A00Z%2F2025-07-16T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:12.886356+00:00"
+    },
+    {
+      "start": "2025-07-16T00:00:00+00:00",
+      "end_exclusive": "2025-08-13T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "6e192bc2399fe0dd5539e12107889d5157737d8d088693290018950b80da79a9",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-07-16T00%3A00%3A00Z%2F2025-08-13T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:17.816565+00:00"
+    },
+    {
+      "start": "2025-08-13T00:00:00+00:00",
+      "end_exclusive": "2025-09-01T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 3650,
+      "next_link": null,
+      "sha256": "78ea29f6088e51d05bec9a4559ca0a9e10b5e3668fb7a7ff2598df47f1b43ed2",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-08-13T00%3A00%3A00Z%2F2025-09-01T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:20.560128+00:00"
+    },
+    {
+      "start": "2025-09-01T00:00:00+00:00",
+      "end_exclusive": "2025-09-29T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5376,
+      "next_link": null,
+      "sha256": "68a92f344d490bfc9ab13bfe34545bc95233dc58d87aacf535d8c689243c4f89",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-09-01T00%3A00%3A00Z%2F2025-09-29T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:11:12.022068+00:00"
+    },
+    {
+      "start": "2025-09-29T00:00:00+00:00",
+      "end_exclusive": "2025-10-27T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "b33b0228bdd146f432e10a365fa91fb5a0154eb65b560ca6ce0da5cb482aab8d",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-09-29T00%3A00%3A00Z%2F2025-10-27T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:35.218858+00:00"
+    },
+    {
+      "start": "2025-10-27T00:00:00+00:00",
+      "end_exclusive": "2025-11-24T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "115f27cf40a35f90e0e69056fcac135b00b7b212e6ec3048040086313d1dd679",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-10-27T00%3A00%3A00Z%2F2025-11-24T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:39.669604+00:00"
+    },
+    {
+      "start": "2025-11-24T00:00:00+00:00",
+      "end_exclusive": "2025-12-22T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 5378,
+      "next_link": null,
+      "sha256": "e26378421d6da9d88474ff3ec41834b1fba5b96e39b7eea746ce081682b9da03",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-11-24T00%3A00%3A00Z%2F2025-12-22T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:42.119132+00:00"
+    },
+    {
+      "start": "2025-12-22T00:00:00+00:00",
+      "end_exclusive": "2026-01-01T00:00:00+00:00",
+      "status": 200,
+      "feature_count": 1922,
+      "next_link": null,
+      "sha256": "ab340b4bd49799f47d236473e5ae3d0cfcbef37302cab43cce322bd2bdba5e08",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08169000&datetime=2025-12-22T00%3A00%3A00Z%2F2026-01-01T00%3A00%3A00Z&limit=10000",
+      "retrieved_at": "2026-09-16T02:23:43.270555+00:00"
+    }
+  ],
+  "summary": {
+    "window_count": 70,
+    "complete_window_count": 70,
+    "first_window_start": "2021-01-01T00:00:00+00:00",
+    "last_window_end_exclusive": "2026-01-01T00:00:00+00:00",
+    "window_gap_count": 0,
+    "window_gaps": [],
+    "target_window": {
+      "start_inclusive": "2021-01-01T00:00:00+00:00",
+      "end_exclusive": "2026-01-01T00:00:00+00:00",
+      "complete_non_overlapping_raw_coverage": true
+    },
+    "warning": "Complete raw-request coverage does not establish a gap-free measurement series; inspect the normalized replay gap report."
+  }
+}

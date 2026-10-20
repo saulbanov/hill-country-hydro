@@ -1,0 +1,17 @@
+{
+  "source": "USGS OGC API",
+  "kind": "daily-00060-00003",
+  "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08105700&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
+  "station_id": "USGS-08105700",
+  "retrieved_at": "2026-10-01T15:10:32.212970+00:00",
+  "status": 200,
+  "error": null,
+  "sha256": "85b4915f928a39604edb9c475fb800e38630d83eaac4316935333dea1c2ecab3",
+  "bytes": 12136577,
+  "feature_count": 22357,
+  "next_link": null,
+  "parse_error": null,
+  "raw_path": "data/raw/usgs-daily/08105700/20261001T151032212970Z-daily-00060-00003.json",
+  "capture_path": "data/captures/usgs-daily/08105700/20261001T151032212970Z-daily-00060-00003.json.gz",
+  "completeness": "complete only when status is 200, feature_count is below the requested limit, and next_link is null"
+}

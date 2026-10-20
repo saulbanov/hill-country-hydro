@@ -1,0 +1,1378 @@
+{
+  "station_id": "USGS-08158700",
+  "source_csv": "data/history/08158700-00060-daily-mean.csv",
+  "record": {
+    "first_day": "1979-07-01",
+    "last_day": "2026-09-30",
+    "numeric_days": 17259,
+    "zero_days": 2146,
+    "median_daily_mean": 5.97
+  },
+  "event_definition": {
+    "high_threshold": 186.0,
+    "low_threshold": 37.2,
+    "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
+    "low_rule": "P75 of all numeric daily means at this station",
+    "unit": "ft^3/s daily mean",
+    "method": "event starts on the first day >= high threshold and ends on the last day before a day < low threshold, a calendar gap, or a non-numeric value",
+    "percentile_method": "nearest-rank"
+  },
+  "events": [
+    {
+      "start": "1979-07-27",
+      "end": "1979-07-28",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "1979-07-27",
+      "peak_value": 216.0,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 129.0,
+      "has_provisional": false,
+      "water_year": 1979,
+      "peak_month": 7,
+      "antecedent_30_day": {
+        "days_available": 26,
+        "mean": 12.846
+      }
+    },
+    {
+      "start": "1980-05-14",
+      "end": "1980-06-08",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 26,
+      "peak_date": "1980-05-21",
+      "peak_value": 255.0,
+      "rise_days": 8,
+      "recession_days": 18,
+      "mean_value": 96.692,
+      "has_provisional": false,
+      "water_year": 1980,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 16.2
+      }
+    },
+    {
+      "start": "1980-10-16",
+      "end": "1980-10-17",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "1980-10-16",
+      "peak_value": 198.0,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 117.95,
+      "has_provisional": false,
+      "water_year": 1981,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 18.63
+      }
+    },
+    {
+      "start": "1981-03-04",
+      "end": "1981-04-20",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 48,
+      "peak_date": "1981-03-04",
+      "peak_value": 765.0,
+      "rise_days": 1,
+      "recession_days": 47,
+      "mean_value": 96.792,
+      "has_provisional": false,
+      "water_year": 1981,
+      "peak_month": 3,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 33.7
+      }
+    },
+    {
+      "start": "1981-06-11",
+      "end": "1981-07-24",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 44,
+      "peak_date": "1981-06-11",
+      "peak_value": 1990.0,
+      "rise_days": 1,
+      "recession_days": 43,
+      "mean_value": 342.136,
+      "has_provisional": false,
+      "water_year": 1981,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 44.367
+      }
+    },
+    {
+      "start": "1981-10-06",
+      "end": "1981-10-14",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 9,
+      "peak_date": "1981-10-06",
+      "peak_value": 1150.0,
+      "rise_days": 1,
+      "recession_days": 8,
+      "mean_value": 185.333,
+      "has_provisional": false,
+      "water_year": 1982,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 8.054
+      }
+    },
+    {
+      "start": "1982-05-13",
+      "end": "1982-06-01",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 20,
+      "peak_date": "1982-05-13",
+      "peak_value": 1960.0,
+      "rise_days": 1,
+      "recession_days": 19,
+      "mean_value": 178.25,
+      "has_provisional": false,
+      "water_year": 1982,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 11.18
+      }
+    },
+    {
+      "start": "1983-03-26",
+      "end": "1983-04-30",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 36,
+      "peak_date": "1983-03-26",
+      "peak_value": 223.0,
+      "rise_days": 1,
+      "recession_days": 35,
+      "mean_value": 80.028,
+      "has_provisional": false,
+      "water_year": 1983,
+      "peak_month": 3,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 77.6
+      }
+    },
+    {
+      "start": "1983-05-21",
+      "end": "1983-06-02",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 13,
+      "peak_date": "1983-05-21",
+      "peak_value": 265.0,
+      "rise_days": 1,
+      "recession_days": 12,
+      "mean_value": 72.154,
+      "has_provisional": false,
+      "water_year": 1983,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 35.1
+      }
+    },
+    {
+      "start": "1984-10-29",
+      "end": "1984-11-01",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 4,
+      "peak_date": "1984-10-29",
+      "peak_value": 206.0,
+      "rise_days": 1,
+      "recession_days": 3,
+      "mean_value": 86.5,
+      "has_provisional": false,
+      "water_year": 1985,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 26.74
+      }
+    },
+    {
+      "start": "1984-12-16",
+      "end": "1985-05-01",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 137,
+      "peak_date": "1985-02-23",
+      "peak_value": 1710.0,
+      "rise_days": 70,
+      "recession_days": 67,
+      "mean_value": 147.832,
+      "has_provisional": false,
+      "water_year": 1985,
+      "peak_month": 2,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 19.7
+      }
+    },
+    {
+      "start": "1985-06-06",
+      "end": "1985-07-17",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 42,
+      "peak_date": "1985-06-06",
+      "peak_value": 2850.0,
+      "rise_days": 1,
+      "recession_days": 41,
+      "mean_value": 159.643,
+      "has_provisional": false,
+      "water_year": 1985,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 18.883
+      }
+    },
+    {
+      "start": "1985-11-27",
+      "end": "1986-01-13",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 48,
+      "peak_date": "1985-11-27",
+      "peak_value": 787.0,
+      "rise_days": 1,
+      "recession_days": 47,
+      "mean_value": 150.488,
+      "has_provisional": false,
+      "water_year": 1986,
+      "peak_month": 11,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 35.987
+      }
+    },
+    {
+      "start": "1986-02-03",
+      "end": "1986-03-10",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 36,
+      "peak_date": "1986-02-03",
+      "peak_value": 223.0,
+      "rise_days": 1,
+      "recession_days": 35,
+      "mean_value": 72.444,
+      "has_provisional": false,
+      "water_year": 1986,
+      "peak_month": 2,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 32.17
+      }
+    },
+    {
+      "start": "1986-05-09",
+      "end": "1986-07-06",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 59,
+      "peak_date": "1986-05-10",
+      "peak_value": 1500.0,
+      "rise_days": 2,
+      "recession_days": 57,
+      "mean_value": 144.902,
+      "has_provisional": false,
+      "water_year": 1986,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 13.599
+      }
+    },
+    {
+      "start": "1986-10-12",
+      "end": "1986-10-17",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 6,
+      "peak_date": "1986-10-12",
+      "peak_value": 394.0,
+      "rise_days": 1,
+      "recession_days": 5,
+      "mean_value": 128.833,
+      "has_provisional": false,
+      "water_year": 1987,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 4.322
+      }
+    },
+    {
+      "start": "1986-10-23",
+      "end": "1987-04-24",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 184,
+      "peak_date": "1986-12-22",
+      "peak_value": 1860.0,
+      "rise_days": 61,
+      "recession_days": 123,
+      "mean_value": 149.701,
+      "has_provisional": false,
+      "water_year": 1987,
+      "peak_month": 12,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 33.426
+      }
+    },
+    {
+      "start": "1987-05-29",
+      "end": "1987-08-02",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 66,
+      "peak_date": "1987-06-13",
+      "peak_value": 2610.0,
+      "rise_days": 16,
+      "recession_days": 50,
+      "mean_value": 419.273,
+      "has_provisional": false,
+      "water_year": 1987,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 25.933
+      }
+    },
+    {
+      "start": "1987-11-25",
+      "end": "1987-11-25",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 1,
+      "peak_date": "1987-11-25",
+      "peak_value": 316.0,
+      "rise_days": 1,
+      "recession_days": 0,
+      "mean_value": 316.0,
+      "has_provisional": false,
+      "water_year": 1988,
+      "peak_month": 11,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 6.666
+      }
+    },
+    {
+      "start": "1989-05-10",
+      "end": "1989-05-12",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 3,
+      "peak_date": "1989-05-10",
+      "peak_value": 480.0,
+      "rise_days": 1,
+      "recession_days": 2,
+      "mean_value": 204.0,
+      "has_provisional": false,
+      "water_year": 1989,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 4.817
+      }
+    },
+    {
+      "start": "1989-05-17",
+      "end": "1989-06-03",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 18,
+      "peak_date": "1989-05-17",
+      "peak_value": 1430.0,
+      "rise_days": 1,
+      "recession_days": 17,
+      "mean_value": 186.278,
+      "has_provisional": false,
+      "water_year": 1989,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 32.96
+      }
+    },
+    {
+      "start": "1990-05-03",
+      "end": "1990-05-19",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 17,
+      "peak_date": "1990-05-03",
+      "peak_value": 608.0,
+      "rise_days": 1,
+      "recession_days": 16,
+      "mean_value": 110.0,
+      "has_provisional": false,
+      "water_year": 1990,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 17.637
+      }
+    },
+    {
+      "start": "1991-01-09",
+      "end": "1991-01-15",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 7,
+      "peak_date": "1991-01-09",
+      "peak_value": 340.0,
+      "rise_days": 1,
+      "recession_days": 6,
+      "mean_value": 131.286,
+      "has_provisional": false,
+      "water_year": 1991,
+      "peak_month": 1,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 2.661
+      }
+    },
+    {
+      "start": "1991-02-04",
+      "end": "1991-03-30",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 55,
+      "peak_date": "1991-02-04",
+      "peak_value": 217.0,
+      "rise_days": 1,
+      "recession_days": 54,
+      "mean_value": 79.127,
+      "has_provisional": false,
+      "water_year": 1991,
+      "peak_month": 2,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 85.86
+      }
+    },
+    {
+      "start": "1991-04-05",
+      "end": "1991-06-20",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 77,
+      "peak_date": "1991-04-14",
+      "peak_value": 588.0,
+      "rise_days": 10,
+      "recession_days": 67,
+      "mean_value": 120.299,
+      "has_provisional": false,
+      "water_year": 1991,
+      "peak_month": 4,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 48.533
+      }
+    },
+    {
+      "start": "1991-09-19",
+      "end": "1991-09-20",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "1991-09-19",
+      "peak_value": 215.0,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 134.0,
+      "has_provisional": false,
+      "water_year": 1991,
+      "peak_month": 9,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 11.98
+      }
+    },
+    {
+      "start": "1991-12-19",
+      "end": "1992-05-06",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 140,
+      "peak_date": "1991-12-21",
+      "peak_value": 5060.0,
+      "rise_days": 3,
+      "recession_days": 137,
+      "mean_value": 396.529,
+      "has_provisional": false,
+      "water_year": 1992,
+      "peak_month": 12,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 13.497
+      }
+    },
+    {
+      "start": "1992-05-21",
+      "end": "1992-07-07",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 48,
+      "peak_date": "1992-05-21",
+      "peak_value": 1440.0,
+      "rise_days": 1,
+      "recession_days": 47,
+      "mean_value": 264.25,
+      "has_provisional": false,
+      "water_year": 1992,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 69.9
+      }
+    },
+    {
+      "start": "1993-01-20",
+      "end": "1993-04-24",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 95,
+      "peak_date": "1993-02-10",
+      "peak_value": 304.0,
+      "rise_days": 22,
+      "recession_days": 73,
+      "mean_value": 87.432,
+      "has_provisional": false,
+      "water_year": 1993,
+      "peak_month": 2,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 39.433
+      }
+    },
+    {
+      "start": "1994-10-25",
+      "end": "1994-10-30",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 6,
+      "peak_date": "1994-10-25",
+      "peak_value": 792.0,
+      "rise_days": 1,
+      "recession_days": 5,
+      "mean_value": 195.833,
+      "has_provisional": false,
+      "water_year": 1995,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 6.425
+      }
+    },
+    {
+      "start": "1994-12-16",
+      "end": "1995-02-05",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 52,
+      "peak_date": "1994-12-28",
+      "peak_value": 370.0,
+      "rise_days": 13,
+      "recession_days": 39,
+      "mean_value": 98.923,
+      "has_provisional": false,
+      "water_year": 1995,
+      "peak_month": 12,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 26.167
+      }
+    },
+    {
+      "start": "1995-04-05",
+      "end": "1995-05-01",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 27,
+      "peak_date": "1995-04-05",
+      "peak_value": 460.0,
+      "rise_days": 1,
+      "recession_days": 26,
+      "mean_value": 90.0,
+      "has_provisional": false,
+      "water_year": 1995,
+      "peak_month": 4,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 45.6
+      }
+    },
+    {
+      "start": "1995-05-30",
+      "end": "1995-07-04",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 36,
+      "peak_date": "1995-05-30",
+      "peak_value": 3400.0,
+      "rise_days": 1,
+      "recession_days": 35,
+      "mean_value": 329.167,
+      "has_provisional": false,
+      "water_year": 1995,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 35.133
+      }
+    },
+    {
+      "start": "1997-04-04",
+      "end": "1997-07-21",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 109,
+      "peak_date": "1997-06-22",
+      "peak_value": 3610.0,
+      "rise_days": 80,
+      "recession_days": 29,
+      "mean_value": 351.202,
+      "has_provisional": false,
+      "water_year": 1997,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 69.7
+      }
+    },
+    {
+      "start": "1998-01-06",
+      "end": "1998-05-05",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 120,
+      "peak_date": "1998-03-16",
+      "peak_value": 1040.0,
+      "rise_days": 70,
+      "recession_days": 50,
+      "mean_value": 152.625,
+      "has_provisional": false,
+      "water_year": 1998,
+      "peak_month": 3,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 34.833
+      }
+    },
+    {
+      "start": "1998-07-04",
+      "end": "1998-07-05",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "1998-07-04",
+      "peak_value": 375.0,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 224.5,
+      "has_provisional": false,
+      "water_year": 1998,
+      "peak_month": 7,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 3.567
+      }
+    },
+    {
+      "start": "1998-09-17",
+      "end": "1998-09-28",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 12,
+      "peak_date": "1998-09-17",
+      "peak_value": 201.0,
+      "rise_days": 1,
+      "recession_days": 11,
+      "mean_value": 81.333,
+      "has_provisional": false,
+      "water_year": 1998,
+      "peak_month": 9,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 17.297
+      }
+    },
+    {
+      "start": "1998-10-17",
+      "end": "1999-01-18",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 94,
+      "peak_date": "1998-10-17",
+      "peak_value": 4100.0,
+      "rise_days": 1,
+      "recession_days": 93,
+      "mean_value": 263.681,
+      "has_provisional": false,
+      "water_year": 1999,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 62.067
+      }
+    },
+    {
+      "start": "2000-11-02",
+      "end": "2001-04-21",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 171,
+      "peak_date": "2000-11-03",
+      "peak_value": 615.0,
+      "rise_days": 2,
+      "recession_days": 169,
+      "mean_value": 104.058,
+      "has_provisional": false,
+      "water_year": 2001,
+      "peak_month": 11,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 0.024
+      }
+    },
+    {
+      "start": "2001-05-07",
+      "end": "2001-06-03",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 28,
+      "peak_date": "2001-05-07",
+      "peak_value": 1040.0,
+      "rise_days": 1,
+      "recession_days": 27,
+      "mean_value": 136.964,
+      "has_provisional": false,
+      "water_year": 2001,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 45.267
+      }
+    },
+    {
+      "start": "2001-11-15",
+      "end": "2002-02-10",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 88,
+      "peak_date": "2001-11-15",
+      "peak_value": 3550.0,
+      "rise_days": 1,
+      "recession_days": 87,
+      "mean_value": 155.989,
+      "has_provisional": false,
+      "water_year": 2002,
+      "peak_month": 11,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 7.193
+      }
+    },
+    {
+      "start": "2002-06-30",
+      "end": "2002-08-16",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 48,
+      "peak_date": "2002-07-02",
+      "peak_value": 3790.0,
+      "rise_days": 3,
+      "recession_days": 45,
+      "mean_value": 401.583,
+      "has_provisional": false,
+      "water_year": 2002,
+      "peak_month": 7,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 2.023
+      }
+    },
+    {
+      "start": "2002-10-24",
+      "end": "2003-04-20",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 179,
+      "peak_date": "2003-02-20",
+      "peak_value": 630.0,
+      "rise_days": 120,
+      "recession_days": 59,
+      "mean_value": 147.097,
+      "has_provisional": false,
+      "water_year": 2003,
+      "peak_month": 2,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 31.698
+      }
+    },
+    {
+      "start": "2004-06-09",
+      "end": "2004-08-07",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 60,
+      "peak_date": "2004-06-30",
+      "peak_value": 1500.0,
+      "rise_days": 22,
+      "recession_days": 38,
+      "mean_value": 187.747,
+      "has_provisional": false,
+      "water_year": 2004,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 45.913
+      }
+    },
+    {
+      "start": "2004-10-23",
+      "end": "2005-01-25",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 95,
+      "peak_date": "2004-11-17",
+      "peak_value": 5160.0,
+      "rise_days": 26,
+      "recession_days": 69,
+      "mean_value": 267.704,
+      "has_provisional": false,
+      "water_year": 2005,
+      "peak_month": 11,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 6.419
+      }
+    },
+    {
+      "start": "2005-03-06",
+      "end": "2005-04-23",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 49,
+      "peak_date": "2005-03-21",
+      "peak_value": 260.0,
+      "rise_days": 16,
+      "recession_days": 33,
+      "mean_value": 127.933,
+      "has_provisional": false,
+      "water_year": 2005,
+      "peak_month": 3,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 95.303
+      }
+    },
+    {
+      "start": "2007-03-12",
+      "end": "2007-03-24",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 13,
+      "peak_date": "2007-03-12",
+      "peak_value": 915.0,
+      "rise_days": 1,
+      "recession_days": 12,
+      "mean_value": 154.2,
+      "has_provisional": false,
+      "water_year": 2007,
+      "peak_month": 3,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 3.647
+      }
+    },
+    {
+      "start": "2007-03-26",
+      "end": "2007-09-22",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 181,
+      "peak_date": "2007-07-21",
+      "peak_value": 1470.0,
+      "rise_days": 118,
+      "recession_days": 63,
+      "mean_value": 172.387,
+      "has_provisional": false,
+      "water_year": 2007,
+      "peak_month": 7,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 69.206
+      }
+    },
+    {
+      "start": "2009-10-26",
+      "end": "2009-10-30",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 5,
+      "peak_date": "2009-10-26",
+      "peak_value": 218.0,
+      "rise_days": 1,
+      "recession_days": 4,
+      "mean_value": 114.76,
+      "has_provisional": false,
+      "water_year": 2010,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 6.5
+      }
+    },
+    {
+      "start": "2010-01-16",
+      "end": "2010-05-04",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 109,
+      "peak_date": "2010-01-29",
+      "peak_value": 514.0,
+      "rise_days": 14,
+      "recession_days": 95,
+      "mean_value": 149.492,
+      "has_provisional": false,
+      "water_year": 2010,
+      "peak_month": 1,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 39.987
+      }
+    },
+    {
+      "start": "2010-05-18",
+      "end": "2010-05-28",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 11,
+      "peak_date": "2010-05-18",
+      "peak_value": 229.0,
+      "rise_days": 1,
+      "recession_days": 10,
+      "mean_value": 73.209,
+      "has_provisional": false,
+      "water_year": 2010,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 56.367
+      }
+    },
+    {
+      "start": "2010-09-08",
+      "end": "2010-10-03",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 26,
+      "peak_date": "2010-09-08",
+      "peak_value": 2530.0,
+      "rise_days": 1,
+      "recession_days": 25,
+      "mean_value": 204.1,
+      "has_provisional": false,
+      "water_year": 2010,
+      "peak_month": 9,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 7.433
+      }
+    },
+    {
+      "start": "2012-03-20",
+      "end": "2012-04-16",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 28,
+      "peak_date": "2012-03-20",
+      "peak_value": 589.0,
+      "rise_days": 1,
+      "recession_days": 27,
+      "mean_value": 109.425,
+      "has_provisional": false,
+      "water_year": 2012,
+      "peak_month": 3,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 64.99
+      }
+    },
+    {
+      "start": "2012-05-11",
+      "end": "2012-06-07",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 28,
+      "peak_date": "2012-05-11",
+      "peak_value": 921.0,
+      "rise_days": 1,
+      "recession_days": 27,
+      "mean_value": 134.811,
+      "has_provisional": false,
+      "water_year": 2012,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 27.933
+      }
+    },
+    {
+      "start": "2013-10-13",
+      "end": "2013-10-14",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "2013-10-13",
+      "peak_value": 837.0,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 459.25,
+      "has_provisional": false,
+      "water_year": 2014,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 0.25
+      }
+    },
+    {
+      "start": "2013-10-31",
+      "end": "2013-11-14",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 15,
+      "peak_date": "2013-10-31",
+      "peak_value": 4090.0,
+      "rise_days": 1,
+      "recession_days": 14,
+      "mean_value": 362.053,
+      "has_provisional": false,
+      "water_year": 2014,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 43.013
+      }
+    },
+    {
+      "start": "2014-05-27",
+      "end": "2014-06-03",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 8,
+      "peak_date": "2014-05-27",
+      "peak_value": 295.0,
+      "rise_days": 1,
+      "recession_days": 7,
+      "mean_value": 96.112,
+      "has_provisional": false,
+      "water_year": 2014,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 11.366
+      }
+    },
+    {
+      "start": "2014-11-23",
+      "end": "2014-11-23",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 1,
+      "peak_date": "2014-11-23",
+      "peak_value": 220.0,
+      "rise_days": 1,
+      "recession_days": 0,
+      "mean_value": 220.0,
+      "has_provisional": false,
+      "water_year": 2015,
+      "peak_month": 11,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 4.189
+      }
+    },
+    {
+      "start": "2015-01-22",
+      "end": "2015-02-18",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 28,
+      "peak_date": "2015-01-22",
+      "peak_value": 249.0,
+      "rise_days": 1,
+      "recession_days": 27,
+      "mean_value": 77.164,
+      "has_provisional": false,
+      "water_year": 2015,
+      "peak_month": 1,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 16.868
+      }
+    },
+    {
+      "start": "2015-05-17",
+      "end": "2015-07-21",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 66,
+      "peak_date": "2015-05-24",
+      "peak_value": 4440.0,
+      "rise_days": 8,
+      "recession_days": 58,
+      "mean_value": 367.612,
+      "has_provisional": false,
+      "water_year": 2015,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 51.863
+      }
+    },
+    {
+      "start": "2015-10-30",
+      "end": "2016-02-12",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 106,
+      "peak_date": "2015-10-30",
+      "peak_value": 4740.0,
+      "rise_days": 1,
+      "recession_days": 105,
+      "mean_value": 174.647,
+      "has_provisional": false,
+      "water_year": 2016,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 2.384
+      }
+    },
+    {
+      "start": "2016-04-13",
+      "end": "2016-07-07",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 86,
+      "peak_date": "2016-05-19",
+      "peak_value": 1810.0,
+      "rise_days": 37,
+      "recession_days": 49,
+      "mean_value": 240.173,
+      "has_provisional": false,
+      "water_year": 2016,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 87.753
+      }
+    },
+    {
+      "start": "2016-08-16",
+      "end": "2016-09-13",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 29,
+      "peak_date": "2016-08-16",
+      "peak_value": 302.0,
+      "rise_days": 1,
+      "recession_days": 28,
+      "mean_value": 103.69,
+      "has_provisional": false,
+      "water_year": 2016,
+      "peak_month": 8,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 10.746
+      }
+    },
+    {
+      "start": "2017-01-18",
+      "end": "2017-04-30",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 103,
+      "peak_date": "2017-02-20",
+      "peak_value": 532.0,
+      "rise_days": 34,
+      "recession_days": 69,
+      "mean_value": 119.602,
+      "has_provisional": false,
+      "water_year": 2017,
+      "peak_month": 2,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 65.38
+      }
+    },
+    {
+      "start": "2018-09-22",
+      "end": "2018-10-04",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 13,
+      "peak_date": "2018-09-22",
+      "peak_value": 620.0,
+      "rise_days": 1,
+      "recession_days": 12,
+      "mean_value": 102.069,
+      "has_provisional": false,
+      "water_year": 2018,
+      "peak_month": 9,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 14.077
+      }
+    },
+    {
+      "start": "2018-10-16",
+      "end": "2019-03-17",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 153,
+      "peak_date": "2018-12-27",
+      "peak_value": 1380.0,
+      "rise_days": 73,
+      "recession_days": 80,
+      "mean_value": 148.078,
+      "has_provisional": false,
+      "water_year": 2019,
+      "peak_month": 12,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 80.987
+      }
+    },
+    {
+      "start": "2019-05-03",
+      "end": "2019-07-11",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 70,
+      "peak_date": "2019-05-04",
+      "peak_value": 3110.0,
+      "rise_days": 2,
+      "recession_days": 68,
+      "mean_value": 269.531,
+      "has_provisional": false,
+      "water_year": 2019,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 36.613
+      }
+    },
+    {
+      "start": "2020-05-24",
+      "end": "2020-06-06",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 14,
+      "peak_date": "2020-05-25",
+      "peak_value": 724.0,
+      "rise_days": 2,
+      "recession_days": 12,
+      "mean_value": 137.457,
+      "has_provisional": false,
+      "water_year": 2020,
+      "peak_month": 5,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 6.024
+      }
+    },
+    {
+      "start": "2021-06-03",
+      "end": "2021-06-16",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 14,
+      "peak_date": "2021-06-03",
+      "peak_value": 318.0,
+      "rise_days": 1,
+      "recession_days": 13,
+      "mean_value": 125.35,
+      "has_provisional": false,
+      "water_year": 2021,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 20.655
+      }
+    },
+    {
+      "start": "2021-10-14",
+      "end": "2021-10-18",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 5,
+      "peak_date": "2021-10-14",
+      "peak_value": 727.0,
+      "rise_days": 1,
+      "recession_days": 4,
+      "mean_value": 202.64,
+      "has_provisional": false,
+      "water_year": 2022,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 7.901
+      }
+    },
+    {
+      "start": "2024-06-01",
+      "end": "2024-06-03",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 3,
+      "peak_date": "2024-06-01",
+      "peak_value": 364.0,
+      "rise_days": 1,
+      "recession_days": 2,
+      "mean_value": 160.0,
+      "has_provisional": false,
+      "water_year": 2024,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 4.805
+      }
+    }
+  ],
+  "summary": {
+    "event_count": 71,
+    "events_per_water_year": {
+      "1979": 1,
+      "1980": 1,
+      "1981": 3,
+      "1982": 2,
+      "1983": 2,
+      "1985": 3,
+      "1986": 3,
+      "1987": 3,
+      "1988": 1,
+      "1989": 2,
+      "1990": 1,
+      "1991": 4,
+      "1992": 2,
+      "1993": 1,
+      "1995": 4,
+      "1997": 1,
+      "1998": 3,
+      "1999": 1,
+      "2001": 2,
+      "2002": 2,
+      "2003": 1,
+      "2004": 1,
+      "2005": 2,
+      "2007": 2,
+      "2010": 4,
+      "2012": 2,
+      "2014": 3,
+      "2015": 3,
+      "2016": 3,
+      "2017": 1,
+      "2018": 1,
+      "2019": 2,
+      "2020": 1,
+      "2021": 1,
+      "2022": 1,
+      "2024": 1
+    },
+    "median_duration_days": 29,
+    "median_peak_value": 724.0,
+    "peak_month_counts": {
+      "1": 3,
+      "2": 6,
+      "3": 6,
+      "4": 2,
+      "5": 17,
+      "6": 7,
+      "7": 4,
+      "8": 1,
+      "9": 4,
+      "10": 11,
+      "11": 6,
+      "12": 4
+    },
+    "events_ended_by_gap": 0
+  },
+  "labels": [],
+  "holdout_split": {
+    "unit": "water_year (Oct 1\u2013Sep 30)",
+    "fold": "water_year mod 5",
+    "protocol": "leave-one-fold-out over whole events; an event belongs to the water year of its peak; never a random split of adjacent readings",
+    "defined_before_any_fit": true
+  },
+  "rule_fit": {
+    "attempted": false,
+    "positive_personal_labels": 0,
+    "negative_labels": 0,
+    "labels_with_resolved_reach": 0,
+    "independent_dated_labels": 0,
+    "reason": "No threshold can be evaluated: no labels attach to this station. No fitted threshold exists; any color comes only from a hand-authored provisional rule recorded in data/rules.json."
+  },
+  "limits": [
+    "Daily means hide within-day peaks and the timing of a visit inside a day.",
+    "Thresholds are descriptive event boundaries for this station, not swimming thresholds.",
+    "A note attached through a context relationship describes the station, not the place; the reach may be far from the gauge."
+  ]
+}

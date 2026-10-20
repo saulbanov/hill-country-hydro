@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "USGS-295204099340201",
+        "agency_code": "USGS",
+        "agency_name": "U.S. Geological Survey",
+        "monitoring_location_number": "295204099340201",
+        "monitoring_location_name": "AS-69-12-206 (Bandera County Edwards GW Well 1)",
+        "district_code": "48",
+        "country_code": "US",
+        "country_name": "United States of America",
+        "state_code": "48",
+        "state_name": "Texas",
+        "county_code": "019",
+        "county_name": "Bandera County",
+        "minor_civil_division_code": null,
+        "site_type_code": "GW",
+        "site_type": "Well",
+        "hydrologic_unit_code": "121003020101",
+        "basin_code": "19",
+        "altitude": 2286.0,
+        "altitude_accuracy": 5.0,
+        "altitude_method_code": "N",
+        "altitude_method_name": "Interpolated from Digital Elevation Model",
+        "vertical_datum": "NAVD88",
+        "vertical_datum_name": "North American Vertical Datum of 1988",
+        "horizontal_positional_accuracy_code": "5",
+        "horizontal_positional_accuracy": "Accurate to + or - .5 sec (PLGR/PPS GPS).",
+        "horizontal_position_method_code": "N",
+        "horizontal_position_method_name": "Interpolated from Digital MAP.",
+        "original_horizontal_datum": "NAD83",
+        "original_horizontal_datum_name": "North American Datum of 1983",
+        "drainage_area": null,
+        "contributing_drainage_area": null,
+        "time_zone_abbreviation": "CST",
+        "uses_daylight_savings": "Y",
+        "construction_date": "20101022",
+        "aquifer_code": "218EDRDA",
+        "national_aquifer_code": "S500EDRTRN",
+        "aquifer_type_code": "U",
+        "well_constructed_depth": 346.0,
+        "hole_constructed_depth": 346.0,
+        "depth_source_code": "A",
+        "revision_note": "Revisions: Extremes for period of record was revised on 12/23/2021: Minimum Depth to water was determined to have been exceeded on 12/13/2018.&nbsp;",
+        "revision_created": "2021-12-23T19:23:31.167000+00:00",
+        "revision_modified": "2021-12-23T19:23:31.167000+00:00"
+      },
+      "id": "USGS-295204099340201",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5671888888889,
+          29.8677972222222
+        ]
+      }
+    }
+  ],
+  "numberReturned": 1,
+  "links": [
+    {
+      "type": "application/geo+json",
+      "rel": "self",
+      "title": "This document as GeoJSON",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-295204099340201&limit=1"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/ld+json",
+      "title": "This document as RDF (JSON-LD)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=jsonld&id=USGS-295204099340201&limit=1"
+    },
+    {
+      "type": "text/html",
+      "rel": "alternate",
+      "title": "This document as HTML",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=html&id=USGS-295204099340201&limit=1"
+    },
+    {
+      "type": "text/csv; charset=utf-8",
+      "rel": "alternate",
+      "title": "This document as CSV",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=csv&id=USGS-295204099340201&limit=1"
+    },
+    {
+      "type": "application/geo+json",
+      "rel": "next",
+      "title": "Items (next)",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&offset=1&id=USGS-295204099340201&limit=1"
+    },
+    {
+      "type": "application/json",
+      "title": "Monitoring locations",
+      "rel": "collection",
+      "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations"
+    }
+  ],
+  "timeStamp": "2026-10-02T12:06:48.109724Z"
+}
