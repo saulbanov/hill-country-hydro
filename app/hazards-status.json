@@ -1,430 +1,430 @@
 {
- "generated_at": "2026-10-18T12:14:13.678485+00:00",
+ "generated_at": "2026-10-21T12:25:47.639271+00:00",
  "meaning": "official NWS alerts and NWS flood-stage categories checked for each place's county, upstream counties, and linked forecast gauge; not a water-quality, access, or safety claim; 'none found' means none in the checked sources at the checked time",
  "sources": [
   {
    "kind": "nws-alerts",
    "url": "https://api.weather.gov/alerts/active?area=TX",
-   "retrieved_at": "2026-10-18T12:13:34.538419+00:00",
-   "sha256": "26a687c9f09681bbb38869c61aa4ecc82aea513014e8668ecb83656098bad405"
+   "retrieved_at": "2026-10-21T12:25:08.932471+00:00",
+   "sha256": "a2e92128c99e6d5b32424a794df51644a2dd578a73f75f52e1c6387a979c7587"
   },
   {
    "kind": "nwps-gauge",
    "lid": "AAIT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/AAIT2",
-   "retrieved_at": "2026-10-18T12:13:34.849106+00:00",
-   "sha256": "91ff087dc3fe3ce132f40da148cddaf30ce3356b2572182f0bfcdb7aff00ac92"
+   "retrieved_at": "2026-10-21T12:25:09.204826+00:00",
+   "sha256": "a6ccbb3650c5f5aed944909400e35ce9e037d18aa63a86f3431d1ec88cb0ef0c"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ABTT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ABTT2",
-   "retrieved_at": "2026-10-18T12:13:35.603313+00:00",
-   "sha256": "e97ac38b33624fc72bc2fc3dad184071e4eadccf1a2ee753831d3749135308a8"
+   "retrieved_at": "2026-10-21T12:25:09.838479+00:00",
+   "sha256": "6fd716261e5bb119066de72c856e1f239c6f005cef03a736a15e97fc0a496d36"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ABUT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ABUT2",
-   "retrieved_at": "2026-10-18T12:13:36.221503+00:00",
-   "sha256": "1026976cf84dd432d5226c3b9b8bd8ff237284720696c0ddc7e9a1e08858df20"
+   "retrieved_at": "2026-10-21T12:25:10.471424+00:00",
+   "sha256": "7fe758a3d636f8ce644be1527b1916c227d0aa11c3796f98f81f013883cff6f3"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ACRT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ACRT2",
-   "retrieved_at": "2026-10-18T12:13:36.854006+00:00",
-   "sha256": "16846e3e8b662c3dc107000804dd95b2fb5184506944b7e541d067df694f742a"
+   "retrieved_at": "2026-10-21T12:25:11.132644+00:00",
+   "sha256": "51a595c2ab9f4a8a23114cbccacdbc724df3b0cb4b31fb94ecef250e066d224c"
   },
   {
    "kind": "nwps-gauge",
    "lid": "AHOT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/AHOT2",
-   "retrieved_at": "2026-10-18T12:13:37.692476+00:00",
-   "sha256": "f16a59c874c4aea45bae052e6ee6bfdb760252855827e6c58a6a6d17ce1a5237"
+   "retrieved_at": "2026-10-21T12:25:11.756267+00:00",
+   "sha256": "5e50513cac1a7345ef1b4edd6ec47e17262310ffd96249f3edca9ab652e247df"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ASHT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ASHT2",
-   "retrieved_at": "2026-10-18T12:13:38.288772+00:00",
-   "sha256": "464dce7cb3335fd563ee5861478120865b66a6c3334e65b7de8157badf97c8ea"
+   "retrieved_at": "2026-10-21T12:25:12.851671+00:00",
+   "sha256": "c73fd2d592a110eba4031b66ddf7d92a3651d6865a15726aec2ff1f0081121cf"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ATIT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ATIT2",
-   "retrieved_at": "2026-10-18T12:13:38.926556+00:00",
-   "sha256": "ba707fd12ae2c8c54390ef0bfa86a39c06856f6bc6a9efe3149001d160626aea"
+   "retrieved_at": "2026-10-21T12:25:13.489953+00:00",
+   "sha256": "52ccdef800f9a92e1516b9741826b8968812262fa5035ddff0b5fe7415080bf5"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BCCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BCCT2",
-   "retrieved_at": "2026-10-18T12:13:39.608503+00:00",
-   "sha256": "8bebdf1e01ec48a82f8d8ec43dc81deb2270ff64c43ce1d07828261086c6efe6"
+   "retrieved_at": "2026-10-21T12:25:14.090694+00:00",
+   "sha256": "019320af6bf49bb780a257213ad9429d0d556da9c41d57b50b7befc62502dbf9"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BCIT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BCIT2",
-   "retrieved_at": "2026-10-18T12:13:40.338391+00:00",
-   "sha256": "ff4ea8be5d972e034beeb7b5bb1d0908fc8dd28b7a46e98800f2e46538d07048"
+   "retrieved_at": "2026-10-21T12:25:14.671784+00:00",
+   "sha256": "9b12bf6f3a05330cb7b89095c54e5a46002c6c5f8e65e58ad55a0ec4c90b405a"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BCWT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BCWT2",
-   "retrieved_at": "2026-10-18T12:13:41.018700+00:00",
-   "sha256": "934f4322a51c1d6ca54136980c48555727c4dc32e245658c8efdb8099789b933"
+   "retrieved_at": "2026-10-21T12:25:15.318687+00:00",
+   "sha256": "664c44acccbc11739eea1a37bb63659b735ee643ab014ba2a3a25097979cf1a5"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BDAT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BDAT2",
-   "retrieved_at": "2026-10-18T12:13:41.620964+00:00",
-   "sha256": "aaf12ffe1e3282c19ea2dc47ebb8465ec1be703679410de224e418c6721b53a4"
+   "retrieved_at": "2026-10-21T12:25:15.951379+00:00",
+   "sha256": "29efc0b546b57e91961542eb94ef560bd7d14a46f1cdf0c2925479892130e49b"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BFST2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BFST2",
-   "retrieved_at": "2026-10-18T12:13:42.232429+00:00",
-   "sha256": "941d75a82da8d2ec3aec6260937697e610df8d70d89eb8d4795d19be8a93f005"
+   "retrieved_at": "2026-10-21T12:25:16.650426+00:00",
+   "sha256": "daf7f4b0285d21f002a677899c05e55968c9e3b487a0fda2763cb6874ee0d7aa"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BGMT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BGMT2",
-   "retrieved_at": "2026-10-18T12:13:42.831725+00:00",
-   "sha256": "434d768f0cb9849b66dd057dc494f6b3b0d5df6841b7e4361fc155883b2046fc"
+   "retrieved_at": "2026-10-21T12:25:17.327889+00:00",
+   "sha256": "9c53f279adff0931aef50f8548c1c32296ac0d8b19f2964b0922e81bda193552"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BKFT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BKFT2",
-   "retrieved_at": "2026-10-18T12:13:43.526308+00:00",
-   "sha256": "9206a030de5325afde2c4da26966cc01212f0dd4c79299c6255509be41d67dc2"
+   "retrieved_at": "2026-10-21T12:25:17.924417+00:00",
+   "sha256": "6dd7ca77c91225b415967dcd2d703d29f471e3325e9c0dffbfcdb38fe6989a34"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BSMT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BSMT2",
-   "retrieved_at": "2026-10-18T12:13:44.207674+00:00",
-   "sha256": "f830eaa0d2d48af7c47ce2cbcbb97a4f42188befd0c3f442d61c298c6a6efb01"
+   "retrieved_at": "2026-10-21T12:25:18.584439+00:00",
+   "sha256": "021ca082678d2b5aeed84e32756ef060205219f7d18089a5d437860c916a292f"
   },
   {
    "kind": "nwps-gauge",
    "lid": "BYBT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/BYBT2",
-   "retrieved_at": "2026-10-18T12:13:44.792089+00:00",
-   "sha256": "744ec835b7b226aa6598e537e95afa6853bef37654d772e2d1ddc4d3dcb7b002"
+   "retrieved_at": "2026-10-21T12:25:19.287456+00:00",
+   "sha256": "78b621202f78035e3969953bd2299036d58ba987b32a16953ffdad1f2aeed5c9"
   },
   {
    "kind": "nwps-gauge",
    "lid": "CICT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/CICT2",
-   "retrieved_at": "2026-10-18T12:13:45.490278+00:00",
-   "sha256": "2055d7f747a2406648eecd709bb3846a54e11b571875733f7bc902d67013b318"
+   "retrieved_at": "2026-10-21T12:25:19.957595+00:00",
+   "sha256": "5700123a94bd10067f05c5badbfea260949e0f688f64c573f849b7e96321e60e"
   },
   {
    "kind": "nwps-gauge",
    "lid": "CNCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/CNCT2",
-   "retrieved_at": "2026-10-18T12:13:46.099394+00:00",
-   "sha256": "c300bc593ec41ddee04b92e6f96bed505579dc84223e0ee9c9f530b764878969"
+   "retrieved_at": "2026-10-21T12:25:20.653313+00:00",
+   "sha256": "1bd278f1c3bf78e398504ee04b0c8c98da34438492da600b6b3ef680128576e3"
   },
   {
    "kind": "nwps-gauge",
    "lid": "COMT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/COMT2",
-   "retrieved_at": "2026-10-18T12:13:46.723730+00:00",
-   "sha256": "4ccb7267a7b97c1e4543bef6525b3bb4e3766352d680f8d9489399ba01618a09"
+   "retrieved_at": "2026-10-21T12:25:21.263510+00:00",
+   "sha256": "269899c5df6b03f4467bd33fe602b37001935a597625df32f380e9afe2bf4b15"
   },
   {
    "kind": "nwps-gauge",
    "lid": "DRWT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/DRWT2",
-   "retrieved_at": "2026-10-18T12:13:47.372933+00:00",
-   "sha256": "c352a02f5853839996153d54682d78ffb20548bcb4a4d09dbff52eea5d979312"
+   "retrieved_at": "2026-10-21T12:25:21.952346+00:00",
+   "sha256": "ce7040c8bcde8d6b39a98b17d1c3cd838cd1ba1de16c44e20a66b1adfe47209b"
   },
   {
    "kind": "nwps-gauge",
    "lid": "FRBT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/FRBT2",
-   "retrieved_at": "2026-10-18T12:13:48.008252+00:00",
-   "sha256": "914b66e40c2306e6446d115fe3771af5dd37d3bb8a6f3be59e9368590fc4148f"
+   "retrieved_at": "2026-10-21T12:25:22.591114+00:00",
+   "sha256": "6040a972ec372bbdc7d3e99adfd68eebdc6523b0d1a67df171b64b62a08ed841"
   },
   {
    "kind": "nwps-gauge",
    "lid": "GBCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/GBCT2",
-   "retrieved_at": "2026-10-18T12:13:48.782566+00:00",
-   "sha256": "0f34f6d0d9a5cbce4304f20a7a1364e0976d8b3f66fc81f2538f110ab9ce2bf9"
+   "retrieved_at": "2026-10-21T12:25:23.218157+00:00",
+   "sha256": "c8180119a14970f2b03f52c683e7e97b81f1e9ba9b111217fea74e7311c099f1"
   },
   {
    "kind": "nwps-gauge",
    "lid": "GERT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/GERT2",
-   "retrieved_at": "2026-10-18T12:13:49.371402+00:00",
-   "sha256": "643013734bca1a29cc37a0d627b04702a2708a982830b8ca53c2be4b5e8a6748"
+   "retrieved_at": "2026-10-21T12:25:23.813084+00:00",
+   "sha256": "23fe8aa5cd0499ae3d6829fc70040f72724b78765aed8135c2b5806b48ffac50"
   },
   {
    "kind": "nwps-gauge",
    "lid": "GETT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/GETT2",
-   "retrieved_at": "2026-10-18T12:13:50.024299+00:00",
-   "sha256": "1b52893e4abfdefec08d1d1bf0afc6a70195286e8fb11e9b5811cc4384396d64"
+   "retrieved_at": "2026-10-21T12:25:24.456162+00:00",
+   "sha256": "8d6c8e2e6a70111b9eb11d9c17d274b4170b80e44a25acefdd919a33b4018e6f"
   },
   {
    "kind": "nwps-gauge",
    "lid": "GNRT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/GNRT2",
-   "retrieved_at": "2026-10-18T12:13:50.591612+00:00",
-   "sha256": "0bd6cfb4b09848a42e4e33f6e44497b2df3e69e00447be82a3d844b2bba1b67f"
+   "retrieved_at": "2026-10-21T12:25:25.033736+00:00",
+   "sha256": "e4be4fc60d2fbcd82506ca6f913bc4df875392cbdab841e8b05ef2ebfa5167c6"
   },
   {
    "kind": "nwps-gauge",
    "lid": "GTWT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/GTWT2",
-   "retrieved_at": "2026-10-18T12:13:51.357094+00:00",
-   "sha256": "545ec4e1fb81b55ff24c6e847bfef4ec00876a739c1aefff0a2b69e533de0f4a"
+   "retrieved_at": "2026-10-21T12:25:25.628304+00:00",
+   "sha256": "834fcbbcb2bc65aa42aea1f64bd0fbe120b7bae3ece274d1d83096a6e69e4374"
   },
   {
    "kind": "nwps-gauge",
    "lid": "HFXT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/HFXT2",
-   "retrieved_at": "2026-10-18T12:13:51.954388+00:00",
-   "sha256": "18084889c2228f0f3a608a97b8d2efd9ac36894e15b423cc43c0543a30ae23bb"
+   "retrieved_at": "2026-10-21T12:25:26.353850+00:00",
+   "sha256": "4f11abca0913b02f52f9c33d2970b1e5bfaef26386720aab6dc823a55679035d"
   },
   {
    "kind": "nwps-gauge",
    "lid": "HNTT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/HNTT2",
-   "retrieved_at": "2026-10-18T12:13:52.552806+00:00",
-   "sha256": "42baad3d5ef822b20cf35ace2d88bb60fa1c065bf04378f85febfa1f7730444d"
+   "retrieved_at": "2026-10-21T12:25:26.981243+00:00",
+   "sha256": "85e99f5eb1c9c6e96f61e9efb2766adb3522479a0db3d1924935c1dd20779340"
   },
   {
    "kind": "nwps-gauge",
    "lid": "JNCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/JNCT2",
-   "retrieved_at": "2026-10-18T12:13:53.183319+00:00",
-   "sha256": "e91276eb1c0dd42eedcb9cad8ae0faed23a9b5cfc6eb793d70c03c097fa3139a"
+   "retrieved_at": "2026-10-21T12:25:27.608237+00:00",
+   "sha256": "df26bcdb0039b5e83442fce791b5b744c051afb7b2fb03c10042fbf3986195bd"
   },
   {
    "kind": "nwps-gauge",
    "lid": "JOCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/JOCT2",
-   "retrieved_at": "2026-10-18T12:13:53.798318+00:00",
-   "sha256": "da8e2ce7205ee1e844a88d20fff733b3ef160a208de7375140bd73018f8f3d47"
+   "retrieved_at": "2026-10-21T12:25:28.349690+00:00",
+   "sha256": "07a20e623b32a1408d559393a173b38c76fcc8ea37d70bc9a818b86d6af8f5bb"
   },
   {
    "kind": "nwps-gauge",
    "lid": "KNLT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/KNLT2",
-   "retrieved_at": "2026-10-18T12:13:54.384362+00:00",
-   "sha256": "48fc34f0f8b58c63b3c514ae2400dc58a26a1b98544038a4c7bfaabac136717a"
+   "retrieved_at": "2026-10-21T12:25:29.060829+00:00",
+   "sha256": "efba6eba7822e9a9a162b89c46e02b874074473e09fad3493e56795bd2042796"
   },
   {
    "kind": "nwps-gauge",
    "lid": "KRRT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/KRRT2",
-   "retrieved_at": "2026-10-18T12:13:55.160757+00:00",
-   "sha256": "b841e07626f27ebf4ebc02f526c09c3ee079a06869454f004711478227c6bcda"
+   "retrieved_at": "2026-10-21T12:25:29.792298+00:00",
+   "sha256": "5301c7367bc30d25929af4127344839326b2570eb3ab2b0b031feb8545b2583c"
   },
   {
    "kind": "nwps-gauge",
    "lid": "KYET2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/KYET2",
-   "retrieved_at": "2026-10-18T12:13:55.866839+00:00",
-   "sha256": "1bd883e07a6bcfe69d6d0743dc0863b94bd71b4def1b29afa62ad00db8495dae"
+   "retrieved_at": "2026-10-21T12:25:30.381898+00:00",
+   "sha256": "d9761056eefdb0415ef66bc2c45bd5805188d2686531baa4de6ab98d76fbfebe"
   },
   {
    "kind": "nwps-gauge",
    "lid": "LBFT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/LBFT2",
-   "retrieved_at": "2026-10-18T12:13:56.447209+00:00",
-   "sha256": "feaa68b4e725e0c9cd1c5316f0c77bc4fa3752bafd8566980ebc6b76dfa78460"
+   "retrieved_at": "2026-10-21T12:25:31.049436+00:00",
+   "sha256": "e3b998743d50182cdf1ddb4ffd91418b39930a210048cdde21b4c5a79804ef5d"
   },
   {
    "kind": "nwps-gauge",
    "lid": "LCKT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/LCKT2",
-   "retrieved_at": "2026-10-18T12:13:57.028901+00:00",
-   "sha256": "ca24ead33ace67f8521e08e65f72570c29747b979dc63a610ed01c84f5922976"
+   "retrieved_at": "2026-10-21T12:25:31.639646+00:00",
+   "sha256": "7a5fd14b471fafdab6e325cfa4556654282815322aff94889cb9eb398c26aada"
   },
   {
    "kind": "nwps-gauge",
    "lid": "LKPT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/LKPT2",
-   "retrieved_at": "2026-10-18T12:13:57.708641+00:00",
-   "sha256": "b35fd0759041d7fab007794b7c19bcc6b4f2e54d97096b0e7cb196905ad8d2bd"
+   "retrieved_at": "2026-10-21T12:25:32.302050+00:00",
+   "sha256": "06a97aee6f5d3dd4f62525ae4893533909177e2d064cd5b354ac98a0118b133c"
   },
   {
    "kind": "nwps-gauge",
    "lid": "LLAT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/LLAT2",
-   "retrieved_at": "2026-10-18T12:13:58.563296+00:00",
-   "sha256": "65fe6e6782f855c3f0ac3bcc46e75801d8a36c0d39fd20faad5dbde882d65958"
+   "retrieved_at": "2026-10-21T12:25:32.995120+00:00",
+   "sha256": "3ed0c2f9ee6b34b7fea395f07a648f92d4019f18b27af71cb35914335115960b"
   },
   {
    "kind": "nwps-gauge",
    "lid": "LWGT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/LWGT2",
-   "retrieved_at": "2026-10-18T12:13:59.142656+00:00",
-   "sha256": "a4eec36b124ee8435e12ee9c2d6405d5fbde4c6f9b5fa86e715219dc6f947ae7"
+   "retrieved_at": "2026-10-21T12:25:33.569706+00:00",
+   "sha256": "855b4eb2801ef6ddaeda2e2b2c322c5fb594384888f2bc311ef4964002fbab3f"
   },
   {
    "kind": "nwps-gauge",
    "lid": "NBCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/NBCT2",
-   "retrieved_at": "2026-10-18T12:13:59.760633+00:00",
-   "sha256": "2d7b95823f704f2868748592e827b48f1de328ab0ad92375902f1070cd0207e0"
+   "retrieved_at": "2026-10-21T12:25:34.194367+00:00",
+   "sha256": "318c03711698742e994f7fff8cf33511c3961e2cdf6bfb8ccef42e2c9997ba0c"
   },
   {
    "kind": "nwps-gauge",
    "lid": "NBRT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/NBRT2",
-   "retrieved_at": "2026-10-18T12:14:00.392780+00:00",
-   "sha256": "58962d29bc63d5cee63ad239913de41a08aed1d1fc9727b18ec6e1ac7268c753"
+   "retrieved_at": "2026-10-21T12:25:34.816180+00:00",
+   "sha256": "9de0782526dd12c48dc01a5ff1cb2e6456c3fe82c975273c8bceaa264ca733ff"
   },
   {
    "kind": "nwps-gauge",
    "lid": "OHBT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/OHBT2",
-   "retrieved_at": "2026-10-18T12:14:01.114179+00:00",
-   "sha256": "89712d4aa595c9db833f30ad6496e0d252d1f4581303264e49501b9260a9d557"
+   "retrieved_at": "2026-10-21T12:25:35.459771+00:00",
+   "sha256": "ab75f7ecc89152fa9320d599c08bb5354fdb0206eb12c082a43fe9d44684fd89"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ONIT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ONIT2",
-   "retrieved_at": "2026-10-18T12:14:01.804600+00:00",
-   "sha256": "0ee8a91ee90c9bf3bf7e821d1068399e9f52cdf5d68708b6d772fbc7190eb4cc"
+   "retrieved_at": "2026-10-21T12:25:36.119132+00:00",
+   "sha256": "4a3eb30de11de2b06b96f03e92d0c2dcac42d5a2ee49103f4f31377fa2c333f7"
   },
   {
    "kind": "nwps-gauge",
    "lid": "ORBT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/ORBT2",
-   "retrieved_at": "2026-10-18T12:14:02.466348+00:00",
-   "sha256": "408789f53d5f2f92f146519f8a8031fd7e9bd1536950dd8f1baa4623d9930120"
+   "retrieved_at": "2026-10-21T12:25:36.835420+00:00",
+   "sha256": "c717a5eea0e2daa03727cba5f068a36bee2a2c874e33c1f2a081f10038254ae8"
   },
   {
    "kind": "nwps-gauge",
    "lid": "SALT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/SALT2",
-   "retrieved_at": "2026-10-18T12:14:03.303326+00:00",
-   "sha256": "e8c00cf52065db87541ecad36c5e3dfbdeb7aec9aebc02e8c8bac038421a46f7"
+   "retrieved_at": "2026-10-21T12:25:37.508638+00:00",
+   "sha256": "7b453e5f46bf1b116b8d9550005adb6c932f83bb129e249761c5105585183280"
   },
   {
    "kind": "nwps-gauge",
    "lid": "SCAT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/SCAT2",
-   "retrieved_at": "2026-10-18T12:14:04.058856+00:00",
-   "sha256": "b3553699a53032cf80b2b9424ef81a0fcb805e121f443f945991e6ddccfdfac1"
+   "retrieved_at": "2026-10-21T12:25:38.216881+00:00",
+   "sha256": "58125997e855c963bdfc9a69d60d58cb45f4080c7f629f848e790065103c36a0"
   },
   {
    "kind": "nwps-gauge",
    "lid": "SLHT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/SLHT2",
-   "retrieved_at": "2026-10-18T12:14:04.663412+00:00",
-   "sha256": "8e69ef0c65439fa1621537961cde2b42c2635ed9521080903cd7bce52052d10d"
+   "retrieved_at": "2026-10-21T12:25:38.804564+00:00",
+   "sha256": "9ce0d44cbc2c7bb3b81324136ee55ae5aa79e6f5d751648d19a8c2bb04c9e7be"
   },
   {
    "kind": "nwps-gauge",
    "lid": "SMRT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/SMRT2",
-   "retrieved_at": "2026-10-18T12:14:05.346415+00:00",
-   "sha256": "498ff058f99747682573b5b226223e17cb8ef8db34aefe9e0245a1000f2fca15"
+   "retrieved_at": "2026-10-21T12:25:39.431507+00:00",
+   "sha256": "0406b85e6c5b764de0d4b6547df1117f73bb882c9fb23b73356e82fe96f12693"
   },
   {
    "kind": "nwps-gauge",
    "lid": "SRGT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/SRGT2",
-   "retrieved_at": "2026-10-18T12:14:05.954650+00:00",
-   "sha256": "33d55daee94a0f2dd06b0f822b5bb5f3734c79bde28737479affc13c87b3d35b"
+   "retrieved_at": "2026-10-21T12:25:40.013307+00:00",
+   "sha256": "139c0c8be8f9cd45f83ce9810a133cb43828589106117818853372ba478dab34"
   },
   {
    "kind": "nwps-gauge",
    "lid": "SRUT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/SRUT2",
-   "retrieved_at": "2026-10-18T12:14:06.546038+00:00",
-   "sha256": "5b8350b5714f738ac51eb752714ef75937a18bd6423d64167f8f730ff7580ef1"
+   "retrieved_at": "2026-10-21T12:25:40.590465+00:00",
+   "sha256": "8617e8085190f692020150a979ad58bbba7a1c3f526990fb4278a770d235e72b"
   },
   {
    "kind": "nwps-gauge",
    "lid": "STLT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/STLT2",
-   "retrieved_at": "2026-10-18T12:14:07.149004+00:00",
-   "sha256": "eb96f9c64377cd2c473ff0e872404e9ef721d51e211524c505c5691d38d0909e"
+   "retrieved_at": "2026-10-21T12:25:41.317375+00:00",
+   "sha256": "199f30444ce5ebc3685e9de45a5e745a2f68e873446ac8b7ea24b2618ccc0fd7"
   },
   {
    "kind": "nwps-gauge",
    "lid": "UVAT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/UVAT2",
-   "retrieved_at": "2026-10-18T12:14:07.779424+00:00",
-   "sha256": "2c84c01bcf7354120a8815ca5c3cb25c7e9c8674e2acaea86ce6339c633f4bea"
+   "retrieved_at": "2026-10-21T12:25:41.925285+00:00",
+   "sha256": "12ee047a8df7fb110be52f1009a42255f5e4c1309c659062df0c3946a78c3a3d"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WADT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WADT2",
-   "retrieved_at": "2026-10-18T12:14:08.445547+00:00",
-   "sha256": "10824823485a8a87abcf8d049b609b5b4f4b6097891c959deaf4e256fb1d2bb7"
+   "retrieved_at": "2026-10-21T12:25:42.602192+00:00",
+   "sha256": "231ab305eb1a43af86720f630bdbb1e020edf0ba69506c89ca2aac7248b07a5a"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WART2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WART2",
-   "retrieved_at": "2026-10-18T12:14:09.122962+00:00",
-   "sha256": "916a16c82bdd32e290adce1e9dbf082fd7e560fafc911b06c5945d94d19afe3d"
+   "retrieved_at": "2026-10-21T12:25:43.184697+00:00",
+   "sha256": "1cc7f956b74fe1a9dd85f4664b2a5f8d5895af83fe15cf2fbf34b054b9ed85d0"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WCAT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WCAT2",
-   "retrieved_at": "2026-10-18T12:14:09.887253+00:00",
-   "sha256": "4d4502302e3676c462373d3ac2ae6c906ec6fb9accdd465c9e74636acc103323"
+   "retrieved_at": "2026-10-21T12:25:43.777946+00:00",
+   "sha256": "5e4662f3538d43bf90ee4350a1ecaf949d047959de5fe65302ad5f3904ea6109"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WGRT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WGRT2",
-   "retrieved_at": "2026-10-18T12:14:10.646207+00:00",
-   "sha256": "f8807e524a183a155df6c07ca9c9756f991e8db7e678c96d33ebfb4b860a5680"
+   "retrieved_at": "2026-10-21T12:25:44.429178+00:00",
+   "sha256": "d89e5445a7dc44ec8364a54c52b47903bc79f8bf4321c41c2d798fc3a155f3dd"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WJCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WJCT2",
-   "retrieved_at": "2026-10-18T12:14:11.232025+00:00",
-   "sha256": "2f2a755d73bb3a3b5720dd08d75ca4bdbd50b529599129f34f23867e66bd8213"
+   "retrieved_at": "2026-10-21T12:25:45.376234+00:00",
+   "sha256": "d9b49a7f11809306d77be5f14516018dca2ae42606fdcb4cba10a1c49cd063ae"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WLCT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WLCT2",
-   "retrieved_at": "2026-10-18T12:14:11.924813+00:00",
-   "sha256": "fb6b93ff7b924fe88ab392533740bf2c48242bc02bd5654804f93be80334a19a"
+   "retrieved_at": "2026-10-21T12:25:45.969112+00:00",
+   "sha256": "8cd157f4d16fff50c0d41753ce5239404667edb2c4f06953e469a2fc7148c15a"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WMBT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WMBT2",
-   "retrieved_at": "2026-10-18T12:14:12.550334+00:00",
-   "sha256": "096c17ff4e5df52b06803ea75bac86ede4a90375b0a6dc9cbba1efb4cf41f4e8"
+   "retrieved_at": "2026-10-21T12:25:46.595416+00:00",
+   "sha256": "cc324a76a54bd274006c2a08e76e47b650a26ac9f5ca0187c769c8bb2a655c1a"
   },
   {
    "kind": "nwps-gauge",
    "lid": "WWVT2",
    "url": "https://api.water.noaa.gov/nwps/v1/gauges/WWVT2",
-   "retrieved_at": "2026-10-18T12:14:13.226938+00:00",
-   "sha256": "dde1054c687fe4cf616896c5f85bfd0dbcb0a0fcd2fc3135897a5652c4ec8cdf"
+   "retrieved_at": "2026-10-21T12:25:47.186064+00:00",
+   "sha256": "bb4c3a67420f6b68d62a14ac02ac3c4431a533ecd9cccc30929e0c9720e23c4e"
   }
  ],
  "coverage": {
-  "alerts_in_state_feed": 3,
-  "alerts_relevant": 0,
+  "alerts_in_state_feed": 2,
+  "alerts_relevant": 1,
   "county_codes_checked": [
    "TXC031",
    "TXC053",
@@ -512,7 +512,31 @@
    "WWVT2"
   ]
  },
- "alerts": [],
+ "alerts": [
+  {
+   "id": "urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1",
+   "event": "Air Quality Alert",
+   "class": "other",
+   "severity": "Unknown",
+   "urgency": "Unknown",
+   "certainty": "Unknown",
+   "headline": "Air Quality Alert issued October 20 at 3:21PM CDT by NWS Austin/San Antonio TX",
+   "area": "Williamson; Hays; Travis; Bastrop; Caldwell",
+   "ugc": [
+    "TXZ173",
+    "TXZ191",
+    "TXZ192",
+    "TXZ193",
+    "TXZ208"
+   ],
+   "onset": "2026-10-20T15:21:00-05:00",
+   "ends": "2026-10-21T19:00:00-05:00",
+   "sender": "NWS Austin/San Antonio TX",
+   "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1",
+   "description": "AQAEWX\n\nAtmospheric conditions are expected to be favorable for producing\nhigh levels of ozone air pollution in the Austin area on Wednesday.\n\nYou can help prevent ozone pollution by sharing a ride, walking\nor riding a bicycle, taking your lunch to work, avoiding drive\nthrough lanes, conserving energy, and keeping your vehicle\nproperly tuned.\n\nIf required, the next Ozone Action Day will be issued by 3 PM\non Wednesday, October 21, 2026.",
+   "window": "active"
+  }
+ ],
  "gauges": [
   {
    "lid": "AAIT2",
@@ -520,7 +544,7 @@
    "usgs_id": "08158930",
    "observed_stage": 1.89,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:25:00Z",
+   "observed_at": "2026-10-21T11:25:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -536,9 +560,9 @@
    "lid": "ABTT2",
    "name": "Barton Creek at Loop 360",
    "usgs_id": "08155300",
-   "observed_stage": 1.64,
+   "observed_stage": 1.65,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -548,16 +572,16 @@
     "action": 6
    },
    "signal": "none",
-   "reason": "observed 1.64 ft, below action stage",
+   "reason": "observed 1.65 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/ABTT2"
   },
   {
    "lid": "ABUT2",
    "name": "Bull Creek above Loop 360",
    "usgs_id": "08154700",
-   "observed_stage": 1.28,
+   "observed_stage": 1.03,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -567,18 +591,18 @@
     "action": 5
    },
    "signal": "none",
-   "reason": "observed 1.28 ft, below action stage",
+   "reason": "observed 1.03 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/ABUT2"
   },
   {
    "lid": "ACRT2",
    "name": "Colorado River (TX) at Austin",
    "usgs_id": "08158000",
-   "observed_stage": 13.31,
+   "observed_stage": 13.56,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:50:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 42,
     "moderate": 38,
@@ -586,16 +610,16 @@
     "action": 25
    },
    "signal": "none",
-   "reason": "observed 13.31 ft, below action stage",
+   "reason": "observed 13.56 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/ACRT2"
   },
   {
    "lid": "AHOT2",
    "name": "Shoal Creek at West 12th Street",
    "usgs_id": "08156800",
-   "observed_stage": 1.51,
+   "observed_stage": 1.26,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:20:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -605,7 +629,7 @@
     "action": 5
    },
    "signal": "none",
-   "reason": "observed 1.51 ft, below action stage",
+   "reason": "observed 1.26 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/AHOT2"
   },
   {
@@ -614,7 +638,7 @@
    "usgs_id": "08156675",
    "observed_stage": 1.03,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:15:00Z",
+   "observed_at": "2026-10-21T11:15:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -626,9 +650,9 @@
    "lid": "ATIT2",
    "name": "Onion Creek at US 183",
    "usgs_id": "08159000",
-   "observed_stage": 4.43,
+   "observed_stage": 4.33,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:20:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -638,16 +662,16 @@
     "action": 15
    },
    "signal": "none",
-   "reason": "observed 4.43 ft, below action stage",
+   "reason": "observed 4.33 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/ATIT2"
   },
   {
    "lid": "BCCT2",
    "name": "Barton Creek above Barton Springs",
    "usgs_id": "08155400",
-   "observed_stage": 1.37,
+   "observed_stage": 1.38,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:20:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -659,9 +683,9 @@
    "lid": "BCIT2",
    "name": "Brushy Creek at I-35 Round Rock",
    "usgs_id": "08105883",
-   "observed_stage": 3.44,
+   "observed_stage": 3.43,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:50:00Z",
+   "observed_at": "2026-10-21T11:50:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -673,9 +697,9 @@
    "lid": "BCWT2",
    "name": "Boggy Creek at Webberville Road",
    "usgs_id": "08158035",
-   "observed_stage": 0.58,
+   "observed_stage": 0.62,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:50:00Z",
+   "observed_at": "2026-10-21T11:50:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -687,9 +711,9 @@
    "lid": "BDAT2",
    "name": "Medina River at Bandera",
    "usgs_id": "08178880",
-   "observed_stage": 3.58,
+   "observed_stage": 3.57,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:45:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -699,7 +723,7 @@
     "action": 10
    },
    "signal": "none",
-   "reason": "observed 3.58 ft, below action stage",
+   "reason": "observed 3.57 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/BDAT2"
   },
   {
@@ -708,7 +732,7 @@
    "usgs_id": "08170950",
    "observed_stage": 3.64,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -725,9 +749,9 @@
    "lid": "BGMT2",
    "name": "Boggy Creek at Manor Road",
    "usgs_id": "08158030",
-   "observed_stage": 1.01,
+   "observed_stage": 1,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -739,9 +763,9 @@
    "lid": "BKFT2",
    "name": "Brushy Creek at Kenney Fort Blvd nr Round Rock",
    "usgs_id": "08105888",
-   "observed_stage": 3.34,
+   "observed_stage": 3.28,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:35:00Z",
+   "observed_at": "2026-10-21T11:35:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -753,9 +777,9 @@
    "lid": "BSMT2",
    "name": "Blanco River at San Marcos",
    "usgs_id": "08171350",
-   "observed_stage": 7.3,
+   "observed_stage": 6.93,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:45:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -765,7 +789,7 @@
     "action": 13
    },
    "signal": "none",
-   "reason": "observed 7.3 ft, below action stage",
+   "reason": "observed 6.93 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/BSMT2"
   },
   {
@@ -774,7 +798,7 @@
    "usgs_id": "08105872",
    "observed_stage": 0.7,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -788,7 +812,7 @@
    "usgs_id": "08183900",
    "observed_stage": 3.32,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -800,9 +824,9 @@
    "lid": "CNCT2",
    "name": "Frio River at Concan",
    "usgs_id": "08195000",
-   "observed_stage": 3.67,
+   "observed_stage": 3.65,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -812,18 +836,18 @@
     "action": 7
    },
    "signal": "none",
-   "reason": "observed 3.67 ft, below action stage",
+   "reason": "observed 3.65 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/CNCT2"
   },
   {
    "lid": "COMT2",
    "name": "Guadalupe River at Comfort",
    "usgs_id": "08167000",
-   "observed_stage": 3.3,
+   "observed_stage": 3.31,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:35:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 28,
     "moderate": 26,
@@ -831,16 +855,16 @@
     "action": 10
    },
    "signal": "none",
-   "reason": "observed 3.3 ft, below action stage",
+   "reason": "observed 3.31 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/COMT2"
   },
   {
    "lid": "DRWT2",
    "name": "Onion Creek near Driftwood",
    "usgs_id": "08158700",
-   "observed_stage": 1.14,
+   "observed_stage": 1.08,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -850,7 +874,7 @@
     "action": 5.5
    },
    "signal": "none",
-   "reason": "observed 1.14 ft, below action stage",
+   "reason": "observed 1.08 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/DRWT2"
   },
   {
@@ -859,7 +883,7 @@
    "usgs_id": "08152900",
    "observed_stage": 7.63,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -876,11 +900,11 @@
    "lid": "GBCT2",
    "name": "Guadalupe River below Comal",
    "usgs_id": "08169500",
-   "observed_stage": 9.5,
+   "observed_stage": 9.48,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 20,
     "moderate": 14,
@@ -888,7 +912,7 @@
     "action": 13
    },
    "signal": "none",
-   "reason": "observed 9.5 ft, below action stage",
+   "reason": "observed 9.48 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/GBCT2"
   },
   {
@@ -897,7 +921,7 @@
    "usgs_id": "08104700",
    "observed_stage": 4.19,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -909,9 +933,9 @@
    "lid": "GETT2",
    "name": "San Gabriel River at Georgetown South Fork",
    "usgs_id": "08104900",
-   "observed_stage": 1.93,
+   "observed_stage": 1.88,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -921,7 +945,7 @@
     "action": 7
    },
    "signal": "none",
-   "reason": "observed 1.93 ft, below action stage",
+   "reason": "observed 1.88 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/GETT2"
   },
   {
@@ -930,7 +954,7 @@
    "usgs_id": "0810464660",
    "observed_stage": 2.3,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:45:00Z",
+   "observed_at": "2026-10-21T10:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -944,7 +968,7 @@
    "usgs_id": "08105095",
    "observed_stage": 9.24,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:30:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -956,9 +980,9 @@
    "lid": "HFXT2",
    "name": "Blanco River above at Halifax Ranch near Kyle",
    "usgs_id": "08171290",
-   "observed_stage": 0.83,
+   "observed_stage": 0.84,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:30:00Z",
+   "observed_at": "2026-10-21T11:30:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -972,7 +996,7 @@
    "usgs_id": "08165500",
    "observed_stage": 7.72,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:35:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -989,9 +1013,9 @@
    "lid": "JNCT2",
    "name": "Llano River near Junction",
    "usgs_id": "08150000",
-   "observed_stage": 1.42,
+   "observed_stage": 1.29,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1001,7 +1025,7 @@
     "action": 12
    },
    "signal": "none",
-   "reason": "observed 1.42 ft, below action stage",
+   "reason": "observed 1.29 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/JNCT2"
   },
   {
@@ -1010,7 +1034,7 @@
    "usgs_id": "08153500",
    "observed_stage": 10.42,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1027,9 +1051,9 @@
    "lid": "KNLT2",
    "name": "Sandy Creek near Kingsland",
    "usgs_id": "08152000",
-   "observed_stage": 5.02,
+   "observed_stage": 4.9,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1039,18 +1063,18 @@
     "action": 8
    },
    "signal": "none",
-   "reason": "observed 5.02 ft, below action stage",
+   "reason": "observed 4.9 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/KNLT2"
   },
   {
    "lid": "KRRT2",
    "name": "Guadalupe River at Kerrville",
    "usgs_id": "08166200",
-   "observed_stage": 1.09,
+   "observed_stage": 1.11,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:35:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 20,
     "moderate": 12,
@@ -1058,7 +1082,7 @@
     "action": 7
    },
    "signal": "none",
-   "reason": "observed 1.09 ft, below action stage",
+   "reason": "observed 1.11 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/KRRT2"
   },
   {
@@ -1067,7 +1091,7 @@
    "usgs_id": "08171300",
    "observed_stage": 2.96,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1079,9 +1103,9 @@
    "lid": "LBFT2",
    "name": "Little Blanco River at FM32 near Fischer",
    "usgs_id": "08170890",
-   "observed_stage": 2.74,
+   "observed_stage": 2.76,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1091,16 +1115,16 @@
     "action": 8
    },
    "signal": "none",
-   "reason": "observed 2.74 ft, below action stage",
+   "reason": "observed 2.76 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/LBFT2"
   },
   {
    "lid": "LCKT2",
    "name": "Lost Creek at Lost Creek Blvd",
    "usgs_id": "08155240",
-   "observed_stage": 1.51,
+   "observed_stage": 1.53,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1112,9 +1136,9 @@
    "lid": "LKPT2",
    "name": "Lake Creek at Lake Creek Parkway near Cedar Park 5SE",
    "usgs_id": "08105886",
-   "observed_stage": 2.43,
+   "observed_stage": 2.47,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:50:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1126,9 +1150,9 @@
    "lid": "LLAT2",
    "name": "Llano River at Llano",
    "usgs_id": "08151500",
-   "observed_stage": 3.24,
+   "observed_stage": 2.41,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1138,16 +1162,16 @@
     "action": 10
    },
    "signal": "none",
-   "reason": "observed 3.24 ft, below action stage",
+   "reason": "observed 2.41 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/LLAT2"
   },
   {
    "lid": "LWGT2",
    "name": "Little Walnut Creek (TX) at Georgian Drive near Austin 7N",
    "usgs_id": "08158380",
-   "observed_stage": 0.36,
+   "observed_stage": 0.34,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T12:00:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1159,11 +1183,11 @@
    "lid": "NBCT2",
    "name": "Comal River at New Braunfels",
    "usgs_id": "08169000",
-   "observed_stage": 3.63,
+   "observed_stage": 3.64,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:45:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 23,
     "moderate": 15,
@@ -1171,18 +1195,18 @@
     "action": 9
    },
    "signal": "none",
-   "reason": "observed 3.63 ft, below action stage",
+   "reason": "observed 3.64 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/NBCT2"
   },
   {
    "lid": "NBRT2",
    "name": "Guadalupe River above Comal River at New Braunfels",
    "usgs_id": "08168500",
-   "observed_stage": 2.02,
+   "observed_stage": 2,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T12:00:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 14,
     "moderate": 10,
@@ -1190,16 +1214,16 @@
     "action": 6
    },
    "signal": "none",
-   "reason": "observed 2.02 ft, below action stage",
+   "reason": "observed 2 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/NBRT2"
   },
   {
    "lid": "OHBT2",
    "name": "Barton Creek above Hwy 71 near Oak Hill",
    "usgs_id": "08155200",
-   "observed_stage": 1.92,
+   "observed_stage": 1.9,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:20:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1209,16 +1233,16 @@
     "action": 12
    },
    "signal": "none",
-   "reason": "observed 1.92 ft, below action stage",
+   "reason": "observed 1.9 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/OHBT2"
   },
   {
    "lid": "ONIT2",
    "name": "Onion Creek at Twin Creeks near Manchaca",
    "usgs_id": "08158827",
-   "observed_stage": 3.67,
+   "observed_stage": 3.68,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T12:00:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1232,7 +1256,7 @@
    "usgs_id": "08155541",
    "observed_stage": 1.52,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:50:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1244,9 +1268,9 @@
    "lid": "SALT2",
    "name": "Sabinal River near Sabinal",
    "usgs_id": "08198000",
-   "observed_stage": 4.81,
+   "observed_stage": 4.8,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T12:00:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1260,7 +1284,7 @@
    "usgs_id": "08158840",
    "observed_stage": 3.27,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T12:00:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1279,7 +1303,7 @@
    "usgs_id": "08158860",
    "observed_stage": -0.2,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:05:00Z",
+   "observed_at": "2026-10-21T11:05:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1291,9 +1315,9 @@
    "lid": "SMRT2",
    "name": "San Marcos River near Martindale",
    "usgs_id": "08171400",
-   "observed_stage": 7.43,
+   "observed_stage": 7.42,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:45:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1305,11 +1329,11 @@
    "lid": "SRGT2",
    "name": "Guadalupe River near Spring Branch",
    "usgs_id": "08167500",
-   "observed_stage": 2.34,
+   "observed_stage": 2.32,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 39,
     "moderate": 36,
@@ -1317,7 +1341,7 @@
     "action": 25
    },
    "signal": "none",
-   "reason": "observed 2.34 ft, below action stage",
+   "reason": "observed 2.32 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/SRGT2"
   },
   {
@@ -1326,7 +1350,7 @@
    "usgs_id": "08170500",
    "observed_stage": 3.65,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:45:00Z",
+   "observed_at": "2026-10-21T10:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1340,9 +1364,9 @@
    "usgs_id": "08167800",
    "observed_stage": 4.44,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:20:00Z",
+   "observed_at": "2026-10-21T11:50:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 12,
     "moderate": 10,
@@ -1357,9 +1381,9 @@
    "lid": "UVAT2",
    "name": "Nueces River at Laguna",
    "usgs_id": "08190000",
-   "observed_stage": 1.94,
+   "observed_stage": 1.91,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
    "forecast_category": "fcst_not_current",
    "categories_ft": {
@@ -1369,16 +1393,16 @@
     "action": 7
    },
    "signal": "none",
-   "reason": "observed 1.94 ft, below action stage",
+   "reason": "observed 1.91 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/UVAT2"
   },
   {
    "lid": "WADT2",
    "name": "Walnut Creek at Dessau Rd near Austin",
    "usgs_id": "08158200",
-   "observed_stage": 5.73,
+   "observed_stage": 5.72,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1390,9 +1414,9 @@
    "lid": "WART2",
    "name": "Waller Creek at Red River Street",
    "usgs_id": "08157540",
-   "observed_stage": 3.38,
+   "observed_stage": 3.39,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:35:00Z",
+   "observed_at": "2026-10-21T11:35:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1404,9 +1428,9 @@
    "lid": "WCAT2",
    "name": "Waller Creek at East 1st Street at Austin",
    "usgs_id": "08157560",
-   "observed_stage": 4.51,
+   "observed_stage": 4.49,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:15:00Z",
+   "observed_at": "2026-10-21T11:15:00Z",
    "observed_category": "out_of_service",
    "forecast_category": "out_of_service",
    "categories_ft": {},
@@ -1420,7 +1444,7 @@
    "usgs_id": "08105505",
    "observed_stage": 3.49,
    "unit": "ft",
-   "observed_at": "2026-10-18T10:45:00Z",
+   "observed_at": "2026-10-21T10:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1432,9 +1456,9 @@
    "lid": "WJCT2",
    "name": "Williamson Creek at Jimmy Clay Road near Austin 6SE",
    "usgs_id": "08158970",
-   "observed_stage": 5.01,
+   "observed_stage": 4.8,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1446,9 +1470,9 @@
    "lid": "WLCT2",
    "name": "Waller Creek at Koenig Lane",
    "usgs_id": "08156910",
-   "observed_stage": 0.72,
+   "observed_stage": 0.69,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:25:00Z",
+   "observed_at": "2026-10-21T11:25:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1460,11 +1484,11 @@
    "lid": "WMBT2",
    "name": "Blanco River at Wimberley",
    "usgs_id": "08171000",
-   "observed_stage": 3.5,
+   "observed_stage": 3.52,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:30:00Z",
+   "observed_at": "2026-10-21T11:45:00Z",
    "observed_category": "no_flooding",
-   "forecast_category": "no_flooding",
+   "forecast_category": "fcst_not_current",
    "categories_ft": {
     "major": 26,
     "moderate": 17,
@@ -1472,16 +1496,16 @@
     "action": 10
    },
    "signal": "none",
-   "reason": "observed 3.5 ft, below action stage",
+   "reason": "observed 3.52 ft, below action stage",
    "source": "https://water.noaa.gov/gauges/WMBT2"
   },
   {
    "lid": "WWVT2",
    "name": "Walnut Creek at Webberville Road",
    "usgs_id": "08158600",
-   "observed_stage": 4.01,
+   "observed_stage": 4,
    "unit": "ft",
-   "observed_at": "2026-10-18T11:00:00Z",
+   "observed_at": "2026-10-21T11:00:00Z",
    "observed_category": "not_defined",
    "forecast_category": "fcst_not_current",
    "categories_ft": {},
@@ -1497,16 +1521,26 @@
    "hazard_notice": "none found in checked sources",
    "reason": "LCKT2: no official flood categories published for this gauge",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "LCKT2",
     "name": "Lost Creek at Lost Creek Blvd",
     "usgs_id": "08155240",
-    "observed_stage": 1.51,
+    "observed_stage": 1.53,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:30:00Z",
+    "observed_at": "2026-10-21T11:45:00Z",
     "observed_category": "not_defined",
     "forecast_category": "fcst_not_current",
     "categories_ft": {},
@@ -1522,16 +1556,26 @@
    "hazard_notice": "none found in checked sources",
    "reason": "LCKT2: no official flood categories published for this gauge",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "LCKT2",
     "name": "Lost Creek at Lost Creek Blvd",
     "usgs_id": "08155240",
-    "observed_stage": 1.51,
+    "observed_stage": 1.53,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:30:00Z",
+    "observed_at": "2026-10-21T11:45:00Z",
     "observed_category": "not_defined",
     "forecast_category": "fcst_not_current",
     "categories_ft": {},
@@ -1547,16 +1591,26 @@
    "hazard_notice": "none found in checked sources",
    "reason": "LCKT2: no official flood categories published for this gauge",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "LCKT2",
     "name": "Lost Creek at Lost Creek Blvd",
     "usgs_id": "08155240",
-    "observed_stage": 1.51,
+    "observed_stage": 1.53,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:30:00Z",
+    "observed_at": "2026-10-21T11:45:00Z",
     "observed_category": "not_defined",
     "forecast_category": "fcst_not_current",
     "categories_ft": {},
@@ -1570,18 +1624,28 @@
    "id": "gus-fruh",
    "name": "Gus Fruh",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209; ABTT2 observed 1.64 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209; ABTT2 observed 1.65 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "ABTT2",
     "name": "Barton Creek at Loop 360",
     "usgs_id": "08155300",
-    "observed_stage": 1.64,
+    "observed_stage": 1.65,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:00:00Z",
+    "observed_at": "2026-10-21T11:00:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -1591,7 +1655,7 @@
      "action": 6
     },
     "signal": "none",
-    "reason": "observed 1.64 ft, below action stage",
+    "reason": "observed 1.65 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/ABTT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1600,18 +1664,28 @@
    "id": "campbells-hole",
    "name": "Campbell\u2019s Hole",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209; ABTT2 observed 1.64 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209; ABTT2 observed 1.65 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "ABTT2",
     "name": "Barton Creek at Loop 360",
     "usgs_id": "08155300",
-    "observed_stage": 1.64,
+    "observed_stage": 1.65,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:00:00Z",
+    "observed_at": "2026-10-21T11:00:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -1621,7 +1695,7 @@
      "action": 6
     },
     "signal": "none",
-    "reason": "observed 1.64 ft, below action stage",
+    "reason": "observed 1.65 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/ABTT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1630,18 +1704,28 @@
    "id": "the-flats",
    "name": "The Flats",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209; ABTT2 observed 1.64 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209; ABTT2 observed 1.65 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "ABTT2",
     "name": "Barton Creek at Loop 360",
     "usgs_id": "08155300",
-    "observed_stage": 1.64,
+    "observed_stage": 1.65,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:00:00Z",
+    "observed_at": "2026-10-21T11:00:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -1651,7 +1735,7 @@
      "action": 6
     },
     "signal": "none",
-    "reason": "observed 1.64 ft, below action stage",
+    "reason": "observed 1.65 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/ABTT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1660,18 +1744,28 @@
    "id": "bull-creek-district",
    "name": "Bull Creek District Park",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453; ABUT2 observed 1.28 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453; ABUT2 observed 1.03 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "ABUT2",
     "name": "Bull Creek above Loop 360",
     "usgs_id": "08154700",
-    "observed_stage": 1.28,
+    "observed_stage": 1.03,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:00:00Z",
+    "observed_at": "2026-10-21T11:00:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -1681,7 +1775,7 @@
      "action": 5
     },
     "signal": "none",
-    "reason": "observed 1.28 ft, below action stage",
+    "reason": "observed 1.03 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/ABUT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1692,9 +1786,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1702,18 +1806,28 @@
    "id": "shoal-creek",
    "name": "Shoal Creek \u2014 W 12th context",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453; AHOT2 observed 1.51 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453; AHOT2 observed 1.26 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "AHOT2",
     "name": "Shoal Creek at West 12th Street",
     "usgs_id": "08156800",
-    "observed_stage": 1.51,
+    "observed_stage": 1.26,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:20:00Z",
+    "observed_at": "2026-10-21T11:20:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -1723,7 +1837,7 @@
      "action": 5
     },
     "signal": "none",
-    "reason": "observed 1.51 ft, below action stage",
+    "reason": "observed 1.26 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/AHOT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1734,9 +1848,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1746,9 +1870,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1758,9 +1892,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209, TXC031",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1768,18 +1912,28 @@
    "id": "mckinney-lower",
    "name": "McKinney Falls \u2014 Lower Falls",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209, TXC031; ATIT2 observed 4.43 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453 or upstream TXC209, TXC031; ATIT2 observed 4.33 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "ATIT2",
     "name": "Onion Creek at US 183",
     "usgs_id": "08159000",
-    "observed_stage": 4.43,
+    "observed_stage": 4.33,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:20:00Z",
+    "observed_at": "2026-10-21T11:20:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -1789,7 +1943,7 @@
      "action": 15
     },
     "signal": "none",
-    "reason": "observed 4.43 ft, below action stage",
+    "reason": "observed 4.33 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/ATIT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1800,9 +1954,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1812,9 +1976,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1824,9 +1998,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC491 or upstream TXC053",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1836,9 +2020,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC209",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1848,9 +2042,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC209",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -1860,16 +2064,26 @@
    "hazard_notice": "none found in checked sources",
    "reason": "SRUT2: no official flood categories published for this gauge",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "SRUT2",
     "name": "San Marcos River at San Marcos",
     "usgs_id": "08170500",
     "observed_stage": 3.65,
     "unit": "ft",
-    "observed_at": "2026-10-18T10:45:00Z",
+    "observed_at": "2026-10-21T10:45:00Z",
     "observed_category": "not_defined",
     "forecast_category": "fcst_not_current",
     "categories_ft": {},
@@ -1885,8 +2099,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC031 or upstream TXC259",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1897,8 +2111,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC031 or upstream TXC171, TXC267",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1909,8 +2123,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC267 or upstream TXC137",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1921,8 +2135,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC259 or upstream TXC265, TXC091",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1933,8 +2147,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC463 or upstream TXC385",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1943,20 +2157,20 @@
    "id": "comal-prince-solms",
    "name": "Comal River \u2014 Prince Solms Park / Tube Chute reach",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC091; NBCT2 observed 3.63 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC091; NBCT2 observed 3.64 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": {
     "lid": "NBCT2",
     "name": "Comal River at New Braunfels",
     "usgs_id": "08169000",
-    "observed_stage": 3.63,
+    "observed_stage": 3.64,
     "unit": "ft",
-    "observed_at": "2026-10-18T10:45:00Z",
+    "observed_at": "2026-10-21T11:45:00Z",
     "observed_category": "no_flooding",
-    "forecast_category": "no_flooding",
+    "forecast_category": "fcst_not_current",
     "categories_ft": {
      "major": 23,
      "moderate": 15,
@@ -1964,7 +2178,7 @@
      "action": 9
     },
     "signal": "none",
-    "reason": "observed 3.63 ft, below action stage",
+    "reason": "observed 3.64 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/NBCT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1975,8 +2189,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC091 or upstream TXC259, TXC265",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1987,8 +2201,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC091 or upstream TXC259, TXC265",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -1999,8 +2213,8 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC053",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
    "alerts": [],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -2009,18 +2223,28 @@
    "id": "st-edwards",
    "name": "St. Edward\u2019s Greenbelt \u2014 Bull Creek",
    "hazard_notice": "none found in checked sources",
-   "reason": "no active NWS warning, watch, or advisory for TXC453; ABUT2 observed 1.28 ft, below action stage",
+   "reason": "no active NWS warning, watch, or advisory for TXC453; ABUT2 observed 1.03 ft, below action stage",
    "evidence": "Official notice check \u00b7 NWS alerts by county code + NWS flood-stage category",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": {
     "lid": "ABUT2",
     "name": "Bull Creek above Loop 360",
     "usgs_id": "08154700",
-    "observed_stage": 1.28,
+    "observed_stage": 1.03,
     "unit": "ft",
-    "observed_at": "2026-10-18T11:00:00Z",
+    "observed_at": "2026-10-21T11:00:00Z",
     "observed_category": "no_flooding",
     "forecast_category": "fcst_not_current",
     "categories_ft": {
@@ -2030,7 +2254,7 @@
      "action": 5
     },
     "signal": "none",
-    "reason": "observed 1.28 ft, below action stage",
+    "reason": "observed 1.03 ft, below action stage",
     "source": "https://water.noaa.gov/gauges/ABUT2"
    },
    "source": "https://www.weather.gov/documentation/services-web-alerts"
@@ -2041,9 +2265,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2053,9 +2287,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2065,9 +2309,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2077,9 +2331,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2089,9 +2353,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2101,9 +2375,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2113,9 +2397,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2125,9 +2419,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   },
@@ -2137,9 +2441,19 @@
    "hazard_notice": "none found in checked sources",
    "reason": "no active NWS warning, watch, or advisory for TXC453",
    "evidence": "Official notice check \u00b7 NWS alerts by county code (no linked flood forecast point)",
-   "checked_at": "2026-10-18T12:14:13.678485+00:00",
-   "valid_until": "2026-10-18T14:14:13.678485+00:00",
-   "alerts": [],
+   "checked_at": "2026-10-21T12:25:47.639271+00:00",
+   "valid_until": "2026-10-21T14:25:47.639271+00:00",
+   "alerts": [
+    {
+     "event": "Air Quality Alert",
+     "class": "other",
+     "scope": "destination",
+     "window": "active",
+     "onset": "2026-10-20T15:21:00-05:00",
+     "ends": "2026-10-21T19:00:00-05:00",
+     "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ffa82c9393c6d2fe799decc62137b3c4be8cbcba.001.1"
+    }
+   ],
    "flood_gauge": null,
    "source": "https://www.weather.gov/documentation/services-web-alerts"
   }

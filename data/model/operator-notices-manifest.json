@@ -1,14 +1,14 @@
 {
  "tool": "operator-notices",
- "last_success": "2026-10-18T12:15:04+00:00",
- "last_attempt": "2026-10-18T12:15:04+00:00",
+ "last_success": "2026-10-21T12:27:07+00:00",
+ "last_attempt": "2026-10-21T12:27:07+00:00",
  "files": [
   {
    "path": "data/normalized/operator-notices.jsonl",
-   "sha256": "453ff4c7fc5c572911c3e9dbbbe8be7df70b7ade3eb226c50861d3b9915d51fa",
-   "rows": 3234,
+   "sha256": "1e2c874cbd658b05c033c27fc12f1ee8455e4e8806231d300613b26d0faeeb9d",
+   "rows": 3274,
    "first": "2000-08-16T07:02:57+00:00",
-   "last": "2026-10-18T12:15:03+00:00"
+   "last": "2026-10-21T12:27:06+00:00"
   }
  ],
  "skipped": [
@@ -566,93 +566,123 @@
    "url": "https://tpwd.texas.gov/state-parks/south-llano-river/alert",
    "reason": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)",
    "at": "2026-10-18T12:14:58+00:00"
+  },
+  {
+   "url": "https://www.hayscountytx.com/departments/hays-county-parks-recreation/jacobs-well-natural-area",
+   "reason": "[Errno 8] nodename nor servname provided, or not known",
+   "at": "2026-10-21T12:26:29+00:00"
+  },
+  {
+   "url": "https://www.hayscountytx.com/jacobswell/",
+   "reason": "[Errno 8] nodename nor servname provided, or not known",
+   "at": "2026-10-21T12:26:29+00:00"
+  },
+  {
+   "url": "https://www.hayscountytx.gov/449/Things-to-Do",
+   "reason": "HTTP Error 403: Forbidden",
+   "at": "2026-10-21T12:26:29+00:00"
+  },
+  {
+   "url": "https://hayscountytx.gov/jacobs-well-natural-area",
+   "reason": "HTTP Error 403: Forbidden",
+   "at": "2026-10-21T12:26:30+00:00"
+  },
+  {
+   "url": "https://haysgroundwater.com/",
+   "reason": "HTTP Error 403: Forbidden",
+   "at": "2026-10-21T12:26:30+00:00"
+  },
+  {
+   "url": "https://tpwd.texas.gov/state-parks/blanco/alert",
+   "reason": "HTTP Error 400: Bad Request",
+   "at": "2026-10-21T12:26:47+00:00"
   }
  ],
- "captures": 3234,
+ "captures": 3274,
  "pages": {
   "austintexas-gov-department-barton-creek-greenbelt": {
-   "captures": 32,
+   "captures": 33,
    "wayback": 20,
    "first": "2021-03-02T14:12:08+00:00",
-   "last": "2026-10-18T12:14:16+00:00"
+   "last": "2026-10-21T12:25:49+00:00"
   },
   "austintexas-gov-department-barton-springs-pool": {
-   "captures": 415,
+   "captures": 416,
    "wayback": 403,
    "first": "2012-02-13T01:47:11+00:00",
-   "last": "2026-10-18T12:14:17+00:00"
+   "last": "2026-10-21T12:25:51+00:00"
   },
   "austintexas-gov-parks-emma-long-metropolitan-park": {
-   "captures": 17,
+   "captures": 18,
    "wayback": 5,
    "first": "2026-03-19T15:03:44+00:00",
-   "last": "2026-10-18T12:14:19+00:00"
+   "last": "2026-10-21T12:25:53+00:00"
   },
   "austintexas-gov-parks-locations-big-stacy-pool": {
-   "captures": 18,
+   "captures": 19,
    "wayback": 6,
    "first": "2026-03-19T15:05:07+00:00",
-   "last": "2026-10-18T12:14:21+00:00"
+   "last": "2026-10-21T12:25:54+00:00"
   },
   "austintexas-gov-parks-locations-commons-ford-ranch": {
-   "captures": 16,
+   "captures": 17,
    "wayback": 4,
    "first": "2026-03-19T15:04:01+00:00",
-   "last": "2026-10-18T12:14:22+00:00"
+   "last": "2026-10-21T12:25:56+00:00"
   },
   "austintexas-gov-parks-locations-deep-eddy-pool": {
-   "captures": 25,
+   "captures": 26,
    "wayback": 13,
    "first": "2026-03-19T15:04:23+00:00",
-   "last": "2026-10-18T12:14:24+00:00"
+   "last": "2026-10-21T12:25:58+00:00"
   },
   "austintexas-gov-parks-locations-little-stacy-wading-pool": {
-   "captures": 15,
+   "captures": 16,
    "wayback": 3,
    "first": "2026-03-19T15:04:54+00:00",
-   "last": "2026-10-18T12:14:25+00:00"
+   "last": "2026-10-21T12:26:09+00:00"
   },
   "austintexas-gov-parks-parks-and-recreation-facilities-closures": {
-   "captures": 21,
+   "captures": 22,
    "wayback": 9,
    "first": "2026-03-19T17:34:08+00:00",
-   "last": "2026-10-18T12:14:27+00:00"
+   "last": "2026-10-21T12:26:11+00:00"
   },
   "austintexas-gov-ps-af-parks-locations-barton-creek-greenbelt": {
-   "captures": 13,
+   "captures": 14,
    "wayback": 1,
    "first": "2026-03-31T16:36:52+00:00",
-   "last": "2026-10-18T12:14:31+00:00"
+   "last": "2026-10-21T12:26:12+00:00"
   },
   "austintexas-gov-services-visit-barton-springs-pool": {
-   "captures": 25,
+   "captures": 26,
    "wayback": 13,
    "first": "2026-03-19T14:47:14+00:00",
-   "last": "2026-10-18T12:14:32+00:00"
+   "last": "2026-10-21T12:26:14+00:00"
   },
   "austintexas-gov-water-austin-water-drought-response": {
-   "captures": 14,
+   "captures": 15,
    "wayback": 3,
    "first": "2026-03-19T15:19:34+00:00",
-   "last": "2026-10-18T12:14:34+00:00"
+   "last": "2026-10-21T12:26:16+00:00"
   },
   "bseacd-org": {
-   "captures": 281,
+   "captures": 282,
    "wayback": 270,
    "first": "2000-08-16T07:02:57+00:00",
-   "last": "2026-10-18T12:14:38+00:00"
+   "last": "2026-10-21T12:26:18+00:00"
   },
   "cpc-ncep-noaa-gov-sdo-summary": {
-   "captures": 11,
+   "captures": 12,
    "wayback": 0,
    "first": "2026-10-08T18:42:01+00:00",
-   "last": "2026-10-18T12:14:39+00:00"
+   "last": "2026-10-21T12:26:20+00:00"
   },
   "edwardsaquifer-org-critical-period-drought-management": {
-   "captures": 26,
+   "captures": 27,
    "wayback": 15,
    "first": "2025-04-18T00:21:31+00:00",
-   "last": "2026-10-18T12:14:41+00:00"
+   "last": "2026-10-21T12:26:28+00:00"
   },
   "hayscountytx-com-departments-parks-jacobs-well-natural-area": {
    "captures": 93,
@@ -679,64 +709,64 @@
    "last": "2025-12-01T05:31:32+00:00"
   },
   "krausesprings-net": {
-   "captures": 12,
+   "captures": 13,
    "wayback": 0,
    "first": "2026-10-08T18:32:48+00:00",
-   "last": "2026-10-18T12:14:43+00:00"
+   "last": "2026-10-21T12:26:30+00:00"
   },
   "newbraunfels-gov-3368-comal-river": {
-   "captures": 35,
+   "captures": 36,
    "wayback": 23,
    "first": "2022-08-09T14:22:06+00:00",
-   "last": "2026-10-18T12:14:44+00:00"
+   "last": "2026-10-21T12:26:32+00:00"
   },
   "newbraunfels-gov-3369-guadalupe-river": {
-   "captures": 32,
+   "captures": 33,
    "wayback": 20,
    "first": "2022-10-01T02:32:08+00:00",
-   "last": "2026-10-18T12:14:46+00:00"
+   "last": "2026-10-21T12:26:33+00:00"
   },
   "parks-traviscountytx-gov-find-a-park-hamilton-pool": {
-   "captures": 60,
+   "captures": 61,
    "wayback": 50,
    "first": "2012-08-13T04:29:13+00:00",
-   "last": "2026-10-18T12:14:48+00:00"
+   "last": "2026-10-21T12:26:35+00:00"
   },
   "parks-traviscountytx-gov-parks-hamilton-pool-preserve": {
-   "captures": 203,
+   "captures": 204,
    "wayback": 191,
    "first": "2018-11-20T04:46:50+00:00",
-   "last": "2026-10-18T12:14:49+00:00"
+   "last": "2026-10-21T12:26:37+00:00"
   },
   "sanmarcostx-gov-facilities-facility-details-city-park-35": {
-   "captures": 56,
+   "captures": 57,
    "wayback": 44,
    "first": "2019-07-17T14:34:41+00:00",
-   "last": "2026-10-18T12:14:52+00:00"
+   "last": "2026-10-21T12:26:39+00:00"
   },
   "sanmarcostx-gov-facilities-facility-details-riovistapark-41": {
-   "captures": 13,
+   "captures": 14,
    "wayback": 1,
    "first": "2026-01-16T23:40:10+00:00",
-   "last": "2026-10-18T12:14:54+00:00"
+   "last": "2026-10-21T12:26:41+00:00"
   },
   "tceq-texas-gov-drinkingwater-trot-droughtw": {
-   "captures": 11,
+   "captures": 12,
    "wayback": 0,
    "first": "2026-10-08T18:42:21+00:00",
-   "last": "2026-10-18T12:14:55+00:00"
+   "last": "2026-10-21T12:26:42+00:00"
   },
   "tfsweb-tamu-edu-texasburnbans": {
-   "captures": 228,
+   "captures": 229,
    "wayback": 217,
    "first": "2015-08-12T01:18:49+00:00",
-   "last": "2026-10-18T12:14:57+00:00"
+   "last": "2026-10-21T12:26:44+00:00"
   },
   "tpwd-texas-gov-state-parks-blanco": {
-   "captures": 188,
+   "captures": 189,
    "wayback": 177,
    "first": "2014-12-27T04:28:59+00:00",
-   "last": "2026-10-17T12:15:29+00:00"
+   "last": "2026-10-21T12:26:45+00:00"
   },
   "tpwd-texas-gov-state-parks-blanco-alert": {
    "captures": 8,
@@ -745,100 +775,100 @@
    "last": "2026-10-17T12:15:30+00:00"
   },
   "tpwd-texas-gov-state-parks-garner": {
-   "captures": 227,
+   "captures": 228,
    "wayback": 216,
    "first": "2014-03-25T02:20:09+00:00",
-   "last": "2026-10-17T12:15:31+00:00"
+   "last": "2026-10-21T12:26:47+00:00"
   },
   "tpwd-texas-gov-state-parks-garner-alert": {
-   "captures": 11,
-   "wayback": 0,
-   "first": "2026-10-08T18:33:02+00:00",
-   "last": "2026-10-17T12:15:33+00:00"
-  },
-  "tpwd-texas-gov-state-parks-guadalupe-river": {
-   "captures": 228,
-   "wayback": 217,
-   "first": "2014-12-27T00:16:03+00:00",
-   "last": "2026-10-17T12:15:34+00:00"
-  },
-  "tpwd-texas-gov-state-parks-guadalupe-river-alert": {
-   "captures": 28,
-   "wayback": 17,
-   "first": "2024-11-06T01:21:35+00:00",
-   "last": "2026-10-17T12:15:35+00:00"
-  },
-  "tpwd-texas-gov-state-parks-inks-lake": {
-   "captures": 231,
-   "wayback": 220,
-   "first": "2014-04-23T17:37:54+00:00",
-   "last": "2026-10-17T12:15:36+00:00"
-  },
-  "tpwd-texas-gov-state-parks-inks-lake-alert": {
-   "captures": 31,
-   "wayback": 20,
-   "first": "2024-12-09T19:15:03+00:00",
-   "last": "2026-10-17T12:15:38+00:00"
-  },
-  "tpwd-texas-gov-state-parks-mckinney-falls": {
-   "captures": 11,
-   "wayback": 0,
-   "first": "2026-10-08T18:33:07+00:00",
-   "last": "2026-10-17T12:15:39+00:00"
-  },
-  "tpwd-texas-gov-state-parks-mckinney-falls-alert": {
-   "captures": 28,
-   "wayback": 17,
-   "first": "2024-08-19T11:20:13+00:00",
-   "last": "2026-10-17T12:15:40+00:00"
-  },
-  "tpwd-texas-gov-state-parks-pedernales-falls": {
-   "captures": 11,
-   "wayback": 0,
-   "first": "2026-10-08T18:33:09+00:00",
-   "last": "2026-10-17T12:15:41+00:00"
-  },
-  "tpwd-texas-gov-state-parks-pedernales-falls-alert": {
-   "captures": 30,
-   "wayback": 19,
-   "first": "2024-08-03T19:59:15+00:00",
-   "last": "2026-10-17T12:15:43+00:00"
-  },
-  "tpwd-texas-gov-state-parks-south-llano-river": {
-   "captures": 196,
-   "wayback": 185,
-   "first": "2014-10-06T00:24:29+00:00",
-   "last": "2026-10-17T12:15:44+00:00"
-  },
-  "tpwd-texas-gov-state-parks-south-llano-river-alert": {
-   "captures": 28,
-   "wayback": 17,
-   "first": "2024-12-11T15:45:14+00:00",
-   "last": "2026-10-17T12:15:45+00:00"
-  },
-  "twc-tamu-edu-kbdi": {
-   "captures": 11,
-   "wayback": 0,
-   "first": "2026-10-08T18:42:39+00:00",
-   "last": "2026-10-18T12:14:58+00:00"
-  },
-  "txst-edu-about-history-traditions-sewell-park-html": {
-   "captures": 41,
-   "wayback": 29,
-   "first": "2022-08-16T18:51:29+00:00",
-   "last": "2026-10-18T12:15:00+00:00"
-  },
-  "wimberleyparksandrec-com-blog-give-nature-a-chance-the-end-o-dcf2c40a": {
    "captures": 12,
    "wayback": 0,
+   "first": "2026-10-08T18:33:02+00:00",
+   "last": "2026-10-21T12:26:48+00:00"
+  },
+  "tpwd-texas-gov-state-parks-guadalupe-river": {
+   "captures": 229,
+   "wayback": 217,
+   "first": "2014-12-27T00:16:03+00:00",
+   "last": "2026-10-21T12:26:49+00:00"
+  },
+  "tpwd-texas-gov-state-parks-guadalupe-river-alert": {
+   "captures": 29,
+   "wayback": 17,
+   "first": "2024-11-06T01:21:35+00:00",
+   "last": "2026-10-21T12:26:50+00:00"
+  },
+  "tpwd-texas-gov-state-parks-inks-lake": {
+   "captures": 232,
+   "wayback": 220,
+   "first": "2014-04-23T17:37:54+00:00",
+   "last": "2026-10-21T12:26:52+00:00"
+  },
+  "tpwd-texas-gov-state-parks-inks-lake-alert": {
+   "captures": 32,
+   "wayback": 20,
+   "first": "2024-12-09T19:15:03+00:00",
+   "last": "2026-10-21T12:26:53+00:00"
+  },
+  "tpwd-texas-gov-state-parks-mckinney-falls": {
+   "captures": 12,
+   "wayback": 0,
+   "first": "2026-10-08T18:33:07+00:00",
+   "last": "2026-10-21T12:26:54+00:00"
+  },
+  "tpwd-texas-gov-state-parks-mckinney-falls-alert": {
+   "captures": 29,
+   "wayback": 17,
+   "first": "2024-08-19T11:20:13+00:00",
+   "last": "2026-10-21T12:26:55+00:00"
+  },
+  "tpwd-texas-gov-state-parks-pedernales-falls": {
+   "captures": 12,
+   "wayback": 0,
+   "first": "2026-10-08T18:33:09+00:00",
+   "last": "2026-10-21T12:26:57+00:00"
+  },
+  "tpwd-texas-gov-state-parks-pedernales-falls-alert": {
+   "captures": 31,
+   "wayback": 19,
+   "first": "2024-08-03T19:59:15+00:00",
+   "last": "2026-10-21T12:26:58+00:00"
+  },
+  "tpwd-texas-gov-state-parks-south-llano-river": {
+   "captures": 197,
+   "wayback": 185,
+   "first": "2014-10-06T00:24:29+00:00",
+   "last": "2026-10-21T12:26:59+00:00"
+  },
+  "tpwd-texas-gov-state-parks-south-llano-river-alert": {
+   "captures": 29,
+   "wayback": 17,
+   "first": "2024-12-11T15:45:14+00:00",
+   "last": "2026-10-21T12:27:00+00:00"
+  },
+  "twc-tamu-edu-kbdi": {
+   "captures": 12,
+   "wayback": 0,
+   "first": "2026-10-08T18:42:39+00:00",
+   "last": "2026-10-21T12:27:02+00:00"
+  },
+  "txst-edu-about-history-traditions-sewell-park-html": {
+   "captures": 42,
+   "wayback": 29,
+   "first": "2022-08-16T18:51:29+00:00",
+   "last": "2026-10-21T12:27:03+00:00"
+  },
+  "wimberleyparksandrec-com-blog-give-nature-a-chance-the-end-o-dcf2c40a": {
+   "captures": 13,
+   "wayback": 0,
    "first": "2026-10-08T18:33:15+00:00",
-   "last": "2026-10-18T12:15:02+00:00"
+   "last": "2026-10-21T12:27:05+00:00"
   },
   "wimberleyparksandrec-com-blue-hole-regional-park": {
-   "captures": 46,
+   "captures": 47,
    "wayback": 34,
    "first": "2024-02-15T01:35:32+00:00",
-   "last": "2026-10-18T12:15:03+00:00"
+   "last": "2026-10-21T12:27:06+00:00"
   }
  }
 }
