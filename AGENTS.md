@@ -31,6 +31,10 @@ reading means for a person.
 - **Gentle with providers.** USGS: pause between requests. EAA: 3–4 s pauses, stop after repeated
   refusals, never loop. TWDB: a handful of files a day.
 
+The additive external-data pilot uses `tools/reference_data.py` to build the registered `kbdi-county`
+snapshot from `/Volumes/Elements/reference-data`; it does not alter the live water-state publisher or
+scheduled jobs. Its derived `data/reference/` files are publication candidates, never raw inputs.
+
 ## Where to read first
 `hill-country-hydro-system.md` (purpose, layers, decision log, session log, open items), then `README.md`
 (the daily chain). `IDEAS.md` lists possible builds; it is not a backlog.
