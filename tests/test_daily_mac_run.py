@@ -270,7 +270,10 @@ class PinGitTests(unittest.TestCase):
     def test_recovery_rejects_code_and_symlinked_output_before_staging(self):
         self.write(self.pin, "outside.json", "retained\n")
         (self.pin / "data/model").symlink_to(self.pin)
+        self.write(self.pin, "app/creeks.js", "unrelated code\n")
         for name, error in [("tools/run.py", "outside_outputs"),
+                            ("app/creeks.js", "outside_outputs"),
+                            ("data/model/code.py", "outside_outputs"),
                             ("data/model/outside.json", "recovery_symlink")]:
             with self.subTest(name=name), self.assertRaisesRegex(RuntimeError, error):
                 job.commit_recovery(self.pin, [name], "Must stop")

@@ -366,6 +366,7 @@ def commit_recovery(repo: pathlib.Path, paths: list[str], message: str) -> str:
     for name in paths:
         relative = pathlib.PurePosixPath(name)
         if (relative.is_absolute() or str(relative) != name or ".." in relative.parts
+                or relative.suffix not in {".json", ".jsonl", ".csv", ".gz"}
                 or not (name.startswith(roots) or name in
                         {"data/eaa-conditions.json", "data/eaa-sites.json"})):
             raise RuntimeError("recovery_path_outside_outputs " + name)
