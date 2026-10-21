@@ -18,31 +18,31 @@
   },
   "daily_request": {
     "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08155200&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
-    "retrieved_at": "2026-10-11T12:18:29.144262+00:00",
+    "retrieved_at": "2026-10-18T12:16:56.171334+00:00",
     "status": 200,
-    "sha256": "3ef5f995654919179697417a9c163c5d1fcb05e69abbfe6e600510bfe11a975a",
-    "bytes": 8431683,
-    "feature_count": 15509,
+    "sha256": "8ddbce05300024539c2a95393477ccd1a6145fe3f71f9cfe29caa23651a9f5ee",
+    "bytes": 8435505,
+    "feature_count": 15516,
     "next_link": null,
-    "raw_path": "data/raw/usgs-daily/08155200/20261011T121829144262Z-daily-00060-00003.json",
-    "capture_path": "data/captures/usgs-daily/08155200/20261011T121829144262Z-daily-00060-00003.json.gz"
+    "raw_path": "data/raw/usgs-daily/08155200/20261018T121656171334Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08155200/20261018T121656171334Z-daily-00060-00003.json.gz"
   },
   "metadata_requests": {
     "location": {
       "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08155200&limit=1",
-      "retrieved_at": "2026-10-11T12:18:24.566749+00:00",
+      "retrieved_at": "2026-10-18T12:16:49.815214+00:00",
       "status": 200,
-      "sha256": "f8dd48b1576c9c1ddca42b507c056cdba4ea42bf233cbba933a3acf52482a84c",
-      "raw_path": "data/raw/usgs-daily/08155200/20261011T121824566749Z-location.json",
-      "capture_path": "data/captures/usgs-daily/08155200/20261011T121824566749Z-location.json.gz"
+      "sha256": "25935925aa233aa0d9340f0e77069b7c7ec8ae2e54786f3ccc63347e218054bc",
+      "raw_path": "data/raw/usgs-daily/08155200/20261018T121649815214Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08155200/20261018T121649815214Z-location.json.gz"
     },
     "time_series_metadata": {
       "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08155200&limit=1000&skipGeometry=true",
-      "retrieved_at": "2026-10-11T12:18:26.035460+00:00",
+      "retrieved_at": "2026-10-18T12:16:51.261272+00:00",
       "status": 200,
-      "sha256": "34418f608406995cbe7bbcc8479be594f1f094293bef1930e364ad6718135b59",
-      "raw_path": "data/raw/usgs-daily/08155200/20261011T121826035460Z-timeseries-metadata.json",
-      "capture_path": "data/captures/usgs-daily/08155200/20261011T121826035460Z-timeseries-metadata.json.gz"
+      "sha256": "009dfcb685a36a9a3afea062360ce57947b7f9c3f559248ae984374d8746e631",
+      "raw_path": "data/raw/usgs-daily/08155200/20261018T121651261272Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08155200/20261018T121651261272Z-timeseries-metadata.json.gz"
     }
   },
   "complete_response": true,
@@ -55,16 +55,16 @@
       "b55bae6ba07f44a7a08a50861630981f"
     ],
     "first_day": "1978-02-07",
-    "last_day": "2026-10-10",
-    "returned_days": 15509,
-    "numeric_days": 15509,
+    "last_day": "2026-10-17",
+    "returned_days": 15516,
+    "numeric_days": 15516,
     "non_numeric_days": 0,
     "approval_counts": {
       "Approved": 15367,
-      "Provisional": 142
+      "Provisional": 149
     },
     "qualifier_counts": {
-      "[]": 15180,
+      "[]": 15187,
       "[\"ESTIMATED\"]": 327,
       "[\"FORCEINTERPOLATION\"]": 1,
       "[\"ESTIMATED\", \"MAINT\"]": 1
@@ -93,7 +93,7 @@
       "computation_identifier": "Instantaneous",
       "computation_period_identifier": "Points",
       "begin": "1979-02-02T06:15:00+00:00",
-      "end": "2026-10-11T07:15:00+00:00",
+      "end": "2026-10-18T08:15:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -106,7 +106,7 @@
       "computation_identifier": "Max",
       "computation_period_identifier": "Daily",
       "begin": "2001-10-01T05:00:00+00:00",
-      "end": "2026-10-10T05:00:00+00:00",
+      "end": "2026-10-17T05:00:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -119,7 +119,7 @@
       "computation_identifier": "Mean",
       "computation_period_identifier": "Daily",
       "begin": "1997-02-08T06:00:00+00:00",
-      "end": "2026-10-09T05:00:00+00:00",
+      "end": "2026-10-16T05:00:00+00:00",
       "unit_of_measure": "ft",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -132,7 +132,7 @@
       "computation_identifier": "Min",
       "computation_period_identifier": "Daily",
       "begin": "1997-02-08T06:00:00+00:00",
-      "end": "2026-10-09T05:00:00+00:00",
+      "end": "2026-10-16T05:00:00+00:00",
       "unit_of_measure": "ft",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -158,7 +158,7 @@
       "computation_identifier": "Mean",
       "computation_period_identifier": "Daily",
       "begin": "1978-02-07T06:00:00+00:00",
-      "end": "2026-10-09T05:00:00+00:00",
+      "end": "2026-10-16T05:00:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -171,7 +171,7 @@
       "computation_identifier": "Min",
       "computation_period_identifier": "Daily",
       "begin": "2001-10-01T05:00:00+00:00",
-      "end": "2026-10-10T05:00:00+00:00",
+      "end": "2026-10-17T05:00:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -184,7 +184,7 @@
       "computation_identifier": "Max",
       "computation_period_identifier": "Daily",
       "begin": "1997-02-08T06:00:00+00:00",
-      "end": "2026-10-09T05:00:00+00:00",
+      "end": "2026-10-16T05:00:00+00:00",
       "unit_of_measure": "ft",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -197,7 +197,7 @@
       "computation_identifier": "Instantaneous",
       "computation_period_identifier": "Points",
       "begin": "2007-10-01T06:00:00+00:00",
-      "end": "2026-10-11T08:15:00+00:00",
+      "end": "2026-10-18T09:15:00+00:00",
       "unit_of_measure": "ft",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -209,8 +209,8 @@
       "statistic_id": "00011",
       "computation_identifier": "Instantaneous",
       "computation_period_identifier": "Points",
-      "begin": "2026-06-08T00:00:00+00:00",
-      "end": "2026-10-11T08:15:00+00:00",
+      "begin": "2026-06-15T00:00:00+00:00",
+      "end": "2026-10-18T09:15:00+00:00",
       "unit_of_measure": "ft",
       "primary": null,
       "sublocation_identifier": null

@@ -3,13 +3,13 @@
   "source_csv": "data/history/08156800-00060-daily-mean.csv",
   "record": {
     "first_day": "1983-01-08",
-    "last_day": "2026-10-10",
-    "numeric_days": 15887,
-    "zero_days": 7136,
+    "last_day": "2026-10-17",
+    "numeric_days": 15922,
+    "zero_days": 7166,
     "median_daily_mean": 0.03
   },
   "event_definition": {
-    "high_threshold": 29.9,
+    "high_threshold": 29.8,
     "low_threshold": 0.84,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -7111,6 +7111,24 @@
       }
     },
     {
+      "start": "2020-06-20",
+      "end": "2020-06-21",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "2020-06-20",
+      "peak_value": 29.8,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 15.525,
+      "has_provisional": false,
+      "water_year": 2020,
+      "peak_month": 6,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 5.76
+      }
+    },
+    {
       "start": "2020-06-23",
       "end": "2020-06-24",
       "end_reason": "fell_below_low_threshold",
@@ -8258,13 +8276,13 @@
       "water_year": 2027,
       "peak_month": 10,
       "antecedent_30_day": {
-        "days_available": 2,
-        "mean": 0.0
+        "days_available": 30,
+        "mean": 0.03
       }
     }
   ],
   "summary": {
-    "event_count": 458,
+    "event_count": 459,
     "events_per_water_year": {
       "1983": 1,
       "1985": 12,
@@ -8302,7 +8320,7 @@
       "2017": 10,
       "2018": 10,
       "2019": 4,
-      "2020": 10,
+      "2020": 11,
       "2021": 8,
       "2022": 7,
       "2023": 12,
@@ -8311,15 +8329,15 @@
       "2026": 10,
       "2027": 1
     },
-    "median_duration_days": 3.0,
-    "median_peak_value": 85.95,
+    "median_duration_days": 3,
+    "median_peak_value": 85.9,
     "peak_month_counts": {
       "1": 32,
       "2": 21,
       "3": 37,
       "4": 36,
       "5": 68,
-      "6": 54,
+      "6": 55,
       "7": 24,
       "8": 24,
       "9": 44,
