@@ -482,3 +482,8 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
   it cannot fail the day. One test in `tests/test_daily_mac_run.py`. The step's tool arrives in the swim pin with the same
   `--promote` that brings this plan, so the path check passes. Reason: the private app's copy had been hand-made and was from 09-29.
 
+
+
+### 2026-10-20 — E01 retained-output recovery
+
+The E01 recovery preserves the pending water outputs and the 89 original HEAD captures before landing an explicitly reviewed path set. Bundle tests now check threshold projection with a fixed fixture and compare each live threshold to its source ledger; the nearest-rank percentile method is unchanged. The scoped recovery commit helper honors hooks and refuses capture deletion, symlinked output paths and unrelated staged work. It does not collect, alter daily claims or promote the swim consumer. Exact preservation, tests and execution receipts live in `~/Documents/job-data/earth-refactor/tasks/E01/proofs/`.

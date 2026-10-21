@@ -351,6 +351,41 @@ def land(repo: pathlib.Path, stamp: str, code: str, attempts: int = 2) -> None:
         return
 
 
+def commit_recovery(repo: pathlib.Path, paths: list[str], message: str) -> str:
+    """Commit an explicitly reviewed set of retained water outputs, with normal hooks.
+
+    This does not collect, land, promote or change the daily claim. A recovery operator
+    validates the isolated copy and reviews the exact diff before calling it, then
+    lands the returned commit through the existing owner procedure.
+    """
+    if not paths or len(paths) != len(set(paths)):
+        raise RuntimeError("recovery_paths_empty_or_duplicate")
+    if git(repo, "diff", "--cached", "--name-only", capture=True):
+        raise RuntimeError("recovery_index_not_empty")
+    roots = ("app/", "dist/", "data/captures/", "data/history/", "data/model/")
+    for name in paths:
+        relative = pathlib.PurePosixPath(name)
+        if (relative.is_absolute() or str(relative) != name or ".." in relative.parts
+                or not (name.startswith(roots) or name in
+                        {"data/eaa-conditions.json", "data/eaa-sites.json"})):
+            raise RuntimeError("recovery_path_outside_outputs " + name)
+        current = repo
+        for part in relative.parts:
+            current = current / part
+            if current.is_symlink():
+                raise RuntimeError("recovery_symlink " + name)
+        if not current.is_file():
+            raise RuntimeError("recovery_missing_output " + name)
+    git(repo, "add", "--", *paths)
+    staged = git(repo, "diff", "--cached", "--name-only", "-z", capture=True).split("\0")
+    if set(filter(None, staged)) - set(paths):
+        raise RuntimeError("recovery_staged_outside_review")
+    if git(repo, "diff", "--cached", "--diff-filter=D", "--name-only", capture=True):
+        raise RuntimeError("recovery_capture_deletion")
+    git(repo, "commit", "--quiet", "-m", message)
+    return git(repo, "rev-parse", "HEAD", capture=True)
+
+
 def commit_and_land(repo: pathlib.Path, day: dt.date, code: str) -> None:
     stamp = day.strftime("%Y%m%d")
     git(repo, "add", "-A")

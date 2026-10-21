@@ -234,6 +234,48 @@ class PinGitTests(unittest.TestCase):
         self.assertEqual("Daily run 20261009", self.origin_main("log", "-1", "--format=%s", "main"))
         self.assertEqual(start, job.code_commit(self.pin))
 
+    def test_recovery_commits_only_reviewed_outputs_and_does_not_land(self):
+        remote = self.origin_main("rev-parse", "main")
+        self.write(self.pin, "data/model/recovered.json", '{"retained": true}\n')
+        self.write(self.pin, "unrelated.txt", "keep me\n")
+        tip = job.commit_recovery(self.pin, ["data/model/recovered.json"], "Recover retained outputs")
+        self.assertEqual(["data/model/recovered.json"],
+                         sh(self.pin, "diff-tree", "--no-commit-id", "--name-only", "-r", tip).splitlines())
+        self.assertEqual(remote, self.origin_main("rev-parse", "main"))
+        self.assertIn("?? unrelated.txt", sh(self.pin, "status", "--porcelain"))
+
+    def test_recovery_honors_a_refusing_hook(self):
+        old = sh(self.pin, "rev-parse", "HEAD")
+        hook = self.pin / ".git/hooks/pre-commit"
+        hook.write_text("#!/bin/sh\nexit 1\n"); hook.chmod(0o755)
+        self.write(self.pin, "data/model/recovered.json", "{}\n")
+        with self.assertRaises(subprocess.CalledProcessError):
+            job.commit_recovery(self.pin, ["data/model/recovered.json"], "Recovery must stop")
+        self.assertEqual(old, sh(self.pin, "rev-parse", "HEAD"))
+        self.assertEqual(old, self.origin_main("rev-parse", "main"))
+
+    def test_recovery_rejects_missing_capture_and_unrelated_staged_work(self):
+        old = sh(self.pin, "rev-parse", "HEAD")
+        with self.assertRaisesRegex(RuntimeError, "recovery_missing_output"):
+            job.commit_recovery(self.pin, ["data/captures/missing.gz"], "Must stop")
+        self.write(self.pin, "data/model/recovered.json", "{}\n")
+        self.write(self.pin, "unrelated.txt", "keep staged\n")
+        sh(self.pin, "add", "--", "unrelated.txt")
+        before = sh(self.pin, "ls-files", "--stage")
+        with self.assertRaisesRegex(RuntimeError, "recovery_index_not_empty"):
+            job.commit_recovery(self.pin, ["data/model/recovered.json"], "Must stop")
+        self.assertEqual(before, sh(self.pin, "ls-files", "--stage"))
+        self.assertEqual(old, sh(self.pin, "rev-parse", "HEAD"))
+
+    def test_recovery_rejects_code_and_symlinked_output_before_staging(self):
+        self.write(self.pin, "outside.json", "retained\n")
+        (self.pin / "data/model").symlink_to(self.pin)
+        for name, error in [("tools/run.py", "outside_outputs"),
+                            ("data/model/outside.json", "recovery_symlink")]:
+            with self.subTest(name=name), self.assertRaisesRegex(RuntimeError, error):
+                job.commit_recovery(self.pin, [name], "Must stop")
+        self.assertEqual("", sh(self.pin, "diff", "--cached", "--name-only"))
+
     def test_the_daily_commit_goes_through_a_pin_guard_hook_that_refuses_every_commit(self):
         hook = self.pin / ".git" / "hooks" / "pre-commit"
         hook.write_text("#!/bin/sh\necho 'pin-guard: refused' >&2\nexit 1\n")
