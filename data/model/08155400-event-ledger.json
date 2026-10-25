@@ -3,14 +3,14 @@
   "source_csv": "data/history/08155400-00060-daily-mean.csv",
   "record": {
     "first_day": "1998-09-24",
-    "last_day": "2026-10-17",
-    "numeric_days": 10251,
-    "zero_days": 2346,
+    "last_day": "2026-10-24",
+    "numeric_days": 10258,
+    "zero_days": 2353,
     "median_daily_mean": 0.96
   },
   "event_definition": {
     "high_threshold": 157.0,
-    "low_threshold": 8.57,
+    "low_threshold": 8.5,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
     "unit": "ft^3/s daily mean",
@@ -74,38 +74,20 @@
     },
     {
       "start": "2000-12-26",
-      "end": "2001-05-03",
+      "end": "2001-05-22",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 129,
+      "duration_days": 148,
       "peak_date": "2000-12-27",
       "peak_value": 492.0,
       "rise_days": 2,
-      "recession_days": 127,
-      "mean_value": 115.978,
+      "recession_days": 146,
+      "mean_value": 107.768,
       "has_provisional": false,
       "water_year": 2001,
       "peak_month": 12,
       "antecedent_30_day": {
         "days_available": 30,
         "mean": 15.677
-      }
-    },
-    {
-      "start": "2001-05-07",
-      "end": "2001-05-22",
-      "end_reason": "fell_below_low_threshold",
-      "duration_days": 16,
-      "peak_date": "2001-05-07",
-      "peak_value": 277.0,
-      "rise_days": 1,
-      "recession_days": 15,
-      "mean_value": 56.812,
-      "has_provisional": false,
-      "water_year": 2001,
-      "peak_month": 5,
-      "antecedent_30_day": {
-        "days_available": 30,
-        "mean": 42.353
       }
     },
     {
@@ -560,14 +542,14 @@
     },
     {
       "start": "2016-03-12",
-      "end": "2016-07-30",
+      "end": "2016-07-31",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 141,
+      "duration_days": 142,
       "peak_date": "2016-05-19",
       "peak_value": 1040.0,
       "rise_days": 69,
-      "recession_days": 72,
-      "mean_value": 155.248,
+      "recession_days": 73,
+      "mean_value": 154.214,
       "has_provisional": false,
       "water_year": 2016,
       "peak_month": 5,
@@ -830,11 +812,11 @@
     }
   ],
   "summary": {
-    "event_count": 45,
+    "event_count": 44,
     "events_per_water_year": {
       "1999": 1,
       "2000": 1,
-      "2001": 3,
+      "2001": 2,
       "2002": 2,
       "2003": 1,
       "2004": 1,
@@ -854,13 +836,13 @@
       "2024": 1,
       "2026": 1
     },
-    "median_duration_days": 16,
-    "median_peak_value": 578.0,
+    "median_duration_days": 21.0,
+    "median_peak_value": 581.0,
     "peak_month_counts": {
       "1": 5,
       "2": 3,
       "3": 3,
-      "5": 9,
+      "5": 8,
       "6": 4,
       "7": 3,
       "8": 2,

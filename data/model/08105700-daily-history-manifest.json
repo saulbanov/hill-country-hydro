@@ -18,25 +18,32 @@
   },
   "daily_request": {
     "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08105700&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
-    "retrieved_at": "2026-10-01T15:10:32.212970+00:00",
+    "retrieved_at": "2026-10-25T12:44:25.434871+00:00",
     "status": 200,
-    "sha256": "85b4915f928a39604edb9c475fb800e38630d83eaac4316935333dea1c2ecab3",
-    "bytes": 12136577,
-    "feature_count": 22357,
+    "sha256": "04e96c99dcb689c3588134f8ec306b9056a443d1d15778c33071a5043d418a9a",
+    "bytes": 12149309,
+    "feature_count": 22381,
     "next_link": null,
-    "raw_path": "data/raw/usgs-daily/08105700/20261001T151032212970Z-daily-00060-00003.json",
-    "capture_path": "data/captures/usgs-daily/08105700/20261001T151032212970Z-daily-00060-00003.json.gz"
+    "raw_path": "data/raw/usgs-daily/08105700/20261025T124425434871Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08105700/20261025T124425434871Z-daily-00060-00003.json.gz"
   },
   "metadata_requests": {
     "location": {
       "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08105700&limit=1",
-      "retrieved_at": "2026-10-01T15:10:16.500120+00:00",
+      "retrieved_at": "2026-10-25T12:44:18.041592+00:00",
       "status": 200,
-      "sha256": "2e5e0ae81605ef8d618fcbb6d3b214cae0732635ca4c4dd72015f6bcc35f1951",
-      "raw_path": "data/raw/usgs-daily/08105700/20261001T151016500120Z-location.json",
-      "capture_path": "data/captures/usgs-daily/08105700/20261001T151016500120Z-location.json.gz"
+      "sha256": "39491fb0c1da275743f9981891bc8561fdb06305d6e3d4370f31d32b021a6ecb",
+      "raw_path": "data/raw/usgs-daily/08105700/20261025T124418041592Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08105700/20261025T124418041592Z-location.json.gz"
     },
-    "time_series_metadata": null
+    "time_series_metadata": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08105700&limit=1000&skipGeometry=true",
+      "retrieved_at": "2026-10-25T12:44:19.464743+00:00",
+      "status": 200,
+      "sha256": "aaf2fff20bacbb108ee2482a9d129253de79748474b302fdac702c33de64572a",
+      "raw_path": "data/raw/usgs-daily/08105700/20261025T124419464743Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08105700/20261025T124419464743Z-timeseries-metadata.json.gz"
+    }
   },
   "complete_response": true,
   "normalized_csv": "data/history/08105700-00060-daily-mean.csv",
@@ -48,21 +55,126 @@
       "c00d0b3f44884661a491aa66f12a7001"
     ],
     "first_day": "1965-07-16",
-    "last_day": "2026-09-30",
-    "returned_days": 22357,
-    "numeric_days": 22357,
+    "last_day": "2026-10-24",
+    "returned_days": 22381,
+    "numeric_days": 22381,
     "non_numeric_days": 0,
     "approval_counts": {
-      "Approved": 22232,
-      "Provisional": 125
+      "Approved": 22356,
+      "Provisional": 25
     },
     "qualifier_counts": {
-      "[]": 22299,
+      "[]": 22323,
       "[\"ESTIMATED\"]": 58
     },
     "zero_days": 53
   },
-  "station_series_inventory_00060_00065": [],
+  "station_series_inventory_00060_00065": [
+    {
+      "id": "170936cc959145d0a7e1f6229a64cea4",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": null,
+      "computation_identifier": "Max At Event Time",
+      "computation_period_identifier": "Water Year",
+      "begin": "1965-09-22T05:00:00+00:00",
+      "end": "2026-06-18T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "5392d29118bc4f95acac954aa9c4409a",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00001",
+      "computation_identifier": "Max",
+      "computation_period_identifier": "Daily",
+      "begin": "2007-10-01T05:00:00+00:00",
+      "end": "2026-10-24T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "62f4e78917174f7cbee164559c7f25da",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00002",
+      "computation_identifier": "Min",
+      "computation_period_identifier": "Daily",
+      "begin": "2007-10-01T05:00:00+00:00",
+      "end": "2026-10-24T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "97994f667aeb440a830f1bf776d32a3c",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": "00003",
+      "computation_identifier": "Mean",
+      "computation_period_identifier": "Daily",
+      "begin": "1987-07-08T05:00:00+00:00",
+      "end": "2026-10-23T05:00:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "c00d0b3f44884661a491aa66f12a7001",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00003",
+      "computation_identifier": "Mean",
+      "computation_period_identifier": "Daily",
+      "begin": "1965-07-16T05:00:00+00:00",
+      "end": "2026-10-24T05:00:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "c83c36a0d99f42c887d26733277da8a8",
+      "parameter_code": "00060",
+      "parameter_name": "Discharge",
+      "statistic_id": "00011",
+      "computation_identifier": "Instantaneous",
+      "computation_period_identifier": "Points",
+      "begin": "2007-10-01T06:00:00+00:00",
+      "end": "2026-10-25T07:15:00+00:00",
+      "unit_of_measure": "ft^3/s",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "d11a8ba5ffda481d93a108d7455e397b",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": null,
+      "computation_identifier": "Max At Event Time",
+      "computation_period_identifier": "Water Year",
+      "begin": "1921-09-01T05:00:00+00:00",
+      "end": "2026-06-18T05:00:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    },
+    {
+      "id": "f322368acf474fcc8d75b615aabed197",
+      "parameter_code": "00065",
+      "parameter_name": "Gage height",
+      "statistic_id": "00011",
+      "computation_identifier": "Instantaneous",
+      "computation_period_identifier": "Points",
+      "begin": "2007-10-01T06:00:00+00:00",
+      "end": "2026-10-25T05:15:00+00:00",
+      "unit_of_measure": "ft",
+      "primary": "Primary",
+      "sublocation_identifier": null
+    }
+  ],
   "gaps": {
     "count": 0,
     "missing_days_total": 0,

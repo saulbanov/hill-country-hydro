@@ -18,14 +18,14 @@
   },
   "daily_request": {
     "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08171400&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
-    "retrieved_at": "2026-10-01T15:11:28.651839+00:00",
+    "retrieved_at": "2026-10-25T12:45:09.612508+00:00",
     "status": 200,
-    "sha256": "9d5d317152fd955f0197bc406bc45d0b429f40545ca288006a03da79631a24b7",
-    "bytes": 3005916,
-    "feature_count": 5537,
+    "sha256": "fa519edf3163223988b8a8b8b6758f1df73885190c8112a6856e41484055f78d",
+    "bytes": 3019002,
+    "feature_count": 5561,
     "next_link": null,
-    "raw_path": "data/raw/usgs-daily/08171400/20261001T151128651839Z-daily-00060-00003.json",
-    "capture_path": "data/captures/usgs-daily/08171400/20261001T151128651839Z-daily-00060-00003.json.gz"
+    "raw_path": "data/raw/usgs-daily/08171400/20261025T124509612508Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08171400/20261025T124509612508Z-daily-00060-00003.json.gz"
   },
   "metadata_requests": {
     "location": {
@@ -55,16 +55,16 @@
       "86270d425c7c448b944a396e0de2d5fe"
     ],
     "first_day": "2011-05-19",
-    "last_day": "2026-09-30",
-    "returned_days": 5537,
-    "numeric_days": 5537,
+    "last_day": "2026-10-24",
+    "returned_days": 5561,
+    "numeric_days": 5561,
     "non_numeric_days": 0,
     "approval_counts": {
       "Approved": 5347,
-      "Provisional": 190
+      "Provisional": 214
     },
     "qualifier_counts": {
-      "[]": 5482,
+      "[]": 5506,
       "[\"ESTIMATED\"]": 44,
       "[\"EQUIP\", \"ESTIMATED\"]": 11
     },

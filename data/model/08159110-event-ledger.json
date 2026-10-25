@@ -3,14 +3,14 @@
   "source_csv": "data/history/08159110-00060-daily-mean.csv",
   "record": {
     "first_day": "2019-02-22",
-    "last_day": "2026-09-30",
-    "numeric_days": 2778,
+    "last_day": "2026-10-24",
+    "numeric_days": 2802,
     "zero_days": 451,
-    "median_daily_mean": 0.57
+    "median_daily_mean": 0.56
   },
   "event_definition": {
-    "high_threshold": 10.3,
-    "low_threshold": 1.38,
+    "high_threshold": 10.2,
+    "low_threshold": 1.37,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
     "unit": "ft^3/s daily mean",
@@ -20,14 +20,14 @@
   "events": [
     {
       "start": "2019-04-06",
-      "end": "2019-04-20",
+      "end": "2019-04-21",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 15,
+      "duration_days": 16,
       "peak_date": "2019-04-07",
       "peak_value": 266.0,
       "rise_days": 2,
-      "recession_days": 13,
-      "mean_value": 36.075,
+      "recession_days": 14,
+      "mean_value": 33.906,
       "has_provisional": false,
       "water_year": 2019,
       "peak_month": 4,
@@ -145,21 +145,21 @@
       }
     },
     {
-      "start": "2020-03-21",
+      "start": "2020-03-20",
       "end": "2020-04-19",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 30,
+      "duration_days": 31,
       "peak_date": "2020-03-21",
       "peak_value": 25.9,
-      "rise_days": 1,
+      "rise_days": 2,
       "recession_days": 29,
-      "mean_value": 5.95,
+      "mean_value": 6.087,
       "has_provisional": false,
       "water_year": 2020,
       "peak_month": 3,
       "antecedent_30_day": {
         "days_available": 30,
-        "mean": 2.367
+        "mean": 2.066
       }
     },
     {
@@ -892,7 +892,7 @@
       "rise_days": 2,
       "recession_days": 23,
       "mean_value": 7.89,
-      "has_provisional": true,
+      "has_provisional": false,
       "water_year": 2026,
       "peak_month": 5,
       "antecedent_30_day": {
@@ -910,7 +910,7 @@
       "rise_days": 1,
       "recession_days": 7,
       "mean_value": 16.185,
-      "has_provisional": true,
+      "has_provisional": false,
       "water_year": 2026,
       "peak_month": 6,
       "antecedent_30_day": {
@@ -928,7 +928,7 @@
       "rise_days": 1,
       "recession_days": 3,
       "mean_value": 9.865,
-      "has_provisional": true,
+      "has_provisional": false,
       "water_year": 2026,
       "peak_month": 7,
       "antecedent_30_day": {

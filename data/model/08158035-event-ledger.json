@@ -3,13 +3,13 @@
   "source_csv": "data/history/08158035-00060-daily-mean.csv",
   "record": {
     "first_day": "2007-08-01",
-    "last_day": "2026-09-30",
-    "numeric_days": 7001,
-    "zero_days": 606,
+    "last_day": "2026-10-24",
+    "numeric_days": 7025,
+    "zero_days": 605,
     "median_daily_mean": 0.46
   },
   "event_definition": {
-    "high_threshold": 11.1,
+    "high_threshold": 11.2,
     "low_threshold": 0.9,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -1438,24 +1438,6 @@
       "antecedent_30_day": {
         "days_available": 30,
         "mean": 1.892
-      }
-    },
-    {
-      "start": "2014-12-19",
-      "end": "2014-12-19",
-      "end_reason": "fell_below_low_threshold",
-      "duration_days": 1,
-      "peak_date": "2014-12-19",
-      "peak_value": 11.1,
-      "rise_days": 1,
-      "recession_days": 0,
-      "mean_value": 11.1,
-      "has_provisional": false,
-      "water_year": 2015,
-      "peak_month": 12,
-      "antecedent_30_day": {
-        "days_available": 30,
-        "mean": 5.625
       }
     },
     {
@@ -3851,6 +3833,24 @@
         "days_available": 30,
         "mean": 3.206
       }
+    },
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-02",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "2026-10-01",
+      "peak_value": 38.3,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 27.55,
+      "has_provisional": true,
+      "water_year": 2027,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 0.031
+      }
     }
   ],
   "summary": {
@@ -3864,7 +3864,7 @@
       "2012": 14,
       "2013": 11,
       "2014": 13,
-      "2015": 12,
+      "2015": 11,
       "2016": 6,
       "2017": 10,
       "2018": 13,
@@ -3875,10 +3875,11 @@
       "2023": 11,
       "2024": 14,
       "2025": 12,
-      "2026": 12
+      "2026": 12,
+      "2027": 1
     },
     "median_duration_days": 2,
-    "median_peak_value": 30.3,
+    "median_peak_value": 30.8,
     "peak_month_counts": {
       "1": 16,
       "2": 8,
@@ -3889,9 +3890,9 @@
       "7": 16,
       "8": 17,
       "9": 23,
-      "10": 21,
+      "10": 22,
       "11": 13,
-      "12": 14
+      "12": 13
     },
     "events_ended_by_gap": 0
   },

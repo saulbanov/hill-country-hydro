@@ -2,27 +2,47 @@
   "version": "v1",
   "purpose": "Versionable provenance, completeness, and gap report for the USGS daily-mean discharge history of one Austin station. Raw bytes are preserved before parsing; the CSV is a typed view, not a substitute source.",
   "station_id": "USGS-08104900",
-  "station": {},
+  "station": {
+    "monitoring_location_name": "S Fk San Gabriel Rv at Georgetown, TX",
+    "site_type": "Stream",
+    "hydrologic_unit_code": "120702050203",
+    "drainage_area": 133.0,
+    "contributing_drainage_area": 133.0,
+    "altitude": 687.94,
+    "vertical_datum": "NAVD88",
+    "county_name": "Williamson County",
+    "coordinates_lon_lat": [
+      -97.6911203657225,
+      30.6257499029033
+    ]
+  },
   "daily_request": {
     "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/daily/items?f=json&monitoring_location_id=USGS-08104900&parameter_code=00060&statistic_id=00003&limit=50000&skipGeometry=true",
-    "retrieved_at": "2026-10-01T15:10:05.392063+00:00",
+    "retrieved_at": "2026-10-25T12:44:04.241270+00:00",
     "status": 200,
-    "sha256": "7e3b26bc16f2d6c705bea192b84f6db5d86df3d918abba71e6139dbe98383147",
-    "bytes": 11672824,
-    "feature_count": 21489,
+    "sha256": "1d5a43435f27eb2473530779529d18dc452fecba48e3c499eb08fbec79e84a6a",
+    "bytes": 11685928,
+    "feature_count": 21513,
     "next_link": null,
-    "raw_path": "data/raw/usgs-daily/08104900/20261001T151005392063Z-daily-00060-00003.json",
-    "capture_path": "data/captures/usgs-daily/08104900/20261001T151005392063Z-daily-00060-00003.json.gz"
+    "raw_path": "data/raw/usgs-daily/08104900/20261025T124404241270Z-daily-00060-00003.json",
+    "capture_path": "data/captures/usgs-daily/08104900/20261025T124404241270Z-daily-00060-00003.json.gz"
   },
   "metadata_requests": {
-    "location": null,
+    "location": {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-08104900&limit=1",
+      "retrieved_at": "2026-10-25T12:43:58.481685+00:00",
+      "status": 200,
+      "sha256": "e0de3139f70e4d112ed5948222f3db22f6f339cd65dc7b24f569ab166c76aa7e",
+      "raw_path": "data/raw/usgs-daily/08104900/20261025T124358481685Z-location.json",
+      "capture_path": "data/captures/usgs-daily/08104900/20261025T124358481685Z-location.json.gz"
+    },
     "time_series_metadata": {
       "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/time-series-metadata/items?f=json&monitoring_location_id=USGS-08104900&limit=1000&skipGeometry=true",
-      "retrieved_at": "2026-10-01T15:10:01.676828+00:00",
+      "retrieved_at": "2026-10-25T12:43:59.984596+00:00",
       "status": 200,
-      "sha256": "2b9422eeff0fd69c08da47563f903ef50876accad88bebc12ef14c1ef8b116dd",
-      "raw_path": "data/raw/usgs-daily/08104900/20261001T151001676828Z-timeseries-metadata.json",
-      "capture_path": "data/captures/usgs-daily/08104900/20261001T151001676828Z-timeseries-metadata.json.gz"
+      "sha256": "a7391abf90093dd44dd3db1634443b1d9b514ec80b7f03ac4d39df2bf1401b8d",
+      "raw_path": "data/raw/usgs-daily/08104900/20261025T124359984596Z-timeseries-metadata.json",
+      "capture_path": "data/captures/usgs-daily/08104900/20261025T124359984596Z-timeseries-metadata.json.gz"
     }
   },
   "complete_response": true,
@@ -35,16 +55,16 @@
       "647b029bdd7949ee88b0e42c60dcecc3"
     ],
     "first_day": "1967-12-01",
-    "last_day": "2026-09-30",
-    "returned_days": 21489,
-    "numeric_days": 21489,
+    "last_day": "2026-10-24",
+    "returned_days": 21513,
+    "numeric_days": 21513,
     "non_numeric_days": 0,
     "approval_counts": {
       "Approved": 21472,
-      "Provisional": 17
+      "Provisional": 41
     },
     "qualifier_counts": {
-      "[]": 21334,
+      "[]": 21358,
       "[\"ESTIMATED\"]": 150,
       "[\"ESTIMATED\", \"MAINT\"]": 2,
       "[\"EQUIP\", \"ESTIMATED\"]": 3
@@ -59,8 +79,8 @@
       "statistic_id": "00011",
       "computation_identifier": "Instantaneous",
       "computation_period_identifier": "Points",
-      "begin": "2007-10-01T11:00:00+00:00",
-      "end": "2026-10-01T12:15:00+00:00",
+      "begin": "2007-10-01T06:00:00+00:00",
+      "end": "2026-10-25T07:45:00+00:00",
       "unit_of_measure": "ft",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -72,8 +92,8 @@
       "statistic_id": "00011",
       "computation_identifier": "Instantaneous",
       "computation_period_identifier": "Points",
-      "begin": "2007-10-01T11:00:00+00:00",
-      "end": "2026-10-01T13:00:00+00:00",
+      "begin": "2007-10-01T06:00:00+00:00",
+      "end": "2026-10-25T08:15:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -99,7 +119,7 @@
       "computation_identifier": "Mean",
       "computation_period_identifier": "Daily",
       "begin": "1967-12-01T06:00:00+00:00",
-      "end": "2026-09-29T05:00:00+00:00",
+      "end": "2026-10-23T05:00:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -125,7 +145,7 @@
       "computation_identifier": "Max",
       "computation_period_identifier": "Daily",
       "begin": "2007-10-01T05:00:00+00:00",
-      "end": "2026-09-30T05:00:00+00:00",
+      "end": "2026-10-24T05:00:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -138,7 +158,7 @@
       "computation_identifier": "Min",
       "computation_period_identifier": "Daily",
       "begin": "2007-10-01T05:00:00+00:00",
-      "end": "2026-09-30T05:00:00+00:00",
+      "end": "2026-10-24T05:00:00+00:00",
       "unit_of_measure": "ft^3/s",
       "primary": "Primary",
       "sublocation_identifier": null
@@ -151,7 +171,7 @@
       "computation_identifier": "Mean",
       "computation_period_identifier": "Daily",
       "begin": "1987-04-30T05:00:00+00:00",
-      "end": "2026-09-29T05:00:00+00:00",
+      "end": "2026-10-23T05:00:00+00:00",
       "unit_of_measure": "ft",
       "primary": "Primary",
       "sublocation_identifier": null

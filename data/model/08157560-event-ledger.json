@@ -3,14 +3,14 @@
   "source_csv": "data/history/08157560-00060-daily-mean.csv",
   "record": {
     "first_day": "2014-07-10",
-    "last_day": "2026-09-30",
-    "numeric_days": 3498,
+    "last_day": "2026-10-24",
+    "numeric_days": 3522,
     "zero_days": 0,
-    "median_daily_mean": 6.29
+    "median_daily_mean": 6.325
   },
   "event_definition": {
     "high_threshold": 17.2,
-    "low_threshold": 9.01,
+    "low_threshold": 8.99,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
     "unit": "ft^3/s daily mean",
@@ -2195,10 +2195,28 @@
         "days_available": 14,
         "mean": 8.255
       }
+    },
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-02",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 2,
+      "peak_date": "2026-10-01",
+      "peak_value": 19.4,
+      "rise_days": 1,
+      "recession_days": 1,
+      "mean_value": 17.8,
+      "has_provisional": true,
+      "water_year": 2027,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 8.849
+      }
     }
   ],
   "summary": {
-    "event_count": 121,
+    "event_count": 122,
     "events_per_water_year": {
       "2014": 4,
       "2015": 22,
@@ -2211,10 +2229,11 @@
       "2022": 9,
       "2023": 9,
       "2024": 1,
-      "2026": 1
+      "2026": 1,
+      "2027": 1
     },
-    "median_duration_days": 2,
-    "median_peak_value": 25.7,
+    "median_duration_days": 2.0,
+    "median_peak_value": 25.35,
     "peak_month_counts": {
       "1": 9,
       "2": 5,
@@ -2225,7 +2244,7 @@
       "7": 5,
       "8": 8,
       "9": 7,
-      "10": 13,
+      "10": 14,
       "11": 10,
       "12": 11
     },

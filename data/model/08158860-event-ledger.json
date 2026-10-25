@@ -3,13 +3,13 @@
   "source_csv": "data/history/08158860-00060-daily-mean.csv",
   "record": {
     "first_day": "2003-05-31",
-    "last_day": "2026-09-30",
-    "numeric_days": 8459,
-    "zero_days": 7338,
+    "last_day": "2026-10-24",
+    "numeric_days": 8483,
+    "zero_days": 7361,
     "median_daily_mean": 0.0
   },
   "event_definition": {
-    "high_threshold": 1.72,
+    "high_threshold": 1.68,
     "low_threshold": 0.0,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -38,14 +38,14 @@
     },
     {
       "start": "2004-04-06",
-      "end": "2026-03-09",
+      "end": "2026-07-26",
       "end_reason": "ended_by_gap",
-      "duration_days": 8008,
+      "duration_days": 8147,
       "peak_date": "2013-10-31",
       "peak_value": 4050.0,
       "rise_days": 3496,
-      "recession_days": 4512,
-      "mean_value": 4.12,
+      "recession_days": 4651,
+      "mean_value": 4.065,
       "has_provisional": false,
       "water_year": 2014,
       "peak_month": 10,
@@ -53,38 +53,18 @@
         "days_available": 7,
         "mean": 0.003
       }
-    },
-    {
-      "start": "2026-04-21",
-      "end": "2026-09-30",
-      "end_reason": "record_ends_inside_event",
-      "duration_days": 163,
-      "peak_date": "2026-06-15",
-      "peak_value": 82.8,
-      "rise_days": 56,
-      "recession_days": 107,
-      "mean_value": 0.727,
-      "has_provisional": true,
-      "water_year": 2026,
-      "peak_month": 6,
-      "antecedent_30_day": {
-        "days_available": 30,
-        "mean": 0.005
-      }
     }
   ],
   "summary": {
-    "event_count": 3,
+    "event_count": 2,
     "events_per_water_year": {
       "2004": 1,
-      "2014": 1,
-      "2026": 1
+      "2014": 1
     },
-    "median_duration_days": 163,
-    "median_peak_value": 82.8,
+    "median_duration_days": 4079.0,
+    "median_peak_value": 2028.075,
     "peak_month_counts": {
       "1": 1,
-      "6": 1,
       "10": 1
     },
     "events_ended_by_gap": 2
