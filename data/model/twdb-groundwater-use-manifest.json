@@ -1,54 +1,54 @@
 {
  "tool": "twdb-groundwater-use",
- "last_success": "2026-10-08T18:27:06+00:00",
- "last_attempt": "2026-10-08T18:26:54+00:00",
+ "last_success": "2026-11-01T13:58:26+00:00",
+ "last_attempt": "2026-11-01T13:58:18+00:00",
  "sdr": {
   "url": "https://www.twdb.texas.gov/groundwater/data/SDRDownload.zip",
-  "retrieved_at": "2026-10-08T18:27:03+00:00",
+  "retrieved_at": "2026-11-01T13:58:23+00:00",
   "status": 200,
-  "sha256": "12a2cff3ae749f012dd80c0619e288f3506d01f80c9effa9c1b1b4b8556363be",
-  "bytes": 151815400,
-  "raw_path": "data/raw/twdb-sdr/20261008T182703Z-SDRDownload.zip",
+  "sha256": "7ffc9cd5e2dfaeebf5d4c66a4bb5e5226348761f9e1cff4391b05aa8cf755da5",
+  "bytes": 152226938,
+  "raw_path": "data/raw/twdb-sdr/20261101T135823Z-SDRDownload.zip",
   "capture_path": "data/captures/twdb-sdr/welldata-extract.tsv.gz",
-  "capture_sha256": "d01c01fe3bc6e2633655f1d20a3a421f19b0b9e10f10b0142249aadcc2c2f234",
-  "capture_rows": 164916,
+  "capture_sha256": "4780f89b960bbc844f8443b6c7893a191b6518312d879c4dda32306c3420d7b7",
+  "capture_rows": 165366,
   "malformed_records": [
    {
-    "line": 265782,
+    "line": 267705,
     "tracking_number": "457090",
     "fields": 74
    },
    {
-    "line": 284930,
+    "line": 286853,
     "tracking_number": "435786",
     "fields": 74
    },
    {
-    "line": 292252,
+    "line": 294175,
     "tracking_number": "426410",
     "fields": 74
    },
    {
-    "line": 293562,
+    "line": 295485,
     "tracking_number": "425086",
     "fields": 74
    }
   ],
   "capture_scope": "SDRDownload/WellData.txt columns ['WellReportTrackingNumber', 'DateSubmitted', 'County', 'TypeOfWork', 'ProposedUse', 'DrillingStartDate', 'DrillingEndDate', 'NumberOfWellsDrilled'] for the counties in data/noaa-counties.json; no names or addresses",
-  "normalized_sha256": "d01c01fe3bc6e2633655f1d20a3a421f19b0b9e10f10b0142249aadcc2c2f234"
+  "normalized_sha256": "4780f89b960bbc844f8443b6c7893a191b6518312d879c4dda32306c3420d7b7"
  },
  "files": [
   {
    "path": "data/history/twdb-wells-drilled-48019-annual.csv",
-   "sha256": "e78fac783c25fef4920c0e14d87bb1d2f25b2ff00a593b99799aeb3556247ae8",
-   "rows": 188,
+   "sha256": "fd5eef0a7f1a05f5676c9ce5802be9ffd9db813b1ff540a75efb9a28625b8797",
+   "rows": 189,
    "first": 1982,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48029-annual.csv",
-   "sha256": "c8f147f2369700e7680a78bbe0039936c04e26bec03405a612c8c58b0ff27096",
+   "sha256": "7f2acd2f5dd16ab6743a7dc91fac2f7a0d1f065fd5134f4efc8ee0a0e6937c7c",
    "rows": 345,
    "first": 1985,
    "last": 2026,
@@ -56,8 +56,8 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48031-annual.csv",
-   "sha256": "5eee56e870cc9321cf5bcb6b73e66fd517f6304231bd2614a2a1e2a4805cc792",
-   "rows": 149,
+   "sha256": "b917cd96c7893f00053b77621f27a98fb0fdcad29b9170b393b5d4aed44e45dd",
+   "rows": 150,
    "first": 1980,
    "last": 2026,
    "undated_reports": 0
@@ -72,7 +72,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48049-annual.csv",
-   "sha256": "5af193f1ac4878d8490b5f408967087c574e65430ec4d6c4fc79c6d833930a74",
+   "sha256": "5972a81188874435ed3f5426ee603ee92fcd651f67f5393f7c650b4f748c6e9b",
    "rows": 149,
    "first": 2001,
    "last": 2026,
@@ -80,15 +80,15 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48053-annual.csv",
-   "sha256": "4958110b8a85c41870e3a7bfbbc26d520dfa4976e3bc438cfd51749f8b0021fa",
-   "rows": 268,
+   "sha256": "be2ac58d9819feff467ec19bf4574a18c53d6b44da7d286c99e2e9f9e4b8a54c",
+   "rows": 270,
    "first": 1978,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48055-annual.csv",
-   "sha256": "653729fa052f5fbd2c260a2101ec8e94e2783692cb5febff9890c4c873653776",
+   "sha256": "415dbf93e41c91d9e10bb23ce1a0749024704bbb42fce0c797a5e3c9d6229ae1",
    "rows": 151,
    "first": 1976,
    "last": 2026,
@@ -96,7 +96,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48081-annual.csv",
-   "sha256": "c48e211ce78a384238dbcccf45e544c792a5b6a065b1fdb378ee6b1968dd2e6e",
+   "sha256": "d2d5f0f426cc96c2a2055aeb1fc95fb75459d9ed00f1ed222b0526f0e57528cf",
    "rows": 154,
    "first": 2002,
    "last": 2026,
@@ -104,23 +104,23 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48083-annual.csv",
-   "sha256": "65c5cf2426ea4f002f8a4fafb5db35d62cf844d593ad7664a9b230d140b3539c",
-   "rows": 81,
+   "sha256": "b532567901c2fc2a2009e897fa5f0f624686c097c10d4d71c668c1f4de2cab1a",
+   "rows": 82,
    "first": 2001,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48091-annual.csv",
-   "sha256": "5bc54f1a8f387df15753ac48d18e4c73399688584381ed08d5a1b3cac95cffac",
-   "rows": 232,
+   "sha256": "486f17b47bfe44d339e20b15a0c3296a5582d0b77934454df73c0fc56406f823",
+   "rows": 234,
    "first": 1985,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48095-annual.csv",
-   "sha256": "01a1b1cabfc95aefda0daed10caa72b8dcbd1aea40fc4254eab9b3d785ea786e",
+   "sha256": "415717dad1c2484a447c910d8ad737c13aa4ab47771428c432a32976d7baa9e7",
    "rows": 159,
    "first": 2001,
    "last": 2026,
@@ -128,8 +128,8 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48115-annual.csv",
-   "sha256": "a71de90b7054812e875ef8c6c9bb25b0e88a3b862adb742f32c766c17d8f4b37",
-   "rows": 194,
+   "sha256": "2557bd82fea781f1ce53d7ddab5aee824a4cc9df7c63b4167d09bd683c6430fc",
+   "rows": 195,
    "first": 2001,
    "last": 2026,
    "undated_reports": 0
@@ -144,7 +144,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48165-annual.csv",
-   "sha256": "2e6cfadb0ae7c54aeb45648b16d33caf9acfd88fffcd6b8698867d04041740c3",
+   "sha256": "ac048c73d02a053cac21767f7815f148cefb52cc035e997fdc400e5b73f31830",
    "rows": 271,
    "first": 2000,
    "last": 2026,
@@ -152,7 +152,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48171-annual.csv",
-   "sha256": "e5983dee197b69239cb591f009d37637a654d9824b526cdfea7e8d6097d16f7a",
+   "sha256": "6f4c5582b08fc7c25816edee3227b54fc331a420558a9cc052dceead598afb89",
    "rows": 211,
    "first": 2001,
    "last": 2026,
@@ -160,7 +160,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48173-annual.csv",
-   "sha256": "1451a1fa770ffcc6f0e3a294af22078173bf6f2f3ed0f3c199f327a53a6ee717",
+   "sha256": "98b985b1a3df58d7de86d20546e6e80e1ae9e66a1b06a382460acf0a3c79acbe",
    "rows": 192,
    "first": 2001,
    "last": 2026,
@@ -168,7 +168,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48187-annual.csv",
-   "sha256": "c1cfcfc0eec25ded9f3852dbd27bc05cffbe81cc3d51f22d57bca108dc18ab62",
+   "sha256": "ec9ebb566663fe7762e29f7b3fe5d904d2f8ec240d3ca93c5fd2828d0586f921",
    "rows": 154,
    "first": 2002,
    "last": 2026,
@@ -176,15 +176,15 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48209-annual.csv",
-   "sha256": "f1ef9b2b39b3868b2ea6f6bf499a17cd61cb1e67ace5c96e5bfd92bfa35033fb",
-   "rows": 256,
+   "sha256": "19269edf4346052b766a0c3a5ede4fe9fc9cb160491b4496c4708ad88022b406",
+   "rows": 257,
    "first": 1996,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48227-annual.csv",
-   "sha256": "6bf6852d64a3e151cd3129512dd001bbca501f6c7a754a534b81864ba021d6e8",
+   "sha256": "4db56939d80ee47dc0a41c31939b444c4ee30e919cbc1190fd74349b7f2f9ac8",
    "rows": 219,
    "first": 2001,
    "last": 2026,
@@ -200,7 +200,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48259-annual.csv",
-   "sha256": "9b25fecec96e62a22bb13ce78b2b9f2d4eb952ad7ab0e8aca8e60b16cd7f40a5",
+   "sha256": "64e20285e022a9ea1ea9f69b2abef0a076697eb51907606c987244cab059e48b",
    "rows": 178,
    "first": 1995,
    "last": 2026,
@@ -208,7 +208,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48265-annual.csv",
-   "sha256": "0956432d3bc922ed0d8cfc5d6c0781bdc943a7e9c5d319eacfdca5ea8840ab72",
+   "sha256": "3c4442cbb04215d09fe3d6a070008e76dbddb2cebdcdcee75da4a4a0f15c3c30",
    "rows": 190,
    "first": 1973,
    "last": 2026,
@@ -216,8 +216,8 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48267-annual.csv",
-   "sha256": "19f990c7aa5fd72d8e108759a6da82178cad19139ce6109a8c1fde5bff307626",
-   "rows": 109,
+   "sha256": "262eff7819b24d7234559373f3736e0e29ea7d86a5fbe6d747ed79ddfc23476d",
+   "rows": 110,
    "first": 2000,
    "last": 2026,
    "undated_reports": 0
@@ -232,7 +232,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48299-annual.csv",
-   "sha256": "760a80eb809dd1b025e2aba52a38561099d67da4b9563177308096e6441c9b25",
+   "sha256": "18db6c6d2606b2f422fe657f99de6aa0a6383812cedb137b576d5964fd57d9c7",
    "rows": 174,
    "first": 2001,
    "last": 2026,
@@ -240,7 +240,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48307-annual.csv",
-   "sha256": "03ff7020c4e5b91a5131385382422ed3ab47b15d0d0022a50f73c8865a56980a",
+   "sha256": "1134270d88dcd4bdb84b6285ba0b6bb94ae4b2b91b08478e6d1d6097d371bb51",
    "rows": 134,
    "first": 1998,
    "last": 2026,
@@ -248,7 +248,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48317-annual.csv",
-   "sha256": "66b647b67c33bd18663110854d6445233734d982664c50344a99acb05d74b8cc",
+   "sha256": "f4dbbbe5ecccf70366c7e2318fbc80e88fba9a8f502d0bbe3ee64c856b2748d7",
    "rows": 225,
    "first": 2001,
    "last": 2026,
@@ -256,7 +256,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48319-annual.csv",
-   "sha256": "9d0ec685fc539a17feb524f65a314ea8a2f959f33d1ad0b134dcd636d75a9fbc",
+   "sha256": "1d48d3aee002c90ce6ab066ebea73010fe799cb2a9ad9ff2f7de81f7d13c4b0f",
    "rows": 111,
    "first": 2001,
    "last": 2026,
@@ -264,15 +264,15 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48325-annual.csv",
-   "sha256": "7b13b424449986036034d258b21b11963fecb718342b27760cd64bc56127ddc0",
-   "rows": 205,
+   "sha256": "64f3ae45a33020c7f3f3bbe86dcc2fed5ce825157a81717e5886b42f5aa88e88",
+   "rows": 206,
    "first": 1995,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48327-annual.csv",
-   "sha256": "b5a91ca50a96171def51e6bc3528659d249fb383ee927dfe7b2f373a0d09a2bf",
+   "sha256": "7d2c693bf902cd88830ac4d28dda2ccc7459c74cbc22db00b1f5c8b5a44faff3",
    "rows": 117,
    "first": 1996,
    "last": 2026,
@@ -280,7 +280,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48329-annual.csv",
-   "sha256": "8dac6e69fa7cad71a852e6b169a0b263564ac5c02c95694b95af004c97e07300",
+   "sha256": "dc7e6c98f33acb52ef12f7e1a3c67ec6a6706ed6ecc27b37eb08fe492a5b44be",
    "rows": 296,
    "first": 2000,
    "last": 2026,
@@ -296,7 +296,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48383-annual.csv",
-   "sha256": "ad17ca2f85e96d44af6e79a5c6856087d009f8e1d122374107b070400a364de9",
+   "sha256": "8675806845f8325e813d22378a9e156768732c62cafe43d04086677e3a0bc75f",
    "rows": 205,
    "first": 2001,
    "last": 2026,
@@ -304,7 +304,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48385-annual.csv",
-   "sha256": "7ec5dc3a9c84749df08b9972f30044dc3fa6c5ae79d13249509f66ef41ffff15",
+   "sha256": "128b8b94548860bf4142284d3e7d57eb271bd048f71836387ab743039500349d",
    "rows": 97,
    "first": 2001,
    "last": 2026,
@@ -312,23 +312,23 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48399-annual.csv",
-   "sha256": "0756fbc9d2855ac3c7fa6be6e445d599ffe0c3887f5d39306e965d06f48342e8",
-   "rows": 162,
+   "sha256": "7f735ad252a42d6a9005930aa83f048b3a1742bcd6de41dd6576367e499bd69c",
+   "rows": 163,
    "first": 2001,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48411-annual.csv",
-   "sha256": "ba668a20019918fd419b4a3aff03792a8d2e44b21e3099eac1716301ea353b5d",
-   "rows": 102,
+   "sha256": "cda9fb64c6cada6fbb272dc924e56b122df2cb301dfe8507d1d277cd24e4d794",
+   "rows": 103,
    "first": 2001,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48413-annual.csv",
-   "sha256": "ff91082e458893286dfb20b7a1c840efcc163ef1830816054735066643844301",
+   "sha256": "353ca65717d9c192476dbca9f3a6b1741337b36f02d03939ecdf85299e6ceab0",
    "rows": 123,
    "first": 2001,
    "last": 2026,
@@ -344,7 +344,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48435-annual.csv",
-   "sha256": "5655240f4db438213309d8f3a73705d99763e5028d6f30d48eb8b36166e60221",
+   "sha256": "28806d39e4932a94a3ec61025977e2e1761ad8d98c765d8a9011f4d1ba48cc4e",
    "rows": 99,
    "first": 2001,
    "last": 2026,
@@ -352,16 +352,16 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48451-annual.csv",
-   "sha256": "f7884cad8cbc77e7958c55fa754e75416cf1c19eae43664e3d82aa8318870161",
-   "rows": 314,
+   "sha256": "165788fd012f9347ab6f9fa872ef4aa2b90fa65bb0458dbf054e3a4aefeec5cc",
+   "rows": 315,
    "first": 2001,
    "last": 2026,
    "undated_reports": 0
   },
   {
    "path": "data/history/twdb-wells-drilled-48453-annual.csv",
-   "sha256": "d0a989ed3d57aea18054200237536b5a724d1b6e09cc06161548213d2799cd4d",
-   "rows": 329,
+   "sha256": "a85f878d4a7f64b13ec262ed576c7938b38de2630bf4caf8ae82cdd13a3c2890",
+   "rows": 330,
    "first": 1966,
    "last": 2026,
    "undated_reports": 0
@@ -376,7 +376,7 @@
   },
   {
    "path": "data/history/twdb-wells-drilled-48491-annual.csv",
-   "sha256": "953fd7fa14d9a03dd321c67b153b8682d990ca497c7283e143a95e26415ea877",
+   "sha256": "32e1cb0dc1ffc234713ef5724ae13d95030283cd46c28e80391ad536dbf19693",
    "rows": 288,
    "first": 1984,
    "last": 2026,

@@ -3,14 +3,14 @@
   "source_csv": "data/history/08155240-00060-daily-mean.csv",
   "record": {
     "first_day": "1988-12-28",
-    "last_day": "2026-10-24",
-    "numeric_days": 13815,
+    "last_day": "2026-10-31",
+    "numeric_days": 13822,
     "zero_days": 295,
-    "median_daily_mean": 7.07
+    "median_daily_mean": 7.06
   },
   "event_definition": {
     "high_threshold": 191.0,
-    "low_threshold": 38.4,
+    "low_threshold": 38.3,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
     "unit": "ft^3/s daily mean",
@@ -1028,14 +1028,14 @@
     },
     {
       "start": "2018-10-10",
-      "end": "2019-02-27",
+      "end": "2019-03-02",
       "end_reason": "fell_below_low_threshold",
-      "duration_days": 141,
+      "duration_days": 144,
       "peak_date": "2018-12-27",
       "peak_value": 1980.0,
       "rise_days": 79,
-      "recession_days": 62,
-      "mean_value": 180.703,
+      "recession_days": 65,
+      "mean_value": 177.738,
       "has_provisional": false,
       "water_year": 2019,
       "peak_month": 12,

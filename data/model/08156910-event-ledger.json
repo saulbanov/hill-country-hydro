@@ -3,13 +3,13 @@
   "source_csv": "data/history/08156910-00060-daily-mean.csv",
   "record": {
     "first_day": "2007-07-19",
-    "last_day": "2026-10-24",
-    "numeric_days": 7038,
+    "last_day": "2026-10-31",
+    "numeric_days": 7045,
     "zero_days": 925,
     "median_daily_mean": 0.08
   },
   "event_definition": {
-    "high_threshold": 4.52,
+    "high_threshold": 4.51,
     "low_threshold": 0.22,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -34,6 +34,24 @@
       "antecedent_30_day": {
         "days_available": 1,
         "mean": 0.2
+      }
+    },
+    {
+      "start": "2007-08-16",
+      "end": "2007-08-19",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 4,
+      "peak_date": "2007-08-16",
+      "peak_value": 4.51,
+      "rise_days": 1,
+      "recession_days": 3,
+      "mean_value": 1.367,
+      "has_provisional": false,
+      "water_year": 2007,
+      "peak_month": 8,
+      "antecedent_30_day": {
+        "days_available": 28,
+        "mean": 3.065
       }
     },
     {
@@ -3980,9 +3998,9 @@
     }
   ],
   "summary": {
-    "event_count": 220,
+    "event_count": 221,
     "events_per_water_year": {
-      "2007": 3,
+      "2007": 4,
       "2008": 6,
       "2009": 8,
       "2010": 11,
@@ -4004,8 +4022,8 @@
       "2026": 10,
       "2027": 1
     },
-    "median_duration_days": 2.0,
-    "median_peak_value": 11.85,
+    "median_duration_days": 2,
+    "median_peak_value": 11.7,
     "peak_month_counts": {
       "1": 15,
       "2": 10,
@@ -4014,7 +4032,7 @@
       "5": 33,
       "6": 22,
       "7": 14,
-      "8": 11,
+      "8": 12,
       "9": 24,
       "10": 25,
       "11": 16,

@@ -3,8 +3,8 @@
   "source_csv": "data/history/08105886-00060-daily-mean.csv",
   "record": {
     "first_day": "2010-06-15",
-    "last_day": "2026-09-30",
-    "numeric_days": 5952,
+    "last_day": "2026-10-31",
+    "numeric_days": 5983,
     "zero_days": 0,
     "median_daily_mean": 0.94
   },
@@ -3149,10 +3149,28 @@
         "days_available": 30,
         "mean": 4.025
       }
+    },
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-04",
+      "end_reason": "fell_below_low_threshold",
+      "duration_days": 4,
+      "peak_date": "2026-10-02",
+      "peak_value": 22.7,
+      "rise_days": 2,
+      "recession_days": 2,
+      "mean_value": 11.715,
+      "has_provisional": true,
+      "water_year": 2027,
+      "peak_month": 10,
+      "antecedent_30_day": {
+        "days_available": 30,
+        "mean": 0.389
+      }
     }
   ],
   "summary": {
-    "event_count": 174,
+    "event_count": 175,
     "events_per_water_year": {
       "2010": 5,
       "2011": 3,
@@ -3170,10 +3188,11 @@
       "2023": 14,
       "2024": 18,
       "2025": 9,
-      "2026": 11
+      "2026": 11,
+      "2027": 1
     },
-    "median_duration_days": 3.0,
-    "median_peak_value": 19.5,
+    "median_duration_days": 3,
+    "median_peak_value": 19.6,
     "peak_month_counts": {
       "1": 11,
       "2": 9,
@@ -3184,7 +3203,7 @@
       "7": 16,
       "8": 13,
       "9": 16,
-      "10": 15,
+      "10": 16,
       "11": 11,
       "12": 11
     },

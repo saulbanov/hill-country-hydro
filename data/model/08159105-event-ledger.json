@@ -3,13 +3,13 @@
   "source_csv": "data/history/08159105-00060-daily-mean.csv",
   "record": {
     "first_day": "2019-07-18",
-    "last_day": "2026-10-24",
-    "numeric_days": 2656,
-    "zero_days": 2131,
+    "last_day": "2026-10-31",
+    "numeric_days": 2663,
+    "zero_days": 2138,
     "median_daily_mean": 0.0
   },
   "event_definition": {
-    "high_threshold": 2.18,
+    "high_threshold": 2.17,
     "low_threshold": 0.0,
     "high_rule": "P95 of all numeric daily means at this station, floored at 1.0 ft^3/s",
     "low_rule": "P75 of all numeric daily means at this station",
@@ -20,14 +20,14 @@
   "events": [
     {
       "start": "2020-03-22",
-      "end": "2026-10-24",
+      "end": "2026-10-31",
       "end_reason": "record_ends_inside_event",
-      "duration_days": 2408,
+      "duration_days": 2415,
       "peak_date": "2021-06-03",
       "peak_value": 124.0,
       "rise_days": 439,
-      "recession_days": 1969,
-      "mean_value": 0.759,
+      "recession_days": 1976,
+      "mean_value": 0.757,
       "has_provisional": true,
       "water_year": 2021,
       "peak_month": 6,
@@ -42,7 +42,7 @@
     "events_per_water_year": {
       "2021": 1
     },
-    "median_duration_days": 2408,
+    "median_duration_days": 2415,
     "median_peak_value": 124.0,
     "peak_month_counts": {
       "6": 1
