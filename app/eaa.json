@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-03T13:22:02.542154+00:00",
+  "generated_at": "2026-11-04T13:26:00.066734+00:00",
   "source": "https://data.edwardsaquifer.org",
   "critical_period": {
     "meaning": "Which trigger each 10-day average sits below, read against the transcribed EAA stage table. The EAA declares stages; this is the arithmetic, shown beside what the EAA page states.",
     "ten_day_averages": {
-      "j17_ft_amsl": 640.1,
-      "comal_cfs": 156.0,
+      "j17_ft_amsl": 640.4,
+      "comal_cfs": 158.0,
       "san_marcos_cfs": 88.0,
-      "j27_ft_amsl": 854.6
+      "j27_ft_amsl": 854.7
     },
     "san_antonio_pool": {
       "implied_stage": "Stage 2",
@@ -17,8 +17,8 @@
         "comal": "Stage 2",
         "san_marcos": "Stage 1"
       },
-      "eaa_states_reduction_pct": 35,
-      "agreement": "differs: arithmetic says 30%, the EAA page says 35% (stage changes need all indicators to recover, and the EAA declares on its own schedule)"
+      "eaa_states_reduction_pct": 30,
+      "agreement": "agrees"
     },
     "uvalde_pool": {
       "implied_stage": "Stable",
@@ -28,49 +28,49 @@
     },
     "summary_table": {
       "San Antonio Pool (J-17)": {
-        "today": 641.9,
-        "yesterday": 642.4,
+        "today": 641.6,
+        "yesterday": 642.0,
         "six_month": 639.4,
-        "one_year": 627.1,
-        "ten_day_average": 640.1,
+        "one_year": 626.7,
+        "ten_day_average": 640.4,
         "historical_monthly_average": 665.2,
-        "difference_from_historical": -23.3
+        "difference_from_historical": -23.6
       },
       "Uvalde Pool (J-27)": {
-        "today": 854.9,
-        "yesterday": 854.9,
-        "six_month": 834.7,
+        "today": 855.0,
+        "yesterday": 855.0,
+        "six_month": 834.8,
         "one_year": 839.1,
-        "ten_day_average": 854.6,
+        "ten_day_average": 854.7,
         "historical_monthly_average": 866.3,
-        "difference_from_historical": -11.4
+        "difference_from_historical": -11.3
       },
       "Comal Springs": {
         "today": 165.0,
-        "yesterday": 168.0,
-        "six_month": 152.0,
-        "one_year": 64.0,
-        "ten_day_average": 156.0,
+        "yesterday": 169.0,
+        "six_month": 157.0,
+        "one_year": 63.0,
+        "ten_day_average": 158.0,
         "historical_monthly_average": 282.0,
         "difference_from_historical": -117.0
       },
       "San Marcos Springs": {
         "today": 87.0,
-        "yesterday": 87.0,
+        "yesterday": 88.0,
         "six_month": 93.0,
-        "one_year": 88.0,
+        "one_year": 87.0,
         "ten_day_average": 88.0,
         "historical_monthly_average": 166.0,
         "difference_from_historical": -79.0
       }
     },
     "summary_dates": {
-      "today": "Nov 03 2026",
-      "yesterday": "Nov 02 2026",
-      "six_month": "May 03 2026",
-      "one_year": "Nov 03 2025"
+      "today": "Nov 04 2026",
+      "yesterday": "Nov 03 2026",
+      "six_month": "May 04 2026",
+      "one_year": "Nov 04 2025"
     },
-    "retrieved_at": "2026-11-03T13:15:29.055780+00:00",
+    "retrieved_at": "2026-11-04T13:19:34.700675+00:00",
     "stage_table_provenance": {
       "transcribed_on": "2026-10-01",
       "images": [
@@ -83,7 +83,7 @@
   "meaning": "Edwards Aquifer Authority wells and rain gauges, read verbatim and summarized deterministically; context only.",
   "counts": {
     "wells": 69,
-    "wells_fresh": 42,
+    "wells_fresh": 45,
     "rain_gauges": 85,
     "rain_fresh": 0
   },
@@ -123,8 +123,8 @@
         "date": "2026-10-07",
         "elevation_ft_amsl": 715.17
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
+      "age_days": 28,
+      "data_health": "stale (28 d)",
       "change_7d_ft": -1.1,
       "change_30d_ft": -4.99,
       "percentile_13mo": 57.2,
@@ -146,15 +146,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/89",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 637.19
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 637.12
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 2.3,
-      "change_30d_ft": -0.38,
-      "percentile_13mo": 77.1,
-      "record_days_on_file": 7387,
+      "change_7d_ft": 2.64,
+      "change_30d_ft": -0.93,
+      "percentile_13mo": 76.1,
+      "record_days_on_file": 7388,
       "first_date_on_file": "1992-09-17"
     },
     "CHS303": {
@@ -175,8 +175,8 @@
         "date": "2026-10-14",
         "elevation_ft_amsl": 824.79
       },
-      "age_days": 20,
-      "data_health": "stale (20 d)",
+      "age_days": 21,
+      "data_health": "stale (21 d)",
       "change_7d_ft": -1.36,
       "change_30d_ft": -3.83,
       "percentile_13mo": 80.4,
@@ -218,7 +218,7 @@
         "date": "2026-11-02",
         "elevation_ft_amsl": 647.16
       },
-      "age_days": 1,
+      "age_days": 2,
       "data_health": "fresh",
       "change_7d_ft": 0.02,
       "change_30d_ft": -1.02,
@@ -241,15 +241,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/141",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 663.85
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 664.24
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 3.29,
-      "change_30d_ft": 1.5,
+      "change_7d_ft": 3.56,
+      "change_30d_ft": 1.14,
       "percentile_13mo": 92.3,
-      "record_days_on_file": 14367,
+      "record_days_on_file": 14368,
       "first_date_on_file": "1986-09-08"
     },
     "CCW101": {
@@ -267,15 +267,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/172",
       "latest": {
-        "date": "2026-10-07",
-        "elevation_ft_amsl": 576.76
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 576.57
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
-      "change_7d_ft": 0.06,
-      "change_30d_ft": -0.29,
-      "percentile_13mo": 73.0,
-      "record_days_on_file": 6034,
+      "age_days": 1,
+      "data_health": "fresh",
+      "change_7d_ft": 0.01,
+      "change_30d_ft": -0.19,
+      "percentile_13mo": 63.9,
+      "record_days_on_file": 6061,
       "first_date_on_file": "2007-06-21"
     },
     "EAAS403": {
@@ -293,15 +293,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/197",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 581.19
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 581.18
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.0,
-      "change_30d_ft": -0.26,
-      "percentile_13mo": 61.8,
-      "record_days_on_file": 6219,
+      "change_7d_ft": -0.01,
+      "change_30d_ft": -0.27,
+      "percentile_13mo": 60.4,
+      "record_days_on_file": 6220,
       "first_date_on_file": "2009-01-13"
     },
     "EV324": {
@@ -353,15 +353,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/211",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 731.57
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 731.49
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.23,
-      "change_30d_ft": -1.3,
-      "percentile_13mo": 52.9,
-      "record_days_on_file": 1970,
+      "change_7d_ft": 0.22,
+      "change_30d_ft": -1.34,
+      "percentile_13mo": 52.1,
+      "record_days_on_file": 1971,
       "first_date_on_file": "2013-12-12"
     },
     "FRPH905": {
@@ -379,15 +379,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/229",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 731.36
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 731.34
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": -0.34,
-      "change_30d_ft": -2.57,
-      "percentile_13mo": 64.8,
-      "record_days_on_file": 994,
+      "change_7d_ft": -0.29,
+      "change_30d_ft": -2.53,
+      "percentile_13mo": 64.3,
+      "record_days_on_file": 995,
       "first_date_on_file": "2024-02-01"
     },
     "FRPW904": {
@@ -405,15 +405,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/230",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 725.18
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 725.16
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": -0.18,
-      "change_30d_ft": -3.17,
-      "percentile_13mo": 53.9,
-      "record_days_on_file": 2062,
+      "change_7d_ft": 0.22,
+      "change_30d_ft": -3.76,
+      "percentile_13mo": 53.7,
+      "record_days_on_file": 2063,
       "first_date_on_file": "2021-03-08"
     },
     "GSSD624": {
@@ -431,15 +431,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/232",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 626.96
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 627.0
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.65,
-      "change_30d_ft": -0.18,
-      "percentile_13mo": 73.9,
-      "record_days_on_file": 2897,
+      "change_7d_ft": 0.95,
+      "change_30d_ft": -0.33,
+      "percentile_13mo": 74.1,
+      "record_days_on_file": 2898,
       "first_date_on_file": "2017-12-31"
     },
     "GSTS619": {
@@ -457,15 +457,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/233",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 626.66
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 626.7
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.63,
-      "change_30d_ft": -0.2,
-      "percentile_13mo": 73.5,
-      "record_days_on_file": 2875,
+      "change_7d_ft": 0.91,
+      "change_30d_ft": -0.34,
+      "percentile_13mo": 73.9,
+      "record_days_on_file": 2876,
       "first_date_on_file": "2018-10-02"
     },
     "GC216": {
@@ -483,15 +483,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/236",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 713.86
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 713.62
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.39,
-      "change_30d_ft": -3.32,
-      "percentile_13mo": 57.4,
-      "record_days_on_file": 729,
+      "change_7d_ft": 0.3,
+      "change_30d_ft": -3.55,
+      "percentile_13mo": 56.2,
+      "record_days_on_file": 730,
       "first_date_on_file": "2024-08-16"
     },
     "HEL517": {
@@ -529,8 +529,8 @@
         "date": "2026-10-14",
         "elevation_ft_amsl": 732.97
       },
-      "age_days": 20,
-      "data_health": "stale (20 d)",
+      "age_days": 21,
+      "data_health": "stale (21 d)",
       "change_7d_ft": -0.71,
       "change_30d_ft": -2.62,
       "percentile_13mo": 83.2,
@@ -555,8 +555,8 @@
         "date": "2026-10-07",
         "elevation_ft_amsl": 679.64
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
+      "age_days": 28,
+      "data_health": "stale (28 d)",
       "change_7d_ft": 0.27,
       "change_30d_ft": -0.13,
       "percentile_13mo": 84.5,
@@ -578,15 +578,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/267",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 693.9
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 693.36
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 1.24,
-      "change_30d_ft": -1.97,
-      "percentile_13mo": 87.1,
-      "record_days_on_file": 5875,
+      "change_7d_ft": 0.73,
+      "change_30d_ft": -1.26,
+      "percentile_13mo": 77.1,
+      "record_days_on_file": 5876,
       "first_date_on_file": "2009-11-17"
     },
     "HAS609": {
@@ -604,15 +604,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/268",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 691.25
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 691.21
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.62,
-      "change_30d_ft": 0.33,
-      "percentile_13mo": 87.0,
-      "record_days_on_file": 5645,
+      "change_7d_ft": 0.63,
+      "change_30d_ft": 0.24,
+      "percentile_13mo": 85.7,
+      "record_days_on_file": 5646,
       "first_date_on_file": "2009-08-25"
     },
     "HW402": {
@@ -630,15 +630,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/271",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 717.51
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 717.46
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.3,
-      "change_30d_ft": 0.63,
-      "percentile_13mo": 99.9,
-      "record_days_on_file": 776,
+      "change_7d_ft": 0.24,
+      "change_30d_ft": 0.6,
+      "percentile_13mo": 99.6,
+      "record_days_on_file": 777,
       "first_date_on_file": "2024-09-18"
     },
     "HW701": {
@@ -659,7 +659,7 @@
         "date": "2026-11-02",
         "elevation_ft_amsl": 614.48
       },
-      "age_days": 1,
+      "age_days": 2,
       "data_health": "fresh",
       "change_7d_ft": -0.04,
       "change_30d_ft": -0.48,
@@ -682,15 +682,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/273",
       "latest": {
-        "date": "2026-11-02",
+        "date": "2026-11-03",
         "elevation_ft_amsl": 619.57
       },
       "age_days": 1,
       "data_health": "fresh",
       "change_7d_ft": 0.19,
-      "change_30d_ft": 0.03,
-      "percentile_13mo": 78.6,
-      "record_days_on_file": 2532,
+      "change_30d_ft": 0.09,
+      "percentile_13mo": 78.4,
+      "record_days_on_file": 2533,
       "first_date_on_file": "2019-11-26"
     },
     "ILAUE415": {
@@ -708,15 +708,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/274",
       "latest": {
-        "date": "2026-11-02",
+        "date": "2026-11-03",
         "elevation_ft_amsl": 620.11
       },
       "age_days": 1,
       "data_health": "fresh",
       "change_7d_ft": 0.18,
-      "change_30d_ft": 0.03,
-      "percentile_13mo": 78.9,
-      "record_days_on_file": 2535,
+      "change_30d_ft": 0.08,
+      "percentile_13mo": 78.8,
+      "record_days_on_file": 2536,
       "first_date_on_file": "2019-11-25"
     },
     "IP925": {
@@ -737,8 +737,8 @@
         "date": "2026-10-05",
         "elevation_ft_amsl": 643.45
       },
-      "age_days": 29,
-      "data_health": "stale (29 d)",
+      "age_days": 30,
+      "data_health": "stale (30 d)",
       "change_7d_ft": 4.49,
       "change_30d_ft": 0.78,
       "percentile_13mo": 85.2,
@@ -760,15 +760,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/276",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 642.4
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 641.96
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 3.72,
-      "change_30d_ft": -0.02,
-      "percentile_13mo": 80.3,
-      "record_days_on_file": 33526,
+      "change_7d_ft": 3.95,
+      "change_30d_ft": -1.51,
+      "percentile_13mo": 78.3,
+      "record_days_on_file": 33527,
       "first_date_on_file": "1932-11-12"
     },
     "J27WL": {
@@ -786,15 +786,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/277",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 854.91
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 854.95
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.51,
-      "change_30d_ft": 1.7,
+      "change_7d_ft": 0.53,
+      "change_30d_ft": 1.69,
       "percentile_13mo": 99.9,
-      "record_days_on_file": 30380,
+      "record_days_on_file": 30381,
       "first_date_on_file": "1940-10-24"
     },
     "JEN801": {
@@ -812,15 +812,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/280",
       "latest": {
-        "date": "2026-10-07",
-        "elevation_ft_amsl": 606.7
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 606.32
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
-      "change_7d_ft": 0.88,
-      "change_30d_ft": -0.61,
-      "percentile_13mo": 74.6,
-      "record_days_on_file": 1140,
+      "age_days": 1,
+      "data_health": "fresh",
+      "change_7d_ft": 0.64,
+      "change_30d_ft": -0.46,
+      "percentile_13mo": 67.4,
+      "record_days_on_file": 1167,
       "first_date_on_file": "2023-06-12"
     },
     "KYLN303": {
@@ -841,8 +841,8 @@
         "date": "2026-10-07",
         "elevation_ft_amsl": 530.25
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
+      "age_days": 28,
+      "data_health": "stale (28 d)",
       "change_7d_ft": 5.23,
       "change_30d_ft": -6.42,
       "percentile_13mo": 8.2,
@@ -864,15 +864,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/305",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 626.8
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 626.77
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.68,
-      "change_30d_ft": -0.26,
-      "percentile_13mo": 74.1,
-      "record_days_on_file": 4098,
+      "change_7d_ft": 0.91,
+      "change_30d_ft": -0.48,
+      "percentile_13mo": 73.4,
+      "record_days_on_file": 4099,
       "first_date_on_file": "2015-02-10"
     },
     "LW621": {
@@ -910,7 +910,7 @@
         "date": "2026-11-02",
         "elevation_ft_amsl": 623.7
       },
-      "age_days": 1,
+      "age_days": 2,
       "data_health": "fresh",
       "change_7d_ft": -0.09,
       "change_30d_ft": -0.5,
@@ -933,15 +933,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/352",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 833.47
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 833.44
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.61,
-      "change_30d_ft": 1.79,
-      "percentile_13mo": 99.9,
-      "record_days_on_file": 1308,
+      "change_7d_ft": 0.56,
+      "change_30d_ft": 1.69,
+      "percentile_13mo": 99.6,
+      "record_days_on_file": 1309,
       "first_date_on_file": "2023-02-13"
     },
     "PC302": {
@@ -962,7 +962,7 @@
         "date": "2026-11-02",
         "elevation_ft_amsl": 622.56
       },
-      "age_days": 1,
+      "age_days": 2,
       "data_health": "fresh",
       "change_7d_ft": 0.22,
       "change_30d_ft": -0.1,
@@ -985,15 +985,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/378",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 626.64
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 626.61
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.67,
-      "change_30d_ft": -0.03,
-      "percentile_13mo": 74.2,
-      "record_days_on_file": 2876,
+      "change_7d_ft": 0.79,
+      "change_30d_ft": -0.07,
+      "percentile_13mo": 73.9,
+      "record_days_on_file": 2877,
       "first_date_on_file": "2018-10-22"
     },
     "PATS616": {
@@ -1011,15 +1011,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/379",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 625.99
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 625.97
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.55,
-      "change_30d_ft": 0.09,
-      "percentile_13mo": 73.4,
-      "record_days_on_file": 2821,
+      "change_7d_ft": 0.64,
+      "change_30d_ft": -0.12,
+      "percentile_13mo": 72.4,
+      "record_days_on_file": 2822,
       "first_date_on_file": "2018-10-11"
     },
     "QH102": {
@@ -1037,15 +1037,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/386",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 740.9
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 740.86
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.2,
-      "change_30d_ft": 0.23,
-      "percentile_13mo": 85.7,
-      "record_days_on_file": 2133,
+      "change_7d_ft": 0.15,
+      "change_30d_ft": 0.22,
+      "percentile_13mo": 84.8,
+      "record_days_on_file": 2134,
       "first_date_on_file": "2020-12-31"
     },
     "RAND807": {
@@ -1066,8 +1066,8 @@
         "date": "2026-10-05",
         "elevation_ft_amsl": 641.77
       },
-      "age_days": 29,
-      "data_health": "stale (29 d)",
+      "age_days": 30,
+      "data_health": "stale (30 d)",
       "change_7d_ft": 4.53,
       "change_30d_ft": 0.66,
       "percentile_13mo": 84.7,
@@ -1092,8 +1092,8 @@
         "date": "2026-10-08",
         "elevation_ft_amsl": 683.14
       },
-      "age_days": 26,
-      "data_health": "stale (26 d)",
+      "age_days": 27,
+      "data_health": "stale (27 d)",
       "change_7d_ft": 0.24,
       "change_30d_ft": -0.49,
       "percentile_13mo": 83.2,
@@ -1115,15 +1115,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/399",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 644.15
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 643.68
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 4.24,
-      "change_30d_ft": -0.72,
-      "percentile_13mo": 81.4,
-      "record_days_on_file": 1365,
+      "change_7d_ft": 4.46,
+      "change_30d_ft": -1.91,
+      "percentile_13mo": 78.6,
+      "record_days_on_file": 1366,
       "first_date_on_file": "2023-02-06"
     },
     "BLR314": {
@@ -1144,8 +1144,8 @@
         "date": "2026-10-07",
         "elevation_ft_amsl": 694.08
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
+      "age_days": 28,
+      "data_health": "stale (28 d)",
       "change_7d_ft": -0.8,
       "change_30d_ft": -1.36,
       "percentile_13mo": 68.8,
@@ -1167,15 +1167,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/420",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 753.29
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 753.2
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.2,
-      "change_30d_ft": -0.39,
-      "percentile_13mo": 76.4,
-      "record_days_on_file": 2154,
+      "change_7d_ft": 0.12,
+      "change_30d_ft": -0.27,
+      "percentile_13mo": 74.7,
+      "record_days_on_file": 2155,
       "first_date_on_file": "2009-03-19"
     },
     "SAAT510": {
@@ -1196,8 +1196,8 @@
         "date": "2026-10-26",
         "elevation_ft_amsl": 673.25
       },
-      "age_days": 8,
-      "data_health": "stale (8 d)",
+      "age_days": 9,
+      "data_health": "stale (9 d)",
       "change_7d_ft": -0.41,
       "change_30d_ft": 1.46,
       "percentile_13mo": 84.6,
@@ -1219,15 +1219,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/438",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 888.19
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 888.22
       },
       "age_days": 1,
       "data_health": "fresh",
       "change_7d_ft": 0.49,
-      "change_30d_ft": 1.99,
+      "change_30d_ft": 1.95,
       "percentile_13mo": 99.9,
-      "record_days_on_file": 2461,
+      "record_days_on_file": 2462,
       "first_date_on_file": "2020-01-01"
     },
     "SPC518": {
@@ -1248,8 +1248,8 @@
         "date": "2026-10-09",
         "elevation_ft_amsl": 688.72
       },
-      "age_days": 25,
-      "data_health": "stale (25 d)",
+      "age_days": 26,
+      "data_health": "stale (26 d)",
       "change_7d_ft": 0.44,
       "change_30d_ft": 0.26,
       "percentile_13mo": 94.9,
@@ -1274,8 +1274,8 @@
         "date": "2026-10-12",
         "elevation_ft_amsl": 740.3
       },
-      "age_days": 22,
-      "data_health": "stale (22 d)",
+      "age_days": 23,
+      "data_health": "stale (23 d)",
       "change_7d_ft": -0.09,
       "change_30d_ft": -0.37,
       "percentile_13mo": 83.0,
@@ -1331,15 +1331,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/447",
       "latest": {
-        "date": "2026-10-07",
-        "elevation_ft_amsl": 582.31
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 582.09
       },
-      "age_days": 27,
-      "data_health": "stale (27 d)",
-      "change_7d_ft": 0.07,
-      "change_30d_ft": -0.26,
-      "percentile_13mo": 75.5,
-      "record_days_on_file": 4574,
+      "age_days": 1,
+      "data_health": "fresh",
+      "change_7d_ft": 0.01,
+      "change_30d_ft": -0.22,
+      "percentile_13mo": 65.5,
+      "record_days_on_file": 4601,
       "first_date_on_file": "2013-12-20"
     },
     "TR504": {
@@ -1357,15 +1357,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/448",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 758.0
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 757.85
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.35,
-      "change_30d_ft": -1.28,
-      "percentile_13mo": 76.8,
-      "record_days_on_file": 2362,
+      "change_7d_ft": 0.19,
+      "change_30d_ft": -1.01,
+      "percentile_13mo": 75.4,
+      "record_days_on_file": 2363,
       "first_date_on_file": "2020-01-01"
     },
     "TRIO402": {
@@ -1383,15 +1383,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/452",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 709.53
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 709.57
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.32,
-      "change_30d_ft": 0.85,
+      "change_7d_ft": 0.33,
+      "change_30d_ft": 0.87,
       "percentile_13mo": null,
-      "record_days_on_file": 1656,
+      "record_days_on_file": 1657,
       "first_date_on_file": "2020-01-01"
     },
     "VW113": {
@@ -1409,15 +1409,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/473",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 768.81
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 768.43
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 2.59,
-      "change_30d_ft": -3.21,
-      "percentile_13mo": 82.4,
-      "record_days_on_file": 6262,
+      "change_7d_ft": 2.3,
+      "change_30d_ft": -3.58,
+      "percentile_13mo": 80.9,
+      "record_days_on_file": 6263,
       "first_date_on_file": "2003-06-12"
     },
     "VJB407": {
@@ -1435,15 +1435,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/474",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 726.53
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 726.51
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.51,
-      "change_30d_ft": 0.73,
-      "percentile_13mo": 99.9,
-      "record_days_on_file": 2789,
+      "change_7d_ft": 0.48,
+      "change_30d_ft": 0.65,
+      "percentile_13mo": 99.6,
+      "record_days_on_file": 2790,
       "first_date_on_file": "2019-01-01"
     },
     "WAL920": {
@@ -1461,15 +1461,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/485",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 646.67
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 646.79
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 1.33,
-      "change_30d_ft": 0.11,
+      "change_7d_ft": 1.6,
+      "change_30d_ft": -0.24,
       "percentile_13mo": 63.0,
-      "record_days_on_file": 1034,
+      "record_days_on_file": 1035,
       "first_date_on_file": "2023-11-16"
     },
     "LHS515": {
@@ -1490,8 +1490,8 @@
         "date": "2026-10-09",
         "elevation_ft_amsl": 695.77
       },
-      "age_days": 25,
-      "data_health": "stale (25 d)",
+      "age_days": 26,
+      "data_health": "stale (26 d)",
       "change_7d_ft": 0.11,
       "change_30d_ft": -0.83,
       "percentile_13mo": 81.4,
@@ -1516,8 +1516,8 @@
         "date": "2026-10-16",
         "elevation_ft_amsl": 815.83
       },
-      "age_days": 18,
-      "data_health": "stale (18 d)",
+      "age_days": 19,
+      "data_health": "stale (19 d)",
       "change_7d_ft": 1.18,
       "change_30d_ft": 2.06,
       "percentile_13mo": 92.3,
@@ -1539,15 +1539,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/497",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 667.38
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 660.97
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 19.92,
-      "change_30d_ft": -28.38,
+      "change_7d_ft": 14.1,
+      "change_30d_ft": -28.27,
       "percentile_13mo": null,
-      "record_days_on_file": 1981,
+      "record_days_on_file": 1982,
       "first_date_on_file": "2016-12-07"
     },
     "BDE608": {
@@ -1565,15 +1565,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/498",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 671.08
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 670.88
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 1.54,
-      "change_30d_ft": -22.37,
+      "change_7d_ft": 1.39,
+      "change_30d_ft": -17.12,
       "percentile_13mo": null,
-      "record_days_on_file": 649,
+      "record_days_on_file": 650,
       "first_date_on_file": "2021-05-03"
     },
     "LUMB902": {
@@ -1591,15 +1591,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1004",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 686.43
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 686.42
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.19,
-      "change_30d_ft": -0.03,
-      "percentile_13mo": 80.8,
-      "record_days_on_file": 1679,
+      "change_7d_ft": 0.18,
+      "change_30d_ft": 0.03,
+      "percentile_13mo": 80.3,
+      "record_days_on_file": 1680,
       "first_date_on_file": "2022-03-30"
     },
     "CCIB912": {
@@ -1617,15 +1617,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1008",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 637.49
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 637.5
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 1.66,
-      "change_30d_ft": -0.23,
-      "percentile_13mo": 75.1,
-      "record_days_on_file": 1338,
+      "change_7d_ft": 1.97,
+      "change_30d_ft": -0.62,
+      "percentile_13mo": 75.4,
+      "record_days_on_file": 1339,
       "first_date_on_file": "2023-03-06"
     },
     "EOC906": {
@@ -1643,15 +1643,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1009",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 714.78
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 714.69
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.37,
-      "change_30d_ft": -4.86,
-      "percentile_13mo": 52.4,
-      "record_days_on_file": 1400,
+      "change_7d_ft": 0.4,
+      "change_30d_ft": -5.0,
+      "percentile_13mo": 51.9,
+      "record_days_on_file": 1401,
       "first_date_on_file": "2022-12-14"
     },
     "FRPB907": {
@@ -1669,15 +1669,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1038",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 730.1
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 729.98
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.22,
-      "change_30d_ft": -3.31,
-      "percentile_13mo": 61.2,
-      "record_days_on_file": 1138,
+      "change_7d_ft": 0.12,
+      "change_30d_ft": -3.43,
+      "percentile_13mo": 60.5,
+      "record_days_on_file": 1139,
       "first_date_on_file": "2023-08-28"
     },
     "HFB315": {
@@ -1712,15 +1712,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1044",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 654.39
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 654.29
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 3.24,
-      "change_30d_ft": 0.7,
-      "percentile_13mo": 87.0,
-      "record_days_on_file": 1021,
+      "change_7d_ft": 3.58,
+      "change_30d_ft": -0.44,
+      "percentile_13mo": 86.5,
+      "record_days_on_file": 1022,
       "first_date_on_file": "2024-01-17"
     },
     "DISW707": {
@@ -1738,15 +1738,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1076",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 953.69
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 953.5
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 11.73,
-      "change_30d_ft": -0.08,
-      "percentile_13mo": 56.5,
-      "record_days_on_file": 254,
+      "change_7d_ft": 4.57,
+      "change_30d_ft": -0.09,
+      "percentile_13mo": 43.3,
+      "record_days_on_file": 255,
       "first_date_on_file": "2026-02-21"
     },
     "BOME711": {
@@ -1764,15 +1764,15 @@
       "meaning": "EAA well; higher elevation means a higher water table. Context for Edwards springs; not a swim verdict.",
       "source": "https://data.edwardsaquifer.org/GroundWater/Details/1078",
       "latest": {
-        "date": "2026-11-02",
-        "elevation_ft_amsl": 878.38
+        "date": "2026-11-03",
+        "elevation_ft_amsl": 878.35
       },
       "age_days": 1,
       "data_health": "fresh",
-      "change_7d_ft": 0.45,
+      "change_7d_ft": 0.36,
       "change_30d_ft": 0.81,
       "percentile_13mo": null,
-      "record_days_on_file": 42,
+      "record_days_on_file": 43,
       "first_date_on_file": "2026-09-22"
     },
     "LOCK404": {
@@ -1793,8 +1793,8 @@
         "date": "2026-10-09",
         "elevation_ft_amsl": 724.13
       },
-      "age_days": 25,
-      "data_health": "stale (25 d)",
+      "age_days": 26,
+      "data_health": "stale (26 d)",
       "change_7d_ft": -11.11,
       "change_30d_ft": null,
       "percentile_13mo": null,
