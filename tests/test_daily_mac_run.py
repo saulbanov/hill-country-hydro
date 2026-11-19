@@ -135,6 +135,34 @@ class DailyMacRunTests(unittest.TestCase):
                 self.assertTrue(all(name.startswith("water.") for name in seen))
                 self.assertEqual(fault, json.loads(claim.read_text())["last_step"])
 
+    def test_staleness_counts_old_and_missing_readings(self):
+        def station(*ages):
+            return {"latest": {str(i): {"age_hours": a} for i, a in enumerate(ages)}}
+        quarter = {"stations": {"a": station(0.5, 30), "b": station(2), "c": station(1), "d": station()}}
+        self.assertIsNone(job.usgs_staleness(quarter))  # 1 of 4 is not more than a quarter
+        quarter["stations"]["c"] = station(144, None)
+        self.assertEqual("usgs_latest_stale=2/4", job.usgs_staleness(quarter))
+
+    def test_degraded_bundle_publishes_both_repos_but_exits_two(self):
+        day = dt.date(2026, 10, 8)
+        with tempfile.TemporaryDirectory() as temp:
+            claim = job.claim_day(day, pathlib.Path(temp))
+            pushed = []
+            with mock.patch.object(job, "check_paths"), \
+                 mock.patch.object(job, "sync_repos"), \
+                 mock.patch.object(job, "already_collected", return_value=None), \
+                 mock.patch.object(job, "claim_day", return_value=claim), \
+                 mock.patch.object(job, "run_command"), \
+                 mock.patch.object(job, "validate_bundle", return_value=["usgs_latest_stale=167/218"]), \
+                 mock.patch.object(job, "commit_and_push",
+                                   side_effect=lambda repo, date: pushed.append(repo)), \
+                 mock.patch("builtins.print") as out:
+                self.assertEqual(2, job.execute(day))
+            self.assertEqual([job.WATER, job.SWIM], pushed)
+            self.assertEqual("complete", json.loads(claim.read_text())["status"])
+            self.assertEqual("RESULT DEGRADED day=2026-10-08 water=published swim=assessed usgs_latest_stale=167/218",
+                             out.call_args[0][0])
+
 
 if __name__ == "__main__":
     unittest.main()

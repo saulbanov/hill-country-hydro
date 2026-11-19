@@ -1,37 +1,95 @@
 #!/usr/bin/env python3
 """Free/local acquisition -> normalization -> deterministic assessment. No delivery."""
 import argparse, datetime as dt, hashlib, json, math, sqlite3, sys, time
+from collections import Counter
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+sys.path.insert(0,str(Path(__file__).resolve().parent)); import usgs_api
 
 ROOT=Path(__file__).resolve().parents[1]; RAW=ROOT/'data/raw/usgs'; NORM=ROOT/'data/normalized'; APP=ROOT/'app'
 BASE='https://api.waterdata.usgs.gov/ogcapi/v1/collections'
+LATEST_BATCH=40          # stations per latest-continuous request; 40 quoted ids keep the URL near 1.5 KB
+MAX_PAGES=20             # a next link past this many pages is a provider fault, not more data
+STOP_AFTER_REFUSALS=3    # consecutive 403/429 answers end the run's USGS requests
+LATEST_FRESH=dt.timedelta(hours=24)
 
 def now(): return dt.datetime.now(dt.timezone.utc).isoformat()
-def save(kind,url,status,body,error=None):
+def save(kind,url,status,body,error=None,headers=None,pagination='first response; inspect links before expanding'):
     RAW.mkdir(parents=True,exist_ok=True); stamp=dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     p=RAW/f'{stamp}-{kind}.json'; p.write_bytes(body)
-    meta={'url':url,'retrieved_at':now(),'status':status,'sha256':hashlib.sha256(body).hexdigest(),'error':error,'pagination':'first response; inspect links before expanding'}
+    meta={'url':url,'retrieved_at':now(),'status':status,'sha256':hashlib.sha256(body).hexdigest(),'error':error,'api_key':usgs_api.has_key(),'rate_limit':usgs_api.rate_limit(headers or {}),'pagination':pagination}
     p.with_suffix('.meta.json').write_text(json.dumps(meta,indent=2)); return p
-def request(kind,url):
+def request(kind,url,**extra):
+    """Save whatever comes back, refusals included, and return (path, status)."""
     try:
-        with urlopen(Request(url,headers={'User-Agent':'swimming-hole-alerts/0.1'}),timeout=30) as r:
-            body=r.read(); return save(kind,url,r.status,body)
-    except HTTPError as e: return save(kind,url,e.code,e.read() or b'',str(e))
-    except URLError as e: return save(kind,url,0,b'',str(e))
-def collect(stations):
-    # Monitoring-location calls are stable OGC API records. Continuous collection is attempted
-    # separately because available collection names/filters are provider-controlled.
+        with urlopen(Request(url,headers=usgs_api.headers('swimming-hole-alerts/0.1')),timeout=30) as r:
+            body=r.read(); return save(kind,url,r.status,body,headers=r.headers,**extra),r.status
+    except HTTPError as e: return save(kind,url,e.code,e.read() or b'',str(e),e.headers,**extra),e.code
+    except (URLError,OSError) as e: return save(kind,url,0,b'',str(e),**extra),0
+def latest_url(stations):
+    """One latest-continuous request for several stations (CQL text filter; probed 2026-10-08)."""
+    ids=','.join(f"'USGS-{s}'" for s in stations)
+    return BASE+'/latest-continuous/items?'+urlencode({'f':'json','filter-lang':'cql-text','filter':f'monitoring_location_id IN ({ids})','limit':'10000'})
+def next_link(path):
+    try: links=json.loads(path.read_bytes()).get('links') or []
+    except (ValueError,AttributeError): return None
+    return next((l.get('href') for l in links if isinstance(l,dict) and l.get('rel')=='next'),None)
+def collect(stations,pause=0.5):
+    """Newest value of every series first, LATEST_BATCH stations per request, so a provider quota is spent on
+    current readings before anything else; then each station's two-day window; then its location record.
+    Key-less, the quota ran out after about 150 requests (2026-10-03 to 10-08), so the order is the priority."""
     start=(dt.datetime.now(dt.timezone.utc)-dt.timedelta(days=2)).strftime('%Y-%m-%dT%H:%M:%SZ')
-    for s in stations:
-        request('location-'+s, BASE+'/monitoring-locations/items?'+urlencode({'f':'json','id':'USGS-'+s,'limit':'1'}))
-        request('continuous-'+s, BASE+'/continuous/items?'+urlencode({'f':'json','monitoring_location_id':'USGS-'+s,'datetime':start+'/..','limit':'10000'}))
-        # The continuous collection can paginate before reaching the newest value.
-        # Preserve a separate latest-series response for current assessments.
-        request('latest-continuous-'+s, BASE+'/latest-continuous/items?'+urlencode({'f':'json','monitoring_location_id':'USGS-'+s,'limit':'100'}))
-    print('USGS acquisition complete: two-day window and latest-series responses saved raw; inspect series and qualifiers before interpreting.')
+    statuses=Counter(); refused_in_row=0; latest=[]
+    def get(kind,url,**extra):
+        nonlocal refused_in_row
+        path,status=request(kind,url,**extra); statuses[status]+=1; time.sleep(pause)
+        refused_in_row=refused_in_row+1 if status in usgs_api.REFUSED else 0
+        return path,status
+    batches=[stations[n:n+LATEST_BATCH] for n in range(0,len(stations),LATEST_BATCH)]
+    singles=[('continuous-'+s,BASE+'/continuous/items?'+urlencode({'f':'json','monitoring_location_id':'USGS-'+s,'datetime':start+'/..','limit':'10000'})) for s in stations]
+    singles+=[('location-'+s,BASE+'/monitoring-locations/items?'+urlencode({'f':'json','id':'USGS-'+s,'limit':'1'})) for s in stations]
+    skipped=0
+    for b,batch in enumerate(batches,1):
+        url=latest_url(batch)
+        for page in range(1,MAX_PAGES+1):
+            if refused_in_row>=STOP_AFTER_REFUSALS: skipped+=1; break
+            path,status=get(f'latest-continuous-batch{b:02d}'+(f'-page{page}' if page>1 else ''),url,
+                            pagination=f'page {page} of a {len(batch)}-station batch; later pages follow links rel=next')
+            latest.append(path); url=next_link(path) if status==200 else None
+            if not url: break
+    for i,(kind,url) in enumerate(singles):
+        if refused_in_row>=STOP_AFTER_REFUSALS: skipped+=len(singles)-i; break
+        get(kind,url)
+    print(collect_report(stations,latest,statuses,skipped))
+def latest_coverage(paths,at):
+    """(stations with a value, stations whose newest value is within LATEST_FRESH), read back from the saved bytes.
+    A refusal, an empty list or a null value is no reading."""
+    newest={}
+    for p in paths:
+        if json.loads(p.with_suffix('.meta.json').read_text())['status']!=200: continue
+        try: features=json.loads(p.read_bytes()).get('features') or []
+        except (ValueError,AttributeError): continue
+        for f in features:
+            q=f.get('properties') or {}; sid=q.get('monitoring_location_id'); when=q.get('time')
+            if q.get('value') is None or not sid or not when: continue
+            try: t=dt.datetime.fromisoformat(when.replace('Z','+00:00'))
+            except ValueError: continue
+            if sid not in newest or t>newest[sid]: newest[sid]=t
+    return len(newest),sum(1 for t in newest.values() if at-t<=LATEST_FRESH)
+def collect_report(stations,latest_paths,statuses,skipped,at=None):
+    """One summary line, and a banner when the provider refused requests or most stations came back without a value."""
+    have,fresh=latest_coverage(latest_paths,at or dt.datetime.now(dt.timezone.utc))
+    refused=sum(n for s,n in statuses.items() if s in usgs_api.REFUSED)
+    lines=[f"USGS collect: latest values for {have} of {len(stations)} stations ({fresh} within 24 h); "
+           f"{sum(statuses.values())} requests, HTTP {dict(sorted(statuses.items()))}; {skipped} not requested; api key {'yes' if usgs_api.has_key() else 'no'}"]
+    if refused:
+        lines+=[f"⚠️  USGS REFUSED {refused} REQUESTS (HTTP 403/429); stopped after {STOP_AFTER_REFUSALS} in a row, {skipped} not requested.",
+                "⚠️  Refusals are saved raw and never read as values."+('' if usgs_api.has_key() else ' Key-less quota: a free key from https://api.waterdata.usgs.gov/signup/ goes in USGS_API_KEY.')]
+    if have<len(stations)/2:
+        lines.append(f"⚠️  ONLY {have} OF {len(stations)} STATIONS HAVE A LATEST VALUE. The rest keep older readings, which the bundle publishes with their dates.")
+    return '\n'.join(lines)
 def normalize():
     NORM.mkdir(parents=True,exist_ok=True); db=sqlite3.connect(NORM/'water.sqlite')
     db.execute('create table if not exists responses(path text primary key, url text, retrieved_at text, status integer, sha256 text)')
@@ -155,8 +213,9 @@ def assess(at=None):
 if __name__=='__main__':
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest='cmd',required=True)
     c=sub.add_parser('collect'); c.add_argument('--stations',nargs='*',default=[]); c.add_argument('--inventory',action='store_true',help='every station in data/stations-regional.json plus the Austin ten')
+    c.add_argument('--pause-seconds',type=float,default=0.5,help='pause between USGS requests')
     sub.add_parser('normalize'); sub.add_parser('readings'); sub.add_parser('assess'); a=p.parse_args()
     if a.cmd=='collect' and a.inventory:
         import sys as _s; _s.path.insert(0,str(ROOT/'tools')); from station_lists import all_stations; a.stations=all_stations()
     if a.cmd=='collect' and not a.stations: p.error('collect needs --stations or --inventory')
-    {'collect':lambda:collect(a.stations),'normalize':normalize,'readings':readings,'assess':assess}[a.cmd]()
+    {'collect':lambda:collect(a.stations,a.pause_seconds),'normalize':normalize,'readings':readings,'assess':assess}[a.cmd]()

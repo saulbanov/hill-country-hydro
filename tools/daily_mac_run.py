@@ -28,6 +28,10 @@ SWIM = pathlib.Path(os.environ.get("SWIM_REPO") or next(
 STATE_DIR = WATER / "data" / "raw" / "mac-daily-run"
 LOCAL_TZ = ZoneInfo("America/Chicago")
 PYTHON = pathlib.Path("/opt/homebrew/bin/python3")
+# A station is stale when its newest USGS reading is over STALE_HOURS old or it has none. The
+# healthy 2026-10-02 bundle had 12 of 218 stale; the rate-limited 2026-10-08 bundle had 167.
+STALE_HOURS = 24
+STALE_SHARE = 0.25
 
 
 @dataclass(frozen=True)
@@ -178,7 +182,22 @@ def progress(path: pathlib.Path, status: str, last_step: str | None) -> None:
     temp.replace(path)
 
 
-def validate_bundle() -> None:
+def usgs_staleness(data: dict) -> str | None:
+    """A note when too many stations carry old readings, so a refused collection cannot pass as a normal day."""
+    stations = data.get("stations", {})
+    stale = 0
+    for station in stations.values():
+        ages = [v.get("age_hours") for v in station.get("latest", {}).values()
+                if isinstance(v.get("age_hours"), (int, float))]
+        if not ages or min(ages) > STALE_HOURS:
+            stale += 1
+    if stations and stale / len(stations) > STALE_SHARE:
+        return "usgs_latest_stale=" + str(stale) + "/" + str(len(stations))
+    return None
+
+
+def validate_bundle() -> list[str]:
+    """Raise on a bundle that must not be pushed; return notes on one that may be pushed but is degraded."""
     bundle = WATER / "dist" / "water-state.json"
     data = json.loads(bundle.read_text(encoding="utf-8"))
     if data.get("missing_inputs") != []:
@@ -191,6 +210,12 @@ def validate_bundle() -> None:
     if generated.astimezone(LOCAL_TZ).date() != dt.datetime.now(LOCAL_TZ).date():
         raise RuntimeError("bundle_not_generated_today")
     print("BUNDLE", json.dumps(counts, sort_keys=True), flush=True)
+    notes = [note for note in (usgs_staleness(data),) if note]
+    for note in notes:
+        print("⚠️  DEGRADED " + note + ": stations whose newest USGS reading is over " + str(STALE_HOURS) +
+              " h old or missing. The bundle still carries those readings with their dates;"
+              " see the USGS collect summary above for refusals.", file=sys.stderr, flush=True)
+    return notes
 
 
 def commit_and_push(repo: pathlib.Path, day: dt.date) -> None:
@@ -224,7 +249,7 @@ def execute(day: dt.date) -> int:
             run_command(step)
             progress(claim, "running", step.name)
         stage = "water.validate"
-        validate_bundle()
+        notes = list(validate_bundle() or ())
         stage = "water.push"
         commit_and_push(WATER, day)
         for step in swim_steps:
@@ -234,6 +259,11 @@ def execute(day: dt.date) -> int:
         stage = "swim.push"
         commit_and_push(SWIM, day)
         progress(claim, "complete", "swim.push")
+        if notes:
+            # Exit 2: everything published, but the heartbeat must not read as a normal day.
+            print("RESULT DEGRADED day=" + day.isoformat() + " water=published swim=assessed " +
+                  " ".join(notes), file=sys.stderr, flush=True)
+            return 2
         print("RESULT OK day=" + day.isoformat() + " water=published swim=assessed", flush=True)
         return 0
     except (OSError, subprocess.CalledProcessError, RuntimeError, ValueError, KeyError) as exc:
@@ -248,12 +278,30 @@ def execute(day: dt.date) -> int:
         return 1
 
 
+def usgs_key_source() -> str:
+    """Put the USGS key in the environment the collectors inherit and say where it came from, never what it is."""
+    if os.environ.get("USGS_API_KEY", "").strip():
+        return "env"
+    try:
+        key = subprocess.run(("/usr/bin/security", "find-generic-password", "-s", "USGS_API_KEY", "-w"),
+                             capture_output=True, text=True, timeout=10).stdout.strip()
+    except (OSError, subprocess.SubprocessError):
+        key = ""
+    if key:
+        os.environ["USGS_API_KEY"] = key
+        return "keychain"
+    return "none"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="offline command and path check")
     args = parser.parse_args()
     day = dt.datetime.now(LOCAL_TZ).date()
     steps = plan(day)
+    source = usgs_key_source()
+    print("USGS_API_KEY source=" + source + ("" if source != "none" else
+          " (key-less quota; USGS refused most requests 2026-10-03 to 10-08)"), flush=True)
     if args.check:
         check_paths(steps)
         for step in steps:

@@ -14,9 +14,18 @@ The runner checks for a `Daily run YYYYMMDD` commit in either repo and writes
 an exclusive claim under `data/raw/mac-daily-run/` before the first provider
 request. A second start on the same Central-time date skips collection, even
 after an interrupted run. A failed partial run needs inspection; it does not
-automatically retry providers. Its final stdout line is `RESULT OK`, `RESULT
-SKIPPED`, or `RESULT FAILED` with the date or failed stage. The pinned
-`launchd-run.py` wrapper also records that line in the shared heartbeat log.
+automatically retry providers. Its last line is `RESULT OK` or `RESULT
+SKIPPED` (stdout, exit 0), `RESULT DEGRADED` (stderr, exit 2: both repos
+published, but more than a quarter of USGS stations have a newest reading over
+24 hours old or none), or `RESULT FAILED` with the failed stage (stderr, exit 1).
+The pinned `launchd-run.py` wrapper records that line and the exit code in the
+shared heartbeat log, so the launchd healthcheck reports a degraded day.
+
+USGS answers few requests without an API key; on 2026-10-03 to 10-08 it refused
+about 490 of 645 a morning. The runner reads a free key from the login keychain
+(service `USGS_API_KEY`) into the environment of every step and logs only where it
+came from: `USGS_API_KEY source=keychain`, `env`, or `none`. Store one with
+`security add-generic-password -a "$USER" -s USGS_API_KEY -w`.
 
 The runner refuses branches other than `main`. It uses EAA's current `details`
 command with four-second pauses, adding `--version` on Sundays; it does not use

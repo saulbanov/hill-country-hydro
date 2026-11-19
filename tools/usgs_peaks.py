@@ -8,6 +8,7 @@ import argparse, csv, datetime as dt, gzip, hashlib, io, json, math, sqlite3, ti
 import urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 from station_lists import history_stations
+import usgs_api  # the free API key rides a header, never the saved URL
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data/raw/usgs-peaks'
@@ -21,7 +22,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 def capture(station, kind, url, pause=1):
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'hill-country-hydro/0.1'})
+        req = urllib.request.Request(url, headers=usgs_api.headers('hill-country-hydro/0.1'))
         with urllib.request.build_opener(NoRedirect).open(req, timeout=60) as r:
             body, status, error, headers = r.read(), r.status, None, dict(r.headers)
     except urllib.error.HTTPError as e:

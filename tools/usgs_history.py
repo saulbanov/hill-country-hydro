@@ -34,6 +34,7 @@ HISTORY=ROOT/'data/history'; MODEL=ROOT/'data/model'
 BASE='https://api.waterdata.usgs.gov/ogcapi/v1/collections'
 import sys as _sys; _sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from station_lists import history_stations
+import usgs_api  # the free API key rides a header, never the saved URL
 AUSTIN_STATIONS=history_stations()  # name kept for callers; now the Austin ten plus the inventory's history tiers
 LIMIT=50000
 UA='swimming-hole-alerts/0.1 usgs-daily-history'
@@ -42,7 +43,7 @@ def utcnow(): return dt.datetime.now(dt.timezone.utc)
 
 def fetch(url):
     try:
-        with urlopen(Request(url,headers={'User-Agent':UA}),timeout=180) as r: return r.status,r.read(),None
+        with urlopen(Request(url,headers=usgs_api.headers(UA)),timeout=180) as r: return r.status,r.read(),None
     except HTTPError as e: return e.code,(e.read() or b''),str(e)
     except URLError as e: return 0,b'',str(e)
 
