@@ -126,6 +126,13 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Session log
 
+### 2026-10-20 — external-drive KBDI snapshot pilot
+
+Added the additive KBDI builder under `tools/reference_data.py`. It reads the 60 registered Summary CSVs,
+exports 15,240 county/date records with source row locators and provenance, and writes a verification
+receipt under the Elements pilot-runs directory. The live water-state publisher, scheduled run, pins and
+raw files were not changed. Publication remains pending authorization.
+
 ### 2026-10-03 — require normalization integration
 - Updated the execution handoff after Saul specified that normalization must merge into hill-country-hydro as a prototype analytic layer. Added a distinct integration checkpoint, reusable-output requirements, documentation and verification of the commit on origin/main. Removed the earlier blanket instruction to recheck permission for this now-explicitly requested integration.
 - This session updated the handoff and living plan only; the normalization implementation and integration remain pending.
@@ -482,6 +489,12 @@ Pilot checklist (from `docs/REGIONAL_WATER_MAP_HANDOFF.md`):
   it cannot fail the day. One test in `tests/test_daily_mac_run.py`. The step's tool arrives in the swim pin with the same
   `--promote` that brings this plan, so the path check passes. Reason: the private app's copy had been hand-made and was from 09-29.
 
+### 2026-10-20 — external-drive KBDI snapshot pilot
+
+Added the additive KBDI builder under `tools/reference_data.py`. It reads the 60 registered Summary CSVs,
+exports 15,240 county/date records with source row locators and provenance, and writes a verification
+receipt under the Elements pilot-runs directory. The live water-state publisher, scheduled run, pins and
+raw files were not changed. Publication remains pending authorization.
 
 
 ### 2026-10-20 — E01 retained-output recovery
