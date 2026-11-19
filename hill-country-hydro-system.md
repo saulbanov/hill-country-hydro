@@ -126,6 +126,10 @@ The order of operations (merge the swim repo on the Mac, clone this repo beside 
 
 ## Session log
 
+### 2026-11-19 — two copies of the external-data-pilot branch, left apart
+
+The Mac and GitHub copies of `codex/external-data-pilot-2026-10-20` split after merge-base `d79b405b4`. GitHub's copy has its own KBDI commit (`568365195`), two snapshot commits and the Oct 15–17 daily runs. The Mac copy (KBDI `ddfa12ee9`, E01 recovery `7ecff3ee4`) was pushed on 2026-11-19 as `codex/external-data-pilot-mac-2026-10-21`, so neither copy was overwritten. The Mac copy is not a subset of GitHub's: compared with GitHub's branch it adds 36 lines to `tools/daily_mac_run.py`, 45 lines to `tests/test_daily_mac_run.py`, 25 changed lines in `tests/test_bundle.py`, and the E01 recovery entry below. The session watcher ruled the same day to keep both branches and neither merge nor delete either one, since no job depends on them. Merging means choosing which KBDI version to keep and porting the E01 code. The local checkout now tracks the `-mac-` branch.
+
 ### 2026-10-20 — external-drive KBDI snapshot pilot
 
 Added the additive KBDI builder under `tools/reference_data.py`. It reads the 60 registered Summary CSVs,
